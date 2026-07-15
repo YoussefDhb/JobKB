@@ -1,0 +1,112 @@
+Tu es un traducteur spécialisé dans les métiers et compétences de l'informatique (IT).
+Traduis en FRANÇAIS chaque libellé anglais ci-dessous.
+RÈGLES IMPORTANTES :
+- Garde TELS QUELS (sans traduire) les noms propres de technologies, langages, outils, frameworks et produits (ex. Python, Java, Kubernetes, Docker, PyTorch, Spring Boot, PostgreSQL, AWS, React). Ce sont des noms propres, on ne les traduit pas.
+- Traduis en revanche les INTITULÉS DE MÉTIERS et les compétences DESCRIPTIVES (ex. 'Software Developer' -> 'Développeur / Développeuse logiciel', 'Machine Learning' -> 'Apprentissage automatique').
+- Utilise la terminologie française usuelle du secteur IT.
+- Si un libellé est déjà correct en français ou est un nom propre à conserver, renvoie-le inchangé.
+
+Libellés à traduire (identifiants S0, S1, ...) :
+S0: analyst
+S1: design
+S2: sys admin
+S3: architecture
+S4: technical
+S5: recruiter
+S6: testing
+S7: finance
+S8: api
+S9: exec
+S10: ops
+S11: full time
+S12: digital nomad
+S13: hr
+S14: data entry
+S15: dev
+S16: marketing
+S17: microsoft
+S18: education
+S19: customer support
+S20: medical
+S21: travel
+S22: accounting
+S23: virtual assistant
+S24: excel
+S25: teaching
+S26: english teacher
+S27: non tech
+S28: vfx
+S29: transcribing
+S30: speech
+S31: senior
+S32: assembly
+S33: mobile
+S34: sales
+S35: coordinator
+S36: social media
+S37: data science
+S38: front end
+S39: designer
+S40: web dev
+S41: css
+S42: html
+S43: controller
+S44: engineer
+S45: infosec
+S46: legal
+S47: product manager
+S48: cloud
+S49: stats
+S50: ecommerce
+S51: seo
+S52: content writing
+S53: video
+S54: jira
+S55: admin
+S56: math
+S57: linguistics
+S58: quality assurance
+S59: strategy
+S60: photoshop
+S61: python
+S62: game dev
+S63: c
+S64: c plus plus
+S65: robotics
+S66: music
+S67: internship
+S68: illustrator
+S69: consulting
+S70: salesforce
+S71: ads
+S72: saas
+S73: wordpress
+S74: golang
+S75: junior
+S76: supervisor
+S77: Marketing and Communication
+S78: Arts and entertainment
+S79: certification
+S80: Remote
+S81: IT
+S82: Engineering
+S83: Directors
+S84: Chief Executives
+S85: Marketing Manager
+S86: Software Development
+S87: Consulting
+S88: professional
+S89: Management
+S90: Team Leader
+S91: Other
+S92: vocational
+S93: Embedded Systems
+S94: Firmware Development
+S95: Process Management
+S96: IT Security
+S97: Automation Engineering
+S98: Internet and software
+S99: high school coursework
+
+Réponds STRICTEMENT en JSON, sans aucun texte autour, au format exact :
+{"translations": [{"id": "S0", "fr": "..."}]}

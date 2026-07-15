@@ -1,0 +1,546 @@
+﻿gold,label_a,label_b,relation,confidence,source_a,source_b,entity_id_a,entity_id_b,method
+1,Architecte cloud,architecte cloud,skos:exactMatch,0.985,ROME,ESCO,OCC_8545ea52f78d,OCC_96b5d34f1d58,exact_label:preferred~preferred+emb
+1,Administrateur / Administratrice sécurité informatique,administrateur sécurité informatique/administratrice sécurité informatique,skos:exactMatch,0.964,ROME,ESCO,OCC_6d24adb3285c,OCC_a0cecf937326,embeddings
+1,développeur web/développeuse web,Développeur / Développeuse web,skos:exactMatch,0.951,ESCO,ROME,OCC_3b83c3012cf7,OCC_c506a18083b7,embeddings
+1,ingénieur/ingénieure de données,Data engineer,skos:exactMatch,0.929,ESCO,ROME,OCC_7d1a8b2ea390,OCC_903f27875082,embeddings
+1,analyste de système informatique,Analyste d'étude informatique,skos:exactMatch,0.914,ESCO,ROME,OCC_20596f0afee7,OCC_5fafb471f4aa,embeddings
+1,technicien informatique/technicienne informatique,Technicien / Technicienne d'exploitation informatique,skos:exactMatch,0.906,ESCO,ROME,OCC_14d19ed15436,OCC_1ce0e8031f25,embeddings
+1,Analyste d'application informatique,analyste de système informatique,skos:exactMatch,0.905,ROME,ESCO,OCC_085a2958b6aa,OCC_20596f0afee7,embeddings
+1,Développeur / Développeuse - jeux vidéo,développeur de jeux numériques/développeuse de jeux numériques,skos:closeMatch,0.897,ROME,ESCO,OCC_2f27eb2177cc,OCC_554c5e421f89,embeddings
+0,technicien informatique/technicienne informatique,Ingénieur informaticien / Ingénieure informaticienne,skos:closeMatch,0.897,ESCO,ROME,OCC_14d19ed15436,OCC_e02a62ee28e8,embeddings
+0,analyste logiciel,Expert / Experte systèmes et réseaux informatiques,skos:closeMatch,0.89,ESCO,ROME,OCC_6b1c7257ba1b,OCC_c44a9eaae6e7,exact_label:alt~alt
+1,scientifique des données,Data engineer,skos:closeMatch,0.89,ESCO,ROME,OCC_7bde92a813dd,OCC_903f27875082,exact_label:alt~alt
+1,responsable de la sécurité des TIC,Responsable de la Sécurité des Systèmes d'Information (RSSI),skos:closeMatch,0.89,ESCO,ROME,OCC_3ea9dcd66347,OCC_563c9ee7ae68,exact_label:alt~alt+emb
+1,technicien en sécurité informatique/technicienne en sécurité informatique,Responsable de la Sécurité des Systèmes d'Information (RSSI),skos:closeMatch,0.89,ESCO,ROME,OCC_47b1b32e81f9,OCC_563c9ee7ae68,exact_label:alt~alt
+1,Architecte cloud,ingénieur en informatique en nuage/ingénieure en informatique en nuage,skos:closeMatch,0.89,ROME,ESCO,OCC_8545ea52f78d,OCC_ff4e73f258e8,exact_label:alt~preferred
+0,gestionnaire des modifications et de la configuration des TIC,Ingénieur / Ingénieure DevOps,skos:closeMatch,0.89,ESCO,ROME,OCC_b12363d00856,OCC_eab9b08d024c,exact_label:alt~alt
+1,ingénieur DevOps cloud/ingénieure DevOps cloud,Ingénieur / Ingénieure DevOps,skos:closeMatch,0.89,ESCO,ROME,OCC_c79207b250ca,OCC_eab9b08d024c,exact_label:alt~alt+emb
+1,analyste qualité des données,Data engineer,skos:closeMatch,0.89,ESCO,ROME,OCC_7c028d934ec6,OCC_903f27875082,exact_label:preferred~alt
+1,Gestionnaire de base de données,administrateur de base de données/administratrice de base de données,skos:closeMatch,0.89,ROME,ESCO,OCC_164e408e096f,OCC_759562b3dd51,exact_label:alt~preferred+emb
+1,Ingénieur / Ingénieure d'étude informatique,concepteur de logiciels/conceptrice de logiciels,skos:closeMatch,0.89,ROME,ESCO,OCC_050f179f19d8,OCC_fa1704d164c5,exact_label:alt~alt
+1,webmestre,Administrateur / Administratrice de site internet,skos:closeMatch,0.89,ESCO,ROME,OCC_1cd71aaf46fd,OCC_53745b14cb87,exact_label:alt~alt
+0,analyste d’étude en TIC,Analyste d'affaires,skos:closeMatch,0.89,ESCO,REMOTEOK,OCC_0a3ba0a2e348,OCC_d9115408ab56,exact_label:alt~preferred
+1,analyste d’étude en TIC,Consultant fonctionnel / Consultante fonctionnelle des systèmes d'information,skos:closeMatch,0.89,ESCO,ROME,OCC_0a3ba0a2e348,OCC_2088e2ac84a9,exact_label:alt~alt
+1,Consultant fonctionnel / Consultante fonctionnelle des systèmes d'information,Analyste d'affaires,skos:closeMatch,0.89,ROME,REMOTEOK,OCC_2088e2ac84a9,OCC_d9115408ab56,exact_label:alt~alt
+1,informaticien/informaticienne,Ingénieur informaticien / Ingénieure informaticienne,skos:closeMatch,0.888,ESCO,ROME,OCC_727ec0d8350c,OCC_e02a62ee28e8,embeddings
+1,Analyste d'application informatique,analyste logiciel,skos:closeMatch,0.886,ROME,ESCO,OCC_085a2958b6aa,OCC_6b1c7257ba1b,embeddings
+1,Intégrateur / Intégratrice logiciels métiers,concepteur de logiciels/conceptrice de logiciels,skos:closeMatch,0.884,ROME,ESCO,OCC_22a265df20e2,OCC_fa1704d164c5,embeddings
+1,Gestionnaire de base de données,concepteur de bases de données /conceptrice de bases de données,skos:closeMatch,0.883,ROME,ESCO,OCC_164e408e096f,OCC_65014a542c78,embeddings
+1,Ingénieur informaticien / Ingénieure informaticienne,technicien de réseau informatique/technicienne de réseau informatique,skos:closeMatch,0.876,ROME,ESCO,OCC_e02a62ee28e8,OCC_f609b6bc11bf,embeddings
+1,Ingénieur / Ingénieure d'étude informatique,informaticien/informaticienne,skos:closeMatch,0.868,ROME,ESCO,OCC_050f179f19d8,OCC_727ec0d8350c,embeddings
+1,Intégrateur / Intégratrice logiciels métiers,développeur de logiciels/développeuse de logiciels,skos:closeMatch,0.866,ROME,ESCO,OCC_22a265df20e2,OCC_e57061351bc6,embeddings
+1,technicien en sécurité informatique/technicienne en sécurité informatique,Technicien / Technicienne en cybersécurité,skos:closeMatch,0.862,ESCO,ROME,OCC_47b1b32e81f9,OCC_7f18f2f19e2a,embeddings
+1,Technicien / Technicienne réseaux informatiques et télécoms,technicien de réseau informatique/technicienne de réseau informatique,skos:closeMatch,0.862,ROME,ESCO,OCC_940b6385dcd1,OCC_f609b6bc11bf,embeddings
+1,Spécialiste test et validation logiciel ou application,testeur de logiciels/testeuse de logiciels,skos:closeMatch,0.861,ROME,ESCO,OCC_2523d083789d,OCC_3e502e92822a,embeddings
+1,Administrateur / Administratrice de site internet,administrateur de contenu web/administratrice de contenu web,skos:closeMatch,0.854,ROME,ESCO,OCC_53745b14cb87,OCC_aa3336017d8a,embeddings
+0,technicien informatique/technicienne informatique,Ingénieur concepteur / Ingénieure conceptrice informatique,skos:closeMatch,0.851,ESCO,ROME,OCC_14d19ed15436,OCC_286d9da07b4d,embeddings
+1,Architecte systèmes et réseaux,architecte de réseau,skos:closeMatch,0.847,ROME,ESCO,OCC_21715cbb5d2f,OCC_bd1d7a63edf2,embeddings
+1,administrateur de réseau informatique/administratrice de réseau informatique,Administrateur / Administratrice réseaux - télécoms,skos:closeMatch,0.841,ESCO,ROME,OCC_07647950ddea,OCC_8a0009547b60,embeddings
+1,concepteur de bases de données /conceptrice de bases de données,Architecte base de données,skos:closeMatch,0.838,ESCO,ROME,OCC_65014a542c78,OCC_9e721c3b1a5c,embeddings
+1,Développeur / Développeuse informatique,développeur de logiciels/développeuse de logiciels,skos:closeMatch,0.836,ROME,ESCO,OCC_4243894cf004,OCC_e57061351bc6,embeddings
+1,développeur IoT/développeuse IoT,Architecte IoT - Internet des Objets,skos:closeMatch,0.83,ESCO,ROME,OCC_af0b4023ea6c,OCC_afe0af7ee789,embeddings
+1,Développeur / Développeuse logiciel ou d'application,développeur de logiciels/développeuse de logiciels,skos:closeMatch,0.829,ROME,ESCO,OCC_d6a2ea4adc66,OCC_e57061351bc6,embeddings
+1,Expert / Experte en cybersécurité,gestionnaire des risques en cybersécurité,skos:closeMatch,0.828,ROME,ESCO,OCC_4def1bedc140,OCC_9113c1374afd,embeddings
+1,développeur/développeuse de logiciels cloud,Ingénieur / Ingénieure Cloud computing,skos:closeMatch,0.826,ESCO,ROME,OCC_02a46f9d3b88,OCC_5a5307f6b57c,embeddings
+0,administrateur de systèmes informatiques/administratrice de systèmes informatiques,Administrateur / Administratrice sécurité informatique,skos:closeMatch,0.823,ESCO,ROME,OCC_6cb6d62106d9,OCC_6d24adb3285c,embeddings
+1,Jeune diplômé(e) - Data Scientist,scientifique des données,skos:closeMatch,0.821,REMOTEOK,ESCO,OCC_7781415f8e03,OCC_7bde92a813dd,embeddings
+1,ingénieur de réseaux informatiques/ingénieure de réseaux informatiques,Ingénieur informaticien / Ingénieure informaticienne,skos:closeMatch,0.82,ESCO,ROME,OCC_6836ed031e87,OCC_e02a62ee28e8,embeddings
+1,Intégrateur / Intégratrice logiciels métiers,concepteur de logiciels d’application/conceptrice de logiciels d’application,skos:closeMatch,0.811,ROME,ESCO,OCC_22a265df20e2,OCC_cd04c9fb1a40,embeddings
+1,développeur de base de données/développeuse de base de données,Architecte base de données,skos:closeMatch,0.809,ESCO,ROME,OCC_11d84dbfc1bc,OCC_9e721c3b1a5c,embeddings
+1,Analyste de données - Secteur de la santé,analyste de données,skos:closeMatch,0.805,REMOTEOK,ESCO,OCC_c2f30bbdb638,OCC_ccd1a82716dc,embeddings
+1,administrateur de réseau informatique/administratrice de réseau informatique,Administrateur / Administratrice de serveurs,skos:closeMatch,0.804,ESCO,ROME,OCC_07647950ddea,OCC_0dfd1568b513,embeddings
+1,Intégrateur / Intégratrice logiciels métiers,développeur de logiciels pour systèmes informatiques intégrés/développeuse de logiciels pour systèmes informatiques intégrés,skos:closeMatch,0.803,ROME,ESCO,OCC_22a265df20e2,OCC_47055aec8572,embeddings
+0,consultant informatique/consultante informatique,Consultant / Consultante avant-vente,skos:closeMatch,0.803,ESCO,ROME,OCC_30549a5affd9,OCC_3dd25c7bc53e,embeddings
+1,Analyste de données - Excel,analyste de données,skos:closeMatch,0.802,REMOTEOK,ESCO,OCC_4000ceec52ad,OCC_ccd1a82716dc,embeddings
+1,Data engineer,concepteur d’entrepôt de données/conceptrice d’entrepôt de données,skos:closeMatch,0.799,ROME,ESCO,OCC_903f27875082,OCC_c7ddb7ad3c99,embeddings
+1,responsable de l’audit informatique,Responsable des études et applications informatiques,skos:closeMatch,0.799,ESCO,ROME,OCC_65c02430a9d6,OCC_e16c45181fb8,embeddings
+1,analyste d’étude en TIC,Analyste d'étude informatique,skos:closeMatch,0.798,ESCO,ROME,OCC_0a3ba0a2e348,OCC_5fafb471f4aa,embeddings
+1,Développeur / Développeuse informatique,développeur de systèmes informatiques/développeuse de systèmes informatiques,skos:closeMatch,0.796,ROME,ESCO,OCC_4243894cf004,OCC_a1ea51659e23,embeddings
+1,Ingénieur / Ingénieure d'étude informatique,analyste-testeur informatique/analyste-testeuse informatique,skos:closeMatch,0.795,ROME,ESCO,OCC_050f179f19d8,OCC_1fbb1e6392b6,embeddings
+1,Analyste d'étude informatique,analyste de données,skos:closeMatch,0.795,ROME,ESCO,OCC_5fafb471f4aa,OCC_ccd1a82716dc,embeddings
+0,technicien en sécurité informatique/technicienne en sécurité informatique,Architecte sécurité informatique,skos:closeMatch,0.795,ESCO,ROME,OCC_47b1b32e81f9,OCC_8d1f9f4c93ee,embeddings
+1,Responsable de la production informatique,responsable de la planification de la capacité informatique,skos:closeMatch,0.794,ROME,ESCO,OCC_91c7799dadef,OCC_e1b1773585de,embeddings
+0,Ingénieur / Ingénieure en informatique embarquée,informaticien/informaticienne,skos:closeMatch,0.792,ROME,ESCO,OCC_3b2885fc44e3,OCC_727ec0d8350c,embeddings
+0,Administrateur / Administratrice sécurité informatique,Conseiller / Conseillère en services de sécurité managés (H/F/D),skos:closeMatch,0.789,ROME,ARBEITNOW,OCC_6d24adb3285c,OCC_ef12d6a864e0,embeddings
+1,responsable du service d’assistance informatique,Responsable des études et applications informatiques,skos:closeMatch,0.786,ESCO,ROME,OCC_127c8b092532,OCC_e16c45181fb8,embeddings
+0,consultant en recherche informatique/consultante en recherche informatique,Consultant / Consultante avant-vente,skos:closeMatch,0.784,ESCO,ROME,OCC_106b6f022c02,OCC_3dd25c7bc53e,embeddings
+1,Analyste décisionnel - Business Intelligence,Analyste d'affaires,skos:closeMatch,0.783,ROME,REMOTEOK,OCC_4fedfaca20de,OCC_d9115408ab56,embeddings
+1,analyste de système informatique,Analyste Concepteur / Conceptrice informatique,skos:closeMatch,0.781,ESCO,ROME,OCC_20596f0afee7,OCC_6208e1876753,embeddings
+1,technicien en sécurité informatique/technicienne en sécurité informatique,"Ingénieur / Ingénieure systèmes, réseaux et sécurité informatique",skos:closeMatch,0.779,ESCO,ROME,OCC_47b1b32e81f9,OCC_6ccbe5fe0132,embeddings
+0,ingénieur en vision par ordinateur/ingénieure en vision par ordinateur,Ingénieur informaticien / Ingénieure informaticienne,skos:closeMatch,0.778,ESCO,ROME,OCC_991dd4068ca0,OCC_e02a62ee28e8,embeddings
+0,Ingénieur concepteur / Ingénieure conceptrice informatique,ingénieur de la connaissance/ingénieure de la connaissance,skos:closeMatch,0.778,ROME,ESCO,OCC_286d9da07b4d,OCC_e29ace1e3e50,embeddings
+1,Analyste SOC (Security Operations Center),Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),skos:closeMatch,0.775,ROME,ARBEITNOW,OCC_7342748ca544,OCC_77117619e46e,embeddings
+1,Spécialiste test et validation logiciel ou application,testeur d’utilisabilité/testeuse d’utilisabilité,skos:closeMatch,0.774,ROME,ESCO,OCC_2523d083789d,OCC_59802a0ba34e,embeddings
+1,administrateur de systèmes informatiques/administratrice de systèmes informatiques,Administrateur / Administratrice de systèmes d'information (SI),skos:closeMatch,0.774,ESCO,ROME,OCC_6cb6d62106d9,OCC_98d19aeea9a4,embeddings
+0,administrateur de systèmes informatiques/administratrice de systèmes informatiques,Administrateur / Administratrice de messagerie,skos:closeMatch,0.772,ESCO,ROME,OCC_6cb6d62106d9,OCC_7d00df02eb9d,embeddings
+1,ingénieur en intelligence artificielle/ingénieure en intelligence artificielle,Ingénieur / Ingénieure en Intelligence Artificielle (IA),skos:closeMatch,0.771,ESCO,ROME,OCC_80660e3c36ff,OCC_ec6735d1a243,embeddings
+1,Gestionnaire de base de données,intégrateur de base de données/intégratrice de base de données,skos:closeMatch,0.771,ROME,ESCO,OCC_164e408e096f,OCC_69eaea4542b3,embeddings
+1,ingénieur de réseaux informatiques/ingénieure de réseaux informatiques,Expert / Experte systèmes et réseaux informatiques,skos:closeMatch,0.771,ESCO,ROME,OCC_6836ed031e87,OCC_c44a9eaae6e7,embeddings
+0,Technicien / Technicienne d'exploitation informatique,concepteur de systèmes informatiques/conceptrice de systèmes informatiques,skos:closeMatch,0.767,ROME,ESCO,OCC_1ce0e8031f25,OCC_9e5778cecf8d,embeddings
+1,Ingénieur(e) infrastructure / DevOps (H/F/D),Ingénieur / Ingénieure DevOps,skos:closeMatch,0.759,ARBEITNOW,ROME,OCC_ea877a4a9a11,OCC_eab9b08d024c,embeddings
+0,Administrateur / Administratrice sécurité informatique,agent de service d’assistance informatique/agente de service d’assistance informatique,skos:closeMatch,0.758,ROME,ESCO,OCC_6d24adb3285c,OCC_708b91f0f734,embeddings
+0,administrateur sécurité informatique/administratrice sécurité informatique,Conseiller / Conseillère en services de sécurité managés (H/F/D),skos:closeMatch,0.757,ESCO,ARBEITNOW,OCC_a0cecf937326,OCC_ef12d6a864e0,embeddings
+1,Evaluateur / Evaluatrice sécurité des systèmes et produits informatiques,ingénieur en sécurité des systèmes intégrés/ingénieure en sécurité des systèmes intégrés,skos:closeMatch,0.757,ROME,ESCO,OCC_9f440c1548b6,OCC_b0446201413b,embeddings
+0,Ingénieur / Ingénieure sécurité web,gestionnaire des risques en cybersécurité,skos:closeMatch,0.757,ROME,ESCO,OCC_54194a8e4af5,OCC_9113c1374afd,embeddings
+0,Analyste d'étude informatique,scientifique des données,skos:closeMatch,0.755,ROME,ESCO,OCC_5fafb471f4aa,OCC_7bde92a813dd,embeddings
+1,Spécialiste test et validation logiciel ou application,testeur de systèmes informatiques/testeuse de systèmes informatiques,skos:closeMatch,0.755,ROME,ESCO,OCC_2523d083789d,OCC_b46ed0bc22d0,embeddings
+1,Technicien / Technicienne d'exploitation informatique,programmeur en informatique industrielle/programmeuse en informatique industrielle,skos:closeMatch,0.755,ROME,ESCO,OCC_1ce0e8031f25,OCC_9f67438781d4,embeddings
+1,Technicien / Technicienne d'exploitation informatique,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),skos:closeMatch,0.753,ROME,ARBEITNOW,OCC_1ce0e8031f25,OCC_45b81edc9b79,embeddings
+1,Chef / Cheffe de projet étude et développement informatique,concepteur de logiciels/conceptrice de logiciels,skos:closeMatch,0.751,ROME,ESCO,OCC_09b65ca00490,OCC_fa1704d164c5,embeddings
+1,spécialiste de l’investigation numérique,Analyste d'étude informatique,skos:closeMatch,0.75,ESCO,ROME,OCC_46b37f0135cb,OCC_5fafb471f4aa,embeddings
+1,Analyste d'étude informatique,analyste de la reprise des activités informatiques,skos:closeMatch,0.749,ROME,ESCO,OCC_5fafb471f4aa,OCC_cbee4548194c,embeddings
+0,analyste de système informatique,Expert / Experte méthodes et qualité informatique,skos:closeMatch,0.749,ESCO,ROME,OCC_20596f0afee7,OCC_336e0a8cfc0b,embeddings
+1,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),concepteur de systèmes informatiques intégrés/conceptrice de systèmes informatiques intégrés,skos:closeMatch,0.748,ARBEITNOW,ESCO,OCC_3cacf2bb2b93,OCC_89f4b0de8aeb,embeddings
+1,concepteur d’interface utilisateur/conceptrice d’interface utilisatrice,Concepteur / Conceptrice d'interfaces,skos:closeMatch,0.748,ESCO,REMOTEOK,OCC_340f51445866,OCC_e77bc5408895,embeddings
+1,Analyste d'application informatique,analyste d’expérience utilisateur,skos:closeMatch,0.748,ROME,ESCO,OCC_085a2958b6aa,OCC_7ca8931aad99,embeddings
+1,responsable de la sécurité des TIC,Architecte sécurité informatique,skos:closeMatch,0.746,ESCO,ROME,OCC_3ea9dcd66347,OCC_8d1f9f4c93ee,embeddings
+1,Consultant fonctionnel / Consultante fonctionnelle des systèmes d'information,consultant informatique/consultante informatique,skos:closeMatch,0.746,ROME,ESCO,OCC_2088e2ac84a9,OCC_30549a5affd9,embeddings
+1,développeur/développeuse de logiciels cloud,Technicien / Technicienne Cloud,skos:closeMatch,0.746,ESCO,ROME,OCC_02a46f9d3b88,OCC_4cb0c0a25225,embeddings
+1,Gestionnaire de base de données,Agent administratif de saisie de données et de classement,skos:closeMatch,0.746,ROME,REMOTEOK,OCC_164e408e096f,OCC_b9e95ef30857,embeddings
+1,analyste qualité des données,Analyste de données - Secteur de la santé,skos:closeMatch,0.744,ESCO,REMOTEOK,OCC_7c028d934ec6,OCC_c2f30bbdb638,embeddings
+1,architecte d’entreprise,Concepteur / Conceptrice en architecture,skos:closeMatch,0.74,ESCO,REMOTEOK,OCC_01372aeb8cb5,OCC_20f53a6b090c,embeddings
+1,Chef / Cheffe de projet étude et développement informatique,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,skos:closeMatch,0.738,ROME,ARBEITNOW,OCC_09b65ca00490,OCC_5ba0f9300746,embeddings
+1,"Chef d'équipe - Planification réseau, déploiement fibre optique subventionné (H/F/D)",Responsable d'exploitation fibre optique,skos:closeMatch,0.738,ARBEITNOW,ROME,OCC_4d34f0a4a62c,OCC_6c87c4d3e182,embeddings
+0,consultant en recherche informatique/consultante en recherche informatique,Directeur / Directrice de projet en informatique,skos:closeMatch,0.738,ESCO,ROME,OCC_106b6f022c02,OCC_5dccaa0f70e3,embeddings
+1,Ingénieur concepteur / Ingénieure conceptrice informatique,Concepteur / Conceptrice UX/UI,skos:closeMatch,0.736,ROME,REMOTEOK,OCC_286d9da07b4d,OCC_b415cabf36c7,embeddings
+0,Analyste Concepteur / Conceptrice informatique,Analyste d'affaires,skos:closeMatch,0.736,ROME,REMOTEOK,OCC_6208e1876753,OCC_d9115408ab56,embeddings
+0,Ingénieur informaticien / Ingénieure informaticienne,ingénieur en informatique en nuage/ingénieure en informatique en nuage,skos:closeMatch,0.735,ROME,ESCO,OCC_e02a62ee28e8,OCC_ff4e73f258e8,embeddings
+1,Ingénieur / Ingénieure Cloud computing,ingénieur DevOps cloud/ingénieure DevOps cloud,skos:closeMatch,0.734,ROME,ESCO,OCC_5a5307f6b57c,OCC_c79207b250ca,embeddings
+1,Technicien / Technicienne d'exploitation informatique,concepteur de systèmes informatiques intégrés/conceptrice de systèmes informatiques intégrés,skos:closeMatch,0.733,ROME,ESCO,OCC_1ce0e8031f25,OCC_89f4b0de8aeb,embeddings
+1,Développeur / Développeuse informatique,Développeur / Développeuse logiciel senior (H/F/D),skos:closeMatch,0.727,ROME,ARBEITNOW,OCC_4243894cf004,OCC_cbba626eede9,embeddings
+1,webmestre,Développeur / Développeuse web,skos:closeMatch,0.727,ESCO,ROME,OCC_1cd71aaf46fd,OCC_c506a18083b7,embeddings
+1,Ingénieur / Ingénieure Cloud computing,responsable de l'identité cloud,skos:closeMatch,0.725,ROME,ESCO,OCC_5a5307f6b57c,OCC_5bfe9fc9c093,embeddings
+1,Ingénieur(e) assurance qualité (H/F/D),responsable de l’assurance qualité informatique,skos:closeMatch,0.724,ARBEITNOW,ESCO,OCC_498759db14be,OCC_b01b8def641d,embeddings
+0,Développeur / Développeuse multimédia,développeur de jeux numériques/développeuse de jeux numériques,skos:closeMatch,0.724,ROME,ESCO,OCC_073f57ae50f2,OCC_554c5e421f89,embeddings
+1,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,Directeur / Directrice de projet en informatique,skos:closeMatch,0.722,ARBEITNOW,ROME,OCC_5ba0f9300746,OCC_5dccaa0f70e3,embeddings
+1,Ingénieur / Ingénieure Cybersécurité Datacenter,gestionnaire des risques en cybersécurité,skos:closeMatch,0.721,ROME,ESCO,OCC_0194b59e1846,OCC_9113c1374afd,embeddings
+0,webmestre,Chef / Cheffe de projet Web,skos:closeMatch,0.717,ESCO,ROME,OCC_1cd71aaf46fd,OCC_8afef792d150,embeddings
+1,analyste logiciel,Analyste d'affaires,skos:closeMatch,0.713,ESCO,REMOTEOK,OCC_6b1c7257ba1b,OCC_d9115408ab56,embeddings
+0,Consultant fonctionnel / Consultante fonctionnelle des systèmes d'information,opérateur de centre de données/opératrice de centre de données,skos:closeMatch,0.711,ROME,ESCO,OCC_2088e2ac84a9,OCC_9c9233e004da,embeddings
+1,Chef de projet / Cheffe de projet (Project Management Officer),Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,skos:closeMatch,0.71,ROME,ARBEITNOW,OCC_21efe6cdd8d9,OCC_5ba0f9300746,embeddings
+1,Qualiticien / Qualiticienne logiciel en informatique,concepteur de logiciels/conceptrice de logiciels,skos:closeMatch,0.71,ROME,ESCO,OCC_da40f63e4373,OCC_fa1704d164c5,embeddings
+1,ingénieur de réseaux informatiques/ingénieure de réseaux informatiques,Expert / Experte en communication et réseaux,skos:closeMatch,0.71,ESCO,ROME,OCC_6836ed031e87,OCC_b7befaa6cd86,embeddings
+0,scientifique des données,Spécialiste en saisie de données,skos:closeMatch,0.706,ESCO,REMOTEOK,OCC_7bde92a813dd,OCC_a196178f2449,embeddings
+1,Développeur / Développeuse logiciel senior (H/F/D),développeur de logiciels/développeuse de logiciels,skos:closeMatch,0.705,ARBEITNOW,ESCO,OCC_cbba626eede9,OCC_e57061351bc6,embeddings
+1,Consultant fonctionnel / Consultante fonctionnelle des systèmes d'information,consultant en intégration de systèmes informatiques/consultante en intégration de systèmes informatiques,skos:closeMatch,0.705,ROME,ESCO,OCC_2088e2ac84a9,OCC_af41616819b5,embeddings
+1,Architecte systèmes et réseaux des territoires connectés,architecte de réseau,skos:closeMatch,0.705,ROME,ESCO,OCC_b6f0c15f7803,OCC_bd1d7a63edf2,embeddings
+1,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),concepteur de systèmes informatiques/conceptrice de systèmes informatiques,skos:closeMatch,0.704,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_9e5778cecf8d,embeddings
+0,Développeur / Développeuse web,Développeur / Développeuse Frontend E-Commerce (H/F/D),skos:closeMatch,0.704,ROME,ARBEITNOW,OCC_c506a18083b7,OCC_ee0ddbbdc92c,embeddings
+1,Chef de produit - IA,Product Owner,skos:closeMatch,0.704,REMOTEOK,ROME,OCC_2e0e260cb4d7,OCC_3946835718f5,embeddings
+1,Concepteur / Conceptrice en architecture,Ingénieur concepteur / Ingénieure conceptrice informatique,skos:closeMatch,0.704,REMOTEOK,ROME,OCC_20f53a6b090c,OCC_286d9da07b4d,embeddings
+1,développeur de chaînes de blocs/développeuse de chaînes de blocs,Développeur / Développeuse blockchain,skos:closeMatch,0.703,ESCO,ROME,OCC_a4f72755e1ad,OCC_f98f0e96ecac,embeddings
+0,consultant informatique/consultante informatique,Coordinateur / Coordinatrice de production web,skos:closeMatch,0.702,ESCO,ROME,OCC_30549a5affd9,OCC_8febad416722,embeddings
+1,Directeur / Directrice de projet en informatique,Directeur / Directrice Produit et Ingénierie (H/F/D),skos:relatedMatch,0.699,ROME,ARBEITNOW,OCC_5dccaa0f70e3,OCC_6622b2e6404b,embeddings
+0,Administrateur / Administratrice sécurité informatique,Administrateur / Administratrice IT senior (H/F/D),skos:relatedMatch,0.697,ROME,ARBEITNOW,OCC_6d24adb3285c,OCC_c8e3c9cb6c38,embeddings
+0,Gestionnaire d'applications système d'information,opérateur de centre de données/opératrice de centre de données,skos:relatedMatch,0.697,ROME,ESCO,OCC_5575a38586ce,OCC_9c9233e004da,embeddings
+0,responsable du service d’assistance informatique,Chef / Cheffe de projet Maîtrise d'Ouvrage des Systèmes d'Information (MOA),skos:relatedMatch,0.697,ESCO,ROME,OCC_127c8b092532,OCC_7139e09be76c,embeddings
+1,Analyste Concepteur / Conceptrice informatique,Analyste senior - Support de projet,skos:relatedMatch,0.697,ROME,REMOTEOK,OCC_6208e1876753,OCC_a55aa629a66b,embeddings
+0,responsable du service d’assistance informatique,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),skos:relatedMatch,0.696,ESCO,ARBEITNOW,OCC_127c8b092532,OCC_77117619e46e,embeddings
+1,Chef / Cheffe de projet réseau fixe et mobile,architecte de réseau,skos:relatedMatch,0.694,ROME,ESCO,OCC_734c5ae6a3df,OCC_bd1d7a63edf2,embeddings
+1,administrateur de systèmes informatiques/administratrice de systèmes informatiques,Administrateur / Administratrice IT senior (H/F/D),skos:relatedMatch,0.693,ESCO,ARBEITNOW,OCC_6cb6d62106d9,OCC_c8e3c9cb6c38,embeddings
+0,Consultant fonctionnel / Consultante fonctionnelle des systèmes d'information,auditeur des systèmes d’information/auditrice des systèmes d’information,skos:relatedMatch,0.693,ROME,ESCO,OCC_2088e2ac84a9,OCC_7d8d0e4e5d42,embeddings
+0,responsable du service d’assistance informatique,Gestionnaire de parc informatique,skos:relatedMatch,0.693,ESCO,ROME,OCC_127c8b092532,OCC_b847e63cc092,embeddings
+1,responsable du service d’assistance informatique,Directeur / Directrice des systèmes d'information (DSI),skos:relatedMatch,0.692,ESCO,ROME,OCC_127c8b092532,OCC_4a2781037768,embeddings
+1,Administrateur / Administratrice de systèmes d'information (SI),Administrateur / Administratrice IT senior (H/F/D),skos:relatedMatch,0.691,ROME,ARBEITNOW,OCC_98d19aeea9a4,OCC_c8e3c9cb6c38,embeddings
+1,Analyste d'étude informatique,Analyste d'affaires,skos:relatedMatch,0.69,ROME,REMOTEOK,OCC_5fafb471f4aa,OCC_d9115408ab56,embeddings
+1,Chef de produit - IA,Chef de produit technique (Lead/Senior) - Ingénierie plateforme (H/F/D),skos:relatedMatch,0.687,REMOTEOK,ARBEITNOW,OCC_2e0e260cb4d7,OCC_8d76388f9989,embeddings
+1,administrateur de base de données/administratrice de base de données,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.687,ESCO,REMOTEOK,OCC_759562b3dd51,OCC_b9e95ef30857,embeddings
+1,Analyste SOC (Security Operations Center),analyste réponse aux incidents de sécurité,skos:relatedMatch,0.687,ROME,ESCO,OCC_7342748ca544,OCC_8b508c20ce1d,embeddings
+0,Expert / Experte en cybersécurité,hacker éthique,skos:relatedMatch,0.687,ROME,ESCO,OCC_4def1bedc140,OCC_68dccaf6a895,embeddings
+1,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),développeur de systèmes informatiques/développeuse de systèmes informatiques,skos:relatedMatch,0.686,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_a1ea51659e23,embeddings
+1,responsable de l’audit informatique,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),skos:relatedMatch,0.684,ESCO,ARBEITNOW,OCC_65c02430a9d6,OCC_77117619e46e,embeddings
+0,développeur d’applications mobiles/développeuse d’applications mobiles,Chef / Cheffe de projet réseau fixe et mobile,skos:relatedMatch,0.683,ESCO,ROME,OCC_60d10ff7dab8,OCC_734c5ae6a3df,embeddings
+0,Analyste d'application informatique,Analyste d'affaires,skos:relatedMatch,0.683,ROME,REMOTEOK,OCC_085a2958b6aa,OCC_d9115408ab56,embeddings
+0,Chef de produit - IA,concepteur de logiciels/conceptrice de logiciels,skos:relatedMatch,0.679,REMOTEOK,ESCO,OCC_2e0e260cb4d7,OCC_fa1704d164c5,embeddings
+1,Spécialiste test et validation logiciel ou application,testeur d’accessibilité/testeuse d’accessibilité,skos:relatedMatch,0.678,ROME,ESCO,OCC_2523d083789d,OCC_3e265a77afe1,embeddings
+1,technicien informatique/technicienne informatique,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),skos:relatedMatch,0.677,ESCO,ARBEITNOW,OCC_14d19ed15436,OCC_45b81edc9b79,embeddings
+0,Directeur / Directrice des systèmes d'information (DSI),Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),skos:relatedMatch,0.676,ROME,ARBEITNOW,OCC_4a2781037768,OCC_77117619e46e,embeddings
+1,développeur web/développeuse web,Concepteur / Conceptrice web junior,skos:relatedMatch,0.676,ESCO,REMOTEOK,OCC_3b83c3012cf7,OCC_d3df557742ce,embeddings
+1,Expert / Experte méthodes et qualité informatique,analyste qualité des données,skos:relatedMatch,0.676,ROME,ESCO,OCC_336e0a8cfc0b,OCC_7c028d934ec6,embeddings
+1,Gestionnaire de base de données,Agent de saisie de données,skos:relatedMatch,0.676,ROME,REMOTEOK,OCC_164e408e096f,OCC_3756041ae6ec,embeddings
+0,Chef de produit - IA,Responsable de la production informatique,skos:relatedMatch,0.676,REMOTEOK,ROME,OCC_2e0e260cb4d7,OCC_91c7799dadef,embeddings
+1,architecte d’entreprise,"Architecte principal(e) Gouvernance, Risque et Conformité (GRC)",skos:relatedMatch,0.675,ESCO,ARBEITNOW,OCC_01372aeb8cb5,OCC_27e8294e0a68,embeddings
+1,Ingénieur concepteur / Ingénieure conceptrice informatique,Concepteur / Conceptrice web junior,skos:relatedMatch,0.675,ROME,REMOTEOK,OCC_286d9da07b4d,OCC_d3df557742ce,embeddings
+1,Intégrateur / Intégratrice logiciels métiers,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),skos:relatedMatch,0.674,ROME,ARBEITNOW,OCC_22a265df20e2,OCC_45b81edc9b79,embeddings
+0,Administrateur / Administratrice de site internet,Administrateur / Administratrice IT senior (H/F/D),skos:relatedMatch,0.674,ROME,ARBEITNOW,OCC_53745b14cb87,OCC_c8e3c9cb6c38,embeddings
+1,Concepteur / Conceptrice en architecture,architecte de réseau,skos:relatedMatch,0.674,REMOTEOK,ESCO,OCC_20f53a6b090c,OCC_bd1d7a63edf2,embeddings
+1,Responsable des systèmes d'information (SI),auditeur des systèmes d’information/auditrice des systèmes d’information,skos:relatedMatch,0.674,ROME,ESCO,OCC_48e7a1feb2bb,OCC_7d8d0e4e5d42,embeddings
+0,Développeur / Développeuse informatique,Chef de produit technique (Lead/Senior) - Ingénierie plateforme (H/F/D),skos:relatedMatch,0.673,ROME,ARBEITNOW,OCC_4243894cf004,OCC_8d76388f9989,embeddings
+1,Développeur / Développeuse logiciel senior (H/F/D),Développeur / Développeuse logiciel ou d'application,skos:relatedMatch,0.673,ARBEITNOW,ROME,OCC_cbba626eede9,OCC_d6a2ea4adc66,embeddings
+1,Intégrateur / Intégratrice logiciels métiers,développeur de logiciels pour appareils mobiles destinés à l’industrie/développeuse de logiciels pour appareils mobiles destinés à l’industrie,skos:relatedMatch,0.673,ROME,ESCO,OCC_22a265df20e2,OCC_28d6f1c634d8,embeddings
+1,Ingénieur / Ingénieure supervision IT Datacenter,concepteur d’entrepôt de données/conceptrice d’entrepôt de données,skos:relatedMatch,0.673,ROME,ESCO,OCC_07c3258d7642,OCC_c7ddb7ad3c99,embeddings
+1,Ingénieur(e) systèmes IT (H/F/D),configurateur de systèmes/configuratrice de systèmes,skos:relatedMatch,0.672,ARBEITNOW,ESCO,OCC_ccb65c46f869,OCC_e28a715b58e4,embeddings
+0,Administrateur / Administratrice de messagerie,Administrateur / Administratrice IT senior (H/F/D),skos:relatedMatch,0.672,ROME,ARBEITNOW,OCC_7d00df02eb9d,OCC_c8e3c9cb6c38,embeddings
+1,Concepteur / Conceptrice UX/UI,concepteur de logiciels/conceptrice de logiciels,skos:relatedMatch,0.672,REMOTEOK,ESCO,OCC_b415cabf36c7,OCC_fa1704d164c5,embeddings
+0,Concepteur / Conceptrice en architecture,Architecte cloud,skos:relatedMatch,0.672,REMOTEOK,ROME,OCC_20f53a6b090c,OCC_8545ea52f78d,embeddings
+1,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),concepteur de logiciels/conceptrice de logiciels,skos:relatedMatch,0.67,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_fa1704d164c5,embeddings
+0,architecte d’entreprise,"Responsable d'ingénierie, Moteur de recherche (tous genres)",skos:relatedMatch,0.669,ESCO,ARBEITNOW,OCC_01372aeb8cb5,OCC_14a3530bfb4b,embeddings
+1,développeur d’interface utilisateur/développeuse d’interface utilisatrice,Concepteur / Conceptrice d'interfaces,skos:relatedMatch,0.668,ESCO,REMOTEOK,OCC_c089ec2388cd,OCC_e77bc5408895,embeddings
+1,testeur de jeux numériques/testeuse de jeux numériques,Développeur / Développeuse - jeux vidéo,skos:relatedMatch,0.666,ESCO,ROME,OCC_234bb9d3e7c0,OCC_2f27eb2177cc,embeddings
+0,Analyste d'étude informatique,Jeune diplômé(e) - Data Scientist,skos:relatedMatch,0.666,ROME,REMOTEOK,OCC_5fafb471f4aa,OCC_7781415f8e03,embeddings
+0,Agent de saisie de données,Data engineer,skos:relatedMatch,0.666,REMOTEOK,ROME,OCC_3756041ae6ec,OCC_903f27875082,embeddings
+0,agent de service d’assistance informatique/agente de service d’assistance informatique,Assistant(e) fiscal(e) ou gestionnaire de paie (H/F/D) avec possibilité de télétravail,skos:relatedMatch,0.665,ESCO,ARBEITNOW,OCC_708b91f0f734,OCC_e4a8a5aa915e,embeddings
+0,Consultant(e) senior en ingénierie IA (H/F/D),Analyste senior - Support de projet,skos:relatedMatch,0.665,ARBEITNOW,REMOTEOK,OCC_43958fcde9b9,OCC_a55aa629a66b,embeddings
+0,Gestionnaire d'applications système d'information,responsable de l’analyse commerciale des technologies de l’information et de la communication,skos:relatedMatch,0.664,ROME,ESCO,OCC_5575a38586ce,OCC_697bbd77a746,embeddings
+0,Coordinateur / Coordinatrice Maitrise d'Ouvrage Système d'Information (MOA SI),Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),skos:relatedMatch,0.663,ROME,ARBEITNOW,OCC_069c1da7cb17,OCC_77117619e46e,embeddings
+0,Concepteur / Conceptrice en architecture,architecte cloud,skos:relatedMatch,0.663,REMOTEOK,ESCO,OCC_20f53a6b090c,OCC_96b5d34f1d58,embeddings
+0,Gestionnaire d'applications système d'information,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.663,ROME,REMOTEOK,OCC_5575a38586ce,OCC_b9e95ef30857,embeddings
+1,Développeur / Développeuse web,Concepteur / Conceptrice web junior,skos:relatedMatch,0.661,ROME,REMOTEOK,OCC_c506a18083b7,OCC_d3df557742ce,embeddings
+1,Chef de produit - IA,Directeur / Directrice de projet en informatique,skos:relatedMatch,0.661,REMOTEOK,ROME,OCC_2e0e260cb4d7,OCC_5dccaa0f70e3,embeddings
+1,"Responsable d'ingénierie, Moteur de recherche (tous genres)",ingénieur de la connaissance/ingénieure de la connaissance,skos:relatedMatch,0.66,ARBEITNOW,ESCO,OCC_14a3530bfb4b,OCC_e29ace1e3e50,embeddings
+0,opérateur de centre de données/opératrice de centre de données,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.66,ESCO,REMOTEOK,OCC_9c9233e004da,OCC_b9e95ef30857,embeddings
+1,Concepteur / Conceptrice en architecture,Architecte systèmes et réseaux,skos:relatedMatch,0.66,REMOTEOK,ROME,OCC_20f53a6b090c,OCC_21715cbb5d2f,embeddings
+1,Consultant décisionnel / Consultante décisionnelle - Business Intelligence,Analyste d'affaires,skos:relatedMatch,0.66,ROME,REMOTEOK,OCC_c9809e8b4e1d,OCC_d9115408ab56,embeddings
+1,Administrateur / Administratrice de serveurs,Administrateur / Administratrice IT senior (H/F/D),skos:relatedMatch,0.659,ROME,ARBEITNOW,OCC_0dfd1568b513,OCC_c8e3c9cb6c38,embeddings
+1,webmestre,Concepteur / Conceptrice web junior,skos:relatedMatch,0.659,ESCO,REMOTEOK,OCC_1cd71aaf46fd,OCC_d3df557742ce,embeddings
+1,Chef de produit - IA,Chef / Cheffe de projet maîtrise d'œuvre informatique,skos:relatedMatch,0.658,REMOTEOK,ROME,OCC_2e0e260cb4d7,OCC_fc361ed0ca3c,embeddings
+0,Analyste de données - Excel,Data engineer,skos:relatedMatch,0.657,REMOTEOK,ROME,OCC_4000ceec52ad,OCC_903f27875082,embeddings
+1,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),consultant en intégration de systèmes informatiques/consultante en intégration de systèmes informatiques,skos:relatedMatch,0.656,ARBEITNOW,ESCO,OCC_3cacf2bb2b93,OCC_af41616819b5,embeddings
+0,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,Analyste senior - Support de projet,skos:relatedMatch,0.656,ARBEITNOW,REMOTEOK,OCC_5ba0f9300746,OCC_a55aa629a66b,embeddings
+0,"Responsable d'ingénierie, Moteur de recherche (tous genres)",Ingénieur concepteur / Ingénieure conceptrice informatique,skos:relatedMatch,0.656,ARBEITNOW,ROME,OCC_14a3530bfb4b,OCC_286d9da07b4d,embeddings
+0,consultant informatique/consultante informatique,Consultant décisionnel / Consultante décisionnelle - Business Intelligence,skos:relatedMatch,0.656,ESCO,ROME,OCC_30549a5affd9,OCC_c9809e8b4e1d,embeddings
+0,Agent de saisie de données,analyste de données,skos:relatedMatch,0.655,REMOTEOK,ESCO,OCC_3756041ae6ec,OCC_ccd1a82716dc,embeddings
+1,Analyste Concepteur / Conceptrice informatique,Concepteur / Conceptrice d'interfaces,skos:relatedMatch,0.655,ROME,REMOTEOK,OCC_6208e1876753,OCC_e77bc5408895,embeddings
+1,Ingénieur / Ingénieure en informatique embarquée,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),skos:relatedMatch,0.654,ROME,ARBEITNOW,OCC_3b2885fc44e3,OCC_45b81edc9b79,embeddings
+0,Technicien / Technicienne d'exploitation informatique,Chef de produit - IA,skos:relatedMatch,0.654,ROME,REMOTEOK,OCC_1ce0e8031f25,OCC_2e0e260cb4d7,embeddings
+1,Responsable de la Sécurité des Systèmes d'Information (RSSI),Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),skos:relatedMatch,0.653,ROME,ARBEITNOW,OCC_563c9ee7ae68,OCC_77117619e46e,embeddings
+0,administrateur de base de données/administratrice de base de données,Administrateur / Administratrice IT senior (H/F/D),skos:relatedMatch,0.652,ESCO,ARBEITNOW,OCC_759562b3dd51,OCC_c8e3c9cb6c38,embeddings
+0,concepteur de systèmes informatiques/conceptrice de systèmes informatiques,"Spécialiste outils, systèmes d'exploitation, réseaux et télécoms",skos:relatedMatch,0.652,ESCO,ROME,OCC_9e5778cecf8d,OCC_c7ee9cba34be,embeddings
+0,Product Owner - Agent Assist et User Platforms (H/F/D),agent de service d’assistance informatique/agente de service d’assistance informatique,skos:relatedMatch,0.651,ARBEITNOW,ESCO,OCC_5d343c03bfac,OCC_708b91f0f734,embeddings
+1,ingénieur DevOps cloud/ingénieure DevOps cloud,Ingénieur(e) infrastructure / DevOps (H/F/D),skos:relatedMatch,0.651,ESCO,ARBEITNOW,OCC_c79207b250ca,OCC_ea877a4a9a11,embeddings
+0,Chef / Cheffe de projet étude et développement informatique,Chef de produit - IA,skos:relatedMatch,0.651,ROME,REMOTEOK,OCC_09b65ca00490,OCC_2e0e260cb4d7,embeddings
+0,Agent administratif de saisie de données et de classement,concepteur d’entrepôt de données/conceptrice d’entrepôt de données,skos:relatedMatch,0.65,REMOTEOK,ESCO,OCC_b9e95ef30857,OCC_c7ddb7ad3c99,embeddings
+1,Jeune diplômé(e) - Data Scientist,ingénieur/ingénieure de données,skos:relatedMatch,0.65,REMOTEOK,ESCO,OCC_7781415f8e03,OCC_7d1a8b2ea390,embeddings
+0,Ingénieur / Ingénieure d'étude informatique,Ingénieur(e) logiciel senior / Ingénieur(e) ML (H/F/X) - Secteur de l'éducation / Télétravail,skos:relatedMatch,0.649,ROME,ARBEITNOW,OCC_050f179f19d8,OCC_88496659bc48,embeddings
+0,Administrateur / Administratrice réseaux - télécoms,Assistant(e) fiscal(e) ou gestionnaire de paie (H/F/D) avec possibilité de télétravail,skos:relatedMatch,0.649,ROME,ARBEITNOW,OCC_8a0009547b60,OCC_e4a8a5aa915e,embeddings
+0,Consultant fonctionnel / Consultante fonctionnelle des systèmes d'information,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),skos:relatedMatch,0.649,ROME,ARBEITNOW,OCC_2088e2ac84a9,OCC_77117619e46e,embeddings
+0,Analyste d'application informatique,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),skos:relatedMatch,0.649,ROME,ARBEITNOW,OCC_085a2958b6aa,OCC_45b81edc9b79,embeddings
+0,consultant informatique/consultante informatique,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),skos:relatedMatch,0.648,ESCO,ARBEITNOW,OCC_30549a5affd9,OCC_77117619e46e,embeddings
+1,Directeur / Directrice de projets des territoires connectés,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,skos:relatedMatch,0.648,ROME,ARBEITNOW,OCC_45f8e3b56a4a,OCC_5ba0f9300746,embeddings
+0,technicien informatique/technicienne informatique,Technicien / Technicienne de piscine,skos:relatedMatch,0.647,ESCO,REMOTEOK,OCC_14d19ed15436,OCC_1d71758bab20,embeddings
+0,concepteur d’entrepôt de données/conceptrice d’entrepôt de données,Agent de saisie de données débutant - Télétravail intégral,skos:relatedMatch,0.647,ESCO,REMOTEOK,OCC_c7ddb7ad3c99,OCC_e2079fd4cbf9,embeddings
+1,concepteur d’entrepôt de données/conceptrice d’entrepôt de données,Urbaniste Datacenter,skos:relatedMatch,0.647,ESCO,ROME,OCC_c7ddb7ad3c99,OCC_c86e2d385aa5,embeddings
+1,Product Owner,Product Owner - Agent Assist et User Platforms (H/F/D),skos:relatedMatch,0.645,ROME,ARBEITNOW,OCC_3946835718f5,OCC_5d343c03bfac,embeddings
+1,Concepteur / Conceptrice UX/UI,concepteur de logiciels d’application/conceptrice de logiciels d’application,skos:relatedMatch,0.645,REMOTEOK,ESCO,OCC_b415cabf36c7,OCC_cd04c9fb1a40,embeddings
+0,Data engineer,Agent de saisie de données débutant - Télétravail intégral,skos:relatedMatch,0.645,ROME,REMOTEOK,OCC_903f27875082,OCC_e2079fd4cbf9,embeddings
+1,Ingénieur(e) logiciel (H/F/D),concepteur de logiciels/conceptrice de logiciels,skos:relatedMatch,0.644,ARBEITNOW,ESCO,OCC_4a7e79aa5d4f,OCC_fa1704d164c5,embeddings
+1,Gestionnaire d'applications système d'information,gestionnaire des modifications et de la configuration des TIC,skos:relatedMatch,0.644,ROME,ESCO,OCC_5575a38586ce,OCC_b12363d00856,embeddings
+0,auditeur des systèmes d’information/auditrice des systèmes d’information,Urbaniste des systèmes d'information,skos:relatedMatch,0.644,ESCO,ROME,OCC_7d8d0e4e5d42,OCC_bf56177836a1,embeddings
+1,administrateur de réseau informatique/administratrice de réseau informatique,Administrateur / Administratrice IT senior (H/F/D),skos:relatedMatch,0.643,ESCO,ARBEITNOW,OCC_07647950ddea,OCC_c8e3c9cb6c38,embeddings
+1,analyste de système informatique,Analyste d'affaires,skos:relatedMatch,0.643,ESCO,REMOTEOK,OCC_20596f0afee7,OCC_d9115408ab56,embeddings
+0,Ingénieur / Ingénieure supervision IT Datacenter,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.643,ROME,REMOTEOK,OCC_07c3258d7642,OCC_b9e95ef30857,embeddings
+0,responsable du service d’assistance informatique,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,skos:relatedMatch,0.642,ESCO,ARBEITNOW,OCC_127c8b092532,OCC_5ba0f9300746,embeddings
+1,Analyste décisionnel - Business Intelligence,analyste logiciel,skos:relatedMatch,0.642,ROME,ESCO,OCC_4fedfaca20de,OCC_6b1c7257ba1b,embeddings
+0,technicien informatique/technicienne informatique,Pentesteur / Pentesteuse,skos:relatedMatch,0.642,ESCO,ROME,OCC_14d19ed15436,OCC_b0651e781d64,embeddings
+1,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),programmeur en informatique industrielle/programmeuse en informatique industrielle,skos:relatedMatch,0.641,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_9f67438781d4,embeddings
+0,Agent de saisie de données,responsable de l’audit informatique,skos:relatedMatch,0.641,REMOTEOK,ESCO,OCC_3756041ae6ec,OCC_65c02430a9d6,embeddings
+1,consultant en technologie de l’information et de la communication verte/consultante en technologie de l’information et de la communication verte,Expert / Experte en communication et réseaux,skos:relatedMatch,0.641,ESCO,ROME,OCC_43a86b759733,OCC_b7befaa6cd86,embeddings
+0,Intégrateur / Intégratrice logiciels métiers,configurateur d’applications/configuratrice d’applications,skos:relatedMatch,0.641,ROME,ESCO,OCC_22a265df20e2,OCC_e1899e09057e,embeddings
+0,Architecte multimédias interactifs,développeur d’interface utilisateur/développeuse d’interface utilisatrice,skos:relatedMatch,0.641,ROME,ESCO,OCC_9f8d6a13ded5,OCC_c089ec2388cd,embeddings
+0,Architecte base de données,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.641,ROME,REMOTEOK,OCC_9e721c3b1a5c,OCC_b9e95ef30857,embeddings
+1,consultant en recherche informatique/consultante en recherche informatique,Consultant(e) senior en ingénierie IA (H/F/D),skos:relatedMatch,0.64,ESCO,ARBEITNOW,OCC_106b6f022c02,OCC_43958fcde9b9,embeddings
+1,Coordinateur / Coordinatrice Maitrise d'Ouvrage Système d'Information (MOA SI),responsable du service d’assistance informatique,skos:relatedMatch,0.64,ROME,ESCO,OCC_069c1da7cb17,OCC_127c8b092532,embeddings
+1,technicien en sécurité informatique/technicienne en sécurité informatique,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),skos:relatedMatch,0.639,ESCO,ARBEITNOW,OCC_47b1b32e81f9,OCC_77117619e46e,embeddings
+0,analyste de données,Agent de saisie de données / Spécialiste en saisie de données,skos:relatedMatch,0.639,ESCO,REMOTEOK,OCC_ccd1a82716dc,OCC_d8d5f3a4878b,embeddings
+0,Technicien / Technicienne d'exploitation informatique,Technicien / Technicienne de piscine,skos:relatedMatch,0.639,ROME,REMOTEOK,OCC_1ce0e8031f25,OCC_1d71758bab20,embeddings
+0,technicien informatique/technicienne informatique,Chef de produit technique (Lead/Senior) - Ingénierie plateforme (H/F/D),skos:relatedMatch,0.638,ESCO,ARBEITNOW,OCC_14d19ed15436,OCC_8d76388f9989,embeddings
+0,analyste de système informatique,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),skos:relatedMatch,0.638,ESCO,ARBEITNOW,OCC_20596f0afee7,OCC_45b81edc9b79,embeddings
+1,analyste-testeur informatique/analyste-testeuse informatique,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),skos:relatedMatch,0.637,ESCO,ARBEITNOW,OCC_1fbb1e6392b6,OCC_45b81edc9b79,embeddings
+0,concepteur de bases de données /conceptrice de bases de données,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.637,ESCO,REMOTEOK,OCC_65014a542c78,OCC_b9e95ef30857,embeddings
+1,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),développeur de logiciels pour systèmes informatiques intégrés/développeuse de logiciels pour systèmes informatiques intégrés,skos:relatedMatch,0.636,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_47055aec8572,embeddings
+1,"Responsable d'ingénierie, Moteur de recherche (tous genres)",Responsable de la production informatique,skos:relatedMatch,0.636,ARBEITNOW,ROME,OCC_14a3530bfb4b,OCC_91c7799dadef,embeddings
+0,concepteur d’interface utilisateur/conceptrice d’interface utilisatrice,Architecte multimédias interactifs,skos:relatedMatch,0.636,ESCO,ROME,OCC_340f51445866,OCC_9f8d6a13ded5,embeddings
+0,Technicien / Technicienne d'exploitation informatique,Consultant(e) senior en ingénierie IA (H/F/D),skos:relatedMatch,0.635,ROME,ARBEITNOW,OCC_1ce0e8031f25,OCC_43958fcde9b9,embeddings
+0,scientifique des données,Dactylographe - Saisie de données,skos:relatedMatch,0.635,ESCO,REMOTEOK,OCC_7bde92a813dd,OCC_b98e457eb404,embeddings
+0,Architecte systèmes et réseaux,configurateur de systèmes/configuratrice de systèmes,skos:relatedMatch,0.635,ROME,ESCO,OCC_21715cbb5d2f,OCC_e28a715b58e4,embeddings
+0,technicien informatique/technicienne informatique,Chef / Cheffe de projet maîtrise d'œuvre informatique,skos:relatedMatch,0.635,ESCO,ROME,OCC_14d19ed15436,OCC_fc361ed0ca3c,embeddings
+1,Directeur / Directrice de projet en informatique,Coordinateur / Coordinatrice de projets logiciels (H/F/D) | Berlin-Mitte | Temps partiel/Temps plein,skos:relatedMatch,0.634,ROME,ARBEITNOW,OCC_5dccaa0f70e3,OCC_c81768051e3f,embeddings
+1,Analyste senior - Support de projet,analyste de données,skos:relatedMatch,0.633,REMOTEOK,ESCO,OCC_a55aa629a66b,OCC_ccd1a82716dc,embeddings
+1,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),informaticien/informaticienne,skos:relatedMatch,0.631,ARBEITNOW,ESCO,OCC_3cacf2bb2b93,OCC_727ec0d8350c,embeddings
+0,spécialiste de l’optimisation des moteurs de recherche,Expert / Experte méthodes et qualité informatique,skos:relatedMatch,0.631,ESCO,ROME,OCC_0ee16ac6947b,OCC_336e0a8cfc0b,embeddings
+0,administrateur de base de données/administratrice de base de données,Spécialiste en saisie de données - Assistant(e) administratif(ve),skos:relatedMatch,0.63,ESCO,REMOTEOK,OCC_759562b3dd51,OCC_c69fa61c1cf6,embeddings
+0,Intégrateur / Intégratrice logiciels métiers,Chef de produit - IA,skos:relatedMatch,0.63,ROME,REMOTEOK,OCC_22a265df20e2,OCC_2e0e260cb4d7,embeddings
+0,Chef / Cheffe de projet Maîtrise d'Ouvrage des Systèmes d'Information (MOA),Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),skos:relatedMatch,0.629,ROME,ARBEITNOW,OCC_7139e09be76c,OCC_77117619e46e,embeddings
+0,Spécialiste e-santé,Spécialiste en saisie de données,skos:relatedMatch,0.629,ROME,REMOTEOK,OCC_7606d49145d3,OCC_a196178f2449,embeddings
+0,Ingénieur / Ingénieure d'étude informatique,Jeune diplômé(e) - Data Scientist,skos:relatedMatch,0.629,ROME,REMOTEOK,OCC_050f179f19d8,OCC_7781415f8e03,embeddings
+1,Intégrateur / Intégratrice logiciels métiers,"Ingénieur(e) logiciel - Automatisation et opérations (H/F/D, temps plein)",skos:relatedMatch,0.628,ROME,ARBEITNOW,OCC_22a265df20e2,OCC_3568bf427685,embeddings
+0,Ingénieur / Ingénieure Cybersécurité Datacenter,Agent de saisie de données / Spécialiste en saisie de données,skos:relatedMatch,0.628,ROME,REMOTEOK,OCC_0194b59e1846,OCC_d8d5f3a4878b,embeddings
+0,Consultant(e) senior en ingénierie IA (H/F/D),Analyste Concepteur / Conceptrice informatique,skos:relatedMatch,0.627,ARBEITNOW,ROME,OCC_43958fcde9b9,OCC_6208e1876753,embeddings
+0,Analyste senior - Support de projet,Développeur / Développeuse logiciel senior (H/F/D),skos:relatedMatch,0.626,REMOTEOK,ARBEITNOW,OCC_a55aa629a66b,OCC_cbba626eede9,embeddings
+0,Consultant / Consultante avant-vente,Consultant(e) senior en ingénierie IA (H/F/D),skos:relatedMatch,0.625,ROME,ARBEITNOW,OCC_3dd25c7bc53e,OCC_43958fcde9b9,embeddings
+1,Responsable de la production informatique,responsable de l’assurance qualité informatique,skos:relatedMatch,0.625,ROME,ESCO,OCC_91c7799dadef,OCC_b01b8def641d,embeddings
+0,développeur web/développeuse web,Développeur / Développeuse Frontend E-Commerce (H/F/D),skos:relatedMatch,0.624,ESCO,ARBEITNOW,OCC_3b83c3012cf7,OCC_ee0ddbbdc92c,embeddings
+1,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),Architecte sécurité informatique,skos:relatedMatch,0.624,ARBEITNOW,ROME,OCC_77117619e46e,OCC_8d1f9f4c93ee,embeddings
+0,responsable de la sécurité des TIC,Responsable télécoms,skos:relatedMatch,0.624,ESCO,ROME,OCC_3ea9dcd66347,OCC_a4044d9bc8b4,embeddings
+1,Expert / Experte en cybersécurité,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),skos:relatedMatch,0.623,ROME,ARBEITNOW,OCC_4def1bedc140,OCC_77117619e46e,embeddings
+0,spécialiste de l’investigation numérique,Analyste senior - Support de projet,skos:relatedMatch,0.623,ESCO,REMOTEOK,OCC_46b37f0135cb,OCC_a55aa629a66b,embeddings
+0,consultant en recherche informatique/consultante en recherche informatique,Analyste senior - Support de projet,skos:relatedMatch,0.623,ESCO,REMOTEOK,OCC_106b6f022c02,OCC_a55aa629a66b,embeddings
+0,Chef de produit - IA,Développeur / Développeuse informatique,skos:relatedMatch,0.623,REMOTEOK,ROME,OCC_2e0e260cb4d7,OCC_4243894cf004,embeddings
+0,Chef de projet / Cheffe de projet (Project Management Officer),Chef de produit - IA,skos:relatedMatch,0.622,ROME,REMOTEOK,OCC_21efe6cdd8d9,OCC_2e0e260cb4d7,embeddings
+1,Ingénieur / Ingénieure en Intelligence Artificielle (IA),Ingénieur(e) senior en apprentissage automatique (H/F/*),skos:relatedMatch,0.62,ROME,ARBEITNOW,OCC_ec6735d1a243,OCC_fe42133b7839,embeddings
+0,analyste d’étude en TIC,Analyste de données - Secteur de la santé,skos:relatedMatch,0.62,ESCO,REMOTEOK,OCC_0a3ba0a2e348,OCC_c2f30bbdb638,embeddings
+0,Analyste d'étude informatique,Analyste de données - Secteur de la santé,skos:relatedMatch,0.62,ROME,REMOTEOK,OCC_5fafb471f4aa,OCC_c2f30bbdb638,embeddings
+1,Gestionnaire de base de données,Spécialiste en saisie de données - Assistant(e) administratif(ve),skos:relatedMatch,0.62,ROME,REMOTEOK,OCC_164e408e096f,OCC_c69fa61c1cf6,embeddings
+0,Chef de produit - IA,Coordinateur / Coordinatrice de production web,skos:relatedMatch,0.62,REMOTEOK,ROME,OCC_2e0e260cb4d7,OCC_8febad416722,embeddings
+1,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),Administrateur / Administratrice de systèmes d'information (SI),skos:relatedMatch,0.619,ARBEITNOW,ROME,OCC_3cacf2bb2b93,OCC_98d19aeea9a4,embeddings
+0,Concepteur / Conceptrice UX/UI,configurateur d’applications/configuratrice d’applications,skos:relatedMatch,0.619,REMOTEOK,ESCO,OCC_b415cabf36c7,OCC_e1899e09057e,embeddings
+0,architecte d’entreprise,Chef de projet / Cheffe de projet (Project Management Officer),skos:relatedMatch,0.619,ESCO,ROME,OCC_01372aeb8cb5,OCC_21efe6cdd8d9,embeddings
+1,Développeur / Développeuse décisionnel - Business Intelligence,Analyste d'affaires,skos:relatedMatch,0.619,ROME,REMOTEOK,OCC_2e83dfac986c,OCC_d9115408ab56,embeddings
+1,Chef de produit - IA,Directeur / Directrice Produit et Ingénierie (H/F/D),skos:relatedMatch,0.618,REMOTEOK,ARBEITNOW,OCC_2e0e260cb4d7,OCC_6622b2e6404b,embeddings
+1,Technicien / Technicienne d'exploitation informatique,ingénieur intégration/ingénieure intégration,skos:relatedMatch,0.617,ROME,ESCO,OCC_1ce0e8031f25,OCC_535421ae1e2c,embeddings
+1,Ingénieur(e) logiciel (H/F/D),concepteur de logiciels d’application/conceptrice de logiciels d’application,skos:relatedMatch,0.616,ARBEITNOW,ESCO,OCC_4a7e79aa5d4f,OCC_cd04c9fb1a40,embeddings
+0,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),ingénieur en sécurité des systèmes intégrés/ingénieure en sécurité des systèmes intégrés,skos:relatedMatch,0.615,ARBEITNOW,ESCO,OCC_3cacf2bb2b93,OCC_b0446201413b,embeddings
+1,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),Responsable des systèmes d'information (SI),skos:relatedMatch,0.615,ARBEITNOW,ROME,OCC_3cacf2bb2b93,OCC_48e7a1feb2bb,embeddings
+0,Chef de produit - IA,développeur de logiciels/développeuse de logiciels,skos:relatedMatch,0.615,REMOTEOK,ESCO,OCC_2e0e260cb4d7,OCC_e57061351bc6,embeddings
+0,Homologateur / Homologatrice fonctionnel de logiciel,concepteur de logiciels/conceptrice de logiciels,skos:relatedMatch,0.615,ROME,ESCO,OCC_21c50bd3a35a,OCC_fa1704d164c5,embeddings
+1,Game Designer senior - Solitaire TriPeaks (Systèmes et économie) - Télétravail intégral,développeur de jeux numériques/développeuse de jeux numériques,skos:relatedMatch,0.614,ARBEITNOW,ESCO,OCC_3b84fd707ab1,OCC_554c5e421f89,embeddings
+1,"Ingénieur(e) logiciel - Automatisation et opérations (H/F/D, temps plein)",concepteur de systèmes informatiques intégrés/conceptrice de systèmes informatiques intégrés,skos:relatedMatch,0.614,ARBEITNOW,ESCO,OCC_3568bf427685,OCC_89f4b0de8aeb,embeddings
+1,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),ingénieur intégration/ingénieure intégration,skos:relatedMatch,0.614,ARBEITNOW,ESCO,OCC_3cacf2bb2b93,OCC_535421ae1e2c,embeddings
+1,Chef / Cheffe de projet Web,Concepteur / Conceptrice web junior,skos:relatedMatch,0.613,ROME,REMOTEOK,OCC_8afef792d150,OCC_d3df557742ce,embeddings
+1,Concepteur / Conceptrice en architecture,"Architecte principal(e) Gouvernance, Risque et Conformité (GRC)",skos:relatedMatch,0.612,REMOTEOK,ARBEITNOW,OCC_20f53a6b090c,OCC_27e8294e0a68,embeddings
+1,responsable de la résilience informatique,Responsable des études et applications informatiques,skos:relatedMatch,0.612,ESCO,ROME,OCC_0464755fe4e8,OCC_e16c45181fb8,embeddings
+0,Concepteur / Conceptrice en architecture,Architecte multimédias interactifs,skos:relatedMatch,0.612,REMOTEOK,ROME,OCC_20f53a6b090c,OCC_9f8d6a13ded5,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),configurateur d’applications/configuratrice d’applications,skos:relatedMatch,0.61,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_e1899e09057e,embeddings
+0,technicien informatique/technicienne informatique,Technicien / Technicienne de la météorologie,skos:relatedMatch,0.61,ESCO,ROME,OCC_14d19ed15436,OCC_5142d7362315,embeddings
+1,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,Responsable des études et applications informatiques,skos:relatedMatch,0.609,ARBEITNOW,ROME,OCC_5ba0f9300746,OCC_e16c45181fb8,embeddings
+0,concepteur de systèmes informatiques intégrés/conceptrice de systèmes informatiques intégrés,Concepteur / Conceptrice UX/UI,skos:relatedMatch,0.608,ESCO,REMOTEOK,OCC_89f4b0de8aeb,OCC_b415cabf36c7,embeddings
+0,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,Coordinateur / Coordinatrice de production web,skos:relatedMatch,0.607,ARBEITNOW,ROME,OCC_5ba0f9300746,OCC_8febad416722,embeddings
+0,consultant informatique/consultante informatique,Analyste d'affaires,skos:relatedMatch,0.607,ESCO,REMOTEOK,OCC_30549a5affd9,OCC_d9115408ab56,embeddings
+0,Spécialiste en saisie de données - Assistant(e) administratif(ve),Assistant(e) fiscal(e) ou gestionnaire de paie (H/F/D) avec possibilité de télétravail,skos:relatedMatch,0.606,REMOTEOK,ARBEITNOW,OCC_c69fa61c1cf6,OCC_e4a8a5aa915e,embeddings
+0,Ingénieur / Ingénieure en informatique embarquée,Agent de saisie de données / Spécialiste en saisie de données,skos:relatedMatch,0.606,ROME,REMOTEOK,OCC_3b2885fc44e3,OCC_d8d5f3a4878b,embeddings
+1,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),ingénieur en intelligence artificielle/ingénieure en intelligence artificielle,skos:relatedMatch,0.605,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_80660e3c36ff,embeddings
+0,Chef de produit - IA,programmeur en informatique industrielle/programmeuse en informatique industrielle,skos:relatedMatch,0.605,REMOTEOK,ESCO,OCC_2e0e260cb4d7,OCC_9f67438781d4,embeddings
+0,Expert / Experte méthodes et qualité informatique,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),skos:relatedMatch,0.604,ROME,ARBEITNOW,OCC_336e0a8cfc0b,OCC_45b81edc9b79,embeddings
+0,Développeur / Développeuse multimédia,Développeur / Développeuse Frontend E-Commerce (H/F/D),skos:relatedMatch,0.604,ROME,ARBEITNOW,OCC_073f57ae50f2,OCC_ee0ddbbdc92c,embeddings
+0,analyste d’étude en TIC,Analyste cycle de vie dans les télécoms,skos:relatedMatch,0.604,ESCO,ROME,OCC_0a3ba0a2e348,OCC_f0026eafdf53,embeddings
+1,Analyste senior - Support de projet,Responsable des études et applications informatiques,skos:relatedMatch,0.603,REMOTEOK,ROME,OCC_a55aa629a66b,OCC_e16c45181fb8,embeddings
+0,intégrateur de base de données/intégratrice de base de données,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.602,ESCO,REMOTEOK,OCC_69eaea4542b3,OCC_b9e95ef30857,embeddings
+1,Ingénieur(e) en robotique / logiciel embarqué (H/F/D),Ingénieur / Ingénieure en informatique embarquée,skos:relatedMatch,0.601,ARBEITNOW,ROME,OCC_1bb89a04e3bf,OCC_3b2885fc44e3,embeddings
+1,Ingénieur(e) plateforme / DevOps (H/F/D) | Startup GovTech IA | Munich,Ingénieur / Ingénieure DevOps,skos:relatedMatch,0.6,ARBEITNOW,ROME,OCC_10dc41f6953f,OCC_eab9b08d024c,embeddings
+1,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),Technicien / Technicienne en cybersécurité,skos:relatedMatch,0.6,ARBEITNOW,ROME,OCC_77117619e46e,OCC_7f18f2f19e2a,embeddings
+0,Analyste des systèmes de la chaîne d'approvisionnement,configurateur de systèmes/configuratrice de systèmes,skos:relatedMatch,0.6,REMOTEOK,ESCO,OCC_8df0f1dba04b,OCC_e28a715b58e4,embeddings
+0,Ingénieur / Ingénieure supervision IT Datacenter,Responsable Ingénieur(e) IT Operations (H/F/D),skos:relatedMatch,0.599,ROME,ARBEITNOW,OCC_07c3258d7642,OCC_eb475bc6322d,embeddings
+0,concepteur de systèmes informatiques/conceptrice de systèmes informatiques,Concepteur / Conceptrice UX/UI,skos:relatedMatch,0.599,ESCO,REMOTEOK,OCC_9e5778cecf8d,OCC_b415cabf36c7,embeddings
+0,Administrateur / Administratrice de systèmes d'information (SI),Agent administratif de saisie de données et de classement,skos:relatedMatch,0.599,ROME,REMOTEOK,OCC_98d19aeea9a4,OCC_b9e95ef30857,embeddings
+0,testeur de jeux numériques/testeuse de jeux numériques,Game Designer senior - Solitaire TriPeaks (Systèmes et économie) - Télétravail intégral,skos:relatedMatch,0.598,ESCO,ARBEITNOW,OCC_234bb9d3e7c0,OCC_3b84fd707ab1,embeddings
+0,"Responsable d'ingénierie, Moteur de recherche (tous genres)",Concepteur / Conceptrice en architecture,skos:relatedMatch,0.598,ARBEITNOW,REMOTEOK,OCC_14a3530bfb4b,OCC_20f53a6b090c,embeddings
+0,informaticien/informaticienne,Analyste d'affaires,skos:relatedMatch,0.598,ESCO,REMOTEOK,OCC_727ec0d8350c,OCC_d9115408ab56,embeddings
+0,Développeur / Développeuse décisionnel - Business Intelligence,développeur de logiciels/développeuse de logiciels,skos:relatedMatch,0.598,ROME,ESCO,OCC_2e83dfac986c,OCC_e57061351bc6,embeddings
+0,Chef de produit - IA,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),skos:relatedMatch,0.597,REMOTEOK,ARBEITNOW,OCC_2e0e260cb4d7,OCC_45b81edc9b79,embeddings
+0,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),Expert / Experte systèmes et réseaux informatiques,skos:relatedMatch,0.596,ARBEITNOW,ROME,OCC_3cacf2bb2b93,OCC_c44a9eaae6e7,embeddings
+0,Technicien / Technicienne de piscine,Technicien / Technicienne de la météorologie,skos:relatedMatch,0.596,REMOTEOK,ROME,OCC_1d71758bab20,OCC_5142d7362315,embeddings
+0,Ingénieur(e) plateforme Full Stack (H/F/D),Ingénieur / Ingénieure DevOps,skos:relatedMatch,0.595,ARBEITNOW,ROME,OCC_9dfb8a8e4b63,OCC_eab9b08d024c,embeddings
+1,responsable des tests d’intégration,Spécialiste test et validation logiciel ou application,skos:relatedMatch,0.595,ESCO,ROME,OCC_23fda8338d1e,OCC_2523d083789d,embeddings
+0,Consultant / Consultante avant-vente,Analyste senior - Support de projet,skos:relatedMatch,0.595,ROME,REMOTEOK,OCC_3dd25c7bc53e,OCC_a55aa629a66b,embeddings
+0,Ingénieur(e) en robotique / logiciel embarqué (H/F/D),concepteur de systèmes informatiques/conceptrice de systèmes informatiques,skos:relatedMatch,0.594,ARBEITNOW,ESCO,OCC_1bb89a04e3bf,OCC_9e5778cecf8d,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),technicien de réseau informatique/technicienne de réseau informatique,skos:relatedMatch,0.594,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_f609b6bc11bf,embeddings
+0,responsable du service d’assistance informatique,Analyste senior - Support de projet,skos:relatedMatch,0.594,ESCO,REMOTEOK,OCC_127c8b092532,OCC_a55aa629a66b,embeddings
+0,Agent de saisie de données,Ingénieur / Ingénieure sécurité web,skos:relatedMatch,0.594,REMOTEOK,ROME,OCC_3756041ae6ec,OCC_54194a8e4af5,embeddings
+0,technicien informatique/technicienne informatique,Directeur / Directrice Produit et Ingénierie (H/F/D),skos:relatedMatch,0.591,ESCO,ARBEITNOW,OCC_14d19ed15436,OCC_6622b2e6404b,embeddings
+1,Chef / Cheffe de projet étude et développement informatique,Co-responsable d'équipe et développeur(euse) senior (H/F/D) - Hambourg | Francfort | Vienne,skos:relatedMatch,0.59,ROME,ARBEITNOW,OCC_09b65ca00490,OCC_d13dc12649ed,embeddings
+1,Intégrateur / Intégratrice logiciels métiers,Ingénieur(e) logiciel (H/F/D),skos:relatedMatch,0.59,ROME,ARBEITNOW,OCC_22a265df20e2,OCC_4a7e79aa5d4f,embeddings
+0,Analyste senior - Support de projet,Co-responsable d'équipe et développeur(euse) senior (H/F/D) - Hambourg | Francfort | Vienne,skos:relatedMatch,0.589,REMOTEOK,ARBEITNOW,OCC_a55aa629a66b,OCC_d13dc12649ed,embeddings
+0,Administrateur / Administratrice de systèmes d'information (SI),Ingénieur(e) systèmes IT (H/F/D),skos:relatedMatch,0.587,ROME,ARBEITNOW,OCC_98d19aeea9a4,OCC_ccb65c46f869,embeddings
+1,Développeur / Développeuse - jeux vidéo,Game Designer senior - Solitaire TriPeaks (Systèmes et économie) - Télétravail intégral,skos:relatedMatch,0.586,ROME,ARBEITNOW,OCC_2f27eb2177cc,OCC_3b84fd707ab1,embeddings
+1,Chef de produit technique (Lead/Senior) - Ingénierie plateforme (H/F/D),Chef / Cheffe de projet maîtrise d'œuvre informatique,skos:relatedMatch,0.586,ARBEITNOW,ROME,OCC_8d76388f9989,OCC_fc361ed0ca3c,embeddings
+0,Technicien / Technicienne de piscine,Pentesteur / Pentesteuse,skos:relatedMatch,0.586,REMOTEOK,ROME,OCC_1d71758bab20,OCC_b0651e781d64,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),développeur IoT/développeuse IoT,skos:relatedMatch,0.585,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_af0b4023ea6c,embeddings
+0,Gestionnaire de parc informatique,Conseiller / Conseillère en services de sécurité managés (H/F/D),skos:relatedMatch,0.584,ROME,ARBEITNOW,OCC_b847e63cc092,OCC_ef12d6a864e0,embeddings
+0,Météorologue,Chimiométricien / Chimiométricienne,skos:relatedMatch,0.583,ROME,WIKIDATA,OCC_1de7cfbf9d19,OCC_d70f56db8654,embeddings
+1,Coordinateur / Coordinatrice de projets logiciels (H/F/D) | Berlin-Mitte | Temps partiel/Temps plein,concepteur de logiciels/conceptrice de logiciels,skos:relatedMatch,0.582,ARBEITNOW,ESCO,OCC_c81768051e3f,OCC_fa1704d164c5,embeddings
+0,développeur de systèmes informatiques/développeuse de systèmes informatiques,Ingénieur(e) de développement (H/F/D) FPGA,skos:relatedMatch,0.582,ESCO,ARBEITNOW,OCC_a1ea51659e23,OCC_aca1a4cafa57,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),concepteur d’entrepôt de données/conceptrice d’entrepôt de données,skos:relatedMatch,0.582,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_c7ddb7ad3c99,embeddings
+0,"Responsable d'ingénierie, Moteur de recherche (tous genres)",ingénieur de réseaux informatiques/ingénieure de réseaux informatiques,skos:relatedMatch,0.582,ARBEITNOW,ESCO,OCC_14a3530bfb4b,OCC_6836ed031e87,embeddings
+0,Homologateur / Homologatrice fonctionnel de logiciel,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),skos:relatedMatch,0.582,ROME,ARBEITNOW,OCC_21c50bd3a35a,OCC_45b81edc9b79,embeddings
+0,Chef de produit - IA,Directeur / Directrice des systèmes d'information (DSI),skos:relatedMatch,0.582,REMOTEOK,ROME,OCC_2e0e260cb4d7,OCC_4a2781037768,embeddings
+0,Agent de saisie de données,Expert / Experte en cybersécurité,skos:relatedMatch,0.581,REMOTEOK,ROME,OCC_3756041ae6ec,OCC_4def1bedc140,embeddings
+0,"Responsable d'ingénierie, Moteur de recherche (tous genres)",ingénieur en vision par ordinateur/ingénieure en vision par ordinateur,skos:relatedMatch,0.58,ARBEITNOW,ESCO,OCC_14a3530bfb4b,OCC_991dd4068ca0,embeddings
+0,Développeur / Développeuse décisionnel - Business Intelligence,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,skos:relatedMatch,0.579,ROME,ARBEITNOW,OCC_2e83dfac986c,OCC_5ba0f9300746,embeddings
+0,responsable du service d’assistance informatique,Directeur / Directrice de projets des territoires connectés,skos:relatedMatch,0.579,ESCO,ROME,OCC_127c8b092532,OCC_45f8e3b56a4a,embeddings
+1,Ingénieur(e) logiciel senior / Ingénieur(e) ML (H/F/X) - Secteur de l'éducation / Télétravail,développeur de logiciels/développeuse de logiciels,skos:relatedMatch,0.577,ARBEITNOW,ESCO,OCC_88496659bc48,OCC_e57061351bc6,embeddings
+0,développeur de base de données/développeuse de base de données,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.577,ESCO,REMOTEOK,OCC_11d84dbfc1bc,OCC_b9e95ef30857,embeddings
+0,Agent de saisie de données,responsable de la sécurité des TIC,skos:relatedMatch,0.576,REMOTEOK,ESCO,OCC_3756041ae6ec,OCC_3ea9dcd66347,embeddings
+0,Chef / Cheffe de projet Maîtrise d'Ouvrage des Systèmes d'Information (MOA),Agent administratif de saisie de données et de classement,skos:relatedMatch,0.576,ROME,REMOTEOK,OCC_7139e09be76c,OCC_b9e95ef30857,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),analyste logiciel,skos:relatedMatch,0.575,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_6b1c7257ba1b,embeddings
+1,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),analyste réponse aux incidents de sécurité,skos:relatedMatch,0.575,ARBEITNOW,ESCO,OCC_77117619e46e,OCC_8b508c20ce1d,embeddings
+0,administrateur de contenu web/administratrice de contenu web,Administrateur / Administratrice IT senior (H/F/D),skos:relatedMatch,0.575,ESCO,ARBEITNOW,OCC_aa3336017d8a,OCC_c8e3c9cb6c38,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),Concepteur / Conceptrice UX/UI,skos:relatedMatch,0.575,ARBEITNOW,REMOTEOK,OCC_45b81edc9b79,OCC_b415cabf36c7,embeddings
+1,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),Gestionnaire d'applications système d'information,skos:relatedMatch,0.575,ARBEITNOW,ROME,OCC_3cacf2bb2b93,OCC_5575a38586ce,embeddings
+1,Ingénieur / Ingénieure blockchain,développeur de chaînes de blocs/développeuse de chaînes de blocs,skos:relatedMatch,0.575,ROME,ESCO,OCC_58f6f0c81c5b,OCC_a4f72755e1ad,embeddings
+0,Product Owner - Agent Assist et User Platforms (H/F/D),analyste d’expérience utilisateur,skos:relatedMatch,0.574,ARBEITNOW,ESCO,OCC_5d343c03bfac,OCC_7ca8931aad99,embeddings
+0,Ingénieur(e) en robotique / logiciel embarqué (H/F/D),Concepteur / Conceptrice UX/UI,skos:relatedMatch,0.574,ARBEITNOW,REMOTEOK,OCC_1bb89a04e3bf,OCC_b415cabf36c7,embeddings
+0,Ingénieur(e) logiciel (H/F/D),Concepteur / Conceptrice UX/UI,skos:relatedMatch,0.574,ARBEITNOW,REMOTEOK,OCC_4a7e79aa5d4f,OCC_b415cabf36c7,embeddings
+0,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,Chef / Cheffe de projet réseau fixe et mobile,skos:relatedMatch,0.573,ARBEITNOW,ROME,OCC_5ba0f9300746,OCC_734c5ae6a3df,embeddings
+1,Développeur / Développeuse informatique,Ingénieur(e) de développement (H/F/D) FPGA,skos:relatedMatch,0.572,ROME,ARBEITNOW,OCC_4243894cf004,OCC_aca1a4cafa57,embeddings
+0,"Responsable d'ingénierie, Moteur de recherche (tous genres)",Ingénieur informaticien / Ingénieure informaticienne,skos:relatedMatch,0.572,ARBEITNOW,ROME,OCC_14a3530bfb4b,OCC_e02a62ee28e8,embeddings
+0,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,responsable de la planification de la capacité informatique,skos:relatedMatch,0.571,ARBEITNOW,ESCO,OCC_5ba0f9300746,OCC_e1b1773585de,embeddings
+0,Analyste senior - Support de projet,Administrateur / Administratrice IT senior (H/F/D),skos:relatedMatch,0.571,REMOTEOK,ARBEITNOW,OCC_a55aa629a66b,OCC_c8e3c9cb6c38,embeddings
+0,Ingénieur / Ingénieure DevOps,Ingénieur(e) Frontend (H/F/D),skos:relatedMatch,0.57,ROME,ARBEITNOW,OCC_eab9b08d024c,OCC_f75ad6da5f30,embeddings
+1,Jeune diplômé(e) - Data Scientist,Ingénieur(e) logiciel senior / Ingénieur(e) ML (H/F/X) - Secteur de l'éducation / Télétravail,skos:relatedMatch,0.569,REMOTEOK,ARBEITNOW,OCC_7781415f8e03,OCC_88496659bc48,embeddings
+0,responsable communications de données aéronautiques,Agent de saisie de données débutant - Télétravail intégral,skos:relatedMatch,0.569,ESCO,REMOTEOK,OCC_8d3f855bfe60,OCC_e2079fd4cbf9,embeddings
+0,Homologateur / Homologatrice fonctionnel de logiciel,Concepteur / Conceptrice UX/UI,skos:relatedMatch,0.569,ROME,REMOTEOK,OCC_21c50bd3a35a,OCC_b415cabf36c7,embeddings
+0,Chef de produit - IA,ingénieur en intelligence artificielle/ingénieure en intelligence artificielle,skos:relatedMatch,0.567,REMOTEOK,ESCO,OCC_2e0e260cb4d7,OCC_80660e3c36ff,embeddings
+1,responsable communications de données aéronautiques,Responsable télécoms,skos:relatedMatch,0.567,ESCO,ROME,OCC_8d3f855bfe60,OCC_a4044d9bc8b4,embeddings
+1,concepteur de chaînes de blocs/conceptrice de chaînes de blocs,Développeur / Développeuse blockchain,skos:relatedMatch,0.566,ESCO,ROME,OCC_04bac78229be,OCC_f98f0e96ecac,embeddings
+0,"Responsable d'ingénierie, Moteur de recherche (tous genres)",ingénieur/ingénieure de données,skos:relatedMatch,0.565,ARBEITNOW,ESCO,OCC_14a3530bfb4b,OCC_7d1a8b2ea390,embeddings
+1,Chef de produit - IA,Product Owner - Agent Assist et User Platforms (H/F/D),skos:relatedMatch,0.565,REMOTEOK,ARBEITNOW,OCC_2e0e260cb4d7,OCC_5d343c03bfac,embeddings
+0,Administrateur / Administratrice sécurité informatique,Administrateur / Administratrice Microsoft 365 (H/F/D),skos:relatedMatch,0.565,ROME,ARBEITNOW,OCC_6d24adb3285c,OCC_dcfbee0bf2e2,embeddings
+0,Ingénieur(e) (senior) IT Operations (H/F/D),Administrateur / Administratrice de systèmes d'information (SI),skos:relatedMatch,0.565,ARBEITNOW,ROME,OCC_8bf3aa81e931,OCC_98d19aeea9a4,embeddings
+0,Analyste d'étude informatique,Ingénieur(e) logiciel senior / Ingénieur(e) ML (H/F/X) - Secteur de l'éducation / Télétravail,skos:relatedMatch,0.565,ROME,ARBEITNOW,OCC_5fafb471f4aa,OCC_88496659bc48,embeddings
+0,Ingénieur(e) IT Operations (H/F/D),Ingénieur / Ingénieure DevOps,skos:relatedMatch,0.564,ARBEITNOW,ROME,OCC_d6208f2780c6,OCC_eab9b08d024c,embeddings
+0,développeur de base de données/développeuse de base de données,Développeur / Développeuse logiciel senior (H/F/D),skos:relatedMatch,0.563,ESCO,ARBEITNOW,OCC_11d84dbfc1bc,OCC_cbba626eede9,embeddings
+0,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,Chef / Cheffe de projet Web,skos:relatedMatch,0.563,ARBEITNOW,ROME,OCC_5ba0f9300746,OCC_8afef792d150,embeddings
+0,Agent de saisie de données,hacker éthique,skos:relatedMatch,0.563,REMOTEOK,ESCO,OCC_3756041ae6ec,OCC_68dccaf6a895,embeddings
+0,analyste d’expérience utilisateur,Spécialiste en saisie de données - Assistant(e) administratif(ve),skos:relatedMatch,0.563,ESCO,REMOTEOK,OCC_7ca8931aad99,OCC_c69fa61c1cf6,embeddings
+0,Administrateur / Administratrice sécurité informatique,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.563,ROME,REMOTEOK,OCC_6d24adb3285c,OCC_b9e95ef30857,embeddings
+0,"Spécialiste outils, systèmes d'exploitation, réseaux et télécoms",Agent de saisie de données débutant - Télétravail intégral,skos:relatedMatch,0.561,ROME,REMOTEOK,OCC_c7ee9cba34be,OCC_e2079fd4cbf9,embeddings
+0,Concepteur / Conceptrice UX/UI,Ingénieur informaticien / Ingénieure informaticienne,skos:relatedMatch,0.561,REMOTEOK,ROME,OCC_b415cabf36c7,OCC_e02a62ee28e8,embeddings
+0,spécialiste de l’optimisation des moteurs de recherche,Gestionnaire de compte Google Ads | Spécialisation e-commerce (H/F/D) | Frankfurt am Main,skos:relatedMatch,0.56,ESCO,ARBEITNOW,OCC_0ee16ac6947b,OCC_941dbc8e121c,embeddings
+0,analyste d’étude en TIC,Ingénieur(e) logiciel senior / Ingénieur(e) ML (H/F/X) - Secteur de l'éducation / Télétravail,skos:relatedMatch,0.56,ESCO,ARBEITNOW,OCC_0a3ba0a2e348,OCC_88496659bc48,embeddings
+0,Ingénieur(e) logiciel senior / Ingénieur(e) ML (H/F/X) - Secteur de l'éducation / Télétravail,Concepteur / Conceptrice web junior,skos:relatedMatch,0.56,ARBEITNOW,REMOTEOK,OCC_88496659bc48,OCC_d3df557742ce,embeddings
+1,responsable de l’analyse commerciale des technologies de l’information et de la communication,Analyste d'affaires,skos:relatedMatch,0.56,ESCO,REMOTEOK,OCC_697bbd77a746,OCC_d9115408ab56,embeddings
+0,agent de service d’assistance informatique/agente de service d’assistance informatique,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.56,ESCO,REMOTEOK,OCC_708b91f0f734,OCC_b9e95ef30857,embeddings
+0,Météorologue,scientifique des données,skos:relatedMatch,0.56,ROME,ESCO,OCC_1de7cfbf9d19,OCC_7bde92a813dd,embeddings
+0,Architecte systèmes et réseaux,Analyste des systèmes de la chaîne d'approvisionnement,skos:relatedMatch,0.56,ROME,REMOTEOK,OCC_21715cbb5d2f,OCC_8df0f1dba04b,embeddings
+0,Responsable des systèmes d'information (SI),Agent administratif de saisie de données et de classement,skos:relatedMatch,0.56,ROME,REMOTEOK,OCC_48e7a1feb2bb,OCC_b9e95ef30857,embeddings
+1,Concepteur / Conceptrice en architecture,Architecte de solutions IA (H/F/D),skos:relatedMatch,0.559,REMOTEOK,ARBEITNOW,OCC_20f53a6b090c,OCC_41c17d1e8957,embeddings
+0,Product Owner - Agent Assist et User Platforms (H/F/D),Agent administratif de saisie de données et de classement,skos:relatedMatch,0.559,ARBEITNOW,REMOTEOK,OCC_5d343c03bfac,OCC_b9e95ef30857,embeddings
+0,"Ingénieur(e) IA (H/F/D) - Full Stack, TypeScript / Nuxt / Next / Vue / React",Ingénieur / Ingénieure DevOps,skos:relatedMatch,0.559,ARBEITNOW,ROME,OCC_341bd728b0ae,OCC_eab9b08d024c,embeddings
+0,Concepteur / Conceptrice UX/UI,Qualiticien / Qualiticienne logiciel en informatique,skos:relatedMatch,0.559,REMOTEOK,ROME,OCC_b415cabf36c7,OCC_da40f63e4373,embeddings
+1,responsable de la sécurité des TIC,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),skos:relatedMatch,0.558,ESCO,ARBEITNOW,OCC_3ea9dcd66347,OCC_77117619e46e,embeddings
+1,Ingénieur / Ingénieure systèmes et réseaux des territoires connectés,architecte de réseau,skos:relatedMatch,0.558,ROME,ESCO,OCC_33ca0a6e17b8,OCC_bd1d7a63edf2,embeddings
+0,Product Owner - Agent Assist et User Platforms (H/F/D),développeur d’interface utilisateur/développeuse d’interface utilisatrice,skos:relatedMatch,0.557,ARBEITNOW,ESCO,OCC_5d343c03bfac,OCC_c089ec2388cd,embeddings
+0,analyste-testeur informatique/analyste-testeuse informatique,Analyste d'affaires,skos:relatedMatch,0.557,ESCO,REMOTEOK,OCC_1fbb1e6392b6,OCC_d9115408ab56,embeddings
+0,Concepteur / Conceptrice en architecture,ingénieur de la connaissance/ingénieure de la connaissance,skos:relatedMatch,0.557,REMOTEOK,ESCO,OCC_20f53a6b090c,OCC_e29ace1e3e50,embeddings
+0,Ingénieur / Ingénieure télécoms et environnement,responsable de la sécurité des TIC,skos:relatedMatch,0.557,ROME,ESCO,OCC_234e9bc0e4be,OCC_3ea9dcd66347,embeddings
+0,Architecte logiciel C++ (H/F/D) - Calcul de trajectoires d'outils,configurateur d’applications/configuratrice d’applications,skos:relatedMatch,0.556,ARBEITNOW,ESCO,OCC_311501439fae,OCC_e1899e09057e,embeddings
+0,Consultant fonctionnel / Consultante fonctionnelle des systèmes d'information,Concepteur / Conceptrice UX/UI,skos:relatedMatch,0.556,ROME,REMOTEOK,OCC_2088e2ac84a9,OCC_b415cabf36c7,embeddings
+0,Chef de produit - IA,Administrateur / Administratrice de messagerie,skos:relatedMatch,0.556,REMOTEOK,ROME,OCC_2e0e260cb4d7,OCC_7d00df02eb9d,embeddings
+0,Spécialiste support,Analyste senior - Support de projet,skos:relatedMatch,0.556,ROME,REMOTEOK,OCC_129225e67499,OCC_a55aa629a66b,embeddings
+1,Architecte de solutions IA (H/F/D),concepteur de systèmes informatiques intégrés/conceptrice de systèmes informatiques intégrés,skos:relatedMatch,0.555,ARBEITNOW,ESCO,OCC_41c17d1e8957,OCC_89f4b0de8aeb,embeddings
+0,spécialiste de l’investigation numérique,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,skos:relatedMatch,0.555,ESCO,ARBEITNOW,OCC_46b37f0135cb,OCC_5ba0f9300746,embeddings
+0,Technicien / Technicienne de piscine,technicien de réseau informatique/technicienne de réseau informatique,skos:relatedMatch,0.555,REMOTEOK,ESCO,OCC_1d71758bab20,OCC_f609b6bc11bf,embeddings
+0,Cartographe,Dactylographe - Saisie de données,skos:relatedMatch,0.555,ROME,REMOTEOK,OCC_13ad0dec06f6,OCC_b98e457eb404,embeddings
+0,Agent de saisie de données / Spécialiste en saisie de données,Ingénieur / Ingénieure en Intelligence Artificielle (IA),skos:relatedMatch,0.555,REMOTEOK,ROME,OCC_d8d5f3a4878b,OCC_ec6735d1a243,embeddings
+0,Concepteur / Conceptrice en architecture,ingénieur en vision par ordinateur/ingénieure en vision par ordinateur,skos:relatedMatch,0.554,REMOTEOK,ESCO,OCC_20f53a6b090c,OCC_991dd4068ca0,embeddings
+0,spécialiste de l’optimisation des moteurs de recherche,Gestionnaire de compte SEA/Google Ads junior | Spécialisation e-commerce (H/F/D) | Frankfurt am Main,skos:relatedMatch,0.553,ESCO,ARBEITNOW,OCC_0ee16ac6947b,OCC_9fb404d4f622,embeddings
+0,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),Analyste senior - Support de projet,skos:relatedMatch,0.553,ARBEITNOW,REMOTEOK,OCC_77117619e46e,OCC_a55aa629a66b,embeddings
+0,Expert / Experte en communication et réseaux,Analyste d'affaires,skos:relatedMatch,0.553,ROME,REMOTEOK,OCC_b7befaa6cd86,OCC_d9115408ab56,embeddings
+0,administrateur de systèmes informatiques/administratrice de systèmes informatiques,Administrateur / Administratrice Microsoft 365 (H/F/D),skos:relatedMatch,0.552,ESCO,ARBEITNOW,OCC_6cb6d62106d9,OCC_dcfbee0bf2e2,embeddings
+1,Ingénieur(e) plateforme / DevOps (H/F/D) | Startup GovTech IA | Munich,ingénieur DevOps cloud/ingénieure DevOps cloud,skos:relatedMatch,0.552,ARBEITNOW,ESCO,OCC_10dc41f6953f,OCC_c79207b250ca,embeddings
+0,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),auditeur des systèmes d’information/auditrice des systèmes d’information,skos:relatedMatch,0.552,ARBEITNOW,ESCO,OCC_3cacf2bb2b93,OCC_7d8d0e4e5d42,embeddings
+0,Développeur / Développeuse informatique,"Responsable d'ingénierie senior, Domaine Supply (tous genres)",skos:relatedMatch,0.552,ROME,ARBEITNOW,OCC_4243894cf004,OCC_e2001adaaee2,embeddings
+0,Responsable de la Sécurité des Systèmes d'Information (RSSI),Agent administratif de saisie de données et de classement,skos:relatedMatch,0.552,ROME,REMOTEOK,OCC_563c9ee7ae68,OCC_b9e95ef30857,embeddings
+0,Concepteur / Conceptrice en architecture,Architecte logiciel C++ (H/F/D) - Calcul de trajectoires d'outils,skos:relatedMatch,0.551,REMOTEOK,ARBEITNOW,OCC_20f53a6b090c,OCC_311501439fae,embeddings
+1,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),Evaluateur / Evaluatrice sécurité des systèmes et produits informatiques,skos:relatedMatch,0.551,ARBEITNOW,ROME,OCC_77117619e46e,OCC_9f440c1548b6,embeddings
+0,Analyste des systèmes de la chaîne d'approvisionnement,Expert / Experte systèmes et réseaux informatiques,skos:relatedMatch,0.551,REMOTEOK,ROME,OCC_8df0f1dba04b,OCC_c44a9eaae6e7,embeddings
+0,gestionnaire des risques en cybersécurité,Agent de saisie de données / Spécialiste en saisie de données,skos:relatedMatch,0.55,ESCO,REMOTEOK,OCC_9113c1374afd,OCC_d8d5f3a4878b,embeddings
+1,administrateur de contenu web/administratrice de contenu web,Concepteur / Conceptrice web junior,skos:relatedMatch,0.549,ESCO,REMOTEOK,OCC_aa3336017d8a,OCC_d3df557742ce,embeddings
+0,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),opérateur de centre de données/opératrice de centre de données,skos:relatedMatch,0.548,ARBEITNOW,ESCO,OCC_77117619e46e,OCC_9c9233e004da,embeddings
+0,Jeune diplômé(e) - Data Scientist,"Ingénieur(e) logiciel confirmé(e) - Plateforme de données IA et Snowflake (H/F/D, Berlin)",skos:relatedMatch,0.547,REMOTEOK,ARBEITNOW,OCC_7781415f8e03,OCC_cf9385ee6570,embeddings
+0,spécialiste de l’optimisation des moteurs de recherche,Agent de saisie de données / Spécialiste en saisie de données,skos:relatedMatch,0.547,ESCO,REMOTEOK,OCC_0ee16ac6947b,OCC_d8d5f3a4878b,embeddings
+1,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),gestionnaire des risques en cybersécurité,skos:relatedMatch,0.546,ARBEITNOW,ESCO,OCC_77117619e46e,OCC_9113c1374afd,embeddings
+0,Ingénieur(e) support applicatif (H/F/D),Ingénieur / Ingénieure DevOps,skos:relatedMatch,0.546,ARBEITNOW,ROME,OCC_61cc9ca73474,OCC_eab9b08d024c,embeddings
+0,Chef de produit - IA,administrateur de systèmes informatiques/administratrice de systèmes informatiques,skos:relatedMatch,0.546,REMOTEOK,ESCO,OCC_2e0e260cb4d7,OCC_6cb6d62106d9,embeddings
+0,développeur de systèmes informatiques/développeuse de systèmes informatiques,Concepteur / Conceptrice UX/UI,skos:relatedMatch,0.545,ESCO,REMOTEOK,OCC_a1ea51659e23,OCC_b415cabf36c7,embeddings
+0,concepteur d’interface utilisateur/conceptrice d’interface utilisatrice,Product Owner - Agent Assist et User Platforms (H/F/D),skos:relatedMatch,0.544,ESCO,ARBEITNOW,OCC_340f51445866,OCC_5d343c03bfac,embeddings
+0,Chef de produit - IA,"Responsable d'ingénierie senior, Domaine Supply (tous genres)",skos:relatedMatch,0.543,REMOTEOK,ARBEITNOW,OCC_2e0e260cb4d7,OCC_e2001adaaee2,embeddings
+0,Analyste senior - Support de projet,Analyste quantitatif / Modélisateur financier (H/F/X),skos:relatedMatch,0.543,REMOTEOK,ARBEITNOW,OCC_a55aa629a66b,OCC_bd8b9e27b797,embeddings
+0,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),Consultant décisionnel / Consultante décisionnelle - Business Intelligence,skos:relatedMatch,0.543,ARBEITNOW,ROME,OCC_77117619e46e,OCC_c9809e8b4e1d,embeddings
+0,Agent de saisie de données,responsable de l'identité cloud,skos:relatedMatch,0.543,REMOTEOK,ESCO,OCC_3756041ae6ec,OCC_5bfe9fc9c093,embeddings
+1,Expert / Experte méthodes et qualité informatique,Analyste senior - Support de projet,skos:relatedMatch,0.542,ROME,REMOTEOK,OCC_336e0a8cfc0b,OCC_a55aa629a66b,embeddings
+1,Développeur / Développeuse logiciel (H/F/D) - Spécialisation Angular,développeur de logiciels/développeuse de logiciels,skos:relatedMatch,0.541,ARBEITNOW,ESCO,OCC_6065b7acaf02,OCC_e57061351bc6,embeddings
+0,Urbaniste Datacenter,Agent de saisie de données débutant - Télétravail intégral,skos:relatedMatch,0.541,ROME,REMOTEOK,OCC_c86e2d385aa5,OCC_e2079fd4cbf9,embeddings
+0,Coordinateur / Coordinatrice Maitrise d'Ouvrage Système d'Information (MOA SI),Spécialiste en saisie de données - Assistant(e) administratif(ve),skos:relatedMatch,0.541,ROME,REMOTEOK,OCC_069c1da7cb17,OCC_c69fa61c1cf6,embeddings
+1,Ingénieur(e) logiciel (H/F/D) - Vienne | Hambourg | Francfort,concepteur de logiciels/conceptrice de logiciels,skos:relatedMatch,0.54,ARBEITNOW,ESCO,OCC_b47b635dd3a8,OCC_fa1704d164c5,embeddings
+0,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,Expert / Experte en communication et réseaux,skos:relatedMatch,0.54,ARBEITNOW,ROME,OCC_5ba0f9300746,OCC_b7befaa6cd86,embeddings
+0,Chef d'équipe (H/F/D) Recherche et Développement - Outils et Infrastructure,architecte de réseau,skos:relatedMatch,0.539,ARBEITNOW,ESCO,OCC_5ba0f9300746,OCC_bd1d7a63edf2,embeddings
+0,Homologateur / Homologatrice fonctionnel de logiciel,Architecte logiciel C++ (H/F/D) - Calcul de trajectoires d'outils,skos:relatedMatch,0.539,ROME,ARBEITNOW,OCC_21c50bd3a35a,OCC_311501439fae,embeddings
+0,testeur de logiciels/testeuse de logiciels,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),skos:relatedMatch,0.538,ESCO,ARBEITNOW,OCC_3e502e92822a,OCC_45b81edc9b79,embeddings
+0,Technicien / Technicienne de la météorologie,Coordinateur / Coordinatrice de projets logiciels (H/F/D) | Berlin-Mitte | Temps partiel/Temps plein,skos:relatedMatch,0.538,ROME,ARBEITNOW,OCC_5142d7362315,OCC_c81768051e3f,embeddings
+0,Administrateur / Administratrice de site internet,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.538,ROME,REMOTEOK,OCC_53745b14cb87,OCC_b9e95ef30857,embeddings
+0,ingénieur en sécurité des systèmes intégrés/ingénieure en sécurité des systèmes intégrés,Responsable Ingénieur(e) IT Operations (H/F/D),skos:relatedMatch,0.537,ESCO,ARBEITNOW,OCC_b0446201413b,OCC_eb475bc6322d,embeddings
+1,ingénieur en intelligence artificielle/ingénieure en intelligence artificielle,Ingénieur(e) senior en apprentissage automatique (H/F/*),skos:relatedMatch,0.537,ESCO,ARBEITNOW,OCC_80660e3c36ff,OCC_fe42133b7839,embeddings
+0,Analyste senior - Support de projet,Coordinateur / Coordinatrice de projets logiciels (H/F/D) | Berlin-Mitte | Temps partiel/Temps plein,skos:relatedMatch,0.537,REMOTEOK,ARBEITNOW,OCC_a55aa629a66b,OCC_c81768051e3f,embeddings
+0,Agent de saisie de données,Product Owner - Agent Assist et User Platforms (H/F/D),skos:relatedMatch,0.537,REMOTEOK,ARBEITNOW,OCC_3756041ae6ec,OCC_5d343c03bfac,embeddings
+0,Administrateur / Administratrice de site internet,Gestionnaire de compte SEA/Google Ads junior | Spécialisation e-commerce (H/F/D) | Frankfurt am Main,skos:relatedMatch,0.537,ROME,ARBEITNOW,OCC_53745b14cb87,OCC_9fb404d4f622,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),Technicien / Technicienne réseaux informatiques et télécoms,skos:relatedMatch,0.537,ARBEITNOW,ROME,OCC_45b81edc9b79,OCC_940b6385dcd1,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),Qualiticien / Qualiticienne logiciel en informatique,skos:relatedMatch,0.537,ARBEITNOW,ROME,OCC_45b81edc9b79,OCC_da40f63e4373,embeddings
+0,"Responsable d'ingénierie, Moteur de recherche (tous genres)",Pentesteur / Pentesteuse,skos:relatedMatch,0.537,ARBEITNOW,ROME,OCC_14a3530bfb4b,OCC_b0651e781d64,embeddings
+1,Analyste quantitatif / Modélisateur financier (H/F/X),Analyste d'affaires,skos:relatedMatch,0.536,ARBEITNOW,REMOTEOK,OCC_bd8b9e27b797,OCC_d9115408ab56,embeddings
+0,Analyste d'étude informatique,Analyste quantitatif / Modélisateur financier (H/F/X),skos:relatedMatch,0.536,ROME,ARBEITNOW,OCC_5fafb471f4aa,OCC_bd8b9e27b797,embeddings
+0,Concepteur / Conceptrice en architecture,Développeur / Développeuse logiciel ou d'application,skos:relatedMatch,0.536,REMOTEOK,ROME,OCC_20f53a6b090c,OCC_d6a2ea4adc66,embeddings
+0,Agent de saisie de données,Architecte sécurité informatique,skos:relatedMatch,0.535,REMOTEOK,ROME,OCC_3756041ae6ec,OCC_8d1f9f4c93ee,embeddings
+0,développeur de logiciels pour systèmes informatiques intégrés/développeuse de logiciels pour systèmes informatiques intégrés,Concepteur / Conceptrice UX/UI,skos:relatedMatch,0.534,ESCO,REMOTEOK,OCC_47055aec8572,OCC_b415cabf36c7,embeddings
+0,Administrateur / Administratrice de serveurs,Chef de produit - IA,skos:relatedMatch,0.534,ROME,REMOTEOK,OCC_0dfd1568b513,OCC_2e0e260cb4d7,embeddings
+1,Ingénieur concepteur / Ingénieure conceptrice informatique,Ingénieur(e) logiciel (H/F/D) - Vienne | Hambourg | Francfort,skos:relatedMatch,0.533,ROME,ARBEITNOW,OCC_286d9da07b4d,OCC_b47b635dd3a8,embeddings
+0,Technicien / Technicienne d'exploitation informatique,Consultant(e) BI / Spécialiste Power BI et Microsoft Fabric (H/F/D),skos:relatedMatch,0.532,ROME,ARBEITNOW,OCC_1ce0e8031f25,OCC_7f69d3fb1a62,embeddings
+0,Chef de produit - IA,ingénieur intégration/ingénieure intégration,skos:relatedMatch,0.53,REMOTEOK,ESCO,OCC_2e0e260cb4d7,OCC_535421ae1e2c,embeddings
+0,"Ingénieur / Ingénieure systèmes, réseaux et sécurité informatique",Agent de saisie de données / Spécialiste en saisie de données,skos:relatedMatch,0.529,ROME,REMOTEOK,OCC_6ccbe5fe0132,OCC_d8d5f3a4878b,embeddings
+0,Ingénieur(e) assurance qualité (H/F/D),analyste qualité des données,skos:relatedMatch,0.528,ARBEITNOW,ESCO,OCC_498759db14be,OCC_7c028d934ec6,embeddings
+0,"Architecte principal(e) Gouvernance, Risque et Conformité (GRC)",Directeur / Directrice de projets des territoires connectés,skos:relatedMatch,0.527,ARBEITNOW,ROME,OCC_27e8294e0a68,OCC_45f8e3b56a4a,embeddings
+0,Architecte systèmes et réseaux,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),skos:relatedMatch,0.527,ROME,ARBEITNOW,OCC_21715cbb5d2f,OCC_3cacf2bb2b93,embeddings
+0,analyste de la reprise des activités informatiques,Agent de saisie de données débutant - Télétravail intégral,skos:relatedMatch,0.526,ESCO,REMOTEOK,OCC_cbee4548194c,OCC_e2079fd4cbf9,embeddings
+0,Analyste des systèmes de la chaîne d'approvisionnement,responsable de la planification de la capacité informatique,skos:relatedMatch,0.526,REMOTEOK,ESCO,OCC_8df0f1dba04b,OCC_e1b1773585de,embeddings
+0,Chef / Cheffe de projet réseau fixe et mobile,Agent de saisie de données débutant - Télétravail intégral,skos:relatedMatch,0.526,ROME,REMOTEOK,OCC_734c5ae6a3df,OCC_e2079fd4cbf9,embeddings
+0,analyste réponse aux incidents de sécurité,Spécialiste en saisie de données,skos:relatedMatch,0.525,ESCO,REMOTEOK,OCC_8b508c20ce1d,OCC_a196178f2449,embeddings
+0,Analyste SOC (Security Operations Center),Analyste senior - Support de projet,skos:relatedMatch,0.525,ROME,REMOTEOK,OCC_7342748ca544,OCC_a55aa629a66b,embeddings
+1,Ingénieur(e) en robotique / logiciel embarqué (H/F/D),Spécialiste IA embarquée,skos:relatedMatch,0.524,ARBEITNOW,ROME,OCC_1bb89a04e3bf,OCC_4ccd24ba172d,embeddings
+0,responsable de l’assurance qualité informatique,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.524,ESCO,REMOTEOK,OCC_b01b8def641d,OCC_b9e95ef30857,embeddings
+0,Technicien / Technicienne en cybersécurité,Agent de saisie de données / Spécialiste en saisie de données,skos:relatedMatch,0.524,ROME,REMOTEOK,OCC_7f18f2f19e2a,OCC_d8d5f3a4878b,embeddings
+1,"Chef d'équipe - Planification réseau, déploiement fibre optique subventionné (H/F/D)",architecte de réseau,skos:relatedMatch,0.523,ARBEITNOW,ESCO,OCC_4d34f0a4a62c,OCC_bd1d7a63edf2,embeddings
+0,Administrateur / Administratrice de site internet,Gestionnaire de compte Google Ads | Spécialisation e-commerce (H/F/D) | Frankfurt am Main,skos:relatedMatch,0.523,ROME,ARBEITNOW,OCC_53745b14cb87,OCC_941dbc8e121c,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),ingénieur en informatique en nuage/ingénieure en informatique en nuage,skos:relatedMatch,0.522,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_ff4e73f258e8,embeddings
+0,responsable de l’analyse commerciale des technologies de l’information et de la communication,Gestionnaire de compte SEA/Google Ads junior | Spécialisation e-commerce (H/F/D) | Frankfurt am Main,skos:relatedMatch,0.522,ESCO,ARBEITNOW,OCC_697bbd77a746,OCC_9fb404d4f622,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),testeur de systèmes informatiques/testeuse de systèmes informatiques,skos:relatedMatch,0.522,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_b46ed0bc22d0,embeddings
+0,spécialiste de l’investigation numérique,Spécialiste e-santé,skos:relatedMatch,0.522,ESCO,ROME,OCC_46b37f0135cb,OCC_7606d49145d3,embeddings
+0,Chef de produit - IA,Développeur / Développeuse Frontend E-Commerce (H/F/D),skos:relatedMatch,0.521,REMOTEOK,ARBEITNOW,OCC_2e0e260cb4d7,OCC_ee0ddbbdc92c,embeddings
+0,"Responsable d'ingénierie, Moteur de recherche (tous genres)",Scrum Master,skos:relatedMatch,0.521,ARBEITNOW,ROME,OCC_14a3530bfb4b,OCC_df34a0f9f6c0,embeddings
+0,administrateur sécurité informatique/administratrice sécurité informatique,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.521,ESCO,REMOTEOK,OCC_a0cecf937326,OCC_b9e95ef30857,embeddings
+0,auditeur des systèmes d’information/auditrice des systèmes d’information,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.521,ESCO,REMOTEOK,OCC_7d8d0e4e5d42,OCC_b9e95ef30857,embeddings
+0,responsable du service d’assistance informatique,Responsable d'opérations en station météorologique,skos:relatedMatch,0.521,ESCO,ROME,OCC_127c8b092532,OCC_85f87698fcbe,embeddings
+0,Product Owner - Agent Assist et User Platforms (H/F/D),Agent de saisie de données / Spécialiste en saisie de données,skos:relatedMatch,0.519,ARBEITNOW,REMOTEOK,OCC_5d343c03bfac,OCC_d8d5f3a4878b,embeddings
+0,Développeur / Développeuse Frontend E-Commerce (H/F/D),Développeur / Développeuse blockchain,skos:relatedMatch,0.519,ARBEITNOW,ROME,OCC_ee0ddbbdc92c,OCC_f98f0e96ecac,embeddings
+0,Assistant(e) Ressources Humaines (H/F/D) - Temps partiel 20-25 heures par semaine,Spécialiste en saisie de données - Assistant(e) administratif(ve),skos:relatedMatch,0.518,ARBEITNOW,REMOTEOK,OCC_4cf9a4c09f8b,OCC_c69fa61c1cf6,embeddings
+0,Homologateur / Homologatrice fonctionnel de logiciel,Architecte de solutions IA (H/F/D),skos:relatedMatch,0.518,ROME,ARBEITNOW,OCC_21c50bd3a35a,OCC_41c17d1e8957,embeddings
+0,Ingénieur / Ingénieure Cloud computing,Agent de saisie de données débutant - Télétravail intégral,skos:relatedMatch,0.518,ROME,REMOTEOK,OCC_5a5307f6b57c,OCC_e2079fd4cbf9,embeddings
+0,Consultant(e) BI / Spécialiste Power BI et Microsoft Fabric (H/F/D),concepteur de logiciels/conceptrice de logiciels,skos:relatedMatch,0.517,ARBEITNOW,ESCO,OCC_7f69d3fb1a62,OCC_fa1704d164c5,embeddings
+0,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),"Spécialiste outils, systèmes d'exploitation, réseaux et télécoms",skos:relatedMatch,0.517,ARBEITNOW,ROME,OCC_3cacf2bb2b93,OCC_c7ee9cba34be,embeddings
+0,gestionnaire des modifications et de la configuration des TIC,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.517,ESCO,REMOTEOK,OCC_b12363d00856,OCC_b9e95ef30857,embeddings
+0,Architecte IoT - Internet des Objets,Agent de saisie de données débutant - Télétravail intégral,skos:relatedMatch,0.517,ROME,REMOTEOK,OCC_afe0af7ee789,OCC_e2079fd4cbf9,embeddings
+0,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),Concepteur / Conceptrice UX/UI,skos:relatedMatch,0.515,ARBEITNOW,REMOTEOK,OCC_3cacf2bb2b93,OCC_b415cabf36c7,embeddings
+0,Technicien / Technicienne de piscine,Météorologue,skos:relatedMatch,0.515,REMOTEOK,ROME,OCC_1d71758bab20,OCC_1de7cfbf9d19,embeddings
+0,Développeur / Développeuse logiciel (H/F/D) - Spécialisation Angular,développeur d’applications mobiles/développeuse d’applications mobiles,skos:relatedMatch,0.514,ARBEITNOW,ESCO,OCC_6065b7acaf02,OCC_60d10ff7dab8,embeddings
+0,Spécialiste support,Analyste quantitatif / Modélisateur financier (H/F/X),skos:relatedMatch,0.513,ROME,ARBEITNOW,OCC_129225e67499,OCC_bd8b9e27b797,embeddings
+0,Spécialiste en saisie de données - Assistant(e) administratif(ve),Responsable Ingénieur(e) IT Operations (H/F/D),skos:relatedMatch,0.512,REMOTEOK,ARBEITNOW,OCC_c69fa61c1cf6,OCC_eb475bc6322d,embeddings
+1,Ingénieur / Ingénieure sécurité web,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),skos:relatedMatch,0.512,ROME,ARBEITNOW,OCC_54194a8e4af5,OCC_77117619e46e,embeddings
+0,Concepteur / Conceptrice en architecture,ingénieur de réseaux informatiques/ingénieure de réseaux informatiques,skos:relatedMatch,0.512,REMOTEOK,ESCO,OCC_20f53a6b090c,OCC_6836ed031e87,embeddings
+0,Technicien / Technicienne de piscine,Technicien / Technicienne réseaux informatiques et télécoms,skos:relatedMatch,0.512,REMOTEOK,ROME,OCC_1d71758bab20,OCC_940b6385dcd1,embeddings
+1,Développeur / Développeuse informatique,Développeur / Développeuse logiciel (H/F/D) - Spécialisation Angular,skos:relatedMatch,0.511,ROME,ARBEITNOW,OCC_4243894cf004,OCC_6065b7acaf02,embeddings
+0,Administrateur / Administratrice réseaux - télécoms,Agent administratif de saisie de données et de classement,skos:relatedMatch,0.511,ROME,REMOTEOK,OCC_8a0009547b60,OCC_b9e95ef30857,embeddings
+0,Concepteur / Conceptrice en architecture,Directeur / Directrice de projets des territoires connectés,skos:relatedMatch,0.511,REMOTEOK,ROME,OCC_20f53a6b090c,OCC_45f8e3b56a4a,embeddings
+0,Chef de produit - IA,Gestionnaire de parc informatique,skos:relatedMatch,0.511,REMOTEOK,ROME,OCC_2e0e260cb4d7,OCC_b847e63cc092,embeddings
+0,développeur de logiciels pour appareils mobiles destinés à l’industrie/développeuse de logiciels pour appareils mobiles destinés à l’industrie,Développeur / Développeuse logiciel senior (H/F/D),skos:relatedMatch,0.51,ESCO,ARBEITNOW,OCC_28d6f1c634d8,OCC_cbba626eede9,embeddings
+0,Concepteur / Conceptrice en architecture,Direction Infrastructure IT (H/F/D),skos:relatedMatch,0.51,REMOTEOK,ARBEITNOW,OCC_20f53a6b090c,OCC_e8eadf46f8fb,embeddings
+1,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),"Ingénieur / Ingénieure systèmes, réseaux et sécurité informatique",skos:relatedMatch,0.51,ARBEITNOW,ROME,OCC_3cacf2bb2b93,OCC_6ccbe5fe0132,embeddings
+1,responsable des tests d’intégration,Informaticien(ne) spécialisé(e) en intégration de systèmes (H/F/D),skos:relatedMatch,0.509,ESCO,ARBEITNOW,OCC_23fda8338d1e,OCC_3cacf2bb2b93,embeddings
+0,Analyste des systèmes de la chaîne d'approvisionnement,"Responsable d'ingénierie senior, Domaine Supply (tous genres)",skos:relatedMatch,0.509,REMOTEOK,ARBEITNOW,OCC_8df0f1dba04b,OCC_e2001adaaee2,embeddings
+0,Concepteur / Conceptrice en architecture,ingénieur en informatique en nuage/ingénieure en informatique en nuage,skos:relatedMatch,0.509,REMOTEOK,ESCO,OCC_20f53a6b090c,OCC_ff4e73f258e8,embeddings
+1,"Développeur / Développeuse logiciel Fullstack Java, Angular (H/F/D)",développeur de logiciels/développeuse de logiciels,skos:relatedMatch,0.508,ARBEITNOW,ESCO,OCC_c49207ccbbab,OCC_e57061351bc6,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),analyste de la reprise des activités informatiques,skos:relatedMatch,0.508,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_cbee4548194c,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),Architecte IoT - Internet des Objets,skos:relatedMatch,0.508,ARBEITNOW,ROME,OCC_45b81edc9b79,OCC_afe0af7ee789,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),Data engineer,skos:relatedMatch,0.507,ARBEITNOW,ROME,OCC_45b81edc9b79,OCC_903f27875082,embeddings
+1,technicien informatique/technicienne informatique,Ingénieur(e) (senior) IT Operations (H/F/D),skos:relatedMatch,0.506,ESCO,ARBEITNOW,OCC_14d19ed15436,OCC_8bf3aa81e931,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),gestionnaire des modifications et de la configuration des TIC,skos:relatedMatch,0.506,ARBEITNOW,ESCO,OCC_45b81edc9b79,OCC_b12363d00856,embeddings
+1,scientifique des données,Ingénieur(e) logiciel senior / Ingénieur(e) ML (H/F/X) - Secteur de l'éducation / Télétravail,skos:relatedMatch,0.505,ESCO,ARBEITNOW,OCC_7bde92a813dd,OCC_88496659bc48,embeddings
+0,Consultant(e) SOC (Centre des opérations de sécurité) (H/F/D),Responsable d'opérations en station météorologique,skos:relatedMatch,0.505,ARBEITNOW,ROME,OCC_77117619e46e,OCC_85f87698fcbe,embeddings
+0,Architecte IoT - Internet des Objets,Direction Infrastructure IT (H/F/D),skos:relatedMatch,0.504,ROME,ARBEITNOW,OCC_afe0af7ee789,OCC_e8eadf46f8fb,embeddings
+0,Spécialiste Jumeau Numérique,Spécialiste en saisie de données,skos:relatedMatch,0.503,ROME,REMOTEOK,OCC_88068199c10c,OCC_a196178f2449,embeddings
+0,Chef de produit - IA,Spécialiste IA embarquée,skos:relatedMatch,0.503,REMOTEOK,ROME,OCC_2e0e260cb4d7,OCC_4ccd24ba172d,embeddings
+1,Analyste quantitatif / Modélisateur financier (H/F/X),analyste de données,skos:relatedMatch,0.502,ARBEITNOW,ESCO,OCC_bd8b9e27b797,OCC_ccd1a82716dc,embeddings
+0,Ingénieur(e) plateforme / DevOps (H/F/D) | Startup GovTech IA | Munich,Chef de produit - IA,skos:relatedMatch,0.502,ARBEITNOW,REMOTEOK,OCC_10dc41f6953f,OCC_2e0e260cb4d7,embeddings
+0,Product builder no code,développeur de logiciels/développeuse de logiciels,skos:relatedMatch,0.502,ROME,ESCO,OCC_c5a485d17612,OCC_e57061351bc6,embeddings
+0,Chef de produit - IA,Ingénieur(e) Backend fondateur (Go),skos:relatedMatch,0.501,REMOTEOK,ARBEITNOW,OCC_2e0e260cb4d7,OCC_ab046c951cca,embeddings
+0,Architecte de solutions IA (H/F/D),Concepteur / Conceptrice d'interfaces,skos:relatedMatch,0.501,ARBEITNOW,REMOTEOK,OCC_41c17d1e8957,OCC_e77bc5408895,embeddings
+0,spécialiste de l’investigation numérique,Spécialiste IA embarquée,skos:relatedMatch,0.501,ESCO,ROME,OCC_46b37f0135cb,OCC_4ccd24ba172d,embeddings
+0,Programmeur/euse / Technicien(ne) en automatisation (H/F/D),Technicien / Technicienne Cloud,skos:relatedMatch,0.5,ARBEITNOW,ROME,OCC_45b81edc9b79,OCC_4cb0c0a25225,embeddings

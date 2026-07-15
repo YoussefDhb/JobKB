@@ -1,0 +1,39 @@
+Tu es un traducteur spécialisé dans les métiers et compétences de l'informatique (IT).
+Traduis en FRANÇAIS chaque libellé anglais ci-dessous.
+RÈGLES IMPORTANTES :
+- Garde TELS QUELS (sans traduire) les noms propres de technologies, langages, outils, frameworks et produits (ex. Python, Java, Kubernetes, Docker, PyTorch, Spring Boot, PostgreSQL, AWS, React). Ce sont des noms propres, on ne les traduit pas.
+- Traduis en revanche les INTITULÉS DE MÉTIERS et les compétences DESCRIPTIVES (ex. 'Software Developer' -> 'Développeur / Développeuse logiciel', 'Machine Learning' -> 'Apprentissage automatique').
+- Utilise la terminologie française usuelle du secteur IT.
+- Si un libellé est déjà correct en français ou est un nom propre à conserver, renvoie-le inchangé.
+
+Libellés à traduire (identifiants S0, S1, ...) :
+S0: HR
+S1: Project Management
+S2: Quality Management
+S3: Web Development
+S4: Marketing and pr
+S5: bachelor's degree
+S6: Information technology
+S7: System and Network Administration
+S8: Compensation and Benefits
+S9: Finance
+S10: Building
+S11: Supply
+S12: Safety Services Engineering
+S13: Beauty
+S14: Wellness
+S15: Development
+S16: Customer Service
+S17: Business Intelligence
+S18: high school or equivalent
+S19: Biotech
+S20: pharma
+S21: r&d
+S22: Quality Assurance
+S23: Inspection
+S24: Administration
+S25: Training
+S26: Social Media Manager
+
+Réponds STRICTEMENT en JSON, sans aucun texte autour, au format exact :
+{"translations": [{"id": "S0", "fr": "..."}]}

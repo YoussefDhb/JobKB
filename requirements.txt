@@ -1,0 +1,6 @@
+pandas
+SPARQLWrapper
+requests
+scikit-learn
+sentence-transformers
+ipywidgets
