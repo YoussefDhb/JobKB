@@ -7,3 +7,4 @@ ALL_REMOTEOK,REMOTEOK,API JSON publique,2026-07-15T09:10:30+00:00,API JSON offic
 ALL_ARBEITNOW,ARBEITNOW,API JSON publique,2026-07-15T09:10:30+00:00,API JSON officielle (sans clé),"127 intitulés, 50 compétences, 193 liens"
 REVIEW,REVIEW_SCRAPED,revue manuelle post-traduction,2026-07-15T10:16:31+00:00,"review_translated.csv, valid/reject","144 rejetées, 91 occ/53 skl supprimées"
 ALL_SKILLS_HIER,ESCO_SKILLS_HIER,transversal+broader (fr),2026-07-15T16:19:48+00:00,transversalSkillsCollection + broaderRelationsSkillPillar,"95 soft, 186 groupes, 1019 arêtes"
+ALL_ALIGNMENT_HIER,ALIGNMENT_HIER,gold=1 direct pairs (alignment_review.csv),2026-07-16T07:59:09+00:00,graft non-ESCO occupations onto ISCO tree via validated alignments,"92 occupations non-ESCO rattachées (64 cible unique, 28 résolues par confiance max)"

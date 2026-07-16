@@ -39,6 +39,10 @@ an entry to `canonical/provenance.csv`.
    embedding similarity (`paraphrase-multilingual-MiniLM-L12-v2`), assigns a
    SKOS relation (`exactMatch` / `closeMatch` / `relatedMatch`) and confidence
    score, and exports `canonical/alignment_review.csv` for manual labeling + threshold evaluation.
+   It also grafts non-ESCO occupations (ROME/RemoteOK/Arbeitnow) onto the ISCO
+   hierarchy: any occupation directly gold-matched to an ESCO occupation
+   inherits that occupation's ISCO group (`source=ALIGNMENT` edges in
+   `hierarchy.csv`; ties broken by highest-confidence match).
 5. **`05_build_hierarchy.ipynb`** — adds ESCO's transversal soft-skills
    collection (reclassifying already-linked skills hard→soft where
    applicable), builds the skill hierarchy from ESCO skill groups, and
@@ -52,7 +56,7 @@ an entry to `canonical/provenance.csv`.
 | `skills.csv` | one row per skill/skill-group node, with hard/soft + IT subtype |
 | `labels.csv` | every preferred/alt/hidden label per entity, per language |
 | `occupation_skill_relations.csv` | occupation ↔ skill links (essential/optional) |
-| `hierarchy.csv` | broader/narrower edges (ISCO tree, ESCO skill groups) |
+| `hierarchy.csv` | broader/narrower edges (ISCO tree + alignment grafts, ESCO skill groups) |
 | `concept_alignments.csv` | cross-source entity matches with confidence + method |
 | `alignment_review.csv` | alignment matches exported for manual labeling |
 | `translation_suggestions.csv` | LLM-proposed translations, with status |
