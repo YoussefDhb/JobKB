@@ -40,7 +40,7 @@ an entry to `canonical/provenance.csv`.
    SKOS relation (`exactMatch` / `closeMatch` / `relatedMatch`) and confidence
    score, and exports `canonical/alignment_review.csv` for manual labeling + threshold evaluation.
    It also grafts non-ESCO occupations (ROME/RemoteOK/Arbeitnow) onto the ISCO
-   hierarchy: any occupation directly gold-matched to an ESCO occupation
+   hierarchy: any occupation directly matched to an ESCO occupation
    inherits that occupation's ISCO group (`source=ALIGNMENT` edges in
    `hierarchy.csv`; ties broken by highest-confidence match).
 5. **`05_build_hierarchy.ipynb`** — adds ESCO's transversal soft-skills
