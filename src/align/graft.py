@@ -3,7 +3,7 @@
 Each non-ISCO occupation inherits the ISCO unit group of its best validated ESCO
 match (exact/close). This is fully automatic and replaces the old gold-gated graft.
 Occupations with no ESCO match stay unattached to the tree but still cluster during
-the canonical merge (and inherit an ISCO code there if any cluster member has one).
+the unified merge (and inherit an ISCO code there if any cluster member has one).
 """
 
 from __future__ import annotations

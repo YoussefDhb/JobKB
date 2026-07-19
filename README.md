@@ -23,18 +23,17 @@ occupations are grafted onto the ISCO hub through validated matches to ESCO.
 ## Pipeline (package + orchestrator)
 
 ```
-jobkb/
+src/
   config.py        # paths, EN-primary schema, IT scope per source, HF model ids, tunables
   common.py        # deterministic ids, label normalization, idempotent CSV IO, provenance
   ingest/          # isco, esco, onet, noc, rome  (each IT-filtered, EN-primary)
   hierarchy.py     # ESCO skill-group tree + hard/soft (transversal) + IT sub-typing
   align/           # candidates (embeddings) -> verify (NLI, no human) -> graft (ISCO hub)
-  merge.py         # canonical concept clustering / de-duplication
+  merge.py         # unified concept clustering / de-duplication
   pipeline.py      # orchestrator + QA/integrity report
 run_pipeline.py    # CLI entry point
 notebooks/
-  inspect.ipynb    # QA & spot-checks over canonical/
-  test.ipynb       # WorkRB benchmark sanity check
+  inspect.ipynb    # QA & spot-checks over kb/
 ```
 
 Run it:
@@ -47,7 +46,7 @@ python run_pipeline.py --no-align # ingest + hierarchy only (no HF model downloa
 ```
 
 The build is **idempotent**: entity ids are deterministic, each stage owns its
-source rows, and `run_pipeline.py` rebuilds `canonical/` clean by default.
+source rows, and `run_pipeline.py` rebuilds `kb/` clean by default.
 
 ## Alignment & validation (no human in the loop)
 
@@ -62,15 +61,15 @@ source rows, and `run_pipeline.py` rebuilds `canonical/` clean by default.
    asymmetric entailment). Every accepted pair is `validated = auto`.
 3. **Graft** — each non-ISCO occupation inherits the ISCO unit group of its best
    validated ESCO match.
-4. **Merge** — connected components of the `exactMatch` graph become **canonical
-   concepts** (`canonical_occupations.csv`, `canonical_skills.csv`) with an
+4. **Merge** — connected components of the `exactMatch` graph become **unified
+   concepts** (`unified_occupations.csv`, `unified_skills.csv`) with an
    English-primary label, French secondary, merged synonyms, the hub ISCO code,
    and back-links to their source members.
 
 All models are open-source; if none can be loaded (e.g. offline) the pipeline
 degrades gracefully (TF-IDF candidates, NLI off) and still produces the KB.
 
-## Canonical schema (`canonical/`)
+## Knowledge-base schema (`kb/`)
 
 | File | Contents |
 |---|---|
@@ -80,8 +79,8 @@ degrades gracefully (TF-IDF candidates, NLI off) and still produces the KB.
 | `occupation_skill_relations.csv` | occupation ↔ skill links (essential/optional) |
 | `hierarchy.csv` | ISCO tree + ESCO skill groups + alignment grafts (`broader_than` edges) |
 | `concept_alignments.csv` | cross-source matches with SKOS relation, confidence, method, `validated` |
-| `canonical_occupations.csv` | de-duplicated canonical occupations (merged members) |
-| `canonical_skills.csv` | de-duplicated canonical skills |
+| `unified_occupations.csv` | de-duplicated unified occupations (merged members) |
+| `unified_skills.csv` | de-duplicated unified skills |
 | `provenance.csv` | audit trail: what each stage produced and when |
 
 ## Not in this build (deliberate follow-ons)

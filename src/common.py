@@ -16,7 +16,7 @@ csv.field_size_limit(10_000_000)
 
 
 def ensure_dirs():
-    os.makedirs(C.CANONICAL_DIR, exist_ok=True)
+    os.makedirs(C.KB_DIR, exist_ok=True)
 
 
 def mint_id(prefix: str, source: str, source_id: str) -> str:

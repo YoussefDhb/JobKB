@@ -3,21 +3,21 @@
 
     python run_pipeline.py                 # full build (ingest -> hierarchy -> align -> merge)
     python run_pipeline.py --no-align      # ingest + hierarchy only (skip HF models)
-    python run_pipeline.py --keep          # do not wipe canonical/ before building
+    python run_pipeline.py --keep          # do not wipe kb/ before building
 """
 
 from __future__ import annotations
 import argparse
 
-from jobkb import pipeline
+from src import pipeline
 
 
 def main():
     ap = argparse.ArgumentParser(description="Build the JobKB knowledge base.")
     ap.add_argument("--no-align", action="store_true",
-                    help="skip alignment + canonical merge (no HF model downloads)")
+                    help="skip alignment + unified merge (no HF model downloads)")
     ap.add_argument("--keep", action="store_true",
-                    help="keep existing canonical/ files instead of rebuilding clean")
+                    help="keep existing kb/ files instead of rebuilding clean")
     args = ap.parse_args()
 
     pipeline.run_all(clean=not args.keep, do_align=not args.no_align)

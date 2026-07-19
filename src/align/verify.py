@@ -4,7 +4,7 @@ manual `gold` review.
 Design (calibrated against real data): embedding similarity and NLI are noisy for
 deciding *identity* (e.g. "software developer" ~ "web developer" ≈ 0.88), so they
 drive the softer `closeMatch` / `relatedMatch` links (which still feed ISCO
-grafting). `exactMatch` — the signal the canonical merge consumes — is grounded on
+grafting). `exactMatch` — the signal the unified merge consumes — is grounded on
 **label identity across sources** (preferred + alternative labels, normalized and
 singularized), which is high precision. Every accepted pair is validated
 automatically ("auto"); no human labeling.
@@ -100,7 +100,7 @@ def verify_pairs(pairs, verifier, use_nli):
 
         if pref_match:
             conf = max(conf, 0.95)
-            relation = "skos:exactMatch"          # this is what the canonical merge consumes
+            relation = "skos:exactMatch"          # this is what the unified merge consumes
             method = "pref_match+" + method
         elif alt_match:
             conf = max(conf, 0.85)

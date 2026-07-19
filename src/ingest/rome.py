@@ -1,7 +1,7 @@
 """Ingest ROME (French only), IT domain M18 metiers + appellations + competences.
 
 ROME métiers have no English label; they are kept French-native (``fr_only``) and
-acquire an English canonical label later, through validated alignment, never via
+acquire an English label later, through validated alignment, never via
 translation. Competences come from bloc 5 of the liens table, routed by rubrique:
 1 = Savoir-faire (hard), 2 = Savoir-etre (soft), 3 = Savoirs (knowledge/hard).
 """

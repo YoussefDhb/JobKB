@@ -1,0 +1,9 @@
+entity_id,source,source_version,retrieved_at,retrieval_method,notes
+ISCO,ISCO,ISCO-08,2026-07-19T12:49:50+00:00,official_en_csv,"21 groups, 19 edges (IT branches 25/35)"
+ESCO,ESCO,ESCO v1.2 (en),2026-07-19T12:49:54+00:00,official_en_csv,"97 occ, 1158 skills, 5959 relations"
+ONET,ONET,O*NET 28.x,2026-07-19T12:50:12+00:00,official_en_csv,"31 occ, 1469 skills, 6619 relations"
+NOC,NOC,NOC 2021 v1.0,2026-07-19T12:50:20+00:00,official_en_fr_csv,15 IT unit-group occupations (bilingual)
+ROME,ROME,ROME v461,2026-07-19T12:50:26+00:00,official_fr_csv,"96 M18 metiers, 2162 skills, 5296 relations"
+ESCO_SKILLS,ESCO_SKILLS,ESCO v1.2 (en),2026-07-19T12:50:28+00:00,derived,"95 soft, 209 groups, 1767 skill edges"
+ALIGNMENT,ALIGNMENT,-,2026-07-19T14:08:04+00:00,embed:st+nli:on,"26643 alignments, 58 grafts"
+MERGE,MERGE,-,2026-07-19T14:08:05+00:00,connected_components(exactMatch),"232 unified occ (6 merged), 4818 unified skills (63 merged)"

@@ -1,6 +1,6 @@
 """Central configuration for the JobKB pipeline.
 
-English-primary, datasets-only, IT-focused. This module is a leaf (no imports
+English-primary, local-sources-only, IT-focused. This module is a leaf (no imports
 from the rest of the package) so every stage can rely on it.
 """
 
@@ -11,9 +11,9 @@ import os
 # Paths
 # --------------------------------------------------------------------------------------
 
-SRC_DIR = os.path.dirname(os.path.abspath(__file__))      # .../jobkb
+SRC_DIR = os.path.dirname(os.path.abspath(__file__))      # .../src
 ROOT = os.path.dirname(SRC_DIR)                            # project root
-DATASETS = os.path.join(ROOT, "Datasets")
+RESOURCES = os.path.join(ROOT, "resources")               # raw input taxonomies
 
 
 # --------------------------------------------------------------------------------------
@@ -47,28 +47,28 @@ if HF_TOKEN:
     os.environ.setdefault("HF_TOKEN", HF_TOKEN)
     os.environ.setdefault("HUGGINGFACE_HUB_TOKEN", HF_TOKEN)
 
-ESCO_EN_DIR = os.path.join(DATASETS, "ESCO", "en")
-ESCO_FR_DIR = os.path.join(DATASETS, "ESCO", "fr")
-ISCO_EN_DIR = os.path.join(DATASETS, "ISCO", "en")
-ONET_EN_DIR = os.path.join(DATASETS, "ONET", "en")
-NOC_EN_DIR = os.path.join(DATASETS, "NOC", "en")
-NOC_FR_DIR = os.path.join(DATASETS, "NOC", "fr")
-ROME_FR_DIR = os.path.join(DATASETS, "ROME", "fr")
+ESCO_EN_DIR = os.path.join(RESOURCES, "ESCO", "en")
+ESCO_FR_DIR = os.path.join(RESOURCES, "ESCO", "fr")
+ISCO_EN_DIR = os.path.join(RESOURCES, "ISCO", "en")
+ONET_EN_DIR = os.path.join(RESOURCES, "ONET", "en")
+NOC_EN_DIR = os.path.join(RESOURCES, "NOC", "en")
+NOC_FR_DIR = os.path.join(RESOURCES, "NOC", "fr")
+ROME_FR_DIR = os.path.join(RESOURCES, "ROME", "fr")
 
-CANONICAL_DIR = os.path.join(ROOT, "canonical")
+KB_DIR = os.path.join(ROOT, "kb")   # built knowledge base output
 
-OCCUPATIONS_CSV = os.path.join(CANONICAL_DIR, "occupations.csv")
-SKILLS_CSV = os.path.join(CANONICAL_DIR, "skills.csv")
-LABELS_CSV = os.path.join(CANONICAL_DIR, "labels.csv")
-OCC_SKILL_REL_CSV = os.path.join(CANONICAL_DIR, "occupation_skill_relations.csv")
-HIERARCHY_CSV = os.path.join(CANONICAL_DIR, "hierarchy.csv")
-ALIGNMENTS_CSV = os.path.join(CANONICAL_DIR, "concept_alignments.csv")
-CANONICAL_OCCUPATIONS_CSV = os.path.join(CANONICAL_DIR, "canonical_occupations.csv")
-CANONICAL_SKILLS_CSV = os.path.join(CANONICAL_DIR, "canonical_skills.csv")
-PROVENANCE_CSV = os.path.join(CANONICAL_DIR, "provenance.csv")
+OCCUPATIONS_CSV = os.path.join(KB_DIR, "occupations.csv")
+SKILLS_CSV = os.path.join(KB_DIR, "skills.csv")
+LABELS_CSV = os.path.join(KB_DIR, "labels.csv")
+OCC_SKILL_REL_CSV = os.path.join(KB_DIR, "occupation_skill_relations.csv")
+HIERARCHY_CSV = os.path.join(KB_DIR, "hierarchy.csv")
+ALIGNMENTS_CSV = os.path.join(KB_DIR, "concept_alignments.csv")
+UNIFIED_OCCUPATIONS_CSV = os.path.join(KB_DIR, "unified_occupations.csv")
+UNIFIED_SKILLS_CSV = os.path.join(KB_DIR, "unified_skills.csv")
+PROVENANCE_CSV = os.path.join(KB_DIR, "provenance.csv")
 
 # --------------------------------------------------------------------------------------
-# Canonical schema (English-primary; French secondary when present)
+# Knowledge-base schema (English-primary; French secondary when present)
 # --------------------------------------------------------------------------------------
 
 OCCUPATION_FIELDS = [
@@ -93,13 +93,13 @@ ALIGNMENT_FIELDS = [
     "entity_id_a", "source_a", "entity_id_b", "source_b",
     "relation", "confidence", "method", "validated", "notes",
 ]
-CANONICAL_OCC_FIELDS = [
-    "canonical_id", "primary_label_en", "primary_label_fr",
+UNIFIED_OCC_FIELDS = [
+    "unified_id", "primary_label_en", "primary_label_fr",
     "alt_labels_en", "alt_labels_fr", "isco_code",
     "occupation_type", "sources", "member_entity_ids",
 ]
-CANONICAL_SKILL_FIELDS = [
-    "canonical_id", "primary_label_en", "primary_label_fr",
+UNIFIED_SKILL_FIELDS = [
+    "unified_id", "primary_label_en", "primary_label_fr",
     "alt_labels_en", "alt_labels_fr", "hard_soft", "it_subtype",
     "sources", "member_entity_ids",
 ]

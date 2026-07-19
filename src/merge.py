@@ -1,7 +1,7 @@
-"""Canonical concept merge / de-duplication.
+"""Unified concept merge / de-duplication.
 
-Clusters occupations (and separately skills) into canonical concepts by taking the
-connected components of the ``exactMatch`` alignment graph. Each canonical concept
+Clusters occupations (and separately skills) into unified concepts by taking the
+connected components of the ``exactMatch`` alignment graph. Each unified concept
 carries an English-primary label (French secondary), merged synonyms, the hub ISCO
 code, and back-links to its source members (provenance preserved).
 """
@@ -47,7 +47,7 @@ def _components(nodes, edges):
     return list(comps.values())
 
 
-def _canonical_id(prefix, member_ids):
+def _unified_id(prefix, member_ids):
     h = hashlib.sha1("|".join(sorted(member_ids)).encode("utf-8")).hexdigest()[:12]
     return f"{prefix}{h}"
 
@@ -101,15 +101,15 @@ def _merge_occupations():
         primary_fr = _by_order(members, "pref_label_fr")
         alt_en, alt_fr = _merged_alts(members, primary_en, primary_fr)
         rows.append({
-            "canonical_id": _canonical_id("CANO_", comp),
+            "unified_id": _unified_id("UOCC_", comp),
             "primary_label_en": primary_en, "primary_label_fr": primary_fr,
             "alt_labels_en": alt_en, "alt_labels_fr": alt_fr,
             "isco_code": _by_order(members, "isco_code"),
-            "occupation_type": "canonical_occupation",
+            "occupation_type": "unified_occupation",
             "sources": " | ".join(sorted({m["source"] for m in members})),
             "member_entity_ids": " | ".join(sorted(comp)),
         })
-    K.write_csv(C.CANONICAL_OCCUPATIONS_CSV, C.CANONICAL_OCC_FIELDS, rows)
+    K.write_csv(C.UNIFIED_OCCUPATIONS_CSV, C.UNIFIED_OCC_FIELDS, rows)
     return rows
 
 
@@ -129,14 +129,14 @@ def _merge_skills():
               if m.get("hard_soft_provisional")]
         hard_soft = max(set(hs), key=hs.count) if hs else ""
         rows.append({
-            "canonical_id": _canonical_id("CANS_", comp),
+            "unified_id": _unified_id("USKL_", comp),
             "primary_label_en": primary_en, "primary_label_fr": primary_fr,
             "alt_labels_en": alt_en, "alt_labels_fr": alt_fr,
             "hard_soft": hard_soft, "it_subtype": _by_order(members, "it_subtype"),
             "sources": " | ".join(sorted({m["source"] for m in members})),
             "member_entity_ids": " | ".join(sorted(comp)),
         })
-    K.write_csv(C.CANONICAL_SKILLS_CSV, C.CANONICAL_SKILL_FIELDS, rows)
+    K.write_csv(C.UNIFIED_SKILLS_CSV, C.UNIFIED_SKILL_FIELDS, rows)
     return rows
 
 
@@ -148,8 +148,8 @@ def run():
     K.log_provenance("MERGE", [{
         "entity_id": "MERGE", "source": "MERGE", "source_version": "-",
         "retrieved_at": K.now_iso(), "retrieval_method": "connected_components(exactMatch)",
-        "notes": f"{len(occ_rows)} canonical occ ({n_occ_multi} merged), "
-                 f"{len(skl_rows)} canonical skills ({n_skl_multi} merged)",
+        "notes": f"{len(occ_rows)} unified occ ({n_occ_multi} merged), "
+                 f"{len(skl_rows)} unified skills ({n_skl_multi} merged)",
     }])
-    print(f"[MERGE] {len(occ_rows)} canonical occupations ({n_occ_multi} multi-source), "
-          f"{len(skl_rows)} canonical skills ({n_skl_multi} multi-source).")
+    print(f"[MERGE] {len(occ_rows)} unified occupations ({n_occ_multi} multi-source), "
+          f"{len(skl_rows)} unified skills ({n_skl_multi} multi-source).")
