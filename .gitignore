@@ -1,2 +1,29 @@
-.venv
+# --- Python ---
+__pycache__/
 **/__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+
+# --- Secrets / local config (keep .env.example tracked) ---
+.env
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+
+# --- Heavy raw source data: CSVs under Datasets/ (kept out of the repo) ---
+Datasets/**/*.csv
+
+# --- Docs (LaTeX report + build artifacts) ---
+docs/
+
+# --- Benchmark / run outputs ---
+results/

@@ -1,79 +1,92 @@
 # JobKB
 
-A knowledge-graph pipeline that reconciles IT occupations and skills, in French,
-from several heterogeneous public sources.
+An **English-primary**, IT-focused occupation & skill **knowledge base**, built
+**fully automatically** from five local public taxonomies. French is kept as a
+secondary language wherever a source provides it. There is **no scraping, no live
+web calls, and no human in the loop** — cross-source duplicates are resolved and
+alignments validated with open-source HuggingFace models.
 
+## Sources (IT-filtered, English where available)
 
-## Sources
-
-| Source | What it provides | Scope filter |
+| Source | Role | IT scope filter |
 |---|---|---|
-| **ESCO**  | EU occupation/skill taxonomy | 13 IT-related ISCO unit groups (`Datasets/ESCO/*_fr.csv`) |
-| **ISCO-08** | Hierarchical occupation skeleton (nested codes, e.g. `2512 ⊂ 251 ⊂ 25 ⊂ 2`) | groups needed to root the ESCO subset |
-| **ROME** | France occupation nomenclature | domain `M18` (informatique) |
-| **Wikidata** | Emerging IT concepts, via live SPARQL query | occupations under IT-related anchor concepts |
-| **RemoteOK / Arbeitnow** | Real job postings, via public JSON APIs | keyword-filtered to IT titles/tags |
+| **ISCO-08** | Backbone hierarchy (the hub every source attaches to) | sub-major groups **25** & **35** (ICT professionals / technicians) |
+| **ESCO** | Occupations (+ skills, relations, skill groups). Carries the ISCO code. | occupations whose `iscoGroup` starts with `25`/`35` |
+| **ONET** | Rich IT occupations + real technology tools (`software_skills`) | SOC `15-12xx` (Computer) + `15-2051` (Data Scientists) |
+| **NOC 2021** | Bilingual (EN/FR) occupations + illustrative-example synonyms | unit groups in minors `2122`/`2123` + `20012`, `21211`, `21311`, `2222x` |
+| **ROME** | French métiers + competences (French enrichment) | professional domain **`M18`** |
 
-## Pipeline
+There is no ISCO↔SOC↔NOC↔ROME crosswalk shipped with these datasets, so the
+cross-source **alignment itself acts as the crosswalk**: ONET, NOC and ROME
+occupations are grafted onto the ISCO hub through validated matches to ESCO.
 
-Notebooks in `notebooks/` run in order and share helpers/paths/schema from
-`notebooks/jobkb_common.py`. Each stage writes into `canonical/` and appends
-an entry to `canonical/provenance.csv`.
+## Pipeline (package + orchestrator)
 
-1. **`01_ingest_esco_isco.ipynb`** — filters ESCO occupations to the IT ISCO
-   scope, pulls their linked skills, classifies each skill hard/soft (soft =
-   member of ESCO's transversal collection), then builds the ISCO hierarchy
-   and attaches ESCO occupations to their base group.
-2. **`02_ingest_rome_wikidata_scraped-data.ipynb`** — ingests ROME's M18
-   occupations (with appellation synonyms) and their "savoir-faire/savoir-être/
-   savoirs" as skills; runs a live Wikidata SPARQL query for emerging IT
-   concepts; scrapes and ingests RemoteOK + Arbeitnow job postings (cached as
-   JSON under `scraped/`).
-3. **`03_translate_data.ipynb`** — batches English labels (from Wikidata/
-   RemoteOK/Arbeitnow) into LLM translation prompts (`llm_io/prompts/`),
-   ingests the pasted-back responses (`llm_io/responses/`), applies accepted
-   translations, and generates a manual review file
-   (`scraped/review_translated.csv`) to accept/reject scraped entities.
-4. **`04_align_entities.ipynb`** — resolves the same real-world occupation
-   across sources using exact-label matching plus multilingual sentence-
-   embedding similarity (`paraphrase-multilingual-MiniLM-L12-v2`), assigns a
-   SKOS relation (`exactMatch` / `closeMatch` / `relatedMatch`) and confidence
-   score, and exports `canonical/alignment_review.csv` for manual labeling + threshold evaluation.
-   It also grafts non-ESCO occupations (ROME/RemoteOK/Arbeitnow) onto the ISCO
-   hierarchy: any occupation directly matched to an ESCO occupation
-   inherits that occupation's ISCO group (`source=ALIGNMENT` edges in
-   `hierarchy.csv`; ties broken by highest-confidence match).
-5. **`05_build_hierarchy.ipynb`** — adds ESCO's transversal soft-skills
-   collection (reclassifying already-linked skills hard→soft where
-   applicable), builds the skill hierarchy from ESCO skill groups, and
-   sub-types hard skills (language/tech, network, security, database, ...).
+```
+jobkb/
+  config.py        # paths, EN-primary schema, IT scope per source, HF model ids, tunables
+  common.py        # deterministic ids, label normalization, idempotent CSV IO, provenance
+  ingest/          # isco, esco, onet, noc, rome  (each IT-filtered, EN-primary)
+  hierarchy.py     # ESCO skill-group tree + hard/soft (transversal) + IT sub-typing
+  align/           # candidates (embeddings) -> verify (NLI, no human) -> graft (ISCO hub)
+  merge.py         # canonical concept clustering / de-duplication
+  pipeline.py      # orchestrator + QA/integrity report
+run_pipeline.py    # CLI entry point
+notebooks/
+  inspect.ipynb    # QA & spot-checks over canonical/
+  test.ipynb       # WorkRB benchmark sanity check
+```
+
+Run it:
+
+```bash
+python -m venv .venv && .venv\Scripts\activate
+pip install -r requirements.txt
+python run_pipeline.py            # full build (ingest -> hierarchy -> align -> merge)
+python run_pipeline.py --no-align # ingest + hierarchy only (no HF model downloads)
+```
+
+The build is **idempotent**: entity ids are deterministic, each stage owns its
+source rows, and `run_pipeline.py` rebuilds `canonical/` clean by default.
+
+## Alignment & validation (no human in the loop)
+
+1. **Candidates** — multilingual sentence embeddings (`nomic-embed-text-v2-moe`
+   → `paraphrase-multilingual-MiniLM-L12-v2` → TF-IDF fallback) give the top-k
+   nearest neighbours between every pair of sources.
+2. **Verify** — for occupations, a multilingual **NLI model**
+   (`mDeBERTa-v3-base-mnli-xnli`) checks bidirectional entailment of the two
+   definitions (mutual entailment ⇒ same concept); skills rely on normalized-label
+   identity + embedding similarity. Confidence maps to SKOS
+   (`exactMatch` / `closeMatch` / `relatedMatch`, plus `broad/narrowMatch` for
+   asymmetric entailment). Every accepted pair is `validated = auto`.
+3. **Graft** — each non-ISCO occupation inherits the ISCO unit group of its best
+   validated ESCO match.
+4. **Merge** — connected components of the `exactMatch` graph become **canonical
+   concepts** (`canonical_occupations.csv`, `canonical_skills.csv`) with an
+   English-primary label, French secondary, merged synonyms, the hub ISCO code,
+   and back-links to their source members.
+
+All models are open-source; if none can be loaded (e.g. offline) the pipeline
+degrades gracefully (TF-IDF candidates, NLI off) and still produces the KB.
 
 ## Canonical schema (`canonical/`)
 
 | File | Contents |
 |---|---|
-| `occupations.csv` | one row per occupation/job-title/ISCO-group node |
-| `skills.csv` | one row per skill/skill-group node, with hard/soft + IT subtype |
+| `occupations.csv` | one row per source occupation / ISCO-group node (EN + FR labels, ISCO & source codes) |
+| `skills.csv` | one row per source skill / skill-group, with hard/soft + IT subtype |
 | `labels.csv` | every preferred/alt/hidden label per entity, per language |
 | `occupation_skill_relations.csv` | occupation ↔ skill links (essential/optional) |
-| `hierarchy.csv` | broader/narrower edges (ISCO tree + alignment grafts, ESCO skill groups) |
-| `concept_alignments.csv` | cross-source entity matches with confidence + method |
-| `alignment_review.csv` | alignment matches exported for manual labeling |
-| `translation_suggestions.csv` | LLM-proposed translations, with status |
-| `provenance.csv` | audit trail: what each ingestion run wrote and when |
+| `hierarchy.csv` | ISCO tree + ESCO skill groups + alignment grafts (`broader_than` edges) |
+| `concept_alignments.csv` | cross-source matches with SKOS relation, confidence, method, `validated` |
+| `canonical_occupations.csv` | de-duplicated canonical occupations (merged members) |
+| `canonical_skills.csv` | de-duplicated canonical skills |
+| `provenance.csv` | audit trail: what each stage produced and when |
 
-Entity IDs are deterministic, so re-running a
-notebook against unchanged input reproduces the same IDs. Each stage replaces
-only the rows it owns (`source` column), so notebooks can be re-run
-independently without clobbering other sources' data.
+## Not in this build (deliberate follow-ons)
 
-## Setup
-
-```
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-Run the notebooks in `notebooks/` in numeric order (`01` → `05`). Some steps
-require manual intervention between runs.
+RDF/OWL graph export, and LLM content-enrichment (niche IT roles, emerging-tech
+concepts, missing links) are intentionally out of scope for this reconstruction.
+The previous French-primary, scraping/Wikidata/manual-translation pipeline and its
+human `gold` alignment review have been fully removed.
