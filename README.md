@@ -31,9 +31,11 @@ src/
   config.py        # paths, EN-primary schema, IT scope per source, HF model ids, tunables
   common.py        # deterministic ids, label normalization, idempotent CSV IO, provenance
   ingest/          # isco, esco, onet, noc, rome  (each IT-filtered, EN-primary)
+  sources/         # pluggable source framework: base (StructuredSource/ExtractionSource) + registry
   hierarchy.py     # neutral skill ontology: every skill -> IT sub-domain -> Hard/Soft
   align/           # candidates (embeddings) -> verify (batched NLI) -> attach (ISCO, all sources)
   merge.py         # source-neutral unified concept clustering / de-duplication
+  incremental.py   # add/remove ONE source without a full rebuild
   pipeline.py      # orchestrator + QA/integrity report
 run_pipeline.py    # CLI entry point
 notebooks/
@@ -53,6 +55,55 @@ pip install -r requirements.txt
 python run_pipeline.py            # full build (ingest -> ontology -> align -> attach -> merge)
 python run_pipeline.py --no-align # ingest + skill ontology only (no HF model downloads)
 ```
+
+### Run only the stages you need
+
+Stages are `ingest -> hierarchy -> align -> attach -> merge -> qa`, each idempotent, so any
+stage or contiguous range can run **against the existing `kb/`** (never wiped unless `--clean`)
+— no need to re-run the ~2 h build after a small change:
+
+```bash
+python run_pipeline.py --stages merge            # re-derive unified concepts only (seconds)
+python run_pipeline.py --stages attach,merge     # re-attach + re-merge (after tuning attach)
+python run_pipeline.py --from align              # align -> attach -> merge -> qa
+python run_pipeline.py --to hierarchy            # ingest + hierarchy only
+python run_pipeline.py --stages ingest --source ESCO   # re-ingest just one source
+python run_pipeline.py --stages qa               # integrity report only
+python run_pipeline.py --list-stages
+```
+
+`--source NAME` scopes ingest/align/attach to one source (uses the incremental focus path).
+Running an upstream stage marks the downstream ones stale (the run prints a `[note]` telling
+you what to re-run). Re-ingesting **preserves the attach-derived `isco_code`**, so
+`ingest → merge` stays correct without a costly re-attach; re-run `hierarchy` after a
+re-ingest to restore the derived skill rows (it's ~1 s).
+
+## Adding a source incrementally (open for extension)
+
+A new data source can be **added to an existing KB without rebuilding it**: it is ingested,
+standardized to the schema, aligned only against the existing entities, attached to ISCO, and
+merged into the unified concepts. Because every KB write is per-source and idempotent
+(`common.replace_source_rows`) and embeddings are cached by text, the others are never
+recomputed — a new source takes minutes, not a full rebuild.
+
+```bash
+python run_pipeline.py --list-sources     # show registered sources
+python run_pipeline.py --add DEMO          # ingest + align + attach + merge just DEMO
+python run_pipeline.py --remove DEMO       # delete DEMO and repair the graph (instant)
+```
+
+To add your own dataset, subclass `StructuredSource` (in `src/sources/base.py`) and implement
+the `occupations()`, `skills()`, `relations()` generators returning plain normalized dicts; the
+base mints deterministic ids, builds labels, applies English-primary standardization
+(`label_language_status`: `en_native` / `en_plus_fr` / `fr_only` — a French-only source gains
+its English label later via alignment, exactly like ROME), and persists everything. Register it
+in `src/sources/registry.py` with `contributes_occupations` / `needs_attach` flags. Downstream,
+`hierarchy` classifies its skills (Hard/Soft + IT sub-domain), `attach` assigns an ISCO group
+(NLI-verified) if it has no native code, and `merge` de-duplicates it against existing concepts —
+so the new source ends up structurally identical to the built-in taxonomies.
+`src/sources/demo_dataset.py` is a worked example (a throwaway synthetic dataset).
+For **unstructured** inputs (scraped postings), subclass `ExtractionSource` and implement
+`documents()` + `extract(text)` (a stub wired to an HF skill-extractor).
 
 The build is **idempotent**: entity ids are deterministic, each stage owns its
 source rows, and `run_pipeline.py` rebuilds `kb/` clean by default.

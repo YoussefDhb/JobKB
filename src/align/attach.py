@@ -22,8 +22,12 @@ from . import verify as _verify
 
 ATTACH_SRC = "ATTACH"
 ATTACH_LOWCONF_SRC = "ATTACH_LOWCONF"  # attached to best group, but flagged for review
-# sources whose occupations need alignment-based attachment (ESCO self-attaches natively)
-_NEEDS_ATTACH = (C.SRC_ONET, C.SRC_NOC, C.SRC_ROME)
+
+
+def _needs_attach():
+    """Sources needing ISCO attachment, from the registry (ESCO self-attaches natively)."""
+    from ..sources import registry
+    return set(registry.needs_attach_sources())
 
 
 def _group_text(row):
@@ -35,14 +39,34 @@ def _occ_desc(row):
     return row.get("description_en") or row.get("description_fr") or ""
 
 
-def run():
+def _write_attach_edges(edges, lowconf_edges, focus_source):
+    """Write ATTACH / ATTACH_LOWCONF hierarchy edges. Full mode replaces both groups
+    wholesale; focus mode preserves other sources' attach edges and replaces only those
+    for the focus source's occupations (keyed by child occupation id)."""
+    if focus_source is None:
+        K.replace_source_rows(C.HIERARCHY_CSV, C.HIERARCHY_FIELDS, ATTACH_SRC, edges)
+        K.replace_source_rows(C.HIERARCHY_CSV, C.HIERARCHY_FIELDS, ATTACH_LOWCONF_SRC, lowconf_edges)
+        return
+    focus_children = {e["child_entity_id"] for e in edges + lowconf_edges}
+    existing = K.read_all(C.HIERARCHY_CSV)
+    kept = [r for r in existing
+            if not (r.get("source") in (ATTACH_SRC, ATTACH_LOWCONF_SRC)
+                    and r.get("child_entity_id") in focus_children)]
+    K.write_csv(C.HIERARCHY_CSV, C.HIERARCHY_FIELDS, kept + edges + lowconf_edges)
+
+
+def run(focus_source=None):
+    """Attach occupations to ISCO. `focus_source=None` (re)attaches every non-native source;
+    a `focus_source` attaches only that source's occupations, preserving the others' edges."""
     occ = K.read_all(C.OCCUPATIONS_CSV)
+    needs = _needs_attach()
+    attach_srcs = ({focus_source} & needs) if focus_source is not None else needs
     # Attach targets: the specific ISCO unit groups (4-digit codes, incl. 1330).
     targets = [r for r in occ if r.get("occupation_type") == "isco_group"
                and len(r.get("source_code", "")) == 4]
-    to_attach = [r for r in occ if r.get("source") in _NEEDS_ATTACH]
+    to_attach = [r for r in occ if r.get("source") in attach_srcs]
     if not targets or not to_attach:
-        print("[ATTACH] nothing to attach.")
+        print(f"[ATTACH] nothing to attach{f' for {focus_source}' if focus_source else ''}.")
         return []
 
     import numpy as np
@@ -116,14 +140,13 @@ def run():
             edges.append(edge)
         counts[o["source"]] += 1
 
-    # Persist the inferred isco_code onto the ONET/NOC/ROME occupation rows (mutated above).
-    for src in _NEEDS_ATTACH:
+    # Persist the inferred isco_code onto the attached occupation rows (mutated above).
+    for src in attach_srcs:
         rows = [r for r in occ if r["source"] == src]
         if rows:
             K.replace_source_rows(C.OCCUPATIONS_CSV, C.OCCUPATION_FIELDS, src, rows)
 
-    K.replace_source_rows(C.HIERARCHY_CSV, C.HIERARCHY_FIELDS, ATTACH_SRC, edges)
-    K.replace_source_rows(C.HIERARCHY_CSV, C.HIERARCHY_FIELDS, ATTACH_LOWCONF_SRC, lowconf_edges)
+    _write_attach_edges(edges, lowconf_edges, focus_source)
     K.log_provenance(ATTACH_SRC, [{
         "entity_id": ATTACH_SRC, "source": ATTACH_SRC, "source_version": "-",
         "retrieved_at": K.now_iso(),

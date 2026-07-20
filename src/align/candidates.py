@@ -134,11 +134,15 @@ class Embedder:
         return vec.fit_transform([K.normalize_label(t) for t in texts])
 
 
-def candidate_pairs(entities, embedder, topk=None, threshold=None):
+def candidate_pairs(entities, embedder, topk=None, threshold=None, focus_source=None):
     """Top-k cross-source neighbour pairs above the cosine threshold.
 
     Returns list of (row_a, row_b, cosine) with source_a != source_b, de-duplicated
     per unordered entity pair (highest similarity kept).
+
+    When `focus_source` is set, only pairs where **one side is that source** are produced
+    (new-vs-existing) — the incremental path for adding a source without re-aligning the
+    others. `None` = full all-vs-all (the from-scratch build).
     """
     if not entities:
         return []
@@ -156,10 +160,14 @@ def candidate_pairs(entities, embedder, topk=None, threshold=None):
     for i, r in enumerate(entities):
         by_source.setdefault(r["source"], []).append(i)
     sources = sorted(by_source)
+    if focus_source is not None and focus_source not in by_source:
+        return []
 
     best = {}  # frozenset(eid_a, eid_b) -> (row_a, row_b, sim)
     for si in range(len(sources)):
         for sj in range(si + 1, len(sources)):
+            if focus_source is not None and focus_source not in (sources[si], sources[sj]):
+                continue
             idx_a = by_source[sources[si]]
             idx_b = by_source[sources[sj]]
             sub_a = emb[idx_a]

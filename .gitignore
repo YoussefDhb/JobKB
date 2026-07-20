@@ -27,3 +27,6 @@ kb/.emb_cache_*.pkl
 
 # --- Docs (LaTeX report + build artifacts) ---
 docs/
+
+# --- Personal command cheat-sheet (not part of the repo) ---
+COMMANDS.md
