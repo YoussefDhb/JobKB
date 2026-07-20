@@ -1,8 +1,10 @@
-"""Ingest the ISCO-08 hub (English), restricted to the IT branches (sub-major 25 & 35).
+"""Ingest the ISCO-08 hub (English), restricted to the IT branches.
 
-ISCO is the backbone hierarchy: every other source's occupations are grafted onto
-these unit groups during alignment. We mint occupation nodes for sub-major (2-digit),
-minor (3-digit) and unit (4-digit) groups and connect them bottom-up.
+ISCO-08 is the neutral standard backbone: every source's occupations attach onto these
+groups. In scope: sub-major groups 25 (ICT professionals) & 35 (ICT technicians) and
+minor group 133 (ICT service managers). We mint occupation nodes for each in-scope
+sub-major/minor/unit group and connect them bottom-up; a node is a root when its parent
+is out of scope (so the tree roots at 25, 35 and 133).
 """
 
 from __future__ import annotations
@@ -32,21 +34,22 @@ def run():
     defs = _load_definitions()
     df = K.read_csv_smart(STRUCT_FILE)
 
-    # Collect the distinct nodes at each level for the IT branches.
-    submajors, minors, units = {}, {}, {}
+    # Collect every in-scope node at any level (the file also holds ISCO-68 rows, which
+    # we must skip). A code qualifies via is_isco_it (25*/35*/133*).
+    nodes = {}  # code -> label
     for _, r in df.iterrows():
-        sub = (r.get("sub_major") or "").strip()
-        if not sub.startswith(C.ISCO_IT_SUBMAJORS):
+        if (r.get("ISCO_version") or "").strip() != "ISCO-08":
             continue
-        submajors[sub] = (r.get("sub_major_label") or "").strip()
-        mino = (r.get("minor") or "").strip()
-        minors[mino] = (r.get("minor_label") or "").strip()
-        unit = (r.get("unit") or "").strip()
-        units[unit] = (r.get("description") or "").strip()
+        for code_col, label_col in (("sub_major", "sub_major_label"),
+                                    ("minor", "minor_label"),
+                                    ("unit", "description")):
+            code = (r.get(code_col) or "").strip()
+            if code and C.is_isco_it(code) and code not in nodes:
+                nodes[code] = (r.get(label_col) or "").strip()
 
     occ_rows, label_rows, hier_rows = [], [], []
 
-    def node(code, label, level):
+    for code, label in sorted(nodes.items()):
         eid = K.mint_id("OCC_", C.SRC_ISCO, code)
         title, definition = defs.get(code, ("", ""))
         pref = title or label
@@ -60,30 +63,18 @@ def run():
         })
         label_rows.extend(K.make_label_rows(eid, "occupation", C.SRC_ISCO,
                                             preferred={"en": [pref]}))
-        return eid
 
-    for code, label in sorted(submajors.items()):
-        node(code, label, 2)
-    for code, label in sorted(minors.items()):
-        node(code, label, 3)
-    for code, label in sorted(units.items()):
-        node(code, label, 4)
-
-    # Bottom-up edges: unit -> minor -> sub-major (parent = code without last digit).
-    def edge(child_code, parent_code):
-        hier_rows.append({
-            "parent_entity_id": K.mint_id("OCC_", C.SRC_ISCO, parent_code),
-            "child_entity_id": K.mint_id("OCC_", C.SRC_ISCO, child_code),
-            "entity_kind": "occupation", "relation_type": "broader_than",
-            "source": C.SRC_ISCO,
-        })
-
-    for code in units:
-        if code[:3] in minors:
-            edge(code, code[:3])
-    for code in minors:
-        if code[:2] in submajors:
-            edge(code, code[:2])
+    # Bottom-up edges: parent = code without last digit, only if the parent is in scope
+    # (so 25/35/133 become roots; 133's out-of-scope parent 13 is dropped).
+    for code in nodes:
+        parent = code[:-1]
+        if parent in nodes:
+            hier_rows.append({
+                "parent_entity_id": K.mint_id("OCC_", C.SRC_ISCO, parent),
+                "child_entity_id": K.mint_id("OCC_", C.SRC_ISCO, code),
+                "entity_kind": "occupation", "relation_type": "broader_than",
+                "source": C.SRC_ISCO,
+            })
 
     K.replace_source_rows(C.OCCUPATIONS_CSV, C.OCCUPATION_FIELDS, C.SRC_ISCO, occ_rows)
     K.upsert_labels(label_rows)
@@ -91,7 +82,7 @@ def run():
     K.log_provenance(C.SRC_ISCO, [{
         "entity_id": C.SRC_ISCO, "source": C.SRC_ISCO, "source_version": "ISCO-08",
         "retrieved_at": K.now_iso(), "retrieval_method": "official_en_csv",
-        "notes": f"{len(occ_rows)} groups, {len(hier_rows)} edges (IT branches 25/35)",
+        "notes": f"{len(occ_rows)} groups, {len(hier_rows)} edges (IT branches 25/35/133)",
     }])
-    print(f"[ISCO] {len(submajors)} sub-major, {len(minors)} minor, {len(units)} unit groups; "
-          f"{len(hier_rows)} hierarchy edges.")
+    print(f"[ISCO] {len(nodes)} IT group nodes; {len(hier_rows)} hierarchy edges "
+          f"(roots: 25, 35, 133).")

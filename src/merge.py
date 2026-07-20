@@ -10,9 +10,9 @@ from __future__ import annotations
 import hashlib
 
 from . import config as C
-from . import common as K
+from collections import Counter
 
-SOURCE_ORDER = {C.SRC_ESCO: 0, C.SRC_ONET: 1, C.SRC_NOC: 2, C.SRC_ROME: 3, C.SRC_ISCO: 4}
+from . import common as K
 
 
 class _UF:
@@ -56,12 +56,40 @@ def _split(value):
     return [p.strip() for p in (value or "").split(" | ") if p.strip()]
 
 
-def _by_order(members, field):
-    """First non-empty value of `field` across members, by source priority."""
-    for m in sorted(members, key=lambda r: SOURCE_ORDER.get(r["source"], 9)):
-        if (m.get(field) or "").strip():
-            return m[field].strip()
-    return ""
+def _majority(members, field):
+    """Source-neutral majority value of `field` (ties: shorter, then alphabetical)."""
+    vals = [(m.get(field) or "").strip() for m in members if (m.get(field) or "").strip()]
+    if not vals:
+        return ""
+    counts = Counter(vals)
+    top = max(counts.values())
+    return sorted([v for v, c in counts.items() if c == top], key=lambda s: (len(s), s))[0]
+
+
+def _consensus_label(members, lang):
+    """Source-neutral primary label for a language: the most shared *preferred* label
+    across members (ties: most frequent normalized form, then shortest, then alphabetical).
+    Falls back to alternative labels only when no member has a preferred label in that
+    language (e.g. an all-ROME cluster for English). No source ranking."""
+    pref_field, alt_field = f"pref_label_{lang}", f"alt_labels_{lang}"
+
+    def _vote(get_forms):
+        norm_count, surfaces = Counter(), {}
+        for m in members:
+            for f in get_forms(m):
+                f = (f or "").strip()
+                n = K.normalize_label(f)
+                if not n:
+                    continue
+                norm_count[n] += 1
+                surfaces.setdefault(n, []).append(f)
+        if not norm_count:
+            return ""
+        best = sorted([n for n, c in norm_count.items()
+                       if c == max(norm_count.values())])[0]
+        return sorted(set(surfaces[best]), key=lambda s: (len(s), s))[0]
+
+    return _vote(lambda m: [m.get(pref_field)]) or _vote(lambda m: _split(m.get(alt_field)))
 
 
 def _merged_alts(members, primary_en, primary_fr):
@@ -78,13 +106,13 @@ def _merged_alts(members, primary_en, primary_fr):
     return " | ".join(en), " | ".join(fr)
 
 
-def _exact_edges(kind_prefix):
+def _merge_edges(kind_prefix):
+    """Cross-source pairs flagged for merge, as (a, b, kind) with kind in {label, semantic}."""
     edges = []
     for a in K.read_all(C.ALIGNMENTS_CSV):
-        ea, eb = a.get("entity_id_a", ""), a.get("entity_id_b", "")
-        if (ea.startswith(kind_prefix) and eb.startswith(kind_prefix)
-                and a.get("relation") == "skos:exactMatch"):
-            edges.append((ea, eb))
+        ea, eb, kind = a.get("entity_id_a", ""), a.get("entity_id_b", ""), a.get("merge", "")
+        if kind in ("label", "semantic") and ea.startswith(kind_prefix) and eb.startswith(kind_prefix):
+            edges.append((ea, eb, kind))
     return edges
 
 
@@ -92,19 +120,23 @@ def _merge_occupations():
     occ = [r for r in K.read_all(C.OCCUPATIONS_CSV)
            if r.get("occupation_type") != "isco_group"]
     by_id = {r["entity_id"]: r for r in occ}
-    comps = _components(list(by_id), _exact_edges("OCC_"))
+    isco = {e: (r.get("isco_code") or "").strip() for e, r in by_id.items()}
+    # Label merges always apply; semantic merges only within the same ISCO group.
+    edges = [(a, b) for a, b, kind in _merge_edges("OCC_")
+             if kind == "label" or (a in isco and isco[a] and isco[a] == isco.get(b))]
+    comps = _components(list(by_id), edges)
 
     rows = []
     for comp in comps:
         members = [by_id[e] for e in comp]
-        primary_en = _by_order(members, "pref_label_en")
-        primary_fr = _by_order(members, "pref_label_fr")
+        primary_en = _consensus_label(members, "en")
+        primary_fr = _consensus_label(members, "fr")
         alt_en, alt_fr = _merged_alts(members, primary_en, primary_fr)
         rows.append({
             "unified_id": _unified_id("UOCC_", comp),
             "primary_label_en": primary_en, "primary_label_fr": primary_fr,
             "alt_labels_en": alt_en, "alt_labels_fr": alt_fr,
-            "isco_code": _by_order(members, "isco_code"),
+            "isco_code": _majority(members, "isco_code"),
             "occupation_type": "unified_occupation",
             "sources": " | ".join(sorted({m["source"] for m in members})),
             "member_entity_ids": " | ".join(sorted(comp)),
@@ -115,24 +147,22 @@ def _merge_occupations():
 
 def _merge_skills():
     skl = [r for r in K.read_all(C.SKILLS_CSV)
-           if r.get("hard_soft_provisional") != "group"]
+           if r.get("esco_skill_type") not in ("skill_type", "skill_domain")]
     by_id = {r["entity_id"]: r for r in skl}
-    comps = _components(list(by_id), _exact_edges("SKL_"))
+    comps = _components(list(by_id), [(a, b) for a, b, _k in _merge_edges("SKL_")])
 
     rows = []
     for comp in comps:
         members = [by_id[e] for e in comp]
-        primary_en = _by_order(members, "pref_label_en")
-        primary_fr = _by_order(members, "pref_label_fr")
+        primary_en = _consensus_label(members, "en")
+        primary_fr = _consensus_label(members, "fr")
         alt_en, alt_fr = _merged_alts(members, primary_en, primary_fr)
-        hs = [m.get("hard_soft_provisional") for m in members
-              if m.get("hard_soft_provisional")]
-        hard_soft = max(set(hs), key=hs.count) if hs else ""
         rows.append({
             "unified_id": _unified_id("USKL_", comp),
             "primary_label_en": primary_en, "primary_label_fr": primary_fr,
             "alt_labels_en": alt_en, "alt_labels_fr": alt_fr,
-            "hard_soft": hard_soft, "it_subtype": _by_order(members, "it_subtype"),
+            "hard_soft": _majority(members, "hard_soft_provisional"),
+            "it_subtype": _majority(members, "it_subtype"),
             "sources": " | ".join(sorted({m["source"] for m in members})),
             "member_entity_ids": " | ".join(sorted(comp)),
         })

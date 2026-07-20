@@ -1,15 +1,82 @@
 """Embedding-based candidate generation across sources.
 
-Loads a HuggingFace sentence-embedding model (nomic -> MiniLM), or falls back to
+Loads a HuggingFace sentence-embedding model (bge-m3 -> MiniLM), or falls back to
 a TF-IDF char n-gram vectorizer if neither is available, so candidate generation
 always runs. Candidates are the top-k nearest neighbours between every pair of
 distinct sources, above a recall-oriented cosine floor.
+
+Embeddings are the whole runtime cost (bge-m3 on CPU), so computed vectors are cached
+on disk keyed by (model_id, text). A threshold-only rebuild then reuses them and runs
+in seconds instead of ~40 min; changing the embedding model invalidates the cache by key.
 """
 
 from __future__ import annotations
+import atexit
+import os
+import pickle
 
 from .. import config as C
 from .. import common as K
+
+
+_SHARED_EMBEDDER = None
+_VEC_CACHE = {}          # text -> vector (only populated in sentence-transformer mode)
+_CACHE_PATH = None       # disk path for the current model's cache
+_CACHE_DIRTY = False
+
+
+def _load_disk_cache(model_id):
+    """Load the on-disk vector cache for `model_id` into _VEC_CACHE (best-effort)."""
+    global _CACHE_PATH
+    _CACHE_PATH = os.path.join(C.KB_DIR, f".emb_cache_{model_id.replace('/', '_')}.pkl")
+    try:
+        if os.path.isfile(_CACHE_PATH):
+            with open(_CACHE_PATH, "rb") as f:
+                _VEC_CACHE.update(pickle.load(f))
+    except Exception:
+        pass
+    atexit.register(_save_disk_cache)
+
+
+def _save_disk_cache():
+    if not _CACHE_DIRTY or not _CACHE_PATH:
+        return
+    try:
+        os.makedirs(os.path.dirname(_CACHE_PATH), exist_ok=True)
+        with open(_CACHE_PATH, "wb") as f:
+            pickle.dump(_VEC_CACHE, f, protocol=pickle.HIGHEST_PROTOCOL)
+    except Exception:
+        pass
+
+
+def get_embedder():
+    """Process-wide singleton so bge-m3 is loaded once and shared by align + attach."""
+    global _SHARED_EMBEDDER
+    if _SHARED_EMBEDDER is None:
+        _SHARED_EMBEDDER = Embedder()
+        if _SHARED_EMBEDDER.mode == "st":
+            _load_disk_cache(_SHARED_EMBEDDER.model_id)
+    return _SHARED_EMBEDDER
+
+
+def encode_cached(embedder, texts):
+    """Encode `texts`, reusing previously computed vectors (st mode only).
+
+    TF-IDF vectors are corpus-relative and cannot be cached across calls, so that mode
+    just encodes directly. Returns a numpy array in st mode.
+    """
+    global _CACHE_DIRTY
+    texts = list(texts)
+    if embedder.mode != "st":
+        return embedder.encode(texts)
+    import numpy as np
+    missing = list(dict.fromkeys(t for t in texts if t not in _VEC_CACHE))
+    if missing:
+        vecs = embedder.encode(missing)
+        _CACHE_DIRTY = True
+        for t, v in zip(missing, np.asarray(vecs)):
+            _VEC_CACHE[t] = v
+    return np.vstack([_VEC_CACHE[t] for t in texts])
 
 
 def load_entities():
@@ -17,7 +84,7 @@ def load_entities():
     occ = [r for r in K.read_all(C.OCCUPATIONS_CSV)
            if r.get("occupation_type") != "isco_group"]
     skl = [r for r in K.read_all(C.SKILLS_CSV)
-           if r.get("hard_soft_provisional") != "group"]
+           if r.get("esco_skill_type") not in ("skill_type", "skill_domain")]
     return occ, skl
 
 
@@ -34,16 +101,17 @@ class Embedder:
     def __init__(self):
         self.mode = None
         self.model = None
-        candidates = []
+        self.model_id = None
+        # Use all CPU cores (torch is CPU-only here); helps the larger bge-m3.
         try:
-            import einops  # noqa: F401  (nomic-embed-v2-moe requires it)
-            candidates.append(C.EMBED_MODEL_PRIMARY)
+            import os as _os
+            import torch
+            torch.set_num_threads(_os.cpu_count() or 1)
         except Exception:
             pass
-        candidates.append(C.EMBED_MODEL_FALLBACK)
         try:
             from sentence_transformers import SentenceTransformer
-            for mid in candidates:
+            for mid in (C.EMBED_MODEL_PRIMARY, C.EMBED_MODEL_FALLBACK):
                 try:
                     self.model = SentenceTransformer(mid, trust_remote_code=True,
                                                      token=C.HF_TOKEN or None)
@@ -54,12 +122,13 @@ class Embedder:
         except Exception:
             pass
         if self.mode is None:
-            self.mode = "tfidf"
+            self.mode, self.model_id = "tfidf", "tfidf"
+        print(f"[EMBED] model = {self.model_id} (mode={self.mode})")
 
     def encode(self, texts):
         if self.mode == "st":
             return self.model.encode(list(texts), normalize_embeddings=True,
-                                     show_progress_bar=False)
+                                     batch_size=C.EMBED_BATCH_SIZE, show_progress_bar=False)
         from sklearn.feature_extraction.text import TfidfVectorizer
         vec = TfidfVectorizer(analyzer="char_wb", ngram_range=(3, 5), min_df=1)
         return vec.fit_transform([K.normalize_label(t) for t in texts])
@@ -80,7 +149,7 @@ def candidate_pairs(entities, embedder, topk=None, threshold=None):
     import numpy as np
 
     texts = [entity_text(r) for r in entities]
-    emb = embedder.encode(texts)
+    emb = encode_cached(embedder, texts)
 
     # group row indices by source
     by_source = {}

@@ -17,6 +17,20 @@ OCC_FR = os.path.join(C.ESCO_FR_DIR, "occupations_fr.csv")
 SKILLS_EN = os.path.join(C.ESCO_EN_DIR, "skills_en.csv")
 SKILLS_FR = os.path.join(C.ESCO_FR_DIR, "skills_fr.csv")
 REL_EN = os.path.join(C.ESCO_EN_DIR, "occupationSkillRelations_en.csv")
+DIGITAL = os.path.join(C.ESCO_EN_DIR, "digitalSkillsCollection_en.csv")
+DIGCOMP = os.path.join(C.ESCO_EN_DIR, "digCompSkillsCollection_en.csv")
+
+
+def _collection_rows(path):
+    """conceptUri -> row for an ESCO skill collection (digital / digComp)."""
+    out = {}
+    if os.path.isfile(path):
+        df = K.read_csv_smart(path)
+        for _, r in df.iterrows():
+            uri = (r.get("conceptUri") or "").strip()
+            if uri:
+                out[uri] = r
+    return out
 
 
 def _fr_labels(path):
@@ -83,8 +97,19 @@ def run():
     rel_scope = rel_df[rel_df["occupationUri"].isin(occ_uris)]
     needed_skill_uris = set(rel_scope["skillUri"])
 
-    skl_index = {r["conceptUri"].strip(): r for _, r in skills_df.iterrows()
-                 if r.get("conceptUri", "").strip() in needed_skill_uris}
+    # Skill set = skills linked to in-scope occupations UNION the full ESCO digital /
+    # digital-competence collections (ESCO's own IT-skill vocabulary), so IT skills are
+    # not silently dropped just because no in-scope occupation happens to reference them.
+    collection = {**_collection_rows(DIGITAL), **_collection_rows(DIGCOMP)}
+    all_skill_uris = needed_skill_uris | set(collection)
+
+    master = {r["conceptUri"].strip(): r for _, r in skills_df.iterrows()}
+    skl_index = {}
+    for uri in all_skill_uris:
+        if uri in master:
+            skl_index[uri] = master[uri]
+        elif uri in collection:
+            skl_index[uri] = collection[uri]  # same field names (preferredLabel, altLabels, ...)
 
     for _, r in rel_scope.iterrows():
         occ_eid = K.mint_id("OCC_", C.SRC_ESCO, K.uri_tail(r["occupationUri"]))

@@ -3,5 +3,4 @@ scikit-learn
 sentence-transformers
 transformers
 torch
-einops
 ipywidgets

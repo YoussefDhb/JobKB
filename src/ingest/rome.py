@@ -1,8 +1,12 @@
-"""Ingest ROME (French only), IT domain M18 metiers + appellations + competences.
+"""Ingest ROME (French only): IT metiers + appellations + competences + definitions.
 
-ROME métiers have no English label; they are kept French-native (``fr_only``) and
-acquire an English label later, through validated alignment, never via
-translation. Competences come from bloc 5 of the liens table, routed by rubrique:
+Scope is domain M18 plus a few cross-branch IT/data metiers ROME files elsewhere
+(data scientist/analyst, chief data/digital officer), minus a few non-IT M18 metiers
+(meteorology/cartography/geomatics) — see ``config.is_rome_it``. ROME métiers have no
+English label; they are kept French-native (``fr_only``) and acquire an English label
+later through validated alignment, never via translation. Their French ``définition``
+(from ``unix_texte``, bloc 3) is ingested as ``description_fr`` so the NLI verifier can
+align them cross-lingually. Competences come from bloc 5, routed by rubrique:
 1 = Savoir-faire (hard), 2 = Savoir-etre (soft), 3 = Savoirs (knowledge/hard).
 """
 
@@ -17,6 +21,7 @@ APPELLATION = os.path.join(C.ROME_FR_DIR, "unix_referentiel_appellation_v461_utf
 COMPETENCE = os.path.join(C.ROME_FR_DIR, "unix_referentiel_competence_v461_utf8.csv")
 SAVOIR = os.path.join(C.ROME_FR_DIR, "unix_referentiel_savoir_v461_utf8.csv")
 LIENS = os.path.join(C.ROME_FR_DIR, "unix_liens_rome_referentiels_v461_utf8.csv")
+TEXTE = os.path.join(C.ROME_FR_DIR, "unix_texte_v461_utf8.csv")
 
 # code_rubrique within bloc 5 -> (referential, hard/soft, method)
 RUBRIQUE = {
@@ -26,8 +31,21 @@ RUBRIQUE = {
 }
 
 
-def _in_m18(code_rome: str) -> bool:
-    return (code_rome or "").strip().startswith(C.ROME_DOMAIN_IN_SCOPE)
+def _definitions():
+    """code_rome -> definition text (unix_texte, bloc 3, ordered by position_phrase)."""
+    out = {}
+    if not os.path.isfile(TEXTE):
+        return out
+    df = K.read_csv_smart(TEXTE)
+    df = df[df["code_compo_bloc"].str.strip() == "3"]
+    for code, grp in df.groupby("code_rome"):
+        try:
+            grp = grp.sort_values("position_phrase", key=lambda s: s.astype(int))
+        except Exception:
+            pass
+        text = " ".join(x.strip() for x in grp["libelle_texte"] if x.strip())
+        out[(code or "").strip()] = text.strip()
+    return out
 
 
 def run():
@@ -36,6 +54,14 @@ def run():
     comps = K.read_csv_smart(COMPETENCE)
     savoirs = K.read_csv_smart(SAVOIR)
     liens = K.read_csv_smart(LIENS)
+    definitions = _definitions()
+
+    # In-scope ROME codes (IT), computed once from the metiers (needs the label for the
+    # non-IT keyword exclusion), then reused for appellations / competences.
+    in_scope = {(r.get("code_rome") or "").strip()
+                for _, r in metiers.iterrows()
+                if C.is_rome_it((r.get("code_rome") or "").strip(),
+                                r.get("libelle_rome", ""))}
 
     comp_lbl = {r["code_ogr"].strip(): (r.get("libelle_competence", "").strip(),
                                         r.get("cat_comp", "").strip())
@@ -47,7 +73,7 @@ def run():
     syn = {}
     for _, r in appels.iterrows():
         code = (r.get("code_rome") or "").strip()
-        if _in_m18(code):
+        if code in in_scope:
             lbl = (r.get("libelle_appellation_long") or "").strip()
             if lbl:
                 syn.setdefault(code, []).append(lbl)
@@ -59,7 +85,7 @@ def run():
     seen_codes = set()
     for _, r in metiers.iterrows():
         code = (r.get("code_rome") or "").strip()
-        if not _in_m18(code) or code in seen_codes:
+        if code not in in_scope or code in seen_codes:
             continue
         seen_codes.add(code)
         eid = K.mint_id("OCC_", C.SRC_ROME, code)
@@ -76,7 +102,7 @@ def run():
             "isco_code": "", "source_code": code,
             "pref_label_en": "", "pref_label_fr": pref_fr,
             "alt_labels_en": "", "alt_labels_fr": " | ".join(alts_fr),
-            "description_en": "", "description_fr": "",
+            "description_en": "", "description_fr": definitions.get(code, ""),
             "occupation_type": "rome_metier", "label_language_status": "fr_only",
         })
         label_rows.extend(K.make_label_rows(
@@ -85,7 +111,7 @@ def run():
 
     # --- Competences (bloc 5, routed by rubrique) ---
     bloc5 = liens[(liens["code_compo_bloc"].str.strip() == "5")
-                  & (liens["code_rome"].map(_in_m18))]
+                  & (liens["code_rome"].isin(in_scope))]
     for _, r in bloc5.iterrows():
         rub = (r.get("code_rubrique") or "").strip()
         if rub not in RUBRIQUE:

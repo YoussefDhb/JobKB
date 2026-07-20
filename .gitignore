@@ -22,5 +22,8 @@ Thumbs.db
 # --- Heavy raw source data: CSVs under resources/ (kept out of the repo) ---
 resources/**/*.csv
 
+# --- Embedding cache (regenerated; large binary) ---
+kb/.emb_cache_*.pkl
+
 # --- Docs (LaTeX report + build artifacts) ---
 docs/

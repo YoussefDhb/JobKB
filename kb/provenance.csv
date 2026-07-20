@@ -1,9 +1,10 @@
 entity_id,source,source_version,retrieved_at,retrieval_method,notes
-ISCO,ISCO,ISCO-08,2026-07-19T12:49:50+00:00,official_en_csv,"21 groups, 19 edges (IT branches 25/35)"
-ESCO,ESCO,ESCO v1.2 (en),2026-07-19T12:49:54+00:00,official_en_csv,"97 occ, 1158 skills, 5959 relations"
-ONET,ONET,O*NET 28.x,2026-07-19T12:50:12+00:00,official_en_csv,"31 occ, 1469 skills, 6619 relations"
-NOC,NOC,NOC 2021 v1.0,2026-07-19T12:50:20+00:00,official_en_fr_csv,15 IT unit-group occupations (bilingual)
-ROME,ROME,ROME v461,2026-07-19T12:50:26+00:00,official_fr_csv,"96 M18 metiers, 2162 skills, 5296 relations"
-ESCO_SKILLS,ESCO_SKILLS,ESCO v1.2 (en),2026-07-19T12:50:28+00:00,derived,"95 soft, 209 groups, 1767 skill edges"
-ALIGNMENT,ALIGNMENT,-,2026-07-19T14:08:04+00:00,embed:st+nli:on,"26643 alignments, 58 grafts"
-MERGE,MERGE,-,2026-07-19T14:08:05+00:00,connected_components(exactMatch),"232 unified occ (6 merged), 4818 unified skills (63 merged)"
+ISCO,ISCO,ISCO-08,2026-07-20T08:31:55+00:00,official_en_csv,"23 groups, 20 edges (IT branches 25/35/133)"
+ESCO,ESCO,ESCO v1.2 (en),2026-07-20T08:32:00+00:00,official_en_csv,"110 occ, 1828 skills, 6613 relations"
+ONET,ONET,O*NET 28.x,2026-07-20T08:32:19+00:00,official_en_csv,"32 occ, 1506 skills, 6831 relations"
+NOC,NOC,NOC 2021 v1.0,2026-07-20T08:32:30+00:00,official_en_fr_csv,15 IT unit-group occupations (bilingual)
+ROME,ROME,ROME v461,2026-07-20T08:32:37+00:00,official_fr_csv,"93 M18 metiers, 2052 skills, 5146 relations"
+SKILL_ONTO,SKILL_ONTO,-,2026-07-20T08:32:38+00:00,neutral_skill_ontology,"5474 skills classified, 131 soft, 13 sub-domains, 5487 edges"
+ALIGNMENT,ALIGNMENT,-,2026-07-20T10:12:58+00:00,embed:st+nli:on,"46843 alignments, 106 merge-flagged"
+ATTACH,ATTACH,-,2026-07-20T10:57:11+00:00,embed:BAAI/bge-m3+nli:MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,"140 attached, top-3 NLI re-ranked (54 NLI overrode embedding top-1; 23 low-confidence: sim<0.6)"
+MERGE,MERGE,-,2026-07-20T10:57:12+00:00,connected_components(exactMatch),"233 unified occ (13 merged), 5405 unified skills (64 merged)"

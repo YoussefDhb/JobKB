@@ -62,15 +62,22 @@ class Verifier:
         except Exception:
             self.nli_ok = False
 
-    def entail(self, premise, hypothesis):
-        if not self.nli_ok or not premise or not hypothesis:
-            return None
+    def entail_batch(self, texts):
+        """Batched entailment. `texts` is a list of (premise, hypothesis); returns a list
+        of entailment probabilities (None on failure). Batching is far faster on CPU than
+        thousands of single calls."""
+        if not self.nli_ok or not texts:
+            return [None] * len(texts)
         try:
-            out = self._pipe({"text": premise[:600], "text_pair": hypothesis[:600]})
-            scores = {d["label"].lower(): d["score"] for d in out}
-            return scores.get("entailment")
+            inputs = [{"text": p[:600], "text_pair": h[:600]} for p, h in texts]
+            outs = self._pipe(inputs, batch_size=C.NLI_BATCH_SIZE)
+            res = []
+            for o in outs:
+                d = {x["label"].lower(): x["score"] for x in o}
+                res.append(d.get("entailment"))
+            return res
         except Exception:
-            return None
+            return [None] * len(texts)
 
 
 def _desc(row):
@@ -82,25 +89,48 @@ def _label(row):
 
 
 def verify_pairs(pairs, verifier, use_nli):
+    # Pass 1: cheap signals + collect the NLI-eligible pairs (both directions) to batch.
+    base = []
+    nli_texts, nli_map = [], []
+    for i, (ra, rb, sim) in enumerate(pairs):
+        base.append({"ra": ra, "rb": rb, "sim": sim,
+                     "pref": bool(_pref_keys(ra) & _pref_keys(rb)),
+                     "alt": bool(_label_keys(ra) & _label_keys(rb)), "nli_m": None})
+        # NLI-verify every promising cross-source pair (mutual entailment of the two
+        # definitions), both to gate semantic merges and to ground the SKOS relation
+        # (closeMatch vs relatedMatch) on entailment rather than embedding alone.
+        if use_nli and verifier.nli_ok and sim >= C.NLI_MIN_SIM:
+            da, db = _desc(ra), _desc(rb)
+            if da and db:
+                nli_map.append((i, "ab"))
+                nli_texts.append((da, db))
+                nli_map.append((i, "ba"))
+                nli_texts.append((db, da))
+
+    # Pass 2: one batched NLI inference for all eligible pairs.
+    scores = verifier.entail_batch(nli_texts) if nli_texts else []
+    partial = {}
+    for (i, direction), s in zip(nli_map, scores):
+        partial.setdefault(i, {})[direction] = s
+    for i, d in partial.items():
+        ea, eb = d.get("ab"), d.get("ba")
+        if ea is not None and eb is not None:
+            base[i]["nli_m"] = min(ea, eb)
+
+    # Pass 3: assemble alignment rows.
     rows = []
-    for ra, rb, sim in pairs:
-        pref_match = bool(_pref_keys(ra) & _pref_keys(rb))
-        alt_match = bool(_label_keys(ra) & _label_keys(rb))
+    for b in base:
+        ra, rb, sim = b["ra"], b["rb"], b["sim"]
+        pref_match, alt_match, nli_m = b["pref"], b["alt"], b["nli_m"]
         conf = float(sim)
         method = f"embed:{sim:.2f}"
-
-        if use_nli and verifier.nli_ok:
-            ea = verifier.entail(_desc(ra), _desc(rb))
-            eb = verifier.entail(_desc(rb), _desc(ra))
-            if ea is not None and eb is not None:
-                m = min(ea, eb)
-                if m >= C.NLI_ENTAIL_MIN:
-                    conf = max(conf, 0.60 + 0.30 * m)  # boost, capped ~0.90
-                    method += f"+nli:{m:.2f}"
+        if nli_m is not None and nli_m >= C.NLI_ENTAIL_MIN:
+            conf = max(conf, 0.60 + 0.30 * nli_m)  # boost, capped ~0.90
+            method += f"+nli:{nli_m:.2f}"
 
         if pref_match:
             conf = max(conf, 0.95)
-            relation = "skos:exactMatch"          # this is what the unified merge consumes
+            relation = "skos:exactMatch"
             method = "pref_match+" + method
         elif alt_match:
             conf = max(conf, 0.85)
@@ -111,11 +141,31 @@ def verify_pairs(pairs, verifier, use_nli):
         else:
             relation = "skos:relatedMatch"
 
+        # Source-neutral MERGE decision (what the unified merge consumes). "label" =
+        # identical preferred label (always merges). "semantic" = strong embedding, and for
+        # OCCUPATIONS (use_nli) additionally **NLI-verified**: when both members carry a
+        # definition, mutual entailment must reach NLI_ENTAIL_MIN — so no occupation is
+        # de-duplicated on embedding similarity alone (the no-human-review safety gate).
+        # Occupation semantic merges are further constrained to the same ISCO group in
+        # merge.py. Alt-label overlap alone never merges (avoids over-merge blobs).
+        floor = C.MERGE_EMBED_OCC if use_nli else C.MERGE_EMBED_SKILL
+        if pref_match:
+            do_merge = "label"
+        elif sim >= floor:
+            nli_gate = use_nli and verifier.nli_ok
+            if nli_gate and _desc(ra) and _desc(rb):
+                do_merge = "semantic" if (nli_m is not None and nli_m >= C.NLI_ENTAIL_MIN) else ""
+            else:
+                # skills, missing definition, or NLI unavailable -> embedding-only merge
+                do_merge = "semantic"
+        else:
+            do_merge = ""
+
         rows.append({
             "entity_id_a": ra["entity_id"], "source_a": ra["source"],
             "entity_id_b": rb["entity_id"], "source_b": rb["source"],
             "relation": relation, "confidence": round(conf, 4),
-            "method": method, "validated": "auto",
+            "method": method, "validated": "auto", "merge": do_merge,
             "notes": f"{_label(ra)} <> {_label(rb)}",
         })
     return rows
