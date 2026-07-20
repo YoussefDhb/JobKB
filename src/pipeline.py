@@ -20,7 +20,7 @@ from .sources import registry
 _OUTPUTS = [
     C.OCCUPATIONS_CSV, C.SKILLS_CSV, C.LABELS_CSV, C.OCC_SKILL_REL_CSV,
     C.HIERARCHY_CSV, C.ALIGNMENTS_CSV, C.UNIFIED_OCCUPATIONS_CSV,
-    C.UNIFIED_SKILLS_CSV, C.PROVENANCE_CSV,
+    C.UNIFIED_SKILLS_CSV, C.PROVENANCE_CSV, C.BLOCKED_ENTITIES_CSV,
 ]
 
 _TAXO = ("skill_type", "skill_domain")
@@ -57,6 +57,12 @@ def qa():
 
     attach_lowconf = [e for e in hier if e["source"] == "ATTACH_LOWCONF"]
 
+    blocked = K.read_all(C.BLOCKED_ENTITIES_CSV) if os.path.isfile(C.BLOCKED_ENTITIES_CSV) else []
+    gate_block = [b for b in blocked if b.get("decision") == "block"]
+    gate_nonit = sum(1 for b in gate_block if b.get("reason") == "non_it")
+    gate_malformed = sum(1 for b in gate_block if b.get("reason") == "malformed")
+    gate_border = sum(1 for b in blocked if b.get("decision") == "keep")
+
     print("\n=== QA ===")
     print(f"occupations: {len(occ)} ({len(real_occ)} real, "
           f"{len(occ) - len(real_occ)} ISCO groups)")
@@ -67,12 +73,15 @@ def qa():
     print(f"low-confidence ISCO attachments (review): {len(attach_lowconf)}")
     print(f"skills not placed in ontology: {len(skl_flat)}")
     print(f"non-IT ISCO group leakage: {len(it_leak)}")
+    print(f"relevance gate — blocked: {len(gate_block)} (non-IT {gate_nonit}, malformed "
+          f"{gate_malformed}); borderline-kept: {gate_border}")
     if dangling:
         print(f"  WARNING: {len(dangling)} dangling edges e.g. "
               f"{[(e['parent_entity_id'], e['child_entity_id']) for e in dangling[:3]]}")
     return {"occupations": len(occ), "skills": len(real_skl), "edges": len(hier),
             "dangling": len(dangling), "occ_orphans": len(occ_orphans),
-            "skl_flat": len(skl_flat), "attach_lowconf": len(attach_lowconf)}
+            "skl_flat": len(skl_flat), "attach_lowconf": len(attach_lowconf),
+            "gate_blocked": len(gate_block), "gate_borderline": gate_border}
 
 
 # --------------------------------------------------------------------------------------

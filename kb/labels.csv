@@ -22452,3 +22452,1039 @@ SKL_587bf6d883a3,skill,being open minded,being open minded,alt,en,ESCO
 SKL_587bf6d883a3,skill,show acceptance of others,show acceptance of others,alt,en,ESCO
 SKL_587bf6d883a3,skill,demonstrate freedom from prejudice,demonstrate freedom from prejudice,alt,en,ESCO
 SKL_587bf6d883a3,skill,take on new ideas and experiences,take on new ideas and experiences,alt,en,ESCO
+SKL_7ad5b07c1d80,skill,Accessibility and inclusion,accessibility and inclusion,preferred,en,SFIA
+SKL_7ad5b07c1d80,skill,ACIN,acin,alt,en,SFIA
+SKL_47f6acbc1be3,skill,Animation development,animation development,preferred,en,SFIA
+SKL_47f6acbc1be3,skill,ADEV,adev,alt,en,SFIA
+SKL_ff360bf52510,skill,Analytical classification and coding,analytical classification and coding,preferred,en,SFIA
+SKL_ff360bf52510,skill,ANCC,ancc,alt,en,SFIA
+SKL_549d122be7ec,skill,Solution architecture,solution architecture,preferred,en,SFIA
+SKL_549d122be7ec,skill,ARCH,arch,alt,en,SFIA
+SKL_c2291c707762,skill,Asset management,asset management,preferred,en,SFIA
+SKL_c2291c707762,skill,ASMG,asmg,alt,en,SFIA
+SKL_a53841b5b9ac,skill,Application support,application support,preferred,en,SFIA
+SKL_a53841b5b9ac,skill,ASUP,asup,alt,en,SFIA
+SKL_be1bdd24efde,skill,Audit,audit,preferred,en,SFIA
+SKL_be1bdd24efde,skill,AUDT,audt,alt,en,SFIA
+SKL_0941bee855c3,skill,Availability management,availability management,preferred,en,SFIA
+SKL_0941bee855c3,skill,AVMT,avmt,alt,en,SFIA
+SKL_05fa2e7e0507,skill,Benefits management,benefits management,preferred,en,SFIA
+SKL_05fa2e7e0507,skill,BENM,benm,alt,en,SFIA
+SKL_87843f68619e,skill,Business intelligence,business intelligence,preferred,en,SFIA
+SKL_87843f68619e,skill,BINT,bint,alt,en,SFIA
+SKL_0e3f61c39214,skill,User acceptance testing,user acceptance testing,preferred,en,SFIA
+SKL_0e3f61c39214,skill,BPTS,bpts,alt,en,SFIA
+SKL_9bddb24890e7,skill,Budgeting and forecasting,budgeting and forecasting,preferred,en,SFIA
+SKL_9bddb24890e7,skill,BUDF,budf,alt,en,SFIA
+SKL_81e0ff8acbba,skill,Risk management,risk management,preferred,en,SFIA
+SKL_81e0ff8acbba,skill,BURM,burm,alt,en,SFIA
+SKL_6b4d325200ad,skill,Configuration management,configuration management,preferred,en,SFIA
+SKL_6b4d325200ad,skill,CFMG,cfmg,alt,en,SFIA
+SKL_d921385f13bc,skill,Change control,change control,preferred,en,SFIA
+SKL_d921385f13bc,skill,CHMG,chmg,alt,en,SFIA
+SKL_53729a6887c6,skill,Cost management,cost management,preferred,en,SFIA
+SKL_53729a6887c6,skill,COMG,comg,alt,en,SFIA
+SKL_17e94c7e936c,skill,Continuity management,continuity management,preferred,en,SFIA
+SKL_17e94c7e936c,skill,COPL,copl,alt,en,SFIA
+SKL_433dccb1dd5d,skill,Capacity management,capacity management,preferred,en,SFIA
+SKL_433dccb1dd5d,skill,CPMG,cpmg,alt,en,SFIA
+SKL_2f70b8dbfbe0,skill,Cybercrime investigation,cybercrime investigation,preferred,en,SFIA
+SKL_2f70b8dbfbe0,skill,CRIM,crim,alt,en,SFIA
+SKL_e13e7413345e,skill,Certification scheme operation,certification scheme operation,preferred,en,SFIA
+SKL_e13e7413345e,skill,CSOP,csop,alt,en,SFIA
+SKL_563823b757a7,skill,Data analytics,data analytics,preferred,en,SFIA
+SKL_563823b757a7,skill,DAAN,daan,alt,en,SFIA
+SKL_05240b4b73ca,skill,Data management,data management,preferred,en,SFIA
+SKL_05240b4b73ca,skill,DATM,datm,alt,en,SFIA
+SKL_59727ae66cf3,skill,Data science,data science,preferred,en,SFIA
+SKL_59727ae66cf3,skill,DATS,dats,alt,en,SFIA
+SKL_a2d8ba982ff0,skill,Database administration,database administration,preferred,en,SFIA
+SKL_a2d8ba982ff0,skill,DBAD,dbad,alt,en,SFIA
+SKL_5aa3f150ef89,skill,Database design,database design,preferred,en,SFIA
+SKL_5aa3f150ef89,skill,DBDS,dbds,alt,en,SFIA
+SKL_aa72fddaf13d,skill,Delivery management,delivery management,preferred,en,SFIA
+SKL_aa72fddaf13d,skill,DEMG,demg,alt,en,SFIA
+SKL_509880368e67,skill,Demand management,demand management,preferred,en,SFIA
+SKL_509880368e67,skill,DEMM,demm,alt,en,SFIA
+SKL_bb6c65e1bc14,skill,Data engineering,data engineering,preferred,en,SFIA
+SKL_bb6c65e1bc14,skill,DENG,deng,alt,en,SFIA
+SKL_6f2bbee10910,skill,Deployment,deployment,preferred,en,SFIA
+SKL_6f2bbee10910,skill,DEPL,depl,alt,en,SFIA
+SKL_8dfcf5f0bf7f,skill,Systems design,systems design,preferred,en,SFIA
+SKL_8dfcf5f0bf7f,skill,DESN,desn,alt,en,SFIA
+SKL_75eaa5be5277,skill,Digital forensics,digital forensics,preferred,en,SFIA
+SKL_75eaa5be5277,skill,DGFS,dgfs,alt,en,SFIA
+SKL_3760aa2a100a,skill,Data modelling and design,data modelling and design,preferred,en,SFIA
+SKL_3760aa2a100a,skill,DTAN,dtan,alt,en,SFIA
+SKL_41c27949fd2e,skill,Emerging technology monitoring,emerging technology monitoring,preferred,en,SFIA
+SKL_41c27949fd2e,skill,EMRG,emrg,alt,en,SFIA
+SKL_f4df9bce0a01,skill,Feasibility assessment,feasibility assessment,preferred,en,SFIA
+SKL_f4df9bce0a01,skill,FEAS,feas,alt,en,SFIA
+SKL_1b0853710f49,skill,Governance,governance,preferred,en,SFIA
+SKL_1b0853710f49,skill,GOVN,govn,alt,en,SFIA
+SKL_eaa356d4a7f9,skill,Graphic design,graphic design,preferred,en,SFIA
+SKL_eaa356d4a7f9,skill,GRDN,grdn,alt,en,SFIA
+SKL_d2bb6571962d,skill,User experience design,user experience design,preferred,en,SFIA
+SKL_d2bb6571962d,skill,HCEV,hcev,alt,en,SFIA
+SKL_ba26362f220c,skill,High-performance computing,high-performance computing,preferred,en,SFIA
+SKL_ba26362f220c,skill,HPCC,hpcc,alt,en,SFIA
+SKL_c61574c262e0,skill,Identity and access management,identity and access management,preferred,en,SFIA
+SKL_c61574c262e0,skill,IAMT,iamt,alt,en,SFIA
+SKL_a9d56865317c,skill,Infrastructure design,infrastructure design,preferred,en,SFIA
+SKL_a9d56865317c,skill,IFDN,ifdn,alt,en,SFIA
+SKL_fdb765925910,skill,Information assurance,information assurance,preferred,en,SFIA
+SKL_fdb765925910,skill,INAS,inas,alt,en,SFIA
+SKL_5de77ee85334,skill,Content design and authoring,content design and authoring,preferred,en,SFIA
+SKL_5de77ee85334,skill,INCA,inca,alt,en,SFIA
+SKL_a70d9841725b,skill,Innovation management,innovation management,preferred,en,SFIA
+SKL_a70d9841725b,skill,INOV,inov,alt,en,SFIA
+SKL_563cfecda4f5,skill,Information management,information management,preferred,en,SFIA
+SKL_563cfecda4f5,skill,IRMG,irmg,alt,en,SFIA
+SKL_2648310d0179,skill,Information systems coordination,information systems coordination,preferred,en,SFIA
+SKL_2648310d0179,skill,ISCO,isco,alt,en,SFIA
+SKL_a0e23de1a15f,skill,Contract management,contract management,preferred,en,SFIA
+SKL_a0e23de1a15f,skill,ITCM,itcm,alt,en,SFIA
+SKL_9ad7739fb802,skill,Technology service management,technology service management,preferred,en,SFIA
+SKL_9ad7739fb802,skill,ITMG,itmg,alt,en,SFIA
+SKL_c56b1cd05711,skill,Infrastructure operations,infrastructure operations,preferred,en,SFIA
+SKL_c56b1cd05711,skill,ITOP,itop,alt,en,SFIA
+SKL_01b009086017,skill,Strategic planning,strategic planning,preferred,en,SFIA
+SKL_01b009086017,skill,ITSP,itsp,alt,en,SFIA
+SKL_34ac18523697,skill,Knowledge management,knowledge management,preferred,en,SFIA
+SKL_34ac18523697,skill,KNOW,know,alt,en,SFIA
+SKL_29007cfd7af4,skill,Measurement,measurement,preferred,en,SFIA
+SKL_29007cfd7af4,skill,MEAS,meas,alt,en,SFIA
+SKL_ef4f2e51527f,skill,Methods and tools,methods and tools,preferred,en,SFIA
+SKL_ef4f2e51527f,skill,METL,metl,alt,en,SFIA
+SKL_10824139e0d1,skill,Machine learning,machine learning,preferred,en,SFIA
+SKL_10824139e0d1,skill,MLNG,mlng,alt,en,SFIA
+SKL_68d30586a0ec,skill,Non-functional testing,non-functional testing,preferred,en,SFIA
+SKL_68d30586a0ec,skill,NFTS,nfts,alt,en,SFIA
+SKL_3407bd66caa6,skill,Network support,network support,preferred,en,SFIA
+SKL_3407bd66caa6,skill,NTAS,ntas,alt,en,SFIA
+SKL_9c1699211b96,skill,Network design,network design,preferred,en,SFIA
+SKL_9c1699211b96,skill,NTDS,ntds,alt,en,SFIA
+SKL_9b23359d1468,skill,Numerical analysis,numerical analysis,preferred,en,SFIA
+SKL_9b23359d1468,skill,NUAN,nuan,alt,en,SFIA
+SKL_3efd0b83fa25,skill,Offensive cyber operations,offensive cyber operations,preferred,en,SFIA
+SKL_3efd0b83fa25,skill,OCOP,ocop,alt,en,SFIA
+SKL_adde03876632,skill,Problem management,problem management,preferred,en,SFIA
+SKL_adde03876632,skill,PBMG,pbmg,alt,en,SFIA
+SKL_b40bb4857c84,skill,Information and data compliance,information and data compliance,preferred,en,SFIA
+SKL_b40bb4857c84,skill,PEDP,pedp,alt,en,SFIA
+SKL_1c86aa5c3d4e,skill,Penetration testing,penetration testing,preferred,en,SFIA
+SKL_1c86aa5c3d4e,skill,PENT,pent,alt,en,SFIA
+SKL_f32c92fc5847,skill,Programme management,programme management,preferred,en,SFIA
+SKL_f32c92fc5847,skill,PGMG,pgmg,alt,en,SFIA
+SKL_694c9670dfdb,skill,Portfolio management,portfolio management,preferred,en,SFIA
+SKL_694c9670dfdb,skill,POMG,pomg,alt,en,SFIA
+SKL_6065f726d95d,skill,Software configuration,software configuration,preferred,en,SFIA
+SKL_6065f726d95d,skill,PORT,port,alt,en,SFIA
+SKL_b180e72815e8,skill,Project management,project management,preferred,en,SFIA
+SKL_b180e72815e8,skill,PRMG,prmg,alt,en,SFIA
+SKL_9ab3116cc167,skill,Product management,product management,preferred,en,SFIA
+SKL_9ab3116cc167,skill,PROD,prod,alt,en,SFIA
+SKL_ac037d96b392,skill,"Portfolio, programme and project support","portfolio, programme and project support",preferred,en,SFIA
+SKL_ac037d96b392,skill,PROF,prof,alt,en,SFIA
+SKL_f565dbe8fbed,skill,Programming/software development,programming/software development,preferred,en,SFIA
+SKL_f565dbe8fbed,skill,PROG,prog,alt,en,SFIA
+SKL_94327a0585b3,skill,Process testing,process testing,preferred,en,SFIA
+SKL_94327a0585b3,skill,PRTS,prts,alt,en,SFIA
+SKL_78f3dcc0fcc6,skill,Quality assurance,quality assurance,preferred,en,SFIA
+SKL_78f3dcc0fcc6,skill,QUAS,quas,alt,en,SFIA
+SKL_73f0323562d3,skill,Quality management,quality management,preferred,en,SFIA
+SKL_73f0323562d3,skill,QUMG,qumg,alt,en,SFIA
+SKL_c16deab65db7,skill,Requirements definition and management,requirements definition and management,preferred,en,SFIA
+SKL_c16deab65db7,skill,REQM,reqm,alt,en,SFIA
+SKL_5b60d21172cc,skill,Real-time/embedded systems development,real-time/embedded systems development,preferred,en,SFIA
+SKL_5b60d21172cc,skill,RESD,resd,alt,en,SFIA
+SKL_8c9f8a08b560,skill,Radio frequency engineering,radio frequency engineering,preferred,en,SFIA
+SKL_8c9f8a08b560,skill,RFEN,rfen,alt,en,SFIA
+SKL_77808b817e10,skill,Records management,records management,preferred,en,SFIA
+SKL_77808b817e10,skill,RMGT,rmgt,alt,en,SFIA
+SKL_12525a177acf,skill,Formal research,formal research,preferred,en,SFIA
+SKL_12525a177acf,skill,RSCH,rsch,alt,en,SFIA
+SKL_c671635e0419,skill,Security operations,security operations,preferred,en,SFIA
+SKL_c671635e0419,skill,SCAD,scad,alt,en,SFIA
+SKL_a08d72ca09cb,skill,Service catalogue management,service catalogue management,preferred,en,SFIA
+SKL_a08d72ca09cb,skill,SCMG,scmg,alt,en,SFIA
+SKL_bc26ea1f9963,skill,Information security,information security,preferred,en,SFIA
+SKL_bc26ea1f9963,skill,SCTY,scty,alt,en,SFIA
+SKL_e4c9688c6662,skill,Systems integration and build,systems integration and build,preferred,en,SFIA
+SKL_e4c9688c6662,skill,SINT,sint,alt,en,SFIA
+SKL_c773eb87479d,skill,Service level management,service level management,preferred,en,SFIA
+SKL_c773eb87479d,skill,SLMO,slmo,alt,en,SFIA
+SKL_8eae280be68f,skill,Storage management,storage management,preferred,en,SFIA
+SKL_8eae280be68f,skill,STMG,stmg,alt,en,SFIA
+SKL_16bd843f4bd2,skill,Enterprise and business architecture,enterprise and business architecture,preferred,en,SFIA
+SKL_16bd843f4bd2,skill,STPL,stpl,alt,en,SFIA
+SKL_3eba2288bc55,skill,Supplier management,supplier management,preferred,en,SFIA
+SKL_3eba2288bc55,skill,SUPP,supp,alt,en,SFIA
+SKL_3c9570f8b67e,skill,Software design,software design,preferred,en,SFIA
+SKL_3c9570f8b67e,skill,SWDN,swdn,alt,en,SFIA
+SKL_37d5d9686f8d,skill,System software administration,system software administration,preferred,en,SFIA
+SKL_37d5d9686f8d,skill,SYSP,sysp,alt,en,SFIA
+SKL_0e5f0bd407c0,skill,Functional testing,functional testing,preferred,en,SFIA
+SKL_0e5f0bd407c0,skill,TEST,test,alt,en,SFIA
+SKL_4b2639e3e5b7,skill,Threat intelligence,threat intelligence,preferred,en,SFIA
+SKL_4b2639e3e5b7,skill,THIN,thin,alt,en,SFIA
+SKL_98f70f08b190,skill,User experience analysis,user experience analysis,preferred,en,SFIA
+SKL_98f70f08b190,skill,UNAN,unan,alt,en,SFIA
+SKL_41e30fa94ebd,skill,User research,user research,preferred,en,SFIA
+SKL_41e30fa94ebd,skill,URCH,urch,alt,en,SFIA
+SKL_1ca20298478c,skill,User experience evaluation,user experience evaluation,preferred,en,SFIA
+SKL_1ca20298478c,skill,USEV,usev,alt,en,SFIA
+SKL_ca9917ccf4cf,skill,Incident management,incident management,preferred,en,SFIA
+SKL_ca9917ccf4cf,skill,USUP,usup,alt,en,SFIA
+SKL_b063e351d3b3,skill,Data visualisation,data visualisation,preferred,en,SFIA
+SKL_b063e351d3b3,skill,VISL,visl,alt,en,SFIA
+SKL_00753218389c,skill,Vulnerability assessment,vulnerability assessment,preferred,en,SFIA
+SKL_00753218389c,skill,VUAS,vuas,alt,en,SFIA
+SKL_043e3ecea0ef,skill,Vulnerability research,vulnerability research,preferred,en,SFIA
+SKL_043e3ecea0ef,skill,VURE,vure,alt,en,SFIA
+SKL_236b2ef8eea7,skill,computer security,computer security,preferred,en,CSO
+SKL_a5aa9e592ab9,skill,machine learning,machine learning,preferred,en,CSO
+SKL_a5aa9e592ab9,skill,machine learning algorithms,machine learning algorithms,alt,en,CSO
+SKL_a5aa9e592ab9,skill,machine learning methods,machine learning methods,alt,en,CSO
+SKL_a5aa9e592ab9,skill,machine learning techniques,machine learning techniques,alt,en,CSO
+SKL_a5aa9e592ab9,skill,machine learnings,machine learnings,alt,en,CSO
+SKL_a5aa9e592ab9,skill,machine-learning,machine-learning,alt,en,CSO
+SKL_8e4ab79e45e6,skill,artificial intelligence,artificial intelligence,preferred,en,CSO
+SKL_365724ac541b,skill,data mining,data mining,preferred,en,CSO
+SKL_38958b0c8a87,skill,information retrieval,information retrieval,preferred,en,CSO
+SKL_7b14dcce4d35,skill,computer networks,computer networks,preferred,en,CSO
+SKL_7b14dcce4d35,skill,computer communication networks,computer communication networks,alt,en,CSO
+SKL_7b14dcce4d35,skill,computer network,computer network,alt,en,CSO
+SKL_58c7830565aa,skill,human computer interaction,human computer interaction,preferred,en,CSO
+SKL_58c7830565aa,skill,human-computer interaction,human-computer interaction,alt,en,CSO
+SKL_79c5bd04e0e1,skill,operating systems,operating systems,preferred,en,CSO
+SKL_79c5bd04e0e1,skill,computer operating systems,computer operating systems,alt,en,CSO
+SKL_79c5bd04e0e1,skill,operating system,operating system,alt,en,CSO
+SKL_e2cebe10175b,skill,software engineering,software engineering,preferred,en,CSO
+SKL_cec36711af26,skill,computer programming,computer programming,preferred,en,CSO
+SKL_b052dd803e19,skill,internet,internet,preferred,en,CSO
+SKL_d5fcac07f30f,skill,software,software,preferred,en,CSO
+SKL_fc7c6db8b2b6,skill,access control,access control,preferred,en,CSO
+SKL_8a02d56285c6,skill,cryptology,cryptology,preferred,en,CSO
+SKL_8813d38bde4b,skill,cybersecurity,cybersecurity,preferred,en,CSO
+SKL_8813d38bde4b,skill,cyber security,cyber security,alt,en,CSO
+SKL_8813d38bde4b,skill,cybersecurity systems,cybersecurity systems,alt,en,CSO
+SKL_8813d38bde4b,skill,system security,system security,alt,en,CSO
+SKL_e226709eec51,skill,privacy,privacy,preferred,en,CSO
+SKL_84a6306f0b67,skill,security of data,security of data,preferred,en,CSO
+SKL_fd89a06cee45,skill,active learning,active learning,preferred,en,CSO
+SKL_dda2be88c866,skill,adaptive learning,adaptive learning,preferred,en,CSO
+SKL_ceb9e329a67d,skill,adversarial machine learning,adversarial machine learning,preferred,en,CSO
+SKL_ceb9e329a67d,skill,adversarial learning,adversarial learning,alt,en,CSO
+SKL_255aa10d74f4,skill,neural networks,neural networks,preferred,en,CSO
+SKL_255aa10d74f4,skill,artificial neural network,artificial neural network,alt,en,CSO
+SKL_255aa10d74f4,skill,artificial neural networks,artificial neural networks,alt,en,CSO
+SKL_255aa10d74f4,skill,back propagation neural networks,back propagation neural networks,alt,en,CSO
+SKL_255aa10d74f4,skill,back-propagation neural network,back-propagation neural network,alt,en,CSO
+SKL_255aa10d74f4,skill,back-propagation neural networks,back-propagation neural networks,alt,en,CSO
+SKL_255aa10d74f4,skill,neural network,neural network,alt,en,CSO
+SKL_255aa10d74f4,skill,neural network model,neural network model,alt,en,CSO
+SKL_e14d94a2c019,skill,association rule learning,association rule learning,preferred,en,CSO
+SKL_e14d94a2c019,skill,associative learning,associative learning,alt,en,CSO
+SKL_e14d94a2c019,skill,rule-based machine learning,rule-based machine learning,alt,en,CSO
+SKL_7da4e08fdd88,skill,associative processing,associative processing,preferred,en,CSO
+SKL_832db8ddb73b,skill,classifiers,classifiers,preferred,en,CSO
+SKL_832db8ddb73b,skill,classifier,classifier,alt,en,CSO
+SKL_ac2501e1b0ad,skill,cluster analysis,cluster analysis,preferred,en,CSO
+SKL_26b327c7bcec,skill,contrastive learning,contrastive learning,preferred,en,CSO
+SKL_26b327c7bcec,skill,contrastive representation learning,contrastive representation learning,alt,en,CSO
+SKL_26b327c7bcec,skill,self-supervised learning,self-supervised learning,alt,en,CSO
+SKL_b8edd210571b,skill,ensemble learning,ensemble learning,preferred,en,CSO
+SKL_b8edd210571b,skill,ensemble methods,ensemble methods,alt,en,CSO
+SKL_5c534f498acb,skill,feature extraction,feature extraction,preferred,en,CSO
+SKL_c91ac9be0772,skill,representation learning,representation learning,preferred,en,CSO
+SKL_c91ac9be0772,skill,feature learning,feature learning,alt,en,CSO
+SKL_aadc8fe751db,skill,feature selection,feature selection,preferred,en,CSO
+SKL_aadc8fe751db,skill,feature selection methods,feature selection methods,alt,en,CSO
+SKL_1fb3cb1c2b84,skill,feature vectors,feature vectors,preferred,en,CSO
+SKL_1fb3cb1c2b84,skill,feature vector,feature vector,alt,en,CSO
+SKL_a165ca163a1d,skill,federated learning,federated learning,preferred,en,CSO
+SKL_a5b6377b10ba,skill,few-shot learning,few-shot learning,preferred,en,CSO
+SKL_adfa3a8b7c41,skill,fine-tuning learning,fine-tuning learning,preferred,en,CSO
+SKL_f58460d9617d,skill,forecasting models,forecasting models,preferred,en,CSO
+SKL_f58460d9617d,skill,forecasting accuracy,forecasting accuracy,alt,en,CSO
+SKL_f58460d9617d,skill,forecasting methods,forecasting methods,alt,en,CSO
+SKL_70b20b198340,skill,gaussian mixture of experts,gaussian mixture of experts,preferred,en,CSO
+SKL_055d733aea56,skill,inductive logic programming (ilp),inductive logic programming (ilp),preferred,en,CSO
+SKL_055d733aea56,skill,ilp,ilp,alt,en,CSO
+SKL_055d733aea56,skill,inductive logic programming,inductive logic programming,alt,en,CSO
+SKL_975dea6992c6,skill,knowledge distillation,knowledge distillation,preferred,en,CSO
+SKL_8eac5ef6539d,skill,link prediction,link prediction,preferred,en,CSO
+SKL_c6b39390a030,skill,meta-learning,meta-learning,preferred,en,CSO
+SKL_f1608b74ad0c,skill,multi-objective learning,multi-objective learning,preferred,en,CSO
+SKL_02f59c27106f,skill,multitask learning,multitask learning,preferred,en,CSO
+SKL_d778721a368d,skill,one-shot learning,one-shot learning,preferred,en,CSO
+SKL_5bc04a0cbccf,skill,out-of-distribution detection,out-of-distribution detection,preferred,en,CSO
+SKL_5bc04a0cbccf,skill,ood detection,ood detection,alt,en,CSO
+SKL_768c120656a6,skill,out-of-distribution generalization,out-of-distribution generalization,preferred,en,CSO
+SKL_768c120656a6,skill,ood generalization,ood generalization,alt,en,CSO
+SKL_4b2fa2119440,skill,parameter learning,parameter learning,preferred,en,CSO
+SKL_c770ba1952d6,skill,pattern recognition,pattern recognition,preferred,en,CSO
+SKL_bbbe68f42ba5,skill,positive-unlabeled learning,positive-unlabeled learning,preferred,en,CSO
+SKL_9dd093bcc40d,skill,quantum machine learning,quantum machine learning,preferred,en,CSO
+SKL_27f62bba42df,skill,reinforcement learning,reinforcement learning,preferred,en,CSO
+SKL_27f62bba42df,skill,reinforcement learning (rl),reinforcement learning (rl),alt,en,CSO
+SKL_4e67eb4664e9,skill,semi-supervised learning,semi-supervised learning,preferred,en,CSO
+SKL_a8f20935087a,skill,statistical learning,statistical learning,preferred,en,CSO
+SKL_093ee3399ce5,skill,supervised machine learning,supervised machine learning,preferred,en,CSO
+SKL_093ee3399ce5,skill,supervised learning,supervised learning,alt,en,CSO
+SKL_75167755159e,skill,synthetic data,synthetic data,preferred,en,CSO
+SKL_cef7f88f1b3a,skill,test samples,test samples,preferred,en,CSO
+SKL_cef7f88f1b3a,skill,test sample,test sample,alt,en,CSO
+SKL_cef7f88f1b3a,skill,test set,test set,alt,en,CSO
+SKL_6f9b667c430d,skill,topic model,topic model,preferred,en,CSO
+SKL_50bdf9ee81e5,skill,training sample,training sample,preferred,en,CSO
+SKL_50bdf9ee81e5,skill,training samples,training samples,alt,en,CSO
+SKL_50bdf9ee81e5,skill,training set,training set,alt,en,CSO
+SKL_9d3bed8d10c5,skill,transfer learning,transfer learning,preferred,en,CSO
+SKL_bbf21b77a027,skill,unsupervised learning,unsupervised learning,preferred,en,CSO
+SKL_daeac06bd968,skill,zero-shot learning,zero-shot learning,preferred,en,CSO
+SKL_e493afc4ceeb,skill,agentic artificial intelligence,agentic artificial intelligence,preferred,en,CSO
+SKL_e493afc4ceeb,skill,agentic ai,agentic ai,alt,en,CSO
+SKL_d4c634297211,skill,ai applications,ai applications,preferred,en,CSO
+SKL_6bb7a16a1cee,skill,planning algorithms,planning algorithms,preferred,en,CSO
+SKL_6bb7a16a1cee,skill,ai planning,ai planning,alt,en,CSO
+SKL_c01793d4f10f,skill,ambient intelligence,ambient intelligence,preferred,en,CSO
+SKL_c01793d4f10f,skill,ambient intelligent,ambient intelligent,alt,en,CSO
+SKL_8b9f8af97ac6,skill,bayesian methods,bayesian methods,preferred,en,CSO
+SKL_8b9f8af97ac6,skill,bayesian,bayesian,alt,en,CSO
+SKL_8b9f8af97ac6,skill,bayesian approach,bayesian approach,alt,en,CSO
+SKL_8b9f8af97ac6,skill,bayesian approaches,bayesian approaches,alt,en,CSO
+SKL_8b9f8af97ac6,skill,bayesian framework,bayesian framework,alt,en,CSO
+SKL_8b9f8af97ac6,skill,bayesian frameworks,bayesian frameworks,alt,en,CSO
+SKL_8b9f8af97ac6,skill,bayesian method,bayesian method,alt,en,CSO
+SKL_8b9f8af97ac6,skill,bayesian model,bayesian model,alt,en,CSO
+SKL_8b9f8af97ac6,skill,bayesian models,bayesian models,alt,en,CSO
+SKL_8b9f8af97ac6,skill,bayesian network,bayesian network,alt,en,CSO
+SKL_8b9f8af97ac6,skill,bayesian networks,bayesian networks,alt,en,CSO
+SKL_40dc768147c7,skill,cellular automata,cellular automata,preferred,en,CSO
+SKL_40dc768147c7,skill,cellular automata (ca),cellular automata (ca),alt,en,CSO
+SKL_c81e56c216cb,skill,cognitive systems,cognitive systems,preferred,en,CSO
+SKL_501176bcf64f,skill,common-sense,common-sense,preferred,en,CSO
+SKL_501176bcf64f,skill,common sense,common sense,alt,en,CSO
+SKL_501176bcf64f,skill,common-sense computing,common-sense computing,alt,en,CSO
+SKL_501176bcf64f,skill,common-sense reasoning,common-sense reasoning,alt,en,CSO
+SKL_501176bcf64f,skill,commonsense,commonsense,alt,en,CSO
+SKL_501176bcf64f,skill,commonsense computing,commonsense computing,alt,en,CSO
+SKL_501176bcf64f,skill,commonsense reasoning,commonsense reasoning,alt,en,CSO
+SKL_8c528a4444d4,skill,constraint satisfaction problems (csp),constraint satisfaction problems (csp),preferred,en,CSO
+SKL_6b521b221cc5,skill,decision support systems,decision support systems,preferred,en,CSO
+SKL_6b521b221cc5,skill,decision support system,decision support system,alt,en,CSO
+SKL_6b521b221cc5,skill,decision support system (dss),decision support system (dss),alt,en,CSO
+SKL_367ad8b8265f,skill,decision theory,decision theory,preferred,en,CSO
+SKL_25992270398f,skill,expert systems,expert systems,preferred,en,CSO
+SKL_25992270398f,skill,expert system,expert system,alt,en,CSO
+SKL_13745321bde7,skill,explainable ai,explainable ai,preferred,en,CSO
+SKL_4def01170429,skill,fairness in ai,fairness in ai,preferred,en,CSO
+SKL_7765f0661c47,skill,formal logic,formal logic,preferred,en,CSO
+SKL_efbe450343b2,skill,game theory,game theory,preferred,en,CSO
+SKL_a801541080a8,skill,generative ai,generative ai,preferred,en,CSO
+SKL_a801541080a8,skill,genai,genai,alt,en,CSO
+SKL_a801541080a8,skill,generative artificial intelligence,generative artificial intelligence,alt,en,CSO
+SKL_0916b73036c9,skill,genetic algorithms,genetic algorithms,preferred,en,CSO
+SKL_0916b73036c9,skill,genetic algorithm,genetic algorithm,alt,en,CSO
+SKL_0916b73036c9,skill,genetic algorithm (ga),genetic algorithm (ga),alt,en,CSO
+SKL_652a994ab512,skill,heuristic programming,heuristic programming,preferred,en,CSO
+SKL_a7417ead6943,skill,human-ai collaboration,human-ai collaboration,preferred,en,CSO
+SKL_103774d07298,skill,inference engines,inference engines,preferred,en,CSO
+SKL_4639536ce387,skill,intelligence analysis,intelligence analysis,preferred,en,CSO
+SKL_e81193c16728,skill,intelligent control,intelligent control,preferred,en,CSO
+SKL_6e98db78a277,skill,intelligent robots,intelligent robots,preferred,en,CSO
+SKL_3eeec80f8aa9,skill,intelligent systems,intelligent systems,preferred,en,CSO
+SKL_f42f6e5b9018,skill,intelligent tutoring system,intelligent tutoring system,preferred,en,CSO
+SKL_f42f6e5b9018,skill,intelligent tutoring,intelligent tutoring,alt,en,CSO
+SKL_f42f6e5b9018,skill,intelligent tutoring systems,intelligent tutoring systems,alt,en,CSO
+SKL_25ec50a379d2,skill,knowledge based systems,knowledge based systems,preferred,en,CSO
+SKL_25ec50a379d2,skill,knowledge-based systems,knowledge-based systems,alt,en,CSO
+SKL_2a02719bf68b,skill,machine perception,machine perception,preferred,en,CSO
+SKL_1df3a460f9ab,skill,multiagent system,multiagent system,preferred,en,CSO
+SKL_1df3a460f9ab,skill,multi agent system,multi agent system,alt,en,CSO
+SKL_1df3a460f9ab,skill,multi agent system (mas),multi agent system (mas),alt,en,CSO
+SKL_1df3a460f9ab,skill,multi agent systems,multi agent systems,alt,en,CSO
+SKL_1df3a460f9ab,skill,multi-agent system,multi-agent system,alt,en,CSO
+SKL_1df3a460f9ab,skill,multi-agent systems,multi-agent systems,alt,en,CSO
+SKL_1df3a460f9ab,skill,multiagent systems,multiagent systems,alt,en,CSO
+SKL_617ec152af69,skill,multimodal ai,multimodal ai,preferred,en,CSO
+SKL_a0cc0c6e48e6,skill,natural language processing,natural language processing,preferred,en,CSO
+SKL_a0cc0c6e48e6,skill,natural language processing systems,natural language processing systems,alt,en,CSO
+SKL_a0cc0c6e48e6,skill,nlp,nlp,alt,en,CSO
+SKL_13539b030cda,skill,neurosymbolic ai,neurosymbolic ai,preferred,en,CSO
+SKL_794d3ae3c159,skill,soft computing,soft computing,preferred,en,CSO
+SKL_b1b1b829ef6b,skill,swarm intelligence,swarm intelligence,preferred,en,CSO
+SKL_fa89fcacda5e,skill,system theory,system theory,preferred,en,CSO
+SKL_d19c0cfcf281,skill,association rules,association rules,preferred,en,CSO
+SKL_d19c0cfcf281,skill,association rule,association rule,alt,en,CSO
+SKL_d19c0cfcf281,skill,association rule mining,association rule mining,alt,en,CSO
+SKL_d19c0cfcf281,skill,association rules mining,association rules mining,alt,en,CSO
+SKL_d19c0cfcf281,skill,mining association rules,mining association rules,alt,en,CSO
+SKL_aef51c915e9f,skill,classification,classification,preferred,en,CSO
+SKL_6dfdb8286bc2,skill,clustering algorithms,clustering algorithms,preferred,en,CSO
+SKL_6dfdb8286bc2,skill,clustering,clustering,alt,en,CSO
+SKL_6dfdb8286bc2,skill,clustering algorithm,clustering algorithm,alt,en,CSO
+SKL_20a21354996d,skill,concept lattices,concept lattices,preferred,en,CSO
+SKL_20a21354996d,skill,concept lattice,concept lattice,alt,en,CSO
+SKL_61a176d0eb5f,skill,continuous data,continuous data,preferred,en,CSO
+SKL_2758d7b054ed,skill,data analytics,data analytics,preferred,en,CSO
+SKL_5bf93847c7df,skill,data stream,data stream,preferred,en,CSO
+SKL_5bf93847c7df,skill,data streams,data streams,alt,en,CSO
+SKL_3234b49194eb,skill,data warehouses,data warehouses,preferred,en,CSO
+SKL_3234b49194eb,skill,data warehouse,data warehouse,alt,en,CSO
+SKL_1d70da7a6e0c,skill,decision trees,decision trees,preferred,en,CSO
+SKL_1d70da7a6e0c,skill,decision tree,decision tree,alt,en,CSO
+SKL_d11a3d9993de,skill,information extraction,information extraction,preferred,en,CSO
+SKL_e8bc3c90550e,skill,knowledge discovery,knowledge discovery,preferred,en,CSO
+SKL_54ce820c3e38,skill,link analysis,link analysis,preferred,en,CSO
+SKL_e42fb88bb1ce,skill,local patterns,local patterns,preferred,en,CSO
+SKL_0ea4e3fe8005,skill,mining process,mining process,preferred,en,CSO
+SKL_743a6afc1f44,skill,privacy preserving,privacy preserving,preferred,en,CSO
+SKL_743a6afc1f44,skill,privacy preservation,privacy preservation,alt,en,CSO
+SKL_743a6afc1f44,skill,privacy-preserving,privacy-preserving,alt,en,CSO
+SKL_2bb92322e4c3,skill,process mining,process mining,preferred,en,CSO
+SKL_4f7d41e33ab8,skill,relational learning,relational learning,preferred,en,CSO
+SKL_476142f0bdf3,skill,rule induction,rule induction,preferred,en,CSO
+SKL_e9259ad3c79f,skill,sentiment analysis,sentiment analysis,preferred,en,CSO
+SKL_9c707a411e38,skill,spatial data mining,spatial data mining,preferred,en,CSO
+SKL_de962a492e85,skill,streaming data,streaming data,preferred,en,CSO
+SKL_793ac2825a6e,skill,text processing,text processing,preferred,en,CSO
+SKL_790ffd20018b,skill,trajectory data,trajectory data,preferred,en,CSO
+SKL_5dbdb53b6586,skill,visual data mining,visual data mining,preferred,en,CSO
+SKL_9e308dd9a657,skill,web mining,web mining,preferred,en,CSO
+SKL_9e308dd9a657,skill,web-mining,web-mining,alt,en,CSO
+SKL_d46f0de1f0e6,skill,word spotting,word spotting,preferred,en,CSO
+SKL_9d3d7c822bf8,skill,cross-language information retrieval,cross-language information retrieval,preferred,en,CSO
+SKL_9d3d7c822bf8,skill,cross language information retrieval,cross language information retrieval,alt,en,CSO
+SKL_c522ad6afb9a,skill,document clustering,document clustering,preferred,en,CSO
+SKL_2647e4f8c8de,skill,image retrieval,image retrieval,preferred,en,CSO
+SKL_e5d6382cf1bf,skill,information dissemination,information dissemination,preferred,en,CSO
+SKL_728fb08e4b83,skill,information integration,information integration,preferred,en,CSO
+SKL_f60e1b961c04,skill,information retrieval systems,information retrieval systems,preferred,en,CSO
+SKL_345b61e8bd90,skill,information storage and retrieval,information storage and retrieval,preferred,en,CSO
+SKL_dc64174177e2,skill,music information retrieval,music information retrieval,preferred,en,CSO
+SKL_5118b71dae8f,skill,named entity recognition,named entity recognition,preferred,en,CSO
+SKL_5118b71dae8f,skill,named entities,named entities,alt,en,CSO
+SKL_5118b71dae8f,skill,named entity,named entity,alt,en,CSO
+SKL_81a7a398fa27,skill,question answering,question answering,preferred,en,CSO
+SKL_81a7a398fa27,skill,question answering system,question answering system,alt,en,CSO
+SKL_81a7a398fa27,skill,question answering systems,question answering systems,alt,en,CSO
+SKL_816541552eba,skill,recommender systems,recommender systems,preferred,en,CSO
+SKL_816541552eba,skill,recommender system,recommender system,alt,en,CSO
+SKL_0cd32f366af1,skill,relevance models,relevance models,preferred,en,CSO
+SKL_d28ecd24bd70,skill,vector space models,vector space models,preferred,en,CSO
+SKL_d28ecd24bd70,skill,vector space model,vector space model,alt,en,CSO
+SKL_d28ecd24bd70,skill,vector space model (vsm),vector space model (vsm),alt,en,CSO
+SKL_d28ecd24bd70,skill,vsm,vsm,alt,en,CSO
+SKL_03431ccec862,skill,applied (co),applied (co),preferred,en,CSO
+SKL_2e19717e2355,skill,bandwidth,bandwidth,preferred,en,CSO
+SKL_1b75528c33a5,skill,communication networks,communication networks,preferred,en,CSO
+SKL_1b75528c33a5,skill,communication network,communication network,alt,en,CSO
+SKL_72993892ab56,skill,computer control,computer control,preferred,en,CSO
+SKL_fd29aa9d4835,skill,computer workstations,computer workstations,preferred,en,CSO
+SKL_030daa0373b0,skill,conformance testing,conformance testing,preferred,en,CSO
+SKL_e4deb9c68e43,skill,congestion control (communication),congestion control (communication),preferred,en,CSO
+SKL_e4deb9c68e43,skill,congestion control,congestion control,alt,en,CSO
+SKL_c7f870478f31,skill,dijkstra,dijkstra,preferred,en,CSO
+SKL_aa825cb9b853,skill,electronic designs,electronic designs,preferred,en,CSO
+SKL_93021a6f385f,skill,fault tolerant computer systems,fault tolerant computer systems,preferred,en,CSO
+SKL_16ac2d6c5558,skill,fiber optic networks,fiber optic networks,preferred,en,CSO
+SKL_7957c6cf7058,skill,fibre technology,fibre technology,preferred,en,CSO
+SKL_7f25208613ff,skill,network architecture,network architecture,preferred,en,CSO
+SKL_0a0f5434af1b,skill,network protocols,network protocols,preferred,en,CSO
+SKL_9c1dc3d1aa1c,skill,network security,network security,preferred,en,CSO
+SKL_1a29f96f28fd,skill,network topology,network topology,preferred,en,CSO
+SKL_3e81d49c1eb6,skill,peer-to-peer,peer-to-peer,preferred,en,CSO
+SKL_3e81d49c1eb6,skill,p2p,p2p,alt,en,CSO
+SKL_3e81d49c1eb6,skill,p2p applications,p2p applications,alt,en,CSO
+SKL_3e81d49c1eb6,skill,p2p network,p2p network,alt,en,CSO
+SKL_3e81d49c1eb6,skill,p2p networks,p2p networks,alt,en,CSO
+SKL_3e81d49c1eb6,skill,p2p system,p2p system,alt,en,CSO
+SKL_3e81d49c1eb6,skill,p2p systems,p2p systems,alt,en,CSO
+SKL_3e81d49c1eb6,skill,peer to peer,peer to peer,alt,en,CSO
+SKL_3e81d49c1eb6,skill,peer to peer (p2p) network,peer to peer (p2p) network,alt,en,CSO
+SKL_3e81d49c1eb6,skill,peer to peer networks,peer to peer networks,alt,en,CSO
+SKL_3e81d49c1eb6,skill,peer-to-peer (p2p),peer-to-peer (p2p),alt,en,CSO
+SKL_3e81d49c1eb6,skill,peer-to-peer network,peer-to-peer network,alt,en,CSO
+SKL_3e81d49c1eb6,skill,peer-to-peer networks,peer-to-peer networks,alt,en,CSO
+SKL_3e81d49c1eb6,skill,peer-to-peer system,peer-to-peer system,alt,en,CSO
+SKL_3e81d49c1eb6,skill,peer-to-peer systems,peer-to-peer systems,alt,en,CSO
+SKL_3e81d49c1eb6,skill,peer-to-peer technologies,peer-to-peer technologies,alt,en,CSO
+SKL_780f7158e569,skill,parallel and distributed processing,parallel and distributed processing,preferred,en,CSO
+SKL_ff489a9f53ed,skill,probability--queueing theory,probability--queueing theory,preferred,en,CSO
+SKL_4e71fe44ea09,skill,retrieval (mir),retrieval (mir),preferred,en,CSO
+SKL_918312c337c7,skill,routing algorithms,routing algorithms,preferred,en,CSO
+SKL_918312c337c7,skill,routing algorithm,routing algorithm,alt,en,CSO
+SKL_df7685e64294,skill,stabilizers (agents),stabilizers (agents),preferred,en,CSO
+SKL_03b7511cb1dc,skill,wireless communications,wireless communications,preferred,en,CSO
+SKL_03b7511cb1dc,skill,wireless communication,wireless communication,alt,en,CSO
+SKL_03b7511cb1dc,skill,wireless communication technology,wireless communication technology,alt,en,CSO
+SKL_03b7511cb1dc,skill,wireless technologies,wireless technologies,alt,en,CSO
+SKL_27f7cbe0526b,skill,wireless telecommunication systems,wireless telecommunication systems,preferred,en,CSO
+SKL_2eb49e08c5df,skill,affective computing,affective computing,preferred,en,CSO
+SKL_54829c4c3e56,skill,assistive technology,assistive technology,preferred,en,CSO
+SKL_54829c4c3e56,skill,assistive technologies,assistive technologies,alt,en,CSO
+SKL_2c0f86b49441,skill,computer aided instruction,computer aided instruction,preferred,en,CSO
+SKL_7a5414d96413,skill,user-computer interface,user-computer interface,preferred,en,CSO
+SKL_7a5414d96413,skill,computer interface,computer interface,alt,en,CSO
+SKL_9fa2101793db,skill,computer interfaces,computer interfaces,preferred,en,CSO
+SKL_674d709a02c2,skill,dialogue management,dialogue management,preferred,en,CSO
+SKL_861d474927da,skill,emotion recognition,emotion recognition,preferred,en,CSO
+SKL_1b3a4cb286f3,skill,gesture recognition,gesture recognition,preferred,en,CSO
+SKL_202c975e2d35,skill,human engineering,human engineering,preferred,en,CSO
+SKL_61fdd00a8ca3,skill,interactive robot,interactive robot,preferred,en,CSO
+SKL_0b0bc44d80ca,skill,user interfaces,user interfaces,preferred,en,CSO
+SKL_0b0bc44d80ca,skill,user interface,user interface,alt,en,CSO
+SKL_0ada440c491d,skill,videogames,videogames,preferred,en,CSO
+SKL_0ada440c491d,skill,video game,video game,alt,en,CSO
+SKL_0ada440c491d,skill,video games,video games,alt,en,CSO
+SKL_aa3d4fb4a9d1,skill,virtual reality,virtual reality,preferred,en,CSO
+SKL_d207032bb640,skill,visualization,visualization,preferred,en,CSO
+SKL_25f6e4cc3334,skill,cache,cache,preferred,en,CSO
+SKL_ec9c26c87295,skill,central processing unit,central processing unit,preferred,en,CSO
+SKL_0c9696882281,skill,computer operating procedures,computer operating procedures,preferred,en,CSO
+SKL_40bd9d062c3b,skill,computer system recovery,computer system recovery,preferred,en,CSO
+SKL_5577e441038e,skill,computer worms,computer worms,preferred,en,CSO
+SKL_6157396ae78b,skill,device driver,device driver,preferred,en,CSO
+SKL_6157396ae78b,skill,device drivers,device drivers,alt,en,CSO
+SKL_dad2cf86cdaf,skill,distributed program,distributed program,preferred,en,CSO
+SKL_c7103ffa82dc,skill,embedded technology,embedded technology,preferred,en,CSO
+SKL_00efedd75417,skill,execution environments,execution environments,preferred,en,CSO
+SKL_3b4fa14bbaf5,skill,file systems,file systems,preferred,en,CSO
+SKL_3b4fa14bbaf5,skill,file system,file system,alt,en,CSO
+SKL_3b4fa14bbaf5,skill,filesystem,filesystem,alt,en,CSO
+SKL_2485f0c3783a,skill,linux,linux,preferred,en,CSO
+SKL_2485f0c3783a,skill,linux kernel,linux kernel,alt,en,CSO
+SKL_2485f0c3783a,skill,linux systems,linux systems,alt,en,CSO
+SKL_2485f0c3783a,skill,linux- operating system,linux- operating system,alt,en,CSO
+SKL_866e1b35593c,skill,malwares,malwares,preferred,en,CSO
+SKL_866e1b35593c,skill,malware,malware,alt,en,CSO
+SKL_d57ebf30c328,skill,memory management,memory management,preferred,en,CSO
+SKL_4db8277bdf64,skill,mobile operating systems,mobile operating systems,preferred,en,CSO
+SKL_1710a9ddd38d,skill,multi-threaded application,multi-threaded application,preferred,en,CSO
+SKL_be627c8f06d9,skill,multiprogramming,multiprogramming,preferred,en,CSO
+SKL_be627c8f06d9,skill,multiprocessing programs,multiprocessing programs,alt,en,CSO
+SKL_6b8d1fe26455,skill,real-time operating systems,real-time operating systems,preferred,en,CSO
+SKL_6b8d1fe26455,skill,real time operating system,real time operating system,alt,en,CSO
+SKL_6b8d1fe26455,skill,real-time operating system,real-time operating system,alt,en,CSO
+SKL_4aadbba42f49,skill,shared cache,shared cache,preferred,en,CSO
+SKL_f0bf3f2c0964,skill,system calls,system calls,preferred,en,CSO
+SKL_f0bf3f2c0964,skill,system call,system call,alt,en,CSO
+SKL_564413d63fa4,skill,virtual machine monitors,virtual machine monitors,preferred,en,CSO
+SKL_564413d63fa4,skill,virtual machine monitor,virtual machine monitor,alt,en,CSO
+SKL_564413d63fa4,skill,xen,xen,alt,en,CSO
+SKL_dde779850ecc,skill,virtual storage,virtual storage,preferred,en,CSO
+SKL_90e387c5cfa3,skill,virtualized environment,virtualized environment,preferred,en,CSO
+SKL_c894339e9b6f,skill,windows operating system,windows operating system,preferred,en,CSO
+SKL_dcafe0f90416,skill,agent-oriented,agent-oriented,preferred,en,CSO
+SKL_374427a5406d,skill,agent oriented software engineering,agent oriented software engineering,preferred,en,CSO
+SKL_374427a5406d,skill,agent-oriented software engineering,agent-oriented software engineering,alt,en,CSO
+SKL_aee04a2803fa,skill,autonomic computing,autonomic computing,preferred,en,CSO
+SKL_973c5103d6b4,skill,bug reports,bug reports,preferred,en,CSO
+SKL_973c5103d6b4,skill,defect report,defect report,alt,en,CSO
+SKL_973c5103d6b4,skill,defect reports,defect reports,alt,en,CSO
+SKL_58eea786336c,skill,capability maturity models,capability maturity models,preferred,en,CSO
+SKL_58eea786336c,skill,capability maturity model,capability maturity model,alt,en,CSO
+SKL_e02122a346c8,skill,circuit simulation,circuit simulation,preferred,en,CSO
+SKL_044278234f8c,skill,component-based software development,component-based software development,preferred,en,CSO
+SKL_044278234f8c,skill,component based software development,component based software development,alt,en,CSO
+SKL_c0624f08ad5a,skill,component based approach,component based approach,preferred,en,CSO
+SKL_dab08e5722c7,skill,component composition,component composition,preferred,en,CSO
+SKL_d47210e60d7c,skill,component repository,component repository,preferred,en,CSO
+SKL_13841c701a5f,skill,component selection,component selection,preferred,en,CSO
+SKL_ba1ba6c7a363,skill,computer software maintenance,computer software maintenance,preferred,en,CSO
+SKL_42065fe4e9a6,skill,computer systems programming,computer systems programming,preferred,en,CSO
+SKL_23c482b0af47,skill,engineering research,engineering research,preferred,en,CSO
+SKL_a480e486cdc2,skill,formal specification,formal specification,preferred,en,CSO
+SKL_a480e486cdc2,skill,formal specifications,formal specifications,alt,en,CSO
+SKL_707f42bfdf0a,skill,knowledge engineering,knowledge engineering,preferred,en,CSO
+SKL_0898df4f5a64,skill,modeling languages,modeling languages,preferred,en,CSO
+SKL_0898df4f5a64,skill,modeling language,modeling language,alt,en,CSO
+SKL_0898df4f5a64,skill,modelling language,modelling language,alt,en,CSO
+SKL_d0c8297f3aea,skill,object-oriented design,object-oriented design,preferred,en,CSO
+SKL_d0c8297f3aea,skill,object oriented design,object oriented design,alt,en,CSO
+SKL_f0654ddf32bf,skill,object-oriented system,object-oriented system,preferred,en,CSO
+SKL_304ab1c7be45,skill,process engineering,process engineering,preferred,en,CSO
+SKL_9f6f9346d3c2,skill,program diagnostics,program diagnostics,preferred,en,CSO
+SKL_c9d287fe1252,skill,program documentation,program documentation,preferred,en,CSO
+SKL_8da6ff3dbc3a,skill,requirements engineering,requirements engineering,preferred,en,CSO
+SKL_8da6ff3dbc3a,skill,requirement engineering,requirement engineering,alt,en,CSO
+SKL_4caaa7af261b,skill,security engineering,security engineering,preferred,en,CSO
+SKL_f38160e41e74,skill,service-based systems,service-based systems,preferred,en,CSO
+SKL_f5befd850541,skill,software design,software design,preferred,en,CSO
+SKL_a02e1f1e0e9a,skill,software pipelining,software pipelining,preferred,en,CSO
+SKL_45275843d218,skill,software reliability,software reliability,preferred,en,CSO
+SKL_af2bc4bc6a92,skill,source codes,source codes,preferred,en,CSO
+SKL_af2bc4bc6a92,skill,source code,source code,alt,en,CSO
+SKL_d346db16625e,skill,static analysis,static analysis,preferred,en,CSO
+SKL_64835e194f0f,skill,system architectures,system architectures,preferred,en,CSO
+SKL_64835e194f0f,skill,system architecture,system architecture,alt,en,CSO
+SKL_a70383873e19,skill,system testing,system testing,preferred,en,CSO
+SKL_685c45625525,skill,system under test,system under test,preferred,en,CSO
+SKL_1fe49572cd08,skill,test case generation,test case generation,preferred,en,CSO
+SKL_f96dbab481b0,skill,test case selection,test case selection,preferred,en,CSO
+SKL_b2c893ea56f5,skill,test data generation,test data generation,preferred,en,CSO
+SKL_3763fa887449,skill,transformation rules,transformation rules,preferred,en,CSO
+SKL_8179e32b40f3,skill,unified modeling language,unified modeling language,preferred,en,CSO
+SKL_8179e32b40f3,skill,uml,uml,alt,en,CSO
+SKL_8179e32b40f3,skill,unified modeling language (uml),unified modeling language (uml),alt,en,CSO
+SKL_8179e32b40f3,skill,unified modelling language,unified modelling language,alt,en,CSO
+SKL_9c765d5bfe98,skill,usability engineering,usability engineering,preferred,en,CSO
+SKL_e6e9a052be8d,skill,web engineering,web engineering,preferred,en,CSO
+SKL_09974e571129,skill,coding theory,coding theory,preferred,en,CSO
+SKL_4d30c68505c7,skill,computer programming languages,computer programming languages,preferred,en,CSO
+SKL_11578c4b7db5,skill,computer science education,computer science education,preferred,en,CSO
+SKL_11578c4b7db5,skill,cs1,cs1,alt,en,CSO
+SKL_e8d2a0821838,skill,constraint networks,constraint networks,preferred,en,CSO
+SKL_5983563678c8,skill,constraint programming,constraint programming,preferred,en,CSO
+SKL_33644306a867,skill,program debugging,program debugging,preferred,en,CSO
+SKL_33644306a867,skill,debugging,debugging,alt,en,CSO
+SKL_33644306a867,skill,software debugging,software debugging,alt,en,CSO
+SKL_33644306a867,skill,testing and debugging,testing and debugging,alt,en,CSO
+SKL_8e4be4aae931,skill,evolutionary programming,evolutionary programming,preferred,en,CSO
+SKL_adf4c464eb1f,skill,genetic programming,genetic programming,preferred,en,CSO
+SKL_adf4c464eb1f,skill,genetic programming (gp),genetic programming (gp),alt,en,CSO
+SKL_deef6924c38e,skill,high-level programming language,high-level programming language,preferred,en,CSO
+SKL_86309f77bf86,skill,high level languages,high level languages,preferred,en,CSO
+SKL_146c2c25c91a,skill,local consistency,local consistency,preferred,en,CSO
+SKL_2e7207189eb2,skill,mixed integer programming model,mixed integer programming model,preferred,en,CSO
+SKL_a45887e30057,skill,novice programmer,novice programmer,preferred,en,CSO
+SKL_a45887e30057,skill,novice programmers,novice programmers,alt,en,CSO
+SKL_c55feb8d7c21,skill,object oriented programming,object oriented programming,preferred,en,CSO
+SKL_c55feb8d7c21,skill,object-oriented programming,object-oriented programming,alt,en,CSO
+SKL_db3f44f1cd01,skill,software frameworks,software frameworks,preferred,en,CSO
+SKL_db3f44f1cd01,skill,software framework,software framework,alt,en,CSO
+SKL_a8a578bef652,skill,computer language,computer language,preferred,en,CSO
+SKL_e80e2f0aa41d,skill,distance education,distance education,preferred,en,CSO
+SKL_41ed6292fdcd,skill,e-commerce,e-commerce,preferred,en,CSO
+SKL_41ed6292fdcd,skill,e commerces,e commerces,alt,en,CSO
+SKL_41ed6292fdcd,skill,e-commerce systems,e-commerce systems,alt,en,CSO
+SKL_41ed6292fdcd,skill,electronic commerce,electronic commerce,alt,en,CSO
+SKL_53ee8b8de339,skill,electronic mail,electronic mail,preferred,en,CSO
+SKL_fb77de0a43bc,skill,epc,epc,preferred,en,CSO
+SKL_fb77de0a43bc,skill,electronic product codes,electronic product codes,alt,en,CSO
+SKL_db6fd06bb5d1,skill,genetic database,genetic database,preferred,en,CSO
+SKL_a40f9a641a56,skill,"health records, personal","health records, personal",preferred,en,CSO
+SKL_15d5e226c92f,skill,internet of things,internet of things,preferred,en,CSO
+SKL_15d5e226c92f,skill,internet of thing (iot),internet of thing (iot),alt,en,CSO
+SKL_15d5e226c92f,skill,internet of things (iot),internet of things (iot),alt,en,CSO
+SKL_15d5e226c92f,skill,iot,iot,alt,en,CSO
+SKL_db16ccf48957,skill,mmorpg,mmorpg,preferred,en,CSO
+SKL_db16ccf48957,skill,mmorpgs,mmorpgs,alt,en,CSO
+SKL_de627feb7df7,skill,multimedia systems,multimedia systems,preferred,en,CSO
+SKL_d95d8c6145f5,skill,network paths,network paths,preferred,en,CSO
+SKL_df26143c951b,skill,protein database,protein database,preferred,en,CSO
+SKL_838d87c973a5,skill,revenue,revenue,preferred,en,CSO
+SKL_1d1218d0bd5f,skill,systems integration,systems integration,preferred,en,CSO
+SKL_2ac83f34e603,skill,virtual networks,virtual networks,preferred,en,CSO
+SKL_2ac83f34e603,skill,virtual network,virtual network,alt,en,CSO
+SKL_b445330f3c3b,skill,world wide web,world wide web,preferred,en,CSO
+SKL_fddc195c9b2f,skill,adaptive algorithms,adaptive algorithms,preferred,en,CSO
+SKL_fddc195c9b2f,skill,adaptive algorithm,adaptive algorithm,alt,en,CSO
+SKL_1163540f35fb,skill,software component,software component,preferred,en,CSO
+SKL_1163540f35fb,skill,component based,component based,alt,en,CSO
+SKL_1163540f35fb,skill,component based software,component based software,alt,en,CSO
+SKL_1163540f35fb,skill,component based software engineering,component based software engineering,alt,en,CSO
+SKL_1163540f35fb,skill,component based systems,component based systems,alt,en,CSO
+SKL_1163540f35fb,skill,component-based software,component-based software,alt,en,CSO
+SKL_1163540f35fb,skill,component-based software engineering,component-based software engineering,alt,en,CSO
+SKL_1163540f35fb,skill,component-based systems,component-based systems,alt,en,CSO
+SKL_1163540f35fb,skill,software components,software components,alt,en,CSO
+SKL_e842a9f09eab,skill,computer applications,computer applications,preferred,en,CSO
+SKL_e842a9f09eab,skill,computer application,computer application,alt,en,CSO
+SKL_2a49760d3003,skill,computer control systems,computer control systems,preferred,en,CSO
+SKL_ad7d11b9201c,skill,computer debugging,computer debugging,preferred,en,CSO
+SKL_ad7d11b9201c,skill,debuggers,debuggers,alt,en,CSO
+SKL_ccc7993834d4,skill,dynamic analysis,dynamic analysis,preferred,en,CSO
+SKL_3e910030a2b5,skill,geographic information system,geographic information system,preferred,en,CSO
+SKL_3e910030a2b5,skill,geographical information system (gis),geographical information system (gis),alt,en,CSO
+SKL_3e910030a2b5,skill,geographical information systems,geographical information systems,alt,en,CSO
+SKL_3e910030a2b5,skill,gis,gis,alt,en,CSO
+SKL_1c974bff7720,skill,gps,gps,preferred,en,CSO
+SKL_5c98d3d7f7bf,skill,matlab,matlab,preferred,en,CSO
+SKL_6862a4187c3b,skill,software repositories,software repositories,preferred,en,CSO
+SKL_6862a4187c3b,skill,mining software repositories,mining software repositories,alt,en,CSO
+SKL_3b30efb929a1,skill,open source software,open source software,preferred,en,CSO
+SKL_7f41d46f476f,skill,access control policies,access control policies,preferred,en,CSO
+SKL_7f41d46f476f,skill,access control mechanism,access control mechanism,alt,en,CSO
+SKL_7f41d46f476f,skill,access control models,access control models,alt,en,CSO
+SKL_7f41d46f476f,skill,access control policy,access control policy,alt,en,CSO
+SKL_b5a55603073a,skill,access control schemes,access control schemes,preferred,en,CSO
+SKL_29823e130318,skill,access rights,access rights,preferred,en,CSO
+SKL_f0c1ada8a373,skill,attribute-based encryption,attribute-based encryption,preferred,en,CSO
+SKL_f0c1ada8a373,skill,attribute-based encryptions,attribute-based encryptions,alt,en,CSO
+SKL_e9d3a8a97828,skill,authorization,authorization,preferred,en,CSO
+SKL_a261fe97699d,skill,biometrics,biometrics,preferred,en,CSO
+SKL_a261fe97699d,skill,biometric,biometric,alt,en,CSO
+SKL_5e078088afdf,skill,decryption keys,decryption keys,preferred,en,CSO
+SKL_14fa598c82d0,skill,grid security,grid security,preferred,en,CSO
+SKL_74a652fe3586,skill,identity management,identity management,preferred,en,CSO
+SKL_d34d049b2dbc,skill,ieee802.11,ieee802.11,preferred,en,CSO
+SKL_b5ac537280e1,skill,information flow control,information flow control,preferred,en,CSO
+SKL_d9c924864d3e,skill,key management,key management,preferred,en,CSO
+SKL_53e1c7785bb0,skill,manet routing,manet routing,preferred,en,CSO
+SKL_41a2957b121e,skill,media access control,media access control,preferred,en,CSO
+SKL_41a2957b121e,skill,media access control (mac),media access control (mac),alt,en,CSO
+SKL_777f97202e43,skill,privacy policies,privacy policies,preferred,en,CSO
+SKL_777f97202e43,skill,privacy policy,privacy policy,alt,en,CSO
+SKL_1bb17d40d809,skill,role-based access control,role-based access control,preferred,en,CSO
+SKL_1bb17d40d809,skill,rbac,rbac,alt,en,CSO
+SKL_1bb17d40d809,skill,role based access control,role based access control,alt,en,CSO
+SKL_1bb17d40d809,skill,role-based access control (rbac),role-based access control (rbac),alt,en,CSO
+SKL_1bb17d40d809,skill,role-based access control model,role-based access control model,alt,en,CSO
+SKL_f71a92e390d3,skill,re-encryption,re-encryption,preferred,en,CSO
+SKL_8ceca79fec52,skill,security and privacy,security and privacy,preferred,en,CSO
+SKL_0387516db2ee,skill,security architecture,security architecture,preferred,en,CSO
+SKL_d6e70ddb3e44,skill,security challenges,security challenges,preferred,en,CSO
+SKL_7c542578a0e5,skill,security model,security model,preferred,en,CSO
+SKL_7c542578a0e5,skill,security models,security models,alt,en,CSO
+SKL_7ac1d9722bca,skill,security policy,security policy,preferred,en,CSO
+SKL_7ac1d9722bca,skill,security policies,security policies,alt,en,CSO
+SKL_a7dd5f9aa033,skill,security requirements,security requirements,preferred,en,CSO
+SKL_d5eacd53e646,skill,sensitive informations,sensitive informations,preferred,en,CSO
+SKL_d5eacd53e646,skill,sensitive data,sensitive data,alt,en,CSO
+SKL_d5eacd53e646,skill,sensitive datas,sensitive datas,alt,en,CSO
+SKL_0872d0050ef4,skill,symmetric keys,symmetric keys,preferred,en,CSO
+SKL_0d1d5b4d66dc,skill,trust management,trust management,preferred,en,CSO
+SKL_084474b0c843,skill,user privacy,user privacy,preferred,en,CSO
+SKL_ca70dd8484a2,skill,cryptanalysis,cryptanalysis,preferred,en,CSO
+SKL_0a4315e87c30,skill,cryptography,cryptography,preferred,en,CSO
+SKL_f62e378982ec,skill,cyberattacks,cyberattacks,preferred,en,CSO
+SKL_f62e378982ec,skill,cyber attack,cyber attack,alt,en,CSO
+SKL_f62e378982ec,skill,cyber attacks,cyber attacks,alt,en,CSO
+SKL_f62e378982ec,skill,cyber threat,cyber threat,alt,en,CSO
+SKL_f62e378982ec,skill,cyber threats,cyber threats,alt,en,CSO
+SKL_f62e378982ec,skill,cyberattack,cyberattack,alt,en,CSO
+SKL_f62e378982ec,skill,cybersecurity attacks,cybersecurity attacks,alt,en,CSO
+SKL_f62e378982ec,skill,cybersecurity risk,cybersecurity risk,alt,en,CSO
+SKL_f62e378982ec,skill,cybersecurity threat,cybersecurity threat,alt,en,CSO
+SKL_f62e378982ec,skill,cybersecurity threats,cybersecurity threats,alt,en,CSO
+SKL_1ec8a2c6a1c0,skill,cyber defense,cyber defense,preferred,en,CSO
+SKL_1ec8a2c6a1c0,skill,cyber defence,cyber defence,alt,en,CSO
+SKL_60233ea3b693,skill,cybersecurity vulnerabilities,cybersecurity vulnerabilities,preferred,en,CSO
+SKL_60233ea3b693,skill,cybersecurity challenges,cybersecurity challenges,alt,en,CSO
+SKL_4c7e7f7a25ec,skill,cybersecurity framework,cybersecurity framework,preferred,en,CSO
+SKL_491d76752637,skill,digital forensic,digital forensic,preferred,en,CSO
+SKL_491d76752637,skill,digital forensics,digital forensics,alt,en,CSO
+SKL_844d63fb546e,skill,distributed ledger,distributed ledger,preferred,en,CSO
+SKL_844d63fb546e,skill,distributed ledgers,distributed ledgers,alt,en,CSO
+SKL_7ed3fd3b3a6a,skill,anonymity,anonymity,preferred,en,CSO
+SKL_a77eb8b44619,skill,computer privacy,computer privacy,preferred,en,CSO
+SKL_8c11bbecec75,skill,data privacy,data privacy,preferred,en,CSO
+SKL_93515f69f1ff,skill,data protection,data protection,preferred,en,CSO
+SKL_d846601719b7,skill,location privacy,location privacy,preferred,en,CSO
+SKL_70e4551f3ad3,skill,personal information,personal information,preferred,en,CSO
+SKL_602c7c111214,skill,privacy and security,privacy and security,preferred,en,CSO
+SKL_82b5e01ad2bd,skill,rfid authentication,rfid authentication,preferred,en,CSO
+SKL_a6895a56f559,skill,trusted third parties,trusted third parties,preferred,en,CSO
+SKL_40636d23082e,skill,authentication,authentication,preferred,en,CSO
+SKL_7c7fea9906ae,skill,block ciphers,block ciphers,preferred,en,CSO
+SKL_7c7fea9906ae,skill,block cipher,block cipher,alt,en,CSO
+SKL_c67adad98acf,skill,computer crime,computer crime,preferred,en,CSO
+SKL_da14f4336710,skill,cryptographic algorithms,cryptographic algorithms,preferred,en,CSO
+SKL_9f7cfec22d38,skill,digital watermarking,digital watermarking,preferred,en,CSO
+SKL_ad58bc6243d7,skill,encryption,encryption,preferred,en,CSO
+SKL_ad58bc6243d7,skill,encryption algorithm,encryption algorithm,alt,en,CSO
+SKL_ad58bc6243d7,skill,encryption algorithms,encryption algorithms,alt,en,CSO
+SKL_ad58bc6243d7,skill,encryption and decryption,encryption and decryption,alt,en,CSO
+SKL_ad58bc6243d7,skill,encryption key,encryption key,alt,en,CSO
+SKL_ad58bc6243d7,skill,encryption methods,encryption methods,alt,en,CSO
+SKL_ad58bc6243d7,skill,encryption schemes,encryption schemes,alt,en,CSO
+SKL_16e27b55a6f6,skill,information-theoretic security,information-theoretic security,preferred,en,CSO
+SKL_16e27b55a6f6,skill,information theoretic security,information theoretic security,alt,en,CSO
+SKL_7dae86013cde,skill,information security,information security,preferred,en,CSO
+SKL_48f861850a35,skill,intranets,intranets,preferred,en,CSO
+SKL_48f861850a35,skill,intranet,intranet,alt,en,CSO
+SKL_0c0699a57638,skill,secret sharing,secret sharing,preferred,en,CSO
+SKL_e0e9b3e54922,skill,security issues,security issues,preferred,en,CSO
+SKL_e0e9b3e54922,skill,security mechanism,security mechanism,alt,en,CSO
+SKL_e0e9b3e54922,skill,security mechanisms,security mechanisms,alt,en,CSO
+SKL_e0e9b3e54922,skill,security problems,security problems,alt,en,CSO
+SKL_e0e9b3e54922,skill,security services,security services,alt,en,CSO
+SKL_e0e9b3e54922,skill,security solutions,security solutions,alt,en,CSO
+SKL_e0e9b3e54922,skill,security threats,security threats,alt,en,CSO
+SKL_db7cf5692b4d,skill,security protocols,security protocols,preferred,en,CSO
+SKL_db7cf5692b4d,skill,security properties,security properties,alt,en,CSO
+SKL_db7cf5692b4d,skill,security protocol,security protocol,alt,en,CSO
+SKL_200892094ffe,skill,security systems,security systems,preferred,en,CSO
+SKL_00fe27f92f61,skill,servers,servers,preferred,en,CSO
+SKL_27d0bc99cf96,skill,spamming,spamming,preferred,en,CSO
+SKL_45056768f104,skill,steganography,steganography,preferred,en,CSO
+SKL_f77ae7d03aef,skill,stream ciphers,stream ciphers,preferred,en,CSO
+SKL_f77ae7d03aef,skill,stream cipher,stream cipher,alt,en,CSO
+SKL_68eb64e36876,skill,apriori,apriori,preferred,en,CSO
+SKL_a850c482ae02,skill,frequent itemsets,frequent itemsets,preferred,en,CSO
+SKL_a850c482ae02,skill,frequent item sets,frequent item sets,alt,en,CSO
+SKL_a850c482ae02,skill,frequent itemset,frequent itemset,alt,en,CSO
+SKL_a850c482ae02,skill,frequent itemset mining,frequent itemset mining,alt,en,CSO
+SKL_a850c482ae02,skill,item sets,item sets,alt,en,CSO
+SKL_a850c482ae02,skill,mining frequent itemsets,mining frequent itemsets,alt,en,CSO
+SKL_58e6f5fc950f,skill,frequent patterns,frequent patterns,preferred,en,CSO
+SKL_58e6f5fc950f,skill,frequent pattern,frequent pattern,alt,en,CSO
+SKL_58e6f5fc950f,skill,frequent pattern mining,frequent pattern mining,alt,en,CSO
+SKL_f1030a002cec,skill,mining associations,mining associations,preferred,en,CSO
+SKL_2579b015561a,skill,rule mining,rule mining,preferred,en,CSO
+SKL_5579b50c4fbc,skill,rule mining algorithms,rule mining algorithms,preferred,en,CSO
+SKL_e5c3ef2bbb0b,skill,bacterial typing techniques,bacterial typing techniques,preferred,en,CSO
+SKL_ce691c5102c4,skill,classification algorithm,classification algorithm,preferred,en,CSO
+SKL_ce691c5102c4,skill,classification algorithms,classification algorithms,alt,en,CSO
+SKL_e508a0cbd54c,skill,classification label,classification label,preferred,en,CSO
+SKL_440af9039d2a,skill,classification process,classification process,preferred,en,CSO
+SKL_95aed2dff9bc,skill,rna 16s,rna 16s,preferred,en,CSO
+SKL_95aed2dff9bc,skill,dna 16s,dna 16s,alt,en,CSO
+SKL_3ff954075f2e,skill,"genes, mitochondrial","genes, mitochondrial",preferred,en,CSO
+SKL_de53ae9b8423,skill,genetic speciation,genetic speciation,preferred,en,CSO
+SKL_fe29f676f556,skill,"genome, mitochondrial","genome, mitochondrial",preferred,en,CSO
+SKL_dcc43fad26f4,skill,multi-label classification,multi-label classification,preferred,en,CSO
+SKL_dcc43fad26f4,skill,multi-label,multi-label,alt,en,CSO
+SKL_8dbac4e9db13,skill,phylogeography,phylogeography,preferred,en,CSO
+SKL_e7a9838bfc76,skill,radial based function,radial based function,preferred,en,CSO
+SKL_4dfa2ba4a612,skill,ribosome dna,ribosome dna,preferred,en,CSO
+SKL_eb6bdcdb83b9,skill,taxonomy,taxonomy,preferred,en,CSO
+SKL_453f518e9770,skill,fuzzy c-means,fuzzy c-means,preferred,en,CSO
+SKL_453f518e9770,skill,c-means,c-means,alt,en,CSO
+SKL_453f518e9770,skill,fcm,fcm,alt,en,CSO
+SKL_453f518e9770,skill,fcm clustering,fcm clustering,alt,en,CSO
+SKL_453f518e9770,skill,fuzzy c mean,fuzzy c mean,alt,en,CSO
+SKL_453f518e9770,skill,fuzzy c means clustering,fuzzy c means clustering,alt,en,CSO
+SKL_453f518e9770,skill,fuzzy c-means (fcm),fuzzy c-means (fcm),alt,en,CSO
+SKL_453f518e9770,skill,fuzzy c-means clustering,fuzzy c-means clustering,alt,en,CSO
+SKL_453f518e9770,skill,fuzzy c-means clustering algorithms,fuzzy c-means clustering algorithms,alt,en,CSO
+SKL_379e74fb4371,skill,cluster head,cluster head,preferred,en,CSO
+SKL_379e74fb4371,skill,cluster heads,cluster heads,alt,en,CSO
+SKL_379e74fb4371,skill,cluster-based,cluster-based,alt,en,CSO
+SKL_379e74fb4371,skill,cluster-heads,cluster-heads,alt,en,CSO
+SKL_cc4808500533,skill,clustering methods,clustering methods,preferred,en,CSO
+SKL_cc4808500533,skill,clustering analysis,clustering analysis,alt,en,CSO
+SKL_cc4808500533,skill,clustering approach,clustering approach,alt,en,CSO
+SKL_cc4808500533,skill,clustering method,clustering method,alt,en,CSO
+SKL_cc4808500533,skill,clustering problems,clustering problems,alt,en,CSO
+SKL_cc4808500533,skill,clustering process,clustering process,alt,en,CSO
+SKL_cc4808500533,skill,clustering results,clustering results,alt,en,CSO
+SKL_cc4808500533,skill,clustering techniques,clustering techniques,alt,en,CSO
+SKL_9acc77bfb8f3,skill,data points,data points,preferred,en,CSO
+SKL_678b65a89037,skill,fuzzy clustering,fuzzy clustering,preferred,en,CSO
+SKL_678b65a89037,skill,fuzzy clustering method,fuzzy clustering method,alt,en,CSO
+SKL_678b65a89037,skill,fuzzy clustering techniques,fuzzy clustering techniques,alt,en,CSO
+SKL_678b65a89037,skill,fuzzy clusters,fuzzy clusters,alt,en,CSO
+SKL_59a5c707aa6d,skill,incremental clustering,incremental clustering,preferred,en,CSO
+SKL_908f9adc2e4a,skill,k-nearest neighbors,k-nearest neighbors,preferred,en,CSO
+SKL_908f9adc2e4a,skill,k nearest neighbor,k nearest neighbor,alt,en,CSO
+SKL_908f9adc2e4a,skill,k-nearest neighbor,k-nearest neighbor,alt,en,CSO
+SKL_908f9adc2e4a,skill,k-nn algorithm,k-nn algorithm,alt,en,CSO
+SKL_908f9adc2e4a,skill,knn,knn,alt,en,CSO
+SKL_908f9adc2e4a,skill,nearest neighbor,nearest neighbor,alt,en,CSO
+SKL_908f9adc2e4a,skill,nearest neighbors,nearest neighbors,alt,en,CSO
+SKL_9c108d46bf3e,skill,network lifetime,network lifetime,preferred,en,CSO
+SKL_9c108d46bf3e,skill,network life-time,network life-time,alt,en,CSO
+SKL_521534af06d1,skill,real data sets,real data sets,preferred,en,CSO
+SKL_9bd648d516e2,skill,semi-supervised clustering,semi-supervised clustering,preferred,en,CSO
+SKL_1aa265abf127,skill,som algorithms,som algorithms,preferred,en,CSO
+SKL_fa973080f2e0,skill,spectral clustering,spectral clustering,preferred,en,CSO
+SKL_842b62362791,skill,trajectory clustering,trajectory clustering,preferred,en,CSO
+SKL_bd1c83c5070b,skill,complete lattices,complete lattices,preferred,en,CSO
+SKL_bb66cef3c691,skill,formal contexts,formal contexts,preferred,en,CSO
+SKL_bb66cef3c691,skill,formal concepts,formal concepts,alt,en,CSO
+SKL_747d1c50e786,skill,galois connection,galois connection,preferred,en,CSO
+SKL_419967dff9e1,skill,crm,crm,preferred,en,CSO
+SKL_419967dff9e1,skill,conceptual reference model,conceptual reference model,alt,en,CSO
+SKL_419967dff9e1,skill,conceptual reference model (crm),conceptual reference model (crm),alt,en,CSO
+SKL_15e0de6d486f,skill,customer relationship management systems,customer relationship management systems,preferred,en,CSO
+SKL_58501c36b2fd,skill,data mining process,data mining process,preferred,en,CSO
+SKL_71b293bad324,skill,alcatel (co),alcatel (co),preferred,en,CSO
+SKL_3238533219d7,skill,asynchronous transfer mode,asynchronous transfer mode,preferred,en,CSO
+SKL_013220ce3dd4,skill,available bandwidth,available bandwidth,preferred,en,CSO
+SKL_3c6aa0143d0a,skill,bandwidth compression,bandwidth compression,preferred,en,CSO
+SKL_dcef66d3bb22,skill,bandwidth efficiency,bandwidth efficiency,preferred,en,CSO
+SKL_fce785e81a5a,skill,broadband networks,broadband networks,preferred,en,CSO
+SKL_e43da13e4a72,skill,buffer storage,buffer storage,preferred,en,CSO
+SKL_8a126090c0dd,skill,carrier communication,carrier communication,preferred,en,CSO
+SKL_1680b298d9f3,skill,communication bandwidth,communication bandwidth,preferred,en,CSO
+SKL_45edadacb457,skill,congestion avoidance,congestion avoidance,preferred,en,CSO
+SKL_1322ed8b0fbc,skill,coplanar waveguides,coplanar waveguides,preferred,en,CSO
+SKL_1322ed8b0fbc,skill,coplanar waveguide,coplanar waveguide,alt,en,CSO
+SKL_2d067f58b8db,skill,electromagnetic wave polarization,electromagnetic wave polarization,preferred,en,CSO
+SKL_a132089bbcaf,skill,ethernet,ethernet,preferred,en,CSO
+SKL_1349a4383d20,skill,frequencies,frequencies,preferred,en,CSO
+SKL_03c669069a05,skill,high bandwidth,high bandwidth,preferred,en,CSO
+SKL_3c07d45f0b24,skill,multicasts,multicasts,preferred,en,CSO
+SKL_3c07d45f0b24,skill,ip multicast,ip multicast,alt,en,CSO
+SKL_3c07d45f0b24,skill,multicast,multicast,alt,en,CSO
+SKL_3c07d45f0b24,skill,multicasting,multicasting,alt,en,CSO
+SKL_653041f7a5bc,skill,jitter,jitter,preferred,en,CSO
+SKL_1422d6617427,skill,live streaming,live streaming,preferred,en,CSO
+SKL_b8436a8c4334,skill,loop antennas,loop antennas,preferred,en,CSO
+SKL_1150e2ab1b8e,skill,microstrip antennas,microstrip antennas,preferred,en,CSO
+SKL_1150e2ab1b8e,skill,microstrip antenna,microstrip antenna,alt,en,CSO
+SKL_5004e63abb73,skill,optical interconnects,optical interconnects,preferred,en,CSO
+SKL_5004e63abb73,skill,optical interconnect,optical interconnect,alt,en,CSO
+SKL_2599a8c63a26,skill,quality of service,quality of service,preferred,en,CSO
+SKL_2599a8c63a26,skill,quality of service (qos),quality of service (qos),alt,en,CSO
+SKL_422c4da877d1,skill,routers,routers,preferred,en,CSO
+SKL_422c4da877d1,skill,router,router,alt,en,CSO
+SKL_110d43f30ae2,skill,signal bandwidth,signal bandwidth,preferred,en,CSO
+SKL_76516004bdfa,skill,telecommunication links,telecommunication links,preferred,en,CSO
+SKL_1fa6b51236f4,skill,video on demand,video on demand,preferred,en,CSO
+SKL_1fa6b51236f4,skill,video-on-demand,video-on-demand,alt,en,CSO
+SKL_1fa6b51236f4,skill,video-on-demand (vod),video-on-demand (vod),alt,en,CSO
+SKL_cde996a334ca,skill,wide-band,wide-band,preferred,en,CSO
+SKL_cde996a334ca,skill,wideband,wideband,alt,en,CSO
+SKL_e61faa5d5907,skill,wide bandwidth,wide bandwidth,preferred,en,CSO
+SKL_9db7b86b45a0,skill,wideband speech,wideband speech,preferred,en,CSO
+SKL_7094f6503bd3,skill,multi-body system (mbs),multi-body system (mbs),preferred,en,CSO
+SKL_c164daaf0c65,skill,network of workstations,network of workstations,preferred,en,CSO
+SKL_9dcbfab1e53e,skill,parallel virtual machine,parallel virtual machine,preferred,en,CSO
+SKL_813c1d8bbb8b,skill,protocol testing,protocol testing,preferred,en,CSO
+SKL_0835d699439f,skill,available bit rate,available bit rate,preferred,en,CSO
+SKL_e9accf610cbc,skill,available bit rate (abr),available bit rate (abr),preferred,en,CSO
+SKL_922d180be99c,skill,average queue lengths,average queue lengths,preferred,en,CSO
+SKL_cc81a3040f8b,skill,congestion,congestion,preferred,en,CSO
+SKL_820fd0a47939,skill,affect recognition,affect recognition,preferred,en,CSO
+SKL_c206229ecc79,skill,affective state,affective state,preferred,en,CSO
+SKL_abe66d1bf41d,skill,emotion detection,emotion detection,preferred,en,CSO
+SKL_429cab4e73ad,skill,human emotion,human emotion,preferred,en,CSO
+SKL_e85880ce8698,skill,screen readers,screen readers,preferred,en,CSO
+SKL_e85880ce8698,skill,screen reader,screen reader,alt,en,CSO
+SKL_125d6faeca49,skill,severe disabilities,severe disabilities,preferred,en,CSO
+SKL_ddaf92393f29,skill,computer assisted language learning,computer assisted language learning,preferred,en,CSO
+SKL_ddaf92393f29,skill,computer-assisted language learning,computer-assisted language learning,alt,en,CSO
+SKL_b080fdfec9b1,skill,computer assisted,computer assisted,preferred,en,CSO
+SKL_1707cf5e3cde,skill,computer assisted instruction,computer assisted instruction,preferred,en,CSO
+SKL_d3d82ce5a079,skill,computer assisted learning,computer assisted learning,preferred,en,CSO
+SKL_9bfab9f370ae,skill,informal learning,informal learning,preferred,en,CSO
+SKL_8a89d08b3897,skill,intelligent tutors,intelligent tutors,preferred,en,CSO
+SKL_0d8d69273b2e,skill,interactive learning environment,interactive learning environment,preferred,en,CSO
+SKL_0d8d69273b2e,skill,interactive learning environments,interactive learning environments,alt,en,CSO
+SKL_9fdcd49c9b62,skill,learning management system,learning management system,preferred,en,CSO
+SKL_9fdcd49c9b62,skill,learning management systems,learning management systems,alt,en,CSO
+SKL_903e60d9fb3c,skill,learning paths,learning paths,preferred,en,CSO
+SKL_db89df0b5d21,skill,online learning environment,online learning environment,preferred,en,CSO
+SKL_6cc8b4fcb6fd,skill,personal learning environment,personal learning environment,preferred,en,CSO
+SKL_ee4eb2dd1182,skill,personalized learning,personalized learning,preferred,en,CSO
+SKL_28eca1a20558,skill,student modeling,student modeling,preferred,en,CSO
+SKL_28eca1a20558,skill,student model,student model,alt,en,CSO
+SKL_28eca1a20558,skill,student models,student models,alt,en,CSO
+SKL_a92e8f736b03,skill,ubiquitous learning environment,ubiquitous learning environment,preferred,en,CSO
+SKL_65c64c598c6d,skill,virtual learning environments,virtual learning environments,preferred,en,CSO
+SKL_65c64c598c6d,skill,virtual learning environment,virtual learning environment,alt,en,CSO
+SKL_2cd67fb33d8c,skill,web-based education,web-based education,preferred,en,CSO
+SKL_818b1e94a0cf,skill,web based learning,web based learning,preferred,en,CSO
+SKL_818b1e94a0cf,skill,web-based learning,web-based learning,alt,en,CSO
+SKL_f4ef92f66cf6,skill,brain machine interface,brain machine interface,preferred,en,CSO
+SKL_f4ef92f66cf6,skill,brain-machine interface,brain-machine interface,alt,en,CSO
+SKL_01afbe61c7af,skill,communication aids for disabled,communication aids for disabled,preferred,en,CSO
+SKL_16f74beee7d3,skill,message passing interface,message passing interface,preferred,en,CSO
+SKL_16f74beee7d3,skill,message passing interface (mpi),message passing interface (mpi),alt,en,CSO
+SKL_7c2aa1dadfdf,skill,brain computer interface,brain computer interface,preferred,en,CSO
+SKL_7c2aa1dadfdf,skill,brain computer interface (bci),brain computer interface (bci),alt,en,CSO
+SKL_7c2aa1dadfdf,skill,brain-computer interface,brain-computer interface,alt,en,CSO
+SKL_7c2aa1dadfdf,skill,brain-computer interface (bci),brain-computer interface (bci),alt,en,CSO
+SKL_7c2aa1dadfdf,skill,brain-computer interfaces,brain-computer interfaces,alt,en,CSO
+SKL_7c2aa1dadfdf,skill,brain-computer interfaces (bci),brain-computer interfaces (bci),alt,en,CSO
+SKL_1a085487e2a2,skill,computer peripheral equipment,computer peripheral equipment,preferred,en,CSO
+SKL_831b44e1c17b,skill,network interface,network interface,preferred,en,CSO
+SKL_c1e288fcb8b2,skill,dialogue manager,dialogue manager,preferred,en,CSO
+SKL_df3bb74dcbd8,skill,basic emotions,basic emotions,preferred,en,CSO
+SKL_e3cadcbafb4f,skill,emotion models,emotion models,preferred,en,CSO
+SKL_6976170b6e24,skill,emotional speech,emotional speech,preferred,en,CSO
+SKL_ca1c9744928a,skill,3d pose estimation,3d pose estimation,preferred,en,CSO
+SKL_2d7955d0b814,skill,action recognition,action recognition,preferred,en,CSO
+SKL_3ab1b2878bd7,skill,facial expression,facial expression,preferred,en,CSO
+SKL_3ab1b2878bd7,skill,facial expressions,facial expressions,alt,en,CSO
+SKL_3305da2099ee,skill,gesture interfaces,gesture interfaces,preferred,en,CSO
+SKL_713b12013fd8,skill,hand gesture,hand gesture,preferred,en,CSO
+SKL_713b12013fd8,skill,hand gestures,hand gestures,alt,en,CSO
+SKL_13fcded880c4,skill,hand images,hand images,preferred,en,CSO
+SKL_611884b132f8,skill,hand tracking,hand tracking,preferred,en,CSO
+SKL_6263d6bc6482,skill,human motion analysis,human motion analysis,preferred,en,CSO
+SKL_697ff61c4212,skill,human pose,human pose,preferred,en,CSO
+SKL_304c603e749a,skill,kinect,kinect,preferred,en,CSO
+SKL_a53e21ae5955,skill,sign language recognition,sign language recognition,preferred,en,CSO
+SKL_474eefbd68d0,skill,ambient displays,ambient displays,preferred,en,CSO
+SKL_e44a4aa48ded,skill,aviators,aviators,preferred,en,CSO
+SKL_5538368b2de5,skill,collaborative work,collaborative work,preferred,en,CSO
+SKL_763bb44b16e4,skill,cscw,cscw,preferred,en,CSO
+SKL_b662895de92d,skill,ergonomics,ergonomics,preferred,en,CSO
+SKL_90d36fa511c4,skill,human factors,human factors,preferred,en,CSO
+SKL_90d36fa511c4,skill,human factor,human factor,alt,en,CSO
+SKL_d47e094bf3dd,skill,interaction design,interaction design,preferred,en,CSO
+SKL_d47e094bf3dd,skill,interaction designs,interaction designs,alt,en,CSO
+SKL_064d359e10d8,skill,interaction techniques,interaction techniques,preferred,en,CSO
+SKL_064d359e10d8,skill,interaction technique,interaction technique,alt,en,CSO
+SKL_e3fc6d8aa224,skill,large displays,large displays,preferred,en,CSO
+SKL_425ae0a52af6,skill,sense making,sense making,preferred,en,CSO
+SKL_425ae0a52af6,skill,sense-making,sense-making,alt,en,CSO
+SKL_8cd346f63357,skill,social computing,social computing,preferred,en,CSO
+SKL_bfdf9c9abd54,skill,tactile feedback,tactile feedback,preferred,en,CSO
+SKL_d942710c4779,skill,tangible interfaces,tangible interfaces,preferred,en,CSO
+SKL_d942710c4779,skill,tangible interface,tangible interface,alt,en,CSO
+SKL_af9c5105f6f2,skill,usability evaluation,usability evaluation,preferred,en,CSO
+SKL_af9c5105f6f2,skill,usability testing,usability testing,alt,en,CSO
+SKL_8ca715d632a3,skill,user centered designs,user centered designs,preferred,en,CSO
+SKL_8ca715d632a3,skill,user centered design,user centered design,alt,en,CSO
+SKL_8ca715d632a3,skill,user-centered design,user-centered design,alt,en,CSO
+SKL_7b60c33062db,skill,user experience,user experience,preferred,en,CSO
+SKL_6925d79a15ef,skill,user interface designs,user interface designs,preferred,en,CSO
+SKL_6925d79a15ef,skill,user interface design,user interface design,alt,en,CSO
+SKL_18ac50cd7592,skill,vibrotactile,vibrotactile,preferred,en,CSO
+SKL_610e0fa574fa,skill,work environments,work environments,preferred,en,CSO
+SKL_c8058ec309fa,skill,communicating sequential process,communicating sequential process,preferred,en,CSO
+SKL_6872b4a24ed5,skill,checkpointing,checkpointing,preferred,en,CSO
+SKL_6872b4a24ed5,skill,check pointing,check pointing,alt,en,CSO
+SKL_6872b4a24ed5,skill,checkpointing techniques,checkpointing techniques,alt,en,CSO
+SKL_c14791cc997f,skill,dilatometers,dilatometers,preferred,en,CSO
+SKL_21768c52247a,skill,error recovery,error recovery,preferred,en,CSO
+SKL_5a6cd67b0959,skill,failure recovery,failure recovery,preferred,en,CSO
+SKL_9a6c21c8345d,skill,recovery mechanisms,recovery mechanisms,preferred,en,CSO
+SKL_9ceeea75cf40,skill,recovery time,recovery time,preferred,en,CSO
+SKL_ece59e5f82b1,skill,internet worm,internet worm,preferred,en,CSO
+SKL_95909d58e847,skill,worm detection,worm detection,preferred,en,CSO
+SKL_85c63c523d3c,skill,worm propagation,worm propagation,preferred,en,CSO
+SKL_b84446a4f530,skill,worms,worms,preferred,en,CSO
+SKL_31c37f753b4f,skill,catalogue identifiers,catalogue identifiers,preferred,en,CSO
+SKL_9304ee25e5a0,skill,distributed file systems,distributed file systems,preferred,en,CSO
+SKL_9304ee25e5a0,skill,distributed file system,distributed file system,alt,en,CSO
+SKL_a21a973e64f8,skill,file access,file access,preferred,en,CSO
+SKL_fb3c20bec17e,skill,i/o performance,i/o performance,preferred,en,CSO
+SKL_6666f026f8be,skill,metadata servers,metadata servers,preferred,en,CSO
+SKL_d588a1a18cf6,skill,parallel file system,parallel file system,preferred,en,CSO
+SKL_d588a1a18cf6,skill,parallel file systems,parallel file systems,alt,en,CSO
+SKL_752105a7c32e,skill,small files,small files,preferred,en,CSO
+SKL_418be1d35a9d,skill,storage media,storage media,preferred,en,CSO
+SKL_13aaf5ae21d8,skill,embedded linux,embedded linux,preferred,en,CSO
+SKL_ddbd023df41b,skill,botnets,botnets,preferred,en,CSO
+SKL_ddbd023df41b,skill,botnet,botnet,alt,en,CSO
+SKL_8fefa1094712,skill,code obfuscation,code obfuscation,preferred,en,CSO
+SKL_5cb086a2b022,skill,honeypots,honeypots,preferred,en,CSO
+SKL_5cb086a2b022,skill,honeypot,honeypot,alt,en,CSO
+SKL_80d846bcbb7d,skill,host-based,host-based,preferred,en,CSO
+SKL_de0e5bf97e64,skill,malicious activities,malicious activities,preferred,en,CSO
+SKL_b95536cbd116,skill,malicious behavior,malicious behavior,preferred,en,CSO
+SKL_76f50cbe3d5c,skill,malware analysis,malware analysis,preferred,en,CSO
+SKL_881fd1098a0c,skill,malware attacks,malware attacks,preferred,en,CSO
+SKL_48975a36f63e,skill,malware detection,malware detection,preferred,en,CSO
+SKL_e7f86b81d377,skill,obfuscation,obfuscation,preferred,en,CSO
+SKL_a7cba741097d,skill,rootkits,rootkits,preferred,en,CSO
+SKL_f000d7364bac,skill,spyware,spyware,preferred,en,CSO
+SKL_f000d7364bac,skill,spy-ware,spy-ware,alt,en,CSO
+SKL_442584424261,skill,trojans,trojans,preferred,en,CSO
+SKL_62df662ad370,skill,rtos,rtos,preferred,en,CSO
+SKL_f257831b1f76,skill,cache partitioning,cache partitioning,preferred,en,CSO
+SKL_e551c51aa15c,skill,storage virtualization,storage virtualization,preferred,en,CSO
+SKL_6d6c7fcc1579,skill,microsoft windows,microsoft windows,preferred,en,CSO
+SKL_e9d032973083,skill,windows ce,windows ce,preferred,en,CSO
+SKL_0add49f50fd6,skill,windows vista,windows vista,preferred,en,CSO
+SKL_0822454ed839,skill,windows xp,windows xp,preferred,en,CSO
+SKL_3814551502fc,skill,autonomic management,autonomic management,preferred,en,CSO
+SKL_68812a6f1260,skill,autonomic systems,autonomic systems,preferred,en,CSO
+SKL_dd342fb022fb,skill,self-configuring,self-configuring,preferred,en,CSO
+SKL_f2cec07a676d,skill,self-managing,self-managing,preferred,en,CSO
+SKL_73c1b6605da7,skill,bug tracking system,bug tracking system,preferred,en,CSO
+SKL_03979a15d648,skill,circuit modeling,circuit modeling,preferred,en,CSO
+SKL_6ae4cf2736ae,skill,circuit simulators,circuit simulators,preferred,en,CSO
+SKL_219b16541934,skill,compact model,compact model,preferred,en,CSO
+SKL_3db07223d865,skill,simulation environments,simulation environments,preferred,en,CSO
+SKL_d81356bb5821,skill,simulation speed,simulation speed,preferred,en,CSO
+SKL_c5319860786f,skill,bug-fixing,bug-fixing,preferred,en,CSO

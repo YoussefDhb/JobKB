@@ -11,8 +11,7 @@ SKL_0f4dc71e041d,ESCO,f6d294f4-db62-4fc5-a7b8-778e5071c112,carry out forum moder
 SKL_361e0eb1d41d,ESCO,fa3e5cec-703e-4d46-b3bb-e8a89540ab54,manage digital archives,gérer des archives numériques,maintain digital archives | manage digital archive | oversee digital archives | managing digital archives,,"Create and maintain computer archives and databases, incorporating latest developments in electronic information storage technology.",,skill/competence,sector-specific,hard,esco_skillcompetence_default,other_hard
 SKL_8fdc5cfeed79,ESCO,98a1dec3-8138-4f46-a596-5e2a83b884b9,business analytics,analyse des entreprises,business data analytics,analyse des données commerciales | analyse de données commerciales,The disciplines and technologies for solving business problems through employing quantitative methods such as data analysis and statistical models.,,knowledge,sector-specific,hard,esco_knowledge_pillar,data_databases
 SKL_f6bc4de2f8d0,ESCO,4fa830eb-965f-467c-9dc2-46f1fdc30875,manage sound quality,gérer la qualité sonore,managing sound quality | supervise sound quality | maintain sound quality | sound quality management | regulate sound quality | oversee sound quality | manage the quality of sound quality,,Perform sound checks. Set up audio equipment for optimal sound output before as well as during performance. Regulate the volume during broadcasts by controlling the audio equipment.,,skill/competence,cross-sector,hard,esco_skillcompetence_default,other_hard
-SKL_362baba5cb5a,ESCO,17924c75-45f4-4593-afac-eea0d51f04b5,defence standard procedures,procédures normalisées de défense,defence protocols | defence standard processes | defence standard technical procedures | defence standard methods | defence standard guidelines,,"Methods and procedures typical for defence applications such as the NATO Standardization Agreements or STANAGs
-Standard definitions of the processes, procedures, terms, and conditions for common military or technical procedures or equipment. Guidelines for capability planners, programme managers and test managers to prescribe the necessary technical standards and profiles to achieve interoperability of Communications and Information Systems.",,knowledge,sector-specific,hard,esco_knowledge_pillar,knowledge_general
+SKL_362baba5cb5a,ESCO,17924c75-45f4-4593-afac-eea0d51f04b5,defence standard procedures,procédures normalisées de défense,defence protocols | defence standard processes | defence standard technical procedures | defence standard methods | defence standard guidelines,,"Methods and procedures typical for defence applications such as the NATO Standardization Agreements or STANAGs Standard definitions of the processes, procedures, terms, and conditions for common military or technical procedures or equipment. Guidelines for capability planners, programme managers and test managers to prescribe the necessary technical standards and profiles to achieve interoperability of Communications and Information Systems.",,knowledge,sector-specific,hard,esco_knowledge_pillar,knowledge_general
 SKL_8eaf90e6b080,ESCO,54c9c155-9293-4329-8ed2-2e76e8b519d4,define data quality criteria,définir les critères de qualité des données,specify data quality criteria | set data quality benchmarks,,"Specify the criteria by which data quality is measured for business purposes, such as inconsistencies, incompleteness, usability for purpose and accuracy.",,skill/competence,sector-specific,hard,esco_skillcompetence_default,other_hard
 SKL_d0bf41708bae,ESCO,a56dec32-05ef-45de-a256-ee6741f356db,information confidentiality,confidentialité de l’information,data confidentiality | consumer data privacy | data access control,confidentialité des données | contrôle de l’accès aux données | confidentialité des informations | confidentialité des données de l’utilisateur | protection du caractère confidentiel des données | protection des renseignements personnels,"The mechanisms and regulations which allow for selective access control and guarantee that only authorised parties (people, processes, systems and devices) have access to data, the way to comply with confidential information and the risks of non-compliance.",,knowledge,sector-specific,hard,esco_knowledge_pillar,knowledge_general
 SKL_af82150fafdb,ESCO,d2adb565-a865-424d-aeb5-9fbcbf2afe2a,Joomla,Joomla,Joomla software,,"The open-source web-based software system written in PHP, used for creating, editing, publishing and archiving blogs, articles, corporate or small business websites, social networking websites or press releases.",,knowledge,sector-specific,hard,esco_knowledge_pillar,knowledge_general
@@ -5474,6 +5473,628 @@ SKL_a84652107167,ONET,onet_software:sierra scientific software cris,Sierra Scien
 SKL_f6293b44c73c,ONET,onet_software:studymanager sponsor edition,StudyManager Sponsor Edition,,,,,,,,hard,onet_software,other_hard
 SKL_64bab9114dbe,ONET,onet_software:symetric sciences symetric,SyMetric Sciences SyMetric,,,,,,,,hard,onet_software,other_hard
 SKL_eaf11b2aee23,ONET,onet_software:topaz enterprise software suite,TOPAZ Enterprise Software Suite,,,,,,,,hard,onet_software,programming_languages
+SKL_7ad5b07c1d80,SFIA,ACIN,Accessibility and inclusion,,ACIN,,Driving accessibility and inclusion in services and products.,,,,,sfia_skill,web
+SKL_47f6acbc1be3,SFIA,ADEV,Animation development,,ADEV,,"Designing and developing animated and interactive systems such as games, simulations and virtual environments.",,,,,sfia_skill,programming_languages
+SKL_ff360bf52510,SFIA,ANCC,Analytical classification and coding,,ANCC,,"Interpreting information and assigning classifications or labels based on domain-specific knowledge, standards and guidelines to enable data analysis and use.",,,,,sfia_skill,programming_languages
+SKL_549d122be7ec,SFIA,ARCH,Solution architecture,,ARCH,,Developing and communicating a multi-dimensional solution architecture to deliver agreed business outcomes.,,,,,sfia_skill,systems_infrastructure
+SKL_c2291c707762,SFIA,ASMG,Asset management,,ASMG,,"Managing the full lifecycle of assets from acquisition, operation, maintenance to disposal.",,,,,sfia_skill,it_management
+SKL_a53841b5b9ac,SFIA,ASUP,Application support,,ASUP,,"Delivering management, technical and administrative services to support and maintain live applications.",,,,,sfia_skill,programming_languages
+SKL_be1bdd24efde,SFIA,AUDT,Audit,,AUDT,,"Delivering independent, risk-based assessments of the effectiveness of processes, the controls and the compliance environment of an organisation.",,,,,sfia_skill,it_management
+SKL_0941bee855c3,SFIA,AVMT,Availability management,,AVMT,,Ensuring services deliver agreed levels of availability to meet the current and future needs of the business.,,,,,sfia_skill,it_management
+SKL_05fa2e7e0507,SFIA,BENM,Benefits management,,BENM,,"Forecasting, planning and monitoring the emergence and effective realisation of anticipated benefits from projects and programmes.",,,,,sfia_skill,it_management
+SKL_87843f68619e,SFIA,BINT,Business intelligence,,BINT,,"Developing, producing and delivering regular and one-off management information to provide insights and aid decision-making.",,,,,sfia_skill,data_databases
+SKL_0e3f61c39214,SFIA,BPTS,User acceptance testing,,BPTS,,"Validating systems, products, business processes or services to determine whether the acceptance criteria have been satisfied.",,,,,sfia_skill,methodology
+SKL_9bddb24890e7,SFIA,BUDF,Budgeting and forecasting,,BUDF,,Developing and managing financial budgets and forecasts to enable effective decision-making and resource allocation.,,,,,sfia_skill,it_management
+SKL_81e0ff8acbba,SFIA,BURM,Risk management,,BURM,,"Planning and implementing processes for managing risk across the enterprise, aligned with organisational strategy and governance frameworks.",,,,,sfia_skill,it_management
+SKL_6b4d325200ad,SFIA,CFMG,Configuration management,,CFMG,,"Planning, identifying, controlling, accounting for and auditing of configuration items (CIs) and their interrelationships.",,,,,sfia_skill,cloud_devops
+SKL_d921385f13bc,SFIA,CHMG,Change control,,CHMG,,"Assessing risks associated with proposed changes and ensuring changes to products, services or systems are controlled and coordinated.",,,,,sfia_skill,methodology
+SKL_53729a6887c6,SFIA,COMG,Cost management,,COMG,,"Planning, controlling and analysing costs to enable the effective use of financial resources.",,,,,sfia_skill,it_management
+SKL_17e94c7e936c,SFIA,COPL,Continuity management,,COPL,,"Developing, implementing and testing a business continuity framework.",,,,,sfia_skill,it_management
+SKL_433dccb1dd5d,SFIA,CPMG,Capacity management,,CPMG,,Ensuring service components have the capacity and performance to meet current and planned business needs.,,,,,sfia_skill,systems_infrastructure
+SKL_2f70b8dbfbe0,SFIA,CRIM,Cybercrime investigation,,CRIM,,"Investigates cybercrimes, collects evidence, determines incident impacts and collaborates with legal teams to protect digital assets.",,,,,sfia_skill,security
+SKL_e13e7413345e,SFIA,CSOP,Certification scheme operation,,CSOP,,"Designing, developing and operating certification schemes, accreditations and credentials, including digital credentials or badges.",,,,,sfia_skill,it_management
+SKL_563823b757a7,SFIA,DAAN,Data analytics,,DAAN,,"Enabling data-driven decision making by extracting, analysing and communicating insights from structured and unstructured data.",,,,,sfia_skill,data_databases
+SKL_05240b4b73ca,SFIA,DATM,Data management,,DATM,,"Developing and implementing plans, policies and practices that control, protect and optimise the value and governance of data assets.",,,,,sfia_skill,data_databases
+SKL_59727ae66cf3,SFIA,DATS,Data science,,DATS,,"Applying mathematics, statistics, data mining and predictive modelling techniques to gain insights, predict behaviours and generate value from data.",,,,,sfia_skill,ai_ml
+SKL_a2d8ba982ff0,SFIA,DBAD,Database administration,,DBAD,,"Installing, configuring, monitoring, maintaining databases and data stores, ensuring performance and security and adapting to evolving technologies.",,,,,sfia_skill,data_databases
+SKL_5aa3f150ef89,SFIA,DBDS,Database design,,DBDS,,"Specifying, designing and maintaining mechanisms for storing and accessing data across various environments and platforms.",,,,,sfia_skill,data_databases
+SKL_aa72fddaf13d,SFIA,DEMG,Delivery management,,DEMG,,Ensuring successful delivery of new or updated products and services through effective leadership and collaboration within defined delivery cycles.,,,,,sfia_skill,it_management
+SKL_509880368e67,SFIA,DEMM,Demand management,,DEMM,,Analysing and proactively managing business demand for new services or modifications to existing service features or volumes.,,,,,sfia_skill,it_management
+SKL_bb6c65e1bc14,SFIA,DENG,Data engineering,,DENG,,"Designing, building, operationalising, securing and monitoring data pipelines, stores and real-time processing systems for scalable and reliable data management.",,,,,sfia_skill,data_databases
+SKL_6f2bbee10910,SFIA,DEPL,Deployment,,DEPL,,"Transitioning software from development to live usage, managing risks and ensuring it works as intended.",,,,,sfia_skill,cloud_devops
+SKL_8dfcf5f0bf7f,SFIA,DESN,Systems design,,DESN,,Designing systems to meet specified requirements and agreed systems architectures.,,,,,sfia_skill,systems_infrastructure
+SKL_75eaa5be5277,SFIA,DGFS,Digital forensics,,DGFS,,Recovering and investigating material found in digital devices.,,,,,sfia_skill,security
+SKL_3760aa2a100a,SFIA,DTAN,Data modelling and design,,DTAN,,"Developing models and diagrams to represent, communicate and manage data requirements and data assets.",,,,,sfia_skill,data_databases
+SKL_41c27949fd2e,SFIA,EMRG,Emerging technology monitoring,,EMRG,,"Identifying and assessing new and emerging technologies, products, services, methods and techniques.",,,,,sfia_skill,it_management
+SKL_f4df9bce0a01,SFIA,FEAS,Feasibility assessment,,FEAS,,"Defining, evaluating and describing business change options for financial, technical and business feasibility and strategic alignment.",,,,,sfia_skill,methodology
+SKL_1b0853710f49,SFIA,GOVN,Governance,,GOVN,,"Defining and operating frameworks for decision-making, risk management, stakeholder relationships and compliance with organisational and regulatory obligations.",,,,,sfia_skill,it_management
+SKL_eaa356d4a7f9,SFIA,GRDN,Graphic design,,GRDN,,"Creating and applying visual concepts to communicate ideas, enhance aesthetics and improve user experience across digital and print media.",,,,,sfia_skill,web
+SKL_d2bb6571962d,SFIA,HCEV,User experience design,,HCEV,,"Producing design concepts and prototypes for user interactions and experiences of a product, system or service.",,,,,sfia_skill,web
+SKL_ba26362f220c,SFIA,HPCC,High-performance computing,,HPCC,,Using advanced computer systems and special programming techniques to solve complex computational problems.,,,,,sfia_skill,systems_infrastructure
+SKL_c61574c262e0,SFIA,IAMT,Identity and access management,,IAMT,,Manages identity verification and access permissions within organisational systems and environments.,,,,,sfia_skill,security
+SKL_a9d56865317c,SFIA,IFDN,Infrastructure design,,IFDN,,"Designing technology infrastructure to meet business requirements, ensuring scalability, reliability, security and alignment with strategic objectives.",,,,,sfia_skill,systems_infrastructure
+SKL_fdb765925910,SFIA,INAS,Information assurance,,INAS,,"Protecting against and managing risks related to the use, storage and transmission of data and information systems.",,,,,sfia_skill,security
+SKL_5de77ee85334,SFIA,INCA,Content design and authoring,,INCA,,"Planning, designing and creating content that meets user-centred and organisational needs, encompassing textual information, graphical content and multimedia elements.",,,,,sfia_skill,web
+SKL_a70d9841725b,SFIA,INOV,Innovation management,,INOV,,"Identifying, prioritising, incubating and exploiting opportunities provided by information, communication and digital technologies.",,,,,sfia_skill,it_management
+SKL_563cfecda4f5,SFIA,IRMG,Information management,,IRMG,,Enabling the effective management and use of information assets.,,,,,sfia_skill,data_databases
+SKL_2648310d0179,SFIA,ISCO,Information systems coordination,,ISCO,,Coordinating information and technology strategies where the adoption of a common approach would benefit the organisation.,,,,,sfia_skill,it_management
+SKL_a0e23de1a15f,SFIA,ITCM,Contract management,,ITCM,,"Managing and operating formal contracts, addressing supplier and client needs in product and service provision.",,,,,sfia_skill,it_management
+SKL_9ad7739fb802,SFIA,ITMG,Technology service management,,ITMG,,Managing the provision of technology-based services to meet defined organisational needs.,,,,,sfia_skill,it_management
+SKL_c56b1cd05711,SFIA,ITOP,Infrastructure operations,,ITOP,,"Provisioning, deploying, configuring, operating and optimising technology infrastructure across physical, virtual and cloud-based environments.",,,,,sfia_skill,systems_infrastructure
+SKL_01b009086017,SFIA,ITSP,Strategic planning,,ITSP,,"Creating and maintaining organisational-level strategies to align overall business plans, actions and resources with high-level business objectives.",,,,,sfia_skill,it_management
+SKL_34ac18523697,SFIA,KNOW,Knowledge management,,KNOW,,"Systematically capturing, developing and leveraging vital knowledge to create value and enhance organisational performance.",,,,,sfia_skill,it_management
+SKL_29007cfd7af4,SFIA,MEAS,Measurement,,MEAS,,Developing and operating a measurement capability to support agreed organisational information needs.,,,,,sfia_skill,knowledge_general
+SKL_ef4f2e51527f,SFIA,METL,Methods and tools,,METL,,"Leads the adoption, management and optimisation of methods and tools, ensuring effective use and alignment with organisational objectives.",,,,,sfia_skill,methodology
+SKL_10824139e0d1,SFIA,MLNG,Machine learning,,MLNG,,"Developing systems that learn from data and experience, improving performance, accuracy and adaptability in dynamic environments.",,,,,sfia_skill,ai_ml
+SKL_68d30586a0ec,SFIA,NFTS,Non-functional testing,,NFTS,,"Assessing systems and services to evaluate performance, security, scalability and other non-functional qualities against requirements or expected standards.",,,,,sfia_skill,methodology
+SKL_3407bd66caa6,SFIA,NTAS,Network support,,NTAS,,Providing maintenance and support services for communications networks.,,,,,sfia_skill,networks
+SKL_9c1699211b96,SFIA,NTDS,Network design,,NTDS,,"Designing communication networks to meet business requirements, ensuring scalability, reliability, security and alignment with strategic objectives.",,,,,sfia_skill,networks
+SKL_9b23359d1468,SFIA,NUAN,Numerical analysis,,NUAN,,"Creating, analysing, implementing, testing and improving algorithms for numerically solving mathematical problems.",,,,,sfia_skill,knowledge_general
+SKL_3efd0b83fa25,SFIA,OCOP,Offensive cyber operations,,OCOP,,"Plans, executes and manages offensive cybersecurity operations, including target selection, electronic target folders and post-operation analysis.",,,,,sfia_skill,security
+SKL_adde03876632,SFIA,PBMG,Problem management,,PBMG,,Managing the lifecycle of all problems that have occurred or could occur in delivering a service.,,,,,sfia_skill,it_management
+SKL_b40bb4857c84,SFIA,PEDP,Information and data compliance,,PEDP,,Implementing and promoting compliance with information and data management legislation.,,,,,sfia_skill,it_management
+SKL_1c86aa5c3d4e,SFIA,PENT,Penetration testing,,PENT,,Testing the effectiveness of security controls by emulating the tools and techniques of likely attackers.,,,,,sfia_skill,security
+SKL_f32c92fc5847,SFIA,PGMG,Programme management,,PGMG,,"Identifying, planning and coordinating a set of related projects and activities in support of specific business strategies and objectives.",,,,,sfia_skill,it_management
+SKL_694c9670dfdb,SFIA,POMG,Portfolio management,,POMG,,"Developing and applying a management framework to define and deliver a portfolio of programmes, projects and/or ongoing services.",,,,,sfia_skill,it_management
+SKL_6065f726d95d,SFIA,PORT,Software configuration,,PORT,,Designing and deploying software product configurations into software environments or platforms.,,,,,sfia_skill,cloud_devops
+SKL_b180e72815e8,SFIA,PRMG,Project management,,PRMG,,"Delivering agreed project outcomes by aligning appropriate management techniques, collaboration, leadership and governance to specific project and organisational contexts.",,,,,sfia_skill,it_management
+SKL_9ab3116cc167,SFIA,PROD,Product management,,PROD,,"Managing and developing products or services throughout their full lifecycle, from inception through growth, maturity, and decline, to retirement.",,,,,sfia_skill,it_management
+SKL_ac037d96b392,SFIA,PROF,"Portfolio, programme and project support",,PROF,,"Providing support and guidance on portfolio, programme and project management processes, procedures, tools and techniques.",,,,,sfia_skill,it_management
+SKL_f565dbe8fbed,SFIA,PROG,Programming/software development,,PROG,,Developing software components to deliver value to stakeholders.,,,,,sfia_skill,programming_languages
+SKL_94327a0585b3,SFIA,PRTS,Process testing,,PRTS,,"Assessing documented and undocumented process flows within a product, system or service against business needs through investigation and testing.",,,,,sfia_skill,methodology
+SKL_78f3dcc0fcc6,SFIA,QUAS,Quality assurance,,QUAS,,"Assuring, through ongoing and periodic assessments and reviews, that the organisation's quality objectives are being met.",,,,,sfia_skill,it_management
+SKL_73f0323562d3,SFIA,QUMG,Quality management,,QUMG,,Defining and operating a management framework of processes and working practices to deliver the organisation's quality objectives.,,,,,sfia_skill,it_management
+SKL_c16deab65db7,SFIA,REQM,Requirements definition and management,,REQM,,Managing requirements through the entire delivery and operational lifecycle.,,,,,sfia_skill,methodology
+SKL_5b60d21172cc,SFIA,RESD,Real-time/embedded systems development,,RESD,,Designing and developing reliable real-time software typically within embedded systems.,,,,,sfia_skill,programming_languages
+SKL_8c9f8a08b560,SFIA,RFEN,Radio frequency engineering,,RFEN,,"Designing, installing and maintaining radio frequency based devices and software.",,,,,sfia_skill,networks
+SKL_77808b817e10,SFIA,RMGT,Records management,,RMGT,,"Planning, implementing and managing the full lifecycle of organisational records.",,,,,sfia_skill,it_management
+SKL_12525a177acf,SFIA,RSCH,Formal research,,RSCH,,"Systematically creating new knowledge by data gathering, innovation, experimentation, evaluation and dissemination.",,,,,sfia_skill,knowledge_general
+SKL_c671635e0419,SFIA,SCAD,Security operations,,SCAD,,"Manages and administers security measures, using tools and intelligence to protect assets, ensuring compliance and operational integrity.",,,,,sfia_skill,security
+SKL_a08d72ca09cb,SFIA,SCMG,Service catalogue management,,SCMG,,Providing a source of consistent information about available services and products to customers and users.,,,,,sfia_skill,it_management
+SKL_bc26ea1f9963,SFIA,SCTY,Information security,,SCTY,,Defining and operating a framework of security controls and security management strategies.,,,,,sfia_skill,security
+SKL_e4c9688c6662,SFIA,SINT,Systems integration and build,,SINT,,"Planning, implementing and controlling activities to integrate system elements, subsystems and interfaces to create operational systems, products or services.",,,,,sfia_skill,systems_infrastructure
+SKL_c773eb87479d,SFIA,SLMO,Service level management,,SLMO,,"Agreeing targets for service levels and assessing, monitoring and managing the delivery of services against the targets.",,,,,sfia_skill,it_management
+SKL_8eae280be68f,SFIA,STMG,Storage management,,STMG,,"Provisioning, configuring and optimising on-premises and cloud-based storage solutions, ensuring data availability, security and alignment with business objectives.",,,,,sfia_skill,systems_infrastructure
+SKL_16bd843f4bd2,SFIA,STPL,Enterprise and business architecture,,STPL,,"Aligning an organisation's technology strategy with its business mission, strategy and processes and documenting this using architectural models.",,,,,sfia_skill,systems_infrastructure
+SKL_3eba2288bc55,SFIA,SUPP,Supplier management,,SUPP,,"Aligning the organisation's supplier performance objectives and activities with sourcing strategies and plans, balancing costs, efficiencies and service quality.",,,,,sfia_skill,it_management
+SKL_3c9570f8b67e,SFIA,SWDN,Software design,,SWDN,,"Architecting and designing software to meet specified requirements, ensuring adherence to established standards and principles.",,,,,sfia_skill,programming_languages
+SKL_37d5d9686f8d,SFIA,SYSP,System software administration,,SYSP,,"Installing, managing and maintaining operating systems, data management, office automation and utility software across various infrastructure environments.",,,,,sfia_skill,systems_infrastructure
+SKL_0e5f0bd407c0,SFIA,TEST,Functional testing,,TEST,,"Assessing specified or unspecified functional requirements and characteristics of products, systems and services through investigation and testing.",,,,,sfia_skill,methodology
+SKL_4b2639e3e5b7,SFIA,THIN,Threat intelligence,,THIN,,Developing and sharing actionable insights on current and potential security threats to the success or integrity of an organisation.,,,,,sfia_skill,security
+SKL_98f70f08b190,SFIA,UNAN,User experience analysis,,UNAN,,"Understanding the context of use for systems, products and services and specifying user experience requirements and design goals.",,,,,sfia_skill,web
+SKL_41e30fa94ebd,SFIA,URCH,User research,,URCH,,"Identifying users' behaviours, needs and motivations using observational research methods.",,,,,sfia_skill,web
+SKL_1ca20298478c,SFIA,USEV,User experience evaluation,,USEV,,"Validating systems, products or services against user experience goals, metrics and targets.",,,,,sfia_skill,web
+SKL_ca9917ccf4cf,SFIA,USUP,Incident management,,USUP,,Coordinating responses to a diverse range of incidents to minimise negative impacts and quickly restore services.,,,,,sfia_skill,it_management
+SKL_b063e351d3b3,SFIA,VISL,Data visualisation,,VISL,,"Facilitating understanding of data by displaying concepts, ideas and facts using graphical representations.",,,,,sfia_skill,data_databases
+SKL_00753218389c,SFIA,VUAS,Vulnerability assessment,,VUAS,,"Identifying and classifying security vulnerabilities in networks, systems and applications and mitigating or eliminating their impact.",,,,,sfia_skill,security
+SKL_043e3ecea0ef,SFIA,VURE,Vulnerability research,,VURE,,"Conducting applied research to discover, evaluate and mitigate new or unknown security vulnerabilities and weaknesses.",,,,,sfia_skill,security
+SKL_236b2ef8eea7,CSO,computer_security,computer security,,,,,,knowledge,,,cso_topic,security
+SKL_a5aa9e592ab9,CSO,machine_learning,machine learning,,machine learning algorithms | machine learning methods | machine learning techniques | machine learnings | machine-learning,,,,knowledge,,,cso_topic,ai_ml
+SKL_8e4ab79e45e6,CSO,artificial_intelligence,artificial intelligence,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_365724ac541b,CSO,data_mining,data mining,,,,,,knowledge,,,cso_topic,data_databases
+SKL_38958b0c8a87,CSO,information_retrieval,information retrieval,,,,,,knowledge,,,cso_topic,data_databases
+SKL_7b14dcce4d35,CSO,computer_networks,computer networks,,computer communication networks | computer network,,,,knowledge,,,cso_topic,networks
+SKL_58c7830565aa,CSO,human_computer_interaction,human computer interaction,,human-computer interaction,,,,knowledge,,,cso_topic,web
+SKL_79c5bd04e0e1,CSO,operating_systems,operating systems,,computer operating systems | operating system,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_e2cebe10175b,CSO,software_engineering,software engineering,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_cec36711af26,CSO,computer_programming,computer programming,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_b052dd803e19,CSO,internet,internet,,,,,,knowledge,,,cso_topic,networks
+SKL_d5fcac07f30f,CSO,software,software,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_fc7c6db8b2b6,CSO,access_control,access control,,,,,,knowledge,,,cso_topic,security
+SKL_8a02d56285c6,CSO,cryptology,cryptology,,,,,,knowledge,,,cso_topic,security
+SKL_8813d38bde4b,CSO,cybersecurity,cybersecurity,,cyber security | cybersecurity systems | system security,,,,knowledge,,,cso_topic,security
+SKL_e226709eec51,CSO,privacy,privacy,,,,,,knowledge,,,cso_topic,security
+SKL_84a6306f0b67,CSO,security_of_data,security of data,,,,,,knowledge,,,cso_topic,security
+SKL_fd89a06cee45,CSO,active_learning,active learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_dda2be88c866,CSO,adaptive_learning,adaptive learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_ceb9e329a67d,CSO,adversarial_machine_learning,adversarial machine learning,,adversarial learning,,,,knowledge,,,cso_topic,ai_ml
+SKL_255aa10d74f4,CSO,neural_networks,neural networks,,artificial neural network | artificial neural networks | back propagation neural networks | back-propagation neural network | back-propagation neural networks | neural network | neural network model,,,,knowledge,,,cso_topic,ai_ml
+SKL_e14d94a2c019,CSO,association_rule_learning,association rule learning,,associative learning | rule-based machine learning,,,,knowledge,,,cso_topic,ai_ml
+SKL_7da4e08fdd88,CSO,associative_processing,associative processing,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_832db8ddb73b,CSO,classifiers,classifiers,,classifier,,,,knowledge,,,cso_topic,ai_ml
+SKL_ac2501e1b0ad,CSO,cluster_analysis,cluster analysis,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_26b327c7bcec,CSO,contrastive_learning,contrastive learning,,contrastive representation learning | self-supervised learning,,,,knowledge,,,cso_topic,ai_ml
+SKL_b8edd210571b,CSO,ensemble_learning,ensemble learning,,ensemble methods,,,,knowledge,,,cso_topic,ai_ml
+SKL_5c534f498acb,CSO,feature_extraction,feature extraction,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_c91ac9be0772,CSO,representation_learning,representation learning,,feature learning,,,,knowledge,,,cso_topic,ai_ml
+SKL_aadc8fe751db,CSO,feature_selection,feature selection,,feature selection methods,,,,knowledge,,,cso_topic,ai_ml
+SKL_1fb3cb1c2b84,CSO,feature_vectors,feature vectors,,feature vector,,,,knowledge,,,cso_topic,ai_ml
+SKL_a165ca163a1d,CSO,federated_learning,federated learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_a5b6377b10ba,CSO,few-shot_learning,few-shot learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_adfa3a8b7c41,CSO,fine-tuning_learning,fine-tuning learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_f58460d9617d,CSO,forecasting_models,forecasting models,,forecasting accuracy | forecasting methods,,,,knowledge,,,cso_topic,ai_ml
+SKL_70b20b198340,CSO,gaussian_mixture_of_experts,gaussian mixture of experts,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_055d733aea56,CSO,inductive_logic_programming_(ilp),inductive logic programming (ilp),,ilp | inductive logic programming,,,,knowledge,,,cso_topic,ai_ml
+SKL_975dea6992c6,CSO,knowledge_distillation,knowledge distillation,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_8eac5ef6539d,CSO,link_prediction,link prediction,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_c6b39390a030,CSO,meta-learning,meta-learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_f1608b74ad0c,CSO,multi-objective_learning,multi-objective learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_02f59c27106f,CSO,multitask_learning,multitask learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_d778721a368d,CSO,one-shot_learning,one-shot learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_5bc04a0cbccf,CSO,out-of-distribution_detection,out-of-distribution detection,,ood detection,,,,knowledge,,,cso_topic,ai_ml
+SKL_768c120656a6,CSO,out-of-distribution_generalization,out-of-distribution generalization,,ood generalization,,,,knowledge,,,cso_topic,ai_ml
+SKL_4b2fa2119440,CSO,parameter_learning,parameter learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_c770ba1952d6,CSO,pattern_recognition,pattern recognition,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_bbbe68f42ba5,CSO,positive-unlabeled_learning,positive-unlabeled learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_9dd093bcc40d,CSO,quantum_machine_learning,quantum machine learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_27f62bba42df,CSO,reinforcement_learning,reinforcement learning,,reinforcement learning (rl),,,,knowledge,,,cso_topic,ai_ml
+SKL_4e67eb4664e9,CSO,semi-supervised_learning,semi-supervised learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_a8f20935087a,CSO,statistical_learning,statistical learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_093ee3399ce5,CSO,supervised_machine_learning,supervised machine learning,,supervised learning,,,,knowledge,,,cso_topic,ai_ml
+SKL_75167755159e,CSO,synthetic_data,synthetic data,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_cef7f88f1b3a,CSO,test_samples,test samples,,test sample | test set,,,,knowledge,,,cso_topic,ai_ml
+SKL_6f9b667c430d,CSO,topic_model,topic model,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_50bdf9ee81e5,CSO,training_sample,training sample,,training samples | training set,,,,knowledge,,,cso_topic,ai_ml
+SKL_9d3bed8d10c5,CSO,transfer_learning,transfer learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_bbf21b77a027,CSO,unsupervised_learning,unsupervised learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_daeac06bd968,CSO,zero-shot_learning,zero-shot learning,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_e493afc4ceeb,CSO,agentic_artificial_intelligence,agentic artificial intelligence,,agentic ai,,,,knowledge,,,cso_topic,ai_ml
+SKL_d4c634297211,CSO,ai_applications,ai applications,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_6bb7a16a1cee,CSO,planning_algorithms,planning algorithms,,ai planning,,,,knowledge,,,cso_topic,ai_ml
+SKL_c01793d4f10f,CSO,ambient_intelligence,ambient intelligence,,ambient intelligent,,,,knowledge,,,cso_topic,ai_ml
+SKL_8b9f8af97ac6,CSO,bayesian_methods,bayesian methods,,bayesian | bayesian approach | bayesian approaches | bayesian framework | bayesian frameworks | bayesian method | bayesian model | bayesian models | bayesian network | bayesian networks,,,,knowledge,,,cso_topic,ai_ml
+SKL_40dc768147c7,CSO,cellular_automata,cellular automata,,cellular automata (ca),,,,knowledge,,,cso_topic,ai_ml
+SKL_c81e56c216cb,CSO,cognitive_systems,cognitive systems,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_501176bcf64f,CSO,common-sense,common-sense,,common sense | common-sense computing | common-sense reasoning | commonsense | commonsense computing | commonsense reasoning,,,,knowledge,,,cso_topic,ai_ml
+SKL_8c528a4444d4,CSO,constraint_satisfaction_problems_(csp),constraint satisfaction problems (csp),,,,,,knowledge,,,cso_topic,ai_ml
+SKL_6b521b221cc5,CSO,decision_support_systems,decision support systems,,decision support system | decision support system (dss),,,,knowledge,,,cso_topic,ai_ml
+SKL_367ad8b8265f,CSO,decision_theory,decision theory,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_25992270398f,CSO,expert_systems,expert systems,,expert system,,,,knowledge,,,cso_topic,ai_ml
+SKL_13745321bde7,CSO,explainable_ai,explainable ai,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_4def01170429,CSO,fairness_in_ai,fairness in ai,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_7765f0661c47,CSO,formal_logic,formal logic,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_efbe450343b2,CSO,game_theory,game theory,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_a801541080a8,CSO,generative_ai,generative ai,,genai | generative artificial intelligence,,,,knowledge,,,cso_topic,ai_ml
+SKL_0916b73036c9,CSO,genetic_algorithms,genetic algorithms,,genetic algorithm | genetic algorithm (ga),,,,knowledge,,,cso_topic,ai_ml
+SKL_652a994ab512,CSO,heuristic_programming,heuristic programming,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_a7417ead6943,CSO,human-ai_collaboration,human-ai collaboration,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_103774d07298,CSO,inference_engines,inference engines,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_4639536ce387,CSO,intelligence_analysis,intelligence analysis,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_e81193c16728,CSO,intelligent_control,intelligent control,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_6e98db78a277,CSO,intelligent_robots,intelligent robots,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_3eeec80f8aa9,CSO,intelligent_systems,intelligent systems,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_f42f6e5b9018,CSO,intelligent_tutoring_system,intelligent tutoring system,,intelligent tutoring | intelligent tutoring systems,,,,knowledge,,,cso_topic,ai_ml
+SKL_25ec50a379d2,CSO,knowledge_based_systems,knowledge based systems,,knowledge-based systems,,,,knowledge,,,cso_topic,ai_ml
+SKL_2a02719bf68b,CSO,machine_perception,machine perception,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_1df3a460f9ab,CSO,multiagent_system,multiagent system,,multi agent system | multi agent system (mas) | multi agent systems | multi-agent system | multi-agent systems | multiagent systems,,,,knowledge,,,cso_topic,ai_ml
+SKL_617ec152af69,CSO,multimodal_ai,multimodal ai,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_a0cc0c6e48e6,CSO,natural_language_processing,natural language processing,,natural language processing systems | nlp,,,,knowledge,,,cso_topic,ai_ml
+SKL_13539b030cda,CSO,neurosymbolic_ai,neurosymbolic ai,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_794d3ae3c159,CSO,soft_computing,soft computing,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_b1b1b829ef6b,CSO,swarm_intelligence,swarm intelligence,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_fa89fcacda5e,CSO,system_theory,system theory,,,,,,knowledge,,,cso_topic,ai_ml
+SKL_d19c0cfcf281,CSO,association_rules,association rules,,association rule | association rule mining | association rules mining | mining association rules,,,,knowledge,,,cso_topic,data_databases
+SKL_aef51c915e9f,CSO,classification,classification,,,,,,knowledge,,,cso_topic,data_databases
+SKL_6dfdb8286bc2,CSO,clustering_algorithms,clustering algorithms,,clustering | clustering algorithm,,,,knowledge,,,cso_topic,data_databases
+SKL_20a21354996d,CSO,concept_lattices,concept lattices,,concept lattice,,,,knowledge,,,cso_topic,data_databases
+SKL_61a176d0eb5f,CSO,continuous_data,continuous data,,,,,,knowledge,,,cso_topic,data_databases
+SKL_2758d7b054ed,CSO,data_analytics,data analytics,,,,,,knowledge,,,cso_topic,data_databases
+SKL_5bf93847c7df,CSO,data_stream,data stream,,data streams,,,,knowledge,,,cso_topic,data_databases
+SKL_3234b49194eb,CSO,data_warehouses,data warehouses,,data warehouse,,,,knowledge,,,cso_topic,data_databases
+SKL_1d70da7a6e0c,CSO,decision_trees,decision trees,,decision tree,,,,knowledge,,,cso_topic,data_databases
+SKL_d11a3d9993de,CSO,information_extraction,information extraction,,,,,,knowledge,,,cso_topic,data_databases
+SKL_e8bc3c90550e,CSO,knowledge_discovery,knowledge discovery,,,,,,knowledge,,,cso_topic,data_databases
+SKL_54ce820c3e38,CSO,link_analysis,link analysis,,,,,,knowledge,,,cso_topic,data_databases
+SKL_e42fb88bb1ce,CSO,local_patterns,local patterns,,,,,,knowledge,,,cso_topic,data_databases
+SKL_0ea4e3fe8005,CSO,mining_process,mining process,,,,,,knowledge,,,cso_topic,data_databases
+SKL_743a6afc1f44,CSO,privacy_preserving,privacy preserving,,privacy preservation | privacy-preserving,,,,knowledge,,,cso_topic,data_databases
+SKL_2bb92322e4c3,CSO,process_mining,process mining,,,,,,knowledge,,,cso_topic,data_databases
+SKL_4f7d41e33ab8,CSO,relational_learning,relational learning,,,,,,knowledge,,,cso_topic,data_databases
+SKL_476142f0bdf3,CSO,rule_induction,rule induction,,,,,,knowledge,,,cso_topic,data_databases
+SKL_e9259ad3c79f,CSO,sentiment_analysis,sentiment analysis,,,,,,knowledge,,,cso_topic,data_databases
+SKL_9c707a411e38,CSO,spatial_data_mining,spatial data mining,,,,,,knowledge,,,cso_topic,data_databases
+SKL_de962a492e85,CSO,streaming_data,streaming data,,,,,,knowledge,,,cso_topic,data_databases
+SKL_793ac2825a6e,CSO,text_processing,text processing,,,,,,knowledge,,,cso_topic,data_databases
+SKL_790ffd20018b,CSO,trajectory_data,trajectory data,,,,,,knowledge,,,cso_topic,data_databases
+SKL_5dbdb53b6586,CSO,visual_data_mining,visual data mining,,,,,,knowledge,,,cso_topic,data_databases
+SKL_9e308dd9a657,CSO,web_mining,web mining,,web-mining,,,,knowledge,,,cso_topic,data_databases
+SKL_d46f0de1f0e6,CSO,word_spotting,word spotting,,,,,,knowledge,,,cso_topic,data_databases
+SKL_9d3d7c822bf8,CSO,cross-language_information_retrieval,cross-language information retrieval,,cross language information retrieval,,,,knowledge,,,cso_topic,data_databases
+SKL_c522ad6afb9a,CSO,document_clustering,document clustering,,,,,,knowledge,,,cso_topic,data_databases
+SKL_2647e4f8c8de,CSO,image_retrieval,image retrieval,,,,,,knowledge,,,cso_topic,data_databases
+SKL_e5d6382cf1bf,CSO,information_dissemination,information dissemination,,,,,,knowledge,,,cso_topic,data_databases
+SKL_728fb08e4b83,CSO,information_integration,information integration,,,,,,knowledge,,,cso_topic,data_databases
+SKL_f60e1b961c04,CSO,information_retrieval_systems,information retrieval systems,,,,,,knowledge,,,cso_topic,data_databases
+SKL_345b61e8bd90,CSO,information_storage_and_retrieval,information storage and retrieval,,,,,,knowledge,,,cso_topic,data_databases
+SKL_dc64174177e2,CSO,music_information_retrieval,music information retrieval,,,,,,knowledge,,,cso_topic,data_databases
+SKL_5118b71dae8f,CSO,named_entity_recognition,named entity recognition,,named entities | named entity,,,,knowledge,,,cso_topic,data_databases
+SKL_81a7a398fa27,CSO,question_answering,question answering,,question answering system | question answering systems,,,,knowledge,,,cso_topic,data_databases
+SKL_816541552eba,CSO,recommender_systems,recommender systems,,recommender system,,,,knowledge,,,cso_topic,data_databases
+SKL_0cd32f366af1,CSO,relevance_models,relevance models,,,,,,knowledge,,,cso_topic,data_databases
+SKL_d28ecd24bd70,CSO,vector_space_models,vector space models,,vector space model | vector space model (vsm) | vsm,,,,knowledge,,,cso_topic,data_databases
+SKL_03431ccec862,CSO,applied_(co),applied (co),,,,,,knowledge,,,cso_topic,networks
+SKL_2e19717e2355,CSO,bandwidth,bandwidth,,,,,,knowledge,,,cso_topic,networks
+SKL_1b75528c33a5,CSO,communication_networks,communication networks,,communication network,,,,knowledge,,,cso_topic,networks
+SKL_72993892ab56,CSO,computer_control,computer control,,,,,,knowledge,,,cso_topic,networks
+SKL_fd29aa9d4835,CSO,computer_workstations,computer workstations,,,,,,knowledge,,,cso_topic,networks
+SKL_030daa0373b0,CSO,conformance_testing,conformance testing,,,,,,knowledge,,,cso_topic,networks
+SKL_e4deb9c68e43,CSO,congestion_control_(communication),congestion control (communication),,congestion control,,,,knowledge,,,cso_topic,networks
+SKL_c7f870478f31,CSO,dijkstra,dijkstra,,,,,,knowledge,,,cso_topic,networks
+SKL_aa825cb9b853,CSO,electronic_designs,electronic designs,,,,,,knowledge,,,cso_topic,networks
+SKL_93021a6f385f,CSO,fault_tolerant_computer_systems,fault tolerant computer systems,,,,,,knowledge,,,cso_topic,networks
+SKL_16ac2d6c5558,CSO,fiber_optic_networks,fiber optic networks,,,,,,knowledge,,,cso_topic,networks
+SKL_7957c6cf7058,CSO,fibre_technology,fibre technology,,,,,,knowledge,,,cso_topic,networks
+SKL_7f25208613ff,CSO,network_architecture,network architecture,,,,,,knowledge,,,cso_topic,networks
+SKL_0a0f5434af1b,CSO,network_protocols,network protocols,,,,,,knowledge,,,cso_topic,networks
+SKL_9c1dc3d1aa1c,CSO,network_security,network security,,,,,,knowledge,,,cso_topic,networks
+SKL_1a29f96f28fd,CSO,network_topology,network topology,,,,,,knowledge,,,cso_topic,networks
+SKL_3e81d49c1eb6,CSO,peer-to-peer,peer-to-peer,,p2p | p2p applications | p2p network | p2p networks | p2p system | p2p systems | peer to peer | peer to peer (p2p) network | peer to peer networks | peer-to-peer (p2p) | peer-to-peer network | peer-to-peer networks | peer-to-peer system | peer-to-peer systems | peer-to-peer technologies,,,,knowledge,,,cso_topic,networks
+SKL_780f7158e569,CSO,parallel_and_distributed_processing,parallel and distributed processing,,,,,,knowledge,,,cso_topic,networks
+SKL_ff489a9f53ed,CSO,probability--queueing_theory,probability--queueing theory,,,,,,knowledge,,,cso_topic,networks
+SKL_4e71fe44ea09,CSO,retrieval_(mir),retrieval (mir),,,,,,knowledge,,,cso_topic,networks
+SKL_918312c337c7,CSO,routing_algorithms,routing algorithms,,routing algorithm,,,,knowledge,,,cso_topic,networks
+SKL_df7685e64294,CSO,stabilizers_(agents),stabilizers (agents),,,,,,knowledge,,,cso_topic,networks
+SKL_03b7511cb1dc,CSO,wireless_communications,wireless communications,,wireless communication | wireless communication technology | wireless technologies,,,,knowledge,,,cso_topic,networks
+SKL_27f7cbe0526b,CSO,wireless_telecommunication_systems,wireless telecommunication systems,,,,,,knowledge,,,cso_topic,networks
+SKL_2eb49e08c5df,CSO,affective_computing,affective computing,,,,,,knowledge,,,cso_topic,web
+SKL_54829c4c3e56,CSO,assistive_technology,assistive technology,,assistive technologies,,,,knowledge,,,cso_topic,web
+SKL_2c0f86b49441,CSO,computer_aided_instruction,computer aided instruction,,,,,,knowledge,,,cso_topic,web
+SKL_7a5414d96413,CSO,user-computer_interface,user-computer interface,,computer interface,,,,knowledge,,,cso_topic,web
+SKL_9fa2101793db,CSO,computer_interfaces,computer interfaces,,,,,,knowledge,,,cso_topic,web
+SKL_674d709a02c2,CSO,dialogue_management,dialogue management,,,,,,knowledge,,,cso_topic,web
+SKL_861d474927da,CSO,emotion_recognition,emotion recognition,,,,,,knowledge,,,cso_topic,web
+SKL_1b3a4cb286f3,CSO,gesture_recognition,gesture recognition,,,,,,knowledge,,,cso_topic,web
+SKL_202c975e2d35,CSO,human_engineering,human engineering,,,,,,knowledge,,,cso_topic,web
+SKL_61fdd00a8ca3,CSO,interactive_robot,interactive robot,,,,,,knowledge,,,cso_topic,web
+SKL_0b0bc44d80ca,CSO,user_interfaces,user interfaces,,user interface,,,,knowledge,,,cso_topic,web
+SKL_0ada440c491d,CSO,videogames,videogames,,video game | video games,,,,knowledge,,,cso_topic,web
+SKL_aa3d4fb4a9d1,CSO,virtual_reality,virtual reality,,,,,,knowledge,,,cso_topic,web
+SKL_d207032bb640,CSO,visualization,visualization,,,,,,knowledge,,,cso_topic,web
+SKL_25f6e4cc3334,CSO,cache,cache,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_ec9c26c87295,CSO,central_processing_unit,central processing unit,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_0c9696882281,CSO,computer_operating_procedures,computer operating procedures,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_40bd9d062c3b,CSO,computer_system_recovery,computer system recovery,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_5577e441038e,CSO,computer_worms,computer worms,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_6157396ae78b,CSO,device_driver,device driver,,device drivers,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_dad2cf86cdaf,CSO,distributed_program,distributed program,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_c7103ffa82dc,CSO,embedded_technology,embedded technology,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_00efedd75417,CSO,execution_environments,execution environments,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_3b4fa14bbaf5,CSO,file_systems,file systems,,file system | filesystem,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_2485f0c3783a,CSO,linux,linux,,linux kernel | linux systems | linux- operating system,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_866e1b35593c,CSO,malwares,malwares,,malware,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_d57ebf30c328,CSO,memory_management,memory management,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_4db8277bdf64,CSO,mobile_operating_systems,mobile operating systems,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_1710a9ddd38d,CSO,multi-threaded_application,multi-threaded application,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_be627c8f06d9,CSO,multiprogramming,multiprogramming,,multiprocessing programs,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_6b8d1fe26455,CSO,real-time_operating_systems,real-time operating systems,,real time operating system | real-time operating system,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_4aadbba42f49,CSO,shared_cache,shared cache,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_f0bf3f2c0964,CSO,system_calls,system calls,,system call,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_564413d63fa4,CSO,virtual_machine_monitors,virtual machine monitors,,virtual machine monitor | xen,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_dde779850ecc,CSO,virtual_storage,virtual storage,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_90e387c5cfa3,CSO,virtualized_environment,virtualized environment,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_c894339e9b6f,CSO,windows_operating_system,windows operating system,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_dcafe0f90416,CSO,agent-oriented,agent-oriented,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_374427a5406d,CSO,agent_oriented_software_engineering,agent oriented software engineering,,agent-oriented software engineering,,,,knowledge,,,cso_topic,programming_languages
+SKL_aee04a2803fa,CSO,autonomic_computing,autonomic computing,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_973c5103d6b4,CSO,bug_reports,bug reports,,defect report | defect reports,,,,knowledge,,,cso_topic,programming_languages
+SKL_58eea786336c,CSO,capability_maturity_models,capability maturity models,,capability maturity model,,,,knowledge,,,cso_topic,programming_languages
+SKL_e02122a346c8,CSO,circuit_simulation,circuit simulation,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_044278234f8c,CSO,component-based_software_development,component-based software development,,component based software development,,,,knowledge,,,cso_topic,programming_languages
+SKL_c0624f08ad5a,CSO,component_based_approach,component based approach,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_dab08e5722c7,CSO,component_composition,component composition,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_d47210e60d7c,CSO,component_repository,component repository,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_13841c701a5f,CSO,component_selection,component selection,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_ba1ba6c7a363,CSO,computer_software_maintenance,computer software maintenance,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_42065fe4e9a6,CSO,computer_systems_programming,computer systems programming,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_23c482b0af47,CSO,engineering_research,engineering research,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_a480e486cdc2,CSO,formal_specification,formal specification,,formal specifications,,,,knowledge,,,cso_topic,programming_languages
+SKL_707f42bfdf0a,CSO,knowledge_engineering,knowledge engineering,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_0898df4f5a64,CSO,modeling_languages,modeling languages,,modeling language | modelling language,,,,knowledge,,,cso_topic,programming_languages
+SKL_d0c8297f3aea,CSO,object-oriented_design,object-oriented design,,object oriented design,,,,knowledge,,,cso_topic,programming_languages
+SKL_f0654ddf32bf,CSO,object-oriented_system,object-oriented system,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_304ab1c7be45,CSO,process_engineering,process engineering,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_9f6f9346d3c2,CSO,program_diagnostics,program diagnostics,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_c9d287fe1252,CSO,program_documentation,program documentation,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_8da6ff3dbc3a,CSO,requirements_engineering,requirements engineering,,requirement engineering,,,,knowledge,,,cso_topic,programming_languages
+SKL_4caaa7af261b,CSO,security_engineering,security engineering,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_f38160e41e74,CSO,service-based_systems,service-based systems,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_f5befd850541,CSO,software_design,software design,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_a02e1f1e0e9a,CSO,software_pipelining,software pipelining,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_45275843d218,CSO,software_reliability,software reliability,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_af2bc4bc6a92,CSO,source_codes,source codes,,source code,,,,knowledge,,,cso_topic,programming_languages
+SKL_d346db16625e,CSO,static_analysis,static analysis,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_64835e194f0f,CSO,system_architectures,system architectures,,system architecture,,,,knowledge,,,cso_topic,programming_languages
+SKL_a70383873e19,CSO,system_testing,system testing,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_685c45625525,CSO,system_under_test,system under test,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_1fe49572cd08,CSO,test_case_generation,test case generation,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_f96dbab481b0,CSO,test_case_selection,test case selection,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_b2c893ea56f5,CSO,test_data_generation,test data generation,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_3763fa887449,CSO,transformation_rules,transformation rules,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_8179e32b40f3,CSO,unified_modeling_language,unified modeling language,,uml | unified modeling language (uml) | unified modelling language,,,,knowledge,,,cso_topic,programming_languages
+SKL_9c765d5bfe98,CSO,usability_engineering,usability engineering,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_e6e9a052be8d,CSO,web_engineering,web engineering,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_09974e571129,CSO,coding_theory,coding theory,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_4d30c68505c7,CSO,computer_programming_languages,computer programming languages,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_11578c4b7db5,CSO,computer_science_education,computer science education,,cs1,,,,knowledge,,,cso_topic,programming_languages
+SKL_e8d2a0821838,CSO,constraint_networks,constraint networks,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_5983563678c8,CSO,constraint_programming,constraint programming,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_33644306a867,CSO,program_debugging,program debugging,,debugging | software debugging | testing and debugging,,,,knowledge,,,cso_topic,programming_languages
+SKL_8e4be4aae931,CSO,evolutionary_programming,evolutionary programming,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_adf4c464eb1f,CSO,genetic_programming,genetic programming,,genetic programming (gp),,,,knowledge,,,cso_topic,programming_languages
+SKL_deef6924c38e,CSO,high-level_programming_language,high-level programming language,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_86309f77bf86,CSO,high_level_languages,high level languages,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_146c2c25c91a,CSO,local_consistency,local consistency,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_2e7207189eb2,CSO,mixed_integer_programming_model,mixed integer programming model,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_a45887e30057,CSO,novice_programmer,novice programmer,,novice programmers,,,,knowledge,,,cso_topic,programming_languages
+SKL_c55feb8d7c21,CSO,object_oriented_programming,object oriented programming,,object-oriented programming,,,,knowledge,,,cso_topic,programming_languages
+SKL_db3f44f1cd01,CSO,software_frameworks,software frameworks,,software framework,,,,knowledge,,,cso_topic,programming_languages
+SKL_a8a578bef652,CSO,computer_language,computer language,,,,,,knowledge,,,cso_topic,networks
+SKL_e80e2f0aa41d,CSO,distance_education,distance education,,,,,,knowledge,,,cso_topic,networks
+SKL_41ed6292fdcd,CSO,e-commerce,e-commerce,,e commerces | e-commerce systems | electronic commerce,,,,knowledge,,,cso_topic,networks
+SKL_53ee8b8de339,CSO,electronic_mail,electronic mail,,,,,,knowledge,,,cso_topic,networks
+SKL_fb77de0a43bc,CSO,epc,epc,,electronic product codes,,,,knowledge,,,cso_topic,networks
+SKL_db6fd06bb5d1,CSO,genetic_database,genetic database,,,,,,knowledge,,,cso_topic,networks
+SKL_a40f9a641a56,CSO,"health_records,_personal","health records, personal",,,,,,knowledge,,,cso_topic,networks
+SKL_15d5e226c92f,CSO,internet_of_things,internet of things,,internet of thing (iot) | internet of things (iot) | iot,,,,knowledge,,,cso_topic,networks
+SKL_db16ccf48957,CSO,mmorpg,mmorpg,,mmorpgs,,,,knowledge,,,cso_topic,networks
+SKL_de627feb7df7,CSO,multimedia_systems,multimedia systems,,,,,,knowledge,,,cso_topic,networks
+SKL_d95d8c6145f5,CSO,network_paths,network paths,,,,,,knowledge,,,cso_topic,networks
+SKL_df26143c951b,CSO,protein_database,protein database,,,,,,knowledge,,,cso_topic,networks
+SKL_838d87c973a5,CSO,revenue,revenue,,,,,,knowledge,,,cso_topic,networks
+SKL_1d1218d0bd5f,CSO,systems_integration,systems integration,,,,,,knowledge,,,cso_topic,networks
+SKL_2ac83f34e603,CSO,virtual_networks,virtual networks,,virtual network,,,,knowledge,,,cso_topic,networks
+SKL_b445330f3c3b,CSO,world_wide_web,world wide web,,,,,,knowledge,,,cso_topic,networks
+SKL_fddc195c9b2f,CSO,adaptive_algorithms,adaptive algorithms,,adaptive algorithm,,,,knowledge,,,cso_topic,programming_languages
+SKL_1163540f35fb,CSO,software_component,software component,,component based | component based software | component based software engineering | component based systems | component-based software | component-based software engineering | component-based systems | software components,,,,knowledge,,,cso_topic,programming_languages
+SKL_e842a9f09eab,CSO,computer_applications,computer applications,,computer application,,,,knowledge,,,cso_topic,programming_languages
+SKL_2a49760d3003,CSO,computer_control_systems,computer control systems,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_ad7d11b9201c,CSO,computer_debugging,computer debugging,,debuggers,,,,knowledge,,,cso_topic,programming_languages
+SKL_ccc7993834d4,CSO,dynamic_analysis,dynamic analysis,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_3e910030a2b5,CSO,geographic_information_system,geographic information system,,geographical information system (gis) | geographical information systems | gis,,,,knowledge,,,cso_topic,programming_languages
+SKL_1c974bff7720,CSO,gps,gps,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_5c98d3d7f7bf,CSO,matlab,matlab,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_6862a4187c3b,CSO,software_repositories,software repositories,,mining software repositories,,,,knowledge,,,cso_topic,programming_languages
+SKL_3b30efb929a1,CSO,open_source_software,open source software,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_7f41d46f476f,CSO,access_control_policies,access control policies,,access control mechanism | access control models | access control policy,,,,knowledge,,,cso_topic,security
+SKL_b5a55603073a,CSO,access_control_schemes,access control schemes,,,,,,knowledge,,,cso_topic,security
+SKL_29823e130318,CSO,access_rights,access rights,,,,,,knowledge,,,cso_topic,security
+SKL_f0c1ada8a373,CSO,attribute-based_encryption,attribute-based encryption,,attribute-based encryptions,,,,knowledge,,,cso_topic,security
+SKL_e9d3a8a97828,CSO,authorization,authorization,,,,,,knowledge,,,cso_topic,security
+SKL_a261fe97699d,CSO,biometrics,biometrics,,biometric,,,,knowledge,,,cso_topic,security
+SKL_5e078088afdf,CSO,decryption_keys,decryption keys,,,,,,knowledge,,,cso_topic,security
+SKL_14fa598c82d0,CSO,grid_security,grid security,,,,,,knowledge,,,cso_topic,security
+SKL_74a652fe3586,CSO,identity_management,identity management,,,,,,knowledge,,,cso_topic,security
+SKL_d34d049b2dbc,CSO,ieee802.11,ieee802.11,,,,,,knowledge,,,cso_topic,security
+SKL_b5ac537280e1,CSO,information_flow_control,information flow control,,,,,,knowledge,,,cso_topic,security
+SKL_d9c924864d3e,CSO,key_management,key management,,,,,,knowledge,,,cso_topic,security
+SKL_53e1c7785bb0,CSO,manet_routing,manet routing,,,,,,knowledge,,,cso_topic,security
+SKL_41a2957b121e,CSO,media_access_control,media access control,,media access control (mac),,,,knowledge,,,cso_topic,security
+SKL_777f97202e43,CSO,privacy_policies,privacy policies,,privacy policy,,,,knowledge,,,cso_topic,security
+SKL_1bb17d40d809,CSO,role-based_access_control,role-based access control,,rbac | role based access control | role-based access control (rbac) | role-based access control model,,,,knowledge,,,cso_topic,security
+SKL_f71a92e390d3,CSO,re-encryption,re-encryption,,,,,,knowledge,,,cso_topic,security
+SKL_8ceca79fec52,CSO,security_and_privacy,security and privacy,,,,,,knowledge,,,cso_topic,security
+SKL_0387516db2ee,CSO,security_architecture,security architecture,,,,,,knowledge,,,cso_topic,security
+SKL_d6e70ddb3e44,CSO,security_challenges,security challenges,,,,,,knowledge,,,cso_topic,security
+SKL_7c542578a0e5,CSO,security_model,security model,,security models,,,,knowledge,,,cso_topic,security
+SKL_7ac1d9722bca,CSO,security_policy,security policy,,security policies,,,,knowledge,,,cso_topic,security
+SKL_a7dd5f9aa033,CSO,security_requirements,security requirements,,,,,,knowledge,,,cso_topic,security
+SKL_d5eacd53e646,CSO,sensitive_informations,sensitive informations,,sensitive data | sensitive datas,,,,knowledge,,,cso_topic,security
+SKL_0872d0050ef4,CSO,symmetric_keys,symmetric keys,,,,,,knowledge,,,cso_topic,security
+SKL_0d1d5b4d66dc,CSO,trust_management,trust management,,,,,,knowledge,,,cso_topic,security
+SKL_084474b0c843,CSO,user_privacy,user privacy,,,,,,knowledge,,,cso_topic,security
+SKL_ca70dd8484a2,CSO,cryptanalysis,cryptanalysis,,,,,,knowledge,,,cso_topic,security
+SKL_0a4315e87c30,CSO,cryptography,cryptography,,,,,,knowledge,,,cso_topic,security
+SKL_f62e378982ec,CSO,cyberattacks,cyberattacks,,cyber attack | cyber attacks | cyber threat | cyber threats | cyberattack | cybersecurity attacks | cybersecurity risk | cybersecurity threat | cybersecurity threats,,,,knowledge,,,cso_topic,security
+SKL_1ec8a2c6a1c0,CSO,cyber_defense,cyber defense,,cyber defence,,,,knowledge,,,cso_topic,security
+SKL_60233ea3b693,CSO,cybersecurity_vulnerabilities,cybersecurity vulnerabilities,,cybersecurity challenges,,,,knowledge,,,cso_topic,security
+SKL_4c7e7f7a25ec,CSO,cybersecurity_framework,cybersecurity framework,,,,,,knowledge,,,cso_topic,security
+SKL_491d76752637,CSO,digital_forensic,digital forensic,,digital forensics,,,,knowledge,,,cso_topic,security
+SKL_844d63fb546e,CSO,distributed_ledger,distributed ledger,,distributed ledgers,,,,knowledge,,,cso_topic,security
+SKL_7ed3fd3b3a6a,CSO,anonymity,anonymity,,,,,,knowledge,,,cso_topic,security
+SKL_a77eb8b44619,CSO,computer_privacy,computer privacy,,,,,,knowledge,,,cso_topic,security
+SKL_8c11bbecec75,CSO,data_privacy,data privacy,,,,,,knowledge,,,cso_topic,security
+SKL_93515f69f1ff,CSO,data_protection,data protection,,,,,,knowledge,,,cso_topic,security
+SKL_d846601719b7,CSO,location_privacy,location privacy,,,,,,knowledge,,,cso_topic,security
+SKL_70e4551f3ad3,CSO,personal_information,personal information,,,,,,knowledge,,,cso_topic,security
+SKL_602c7c111214,CSO,privacy_and_security,privacy and security,,,,,,knowledge,,,cso_topic,security
+SKL_82b5e01ad2bd,CSO,rfid_authentication,rfid authentication,,,,,,knowledge,,,cso_topic,security
+SKL_a6895a56f559,CSO,trusted_third_parties,trusted third parties,,,,,,knowledge,,,cso_topic,security
+SKL_40636d23082e,CSO,authentication,authentication,,,,,,knowledge,,,cso_topic,security
+SKL_7c7fea9906ae,CSO,block_ciphers,block ciphers,,block cipher,,,,knowledge,,,cso_topic,security
+SKL_c67adad98acf,CSO,computer_crime,computer crime,,,,,,knowledge,,,cso_topic,security
+SKL_da14f4336710,CSO,cryptographic_algorithms,cryptographic algorithms,,,,,,knowledge,,,cso_topic,security
+SKL_9f7cfec22d38,CSO,digital_watermarking,digital watermarking,,,,,,knowledge,,,cso_topic,security
+SKL_ad58bc6243d7,CSO,encryption,encryption,,encryption algorithm | encryption algorithms | encryption and decryption | encryption key | encryption methods | encryption schemes,,,,knowledge,,,cso_topic,security
+SKL_16e27b55a6f6,CSO,information-theoretic_security,information-theoretic security,,information theoretic security,,,,knowledge,,,cso_topic,security
+SKL_7dae86013cde,CSO,information_security,information security,,,,,,knowledge,,,cso_topic,security
+SKL_48f861850a35,CSO,intranets,intranets,,intranet,,,,knowledge,,,cso_topic,security
+SKL_0c0699a57638,CSO,secret_sharing,secret sharing,,,,,,knowledge,,,cso_topic,security
+SKL_e0e9b3e54922,CSO,security_issues,security issues,,security mechanism | security mechanisms | security problems | security services | security solutions | security threats,,,,knowledge,,,cso_topic,security
+SKL_db7cf5692b4d,CSO,security_protocols,security protocols,,security properties | security protocol,,,,knowledge,,,cso_topic,security
+SKL_200892094ffe,CSO,security_systems,security systems,,,,,,knowledge,,,cso_topic,security
+SKL_00fe27f92f61,CSO,servers,servers,,,,,,knowledge,,,cso_topic,security
+SKL_27d0bc99cf96,CSO,spamming,spamming,,,,,,knowledge,,,cso_topic,security
+SKL_45056768f104,CSO,steganography,steganography,,,,,,knowledge,,,cso_topic,security
+SKL_f77ae7d03aef,CSO,stream_ciphers,stream ciphers,,stream cipher,,,,knowledge,,,cso_topic,security
+SKL_68eb64e36876,CSO,apriori,apriori,,,,,,knowledge,,,cso_topic,data_databases
+SKL_a850c482ae02,CSO,frequent_itemsets,frequent itemsets,,frequent item sets | frequent itemset | frequent itemset mining | item sets | mining frequent itemsets,,,,knowledge,,,cso_topic,data_databases
+SKL_58e6f5fc950f,CSO,frequent_patterns,frequent patterns,,frequent pattern | frequent pattern mining,,,,knowledge,,,cso_topic,data_databases
+SKL_f1030a002cec,CSO,mining_associations,mining associations,,,,,,knowledge,,,cso_topic,data_databases
+SKL_2579b015561a,CSO,rule_mining,rule mining,,,,,,knowledge,,,cso_topic,data_databases
+SKL_5579b50c4fbc,CSO,rule_mining_algorithms,rule mining algorithms,,,,,,knowledge,,,cso_topic,data_databases
+SKL_e5c3ef2bbb0b,CSO,bacterial_typing_techniques,bacterial typing techniques,,,,,,knowledge,,,cso_topic,data_databases
+SKL_ce691c5102c4,CSO,classification_algorithm,classification algorithm,,classification algorithms,,,,knowledge,,,cso_topic,data_databases
+SKL_e508a0cbd54c,CSO,classification_label,classification label,,,,,,knowledge,,,cso_topic,data_databases
+SKL_440af9039d2a,CSO,classification_process,classification process,,,,,,knowledge,,,cso_topic,data_databases
+SKL_95aed2dff9bc,CSO,rna_16s,rna 16s,,dna 16s,,,,knowledge,,,cso_topic,data_databases
+SKL_3ff954075f2e,CSO,"genes,_mitochondrial","genes, mitochondrial",,,,,,knowledge,,,cso_topic,data_databases
+SKL_de53ae9b8423,CSO,genetic_speciation,genetic speciation,,,,,,knowledge,,,cso_topic,data_databases
+SKL_fe29f676f556,CSO,"genome,_mitochondrial","genome, mitochondrial",,,,,,knowledge,,,cso_topic,data_databases
+SKL_dcc43fad26f4,CSO,multi-label_classification,multi-label classification,,multi-label,,,,knowledge,,,cso_topic,data_databases
+SKL_8dbac4e9db13,CSO,phylogeography,phylogeography,,,,,,knowledge,,,cso_topic,data_databases
+SKL_e7a9838bfc76,CSO,radial_based_function,radial based function,,,,,,knowledge,,,cso_topic,data_databases
+SKL_4dfa2ba4a612,CSO,ribosome_dna,ribosome dna,,,,,,knowledge,,,cso_topic,data_databases
+SKL_eb6bdcdb83b9,CSO,taxonomy,taxonomy,,,,,,knowledge,,,cso_topic,data_databases
+SKL_453f518e9770,CSO,fuzzy_c-means,fuzzy c-means,,c-means | fcm | fcm clustering | fuzzy c mean | fuzzy c means clustering | fuzzy c-means (fcm) | fuzzy c-means clustering | fuzzy c-means clustering algorithms,,,,knowledge,,,cso_topic,data_databases
+SKL_379e74fb4371,CSO,cluster_head,cluster head,,cluster heads | cluster-based | cluster-heads,,,,knowledge,,,cso_topic,data_databases
+SKL_cc4808500533,CSO,clustering_methods,clustering methods,,clustering analysis | clustering approach | clustering method | clustering problems | clustering process | clustering results | clustering techniques,,,,knowledge,,,cso_topic,data_databases
+SKL_9acc77bfb8f3,CSO,data_points,data points,,,,,,knowledge,,,cso_topic,data_databases
+SKL_678b65a89037,CSO,fuzzy_clustering,fuzzy clustering,,fuzzy clustering method | fuzzy clustering techniques | fuzzy clusters,,,,knowledge,,,cso_topic,data_databases
+SKL_59a5c707aa6d,CSO,incremental_clustering,incremental clustering,,,,,,knowledge,,,cso_topic,data_databases
+SKL_908f9adc2e4a,CSO,k-nearest_neighbors,k-nearest neighbors,,k nearest neighbor | k-nearest neighbor | k-nn algorithm | knn | nearest neighbor | nearest neighbors,,,,knowledge,,,cso_topic,data_databases
+SKL_9c108d46bf3e,CSO,network_lifetime,network lifetime,,network life-time,,,,knowledge,,,cso_topic,data_databases
+SKL_521534af06d1,CSO,real_data_sets,real data sets,,,,,,knowledge,,,cso_topic,data_databases
+SKL_9bd648d516e2,CSO,semi-supervised_clustering,semi-supervised clustering,,,,,,knowledge,,,cso_topic,data_databases
+SKL_1aa265abf127,CSO,som_algorithms,som algorithms,,,,,,knowledge,,,cso_topic,data_databases
+SKL_fa973080f2e0,CSO,spectral_clustering,spectral clustering,,,,,,knowledge,,,cso_topic,data_databases
+SKL_842b62362791,CSO,trajectory_clustering,trajectory clustering,,,,,,knowledge,,,cso_topic,data_databases
+SKL_bd1c83c5070b,CSO,complete_lattices,complete lattices,,,,,,knowledge,,,cso_topic,data_databases
+SKL_bb66cef3c691,CSO,formal_contexts,formal contexts,,formal concepts,,,,knowledge,,,cso_topic,data_databases
+SKL_747d1c50e786,CSO,galois_connection,galois connection,,,,,,knowledge,,,cso_topic,data_databases
+SKL_419967dff9e1,CSO,crm,crm,,conceptual reference model | conceptual reference model (crm),,,,knowledge,,,cso_topic,data_databases
+SKL_15e0de6d486f,CSO,customer_relationship_management_systems,customer relationship management systems,,,,,,knowledge,,,cso_topic,data_databases
+SKL_58501c36b2fd,CSO,data_mining_process,data mining process,,,,,,knowledge,,,cso_topic,data_databases
+SKL_71b293bad324,CSO,alcatel_(co),alcatel (co),,,,,,knowledge,,,cso_topic,networks
+SKL_3238533219d7,CSO,asynchronous_transfer_mode,asynchronous transfer mode,,,,,,knowledge,,,cso_topic,networks
+SKL_013220ce3dd4,CSO,available_bandwidth,available bandwidth,,,,,,knowledge,,,cso_topic,networks
+SKL_3c6aa0143d0a,CSO,bandwidth_compression,bandwidth compression,,,,,,knowledge,,,cso_topic,networks
+SKL_dcef66d3bb22,CSO,bandwidth_efficiency,bandwidth efficiency,,,,,,knowledge,,,cso_topic,networks
+SKL_fce785e81a5a,CSO,broadband_networks,broadband networks,,,,,,knowledge,,,cso_topic,networks
+SKL_e43da13e4a72,CSO,buffer_storage,buffer storage,,,,,,knowledge,,,cso_topic,networks
+SKL_8a126090c0dd,CSO,carrier_communication,carrier communication,,,,,,knowledge,,,cso_topic,networks
+SKL_1680b298d9f3,CSO,communication_bandwidth,communication bandwidth,,,,,,knowledge,,,cso_topic,networks
+SKL_45edadacb457,CSO,congestion_avoidance,congestion avoidance,,,,,,knowledge,,,cso_topic,networks
+SKL_1322ed8b0fbc,CSO,coplanar_waveguides,coplanar waveguides,,coplanar waveguide,,,,knowledge,,,cso_topic,networks
+SKL_2d067f58b8db,CSO,electromagnetic_wave_polarization,electromagnetic wave polarization,,,,,,knowledge,,,cso_topic,networks
+SKL_a132089bbcaf,CSO,ethernet,ethernet,,,,,,knowledge,,,cso_topic,networks
+SKL_1349a4383d20,CSO,frequencies,frequencies,,,,,,knowledge,,,cso_topic,networks
+SKL_03c669069a05,CSO,high_bandwidth,high bandwidth,,,,,,knowledge,,,cso_topic,networks
+SKL_3c07d45f0b24,CSO,multicasts,multicasts,,ip multicast | multicast | multicasting,,,,knowledge,,,cso_topic,networks
+SKL_653041f7a5bc,CSO,jitter,jitter,,,,,,knowledge,,,cso_topic,networks
+SKL_1422d6617427,CSO,live_streaming,live streaming,,,,,,knowledge,,,cso_topic,networks
+SKL_b8436a8c4334,CSO,loop_antennas,loop antennas,,,,,,knowledge,,,cso_topic,networks
+SKL_1150e2ab1b8e,CSO,microstrip_antennas,microstrip antennas,,microstrip antenna,,,,knowledge,,,cso_topic,networks
+SKL_5004e63abb73,CSO,optical_interconnects,optical interconnects,,optical interconnect,,,,knowledge,,,cso_topic,networks
+SKL_2599a8c63a26,CSO,quality_of_service,quality of service,,quality of service (qos),,,,knowledge,,,cso_topic,networks
+SKL_422c4da877d1,CSO,routers,routers,,router,,,,knowledge,,,cso_topic,networks
+SKL_110d43f30ae2,CSO,signal_bandwidth,signal bandwidth,,,,,,knowledge,,,cso_topic,networks
+SKL_76516004bdfa,CSO,telecommunication_links,telecommunication links,,,,,,knowledge,,,cso_topic,networks
+SKL_1fa6b51236f4,CSO,video_on_demand,video on demand,,video-on-demand | video-on-demand (vod),,,,knowledge,,,cso_topic,networks
+SKL_cde996a334ca,CSO,wide-band,wide-band,,wideband,,,,knowledge,,,cso_topic,networks
+SKL_e61faa5d5907,CSO,wide_bandwidth,wide bandwidth,,,,,,knowledge,,,cso_topic,networks
+SKL_9db7b86b45a0,CSO,wideband_speech,wideband speech,,,,,,knowledge,,,cso_topic,networks
+SKL_7094f6503bd3,CSO,multi-body_system_(mbs),multi-body system (mbs),,,,,,knowledge,,,cso_topic,networks
+SKL_c164daaf0c65,CSO,network_of_workstations,network of workstations,,,,,,knowledge,,,cso_topic,networks
+SKL_9dcbfab1e53e,CSO,parallel_virtual_machine,parallel virtual machine,,,,,,knowledge,,,cso_topic,networks
+SKL_813c1d8bbb8b,CSO,protocol_testing,protocol testing,,,,,,knowledge,,,cso_topic,networks
+SKL_0835d699439f,CSO,available_bit_rate,available bit rate,,,,,,knowledge,,,cso_topic,networks
+SKL_e9accf610cbc,CSO,available_bit_rate_(abr),available bit rate (abr),,,,,,knowledge,,,cso_topic,networks
+SKL_922d180be99c,CSO,average_queue_lengths,average queue lengths,,,,,,knowledge,,,cso_topic,networks
+SKL_cc81a3040f8b,CSO,congestion,congestion,,,,,,knowledge,,,cso_topic,networks
+SKL_820fd0a47939,CSO,affect_recognition,affect recognition,,,,,,knowledge,,,cso_topic,web
+SKL_c206229ecc79,CSO,affective_state,affective state,,,,,,knowledge,,,cso_topic,web
+SKL_abe66d1bf41d,CSO,emotion_detection,emotion detection,,,,,,knowledge,,,cso_topic,web
+SKL_429cab4e73ad,CSO,human_emotion,human emotion,,,,,,knowledge,,,cso_topic,web
+SKL_e85880ce8698,CSO,screen_readers,screen readers,,screen reader,,,,knowledge,,,cso_topic,web
+SKL_125d6faeca49,CSO,severe_disabilities,severe disabilities,,,,,,knowledge,,,cso_topic,web
+SKL_ddaf92393f29,CSO,computer_assisted_language_learning,computer assisted language learning,,computer-assisted language learning,,,,knowledge,,,cso_topic,web
+SKL_b080fdfec9b1,CSO,computer_assisted,computer assisted,,,,,,knowledge,,,cso_topic,web
+SKL_1707cf5e3cde,CSO,computer_assisted_instruction,computer assisted instruction,,,,,,knowledge,,,cso_topic,web
+SKL_d3d82ce5a079,CSO,computer_assisted_learning,computer assisted learning,,,,,,knowledge,,,cso_topic,web
+SKL_9bfab9f370ae,CSO,informal_learning,informal learning,,,,,,knowledge,,,cso_topic,web
+SKL_8a89d08b3897,CSO,intelligent_tutors,intelligent tutors,,,,,,knowledge,,,cso_topic,web
+SKL_0d8d69273b2e,CSO,interactive_learning_environment,interactive learning environment,,interactive learning environments,,,,knowledge,,,cso_topic,web
+SKL_9fdcd49c9b62,CSO,learning_management_system,learning management system,,learning management systems,,,,knowledge,,,cso_topic,web
+SKL_903e60d9fb3c,CSO,learning_paths,learning paths,,,,,,knowledge,,,cso_topic,web
+SKL_db89df0b5d21,CSO,online_learning_environment,online learning environment,,,,,,knowledge,,,cso_topic,web
+SKL_6cc8b4fcb6fd,CSO,personal_learning_environment,personal learning environment,,,,,,knowledge,,,cso_topic,web
+SKL_ee4eb2dd1182,CSO,personalized_learning,personalized learning,,,,,,knowledge,,,cso_topic,web
+SKL_28eca1a20558,CSO,student_modeling,student modeling,,student model | student models,,,,knowledge,,,cso_topic,web
+SKL_a92e8f736b03,CSO,ubiquitous_learning_environment,ubiquitous learning environment,,,,,,knowledge,,,cso_topic,web
+SKL_65c64c598c6d,CSO,virtual_learning_environments,virtual learning environments,,virtual learning environment,,,,knowledge,,,cso_topic,web
+SKL_2cd67fb33d8c,CSO,web-based_education,web-based education,,,,,,knowledge,,,cso_topic,web
+SKL_818b1e94a0cf,CSO,web_based_learning,web based learning,,web-based learning,,,,knowledge,,,cso_topic,web
+SKL_f4ef92f66cf6,CSO,brain_machine_interface,brain machine interface,,brain-machine interface,,,,knowledge,,,cso_topic,web
+SKL_01afbe61c7af,CSO,communication_aids_for_disabled,communication aids for disabled,,,,,,knowledge,,,cso_topic,web
+SKL_16f74beee7d3,CSO,message_passing_interface,message passing interface,,message passing interface (mpi),,,,knowledge,,,cso_topic,web
+SKL_7c2aa1dadfdf,CSO,brain_computer_interface,brain computer interface,,brain computer interface (bci) | brain-computer interface | brain-computer interface (bci) | brain-computer interfaces | brain-computer interfaces (bci),,,,knowledge,,,cso_topic,web
+SKL_1a085487e2a2,CSO,computer_peripheral_equipment,computer peripheral equipment,,,,,,knowledge,,,cso_topic,web
+SKL_831b44e1c17b,CSO,network_interface,network interface,,,,,,knowledge,,,cso_topic,web
+SKL_c1e288fcb8b2,CSO,dialogue_manager,dialogue manager,,,,,,knowledge,,,cso_topic,web
+SKL_df3bb74dcbd8,CSO,basic_emotions,basic emotions,,,,,,knowledge,,,cso_topic,web
+SKL_e3cadcbafb4f,CSO,emotion_models,emotion models,,,,,,knowledge,,,cso_topic,web
+SKL_6976170b6e24,CSO,emotional_speech,emotional speech,,,,,,knowledge,,,cso_topic,web
+SKL_ca1c9744928a,CSO,3d_pose_estimation,3d pose estimation,,,,,,knowledge,,,cso_topic,web
+SKL_2d7955d0b814,CSO,action_recognition,action recognition,,,,,,knowledge,,,cso_topic,web
+SKL_3ab1b2878bd7,CSO,facial_expression,facial expression,,facial expressions,,,,knowledge,,,cso_topic,web
+SKL_3305da2099ee,CSO,gesture_interfaces,gesture interfaces,,,,,,knowledge,,,cso_topic,web
+SKL_713b12013fd8,CSO,hand_gesture,hand gesture,,hand gestures,,,,knowledge,,,cso_topic,web
+SKL_13fcded880c4,CSO,hand_images,hand images,,,,,,knowledge,,,cso_topic,web
+SKL_611884b132f8,CSO,hand_tracking,hand tracking,,,,,,knowledge,,,cso_topic,web
+SKL_6263d6bc6482,CSO,human_motion_analysis,human motion analysis,,,,,,knowledge,,,cso_topic,web
+SKL_697ff61c4212,CSO,human_pose,human pose,,,,,,knowledge,,,cso_topic,web
+SKL_304c603e749a,CSO,kinect,kinect,,,,,,knowledge,,,cso_topic,web
+SKL_a53e21ae5955,CSO,sign_language_recognition,sign language recognition,,,,,,knowledge,,,cso_topic,web
+SKL_474eefbd68d0,CSO,ambient_displays,ambient displays,,,,,,knowledge,,,cso_topic,web
+SKL_e44a4aa48ded,CSO,aviators,aviators,,,,,,knowledge,,,cso_topic,web
+SKL_5538368b2de5,CSO,collaborative_work,collaborative work,,,,,,knowledge,,,cso_topic,web
+SKL_763bb44b16e4,CSO,cscw,cscw,,,,,,knowledge,,,cso_topic,web
+SKL_b662895de92d,CSO,ergonomics,ergonomics,,,,,,knowledge,,,cso_topic,web
+SKL_90d36fa511c4,CSO,human_factors,human factors,,human factor,,,,knowledge,,,cso_topic,web
+SKL_d47e094bf3dd,CSO,interaction_design,interaction design,,interaction designs,,,,knowledge,,,cso_topic,web
+SKL_064d359e10d8,CSO,interaction_techniques,interaction techniques,,interaction technique,,,,knowledge,,,cso_topic,web
+SKL_e3fc6d8aa224,CSO,large_displays,large displays,,,,,,knowledge,,,cso_topic,web
+SKL_425ae0a52af6,CSO,sense_making,sense making,,sense-making,,,,knowledge,,,cso_topic,web
+SKL_8cd346f63357,CSO,social_computing,social computing,,,,,,knowledge,,,cso_topic,web
+SKL_bfdf9c9abd54,CSO,tactile_feedback,tactile feedback,,,,,,knowledge,,,cso_topic,web
+SKL_d942710c4779,CSO,tangible_interfaces,tangible interfaces,,tangible interface,,,,knowledge,,,cso_topic,web
+SKL_af9c5105f6f2,CSO,usability_evaluation,usability evaluation,,usability testing,,,,knowledge,,,cso_topic,web
+SKL_8ca715d632a3,CSO,user_centered_designs,user centered designs,,user centered design | user-centered design,,,,knowledge,,,cso_topic,web
+SKL_7b60c33062db,CSO,user_experience,user experience,,,,,,knowledge,,,cso_topic,web
+SKL_6925d79a15ef,CSO,user_interface_designs,user interface designs,,user interface design,,,,knowledge,,,cso_topic,web
+SKL_18ac50cd7592,CSO,vibrotactile,vibrotactile,,,,,,knowledge,,,cso_topic,web
+SKL_610e0fa574fa,CSO,work_environments,work environments,,,,,,knowledge,,,cso_topic,web
+SKL_c8058ec309fa,CSO,communicating_sequential_process,communicating sequential process,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_6872b4a24ed5,CSO,checkpointing,checkpointing,,check pointing | checkpointing techniques,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_c14791cc997f,CSO,dilatometers,dilatometers,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_21768c52247a,CSO,error_recovery,error recovery,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_5a6cd67b0959,CSO,failure_recovery,failure recovery,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_9a6c21c8345d,CSO,recovery_mechanisms,recovery mechanisms,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_9ceeea75cf40,CSO,recovery_time,recovery time,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_ece59e5f82b1,CSO,internet_worm,internet worm,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_95909d58e847,CSO,worm_detection,worm detection,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_85c63c523d3c,CSO,worm_propagation,worm propagation,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_b84446a4f530,CSO,worms,worms,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_31c37f753b4f,CSO,catalogue_identifiers,catalogue identifiers,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_9304ee25e5a0,CSO,distributed_file_systems,distributed file systems,,distributed file system,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_a21a973e64f8,CSO,file_access,file access,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_fb3c20bec17e,CSO,i/o_performance,i/o performance,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_6666f026f8be,CSO,metadata_servers,metadata servers,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_d588a1a18cf6,CSO,parallel_file_system,parallel file system,,parallel file systems,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_752105a7c32e,CSO,small_files,small files,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_418be1d35a9d,CSO,storage_media,storage media,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_13aaf5ae21d8,CSO,embedded_linux,embedded linux,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_ddbd023df41b,CSO,botnets,botnets,,botnet,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_8fefa1094712,CSO,code_obfuscation,code obfuscation,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_5cb086a2b022,CSO,honeypots,honeypots,,honeypot,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_80d846bcbb7d,CSO,host-based,host-based,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_de0e5bf97e64,CSO,malicious_activities,malicious activities,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_b95536cbd116,CSO,malicious_behavior,malicious behavior,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_76f50cbe3d5c,CSO,malware_analysis,malware analysis,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_881fd1098a0c,CSO,malware_attacks,malware attacks,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_48975a36f63e,CSO,malware_detection,malware detection,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_e7f86b81d377,CSO,obfuscation,obfuscation,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_a7cba741097d,CSO,rootkits,rootkits,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_f000d7364bac,CSO,spyware,spyware,,spy-ware,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_442584424261,CSO,trojans,trojans,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_62df662ad370,CSO,rtos,rtos,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_f257831b1f76,CSO,cache_partitioning,cache partitioning,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_e551c51aa15c,CSO,storage_virtualization,storage virtualization,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_6d6c7fcc1579,CSO,microsoft_windows,microsoft windows,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_e9d032973083,CSO,windows_ce,windows ce,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_0add49f50fd6,CSO,windows_vista,windows vista,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_0822454ed839,CSO,windows_xp,windows xp,,,,,,knowledge,,,cso_topic,systems_infrastructure
+SKL_3814551502fc,CSO,autonomic_management,autonomic management,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_68812a6f1260,CSO,autonomic_systems,autonomic systems,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_dd342fb022fb,CSO,self-configuring,self-configuring,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_f2cec07a676d,CSO,self-managing,self-managing,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_73c1b6605da7,CSO,bug_tracking_system,bug tracking system,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_03979a15d648,CSO,circuit_modeling,circuit modeling,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_6ae4cf2736ae,CSO,circuit_simulators,circuit simulators,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_219b16541934,CSO,compact_model,compact model,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_3db07223d865,CSO,simulation_environments,simulation environments,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_d81356bb5821,CSO,simulation_speed,simulation speed,,,,,,knowledge,,,cso_topic,programming_languages
+SKL_c5319860786f,CSO,bug-fixing,bug-fixing,,,,,,knowledge,,,cso_topic,programming_languages
 SKT_b61da00ef5e2,TAXONOMY,type:hard,Hard skill,,,,,,skill_type,,hard,ontology,type
 SKT_34d566c944d2,TAXONOMY,type:soft,Soft skill,,,,,,skill_type,,soft,ontology,type
 SKD_5a69f82d214c,TAXONOMY,domain:security,Security & cybersecurity,,,,,,skill_domain,,hard,ontology,domain

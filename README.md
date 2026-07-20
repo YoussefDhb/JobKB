@@ -18,11 +18,25 @@ tier, and cross-branch data roles), applied consistently to every source.
 | **ONET** | Rich IT occupations + real technology tools (`software_skills`) | SOC `15-12xx` + `15-2051` (Data Scientists) + `11-3021` (IT managers) |
 | **NOC 2021** | Bilingual (EN/FR) occupations + illustrative-example synonyms | minors `2122`/`2123` + `20012`, `21211`, `21311`, `2222x` |
 | **ROME** | French métiers + competences + definitions (cross-lingual) | domain **`M18`** + data/CDO codes `M1405/M1419/M1423/M1426` |
+| **SFIA 9** | **Skills only** — curated professional IT/digital competency framework | 95 IT-scoped skills (business/HR/marketing/finance dropped) |
+| **CSO 3.5** | **Skills only** — curated subset of the Computer Science Ontology (emerging-tech vocabulary) | ~530 topics: IT branches (AI/ML, security, software, data, networks, …) via `superTopicOf`, depth≤2, per-branch balanced, de-duped |
 
 There is no ISCO↔SOC↔NOC↔ROME crosswalk shipped with these datasets, so the
 cross-source **alignment itself acts as the crosswalk**. **No source is privileged:**
 ESCO uses its native ISCO code; ONET, NOC and ROME each attach **directly** to the
 ISCO groups by embedding similarity (never routed through ESCO).
+
+**Skills-only sources.** SFIA and CSO contribute skills but no occupations
+(`contributes_occupations = False`, `needs_attach = False`), so they skip ISCO attachment
+entirely. Their skills are classified into the neutral ontology, aligned/merged against the
+existing skill vocabulary, and reach occupations **transitively** — a SFIA/CSO skill that
+merges into a unified skill inherits that concept's occupation relations. Both are curated to
+avoid noise: SFIA is scoped to IT + IT-management (its ~40 general business/HR/marketing/finance
+skills are dropped) with a hand-curated code→sub-domain map (its shipped category export is
+unreliable); CSO is a research-topic ontology, so only its shallow IT-relevant subset is kept
+(descendants of `config.CSO_ROOTS`, depth ≤ `CSO_MAX_DEPTH`, per-branch balanced and de-duplicated)
+and each topic is classified by the IT **root branch** it descends from (`CSO_BRANCH_SUBDOMAIN`)
+rather than dumped into one flat bucket.
 
 ## Pipeline (package + orchestrator)
 
@@ -31,7 +45,7 @@ src/
   config.py        # paths, EN-primary schema, IT scope per source, HF model ids, tunables
   common.py        # deterministic ids, label normalization, idempotent CSV IO, provenance
   ingest/          # isco, esco, onet, noc, rome  (each IT-filtered, EN-primary)
-  sources/         # pluggable source framework: base (StructuredSource/ExtractionSource) + registry
+  sources/         # pluggable source framework: base (StructuredSource/ExtractionSource) + registry + sfia, cso, demo
   hierarchy.py     # neutral skill ontology: every skill -> IT sub-domain -> Hard/Soft
   align/           # candidates (embeddings) -> verify (batched NLI) -> attach (ISCO, all sources)
   merge.py         # source-neutral unified concept clustering / de-duplication
@@ -104,6 +118,23 @@ so the new source ends up structurally identical to the built-in taxonomies.
 `src/sources/demo_dataset.py` is a worked example (a throwaway synthetic dataset).
 For **unstructured** inputs (scraped postings), subclass `ExtractionSource` and implement
 `documents()` + `extract(text)` (a stub wired to an HF skill-extractor).
+
+### Relevance / noise gate (automatic, at ingest)
+
+Any pluggable source is screened by `src/relevance.py` **before its rows are written**, so
+non-IT and malformed data never enter the KB (the 5 built-in taxonomies keep their authoritative
+code-based IT filter and bypass the gate). Per incoming skill/occupation:
+
+- **Structural noise** — empty / non-alphanumeric / math-notation labels are blocked.
+- **IT-relevance** — a contrastive test on the shared bge-m3 embeddings: an item is a *candidate*
+  only if it scores clearly closer to a **non-IT domain** anchor than to the IT space
+  (`sim_non ≥ REL_NONIT_HI` with a margin), and is blocked **only if** the mDeBERTa NLI verifier
+  also judges it non-IT. Everything else is kept; a candidate the NLI rescues is kept and logged
+  as *borderline*. It is **lenient by design** (calibrated so genuine IT is never dropped — 0 false
+  blocks on the curated SFIA/CSO sets) and **fail-open** if the models can't load.
+
+Every decision is auditable in `kb/blocked_entities.csv` (label, reason, `sim_it`/`sim_non`/`nli`),
+and `--stages qa` reports the blocked / borderline counts. No human in the loop.
 
 The build is **idempotent**: entity ids are deterministic, each stage owns its
 source rows, and `run_pipeline.py` rebuilds `kb/` clean by default.

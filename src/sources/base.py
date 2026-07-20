@@ -147,17 +147,32 @@ class StructuredSource(Source):
         for rec in self.relations():
             rel_rows.append(self._rel_row(rec))
 
+        # Relevance / noise gate: screen before persisting, so blocked (non-IT / malformed)
+        # entities never enter the KB. Also drop their labels + relations. (Lazy import to
+        # keep ingest cheap and avoid loading the align models unless the gate runs.)
+        from .. import relevance
+        occ_rows, skill_rows, blocked, gstats = relevance.filter_rows(occ_rows, skill_rows, self.name)
+        if blocked:
+            label_rows = [l for l in label_rows if l["entity_id"] not in blocked]
+            rel_rows = [r for r in rel_rows if r["occupation_entity_id"] not in blocked
+                        and r["skill_entity_id"] not in blocked]
+
         K.replace_source_rows(C.OCCUPATIONS_CSV, C.OCCUPATION_FIELDS, self.name, occ_rows)
         K.replace_source_rows(C.SKILLS_CSV, C.SKILL_FIELDS, self.name, skill_rows)
         K.replace_source_rows(C.OCC_SKILL_REL_CSV, C.REL_FIELDS, self.name, rel_rows)
         K.upsert_labels(label_rows)
+        gate_note = ""
+        if gstats:
+            gate_note = (f"; gate blocked {gstats['malformed'] + gstats['non_it']} "
+                         f"(malformed {gstats['malformed']}, non-IT {gstats['non_it']}), "
+                         f"borderline-kept {gstats['borderline']}")
         K.log_provenance(self.name, [{
             "entity_id": self.name, "source": self.name, "source_version": self.version,
             "retrieved_at": K.now_iso(), "retrieval_method": self.retrieval_method,
-            "notes": f"{len(occ_rows)} occ, {len(skill_rows)} skills, {len(rel_rows)} relations",
+            "notes": f"{len(occ_rows)} occ, {len(skill_rows)} skills, {len(rel_rows)} relations{gate_note}",
         }])
         print(f"[{self.name}] {len(occ_rows)} occupations, {len(skill_rows)} skills, "
-              f"{len(rel_rows)} occ-skill relations.")
+              f"{len(rel_rows)} occ-skill relations.{gate_note}")
 
 
 class ExtractionSource(StructuredSource):

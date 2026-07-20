@@ -1,10 +1,12 @@
 entity_id,source,source_version,retrieved_at,retrieval_method,notes
-ALIGNMENT,ALIGNMENT,-,2026-07-20T10:12:58+00:00,embed:st+nli:on,"46843 alignments, 106 merge-flagged"
-ATTACH,ATTACH,-,2026-07-20T10:57:11+00:00,embed:BAAI/bge-m3+nli:MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,"140 attached, top-3 NLI re-ranked (54 NLI overrode embedding top-1; 23 low-confidence: sim<0.6)"
 ISCO,ISCO,ISCO-08,2026-07-20T12:52:54+00:00,official_en_csv,"23 groups, 20 edges (IT branches 25/35/133)"
 ESCO,ESCO,ESCO v1.2 (en),2026-07-20T12:52:59+00:00,official_en_csv,"110 occ, 1828 skills, 6613 relations"
 NOC,NOC,NOC 2021 v1.0,2026-07-20T12:53:30+00:00,official_en_fr_csv,15 IT unit-group occupations (bilingual)
 ROME,ROME,ROME v461,2026-07-20T12:53:37+00:00,official_fr_csv,"93 M18 metiers, 2052 skills, 5146 relations"
 ONET,ONET,O*NET 28.x,2026-07-20T12:56:45+00:00,official_en_csv,"32 occ, 1506 skills, 6831 relations"
-SKILL_ONTO,SKILL_ONTO,-,2026-07-20T12:57:41+00:00,neutral_skill_ontology,"5474 skills classified, 131 soft, 13 sub-domains, 5487 edges"
-MERGE,MERGE,-,2026-07-20T12:57:42+00:00,connected_components(exactMatch),"233 unified occ (13 merged), 5405 unified skills (64 merged)"
+SFIA,SFIA,sfia-9,2026-07-20T23:05:40+00:00,sfia_csv,"0 occ, 95 skills, 0 relations; gate blocked 0 (malformed 0, non-IT 0), borderline-kept 0"
+CSO,CSO,cso-3.5,2026-07-20T23:07:58+00:00,cso_curated_subset,"0 occ, 527 skills, 0 relations; gate blocked 4 (malformed 0, non-IT 4), borderline-kept 1"
+SKILL_ONTO,SKILL_ONTO,-,2026-07-20T23:07:59+00:00,neutral_skill_ontology,"6096 skills classified, 131 soft, 13 sub-domains, 6109 edges"
+MERGE,MERGE,-,2026-07-20T23:08:05+00:00,connected_components(exactMatch),"233 unified occ (13 merged), 5982 unified skills (104 merged)"
+ALIGNMENT,ALIGNMENT,-,2026-07-20T23:08:05+00:00,incremental,97015 alignments total
+ATTACH,ATTACH,-,2026-07-20T23:08:05+00:00,incremental,140 ISCO attach edges total

@@ -54,6 +54,10 @@ ONET_EN_DIR = os.path.join(RESOURCES, "ONET", "en")
 NOC_EN_DIR = os.path.join(RESOURCES, "NOC", "en")
 NOC_FR_DIR = os.path.join(RESOURCES, "NOC", "fr")
 ROME_FR_DIR = os.path.join(RESOURCES, "ROME", "fr")
+# Skills-only frameworks (no occupations): SFIA (professional IT skills) and CSO
+# (computer-science research topics, curated subset). English-only.
+SFIA_EN_DIR = os.path.join(RESOURCES, "SFIA", "en")
+CSO_EN_DIR = os.path.join(RESOURCES, "CSO", "en")
 
 KB_DIR = os.path.join(ROOT, "kb")   # built knowledge base output
 
@@ -66,6 +70,7 @@ ALIGNMENTS_CSV = os.path.join(KB_DIR, "concept_alignments.csv")
 UNIFIED_OCCUPATIONS_CSV = os.path.join(KB_DIR, "unified_occupations.csv")
 UNIFIED_SKILLS_CSV = os.path.join(KB_DIR, "unified_skills.csv")
 PROVENANCE_CSV = os.path.join(KB_DIR, "provenance.csv")
+BLOCKED_ENTITIES_CSV = os.path.join(KB_DIR, "blocked_entities.csv")  # relevance-gate rejects
 
 # --------------------------------------------------------------------------------------
 # Knowledge-base schema (English-primary; French secondary when present)
@@ -105,6 +110,10 @@ UNIFIED_SKILL_FIELDS = [
 ]
 PROVENANCE_FIELDS = [
     "entity_id", "source", "source_version", "retrieved_at", "retrieval_method", "notes",
+]
+BLOCKED_FIELDS = [
+    "entity_kind", "source", "source_id", "label", "decision", "reason",
+    "sim_it", "sim_non", "nli",
 ]
 
 # --------------------------------------------------------------------------------------
@@ -202,9 +211,47 @@ SRC_ISCO = "ISCO"
 SRC_ONET = "ONET"
 SRC_NOC = "NOC"
 SRC_ROME = "ROME"
+SRC_SFIA = "SFIA"   # skills-only: professional IT/digital competency framework
+SRC_CSO = "CSO"     # skills-only: curated subset of computer-science research topics
 
 # Sources that contribute real (non ISCO-group) occupations that get aligned.
 REAL_OCC_SOURCES = (SRC_ESCO, SRC_ONET, SRC_NOC, SRC_ROME)
+
+# Sources trusted to set their own IT sub-domain (`it_subtype`) at ingest time; the neutral
+# hierarchy keeps that placement instead of re-deriving it from the label regex. SFIA ships a
+# hand-curated code->sub-domain map (its own category export is unreliable) and CSO derives the
+# sub-domain from the IT root branch each topic descends from — both more reliable than a
+# keyword match on a bare skill/topic label.
+SELF_CLASSIFIED_SUBDOMAIN_SOURCES = {SRC_SFIA, SRC_CSO}
+
+# CSO curation: CSO 3.5 is ~14.6k CS *research topics* — far broader than a jobs/skills KB
+# needs, and deep branches are noisy research fragments. We keep only the IT-relevant, shallow
+# part: descendants (via `superTopicOf`) of these root branches, down to CSO_MAX_DEPTH, deduped
+# and capped at CSO_MAX_TOPICS, ingested as knowledge-type skills classified by their branch.
+# Roots are ordered specific->generic so a multi-parent topic takes the most precise branch.
+CSO_ROOTS = (
+    "computer_security", "machine_learning", "artificial_intelligence", "data_mining",
+    "information_retrieval", "computer_networks", "human_computer_interaction",
+    "computer_operating_systems", "software_engineering", "computer_programming",
+    "internet", "software",
+)
+CSO_MAX_DEPTH = 2
+# Per-branch cap keeps the subset balanced across sub-domains (CSO is heavily AI-weighted, and
+# a single global cap would let BFS fill AI/ML before ever reaching networks/data/web). Each
+# branch keeps its shallowest CSO_MAX_PER_BRANCH topics; CSO_MAX_TOPICS is an overall ceiling.
+CSO_MAX_PER_BRANCH = 80
+CSO_MAX_TOPICS = 700
+# Each CSO root branch -> the neutral sub-domain its topics belong to.
+CSO_BRANCH_SUBDOMAIN = {
+    "artificial_intelligence": "ai_ml", "machine_learning": "ai_ml",
+    "computer_security": "security",
+    "data_mining": "data_databases", "information_retrieval": "data_databases",
+    "computer_networks": "networks", "internet": "networks",
+    "software_engineering": "programming_languages", "computer_programming": "programming_languages",
+    "software": "programming_languages",
+    "human_computer_interaction": "web",
+    "computer_operating_systems": "systems_infrastructure",
+}
 
 # --------------------------------------------------------------------------------------
 # HuggingFace models (fully open-source; no API keys)
@@ -268,3 +315,46 @@ MERGE_EMBED_SKILL = 0.90   # near-identical embedding floor for a skill merge (n
 ATTACH_MIN_SIM = 0.60
 ATTACH_TOPK = 3            # embedding shortlist size that NLI re-ranks
 ATTACH_NLI_WEIGHT = 0.5   # weight of NLI entailment vs embedding cosine in the re-rank score
+
+# --------------------------------------------------------------------------------------
+# Relevance / noise gate (src/relevance.py) — automatic, at ingest, for NEW sources
+# --------------------------------------------------------------------------------------
+# Every pluggable StructuredSource (SFIA/CSO/scraped/future) is screened before its rows are
+# written: malformed labels and confidently non-IT entities are BLOCKED (logged to
+# BLOCKED_ENTITIES_CSV), the rest are kept. Built-in taxonomies (code-filtered already) bypass
+# this. Lenient by design — precision-first on BLOCKING so genuine IT is never dropped. bge-m3
+# cosines run high for everything, so absolute IT-similarity does not separate the classes; the
+# discriminator (calibrated on real data) is an item scoring **clearly closer to a non-IT domain**
+# (`sim_non >= REL_NONIT_HI` AND a positive margin over its IT similarity) — that makes it a
+# *candidate*, then BLOCKED only if the NLI verifier also says it isn't IT (`nli < REL_NLI_MIN`).
+# Everything else is kept; a candidate the NLI rescues is kept + logged as borderline. Low-context
+# IT terms ("dijkstra", "k-nearest neighbors") have LOW sim_non, so the floor protects them; true
+# non-IT ("tax accounting" sim_non≈0.76, nli≈0.01) is caught. At these values SFIA-kept + CSO
+# valid-IT show 0 false blocks. Reuses the cached bge-m3 + mDeBERTa, so the extra cost is ~nil.
+RELEVANCE_GATE_ENABLED = True
+REL_NONIT_HI = 0.65       # a candidate must score at least this cos to a non-IT domain anchor
+REL_NONIT_MARGIN = 0.05   # ...and beat its own IT similarity by at least this margin
+REL_NLI_MIN = 0.15        # ...then, if NLI entailment "...is about IT" is below this -> BLOCK non-IT
+
+# Curated IT seed vocabulary — broad anchors so a novel-but-real IT skill still scores IT.
+REL_IT_SEED = (
+    "software development and programming", "computer networks and telecommunications",
+    "cybersecurity and information security", "databases and data engineering",
+    "artificial intelligence and machine learning", "cloud computing and devops",
+    "web and mobile application development", "operating systems and IT infrastructure",
+    "IT service management and governance", "data analytics and business intelligence",
+    "computer hardware and embedded systems", "information technology",
+)
+# Non-IT domain anchors — the contrast class. Kept generic so clearly out-of-scope skills
+# (marketing, HR, finance, facilities, healthcare, …) lose the IT-vs-non-IT comparison.
+REL_NONIT_ANCHORS = (
+    "marketing, advertising and brand management", "sales and customer relationship management",
+    "human resources, recruitment and staff training", "accounting, finance and budgeting",
+    "facilities, building and physical asset management", "healthcare, nursing and medicine",
+    "law, legal practice and compliance", "agriculture, farming and forestry",
+    "construction and civil engineering", "cooking, catering and hospitality",
+    "teaching and classroom education", "logistics, warehousing and transport",
+    "retail and store operations", "occupational health and physical safety",
+    "hairdressing, beauty and personal care", "manufacturing, welding and metal fabrication",
+    "driving and vehicle operation", "biology, genetics and laboratory science",
+)

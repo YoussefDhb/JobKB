@@ -12,6 +12,8 @@ from .. import config as C
 from ..ingest import isco, esco, onet, noc, rome
 from .base import Source
 from .demo_dataset import DemoSource
+from .sfia import SfiaSource
+from .cso import CsoSource
 
 
 class _WrappedIngest(Source):
@@ -46,6 +48,12 @@ register(_WrappedIngest(C.SRC_ESCO, esco.run, contributes_occupations=True, need
 register(_WrappedIngest(C.SRC_ONET, onet.run, contributes_occupations=True, needs_attach=True))
 register(_WrappedIngest(C.SRC_NOC, noc.run, contributes_occupations=True, needs_attach=True))
 register(_WrappedIngest(C.SRC_ROME, rome.run, contributes_occupations=True, needs_attach=True))
+
+# --- built-in skills-only frameworks ---------------------------------------------------
+# SFIA and CSO contribute skills but no occupations; they classify + align/merge into the
+# shared skill layer and reach occupations transitively via unified skills.
+register(SfiaSource())
+register(CsoSource())
 
 # --- plugin sources --------------------------------------------------------------------
 register(DemoSource())

@@ -167,7 +167,13 @@ def run():
     hier_edges = []
     for r in esco + others:
         text = r.get("pref_label_en") or r.get("pref_label_fr") or ""
-        sub = classify_subdomain(text, r.get("hard_soft_provisional"), r.get("esco_skill_type"))
+        existing = r.get("it_subtype")
+        # Trust a source that ships its own authoritative sub-domain (SFIA's curated map, CSO's
+        # branch); otherwise derive it from the label classifier.
+        if r["source"] in C.SELF_CLASSIFIED_SUBDOMAIN_SOURCES and existing in SUBDOMAINS:
+            sub = existing
+        else:
+            sub = classify_subdomain(text, r.get("hard_soft_provisional"), r.get("esco_skill_type"))
         r["it_subtype"] = sub
         hier_edges.append({
             "parent_entity_id": domain_id[sub], "child_entity_id": r["entity_id"],

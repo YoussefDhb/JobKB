@@ -150,7 +150,7 @@ USKL_46c67bd25f0d,render 3D images,réaliser des images avec effet 3D,convert 3D
 USKL_196c61355c9c,SAP R3,SAP R3,SAP R/3 | SAP R/3 Enterprise Edition | SAP S/4 HANA | SAP R/1 | SAP ERP | SAP R/2 | SAP R/3 Enterprise Central Component | SAP ERP 6.0: Enhancement Packages,,hard,knowledge_general,ESCO,SKL_b52f6b21f082
 USKL_6aa0b7362fde,build recommender systems,construire des systèmes de recommandation,build recommendation systems | recommender engine | recommender platform,bâtir des systèmes de recommandation | construire des plateformes de recommandation | créer des systèmes de recommandation | filtrer l’information | construire des moteurs de recommandation | construire des systèmes de filtrage collaboratif,hard,other_hard,ESCO,SKL_95a37d406831
 USKL_3c46314c0a1f,WebCMS,WebCMS,WebCMS software systems,,hard,knowledge_general,ESCO,SKL_619ec6b46c43
-USKL_5d12cb189db5,usability engineering,ergonomie informatique,usability testing,tests d'utilisabilité | test d'utilisabilité | ingénierie de l'utilisabilité,hard,knowledge_general,ESCO,SKL_b1c3417f0755
+USKL_9ebc43173e22,usability engineering,ergonomie informatique,usability testing,tests d'utilisabilité | test d'utilisabilité | ingénierie de l'utilisabilité,hard,knowledge_general,CSO | ESCO,SKL_9c765d5bfe98 | SKL_b1c3417f0755
 USKL_7327eb9379a9,engage composers,engager des compositeurs,engage a composer | recruit musical composers | seek services of a symphonist | engaging composers,,hard,other_hard,ESCO,SKL_fd3d7bb5e302
 USKL_7bd40f478688,keep up with trends,suivre les tendances,keeping up with a trend | keep pace with trends | monitor trends | keep up with a trend | follow trends | keeping up with trends,,hard,other_hard,ESCO,SKL_2b783cf6ca18
 USKL_9344aabef8a9,automation technology,technologie de l’automatisation,automation in production systems | control systems technology | control systems | technologies of automation | automation in maintenance | technology of control systems | technology for control systems | automation technologies,technologie de l’automation,hard,knowledge_general,ESCO,SKL_590eb7734233
@@ -266,7 +266,7 @@ USKL_a0146d85f4d0,adapt to type of media,s'adapter au type de média,adapt to ty
 USKL_6b340f64d54b,promote open innovation in research,promouvoir l’innovation ouverte dans la recherche,encourage open innovation in research | promote integrated collaboration in research | boost open innovation in research | stimulate collaborative innovation in research | foster collaborative innovation in research,,hard,other_hard,ESCO,SKL_633fc2486338
 USKL_5296ab622e6c,common aviation safety regulations,règles communes de sécurité en matière d'aviation,common safety regulations in aviation | common aviation safety legislation | prevailing aviation safety directives | common safety legislation in aviation | common civil aviation safety regulations | regulations governing safety in international civil aviation | common international civil aviation safety regulations | standard aviation safety regulations | prevailing safety regulations in civil aviation | standard regulations in aviation safety,,hard,knowledge_general,ESCO,SKL_37f4abfcf77d
 USKL_2db34cfc8d52,roofing drones,drones pour toitures,roofing drone types | typology of r.o.a. | typology of remotely operated aircraft | types of remotely operated aircraft | drones for roofing | typology of roofing drones | types of r.o.a,,hard,knowledge_general,ESCO,SKL_2e3ca48080f5
-USKL_2eeec0c10bc2,software frameworks,cadres logiciels,software engineering frameworks,,hard,programming_languages,ESCO,SKL_5f7aa564dfb2
+USKL_f9de8872fa66,software frameworks,cadres logiciels,software engineering frameworks | software framework,,hard,programming_languages,CSO | ESCO,SKL_5f7aa564dfb2 | SKL_db3f44f1cd01
 USKL_122b42fdbe19,maintain internal communication systems,entretenir des systèmes de communication interne,maintenance of internal communication systems | apply internal communcation skills | internal communication systems maintenance | maintaining internal communication systems | communicate internally | maintain staff communication systems | communicate within the company | maintaining of internal communication systems,,hard,other_hard,ESCO,SKL_71aafbc50171
 USKL_6614283189ab,compare survey computations,comparer des calculs d’arpentage,comparing data with standards | survey computations comparison | check data for accuracy | compare data with standards | comparing survey computations | comparing of survey computations | verifying data | verify data | checking data for accuracy | survey computation comparison | comparison of survey computations,,hard,other_hard,ESCO,SKL_046268b53619
 USKL_3dfe8248d257,use analytics for commercial purposes,utiliser une démarche analytique à des fins commerciales,use analytics for commercial purpose | utilize analytics for commercial purposes | use commercial analytics | work with analytics for commercial purposes | using analytics for commercial purposes,,hard,data_databases,ESCO,SKL_16f35fdfe60e
@@ -286,7 +286,7 @@ USKL_1b18c497260a,ensure safety of mobile electrical systems,assurer la sécurit
 USKL_ca20a08967b7,perform dimensionality reduction,effectuer une réduction des dimensions,data feature engineering | t-distributed stochastic neighbor embedding | data feature extraction | data feature selection | multidimensional scaling | t-SNE | Kohonen self-organizing map,,hard,other_hard,ESCO,SKL_e9b9f4a1354d
 USKL_ed59be60a01a,present reports,présenter des rapports,present a report | prepare statistical reports | submit presentation,exposer des rapports | fournir des rapports | transmettre des rapports,hard,other_hard,ESCO,SKL_197598d2730e
 USKL_b5eeeaf7e853,set up projection equipment,installer du matériel de projection,install and connect projection and image equipment | assemble projection equipment | setting up projection equipment | set up equipment for projection,,hard,other_hard,ESCO,SKL_93fd9d40168a
-USKL_a5fff6044484,computer programming,programmation informatique,GCC | Ada | ALGOL | Visual Basic .NET | Visual Basic | HyperTalk | AppleScript | Ceylon | LabVIEW | Euphoria | Subversion | OCaml | PL/I | MSVC++ | Dylan | AspectJ | Korn-shell | STL | Io | Hack | Turing | Object Pascal | Curl | DIBOL | cT | KnockoutJS | bash | Seed7 | Emacs Lisp | OpenCV | Rebol | Lua | BCPL | ActionScript | C shell | AWK | INTERCAL | COMAL | PowerShell | occam | Fantom | Caml | Z shell | Tcl | Squirrel-script | IDL | Gosu | Fortran | X10 | AngularJS | REXX | BizTalk | ColdFusion | PostScript | TACL,,hard,knowledge_general,ESCO,SKL_59c64ba70b70
+USKL_145009d54139,computer programming,programmation informatique,GCC | Ada | ALGOL | Visual Basic .NET | Visual Basic | HyperTalk | AppleScript | Ceylon | LabVIEW | Euphoria | Subversion | OCaml | PL/I | MSVC++ | Dylan | AspectJ | Korn-shell | STL | Io | Hack | Turing | Object Pascal | Curl | DIBOL | cT | KnockoutJS | bash | Seed7 | Emacs Lisp | OpenCV | Rebol | Lua | BCPL | ActionScript | C shell | AWK | INTERCAL | COMAL | PowerShell | occam | Fantom | Caml | Z shell | Tcl | Squirrel-script | IDL | Gosu | Fortran | X10 | AngularJS | REXX | BizTalk | ColdFusion | PostScript | TACL,,hard,knowledge_general,CSO | ESCO,SKL_59c64ba70b70 | SKL_cec36711af26
 USKL_b46b0d0b9e2f,Lisp,Lisp,Lisp software development principles | Lisp algorithms | Lisp software development techniques | Lisp programming paradigms | Lisp coding techniques,,hard,knowledge_general,ESCO,SKL_9cdd580294bf
 USKL_5fe0f9790672,application usability,convivialité de l’application,software usability,pratiques d’ingénierie du logiciel | utilisabilité de l’application | ergonomie informatique | convivialité du logiciel | usabilité de l’application | ergonomie de l’application,hard,programming_languages,ESCO,SKL_027b4b2aa1a9
 USKL_effe2cb4d41e,solution deployment,déploiement de solutions,implementation of solutions | software solution deployment,,hard,knowledge_general,ESCO,SKL_9ce640be2540
@@ -385,7 +385,7 @@ USKL_5cf2dd1a5d27,information structure,structure de l’information,data struct
 USKL_632206012c4a,manage open publications,gérer des publications ouvertes,manage open-source content | manage open-source publications | handle open-source content | handle open publications | handle open-source publications,,hard,other_hard,ESCO,SKL_37eb93868d67
 USKL_290a92c0146e,audit techniques,techniques d’audit,audit procedures | battery audit process,,hard,knowledge_general,ESCO,SKL_5fd1a916f288
 USKL_9f71315bee45,Chef,Chef (outils de gestion de configuration logicielle),Chef (tools for software configuration management) | Chef software,,hard,other_hard,ESCO | ONET,SKL_7b2c106a2df8 | SKL_7c9445cdf809
-USKL_fa4011180486,screen reader,lecteur d’écran,assistive technology for reading | text-to-speech software,logiciel de synthèse vocale | technologie d'assistance à la lecture,hard,knowledge_general,ESCO,SKL_86420149ed27
+USKL_a445c4fffce9,screen reader,lecteur d’écran,assistive technology for reading | text-to-speech software | screen readers,logiciel de synthèse vocale | technologie d'assistance à la lecture,hard,web,CSO | ESCO,SKL_86420149ed27 | SKL_e85880ce8698
 USKL_93bc6a3006ca,manage budgets,gérer les budgets,budget set costs | approximate set costs | estimate set costs | manage operation budgets | oversee operational budgets | handle operational budgets | maintain operational budgets | manage operational budget,coûts fixés dans le budget | superviser les budgets opérationnels | gérer les budgets opérationnels | gérer les budgets d'exploitation | budget fixé des coûts | gérer le budget opérationnel,hard,it_management,ESCO,SKL_15d6003a68bc
 USKL_c6178c45ce82,mark film reels,marquer des bobines de film,prepare film reels | annotate film reels | mark film reel | marking film reels,,hard,other_hard,ESCO,SKL_c9f238de68cc
 USKL_e1df2ac79ad8,modify textile designs,modifier des modèles textiles,edit textile illustrations | change textile sketches | modify the textile design | modify designs of textile,,hard,other_hard,ESCO,SKL_871c77c48276
@@ -414,11 +414,11 @@ USKL_781f10da3ac3,use ultrasonic equipment,utiliser des appareils à ultrasons,a
 USKL_c35d77d552e4,monitor customer behaviour,surveiller le comportement des clients,monitor customers' behaviour | observe clients' needs and attitude | monitor behaviour by customers | monitor customer behavior | check out customer traits,observer avec attention le comportement des clients | observer avec attention le comportement de la clientèle | faire attention au comportement des clients,hard,other_hard,ESCO,SKL_788cd0b83c9d
 USKL_1f28b6464f49,marketing analytics,analyse marketing,marketing data analytics,analyse des données marketing,hard,data_databases,ESCO,SKL_30e56678609f
 USKL_8055f9f7eb71,create game testing software,créer un logiciel de test de jeux,create software to test games | design testing software for games | develop game testing software | create software for game testing,,hard,programming_languages,ESCO,SKL_59d4d75d1168
-USKL_46423856e950,project management,gestion de projets,fundamentals of programme management | management of programmes | management of projects | fundamentals of project management | principles of project management | programme management | principles of programme management | programme management activities | project management activities,gestion de programmes | principes de gestion du programme | fondamentaux de la gestion des programmes | principes de gestion de projet | activités de gestion de projet | activités de gestion du programme | gestion du programme | fondamentaux de la gestion de projet,hard,it_management,ESCO,SKL_edbffb865bc9
+USKL_a82b2800557c,Project management,gestion de projets,project management | fundamentals of programme management | management of programmes | management of projects | fundamentals of project management | principles of project management | programme management | principles of programme management | programme management activities | project management activities | PRMG,gestion de programmes | principes de gestion du programme | fondamentaux de la gestion des programmes | principes de gestion de projet | activités de gestion de projet | activités de gestion du programme | gestion du programme | fondamentaux de la gestion de projet,hard,it_management,ESCO | SFIA,SKL_b180e72815e8 | SKL_edbffb865bc9
 USKL_ecfe0c652d80,maintain computerised records of railway traffic,tenir des registres informatisés du trafic ferroviaire,keep digital records of railroad activities | keep digital records of railroad operations | maintain computer records of railway traffic | maintain computerised records of rail traffic | keep digital records of railway activities | maintain computer records of rail traffic | maintain computerised records of railroad traffic | keep digital records of railway operational | keep digital records of rail operations | maintain computer records of railroad traffic,,hard,other_hard,ESCO,SKL_fb30eca923cf
 USKL_181c748f2415,maintain telephony system,gérer un système de téléphonie,maintain phone systems | uphold phone systems,,hard,other_hard,ESCO,SKL_0086eea0ffdc
 USKL_e8b42b189068,design infrastructure for surface mines,concevoir des infrastructures pour mines à ciel ouvert,assisting in infrastructure designing for surface mines | assisting infrastructure designing for surface mines | assist in infrastructure design for surface mines | infrastructure design for surface mines | assist surface mine infrastructure design | assisting surface mine infrastructure design | infrastructure designing for surface mines | designing of infrastructure for surface mines | assist infrastructure designing for surface mines | surface mine infrastructure designing | designing infrastructure for surface mines | surface mine infrastructure design,,hard,systems_infrastructure,ESCO,SKL_897834066456
-USKL_5d903a0adfd2,risk management,gestion des risques,risk governance | risk administration | hazard manamagent | risk assessment,Gestion des risques (Risk Management),hard,it_management,ESCO | ROME,SKL_a78ae910546c | SKL_c70564109e85
+USKL_6ba67115b644,Risk management,gestion des risques,risk management | risk governance | risk administration | hazard manamagent | risk assessment | BURM,Gestion des risques (Risk Management),hard,it_management,ESCO | ROME | SFIA,SKL_81e0ff8acbba | SKL_a78ae910546c | SKL_c70564109e85
 USKL_4d76d2b83737,mix ink,mélanger de l’encre,blend ink | stir ink | mixing ink | prepare ink | mix inks,,hard,other_hard,ESCO,SKL_cd10e93dfdcc
 USKL_4feb2da58dac,Microsoft Access,Microsoft Access,Microsoft Office Access | MS Access,,hard,other_hard,ESCO | ONET,SKL_2bf7432b2d4b | SKL_b03868bc7aa0
 USKL_21d097652127,develop blockchain innovative architectures,développer des architectures innovantes dans le domaine de la technologie de la blockchain,build innovative blockchain architectures,construire des architectures blockchain innovantes,hard,programming_languages,ESCO,SKL_0bdc80704838
@@ -434,7 +434,7 @@ USKL_bc3b42094615,software interaction design,conception de l’interaction du l
 USKL_9b789425823e,work with virtual learning environments,travailler avec des environnements d’apprentissage virtuels,working with virtual learning environments | use virtual learning environments | works with virtual learning environments | engage with virtual learning environments | employ virtual learning environments | work with virtual learning environment,,hard,other_hard,ESCO,SKL_8bdcf906f8a4
 USKL_50caa9dcf63b,prepare detailed working drawings for interior design,préparer des plans de travail détaillés pour le design intérieur,prepare detailed working drawing for interior design | prepare detailed drawings for interior design | preparing detailed working drawings for interior design | create detailed working drawings for interior design | generate detailed working drawings for interior design | draw up detailed working drawings for interior design,,hard,other_hard,ESCO,SKL_4e1db8dbc632
 USKL_f47d474610fc,conduct research interview,mener un entretien de recherche,conduct interview based research | administer research interviews,,hard,other_hard,ESCO,SKL_b04355598611
-USKL_1af5a2436701,information extraction,extraction de l’information,information extraction techniques,,hard,knowledge_general,ESCO,SKL_b72717b1c634
+USKL_60cd6bee3526,information extraction,extraction de l’information,information extraction techniques,,hard,data_databases,CSO | ESCO,SKL_b72717b1c634 | SKL_d11a3d9993de
 USKL_08befd8aa54c,cyber security,cybersécurité,ICT security | cybersecurity | digital security | information and communications technology security | IT security | information security,sécurité des technologies de l'information et de la communication | sécurité des TIC | sécurité numérique | sécurité informatique | sécurité des technologies de l'information et des communications | sécurité de l'information,hard,security,ESCO,SKL_bbc55bdf9279
 USKL_bb8dbd2686fb,develop financial statistics reports,élaborer des rapports de statistiques financières,develop a financial statistics report | launch financial statistics reports | establish financial statistics reports | produce financial statistics reports | developing financial statistics reports | evaluate financial statistics reports | develop financial statistical reports,,hard,programming_languages,ESCO,SKL_2ab21b64c133
 USKL_346c8948d5ac,use free typing techniques,utiliser des techniques de frappe dactylographique à l’aveugle,use free typing | using free typing techniques | utilize free typing techniques | employ free typing techniques | use free typing technique,,hard,other_hard,ESCO,SKL_7b7281982bc6
@@ -464,7 +464,7 @@ USKL_a162b32db074,apply organisational techniques,appliquer des techniques organ
 USKL_880328c1bc01,analyse the scenography,analyser la scénographie,analyze the scenography | analyse scenic design | analyse the scenes | analyse the stage scenery,,hard,other_hard,ESCO,SKL_d248feca446a
 USKL_171c95bbc275,manage online content,gérer du contenu en ligne,manage website content,gérer du contenu de site internet | administrer du contenu en ligne | gérer des contenus en ligne | assurer la gestion de contenu en ligne | gérer du contenu de site web | gérer du contenu web,hard,other_hard,ESCO,SKL_8311e0f8dbf3
 USKL_d792eb18d7f7,conduct threat intelligence,service de renseignements sur les cybermenaces,undertake cyber threat intelligence | plan threat intelligence | organise cyber threat intelligence | conduct cyber threat intelligence | undertake threat intelligence | organise CTI | conduct CTI | plan CTI | undertake CTI | organise threat intelligence | plan cyber threat intelligence,organiser des renseignements sur les cybermenaces | planifier les renseignements sur les menaces | entreprendre des activités de renseignement sur les menaces | entreprendre CTI | mener des activités de renseignement sur les cybermenaces | entreprendre le CTI | organiser CTI | organiser des renseignements sur les menaces | organiser le renseignement sur les cybermenaces | mener un CTI | mener une veille sur les menaces | conduire CTI | entreprendre des renseignements sur les cybermenaces | organiser le CTI | entreprendre des activités de renseignement sur les cybermenaces | planifier le CTI | plan CTI | entreprendre des renseignements sur les menaces | planifier la veille sur les cybermenaces | planifier des renseignements sur les cybermenaces,hard,other_hard,ESCO,SKL_f4b88117fcbb
-USKL_691942c9122e,virtual reality,réalité virtuelle,digital environment virtual reality | virtual reality systems | digital environment life experiences simulation | virtual reality simulation process | simulated reality,,hard,knowledge_general,ESCO,SKL_d7f07ea5bd39
+USKL_9d906e9f8059,virtual reality,réalité virtuelle,digital environment virtual reality | virtual reality systems | digital environment life experiences simulation | virtual reality simulation process | simulated reality,,hard,web,CSO | ESCO,SKL_aa3d4fb4a9d1 | SKL_d7f07ea5bd39
 USKL_867c473068f4,compile GIS-data,compiler les données d’un SIG,compiling of GIS-data | compile data from maps and other sources | compiling data from maps and other sources | GIS-data compilation | compilation of GIS-data | compiling of data from maps and other sources | compiling GIS-data | compilation of data from maps and other sources,,hard,programming_languages,ESCO,SKL_e20b82075058
 USKL_c614264d5627,Adobe Photoshop,Adobe Photoshop,Adobe Photoshop Elements | Adobe Photoshop CC,,hard,other_hard,ESCO | ONET,SKL_203cac4010c0 | SKL_7688aa622488
 USKL_6440c542c590,provide ICT support,fournir une assistance TIC,contribute ICT support | ICT support provision | administer ICT support | furnish ICT support | provision of ICT support | arrange ICT support | providing ICT support,,hard,other_hard,ESCO,SKL_628f1410a7a6
@@ -796,10 +796,10 @@ USKL_b5630620063a,monitor system performance,contrôler la performance du systè
 USKL_9d3f4fcfa5da,conduct environmental surveys,mener des études environnementales,conduct surveys on risks to the environment | collect information on environmental risks through implementation of surveys | carry out environmental surveys | conduct environment surveys | gather data on environmental risks through conducting surveys | execute environmental surveys | undertake environmental surveys | conduct surveys on environmental risks | perform environmental surveys | collect data on environmental risks through implementation of surveys,,hard,other_hard,ESCO,SKL_29199f447102
 USKL_280763a1ffba,Filemaker (database management systems),FileMaker (systèmes de gestion de base de données),FileMaker Pro | FileMaker | FileMaker Go,,hard,data_databases,ESCO,SKL_6979c42dcb59
 USKL_fe1dbb01b427,use rental management software,utiliser un logiciel de gestion locative,use of rental management software | operate rental management software | apply rental management software | adopt rental management software | handle rental management software | using rental management software | rental management software use,,hard,programming_languages,ESCO,SKL_7a34519bf277
-USKL_8fa6d0d742a1,geographic information systems,Système d'Information Géographique (SIG),RS | gis | GIS | remote sensing | GPS | global positioning systems | gps | geospatial technologies | rs,systèmes d'information géographique,hard,other_hard,ESCO | ROME,SKL_acc48df4d907 | SKL_cbbaf137ed15
+USKL_8de66e495772,geographic information system,Système d'Information Géographique (SIG),geographic information systems | RS | gis | GIS | remote sensing | GPS | global positioning systems | gps | geospatial technologies | rs | geographical information system (gis) | geographical information systems,systèmes d'information géographique,hard,other_hard,CSO | ESCO | ROME,SKL_3e910030a2b5 | SKL_acc48df4d907 | SKL_cbbaf137ed15
 USKL_80703ff07d5a,identify software for warehouse management,recenser les logiciels de gestion d’entrepôts,determine software for warehouse management | identify applications for warehouse management | identify software applications for warehouse management | discover warehouse management software | recognize software for warehouse management,,hard,programming_languages,ESCO,SKL_c0a2e4a81fa2
 USKL_a997195aaee3,analyse the artistic concept based on stage actions,analyser le concept artistique d’après les actions scéniques,analyse artistic concept stage action | examine a performance's artistic concept according to stage movements | analyze the artistic concept based on stage actions | analyse the artistic concept based on actions on stage | analyse the artistic concept of a performance during rehearsals,,hard,other_hard,ESCO,SKL_ba87b921382f
-USKL_8ec530cdcceb,Computer Assisted Language Learning,aprentissage des langues en ligne,CALL,CALL,hard,knowledge_general,ESCO,SKL_06b9228be59a
+USKL_c53bd35a7763,Computer Assisted Language Learning,aprentissage des langues en ligne,CALL | computer assisted language learning | computer-assisted language learning,CALL,hard,web,CSO | ESCO,SKL_06b9228be59a | SKL_ddaf92393f29
 USKL_74f020110727,explain distributed ledger technologies principles,expliquer les principes des technologies de registres distribués,explain distributed ledger technologies properties,expliquer les propriétés des technologies des registres distribués | expliquer les propriétés des technologies de registre distribué,hard,other_hard,ESCO,SKL_af7934165e9a
 USKL_f5562f056c43,manage membership database,gérer une base de données des adhésions,operate association database | oversee membership database | operate membership database | supervise association database | oversee association database | supervise membership database,,hard,data_databases,ESCO,SKL_02fe2368a871
 USKL_c71731dc59d7,Parrot Security OS,Parrot Security OS,OS - Parrot Security,,hard,security,ESCO,SKL_e7f0a7064c6a
@@ -835,7 +835,7 @@ USKL_888e26d35e07,use thermal analysis,utiliser une analyse thermique,using ther
 USKL_cb2c7c2602dc,Open source model,modèle en code source ouverte,,modèle «open source»,hard,knowledge_general,ESCO,SKL_232fd42823e2
 USKL_84fd354ae915,technically design a sound system,assurer la conception technique d'un système de sonorisation,design a technical sound system | set up a sound system | create an audio system | design a sound system technically,,hard,other_hard,ESCO,SKL_67a347a11595
 USKL_ba92a4a75f33,evaluate information services using metrics,évaluer des services d’information en utilisant des indicateurs chiffrés,using metrics to evaluate information services | evaluating information services using metrics | rate information services using metrics | gauge information services using metrics | assess information services using metrics | evaluate information service using metrics,,hard,other_hard,ESCO,SKL_1a859ad3e328
-USKL_ad24bcc24321,security engineering,ingénierie de sécurité,information security engineering | network security engineering | systems security engineering | security management,ingénierie de la sécurité des systèmes | gestion de la sécurité | ingénierie de la sécurité des réseaux | ingénierie de sécurité des réseaux | ingénierie de la sécurité de l'information,hard,security,ESCO,SKL_c0d9b25a3929
+USKL_9dfe6154cc55,security engineering,ingénierie de sécurité,information security engineering | network security engineering | systems security engineering | security management,ingénierie de la sécurité des systèmes | gestion de la sécurité | ingénierie de la sécurité des réseaux | ingénierie de sécurité des réseaux | ingénierie de la sécurité de l'information,hard,security,CSO | ESCO,SKL_4caaa7af261b | SKL_c0d9b25a3929
 USKL_877794eb88e8,design computer network,concevoir un réseau informatique,design LAN | design wide area network | design WAN | design local area network,,hard,networks,ESCO,SKL_008e59920331
 USKL_49225170ed6e,set up media integration systems,mettre en place des systèmes d’intégration des médias,configure media integration systems | install media integration systems | establish media integration setups,,hard,other_hard,ESCO,SKL_2e9b192724d0
 USKL_d1d8b3cf93af,Pentaho Data Integration,Pentaho Data Integration,PDI | Pentaho Kettle,,hard,knowledge_general,ESCO,SKL_7e853ce0760f
@@ -878,7 +878,7 @@ USKL_09ccc929e21a,apply information security policies,appliquer des politiques d
 USKL_22dc29c560b2,Angular,Angular,Angular related algorithms | testing in Angular | programming paradigms in Angular | coding in Angular | Angular techniques and principles,,hard,web,ESCO,SKL_22a187393619
 USKL_4575d531912d,domotic systems,systèmes domotiques,residential intelligent building installations | intelligent home systems | smart home systems,,hard,knowledge_general,ESCO,SKL_05a01fa2c70e
 USKL_cc466bd8943c,use geographic information systems,utiliser des systèmes d'information géographique,conduct geographic information system activities | operate geographic information systems | use geographical information systems | carry out work tasks using GIS | use GIS | operate GIS | utilise geographic information systems | undertake activities using geographic information systems | conduct GIS activities | perform work tasks using geographic information systems | utilise GIS,,hard,other_hard,ESCO,SKL_035d195cc420
-USKL_e6f5cff3ac7a,mobile operating systems,systèmes d’exploitation mobiles,Firefox OS | Sailfish OS | Ubuntu Touch OS | Tizen | cell phone operating systems,,hard,systems_infrastructure,ESCO,SKL_36cc2d6edd1a
+USKL_27ac51a5baca,mobile operating systems,systèmes d’exploitation mobiles,Firefox OS | Sailfish OS | Ubuntu Touch OS | Tizen | cell phone operating systems,,hard,systems_infrastructure,CSO | ESCO,SKL_36cc2d6edd1a | SKL_4db8277bdf64
 USKL_cc30e78b9a18,identify customer requirements,identifier les exigences des clients,write research applications | gather and define user requirements | categorise customer requirements,,hard,other_hard,ESCO,SKL_9486b1cb5a8f
 USKL_fbd84270be92,use business simulation tools,utiliser des outils de simulation d’entreprise,employ business simulation tools,utiliser des outils de simulation d'entreprise,hard,other_hard,ESCO,SKL_7fab2c0eca23
 USKL_5aa219c36e6f,archive documentation related to work,archiver la documentation relative à l'œuvre,record documentation related to the work | archiving documentation related to the work | archive work related documents | preserve documentation related to the work | archive work documents | archive documentation related to the work | store documentation related to the work,,hard,other_hard,ESCO,SKL_dde958bce5b5
@@ -949,7 +949,7 @@ USKL_afc98e817359,analyse big data,analyser des mégadonnées,analyze big data |
 USKL_b0d9902c6e9d,operate relational database management system,administrer un système de gestion de bases de données relationnelles,DBMS,,hard,data_databases,ESCO,SKL_056d3e37266e
 USKL_0ef031df2009,draft project documentation,rédiger des documents de projet,prepare project documentation | formulate project documents | write project documentation,,hard,other_hard,ESCO,SKL_ee49fc87d91f
 USKL_25fdafc66837,use access control software,utiliser un logiciel de contrôle d’accès,define user roles for ICT system | define database user permissions,utiliser iLock | utiliser une solution contrôle d’accès | utiliser Avaya Identity Engines | définir les autorisations d’utilisateur de base de données | définir les rôles de l’utilisateur | utiliser un logiciel informatique,hard,programming_languages,ESCO,SKL_b4830b23bb8d
-USKL_9bfd587e5660,data protection,protection des données,principles of information privacy | principles of data protection | information privacy | protection of private data | protection of data | principles of data privacy | protection of private information | data privacy | paradigms of data protection | paradigms of data privacy,,hard,knowledge_general,ESCO,SKL_35f33383eda7
+USKL_adfe96a6d21a,data protection,protection des données,principles of information privacy | principles of data protection | information privacy | protection of private data | protection of data | principles of data privacy | protection of private information | data privacy | paradigms of data protection | paradigms of data privacy,,hard,security,CSO | ESCO,SKL_35f33383eda7 | SKL_93515f69f1ff
 USKL_c31846526293,promote virtual reality travelling experiences,promouvoir les expériences de voyage en réalité virtuelle,promote immersive tourism experiences | advertise virtual reality travelling experiences | publicise virtual realtily travelling experiences | promote virtual reality technology for travelling experiences,,hard,other_hard,ESCO,SKL_6a5aa906f4b2
 USKL_cfc510eabd52,manage intellectual property rights,gérer les droits de propriété intellectuelle,manage copyrights | administer copyrights | administer intellectual property rights,,hard,other_hard,ESCO,SKL_690d0d9213ea
 USKL_ddd422af043d,ethical hacking principles,évaluation de la sécurité des systèmes et produits informatiques,ethical hacking techniques,,hard,knowledge_general,ESCO,SKL_ab670ca70003
@@ -958,7 +958,7 @@ USKL_4bcacba91832,manage ICT change request process,gérer un processus informat
 USKL_5c2dd08dc9c7,image recognition,reconnaissance d’images,image interpretation | image detection | visual recognition | visual detection,reconnaissance visuelle | détection d'images | interprétation d'images | détection visuelle | détection d'image,hard,knowledge_general,ESCO,SKL_140b9672ae2f
 USKL_8e0990282e99,create data sets,créer des ensembles de données,data set creation | establish data sets | create a data set | produce data sets | design data sets | develop data sets | creating data sets,,hard,other_hard,ESCO,SKL_7493dcb6b2b6
 USKL_d4005aace623,data security principles,principes de sécurité des données,data security methods | information security principles,principes de sécurité de l'information | méthodes de sécurité des données,hard,security,ESCO,SKL_1e9e1aed4fe4
-USKL_c9111d48bfc6,MATLAB,MATLAB,MATLAB software development principles | MATLAB coding techniques | MATLAB algorithms | MATLAB software development techniques | MATLAB programming paradigms,,hard,programming_languages,ESCO,SKL_81167559edfd
+USKL_c60c072bfe42,MATLAB,MATLAB,MATLAB software development principles | MATLAB coding techniques | MATLAB algorithms | MATLAB software development techniques | MATLAB programming paradigms | matlab,,hard,programming_languages,CSO | ESCO,SKL_5c98d3d7f7bf | SKL_81167559edfd
 USKL_53fddbc55f40,data visualisation software,logiciel de visualisation des données,data presentation software,logiciel de présentation de données,hard,programming_languages,ESCO,SKL_6062e63b2ca0
 USKL_29e08700c9a4,operate an emergency communication system,faire fonctionner un système de communication d’urgence,operate emergency communication systems | communicate using emergency communication tools | handle emergency communication system tools | operate emergency communication system | use emergency communication system | operate communication system used in emergencies,,hard,other_hard,ESCO,SKL_618e331dd705
 USKL_0a0de99d7ea6,state estimation,estimation de l’état interne d'un système  énergétique,state inference | energy state estimation | state estimation and prediction,estimation de l'état énergétique | estimation et prédiction de l'état | inférence d'état,hard,knowledge_general,ESCO,SKL_f76e03586a5e
@@ -974,14 +974,14 @@ USKL_28348cc7054a,install blinds drive systems,installer des systèmes d’entra
 USKL_4e3bf10cb309,adjust ICT system capacity,adapter la capacité d’un système de TIC,adjust ICT network capacity,adapter la capacité des services de TIC | adapter la capacité des systèmes de TIC | améliorer la prestation des services de TIC | adapter la capacité du système de TIC | ajuster la capacité d’un système de TIC | adapter la capacité des réseaux des TIC,hard,other_hard,ESCO,SKL_cf44a983788c
 USKL_a2055d94d728,ABAP,ABAP,ABAP Programming Techniques | ABAP software development | ABAP programming techniques | ABAP software techniques,,hard,knowledge_general,ESCO,SKL_df69f4055e0d
 USKL_6c0d83d643af,prevent undesired changes to sound design,empêcher les modifications involontaires d'une conception sonore,prevent undesired changes to sound balance | prevent sound designs from undergoing undesired changes | prevent undesired changes to design in sound | manage maintenance according to sound design,,hard,other_hard,ESCO,SKL_9ffecfc0523b
-USKL_d16cae4f59e4,data mining,exploration de données,data scraping,,hard,ai_ml,ESCO,SKL_18b153db615d
+USKL_356b50f54bd2,data mining,exploration de données,data scraping,,hard,ai_ml,CSO | ESCO,SKL_18b153db615d | SKL_365724ac541b
 USKL_4e3853f599a7,create database diagrams,créer des schémas de base de données,create database blueprint | create database models,créer un schéma de base de données | créer des projets de base de données | créer des diagrammes de base de données | créer le schéma de la base de données | créer des modèles de base de données,hard,data_databases,ESCO,SKL_27d19457db14
 USKL_fe3ec0ddafe3,implement a firewall,installer un pare-feu,installing a network security firewall | install a network security firewall | implementing network firewall | install a firewall | implementing a firewall | firewall implementing | implement network firewall | network firewall implementing | installing a firewall,,hard,security,ESCO,SKL_26bcb7a7c221
 USKL_810c0c2b17b9,maintain up-to-date aeronautical information management services,tenir à jour les services de gestion des informations aéronautiques,maintain updated AIM services | perform AIM update activities | ensure AIM systems and services remain up-to-date | ensure aeronautical information management systems and services remain up-to-date | keep AIM services up to date | keep aeronautical information management services up-to-date | keep aeronautical information services updated | conduct updates of AIM services | conduct updates of aeronautical information management services | keep AIM services updated | perform aeronautical information management system update activities | maintain updated aeronautical information management services | maintain up-to-date AIM services,,hard,other_hard,ESCO,SKL_2abecaa86cbb
 USKL_6b5970d327f1,STAF,STAF,STAF software,,hard,knowledge_general,ESCO,SKL_327b78a43765
 USKL_ec92e928dd88,identify legal requirements,identifier les exigences légales,identify legal and normative requirements and standards,définir les exigences légales | recenser les exigences légales | identifier les exigences légales et normatives | identifier les prescriptions légales | cibler les exigences légales | cerner les exigences légales,hard,other_hard,ESCO,SKL_c98638f8926e
 USKL_e2876c478108,manage ICT virtualisation environments,gérer des environnements TIC de virtualisation,manage ICT virtualization machines | manage virtualisation of servers and workstations | manage containerization,,hard,other_hard,ESCO,SKL_53ceaa2295af
-USKL_00c543f09002,supplier management,gestion des fournisseurs,management of suppliers | supplier management and optimisation | management of key suppliers | supplier research and selection,,hard,knowledge_general,ESCO,SKL_af7d730ed631
+USKL_4d950cffb39a,Supplier management,gestion des fournisseurs,supplier management | management of suppliers | supplier management and optimisation | management of key suppliers | supplier research and selection | SUPP,,hard,it_management,ESCO | SFIA,SKL_3eba2288bc55 | SKL_af7d730ed631
 USKL_e9fac9d3f08a,e-agriculture,agriculture numérique,smart agriculture | smart farming | agriculture 4.0 | information and communication technology in agriculture | digital agriculture,,hard,knowledge_general,ESCO,SKL_fafbce42ea38
 USKL_6d3b9951860d,analyse ICT system,analyser un système de TIC,assess ICT system | analyse information and communications technology system | analyze information and communications technology system | assess information and communications technology system | analyze ICT system,,hard,other_hard,ESCO,SKL_67a4d439c738
 USKL_967f0de68bae,product usage risks analysis,analyse des risques d’utilisation d’un produit,customer product risks analysis | product risks analysis,évaluation des risques d’un produit | gestion des risques d’un produit | évaluation des risques d’un produit d’un client | gestion des risques d’utilisation d’un produit | analyse des risques liés à l’utilisation d’un produit | analyse des risques d’un produit,hard,knowledge_general,ESCO,SKL_2f6bd9df1a40
@@ -1028,7 +1028,7 @@ USKL_6417c960e02c,data quality assessment,évaluation de la qualité de données
 USKL_34c57e3c21d1,object-oriented modelling,modélisation orientée objet,object-oriented paradigm | object-oriented modeling | knowledge of object-oriented modelling,programmation par objet | programmation orientée objet | paradigme de programmation orientée objet | POO | MOO | modélisation par objet,hard,knowledge_general,ESCO,SKL_516c38d191ba
 USKL_7872cf354817,identify blockchain innovation opportunities,recenser les possibilités d’innovation liées à la technologie de la blockchain,use blockchain to drive innovation | analyse blockchain-based business innovation,utiliser la blockchain pour stimuler l'innovation,hard,other_hard,ESCO,SKL_20a60ab6f508
 USKL_91175d5d8818,digital journalism,journalisme numérique,online journalism,journalisme en ligne,hard,knowledge_general,ESCO,SKL_6f5e0cc42c5f
-USKL_30829d8d7535,data analytics,analyse de données,data anlysis,,hard,data_databases,ESCO,SKL_480f7b8733f4
+USKL_f86a7aa1417b,Data analytics,analyse de données,data analytics | data anlysis | DAAN,,hard,data_databases,CSO | ESCO | SFIA,SKL_2758d7b054ed | SKL_480f7b8733f4 | SKL_563823b757a7
 USKL_224c6e4aabf6,market analysis,analyse de marché,market research | market studies | marketing analysis | analysis of the market,analyse du marché,hard,knowledge_general,ESCO,SKL_b43b547c49a7
 USKL_b5f7baa1541f,Gamemaker Studio,Gamemaker Studio,Gamemaker engine,,hard,knowledge_general,ESCO,SKL_c962bd56c5d5
 USKL_94a413e79cab,adapt artistic plan to location,adapter le plan artistique au lieu,adapt artist's perspective to the location | adapt artistic concept to location | adapt artist's plan to location | adapt artistic plan to the location,,hard,other_hard,ESCO,SKL_13c6daf0911d
@@ -1131,7 +1131,7 @@ USKL_bc64f975a5c6,operate electronic payment terminals,faire fonctionner des ter
 USKL_d669de538d2d,manage system security,gérer la sécurité du système,manage information security,gérer un système de détection d’intrusion | gérer la sécurité de l’information | appliquer des techniques de gestion de la sécurité | assurer la sécurité du système | protéger un système | gérer la sécurité du système informatique | garantir la sécurité du système,hard,security,ESCO,SKL_16afd0438ee4
 USKL_ea5efc44f5fe,perform ICT troubleshooting,procéder au dépannage des TIC,undertake ICT troubleshooting | implement ICT troubleshooting | performing ICT troubleshooting | complete ICT troubleshooting | ICT troubleshooting performance,,hard,other_hard,ESCO,SKL_04e6c64d8bdd
 USKL_8a2a5c03b181,respond to customers' inquiries,répondre aux demandes des clients,deal with client's enquiries | respond to a customer inquiry | answer customers' inquiries | respond to inquiries by customers,communiquer avec la clientèle | satisfaire les demandes des clients | répondre aux besoins des clients | répondre aux demandes de la clientèle,hard,other_hard,ESCO,SKL_483e02923b41
-USKL_df137ab1b354,cost management,gestion des coûts,cost oversight | cost optimisation | cost monitoring | managing cost | cost managing | cost supervision | managing costs,,hard,knowledge_general,ESCO,SKL_e1d96a6b95b6
+USKL_1ab2eb77948a,Cost management,gestion des coûts,cost management | cost oversight | cost optimisation | cost monitoring | managing cost | cost managing | cost supervision | managing costs | COMG,,hard,it_management,ESCO | SFIA,SKL_53729a6887c6 | SKL_e1d96a6b95b6
 USKL_a21ebff1b0bd,train employees,former le personnel,instruct employees | upskill employees | train an employee | training employees | teach employees,,hard,other_hard,ESCO,SKL_f1c997d8743f
 USKL_141a0f9315bc,automatic control system,système de régulation automatique,self-controlling system | automated control system | autonomous control system | mechanised control system,système d'autocontrôle | système de contrôle mécanisé | système de contrôle autonome | système de contrôle automatisé,hard,knowledge_general,ESCO,SKL_2ef5374b4b1b
 USKL_5ce5f4756357,prepare personal work environment,préparer un environnement de travail personnel,prepare personal work setting | plan personal work environment | prepare personal environment at work | prepare to work in personal environment,,hard,other_hard,ESCO,SKL_903b38484af9
@@ -1151,7 +1151,7 @@ USKL_00addb8a5eff,digital media,moyens de communication numériques,digital vide
 USKL_7da3791955b6,design microelectromechanical systems,concevoir des systèmes microélectromécaniques,design microsystems | microelectromechanical systems design | design MEMS | model microelectromechanical systems | microelectromechanical systems designing | designing microelectromechanical systems | model microsystems | model MEMS,,hard,other_hard,ESCO,SKL_047770a71a7f
 USKL_365189f974fc,build predictive models,construire des modèles prédictifs,devise predictive models | assemble predictive models | building predictive models | construct predictive models | build a predictive model | produce predictive models | building a predictive model,,hard,other_hard,ESCO,SKL_60f44085f999
 USKL_c90b0fd6bb63,Moodle,Moodle,Moodle e-learning platform,,hard,other_hard,ESCO | ONET,SKL_75202d1c01ec | SKL_adbb85e9634d
-USKL_e774d9a9c821,business intelligence,informatique décisionnelle,business analytics | BI | business intelligence tools,,hard,data_databases,ESCO,SKL_96926ab90fab
+USKL_18597a967aa3,Business intelligence,informatique décisionnelle,business intelligence | business analytics | BI | business intelligence tools | BINT,,hard,data_databases,ESCO | SFIA,SKL_87843f68619e | SKL_96926ab90fab
 USKL_f840492c3434,ICT security legislation,législation sur la sécurité des TIC,cyber-security regulation | network and information security legislation | ICT law | legal aspects of computing,législation relative à la sécurité des TIC | législation en matière de cybersécurité | aspects juridiques de l’informatique | droit des TIC | législation en matière de sécurité des réseaux et de l’information | lois relatives à la sécurité des TIC,hard,security,ESCO,SKL_f8cdff52e6ee
 USKL_2693dd2662de,design enterprise architecture,créer une architecture d’entreprise,design business architecture,,hard,other_hard,ESCO,SKL_e0cf7c334b3e
 USKL_98ef8a1f5479,increase the impact of science on policy and society,gérer les connaissances en vue d’une incidence stratégique,influence decision making based on scientific evidence | enhance the impact of science influence on policy and society | boost the contribution of science to shaping policies and society | enhance the influence of science on governance and communities,,hard,other_hard,ESCO,SKL_a31bcce95330
@@ -1194,7 +1194,7 @@ USKL_ee9817917f98,BlackArch,BlackArch,BlackArch testing tool,,hard,knowledge_gen
 USKL_bcb7d60a1ef6,plan social media marketing campaigns,planifier des campagnes de marketing sur les médias sociaux,organise digital campaigns | organise social media marketing campaigns,,hard,other_hard,ESCO,SKL_bad1936b444e
 USKL_e4270489c8d3,use polygonal modelling,utiliser la modélisation polygonale,represent 3D polygonal models | apply polygonal modelling | employ polygon-based modelling,,hard,other_hard,ESCO,SKL_374a82748fda
 USKL_6b7e071e6738,operate audio-signal processors,utiliser des processeurs de signaux audio,employ audio-signal processors | run audio-signal processors | operating audio-signal processors | use audio-signal processors | operate audio-signal processor,,hard,other_hard,ESCO,SKL_5f3c89bad715
-USKL_844d325e1967,data engineering,data ingineering,data engineering methods,ingénierie de données | méthodes d'ingénierie des données,hard,knowledge_general,ESCO,SKL_a85869292402
+USKL_4ee7d16c4c60,Data engineering,data ingineering,data engineering | data engineering methods | DENG,ingénierie de données | méthodes d'ingénierie des données,hard,data_databases,ESCO | SFIA,SKL_a85869292402 | SKL_bb6c65e1bc14
 USKL_822ea0b4d8cb,analyse ICT technical proposals,analyser des propositions techniques en matière de TIC,analyze information and communications technology technical proposals | assess ICT technical proposals | analyze ICT technical proposals | assess information and communications technology technical proposals | analyse information and communications technology technical proposals,,hard,other_hard,ESCO,SKL_f0cb33d132f1
 USKL_65313eb7e093,optimise choice of ICT solution,optimiser le choix d’une solution TIC,enhance choice of ICT solution | carry out ICT planning | carry out ICT strategic planning | select ICT solution | perform ICT planning | perform ICT strategic planning,,hard,other_hard,ESCO,SKL_2a5b118ca0e3
 USKL_008dfa948541,compose digital game story,écrire l’histoire d’un jeu numérique,write digital game story,raconter l’histoire d’un jeu vidéo | écrire le récit d’un jeu numérique | rédiger l’histoire d’un jeu vidéo | concevoir l’histoire d’un jeu vidéo | créer l’histoire d’un jeu vidéo | écrire l’histoire d’un jeu vidéo,hard,other_hard,ESCO,SKL_e08d0e304efc
@@ -1272,7 +1272,7 @@ USKL_a9e7276a758e,employ habitat survey techniques,utiliser des techniques de re
 USKL_b80b93dba302,design graphics,concevoir une infographie,apply graphic design techniques | create graphic material,,hard,other_hard,ESCO,SKL_548b1864cd14
 USKL_1b0e2534bd62,content development processes,processus de création de contenu,content production techniques | content production processes,,hard,programming_languages,ESCO,SKL_6f4b7911d26d
 USKL_3299c10d2a5b,robotic components,composants robotiques,microprocessors | servomotors | encoders | range of robotic components | kinds of robotic components | circuit boards | types of robotic components | typology of robotic components,,hard,knowledge_general,ESCO,SKL_5bdd53fb8519
-USKL_7e5e84dcb36d,data warehouse,entrepôt de données,enterprise data storage | data warehouse solutions | data repository,data warehouse,hard,data_databases,ESCO,SKL_f5f12231001c
+USKL_e73101fe5f93,data warehouse,entrepôt de données,enterprise data storage | data warehouse solutions | data repository | data warehouses,data warehouse,hard,data_databases,CSO | ESCO,SKL_3234b49194eb | SKL_f5f12231001c
 USKL_0b750d349104,organisational policies,stratégies d’organisation,corporate policies | corporate regulations | organisational standards | organisational guidelines | institutional policies,,hard,knowledge_general,ESCO,SKL_5858f8aaf75f
 USKL_7a52458c304a,ICT environmental policies,politiques environnementales des TIC,ICT environmental guidelines,,hard,knowledge_general,ESCO,SKL_0de5209b6016
 USKL_282569166ce7,waste management,gestion des déchets,waste managing | waste oversight | solid waste management | waste supervision | waste regulation | waste administration,,hard,knowledge_general,ESCO,SKL_abb0264a6555
@@ -1290,7 +1290,7 @@ USKL_adf86e6b3a22,ICT network routing,routage de réseau,ICT network routing tec
 USKL_48501124bcc9,mathematical physics,physique mathématique,foundations of mathematical physics,fondements de la physique mathématique,hard,knowledge_general,ESCO,SKL_4a2d8a931138
 USKL_f3c4fc2a4c45,use measurement instruments,utiliser des instruments de mesure,take measurements using specialised equipment | operate measurement instruments | take various measurements using apparatus | utilise measurement apparatus | take various measurements using instruments | take various measurements using measuring devices | utilise measurement devices | perform measurements using tools and instruments | utilise measurement instruments | use measurement apparatus | use measurement and control instruments | perform measurements using instruments | use measurement devices | carry out measurements using equipment,,hard,other_hard,ESCO,SKL_a389a507c12c
 USKL_1f299b865802,process data from railway control rooms,traiter les données provenant des salles de contrôle ferroviaires,evaluate data from railway control rooms | conduct railway control room data processing activities | process control room data to ensure effective railway operations | perform railway control room data processing activities | use control room data to ensure effective railway operations | assess data from railway control rooms | analyse data from railway control rooms | use control room data to inform railway operations | utilise data from railway control rooms,,hard,other_hard,ESCO,SKL_93d63eadde22
-USKL_0eb7dfb2d413,multimedia systems,systèmes multimédia,a multimedia system | multimedia organisation | multimedia structure | multimedia arrangement | multimedia system | multimedia scheme,,hard,knowledge_general,ESCO,SKL_a821b07aa040
+USKL_5c987781c924,multimedia systems,systèmes multimédia,a multimedia system | multimedia organisation | multimedia structure | multimedia arrangement | multimedia system | multimedia scheme,,hard,networks,CSO | ESCO,SKL_a821b07aa040 | SKL_de627feb7df7
 USKL_219d2009d523,maintain warehouse database,tenir à jour la base de données d'un entrepôt,ensure warehouse database is updated | ensure that database used in warehouse is up-to-date | ensure warehouse database is up-to-date | maintain up-to-date warehouse database | keep up-to date warehouse database | keep warehouse database up-to-date | keep warehouse database | update information in warehouse database | ensure updating of warehouse database | update warehouse database,,hard,data_databases,ESCO,SKL_e0405d186957
 USKL_0264fc4ce0f6,mix multi-track recordings,Compiler des enregistrements multipistes,edit and mix sound recordings | mix multi-tracking recording | mixing multi-track recordings | edit and mix multi-track recordings,,hard,other_hard,ESCO,SKL_627ef64a8554
 USKL_dc951c3df843,adapt to changing situations,s’adapter à des changements de situation,adapting to a changing situation | adapt to a changing situation | adjust to changing situations | alter to changing situations | modify to changing situations | tailor to changing situations | adapting to changing situations,,hard,other_hard,ESCO,SKL_c8eeeb942505
@@ -1458,7 +1458,7 @@ USKL_68b92ea33481,control panel components,composants de panneaux de commande,ty
 USKL_7c7f1cee57e2,use colour printing programs,utiliser des programmes d’impression couleur,employ colour printing programs | use color printing programs | using colour printing programs | make use of colour printing programs | use colour printing program | utilise colour printing programs,,hard,other_hard,ESCO,SKL_de61ee0d7fbd
 USKL_bf59ae55e46d,cognitive computing,computation cognitive,cognitive computing technology,technologie de l'informatique cognitive | technologie informatique cognitive,hard,knowledge_general,ESCO,SKL_4cd9c82e2b55
 USKL_a6ef5728366d,operate the sound in the rehearsal studio,gérer le son dans le studio de répétition,operate sound | operate sound system | control sound system | control sound system for rehearsals | control the sound in the rehearsal studio | operate sound system for rehearsals,,hard,other_hard,ESCO,SKL_ecd658ebb1d8
-USKL_68f07bc1f72f,game theory,théorie des jeux,conflict resolution theory | game theory for blockchain | rational choice theory | interactive decision theory,théorie de la décision interactive | théorie des jeux pour la blockchain | théorie de la résolution des conflits | théorie des jeux pour blockchain | théorie du choix rationnel | théorie de résolution des conflits,hard,knowledge_general,ESCO,SKL_6f26fd81e617
+USKL_6fbd4b5d52b8,game theory,théorie des jeux,conflict resolution theory | game theory for blockchain | rational choice theory | interactive decision theory,théorie de la décision interactive | théorie des jeux pour la blockchain | théorie de la résolution des conflits | théorie des jeux pour blockchain | théorie du choix rationnel | théorie de résolution des conflits,hard,ai_ml,CSO | ESCO,SKL_6f26fd81e617 | SKL_efbe450343b2
 USKL_fada8c583534,modern power signalling systems,systèmes modernes de signalisation électrique,power signalling systems used in modern railway infrastructure | power signalling systems used in rail infrastructure | modern signalling systems used in railway infrastructure | power signalling systems used in rail operations | signalling systems used in modern railway infrastructure | railway power signalling systems | modern rail power signalling systems | modern power signalling systems used in rail operations | railroad power signalling systems | rail power signalling systems | modern railway power signalling systems,systèmes de signalisation électrique pour les infrastructures ferroviaires modernes | systèmes modernes de signalisation électrique ferroviaire | systèmes modernes de signalisation de l'énergie ferroviaire | systèmes de signalisation électrique des chemins de fer | systèmes modernes de signalisation électrique utilisés dans les opérations ferroviaires | systèmes modernes de signalisation utilisés dans l'infrastructure ferroviaire | systèmes de signalisation électrique utilisés dans les opérations ferroviaires | systèmes de signalisation électrique utilisés dans les infrastructures ferroviaires | systèmes de signalisation de puissance ferroviaire | systèmes de signalisation électrique ferroviaire | systèmes de signalisation électrique utilisés dans les infrastructures ferroviaires modernes | systèmes de signalisation modernes utilisés dans l'infrastructure ferroviaire,hard,knowledge_general,ESCO,SKL_d230f8e551d7
 USKL_3b03bd39d045,TypeScript,TypeScript,TypeScript programming language,,hard,web,ESCO | ONET,SKL_2d0bcaf9ef5b | SKL_6b4086c51411
 USKL_24b9628e8877,use specialised computer models for weather forecasting,utiliser des modèles informatiques spécialisés pour les prévisions météorologiques,utilise specialised computer modelling software for weather forecasting | anticipate weather conditions through use of computer models | use specialized computer models for weather forecasting | utilise specialised computer models for weather forecasting | develop weather forecasts using computer models | anticipate weather conditions through use of computer modelling software | develop long and short term weather forecasts using computer models | use specialised computer modelling software for weather forecasting | utilise specialised computer models for weather forecasts | use specialised computer models for weather forecasts | develop long and short term weather forecasts using computer modelling software,,hard,other_hard,ESCO,SKL_19431e1518c4
@@ -1520,16 +1520,16 @@ USKL_09aeef1fadfa,design cloud architecture,créer une architecture en nuage,des
 USKL_ed9e40b1d46c,write scientific publications,rédiger des publications scientifiques,scientific paper writing | draw up scientific papers | draft scientific papers,,hard,other_hard,ESCO,SKL_1867331e9788
 USKL_89f38c04d199,scientific research methodology,méthodologie de recherche scientifique,research methodology | methods of research | scientific methods | process of scientific research | theoretical methodology in scientific research,,hard,methodology,ESCO,SKL_b952b2bee8dd
 USKL_65f35ff6eac6,develop ICT workflow,développer un flux de travail de TIC,design ICT workflows,,hard,programming_languages,ESCO,SKL_c3a6a015f14b
-USKL_7e57de56de90,learning management systems,systèmes de gestion de l’apprentissage,SharePointLMS | TeamWox | ITWorx CLG (Connected Learning Gateway) | SSLearn | aTutor | Totara LMS | Intuo | SuccessFactors | CERTPOINT Systems Inc. | eFront | JoomlaLMS | SumTotal Systems | ILIAS | TOPYX | DoceboLMS | QuestionMark | Spongelab | Informetica | WeBWorK | Meridian Knowledge Solutions | Vitalect | Blackboard Learning System | Ning | Desire2Learn | Latitude Learning LLC | OpenOLAT | Digication | LMS | SWAD | Sclipo | OLAT | EduWave | HotChalk | eCollege | Uzity | TalentLMS | Expertus | Chamilo | GlobalScholar,centre de formation virtuel | système de gestion de l’apprentissage en ligne | système de gestion de l’apprentissage | plateforme d’apprentissage en ligne | LMS | SGA | learning management system,hard,knowledge_general,ESCO,SKL_ccb0346979e0
+USKL_ffe65ccfa845,learning management system,systèmes de gestion de l’apprentissage,learning management systems | SharePointLMS | TeamWox | ITWorx CLG (Connected Learning Gateway) | SSLearn | aTutor | Totara LMS | Intuo | SuccessFactors | CERTPOINT Systems Inc. | eFront | JoomlaLMS | SumTotal Systems | ILIAS | TOPYX | DoceboLMS | QuestionMark | Spongelab | Informetica | WeBWorK | Meridian Knowledge Solutions | Vitalect | Blackboard Learning System | Ning | Desire2Learn | Latitude Learning LLC | OpenOLAT | Digication | LMS | SWAD | Sclipo | OLAT | EduWave | HotChalk | eCollege | Uzity | TalentLMS | Expertus | Chamilo | GlobalScholar,centre de formation virtuel | système de gestion de l’apprentissage en ligne | système de gestion de l’apprentissage | plateforme d’apprentissage en ligne | LMS | SGA | learning management system,hard,web,CSO | ESCO,SKL_9fdcd49c9b62 | SKL_ccb0346979e0
 USKL_1175e3b17868,printed circuit boards testing methods,méthodes d’essai de circuits imprimés,in-circuit test | testing methods for printed circuit boards | automated optical inspection | AOI | joint test action group test | methods for testing PCBs | JTAG test | methods for testing printed circuit boards | PCB testing methods | PCBs testing methods,,hard,knowledge_general,ESCO,SKL_930b138ed225
 USKL_a2985562587e,install software,installer un logiciel,computer software loading | loading computer software | load computer software | installing of computer software | software loading | loading of computer software | computer software installing | installing of software | load software | software installing | install computer software | installing software | loading of software | installing computer software | loading software,,hard,programming_languages,ESCO,SKL_8e83afb86da1
 USKL_1cf9bb963ddd,apply 3D imaging techniques,appliquer des techniques d’imagerie 3D,create 3D vector graphics | apply curve modelling | apply digital scuplting | edit point clouds | implement 3D imaging techniques,,hard,other_hard,ESCO,SKL_d5ad7b48e431
 USKL_9f33f2a25157,telecom regulations,réglementation en matière de télécommunications,Electronic Communications Code,code des communications électroniques,hard,networks,ESCO,SKL_2dbc3a7582b5
 USKL_29741db40313,manage performance light quality,gérer la qualité de l’éclairage d’un spectacle,manage light quality for performances | control light quality | control lighting quality | control performance light quality | manage performance lights | control lighting quality of performances | manage performance lighting quality | control light quality of performance | manage performance lighting | manage light quality of performance | control performance lighting quality,,hard,other_hard,ESCO,SKL_e287ea7ed250
 USKL_fc9194b9dbb5,develop drama production process,élaborer un processus de production théâtrale,develop process for drama production | create dramatic production process | develop dramatic production process | create process for dramatic production,,hard,programming_languages,ESCO,SKL_3d33fd9357b8
-USKL_2044c10c0780,natural language processing,traitement automatique du langage naturel,NLP,linguistique computationnelle | NLP | traitement automatique des langages naturels | TALN | traitement automatique de la langue naturelle | ingénierie des langues | TAL | ingénierie linguistique | génie linguistique,hard,knowledge_general,ESCO,SKL_46707842607f
+USKL_188c642f8373,natural language processing,traitement automatique du langage naturel,NLP | natural language processing systems | nlp,linguistique computationnelle | NLP | traitement automatique des langages naturels | TALN | traitement automatique de la langue naturelle | ingénierie des langues | TAL | ingénierie linguistique | génie linguistique,hard,ai_ml,CSO | ESCO,SKL_46707842607f | SKL_a0cc0c6e48e6
 USKL_95441a64cab3,oversee development of software,superviser le développement d’un logiciel,oversee development of applications | coordinate development of applications | monitor development of software | manage the development of a software | coordinate development of software,,hard,programming_languages,ESCO,SKL_f481a9c7d3e1
-USKL_665030524749,data science,science des big data,data science process | science of data,science des données | processus de science des données,hard,ai_ml,ESCO,SKL_52bb539de37f
+USKL_6437c46bddf4,Data science,science des big data,data science | data science process | science of data | DATS,science des données | processus de science des données,hard,ai_ml,ESCO | SFIA,SKL_52bb539de37f | SKL_59727ae66cf3
 USKL_b8bd7fc4e1cc,apply technical communication skills,appliquer des compétences de communication technique,application of technical communication skills | implement technical communication skills | utilise technical communication skills | employ technical communication skills | applying technical communication skills | administer technical communication skills,,hard,other_hard,ESCO,SKL_80e5a9774341
 USKL_a633b0c3be64,business strategy concepts,principes de stratégie d’entreprise,strategic business operations | strategic and operational business mindset | business strategy level | business strategy tiers,,hard,it_management,ESCO,SKL_56acbc4788c5
 USKL_d859d74fdfd1,perform backups,effectuer des sauvegardes,backup data | backup ICT system,effectuer une sauvegarde | exécuter des sauvegardes | effectuer des sauvegardes de données | réaliser des sauvegardes | sauvegarder des données | sauvegarder,hard,systems_infrastructure,ESCO,SKL_b1c2a4bc445a
@@ -1581,7 +1581,7 @@ USKL_ea1b0eec29f2,Hadoop,Hadoop,Apache Hadoop,,hard,data_databases,ESCO,SKL_a06b
 USKL_78a266abb724,use communication equipment,utiliser des équipements de communication,operate telecommunications equipment | use equipment for communication | test communication equipment | use equipment to communicate,,hard,other_hard,ESCO,SKL_3ea0e58ddba3
 USKL_c60c05174157,apply ICT systems theory,appliquer la théorie des systèmes d’information et de communication,follow the theoretical principles for ICT systems | implement theoretical notions for ICT systems | follow the principles of ICT systems theory | implement principles for ICT systems | implement theoretical principless for ICT systems,,hard,other_hard,ESCO,SKL_3b1c6e0aad62
 USKL_faf9ace9f795,manage closed-circuit television system,gérer un système de télévision en circuit fermé,video surveillance | CCTV,mettre à jour un système de télévision en circuit fermé | gérer un système de TVCF | gérer un système de vidéosurveillance | gérer un système de CCTV | gérer un système de surveillance vidéo | installer un système de télévision en circuit fermé,hard,other_hard,ESCO,SKL_c7c715f09c69
-USKL_c475615d0b16,systems theory,théorie des systèmes,systems fundamentals,,hard,knowledge_general,ESCO,SKL_2826cd7b523c
+USKL_56045ad73db3,system theory,théorie des systèmes,systems theory | systems fundamentals,,hard,ai_ml,CSO | ESCO,SKL_2826cd7b523c | SKL_fa89fcacda5e
 USKL_12b22aa2f20d,adapt to artists' creative demands,s’adapter aux exigences créatives d’artistes,adapt to artists' creative vision | meet demands by creative artists | adapt to demands by creative artists | adapt to creative demands of artists,,hard,other_hard,ESCO,SKL_3a2ade69e298
 USKL_30bbeb74ed77,apply basic programming skills,mettre en application des compétences de base en matière de programmation,use query languages | use basic coding skills | use basic programming language skills,,soft,soft_transversal,ESCO,SKL_1853e9b32b6b
 USKL_6868aadd3299,manage flight data communications programme,gérer le programme de communication des données de vol,oversee flight data communication programme | supervise data communication programme | supervise flight data communication programme | manage data communication programme | manage exchange of flight data in aviation operations | oversee data communication programme | manage exchange of digital flight data between pilots and air traffic control | facilitate transmission of flight data through management of digital communication programmes | ensure effective exchange of digital flight data between pilots and air traffic control | manage transmission of flight data in aviation operations | manage flight data communications program,,hard,other_hard,ESCO,SKL_2116d3bf8e62
@@ -1596,7 +1596,7 @@ USKL_80bd45712eb1,green building standards,normes de construction écologique,su
 USKL_02d99d85019f,operate 2D CAD for footwear,utiliser la CAO en 2D pour des chaussures,use 2D CAD for footwear engineering | operate 2D computer-aided design for footwear pattern engineering | design footwear in 2D with computer-aided design software | use 2D computer-aided design for footwear pattern engineering | design footwear in 2D with CAD software | operate 2D CAD software for footwear pattern engineering,,hard,other_hard,ESCO,SKL_4af766f569b2
 USKL_62d2a956eaed,synthesise information,synthétiser des informations,synthesise complex information | summarise information | interpret complex information | critically summarise information | write synthesis essays,,hard,other_hard,ESCO,SKL_d9040f1b085b
 USKL_5297f6089f0f,firmware,microprogramme,types of firmware | firmware program | read-only software | typology of firmware | built-in software | kinds of firmware,micrologiciel | firmware,hard,knowledge_general,ESCO,SKL_a0046149e4ac
-USKL_e185200981fd,graphic design,conception graphique,graphic designs | graphic designing | visual design,graphisme | création graphique,hard,knowledge_general,ESCO,SKL_dbd492d82f75
+USKL_f17b519dad8a,Graphic design,conception graphique,graphic design | graphic designs | graphic designing | visual design | GRDN,graphisme | création graphique,hard,web,ESCO | SFIA,SKL_dbd492d82f75 | SKL_eaa356d4a7f9
 USKL_9419e923f856,test power electronics,tester l’électronique de puissance,evaluate power electronics | gather data on power electronics | validate battery planning | perform battery diagnosis | analyse power electronics | analyse battery failures | assess power electronics,valider la planification de la batterie | évaluer l'électronique de puissance | recueillir des données sur l'électronique de puissance | analyser les défaillances de la batterie | analyser les pannes de batterie | effectuer le diagnostic de la batterie | tester l'électronique de puissance | effectuer un diagnostic de batterie,hard,other_hard,ESCO,SKL_af6f40ffaaca
 USKL_e3d681c2938c,SPARQL,SPARQL,SPARQL Protocol and RDF Query Language,,hard,knowledge_general,ESCO,SKL_d0035b994078
 USKL_2c7e9718a146,ensure equipment availability,garantir la disponibilité d'équipements,provide apparatus availability | provide equipment availability | safeguard equipment availability | safeguard apparatus availability | assure equipment availability | secure apparatus availability | assure apparatus availability | secure equipment availability,,hard,other_hard,ESCO,SKL_a86c206915f7
@@ -1627,7 +1627,7 @@ USKL_1ccbddfc2c76,apply research ethics and scientific integrity principles in r
 USKL_fc800fa03a7a,maintain sound equipment,entretenir du matériel de sonorisation,repair sound equipment | maintain equipment of sound | set up and check audio equipment | check sound equipment,,hard,other_hard,ESCO,SKL_d2606da8e850
 USKL_7763c2e16669,manage environmental impact of operations,gérer l’incidence environnementale des activités,assess and monitor operations impact on the environment | environmental impact management | environmental impact assessment and monitoring | manage operations impact on the environment | assess and monitor environmental impact | manage environmental impact,,hard,other_hard,ESCO,SKL_4e7bcf525ff7
 USKL_9dca14589ec3,set up multimedia equipment,mettre en place du matériel multimédia,assemble multimedia equipment | multimedia equipment set up | construct multimedia equipment | erect multimedia equipment | arrange multimedia equipment | setting up multimedia equipment | setting up of multimedia equipment,,hard,other_hard,ESCO,SKL_8fe62404bf31
-USKL_1a96fe6672df,strategic planning,planning stratégique,strategic plans | tactical planning | strategic plan,planification stratégique,hard,it_management,ESCO,SKL_e4935c7ad5fa
+USKL_ed204fd9d5ed,Strategic planning,planning stratégique,strategic planning | strategic plans | tactical planning | strategic plan | ITSP,planification stratégique,hard,it_management,ESCO | SFIA,SKL_01b009086017 | SKL_e4935c7ad5fa
 USKL_f0a2d2c46642,edit photographs,retoucher des photographies,edit photos and negatives | edit photos | editing photographs | use photo editing software,,hard,other_hard,ESCO,SKL_bd0df72f06c9
 USKL_c19dba4f4f9e,estimate duration of work,évaluer la durée de travail,time estimation of work,évaluer la durée de la prestation de travail | jauger la durée de travail | évaluer la durée du travail | estimer la durée de travail | prévoir la durée de travail | anticiper la durée de travail,hard,other_hard,ESCO,SKL_33a22f201b0d
 USKL_ce9f6136e2f9,blockchain applications,applications de la technologie de la blockchain,blockchain functions,fonctions de la chaîne de blocs | fonctions de la blockchain,hard,programming_languages,ESCO,SKL_bde8b9b674c8
@@ -1646,9 +1646,9 @@ USKL_14a3db4f7276,optics,optique,study of light | study of optics | research of 
 USKL_8a899e40f781,implement cryptographic constructs,mettre en œuvre des constructions cryptographiques,develop cryptographic constructs,développer des constructions cryptographiques,hard,security,ESCO,SKL_80db029523ac
 USKL_17dc2fb95400,conserve new media,conserver de nouveaux médias,preserve new media | archive new media | maintain new media storage | conserving new media,,hard,other_hard,ESCO,SKL_c39171db1c97
 USKL_340e48ec5832,tend CNC laser cutting machine,utiliser une machine de découpe au laser CNC,monitor CNC laser cutting machine | oversee CNC laser cutting machine | watch over CNC cutting systems | monitor CNC cutting systems | guard CNC laser cutting machine | watch over CNC laser cutting machine | guard CNC cutting systems | oversee CNC cutting systems,,hard,other_hard,ESCO,SKL_ce375f784f68
-USKL_8588908c364b,Internet of Things,Internet des objets,Information appliances | IoT | smart devices | Pervasive systems | Ubiquitous computing,dispositifs intelligents | l’Internet des objets | environnement pervasif | IdO | web des objets | informatique ubiquitaire,hard,knowledge_general,ESCO,SKL_d67dfc4ee39e
+USKL_847280bfd737,Internet of Things,Internet des objets,Information appliances | IoT | smart devices | Pervasive systems | Ubiquitous computing | internet of things | internet of thing (iot) | internet of things (iot) | iot,dispositifs intelligents | l’Internet des objets | environnement pervasif | IdO | web des objets | informatique ubiquitaire,hard,networks,CSO | ESCO,SKL_15d5e226c92f | SKL_d67dfc4ee39e
 USKL_dddf1f7f5abd,glue film reels,coller des bobines de film,attach film reels | glue film reel | gluing film reels | stick film reels,,hard,other_hard,ESCO,SKL_dab5e29d779a
-USKL_feafd21d668b,decision support systems,systèmes d’aide à la décision,decision-making tools | decision support matrix | decision support software,recherche opérationnelle | systèmes interactif d’aide à la décision | matrices d’aide à la décision | SAD | outils d’optimisation | systèmes informatisé d’aide à la décision | logiciels d’aide à la décision | SIAD | outils d’aide à la décision,hard,knowledge_general,ESCO,SKL_27cdecd220ea
+USKL_a737e3fdeca0,decision support systems,systèmes d’aide à la décision,decision-making tools | decision support matrix | decision support software | decision support system | decision support system (dss),recherche opérationnelle | systèmes interactif d’aide à la décision | matrices d’aide à la décision | SAD | outils d’optimisation | systèmes informatisé d’aide à la décision | logiciels d’aide à la décision | SIAD | outils d’aide à la décision,hard,ai_ml,CSO | ESCO,SKL_27cdecd220ea | SKL_6b521b221cc5
 USKL_e2ac8afcb213,work with motion picture editing team,travailler avec une équipe de montage cinématographique,cooperate with the motion picture editing team | working with the motion picture editing team | work with the motion picture editing teams | collaborate with the motion picture editing team | co-operate with the motion picture editing team,,hard,other_hard,ESCO,SKL_9286c6306295
 USKL_053a1c399ce5,design dolls,concevoir des poupées,model dolls | design a doll | designing dolls | develop dolls | create dolls | form dolls,,hard,other_hard,ESCO,SKL_04a709153ecd
 USKL_35f3f165610f,online analytical processing,traitement analytique en ligne,OLAP databases | Cube databases | OLAP,TAL | traitement de transactions en ligne | traitement OLAP | OLTP | système de traitement analytique en ligne,hard,knowledge_general,ESCO,SKL_e2b5df30b4ad
@@ -1666,7 +1666,7 @@ USKL_63966e52e5b9,use internet to increase sales,utiliser l’internet pour augm
 USKL_7bbb0efc45f9,search engine optimisation,optimisation des moteurs de recherche,search engine marketing | SEM | Search marketing | search engine optimization,SEO | SEM | optimisation du positionnement dans les moteurs de recherche | référencement naturel | SERP | optimisation pour les moteurs de recherche | marketing des moteurs de recherche | search engine optimisation,hard,knowledge_general,ESCO,SKL_2d0bf10bdaa9
 USKL_4c1b5edbebdd,set up the controller of a machine,configurer la commande d’une machine,erect appliance and machine control systems | build the controller of a machine | set up the computer controller of a machine | install appliance and machine control systems | install the controller of a machine | assemble the controller of a machine | erect the controller of a machine | assemble appliance and machine control systems | build appliance and machine control systems,,hard,other_hard,ESCO,SKL_f9ec5e405892
 USKL_ad353ccd4429,issue purchase orders,émettre des bons de commande,send purchase orders | publish purchase orders | issue a purchase order | issuing purchase orders | produce purchase orders | purchase order issue | prepare purchase orders,,hard,other_hard,ESCO,SKL_ba6f2b242a2a
-USKL_61373ff8737a,system design,conception des systèmes,system architecture design,conception de l'architecture du système,hard,knowledge_general,ESCO,SKL_0b6d0771361b
+USKL_c0b73496eac0,system design,conception des systèmes,system architecture design | Systems design | DESN,conception de l'architecture du système,hard,knowledge_general,ESCO | SFIA,SKL_0b6d0771361b | SKL_8dfcf5f0bf7f
 USKL_0aab49e94b7e,type on electronic devices,taper sur des appareils électroniques,touch type on electronic devices | typing on an electronic device | type on an electronic device | typing on electronic devices | create text on electronic devices | write on electronic devices,,hard,other_hard,ESCO,SKL_5dbd23c13574
 USKL_e3973e58a135,set up tote board,installer un panneau totalisateur,set up tote boards | setting up tote board | construct tote board | install tote board,,hard,other_hard,ESCO,SKL_0bc0173c81a1
 USKL_6a2b05971100,design database backup specifications,concevoir les spécifications de sauvegarde des bases de données,create database backup specifications | draft database backup specifications | specify database backup procedures | define database backup specifications | lay out database backup specifications,,hard,data_databases,ESCO,SKL_1980883e820f
@@ -1697,7 +1697,7 @@ USKL_713f51f60556,monitor sociological trends,surveiller des tendances sociologi
 USKL_2cc337c0ea57,provide training on technological business developments,proposer une formation sur les avancées technologiques pour les entreprises,deliver training on technological business developments | provide training on functional implementations for business development | give training on technological innovation projects for business development | give training on technological business developments | provide training on technological innovation projects for business development,,hard,programming_languages,ESCO,SKL_ad3b003ca96e
 USKL_41eeb686d8f4,concepts of telecommunications,concepts des télécommunications,telecommunication,concepts de télécommunications | modes de télécommunication | télécommunications | principes de télécommunication | dispositifs de communication | concepts des communications électroniques,hard,networks,ESCO,SKL_3bd278c6f34d
 USKL_433df5d1760c,use ICT ticketing system,utiliser un système de billetterie informatisée,use e-ticketing system,utiliser le système de billetterie électronique,hard,other_hard,ESCO,SKL_e8bdfaeac68e
-USKL_a2612af3e675,operating systems,systèmes d’exploitation,OS architecture | AS400 | WIN/NT | Novell | VMS,,hard,systems_infrastructure,ESCO,SKL_7fcbb1e10b41
+USKL_93a9ebf2265d,operating systems,systèmes d’exploitation,OS architecture | AS400 | WIN/NT | Novell | VMS | computer operating systems | operating system,,hard,systems_infrastructure,CSO | ESCO,SKL_79c5bd04e0e1 | SKL_7fcbb1e10b41
 USKL_8fd461aeb04d,organisational structure,structure organisationnelle,organisational role allocation | organisational blueprint | organisational structures | organisational plan | organizational structure | organisation structures | organisational framework | an organisational structure,,hard,knowledge_general,ESCO,SKL_a973c6971015
 USKL_293b3a804d63,apply system organisational policies,appliquer les politiques organisationnelles du système,adhere to organisational system guidelines | enforce organisational system policies | implement system regulations,,hard,other_hard,ESCO,SKL_c09ce7a24a51
 USKL_8abed754d152,digital twin technology,technologie du jumeau numérique,digital modelling technology | virtual twin model | digital replication technology,modèle jumeau virtuel | technologie de réplication numérique | technologie de modélisation numérique | modèle de jumeau virtuel,hard,knowledge_general,ESCO,SKL_049ae1a3abf1
@@ -1805,7 +1805,7 @@ USKL_fd43b31d324c,use CAD for lasts,utiliser la CAO pour réaliser des formes à
 USKL_0928627738bf,advanced driver assistant systems,systèmes avancés d’aide à la conduite,vehicle-based intelligent safety systems | advanced driver aids for crash avoidance | advanced driver aids | advanced driver assistant systems for crash avoidance | vehicle-based intelligent safety systems for crash avoidance,,hard,knowledge_general,ESCO,SKL_a7c333122c4e
 USKL_6be8d08acf95,blockchain openness,ouverture de la chaîne de blocs,public blockchain | permissioned blockchain | private blockchain | permissionless blockchain | hybrid blockchain,,hard,knowledge_general,ESCO,SKL_7fafd50b81a5
 USKL_a5a738d7533d,provide written content,fournir du contenu écrit,professional writing | provide professionally written text and content,fournir du texte écrit | mettre à disposition du contenu écrit | fournir du contenu rédigé professionnellement | rédiger du contenu écrit | offrir du contenu écrit | proposer du contenu écrit,hard,other_hard,ESCO,SKL_ea10cec2af3a
-USKL_037133ce6666,machine learning,apprentissage automatique,ML | supervised learning | machine learning models | semi-supervised learning | unsupervised learning,,hard,ai_ml,ESCO,SKL_7f91d7bb9892
+USKL_6f0400b0b1f7,Machine learning,apprentissage automatique,machine learning | ML | supervised learning | machine learning models | semi-supervised learning | unsupervised learning | MLNG | machine learning algorithms | machine learning methods | machine learning techniques | machine learnings | machine-learning,Machine Learning,hard,ai_ml,CSO | ESCO | ROME | SFIA,SKL_10824139e0d1 | SKL_4e7c58b3887f | SKL_7f91d7bb9892 | SKL_a5aa9e592ab9
 USKL_0f13b4517b0e,trigonometry,trigonométrie,triangle geometry | trigonometric functions,,hard,knowledge_general,ESCO,SKL_8c496c476189
 USKL_487f35f2d58a,CAE software,logiciel d’IAO,computer-aided engineering software | computer-aided engineering softwares | CAE software tools,logiciel d’ingénierie assistée par ordinateur,hard,programming_languages,ESCO,SKL_79ce6cd76bbe
 USKL_4070d53ac910,manage engineering project,gérer un projet d'ingénierie,coordinate engineering project | managing engineering projects | oversee engineering project | monitor engineering project | supervise engineering project | managing engineering project | manage engineering projects,,hard,other_hard,ESCO,SKL_3f8f40bf38e2
@@ -2012,7 +2012,6 @@ USKL_f28b2ab19e17,,Statistiques appliquées,,,hard,other_hard,ROME,SKL_4f0ec41f7
 USKL_a8b27e7f6dc1,,"Master mention mathématiques appliquées, statistique",,,hard,other_hard,ROME,SKL_7d122fa587cd
 USKL_99f45883b17f,,Analyse de données opérationnelles,,,hard,data_databases,ROME,SKL_d855086014c7
 USKL_1e75188de019,,Analyse de données client,,,hard,data_databases,ROME,SKL_eb3c6e62f6d5
-USKL_698c80cf0546,,Machine Learning,,,hard,ai_ml,ROME,SKL_4e7c58b3887f
 USKL_42a641d6499d,,Licence mention informatique,,,hard,other_hard,ROME,SKL_918fc6ee91b5
 USKL_b8018c8d7fd9,,Analyse de données programmatiques,,,hard,data_databases,ROME,SKL_eb655eefc38c
 USKL_bdfe21041c85,,Conception de tableaux de bord de gestion,,,hard,other_hard,ROME,SKL_d137d52fe83b
@@ -3954,7 +3953,7 @@ USKL_d3466420e70d,Active Listening,,,,hard,other_hard,ONET,SKL_3d61fc469c3f
 USKL_a1f23a1d30bb,Writing,,,,hard,other_hard,ONET,SKL_d4f36a2d7798
 USKL_51d43418a6c3,Speaking,,,,hard,other_hard,ONET,SKL_bf076076b707
 USKL_048a185f7804,Critical Thinking,,,,hard,other_hard,ONET,SKL_f428e4ac555b
-USKL_7460aa5e6c30,Active Learning,,,,hard,other_hard,ONET,SKL_783fb33429e5
+USKL_6f0506e867b1,Active Learning,,active learning,,hard,ai_ml,CSO | ONET,SKL_783fb33429e5 | SKL_fd89a06cee45
 USKL_e06c8021d2c2,Learning Strategies,,,,hard,it_management,ONET,SKL_9bb6ef2e8bab
 USKL_8db22f37c81e,Monitoring,,,,hard,other_hard,ONET,SKL_3c928f967afe
 USKL_7e4a611187ad,Science,,,,hard,other_hard,ONET,SKL_0ede04111b8f
@@ -3992,7 +3991,7 @@ USKL_c2c5f405e305,Category Flexibility,,,,soft,soft_transversal,ONET,SKL_4ef4030
 USKL_0a8a7f36db2d,Mathematical Reasoning,,,,soft,soft_transversal,ONET,SKL_1fa4715aee9a
 USKL_0621471f5b19,Number Facility,,,,soft,soft_transversal,ONET,SKL_6eb59efa8e79
 USKL_0c79d1526b7d,Flexibility of Closure,,,,soft,soft_transversal,ONET,SKL_8e823ad57eaf
-USKL_984ec752e50d,Visualization,,,,soft,soft_transversal,ONET,SKL_469a005ccae3
+USKL_ec04fef56323,Visualization,,visualization,,soft,web,CSO | ONET,SKL_469a005ccae3 | SKL_d207032bb640
 USKL_403664042e54,Near Vision,,,,soft,soft_transversal,ONET,SKL_9eb47227e858
 USKL_93aeb4ef9c04,Speech Clarity,,,,soft,soft_transversal,ONET,SKL_8dade5c29560
 USKL_8e575a15ac84,Speed of Closure,,,,soft,soft_transversal,ONET,SKL_4f7187338781
@@ -4057,7 +4056,7 @@ USKL_0e8c4cef03ac,K2 Business Process Automation,,,,hard,other_hard,ONET,SKL_5f6
 USKL_278f18d08611,KornShell,,,,hard,other_hard,ONET,SKL_7a564b3c6110
 USKL_9716a9c22431,LAMP Stack,,,,hard,other_hard,ONET,SKL_e2d6c7064d86
 USKL_490b179af86a,Langlais Computer Consultants CalMan,,,,hard,other_hard,ONET,SKL_c3c0659bb39c
-USKL_b1f92223a447,Linux,,,,hard,systems_infrastructure,ONET,SKL_9768767c8936
+USKL_0e1da1dc92c8,Linux,,linux | linux kernel | linux systems | linux- operating system,,hard,systems_infrastructure,CSO | ONET,SKL_2485f0c3783a | SKL_9768767c8936
 USKL_19cf647e0de3,Local area network LAN software,,,,hard,networks,ONET,SKL_5f3775b9ca19
 USKL_a8dc02d31651,Mac HelpMate,,,,hard,other_hard,ONET,SKL_0e6b1a9e9066
 USKL_15c692921c1d,Management information systems MIS,,,,hard,other_hard,ONET,SKL_77492de3d779
@@ -4263,7 +4262,7 @@ USKL_546fd4469f58,Microsoft Teams,,,,hard,other_hard,ONET,SKL_0863ac3ef467
 USKL_199774b85a03,Microsoft Visual Basic for Applications VBA,,,,hard,programming_languages,ONET,SKL_16e721ee0783
 USKL_0f83454ab2e3,Microsoft Visual Basic.NET,,,,hard,programming_languages,ONET,SKL_b16918fc75e4
 USKL_b0aec3fee8d5,Microsoft Visual C# .NET,,,,hard,programming_languages,ONET,SKL_294be644b939
-USKL_1c4cb7c53578,Microsoft Windows,,,,hard,other_hard,ONET,SKL_c8061bfbbcb0
+USKL_35097735f49a,Microsoft Windows,,microsoft windows,,hard,other_hard,CSO | ONET,SKL_6d6c7fcc1579 | SKL_c8061bfbbcb0
 USKL_74cc38b4e419,Migration testing software,,,,hard,programming_languages,ONET,SKL_f5376f6af2db
 USKL_3a98f75c4b8e,Minitab,,,,hard,other_hard,ONET,SKL_8cffefdf40ee
 USKL_934a59a58e19,Mutation testing software,,,,hard,programming_languages,ONET,SKL_e439c8b3fad8
@@ -4395,7 +4394,7 @@ USKL_7e6c2913958a,End-to-end encryption software,,,,hard,security,ONET,SKL_38b65
 USKL_cb3754ecbd43,Ethereal,,,,hard,other_hard,ONET,SKL_e4b55ce71a98
 USKL_26d5d06b6e45,Google Sites,,,,hard,other_hard,ONET,SKL_f1a36a641026
 USKL_7f3aea176937,Guidance Software EnCase Forensic,,,,hard,security,ONET,SKL_c8865154c108
-USKL_4cb8503a1cb1,Honeypot,,,,hard,other_hard,ONET,SKL_8bf8c8bfb136
+USKL_30fa792b433a,Honeypot,,honeypots | honeypot,,hard,other_hard,CSO | ONET,SKL_5cb086a2b022 | SKL_8bf8c8bfb136
 USKL_9dadbbdfb382,HP Fortify,,,,hard,other_hard,ONET,SKL_adc4c164351a
 USKL_3e67a7dd2329,HP WebInspect,,,,hard,other_hard,ONET,SKL_f789f6fb97f6
 USKL_fed6099d0b35,IBM QRadar SIEM,,,,hard,security,ONET,SKL_c016ba622c39
@@ -5404,3 +5403,581 @@ USKL_77ba3504ad6a,Sierra Scientific Software CRIS,,,,hard,programming_languages,
 USKL_35dc4d4db517,StudyManager Sponsor Edition,,,,hard,other_hard,ONET,SKL_f6293b44c73c
 USKL_818ae8e69e44,SyMetric Sciences SyMetric,,,,hard,other_hard,ONET,SKL_64bab9114dbe
 USKL_3677c26d4593,TOPAZ Enterprise Software Suite,,,,hard,programming_languages,ONET,SKL_eaf11b2aee23
+USKL_cf62f7bb4b3a,Accessibility and inclusion,,ACIN,,,web,SFIA,SKL_7ad5b07c1d80
+USKL_112ec5e6caf5,Animation development,,ADEV,,,programming_languages,SFIA,SKL_47f6acbc1be3
+USKL_8e7fd84a55fd,Analytical classification and coding,,ANCC,,,programming_languages,SFIA,SKL_ff360bf52510
+USKL_9c04a538d08f,Solution architecture,,ARCH,,,systems_infrastructure,SFIA,SKL_549d122be7ec
+USKL_e01246ef1d72,Asset management,,ASMG,,,it_management,SFIA,SKL_c2291c707762
+USKL_db6134adbf9c,Application support,,ASUP,,,programming_languages,SFIA,SKL_a53841b5b9ac
+USKL_d0eaa0d0ff84,Audit,,AUDT,,,it_management,SFIA,SKL_be1bdd24efde
+USKL_668e28c1a7f3,Availability management,,AVMT,,,it_management,SFIA,SKL_0941bee855c3
+USKL_b893760cfd70,Benefits management,,BENM,,,it_management,SFIA,SKL_05fa2e7e0507
+USKL_35ea1e65d515,User acceptance testing,,BPTS,,,methodology,SFIA,SKL_0e3f61c39214
+USKL_0228afc30230,Budgeting and forecasting,,BUDF,,,it_management,SFIA,SKL_9bddb24890e7
+USKL_1ee99f07e38e,Configuration management,,CFMG,,,cloud_devops,SFIA,SKL_6b4d325200ad
+USKL_68051ccf56fb,Change control,,CHMG,,,methodology,SFIA,SKL_d921385f13bc
+USKL_97f9c77a893d,Continuity management,,COPL,,,it_management,SFIA,SKL_17e94c7e936c
+USKL_745a452dd281,Capacity management,,CPMG,,,systems_infrastructure,SFIA,SKL_433dccb1dd5d
+USKL_b4f0b8d69388,Cybercrime investigation,,CRIM,,,security,SFIA,SKL_2f70b8dbfbe0
+USKL_2b67f34783b3,Certification scheme operation,,CSOP,,,it_management,SFIA,SKL_e13e7413345e
+USKL_ae5de68ef658,Data management,,DATM,,,data_databases,SFIA,SKL_05240b4b73ca
+USKL_4c7ac524c280,Database administration,,DBAD,,,data_databases,SFIA,SKL_a2d8ba982ff0
+USKL_80a1ff0e4c50,Database design,,DBDS,,,data_databases,SFIA,SKL_5aa3f150ef89
+USKL_af34599b0a70,Delivery management,,DEMG,,,it_management,SFIA,SKL_aa72fddaf13d
+USKL_aa2e78568b15,Demand management,,DEMM,,,it_management,SFIA,SKL_509880368e67
+USKL_4335219d8a46,Deployment,,DEPL,,,cloud_devops,SFIA,SKL_6f2bbee10910
+USKL_1f6fd5964041,digital forensic,,Digital forensics | DGFS | digital forensics,,,security,CSO | SFIA,SKL_491d76752637 | SKL_75eaa5be5277
+USKL_f3fb4d27ee14,Data modelling and design,,DTAN,,,data_databases,SFIA,SKL_3760aa2a100a
+USKL_f6263a48c9bb,Emerging technology monitoring,,EMRG,,,it_management,SFIA,SKL_41c27949fd2e
+USKL_30af8815be60,Feasibility assessment,,FEAS,,,methodology,SFIA,SKL_f4df9bce0a01
+USKL_5538c349181d,Governance,,GOVN,,,it_management,SFIA,SKL_1b0853710f49
+USKL_ef62ea83170e,User experience design,,HCEV,,,web,SFIA,SKL_d2bb6571962d
+USKL_7c5e481cc975,High-performance computing,,HPCC,,,systems_infrastructure,SFIA,SKL_ba26362f220c
+USKL_ff63d3894534,Identity and access management,,IAMT,,,security,SFIA,SKL_c61574c262e0
+USKL_6b6fd5a89422,Infrastructure design,,IFDN,,,systems_infrastructure,SFIA,SKL_a9d56865317c
+USKL_2e342454aad7,Information assurance,,INAS,,,security,SFIA,SKL_fdb765925910
+USKL_b0d805003b54,Content design and authoring,,INCA,,,web,SFIA,SKL_5de77ee85334
+USKL_c09396a35a9f,Innovation management,,INOV,,,it_management,SFIA,SKL_a70d9841725b
+USKL_9bf40ea4ae9d,Information management,,IRMG,,,data_databases,SFIA,SKL_563cfecda4f5
+USKL_f42daa9fca61,Information systems coordination,,ISCO,,,it_management,SFIA,SKL_2648310d0179
+USKL_59508926ea38,Contract management,,ITCM,,,it_management,SFIA,SKL_a0e23de1a15f
+USKL_5ac080a06790,Technology service management,,ITMG,,,it_management,SFIA,SKL_9ad7739fb802
+USKL_509a8e4302bf,Infrastructure operations,,ITOP,,,systems_infrastructure,SFIA,SKL_c56b1cd05711
+USKL_11bba96c7e8d,Knowledge management,,KNOW,,,it_management,SFIA,SKL_34ac18523697
+USKL_b5d17b46db2a,Measurement,,MEAS,,,knowledge_general,SFIA,SKL_29007cfd7af4
+USKL_2628db69d9f0,Methods and tools,,METL,,,methodology,SFIA,SKL_ef4f2e51527f
+USKL_9b3ad919658e,Non-functional testing,,NFTS,,,methodology,SFIA,SKL_68d30586a0ec
+USKL_e14c884cb718,Network support,,NTAS,,,networks,SFIA,SKL_3407bd66caa6
+USKL_1a088b9c6e87,Network design,,NTDS,,,networks,SFIA,SKL_9c1699211b96
+USKL_20871e6db3e9,Numerical analysis,,NUAN,,,knowledge_general,SFIA,SKL_9b23359d1468
+USKL_9683bbcf709d,Offensive cyber operations,,OCOP,,,security,SFIA,SKL_3efd0b83fa25
+USKL_0a3276bbcf8c,Problem management,,PBMG,,,it_management,SFIA,SKL_adde03876632
+USKL_5fb8c1f7e8fb,Information and data compliance,,PEDP,,,it_management,SFIA,SKL_b40bb4857c84
+USKL_3d027381382c,Penetration testing,,PENT,,,security,SFIA,SKL_1c86aa5c3d4e
+USKL_8e37102ac4e3,Programme management,,PGMG,,,it_management,SFIA,SKL_f32c92fc5847
+USKL_665010dfc0f4,Portfolio management,,POMG,,,it_management,SFIA,SKL_694c9670dfdb
+USKL_47ee7316a7ac,Software configuration,,PORT,,,cloud_devops,SFIA,SKL_6065f726d95d
+USKL_def28bf8c5eb,Product management,,PROD,,,it_management,SFIA,SKL_9ab3116cc167
+USKL_456c9692970a,"Portfolio, programme and project support",,PROF,,,it_management,SFIA,SKL_ac037d96b392
+USKL_be44c49f1475,Programming/software development,,PROG,,,programming_languages,SFIA,SKL_f565dbe8fbed
+USKL_9bdc8294b1d0,Process testing,,PRTS,,,methodology,SFIA,SKL_94327a0585b3
+USKL_a1ac10ae07cd,Quality assurance,,QUAS,,,it_management,SFIA,SKL_78f3dcc0fcc6
+USKL_6c378c4434f5,Quality management,,QUMG,,,it_management,SFIA,SKL_73f0323562d3
+USKL_3560e17b28a5,Requirements definition and management,,REQM,,,methodology,SFIA,SKL_c16deab65db7
+USKL_c63c0e0d8e37,Real-time/embedded systems development,,RESD,,,programming_languages,SFIA,SKL_5b60d21172cc
+USKL_d5bc9121a98f,Radio frequency engineering,,RFEN,,,networks,SFIA,SKL_8c9f8a08b560
+USKL_43e1f75bb0bf,Records management,,RMGT,,,it_management,SFIA,SKL_77808b817e10
+USKL_2ce7a7f3bfb3,Formal research,,RSCH,,,knowledge_general,SFIA,SKL_12525a177acf
+USKL_48fdbb994dca,Security operations,,SCAD,,,security,SFIA,SKL_c671635e0419
+USKL_e3a5a4f6751d,Service catalogue management,,SCMG,,,it_management,SFIA,SKL_a08d72ca09cb
+USKL_08dee30779dc,Information security,,SCTY | information security,,,security,CSO | SFIA,SKL_7dae86013cde | SKL_bc26ea1f9963
+USKL_c7abdf039c96,Systems integration and build,,SINT,,,systems_infrastructure,SFIA,SKL_e4c9688c6662
+USKL_1bc2df9e4bfa,Service level management,,SLMO,,,it_management,SFIA,SKL_c773eb87479d
+USKL_de06565e8d02,Storage management,,STMG,,,systems_infrastructure,SFIA,SKL_8eae280be68f
+USKL_780ea2152fd4,Enterprise and business architecture,,STPL,,,systems_infrastructure,SFIA,SKL_16bd843f4bd2
+USKL_0938470ba2c5,Software design,,SWDN | software design,,,programming_languages,CSO | SFIA,SKL_3c9570f8b67e | SKL_f5befd850541
+USKL_e482fa04fc16,System software administration,,SYSP,,,systems_infrastructure,SFIA,SKL_37d5d9686f8d
+USKL_6d41817e22a8,Functional testing,,TEST,,,methodology,SFIA,SKL_0e5f0bd407c0
+USKL_8ea621b6ecdc,Threat intelligence,,THIN,,,security,SFIA,SKL_4b2639e3e5b7
+USKL_eabd613faade,User experience analysis,,UNAN,,,web,SFIA,SKL_98f70f08b190
+USKL_470b84c09866,User research,,URCH,,,web,SFIA,SKL_41e30fa94ebd
+USKL_6f1a345a684f,User experience evaluation,,USEV,,,web,SFIA,SKL_1ca20298478c
+USKL_1de56e5541a5,Incident management,,USUP,,,it_management,SFIA,SKL_ca9917ccf4cf
+USKL_74c0528d8953,Data visualisation,,VISL,,,data_databases,SFIA,SKL_b063e351d3b3
+USKL_46686cbc99f4,Vulnerability assessment,,VUAS,,,security,SFIA,SKL_00753218389c
+USKL_57ed8d02c4b7,Vulnerability research,,VURE,,,security,SFIA,SKL_043e3ecea0ef
+USKL_e91710e88e67,computer security,,,,,security,CSO,SKL_236b2ef8eea7
+USKL_6a01cca30ab6,artificial intelligence,,,,,ai_ml,CSO,SKL_8e4ab79e45e6
+USKL_f051489e8b84,information retrieval,,,,,data_databases,CSO,SKL_38958b0c8a87
+USKL_cbaceb0a07e4,computer networks,,computer communication networks | computer network,,,networks,CSO,SKL_7b14dcce4d35
+USKL_27491da8184f,human computer interaction,,human-computer interaction,,,web,CSO,SKL_58c7830565aa
+USKL_fae9d6e1ce7a,software engineering,,,,,programming_languages,CSO,SKL_e2cebe10175b
+USKL_bcc2a46cf56e,internet,,,,,networks,CSO,SKL_b052dd803e19
+USKL_1835d4cd6bed,software,,,,,programming_languages,CSO,SKL_d5fcac07f30f
+USKL_6423540e5af6,access control,,,,,security,CSO,SKL_fc7c6db8b2b6
+USKL_232b64a388cf,cryptology,,,,,security,CSO,SKL_8a02d56285c6
+USKL_1cc6d6761683,cybersecurity,,cyber security | cybersecurity systems | system security,,,security,CSO,SKL_8813d38bde4b
+USKL_836abbfdc0f8,privacy,,,,,security,CSO,SKL_e226709eec51
+USKL_56079b517946,security of data,,,,,security,CSO,SKL_84a6306f0b67
+USKL_3955c02c54c3,adaptive learning,,,,,ai_ml,CSO,SKL_dda2be88c866
+USKL_1401a2226f7d,adversarial machine learning,,adversarial learning,,,ai_ml,CSO,SKL_ceb9e329a67d
+USKL_4dd7cb8ecf35,neural networks,,artificial neural network | artificial neural networks | back propagation neural networks | back-propagation neural network | back-propagation neural networks | neural network | neural network model,,,ai_ml,CSO,SKL_255aa10d74f4
+USKL_54e6e4e88d1b,association rule learning,,associative learning | rule-based machine learning,,,ai_ml,CSO,SKL_e14d94a2c019
+USKL_7d526fddb1c2,associative processing,,,,,ai_ml,CSO,SKL_7da4e08fdd88
+USKL_1a4c2566646a,classifiers,,classifier,,,ai_ml,CSO,SKL_832db8ddb73b
+USKL_f730b95c54bf,cluster analysis,,,,,ai_ml,CSO,SKL_ac2501e1b0ad
+USKL_6caafca3c343,contrastive learning,,contrastive representation learning | self-supervised learning,,,ai_ml,CSO,SKL_26b327c7bcec
+USKL_2d085f8e49f7,ensemble learning,,ensemble methods,,,ai_ml,CSO,SKL_b8edd210571b
+USKL_3252a0679c87,feature extraction,,,,,ai_ml,CSO,SKL_5c534f498acb
+USKL_39e4e84e3098,representation learning,,feature learning,,,ai_ml,CSO,SKL_c91ac9be0772
+USKL_fe1fea566308,feature selection,,feature selection methods,,,ai_ml,CSO,SKL_aadc8fe751db
+USKL_2c64bc786009,feature vectors,,feature vector,,,ai_ml,CSO,SKL_1fb3cb1c2b84
+USKL_11c94e8dd36f,federated learning,,,,,ai_ml,CSO,SKL_a165ca163a1d
+USKL_ac7b58aa40c2,few-shot learning,,,,,ai_ml,CSO,SKL_a5b6377b10ba
+USKL_b2f4ed2dd01e,fine-tuning learning,,,,,ai_ml,CSO,SKL_adfa3a8b7c41
+USKL_353bae37060a,forecasting models,,forecasting accuracy | forecasting methods,,,ai_ml,CSO,SKL_f58460d9617d
+USKL_35f350c3f94c,gaussian mixture of experts,,,,,ai_ml,CSO,SKL_70b20b198340
+USKL_c44827d2963f,inductive logic programming (ilp),,ilp | inductive logic programming,,,ai_ml,CSO,SKL_055d733aea56
+USKL_11cff1ed7a16,knowledge distillation,,,,,ai_ml,CSO,SKL_975dea6992c6
+USKL_d5c1d4baf54d,link prediction,,,,,ai_ml,CSO,SKL_8eac5ef6539d
+USKL_62d1f6172537,meta-learning,,,,,ai_ml,CSO,SKL_c6b39390a030
+USKL_bc55059b208f,multi-objective learning,,,,,ai_ml,CSO,SKL_f1608b74ad0c
+USKL_3fd742c83eba,multitask learning,,,,,ai_ml,CSO,SKL_02f59c27106f
+USKL_7246238f50ff,one-shot learning,,,,,ai_ml,CSO,SKL_d778721a368d
+USKL_a73ae95ac8b3,out-of-distribution detection,,ood detection,,,ai_ml,CSO,SKL_5bc04a0cbccf
+USKL_c798ef491c02,out-of-distribution generalization,,ood generalization,,,ai_ml,CSO,SKL_768c120656a6
+USKL_41578ad4d1b0,parameter learning,,,,,ai_ml,CSO,SKL_4b2fa2119440
+USKL_f31b6795fb08,pattern recognition,,,,,ai_ml,CSO,SKL_c770ba1952d6
+USKL_5cb875441cb8,positive-unlabeled learning,,,,,ai_ml,CSO,SKL_bbbe68f42ba5
+USKL_a2f0b5895699,quantum machine learning,,,,,ai_ml,CSO,SKL_9dd093bcc40d
+USKL_07b5dee5c96d,reinforcement learning,,reinforcement learning (rl),,,ai_ml,CSO,SKL_27f62bba42df
+USKL_32aef6e09daa,semi-supervised learning,,,,,ai_ml,CSO,SKL_4e67eb4664e9
+USKL_67427af95db6,statistical learning,,,,,ai_ml,CSO,SKL_a8f20935087a
+USKL_ba76b5f3970d,supervised machine learning,,supervised learning,,,ai_ml,CSO,SKL_093ee3399ce5
+USKL_9e64f08d423d,synthetic data,,,,,ai_ml,CSO,SKL_75167755159e
+USKL_1fbbdcb2802f,test samples,,test sample | test set,,,ai_ml,CSO,SKL_cef7f88f1b3a
+USKL_26a4d653aa96,topic model,,,,,ai_ml,CSO,SKL_6f9b667c430d
+USKL_1ad7ff38b38b,training sample,,training samples | training set,,,ai_ml,CSO,SKL_50bdf9ee81e5
+USKL_0db78edbba55,transfer learning,,,,,ai_ml,CSO,SKL_9d3bed8d10c5
+USKL_5dc0f3b96a3e,unsupervised learning,,,,,ai_ml,CSO,SKL_bbf21b77a027
+USKL_aef4017e33cc,zero-shot learning,,,,,ai_ml,CSO,SKL_daeac06bd968
+USKL_af2951c3700e,agentic artificial intelligence,,agentic ai,,,ai_ml,CSO,SKL_e493afc4ceeb
+USKL_52f7a737b076,ai applications,,,,,ai_ml,CSO,SKL_d4c634297211
+USKL_09dc84f09bdc,planning algorithms,,ai planning,,,ai_ml,CSO,SKL_6bb7a16a1cee
+USKL_7536049433e1,ambient intelligence,,ambient intelligent,,,ai_ml,CSO,SKL_c01793d4f10f
+USKL_10fe7fa59f98,bayesian methods,,bayesian | bayesian approach | bayesian approaches | bayesian framework | bayesian frameworks | bayesian method | bayesian model | bayesian models | bayesian network | bayesian networks,,,ai_ml,CSO,SKL_8b9f8af97ac6
+USKL_8ffd24b5af93,cellular automata,,cellular automata (ca),,,ai_ml,CSO,SKL_40dc768147c7
+USKL_707888731f45,cognitive systems,,,,,ai_ml,CSO,SKL_c81e56c216cb
+USKL_a891acbb399e,common-sense,,common sense | common-sense computing | common-sense reasoning | commonsense | commonsense computing | commonsense reasoning,,,ai_ml,CSO,SKL_501176bcf64f
+USKL_dc7a48638bc1,constraint satisfaction problems (csp),,,,,ai_ml,CSO,SKL_8c528a4444d4
+USKL_1cea695f5c77,decision theory,,,,,ai_ml,CSO,SKL_367ad8b8265f
+USKL_4795135e7395,expert systems,,expert system,,,ai_ml,CSO,SKL_25992270398f
+USKL_0fecb653afd7,explainable ai,,,,,ai_ml,CSO,SKL_13745321bde7
+USKL_9ee8bc27ab9c,fairness in ai,,,,,ai_ml,CSO,SKL_4def01170429
+USKL_9c8634903d9e,formal logic,,,,,ai_ml,CSO,SKL_7765f0661c47
+USKL_bcc02d0544bd,generative ai,,genai | generative artificial intelligence,,,ai_ml,CSO,SKL_a801541080a8
+USKL_c54805fff6fa,genetic algorithms,,genetic algorithm | genetic algorithm (ga),,,ai_ml,CSO,SKL_0916b73036c9
+USKL_e2a6a65fe94d,heuristic programming,,,,,ai_ml,CSO,SKL_652a994ab512
+USKL_a0d765d7e04c,human-ai collaboration,,,,,ai_ml,CSO,SKL_a7417ead6943
+USKL_5472cc6c9cb2,inference engines,,,,,ai_ml,CSO,SKL_103774d07298
+USKL_303cd0643b9f,intelligence analysis,,,,,ai_ml,CSO,SKL_4639536ce387
+USKL_a4f6453ab114,intelligent control,,,,,ai_ml,CSO,SKL_e81193c16728
+USKL_5152db1652ec,intelligent robots,,,,,ai_ml,CSO,SKL_6e98db78a277
+USKL_9cf9fdea090f,intelligent systems,,,,,ai_ml,CSO,SKL_3eeec80f8aa9
+USKL_62c3c4e00743,intelligent tutoring system,,intelligent tutoring | intelligent tutoring systems,,,ai_ml,CSO,SKL_f42f6e5b9018
+USKL_aa804618e711,knowledge based systems,,knowledge-based systems,,,ai_ml,CSO,SKL_25ec50a379d2
+USKL_944582222bba,machine perception,,,,,ai_ml,CSO,SKL_2a02719bf68b
+USKL_b88db7152df7,multiagent system,,multi agent system | multi agent system (mas) | multi agent systems | multi-agent system | multi-agent systems | multiagent systems,,,ai_ml,CSO,SKL_1df3a460f9ab
+USKL_ee567618b681,multimodal ai,,,,,ai_ml,CSO,SKL_617ec152af69
+USKL_4e624c5e9278,neurosymbolic ai,,,,,ai_ml,CSO,SKL_13539b030cda
+USKL_c7af6897efe5,soft computing,,,,,ai_ml,CSO,SKL_794d3ae3c159
+USKL_d375e418518e,swarm intelligence,,,,,ai_ml,CSO,SKL_b1b1b829ef6b
+USKL_7e96bd66387e,association rules,,association rule | association rule mining | association rules mining | mining association rules,,,data_databases,CSO,SKL_d19c0cfcf281
+USKL_8105652a84db,classification,,,,,data_databases,CSO,SKL_aef51c915e9f
+USKL_c130b67973ad,clustering algorithms,,clustering | clustering algorithm,,,data_databases,CSO,SKL_6dfdb8286bc2
+USKL_b80067cf5205,concept lattices,,concept lattice,,,data_databases,CSO,SKL_20a21354996d
+USKL_947be69a18b0,continuous data,,,,,data_databases,CSO,SKL_61a176d0eb5f
+USKL_68c1aa231981,data stream,,data streams,,,data_databases,CSO,SKL_5bf93847c7df
+USKL_09bcbf13fdb7,decision trees,,decision tree,,,data_databases,CSO,SKL_1d70da7a6e0c
+USKL_13a7d3ccdf78,knowledge discovery,,,,,data_databases,CSO,SKL_e8bc3c90550e
+USKL_61cbd656c9c1,link analysis,,,,,data_databases,CSO,SKL_54ce820c3e38
+USKL_441a7b5ea161,local patterns,,,,,data_databases,CSO,SKL_e42fb88bb1ce
+USKL_7c9583bdd6a2,mining process,,,,,data_databases,CSO,SKL_0ea4e3fe8005
+USKL_1f5dd4344dd5,privacy preserving,,privacy preservation | privacy-preserving,,,data_databases,CSO,SKL_743a6afc1f44
+USKL_80682a2f6d04,process mining,,,,,data_databases,CSO,SKL_2bb92322e4c3
+USKL_3497dad81201,relational learning,,,,,data_databases,CSO,SKL_4f7d41e33ab8
+USKL_a747b080f361,rule induction,,,,,data_databases,CSO,SKL_476142f0bdf3
+USKL_c4f84ed8ef32,sentiment analysis,,,,,data_databases,CSO,SKL_e9259ad3c79f
+USKL_551d69740523,spatial data mining,,,,,data_databases,CSO,SKL_9c707a411e38
+USKL_dd6f9bc67396,streaming data,,,,,data_databases,CSO,SKL_de962a492e85
+USKL_a19eae59b751,text processing,,,,,data_databases,CSO,SKL_793ac2825a6e
+USKL_c7950dc7a401,trajectory data,,,,,data_databases,CSO,SKL_790ffd20018b
+USKL_ddddde219a9a,visual data mining,,,,,data_databases,CSO,SKL_5dbdb53b6586
+USKL_84242b81d79c,web mining,,web-mining,,,data_databases,CSO,SKL_9e308dd9a657
+USKL_694f18e0f317,word spotting,,,,,data_databases,CSO,SKL_d46f0de1f0e6
+USKL_87176a3f8b15,cross-language information retrieval,,cross language information retrieval,,,data_databases,CSO,SKL_9d3d7c822bf8
+USKL_e74a8df419b4,document clustering,,,,,data_databases,CSO,SKL_c522ad6afb9a
+USKL_431ef37cc045,image retrieval,,,,,data_databases,CSO,SKL_2647e4f8c8de
+USKL_c6da575efc0c,information dissemination,,,,,data_databases,CSO,SKL_e5d6382cf1bf
+USKL_36cfd0180224,information integration,,,,,data_databases,CSO,SKL_728fb08e4b83
+USKL_3f9d0dd16f56,information retrieval systems,,,,,data_databases,CSO,SKL_f60e1b961c04
+USKL_e8be22c8e16d,information storage and retrieval,,,,,data_databases,CSO,SKL_345b61e8bd90
+USKL_77720aa17f0f,music information retrieval,,,,,data_databases,CSO,SKL_dc64174177e2
+USKL_99abc7fe67a4,named entity recognition,,named entities | named entity,,,data_databases,CSO,SKL_5118b71dae8f
+USKL_47620d388c1b,question answering,,question answering system | question answering systems,,,data_databases,CSO,SKL_81a7a398fa27
+USKL_223ce451e45c,recommender systems,,recommender system,,,data_databases,CSO,SKL_816541552eba
+USKL_d2266075c425,relevance models,,,,,data_databases,CSO,SKL_0cd32f366af1
+USKL_d46363047251,vector space models,,vector space model | vector space model (vsm) | vsm,,,data_databases,CSO,SKL_d28ecd24bd70
+USKL_e24489d6ac71,applied (co),,,,,networks,CSO,SKL_03431ccec862
+USKL_62269e96bc04,bandwidth,,,,,networks,CSO,SKL_2e19717e2355
+USKL_eec8ccb8638e,communication networks,,communication network,,,networks,CSO,SKL_1b75528c33a5
+USKL_298954e7f9a6,computer control,,,,,networks,CSO,SKL_72993892ab56
+USKL_af5525f6037c,computer workstations,,,,,networks,CSO,SKL_fd29aa9d4835
+USKL_fca20f5d0e6b,conformance testing,,,,,networks,CSO,SKL_030daa0373b0
+USKL_020280a600e3,congestion control (communication),,congestion control,,,networks,CSO,SKL_e4deb9c68e43
+USKL_4218af18c7da,dijkstra,,,,,networks,CSO,SKL_c7f870478f31
+USKL_8dc87100e364,electronic designs,,,,,networks,CSO,SKL_aa825cb9b853
+USKL_fe4a56dd446e,fault tolerant computer systems,,,,,networks,CSO,SKL_93021a6f385f
+USKL_490cd4c18a66,fiber optic networks,,,,,networks,CSO,SKL_16ac2d6c5558
+USKL_2b279b99fe79,fibre technology,,,,,networks,CSO,SKL_7957c6cf7058
+USKL_90f39e318e03,network architecture,,,,,networks,CSO,SKL_7f25208613ff
+USKL_84410cadefeb,network protocols,,,,,networks,CSO,SKL_0a0f5434af1b
+USKL_1148329fd919,network security,,,,,networks,CSO,SKL_9c1dc3d1aa1c
+USKL_fe54b3eed6de,network topology,,,,,networks,CSO,SKL_1a29f96f28fd
+USKL_2d73446621a2,peer-to-peer,,p2p | p2p applications | p2p network | p2p networks | p2p system | p2p systems | peer to peer | peer to peer (p2p) network | peer to peer networks | peer-to-peer (p2p) | peer-to-peer network | peer-to-peer networks | peer-to-peer system | peer-to-peer systems | peer-to-peer technologies,,,networks,CSO,SKL_3e81d49c1eb6
+USKL_146fc6dfcb75,parallel and distributed processing,,,,,networks,CSO,SKL_780f7158e569
+USKL_3866a425e7a7,probability--queueing theory,,,,,networks,CSO,SKL_ff489a9f53ed
+USKL_dc9c4903ce90,retrieval (mir),,,,,networks,CSO,SKL_4e71fe44ea09
+USKL_5a6c95b1b4e0,routing algorithms,,routing algorithm,,,networks,CSO,SKL_918312c337c7
+USKL_7610b3444822,stabilizers (agents),,,,,networks,CSO,SKL_df7685e64294
+USKL_6490707e497f,wireless communications,,wireless communication | wireless communication technology | wireless technologies,,,networks,CSO,SKL_03b7511cb1dc
+USKL_150b57bcc1c5,wireless telecommunication systems,,,,,networks,CSO,SKL_27f7cbe0526b
+USKL_68e4e10f0d60,affective computing,,,,,web,CSO,SKL_2eb49e08c5df
+USKL_22f93af334d8,assistive technology,,assistive technologies,,,web,CSO,SKL_54829c4c3e56
+USKL_f2873259b10a,computer aided instruction,,,,,web,CSO,SKL_2c0f86b49441
+USKL_4f7ad3160b29,user-computer interface,,computer interface,,,web,CSO,SKL_7a5414d96413
+USKL_e7d86a50e330,computer interfaces,,,,,web,CSO,SKL_9fa2101793db
+USKL_07e48775bdf9,dialogue management,,,,,web,CSO,SKL_674d709a02c2
+USKL_50d3d687caab,emotion recognition,,,,,web,CSO,SKL_861d474927da
+USKL_564b55ce3ad4,gesture recognition,,,,,web,CSO,SKL_1b3a4cb286f3
+USKL_311c00598e08,human engineering,,,,,web,CSO,SKL_202c975e2d35
+USKL_b998e418ef33,interactive robot,,,,,web,CSO,SKL_61fdd00a8ca3
+USKL_ff97a7c9824d,user interfaces,,user interface,,,web,CSO,SKL_0b0bc44d80ca
+USKL_f33edb9ebeab,videogames,,video game | video games,,,web,CSO,SKL_0ada440c491d
+USKL_0ebe9d0dc5ce,cache,,,,,systems_infrastructure,CSO,SKL_25f6e4cc3334
+USKL_b09d29799f82,central processing unit,,,,,systems_infrastructure,CSO,SKL_ec9c26c87295
+USKL_db464101e736,computer operating procedures,,,,,systems_infrastructure,CSO,SKL_0c9696882281
+USKL_779cac57042b,computer system recovery,,,,,systems_infrastructure,CSO,SKL_40bd9d062c3b
+USKL_bae7262fb0ad,computer worms,,,,,systems_infrastructure,CSO,SKL_5577e441038e
+USKL_fa513f2482d2,device driver,,device drivers,,,systems_infrastructure,CSO,SKL_6157396ae78b
+USKL_788556f5bd5e,distributed program,,,,,systems_infrastructure,CSO,SKL_dad2cf86cdaf
+USKL_1e220912d4f1,embedded technology,,,,,systems_infrastructure,CSO,SKL_c7103ffa82dc
+USKL_ea81dd8c9c3c,execution environments,,,,,systems_infrastructure,CSO,SKL_00efedd75417
+USKL_0cb7149d09ce,file systems,,file system | filesystem,,,systems_infrastructure,CSO,SKL_3b4fa14bbaf5
+USKL_00ed19929a77,malwares,,malware,,,systems_infrastructure,CSO,SKL_866e1b35593c
+USKL_a4658989f644,memory management,,,,,systems_infrastructure,CSO,SKL_d57ebf30c328
+USKL_b0c4249c9923,multi-threaded application,,,,,systems_infrastructure,CSO,SKL_1710a9ddd38d
+USKL_059343d2e1dd,multiprogramming,,multiprocessing programs,,,systems_infrastructure,CSO,SKL_be627c8f06d9
+USKL_ae8ba3288954,real-time operating systems,,real time operating system | real-time operating system,,,systems_infrastructure,CSO,SKL_6b8d1fe26455
+USKL_e8d01693f9c8,shared cache,,,,,systems_infrastructure,CSO,SKL_4aadbba42f49
+USKL_e0ee8d5cd35f,system calls,,system call,,,systems_infrastructure,CSO,SKL_f0bf3f2c0964
+USKL_c0734b5efadc,virtual machine monitors,,virtual machine monitor | xen,,,systems_infrastructure,CSO,SKL_564413d63fa4
+USKL_28bdfcbab630,virtual storage,,,,,systems_infrastructure,CSO,SKL_dde779850ecc
+USKL_4f2651e9e736,virtualized environment,,,,,systems_infrastructure,CSO,SKL_90e387c5cfa3
+USKL_a294ea6bc3ea,windows operating system,,,,,systems_infrastructure,CSO,SKL_c894339e9b6f
+USKL_07276e4208c6,agent-oriented,,,,,programming_languages,CSO,SKL_dcafe0f90416
+USKL_fa8fb0e2404a,agent oriented software engineering,,agent-oriented software engineering,,,programming_languages,CSO,SKL_374427a5406d
+USKL_baa4394aed57,autonomic computing,,,,,programming_languages,CSO,SKL_aee04a2803fa
+USKL_0f70ae2c9144,bug reports,,defect report | defect reports,,,programming_languages,CSO,SKL_973c5103d6b4
+USKL_b381e7f9d7da,capability maturity models,,capability maturity model,,,programming_languages,CSO,SKL_58eea786336c
+USKL_ae231b52f073,circuit simulation,,,,,programming_languages,CSO,SKL_e02122a346c8
+USKL_ebf96c57d061,component-based software development,,component based software development,,,programming_languages,CSO,SKL_044278234f8c
+USKL_220c138b13bd,component based approach,,,,,programming_languages,CSO,SKL_c0624f08ad5a
+USKL_54dc93b8a167,component composition,,,,,programming_languages,CSO,SKL_dab08e5722c7
+USKL_76979f61cbb0,component repository,,,,,programming_languages,CSO,SKL_d47210e60d7c
+USKL_ce7a9d7c1f8a,component selection,,,,,programming_languages,CSO,SKL_13841c701a5f
+USKL_bf34829ff1f2,computer software maintenance,,,,,programming_languages,CSO,SKL_ba1ba6c7a363
+USKL_d420632a0b76,computer systems programming,,,,,programming_languages,CSO,SKL_42065fe4e9a6
+USKL_46f7007d2838,engineering research,,,,,programming_languages,CSO,SKL_23c482b0af47
+USKL_52738659c61e,formal specification,,formal specifications,,,programming_languages,CSO,SKL_a480e486cdc2
+USKL_b95f545e87e9,knowledge engineering,,,,,programming_languages,CSO,SKL_707f42bfdf0a
+USKL_bcaf15e1fcac,modeling languages,,modeling language | modelling language,,,programming_languages,CSO,SKL_0898df4f5a64
+USKL_de4721d88bfc,object-oriented design,,object oriented design,,,programming_languages,CSO,SKL_d0c8297f3aea
+USKL_2eb3263c284b,object-oriented system,,,,,programming_languages,CSO,SKL_f0654ddf32bf
+USKL_a887b22b977e,process engineering,,,,,programming_languages,CSO,SKL_304ab1c7be45
+USKL_936d8ba7eab1,program diagnostics,,,,,programming_languages,CSO,SKL_9f6f9346d3c2
+USKL_7b6cc84301fa,program documentation,,,,,programming_languages,CSO,SKL_c9d287fe1252
+USKL_8f28a9cef215,requirements engineering,,requirement engineering,,,programming_languages,CSO,SKL_8da6ff3dbc3a
+USKL_3a78447846da,service-based systems,,,,,programming_languages,CSO,SKL_f38160e41e74
+USKL_50d3641e586e,software pipelining,,,,,programming_languages,CSO,SKL_a02e1f1e0e9a
+USKL_51291cf5d741,software reliability,,,,,programming_languages,CSO,SKL_45275843d218
+USKL_9fa9b51d7cd4,source codes,,source code,,,programming_languages,CSO,SKL_af2bc4bc6a92
+USKL_efc7e813dc6d,static analysis,,,,,programming_languages,CSO,SKL_d346db16625e
+USKL_2862e7d5691c,system architectures,,system architecture,,,programming_languages,CSO,SKL_64835e194f0f
+USKL_77ce7205fd59,system testing,,,,,programming_languages,CSO,SKL_a70383873e19
+USKL_72a3feb82009,system under test,,,,,programming_languages,CSO,SKL_685c45625525
+USKL_532642f1d5d8,test case generation,,,,,programming_languages,CSO,SKL_1fe49572cd08
+USKL_b52863126614,test case selection,,,,,programming_languages,CSO,SKL_f96dbab481b0
+USKL_18fe8ba63e0c,test data generation,,,,,programming_languages,CSO,SKL_b2c893ea56f5
+USKL_2436dc22763b,transformation rules,,,,,programming_languages,CSO,SKL_3763fa887449
+USKL_fff3a1de7a39,unified modeling language,,uml | unified modeling language (uml) | unified modelling language,,,programming_languages,CSO,SKL_8179e32b40f3
+USKL_c312944bc24b,web engineering,,,,,programming_languages,CSO,SKL_e6e9a052be8d
+USKL_935074688d98,coding theory,,,,,programming_languages,CSO,SKL_09974e571129
+USKL_43576bbbc35c,computer programming languages,,,,,programming_languages,CSO,SKL_4d30c68505c7
+USKL_1ee9231dcded,computer science education,,cs1,,,programming_languages,CSO,SKL_11578c4b7db5
+USKL_180b821412e2,constraint networks,,,,,programming_languages,CSO,SKL_e8d2a0821838
+USKL_1a75a4ac6ba8,constraint programming,,,,,programming_languages,CSO,SKL_5983563678c8
+USKL_f591c1672f4b,program debugging,,debugging | software debugging | testing and debugging,,,programming_languages,CSO,SKL_33644306a867
+USKL_f00cbbf8ee4b,evolutionary programming,,,,,programming_languages,CSO,SKL_8e4be4aae931
+USKL_223b909719e8,genetic programming,,genetic programming (gp),,,programming_languages,CSO,SKL_adf4c464eb1f
+USKL_da61119b7311,high-level programming language,,,,,programming_languages,CSO,SKL_deef6924c38e
+USKL_be79eb7e1c45,high level languages,,,,,programming_languages,CSO,SKL_86309f77bf86
+USKL_9c373ad856ff,local consistency,,,,,programming_languages,CSO,SKL_146c2c25c91a
+USKL_8c3944b3aa59,mixed integer programming model,,,,,programming_languages,CSO,SKL_2e7207189eb2
+USKL_c4121b91d6ee,novice programmer,,novice programmers,,,programming_languages,CSO,SKL_a45887e30057
+USKL_c074dc962a9a,object oriented programming,,object-oriented programming,,,programming_languages,CSO,SKL_c55feb8d7c21
+USKL_fc0be5b2f31a,computer language,,,,,networks,CSO,SKL_a8a578bef652
+USKL_cacd790d2276,distance education,,,,,networks,CSO,SKL_e80e2f0aa41d
+USKL_896fac42bd3b,e-commerce,,e commerces | e-commerce systems | electronic commerce,,,networks,CSO,SKL_41ed6292fdcd
+USKL_b38f15aab095,electronic mail,,,,,networks,CSO,SKL_53ee8b8de339
+USKL_e7eda3c3929f,epc,,electronic product codes,,,networks,CSO,SKL_fb77de0a43bc
+USKL_4767698acfd0,genetic database,,,,,networks,CSO,SKL_db6fd06bb5d1
+USKL_ca0ec8b2afc1,"health records, personal",,,,,networks,CSO,SKL_a40f9a641a56
+USKL_bbe714c6756c,mmorpg,,mmorpgs,,,networks,CSO,SKL_db16ccf48957
+USKL_9a559be6b892,network paths,,,,,networks,CSO,SKL_d95d8c6145f5
+USKL_894830e833d4,protein database,,,,,networks,CSO,SKL_df26143c951b
+USKL_4b43416700b6,revenue,,,,,networks,CSO,SKL_838d87c973a5
+USKL_da8027890382,systems integration,,,,,networks,CSO,SKL_1d1218d0bd5f
+USKL_6d8f75081f6d,virtual networks,,virtual network,,,networks,CSO,SKL_2ac83f34e603
+USKL_0046eb90200e,world wide web,,,,,networks,CSO,SKL_b445330f3c3b
+USKL_a0c81fd380a9,adaptive algorithms,,adaptive algorithm,,,programming_languages,CSO,SKL_fddc195c9b2f
+USKL_4f6588621524,software component,,component based | component based software | component based software engineering | component based systems | component-based software | component-based software engineering | component-based systems | software components,,,programming_languages,CSO,SKL_1163540f35fb
+USKL_3db5d8d35464,computer applications,,computer application,,,programming_languages,CSO,SKL_e842a9f09eab
+USKL_23e47c623616,computer control systems,,,,,programming_languages,CSO,SKL_2a49760d3003
+USKL_290b1e544310,computer debugging,,debuggers,,,programming_languages,CSO,SKL_ad7d11b9201c
+USKL_8424f9b82a72,dynamic analysis,,,,,programming_languages,CSO,SKL_ccc7993834d4
+USKL_d59ea182797e,gps,,,,,programming_languages,CSO,SKL_1c974bff7720
+USKL_df33f3b4c0c4,software repositories,,mining software repositories,,,programming_languages,CSO,SKL_6862a4187c3b
+USKL_e0ecef997364,open source software,,,,,programming_languages,CSO,SKL_3b30efb929a1
+USKL_c9dd35548ee7,access control policies,,access control mechanism | access control models | access control policy,,,security,CSO,SKL_7f41d46f476f
+USKL_4c1f5eb9304b,access control schemes,,,,,security,CSO,SKL_b5a55603073a
+USKL_6f7ce1b54044,access rights,,,,,security,CSO,SKL_29823e130318
+USKL_3502bc556a17,attribute-based encryption,,attribute-based encryptions,,,security,CSO,SKL_f0c1ada8a373
+USKL_9f5094860b80,authorization,,,,,security,CSO,SKL_e9d3a8a97828
+USKL_36829feb6b2d,biometrics,,biometric,,,security,CSO,SKL_a261fe97699d
+USKL_5ce188d102d9,decryption keys,,,,,security,CSO,SKL_5e078088afdf
+USKL_0c544f995e2e,grid security,,,,,security,CSO,SKL_14fa598c82d0
+USKL_91597876a5e3,identity management,,,,,security,CSO,SKL_74a652fe3586
+USKL_6de6259f7997,ieee802.11,,,,,security,CSO,SKL_d34d049b2dbc
+USKL_a469339beab6,information flow control,,,,,security,CSO,SKL_b5ac537280e1
+USKL_0767422d6125,key management,,,,,security,CSO,SKL_d9c924864d3e
+USKL_dca08d62d925,manet routing,,,,,security,CSO,SKL_53e1c7785bb0
+USKL_b96d7b4695be,media access control,,media access control (mac),,,security,CSO,SKL_41a2957b121e
+USKL_b8d73119a9ed,privacy policies,,privacy policy,,,security,CSO,SKL_777f97202e43
+USKL_84ec651c86c7,role-based access control,,rbac | role based access control | role-based access control (rbac) | role-based access control model,,,security,CSO,SKL_1bb17d40d809
+USKL_2d87ab35b32f,re-encryption,,,,,security,CSO,SKL_f71a92e390d3
+USKL_f049bd3ce9f2,security and privacy,,,,,security,CSO,SKL_8ceca79fec52
+USKL_e680950d69f5,security architecture,,,,,security,CSO,SKL_0387516db2ee
+USKL_2877c62a52f7,security challenges,,,,,security,CSO,SKL_d6e70ddb3e44
+USKL_2b621913e18c,security model,,security models,,,security,CSO,SKL_7c542578a0e5
+USKL_6a353c7b415e,security policy,,security policies,,,security,CSO,SKL_7ac1d9722bca
+USKL_dbfc57dbdfcf,security requirements,,,,,security,CSO,SKL_a7dd5f9aa033
+USKL_7991a3a5339a,sensitive informations,,sensitive data | sensitive datas,,,security,CSO,SKL_d5eacd53e646
+USKL_f8535b29fcdc,symmetric keys,,,,,security,CSO,SKL_0872d0050ef4
+USKL_65a45d1b05d5,trust management,,,,,security,CSO,SKL_0d1d5b4d66dc
+USKL_4850ab1e7fc2,user privacy,,,,,security,CSO,SKL_084474b0c843
+USKL_da3e7a9d3055,cryptanalysis,,,,,security,CSO,SKL_ca70dd8484a2
+USKL_64325b825720,cryptography,,,,,security,CSO,SKL_0a4315e87c30
+USKL_128b260bde0a,cyberattacks,,cyber attack | cyber attacks | cyber threat | cyber threats | cyberattack | cybersecurity attacks | cybersecurity risk | cybersecurity threat | cybersecurity threats,,,security,CSO,SKL_f62e378982ec
+USKL_45ad4f9d82e6,cyber defense,,cyber defence,,,security,CSO,SKL_1ec8a2c6a1c0
+USKL_88704da69d15,cybersecurity vulnerabilities,,cybersecurity challenges,,,security,CSO,SKL_60233ea3b693
+USKL_8ad5195c3533,cybersecurity framework,,,,,security,CSO,SKL_4c7e7f7a25ec
+USKL_a8e32190dd9a,distributed ledger,,distributed ledgers,,,security,CSO,SKL_844d63fb546e
+USKL_4ee38399c4a6,anonymity,,,,,security,CSO,SKL_7ed3fd3b3a6a
+USKL_cb33882d883d,computer privacy,,,,,security,CSO,SKL_a77eb8b44619
+USKL_96884f81fa43,data privacy,,,,,security,CSO,SKL_8c11bbecec75
+USKL_adb6003cbb6b,location privacy,,,,,security,CSO,SKL_d846601719b7
+USKL_d1a2ba3391aa,personal information,,,,,security,CSO,SKL_70e4551f3ad3
+USKL_5b2dc8ee1b9b,privacy and security,,,,,security,CSO,SKL_602c7c111214
+USKL_e6f3cea41aa2,rfid authentication,,,,,security,CSO,SKL_82b5e01ad2bd
+USKL_17af961a4782,trusted third parties,,,,,security,CSO,SKL_a6895a56f559
+USKL_9853e5d43164,authentication,,,,,security,CSO,SKL_40636d23082e
+USKL_3a9a76d4dccd,block ciphers,,block cipher,,,security,CSO,SKL_7c7fea9906ae
+USKL_0698d28eaf80,computer crime,,,,,security,CSO,SKL_c67adad98acf
+USKL_1a85771f4a78,cryptographic algorithms,,,,,security,CSO,SKL_da14f4336710
+USKL_b32f5e2e32fa,digital watermarking,,,,,security,CSO,SKL_9f7cfec22d38
+USKL_f477d90c5406,encryption,,encryption algorithm | encryption algorithms | encryption and decryption | encryption key | encryption methods | encryption schemes,,,security,CSO,SKL_ad58bc6243d7
+USKL_1aa1bb6efe02,information-theoretic security,,information theoretic security,,,security,CSO,SKL_16e27b55a6f6
+USKL_9a6de9e686c7,intranets,,intranet,,,security,CSO,SKL_48f861850a35
+USKL_b49a26ae5c82,secret sharing,,,,,security,CSO,SKL_0c0699a57638
+USKL_a3c3bae0853c,security issues,,security mechanism | security mechanisms | security problems | security services | security solutions | security threats,,,security,CSO,SKL_e0e9b3e54922
+USKL_22af1c4d7b80,security protocols,,security properties | security protocol,,,security,CSO,SKL_db7cf5692b4d
+USKL_f81e8ed96e75,security systems,,,,,security,CSO,SKL_200892094ffe
+USKL_2a85360de83b,servers,,,,,security,CSO,SKL_00fe27f92f61
+USKL_9cabd6f3eff2,spamming,,,,,security,CSO,SKL_27d0bc99cf96
+USKL_0991e21d47c0,steganography,,,,,security,CSO,SKL_45056768f104
+USKL_663439feccee,stream ciphers,,stream cipher,,,security,CSO,SKL_f77ae7d03aef
+USKL_ff532fcb2da0,apriori,,,,,data_databases,CSO,SKL_68eb64e36876
+USKL_df0dfef26954,frequent itemsets,,frequent item sets | frequent itemset | frequent itemset mining | item sets | mining frequent itemsets,,,data_databases,CSO,SKL_a850c482ae02
+USKL_5883bb62f9de,frequent patterns,,frequent pattern | frequent pattern mining,,,data_databases,CSO,SKL_58e6f5fc950f
+USKL_3c5bfa9e53bd,mining associations,,,,,data_databases,CSO,SKL_f1030a002cec
+USKL_947538ac377a,rule mining,,,,,data_databases,CSO,SKL_2579b015561a
+USKL_da7eef233e78,rule mining algorithms,,,,,data_databases,CSO,SKL_5579b50c4fbc
+USKL_13b1ff5d925f,bacterial typing techniques,,,,,data_databases,CSO,SKL_e5c3ef2bbb0b
+USKL_15df7d79d9ac,classification algorithm,,classification algorithms,,,data_databases,CSO,SKL_ce691c5102c4
+USKL_6fbdcaa184f4,classification label,,,,,data_databases,CSO,SKL_e508a0cbd54c
+USKL_9e1a9a502fa2,classification process,,,,,data_databases,CSO,SKL_440af9039d2a
+USKL_34fa52cc34d2,rna 16s,,dna 16s,,,data_databases,CSO,SKL_95aed2dff9bc
+USKL_f36138408ce1,"genes, mitochondrial",,,,,data_databases,CSO,SKL_3ff954075f2e
+USKL_caa8a82f0341,genetic speciation,,,,,data_databases,CSO,SKL_de53ae9b8423
+USKL_069e8a0642a9,"genome, mitochondrial",,,,,data_databases,CSO,SKL_fe29f676f556
+USKL_027a27994660,multi-label classification,,multi-label,,,data_databases,CSO,SKL_dcc43fad26f4
+USKL_321eb4840426,phylogeography,,,,,data_databases,CSO,SKL_8dbac4e9db13
+USKL_017218382a70,radial based function,,,,,data_databases,CSO,SKL_e7a9838bfc76
+USKL_e272ed238f73,ribosome dna,,,,,data_databases,CSO,SKL_4dfa2ba4a612
+USKL_79a2141654e6,taxonomy,,,,,data_databases,CSO,SKL_eb6bdcdb83b9
+USKL_503c8de10974,fuzzy c-means,,c-means | fcm | fcm clustering | fuzzy c mean | fuzzy c means clustering | fuzzy c-means (fcm) | fuzzy c-means clustering | fuzzy c-means clustering algorithms,,,data_databases,CSO,SKL_453f518e9770
+USKL_80ed16a17573,cluster head,,cluster heads | cluster-based | cluster-heads,,,data_databases,CSO,SKL_379e74fb4371
+USKL_6dbffc749cb5,clustering methods,,clustering analysis | clustering approach | clustering method | clustering problems | clustering process | clustering results | clustering techniques,,,data_databases,CSO,SKL_cc4808500533
+USKL_4083b51be7b2,data points,,,,,data_databases,CSO,SKL_9acc77bfb8f3
+USKL_7aab29d3455f,fuzzy clustering,,fuzzy clustering method | fuzzy clustering techniques | fuzzy clusters,,,data_databases,CSO,SKL_678b65a89037
+USKL_1e3db374b207,incremental clustering,,,,,data_databases,CSO,SKL_59a5c707aa6d
+USKL_529418aa90e4,k-nearest neighbors,,k nearest neighbor | k-nearest neighbor | k-nn algorithm | knn | nearest neighbor | nearest neighbors,,,data_databases,CSO,SKL_908f9adc2e4a
+USKL_b3466dd52d39,network lifetime,,network life-time,,,data_databases,CSO,SKL_9c108d46bf3e
+USKL_d5cb3656e6c4,real data sets,,,,,data_databases,CSO,SKL_521534af06d1
+USKL_9d0294638014,semi-supervised clustering,,,,,data_databases,CSO,SKL_9bd648d516e2
+USKL_2b5fd4944005,som algorithms,,,,,data_databases,CSO,SKL_1aa265abf127
+USKL_f0f9ac5d5275,spectral clustering,,,,,data_databases,CSO,SKL_fa973080f2e0
+USKL_919d6bb12dd7,trajectory clustering,,,,,data_databases,CSO,SKL_842b62362791
+USKL_4390dda5c39a,complete lattices,,,,,data_databases,CSO,SKL_bd1c83c5070b
+USKL_ab64e80d34b2,formal contexts,,formal concepts,,,data_databases,CSO,SKL_bb66cef3c691
+USKL_78bf8fb875cd,galois connection,,,,,data_databases,CSO,SKL_747d1c50e786
+USKL_f7fcb0c89842,crm,,conceptual reference model | conceptual reference model (crm),,,data_databases,CSO,SKL_419967dff9e1
+USKL_101efed17c77,customer relationship management systems,,,,,data_databases,CSO,SKL_15e0de6d486f
+USKL_afa94688fcd4,data mining process,,,,,data_databases,CSO,SKL_58501c36b2fd
+USKL_43fee28cdd3f,alcatel (co),,,,,networks,CSO,SKL_71b293bad324
+USKL_3b84a7f58c96,asynchronous transfer mode,,,,,networks,CSO,SKL_3238533219d7
+USKL_0ffeb3908957,available bandwidth,,,,,networks,CSO,SKL_013220ce3dd4
+USKL_c242f0f1448a,bandwidth compression,,,,,networks,CSO,SKL_3c6aa0143d0a
+USKL_c7ccdf4f1451,bandwidth efficiency,,,,,networks,CSO,SKL_dcef66d3bb22
+USKL_d5459c003cc3,broadband networks,,,,,networks,CSO,SKL_fce785e81a5a
+USKL_cf1aabb5ee4d,buffer storage,,,,,networks,CSO,SKL_e43da13e4a72
+USKL_c7a20cd56d4d,carrier communication,,,,,networks,CSO,SKL_8a126090c0dd
+USKL_8f19a3aacf20,communication bandwidth,,,,,networks,CSO,SKL_1680b298d9f3
+USKL_a4f6c79f81b3,congestion avoidance,,,,,networks,CSO,SKL_45edadacb457
+USKL_b6b490aef036,coplanar waveguides,,coplanar waveguide,,,networks,CSO,SKL_1322ed8b0fbc
+USKL_696980fcfc7a,electromagnetic wave polarization,,,,,networks,CSO,SKL_2d067f58b8db
+USKL_a08b61c59a2a,ethernet,,,,,networks,CSO,SKL_a132089bbcaf
+USKL_d75533b5970d,frequencies,,,,,networks,CSO,SKL_1349a4383d20
+USKL_06bd3015b19c,high bandwidth,,,,,networks,CSO,SKL_03c669069a05
+USKL_a5005d1b9603,multicasts,,ip multicast | multicast | multicasting,,,networks,CSO,SKL_3c07d45f0b24
+USKL_4523f38fe134,jitter,,,,,networks,CSO,SKL_653041f7a5bc
+USKL_347ebed7d1c3,live streaming,,,,,networks,CSO,SKL_1422d6617427
+USKL_db94d6cf3fe5,loop antennas,,,,,networks,CSO,SKL_b8436a8c4334
+USKL_3d079d27fb2b,microstrip antennas,,microstrip antenna,,,networks,CSO,SKL_1150e2ab1b8e
+USKL_22fa2f8d244d,optical interconnects,,optical interconnect,,,networks,CSO,SKL_5004e63abb73
+USKL_51ce2919b743,quality of service,,quality of service (qos),,,networks,CSO,SKL_2599a8c63a26
+USKL_9adb3a02340a,routers,,router,,,networks,CSO,SKL_422c4da877d1
+USKL_ddc9f9f8aa25,signal bandwidth,,,,,networks,CSO,SKL_110d43f30ae2
+USKL_f8b3e318c4cd,telecommunication links,,,,,networks,CSO,SKL_76516004bdfa
+USKL_2cd81291694a,video on demand,,video-on-demand | video-on-demand (vod),,,networks,CSO,SKL_1fa6b51236f4
+USKL_a2f3c07bc06a,wide-band,,wideband,,,networks,CSO,SKL_cde996a334ca
+USKL_fefd56691072,wide bandwidth,,,,,networks,CSO,SKL_e61faa5d5907
+USKL_1ebf20a687b8,wideband speech,,,,,networks,CSO,SKL_9db7b86b45a0
+USKL_39ac7cb9af70,multi-body system (mbs),,,,,networks,CSO,SKL_7094f6503bd3
+USKL_4800591d0141,network of workstations,,,,,networks,CSO,SKL_c164daaf0c65
+USKL_ce0923f5c828,parallel virtual machine,,,,,networks,CSO,SKL_9dcbfab1e53e
+USKL_8f640b8cffd5,protocol testing,,,,,networks,CSO,SKL_813c1d8bbb8b
+USKL_8e469a73502c,available bit rate,,,,,networks,CSO,SKL_0835d699439f
+USKL_07e164003a71,available bit rate (abr),,,,,networks,CSO,SKL_e9accf610cbc
+USKL_cd7ae17b337b,average queue lengths,,,,,networks,CSO,SKL_922d180be99c
+USKL_19fc3ddfee75,congestion,,,,,networks,CSO,SKL_cc81a3040f8b
+USKL_0529e5a76bd1,affect recognition,,,,,web,CSO,SKL_820fd0a47939
+USKL_646725015d26,affective state,,,,,web,CSO,SKL_c206229ecc79
+USKL_80903424bd40,emotion detection,,,,,web,CSO,SKL_abe66d1bf41d
+USKL_fcd47260e53f,human emotion,,,,,web,CSO,SKL_429cab4e73ad
+USKL_52040a89a027,severe disabilities,,,,,web,CSO,SKL_125d6faeca49
+USKL_16bb31fa5190,computer assisted,,,,,web,CSO,SKL_b080fdfec9b1
+USKL_01b9c9c6714d,computer assisted instruction,,,,,web,CSO,SKL_1707cf5e3cde
+USKL_251b1a4791b7,computer assisted learning,,,,,web,CSO,SKL_d3d82ce5a079
+USKL_8083fd0ab21a,informal learning,,,,,web,CSO,SKL_9bfab9f370ae
+USKL_d7c553f77133,intelligent tutors,,,,,web,CSO,SKL_8a89d08b3897
+USKL_daae4f671aef,interactive learning environment,,interactive learning environments,,,web,CSO,SKL_0d8d69273b2e
+USKL_3ee273425014,learning paths,,,,,web,CSO,SKL_903e60d9fb3c
+USKL_a8fc35098e13,online learning environment,,,,,web,CSO,SKL_db89df0b5d21
+USKL_d1769fd33732,personal learning environment,,,,,web,CSO,SKL_6cc8b4fcb6fd
+USKL_228eb6e6d474,personalized learning,,,,,web,CSO,SKL_ee4eb2dd1182
+USKL_3ee598497c9b,student modeling,,student model | student models,,,web,CSO,SKL_28eca1a20558
+USKL_9845c3765922,ubiquitous learning environment,,,,,web,CSO,SKL_a92e8f736b03
+USKL_03a08b56f231,virtual learning environments,,virtual learning environment,,,web,CSO,SKL_65c64c598c6d
+USKL_64b6aceb3e09,web-based education,,,,,web,CSO,SKL_2cd67fb33d8c
+USKL_fd3760a4eb30,web based learning,,web-based learning,,,web,CSO,SKL_818b1e94a0cf
+USKL_06a1fb2095c7,brain machine interface,,brain-machine interface,,,web,CSO,SKL_f4ef92f66cf6
+USKL_ea1fe7c78e2b,communication aids for disabled,,,,,web,CSO,SKL_01afbe61c7af
+USKL_79d09e8bf688,message passing interface,,message passing interface (mpi),,,web,CSO,SKL_16f74beee7d3
+USKL_b649d73de347,brain computer interface,,brain computer interface (bci) | brain-computer interface | brain-computer interface (bci) | brain-computer interfaces | brain-computer interfaces (bci),,,web,CSO,SKL_7c2aa1dadfdf
+USKL_57bf62b58d97,computer peripheral equipment,,,,,web,CSO,SKL_1a085487e2a2
+USKL_722dc32c9739,network interface,,,,,web,CSO,SKL_831b44e1c17b
+USKL_ba57a9cd38e2,dialogue manager,,,,,web,CSO,SKL_c1e288fcb8b2
+USKL_e946d7886ede,basic emotions,,,,,web,CSO,SKL_df3bb74dcbd8
+USKL_10ec9a36e177,emotion models,,,,,web,CSO,SKL_e3cadcbafb4f
+USKL_73f63338ef90,emotional speech,,,,,web,CSO,SKL_6976170b6e24
+USKL_2af531afef4e,3d pose estimation,,,,,web,CSO,SKL_ca1c9744928a
+USKL_3e133f415923,action recognition,,,,,web,CSO,SKL_2d7955d0b814
+USKL_612446915e5f,facial expression,,facial expressions,,,web,CSO,SKL_3ab1b2878bd7
+USKL_978b0c676fee,gesture interfaces,,,,,web,CSO,SKL_3305da2099ee
+USKL_ad44986f754a,hand gesture,,hand gestures,,,web,CSO,SKL_713b12013fd8
+USKL_68e6b58608bd,hand images,,,,,web,CSO,SKL_13fcded880c4
+USKL_2db470a5c3ba,hand tracking,,,,,web,CSO,SKL_611884b132f8
+USKL_4602a2659156,human motion analysis,,,,,web,CSO,SKL_6263d6bc6482
+USKL_c741ec86bc75,human pose,,,,,web,CSO,SKL_697ff61c4212
+USKL_b94d1fa7d4b2,kinect,,,,,web,CSO,SKL_304c603e749a
+USKL_ed540628d7ac,sign language recognition,,,,,web,CSO,SKL_a53e21ae5955
+USKL_e79dc11ca46c,ambient displays,,,,,web,CSO,SKL_474eefbd68d0
+USKL_fb110f0920ec,aviators,,,,,web,CSO,SKL_e44a4aa48ded
+USKL_a70d03d259bf,collaborative work,,,,,web,CSO,SKL_5538368b2de5
+USKL_8f66719a80b1,cscw,,,,,web,CSO,SKL_763bb44b16e4
+USKL_ca4218e00f94,ergonomics,,,,,web,CSO,SKL_b662895de92d
+USKL_40ec7dce0aed,human factors,,human factor,,,web,CSO,SKL_90d36fa511c4
+USKL_02f8ec19517a,interaction design,,interaction designs,,,web,CSO,SKL_d47e094bf3dd
+USKL_27bce6ad3352,interaction techniques,,interaction technique,,,web,CSO,SKL_064d359e10d8
+USKL_1a4dc00001d2,large displays,,,,,web,CSO,SKL_e3fc6d8aa224
+USKL_5cb47403759d,sense making,,sense-making,,,web,CSO,SKL_425ae0a52af6
+USKL_84dacc66b736,social computing,,,,,web,CSO,SKL_8cd346f63357
+USKL_2558d2629552,tactile feedback,,,,,web,CSO,SKL_bfdf9c9abd54
+USKL_a63b5a9cd311,tangible interfaces,,tangible interface,,,web,CSO,SKL_d942710c4779
+USKL_b5d81c465517,usability evaluation,,usability testing,,,web,CSO,SKL_af9c5105f6f2
+USKL_3fa792d7582d,user centered designs,,user centered design | user-centered design,,,web,CSO,SKL_8ca715d632a3
+USKL_cc44f5a410ed,user experience,,,,,web,CSO,SKL_7b60c33062db
+USKL_626f5698d198,user interface designs,,user interface design,,,web,CSO,SKL_6925d79a15ef
+USKL_520edb0d2fd1,vibrotactile,,,,,web,CSO,SKL_18ac50cd7592
+USKL_a9f3bccc698f,work environments,,,,,web,CSO,SKL_610e0fa574fa
+USKL_1d303a024697,communicating sequential process,,,,,systems_infrastructure,CSO,SKL_c8058ec309fa
+USKL_58d5b92ff4df,checkpointing,,check pointing | checkpointing techniques,,,systems_infrastructure,CSO,SKL_6872b4a24ed5
+USKL_0ca9ae7573e5,dilatometers,,,,,systems_infrastructure,CSO,SKL_c14791cc997f
+USKL_947a7f8efa5d,error recovery,,,,,systems_infrastructure,CSO,SKL_21768c52247a
+USKL_25dbc16f8d4e,failure recovery,,,,,systems_infrastructure,CSO,SKL_5a6cd67b0959
+USKL_25bd650eb98e,recovery mechanisms,,,,,systems_infrastructure,CSO,SKL_9a6c21c8345d
+USKL_15ed6fd3352c,recovery time,,,,,systems_infrastructure,CSO,SKL_9ceeea75cf40
+USKL_ef1aca68b2f8,internet worm,,,,,systems_infrastructure,CSO,SKL_ece59e5f82b1
+USKL_e5d0f24856b0,worm detection,,,,,systems_infrastructure,CSO,SKL_95909d58e847
+USKL_9908c4babe9c,worm propagation,,,,,systems_infrastructure,CSO,SKL_85c63c523d3c
+USKL_55393497522d,worms,,,,,systems_infrastructure,CSO,SKL_b84446a4f530
+USKL_3f30b1beb3e0,catalogue identifiers,,,,,systems_infrastructure,CSO,SKL_31c37f753b4f
+USKL_64412e2fabef,distributed file systems,,distributed file system,,,systems_infrastructure,CSO,SKL_9304ee25e5a0
+USKL_74c6d2a76053,file access,,,,,systems_infrastructure,CSO,SKL_a21a973e64f8
+USKL_7084472b53f0,i/o performance,,,,,systems_infrastructure,CSO,SKL_fb3c20bec17e
+USKL_58b2092f9def,metadata servers,,,,,systems_infrastructure,CSO,SKL_6666f026f8be
+USKL_211001bc260a,parallel file system,,parallel file systems,,,systems_infrastructure,CSO,SKL_d588a1a18cf6
+USKL_d572e1ce81d5,small files,,,,,systems_infrastructure,CSO,SKL_752105a7c32e
+USKL_00aa55ae026d,storage media,,,,,systems_infrastructure,CSO,SKL_418be1d35a9d
+USKL_891e14a8419b,embedded linux,,,,,systems_infrastructure,CSO,SKL_13aaf5ae21d8
+USKL_093adfe5049d,botnets,,botnet,,,systems_infrastructure,CSO,SKL_ddbd023df41b
+USKL_d7820386c372,code obfuscation,,,,,systems_infrastructure,CSO,SKL_8fefa1094712
+USKL_f335dbab3108,host-based,,,,,systems_infrastructure,CSO,SKL_80d846bcbb7d
+USKL_23aa9f344a13,malicious activities,,,,,systems_infrastructure,CSO,SKL_de0e5bf97e64
+USKL_1440a5e47332,malicious behavior,,,,,systems_infrastructure,CSO,SKL_b95536cbd116
+USKL_3502e0055f67,malware analysis,,,,,systems_infrastructure,CSO,SKL_76f50cbe3d5c
+USKL_8141b971a25e,malware attacks,,,,,systems_infrastructure,CSO,SKL_881fd1098a0c
+USKL_a85cb06213e1,malware detection,,,,,systems_infrastructure,CSO,SKL_48975a36f63e
+USKL_5c830edb9d6c,obfuscation,,,,,systems_infrastructure,CSO,SKL_e7f86b81d377
+USKL_e162f06e3396,rootkits,,,,,systems_infrastructure,CSO,SKL_a7cba741097d
+USKL_733a1cda6d44,spyware,,spy-ware,,,systems_infrastructure,CSO,SKL_f000d7364bac
+USKL_305d81abb991,trojans,,,,,systems_infrastructure,CSO,SKL_442584424261
+USKL_2179bfd6508d,rtos,,,,,systems_infrastructure,CSO,SKL_62df662ad370
+USKL_dec93c2e5700,cache partitioning,,,,,systems_infrastructure,CSO,SKL_f257831b1f76
+USKL_49bec10003ed,storage virtualization,,,,,systems_infrastructure,CSO,SKL_e551c51aa15c
+USKL_2fe73e6e1874,windows ce,,,,,systems_infrastructure,CSO,SKL_e9d032973083
+USKL_b78b9b12fcae,windows vista,,,,,systems_infrastructure,CSO,SKL_0add49f50fd6
+USKL_956e6e681a21,windows xp,,,,,systems_infrastructure,CSO,SKL_0822454ed839
+USKL_e656b223f802,autonomic management,,,,,programming_languages,CSO,SKL_3814551502fc
+USKL_de8d3184717d,autonomic systems,,,,,programming_languages,CSO,SKL_68812a6f1260
+USKL_6a245b747803,self-configuring,,,,,programming_languages,CSO,SKL_dd342fb022fb
+USKL_f8a305551bc5,self-managing,,,,,programming_languages,CSO,SKL_f2cec07a676d
+USKL_acbb29682d44,bug tracking system,,,,,programming_languages,CSO,SKL_73c1b6605da7
+USKL_947d1161c932,circuit modeling,,,,,programming_languages,CSO,SKL_03979a15d648
+USKL_7052466a3f08,circuit simulators,,,,,programming_languages,CSO,SKL_6ae4cf2736ae
+USKL_3ef44a84b176,compact model,,,,,programming_languages,CSO,SKL_219b16541934
+USKL_5470f13e81a5,simulation environments,,,,,programming_languages,CSO,SKL_3db07223d865
+USKL_e052c4e1bc86,simulation speed,,,,,programming_languages,CSO,SKL_d81356bb5821
+USKL_ec65c1a7646f,bug-fixing,,,,,programming_languages,CSO,SKL_c5319860786f
