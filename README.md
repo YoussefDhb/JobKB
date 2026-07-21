@@ -22,29 +22,88 @@ tier, and cross-branch data roles), applied consistently to every source.
 | **CSO 3.5** | **Skills only** — curated subset of the Computer Science Ontology (emerging-tech vocabulary) | ~530 topics: IT branches (AI/ML, security, software, data, networks, …) via `superTopicOf`, depth≤2, per-branch balanced, de-duped |
 | **Lightcast Open Skills** | **Skills only** — large, cleanly-categorised skills taxonomy | Information Technology category (`17.0`) = ~5,240 skills across 70 authoritative IT subcategories |
 | **Kaggle technical skills** | **Skills only** — small curated IT technical-skills list | 528 skills, 9 IT categories |
-| **e-CF 4.0** | **Skills only** — European e-Competence Framework (EU-standard ICT competences) | 41 professional ICT competences (Plan/Build/Run/Enable/Manage), self-classified into the 14 sub-domains |
+| **e-CF 4.0** | **Skills only** — European e-Competence Framework (EU-standard ICT competences) | 41 professional ICT competences (Plan/Build/Run/Enable/Manage), self-classified into the 19 sub-domains |
+| **Soft skills** (curated) | **Skills only** — noun-form soft/transversal skills used in IT hiring | 22 recruiter-vocabulary soft skills (teamwork, communication, problem solving, work ethic, …) the ESCO verb-phrase competences lack; linked to occupations by posting evidence |
+| **WEF Global Skills Taxonomy** (2021) | **Skills only** — authoritative soft-skill standard (World Economic Forum) | 47 structured soft skills (creative/systems thinking, mentoring, building trust, grit, growth mindset, …) across 5 WEF-aligned soft sub-domains; 16 core ones attached to every IT occupation as a `transversal` layer |
 | **ADEM (Luxembourg)** | **Relations only** — real vacancy demand (ESCO×ROME) | 1,758 weighted `demand` edges on IT ROME occupations (`M18*`) |
 | **Job postings (mined)** | **Relations only** — mined IT postings (25 roles) | 1,013 role→skill `demand` edges (matched to existing entities) |
+| **data_jobs** (lukebarousse) | **Hybrid** — 785k real postings, 10 data/IT roles | harvests ~50 genuinely-absent IT tools as new skills + 1,193 large-scale weighted `demand` edges |
+| **zenodo** (Montandon 2019) | **Hybrid** — 17.9k English Stack Overflow postings, 14 IT dev roles | harvests 55 absent tools + 533 `demand` edges (hard **and** soft skills; roles resolve to existing occupations) |
+| **Emerging roles** (curated) | **Occupations** — labor-market roles absent from ESCO/O*NET | 6 roles (Analytics Engineer, MLOps Engineer, BI Developer, Data Governance Analyst, Full Stack Developer, Back-End Developer), ISCO-attached, demand-profiled from data_jobs + zenodo |
 
 There is no ISCO↔SOC↔NOC↔ROME crosswalk shipped with these datasets, so the
 cross-source **alignment itself acts as the crosswalk**. **No source is privileged:**
 ESCO uses its native ISCO code; ONET, NOC and ROME each attach **directly** to the
 ISCO groups by embedding similarity (never routed through ESCO).
 
-**Skills-only sources.** SFIA, CSO, Lightcast, Kaggle and e-CF contribute skills but no occupations
-(`contributes_occupations = False`, `needs_attach = False`), so they skip ISCO attachment
-entirely. Their skills are classified into the neutral ontology, aligned/merged against the
-existing skill vocabulary, and reach occupations **transitively** — a skill that merges into a
-unified skill inherits that concept's occupation relations. Lightcast/Kaggle/e-CF self-classify via
+**Skills-only sources.** SFIA, CSO, Lightcast, Kaggle, e-CF and the curated soft-skills list
+contribute skills but no occupations (`contributes_occupations = False`, `needs_attach = False`), so
+they skip ISCO attachment entirely. Their skills are classified into the neutral ontology,
+aligned/merged against the existing skill vocabulary, and reach occupations **transitively** — a
+skill that merges into a unified skill inherits that concept's occupation relations. Lightcast/Kaggle/e-CF self-classify via
 their authoritative category maps (e-CF's 41 competences merge cleanly with existing skills where
 they overlap — e.g. Risk Management with SFIA/ROME/ESCO, User Experience with CSO, Application
 Development with Lightcast — and add higher-level professional competences where they are distinct).
+
+**Soft / transversal skills.** The KB's only transversal skills were ESCO's *verb-phrase*
+competences ("build team spirit", "manage time"); the **noun-form soft skills recruiters actually
+name** (teamwork, communication, problem solving, time management, work ethic, attention to detail,
+…) were absent. A small curated list adds 22 of them — distilled from the soft-skill datasets
+analysed for the KB (Zenodo's `soft_skills` column and annotation file, and the Mendeley
+software-engineering skill survey, whose person-classification *structure* is otherwise rejected).
+Each carries the equivalent ESCO verb-phrase as an alt label and is **linked to occupations by real
+posting evidence**: the `zenodo` source attributes weighted `demand` edges from postings' extracted
+soft skills (e.g. communication / teamwork / responsibility → software developer, system
+administrator, back-end developer, …). Being a curated authoritative list of deliberately
+non-IT-*specific* terms, it bypasses the semantic IT-relevance gate (like the code-filtered built-in
+taxonomies) rather than being wrongly blocked.
+
+The **WEF Global Skills Taxonomy** (World Economic Forum, 2021) + Education 4.0 add 47 more soft
+skills and, more importantly, give the soft branch **real internal structure**: the single flat
+`soft_transversal` bucket is replaced by **five WEF-aligned soft sub-domains** — `soft_cognitive`
+(creativity & problem-solving), `soft_self_management` (self-management, resilience & dependability),
+`soft_collaboration` (communication & collaboration), `soft_leadership` (leadership & social
+influence), `soft_learning` (curiosity & lifelong learning) — plus a `soft_transversal` catch-all.
+Every soft skill (ESCO verb-phrases, the curated nouns, WEF terms) is routed into a group by a
+keyword classifier; WEF self-classifies via its own skill-groups. Because these transversal skills
+rarely appear in job postings (so demand evidence can't link them), the 16 **core** WEF skills the
+Future-of-Jobs framing treats as universal (creative/analytical/critical/systems thinking, problem
+solving, communication, collaboration, adaptability, resilience, curiosity, initiative, attention to
+detail, time management, responsibility, empathy, feedback) are attached to **every IT occupation**
+as a distinct `relation_type="transversal"` layer (source `WEF`, no weight — kept separate from the
+`demand` signal so it stays auditable and never dilutes demand rankings).
 
 **Relation-only enrichment sources.** ADEM (real Luxembourg vacancy demand, already linked to
 ESCO + ROME) and the mined IT job postings add weighted `demand` occupation→skill edges **between
 entities that already exist in the KB** — no new nodes. Each edge carries a demand `weight`
 (vacancy positions / posting co-occurrence), so an IT occupation gains a demand-ranked skill
-profile. Endpoints are resolved against the current `kb/` (ESCO uuid / ROME code / normalized
+profile. **data_jobs** (lukebarousse, 785k real postings across 10 data/IT roles) is a **hybrid**:
+it adds large-scale weighted `demand` edges at scale (Data Analyst→Excel/Tableau/Power BI/SQL,
+Data Engineer→Spark/AWS/Kafka/Scala, …) via an **augmented matcher** (exact/alias keys plus
+parenthetical-acronym and vendor/suffix stripping, so short tokens like `gcp`/`power bi`/`kafka`
+resolve to verbose KB labels — never substring matching, which would confuse `airflow` the tool with
+CFD airflow), and **harvests** the handful of genuinely-absent, high-frequency IT tools (databricks,
+matplotlib, seaborn, plotly, dax, golang, …) as new gate-screened, self-classified skill nodes.
+**zenodo** (Montandon et al. 2019, *"What Skills do IT Companies Look for in New Developers?"*,
+17.9k English Stack Overflow postings across 14 developer roles) is a second hybrid built on the same
+machinery: its 14 clean roles resolve to existing occupations (only *back-end developer* was a genuine
+gap → added via Emerging roles), it harvests 55 further absent tools (kubernetes, kafka, gcp, redis,
+jenkins, react-native, vue.js, spring-boot, …) classified via the dataset's companion hard-skill
+category taxonomy, and it writes 533 weighted `demand` edges for **both** hard skills and the curated
+soft skills (giving Back-End Developer a Java/Spring/DBMS/AWS profile, Full-Stack a JavaScript/React/
+Node.js/C# one).
+
+**Occupation-gap augmentation.** Mining raw job titles/roles against every KB occupation label
+(pref **and** alt, all sources) surfaced a few well-attested roles that the standard taxonomies
+(ESCO v1.2 / O*NET) don't carry yet. The **Emerging roles** source adds these as real occupations
+(Analytics Engineer, MLOps Engineer, BI Developer, Data Governance Analyst, Full Stack Developer,
+Back-End Developer) — attached to ISCO by the same model-verified `attach` stage as ONET/ROME (all
+land in sensible groups, e.g. Back-End/Full-Stack → 2512 Software developers), then demand-profiled
+from data_jobs and zenodo. This documents a deliberate augmentation of the taxonomy backbone with
+labor-market-observed roles. Occupation-gap audits of the other datasets found no further genuine
+gaps: SFIA/CSO/Lightcast/Kaggle/e-CF carry no occupations, the core ESCO/O*NET/ROME IT filters are
+well-targeted, and **13 of zenodo's 14 roles already resolved** to existing occupations (back-end
+developer being the sole addition). Endpoints are resolved against the current `kb/` (ESCO uuid / ROME code / normalized
 label), so nothing dangles. Both are curated to
 avoid noise: SFIA is scoped to IT + IT-management (its ~40 general business/HR/marketing/finance
 skills are dropped) with a hand-curated code→sub-domain map (its shipped category export is

@@ -11,7 +11,12 @@ KAGGLE,KAGGLE,kaggle-technical-skills,2026-07-21T09:46:40+00:00,kaggle_csv,"0 oc
 ADEM,ADEM,adem-2025,2026-07-21T09:47:35+00:00,adem_vacancies,1758 demand relations (M18* IT vacancies)
 JOBS,JOBS,jobs-processed,2026-07-21T09:49:42+00:00,job_postings_mined,"1013 evidence relations from 3000 postings, 13 roles matched to existing occupations"
 ECF,ECF,e-CF 4.0,2026-07-21T10:22:49+00:00,ecf_csv,"0 occ, 41 skills, 0 relations; gate blocked 0 (malformed 0, non-IT 0), borderline-kept 0"
-SKILL_ONTO,SKILL_ONTO,-,2026-07-21T10:22:51+00:00,neutral_skill_ontology,"11908 skills classified, 131 soft, 14 sub-domains, 11922 edges"
-MERGE,MERGE,-,2026-07-21T10:23:00+00:00,connected_components(exactMatch),"233 unified occ (13 merged), 11032 unified skills (661 merged)"
-ALIGNMENT,ALIGNMENT,-,2026-07-21T10:23:01+00:00,incremental,272313 alignments total
-ATTACH,ATTACH,-,2026-07-21T10:23:01+00:00,incremental,140 ISCO attach edges total
+DATAJOBS,DATAJOBS,lukebarousse/data_jobs,2026-07-21T18:35:22+00:00,job_postings_mined,"52 harvested tool skills, 1193 demand relations from 785741 postings, 10 roles matched; gate blocked 0 (non-IT 0, malformed 0)"
+SOFTSKILLS,SOFTSKILLS,curated-softskills-2026,2026-07-21T21:29:59+00:00,soft_skill_curation,"0 occ, 22 skills, 0 relations"
+EMERGING,EMERGING,curated-emerging-2026,2026-07-21T21:31:03+00:00,labor_market_gap_curation,"6 occ, 0 skills, 0 relations; gate blocked 0 (malformed 0, non-IT 0), borderline-kept 0"
+ZENODO,ZENODO,zenodo-3906955-montandon2019,2026-07-21T21:49:01+00:00,job_postings_mined,"55 harvested tool skills, 533 demand relations (42 soft) from 17900 English postings, 14 roles matched; gate blocked 0 (non-IT 0, malformed 0)"
+WEF,WEF,WEF-global-skills-taxonomy-2021,2026-07-21T23:07:53+00:00,wef_taxonomy_curation,47 soft skills; 4096 transversal relations (16 core skills × 256 occupations)
+SKILL_ONTO,SKILL_ONTO,-,2026-07-21T23:07:56+00:00,neutral_skill_ontology,"12084 skills classified, 200 soft, 19 sub-domains, 12103 edges"
+MERGE,MERGE,-,2026-07-21T23:08:24+00:00,connected_components(exactMatch),"239 unified occ (13 merged), 11170 unified skills (674 merged)"
+ALIGNMENT,ALIGNMENT,-,2026-07-21T23:08:26+00:00,incremental,350865 alignments total
+ATTACH,ATTACH,-,2026-07-21T23:08:26+00:00,incremental,146 ISCO attach edges total

@@ -60,6 +60,11 @@ class Source:
     needs_attach: bool = True
     #: part of the base taxonomy set built by a full `ingest` (plugins are False)
     builtin: bool = False
+    #: run the semantic IT-relevance gate at ingest. A curated, authoritative list (e.g. the
+    #: transversal SOFTSKILLS vocabulary) sets this False: its terms are genuinely non-IT-specific
+    #: (teamwork, communication) and would be wrongly blocked by the IT-vs-non-IT contrast, so it
+    #: bypasses the gate exactly like the code-filtered built-in taxonomies do.
+    screen_relevance: bool = True
     version: str = "-"
     retrieval_method: str = "plugin"
 
@@ -149,9 +154,12 @@ class StructuredSource(Source):
 
         # Relevance / noise gate: screen before persisting, so blocked (non-IT / malformed)
         # entities never enter the KB. Also drop their labels + relations. (Lazy import to
-        # keep ingest cheap and avoid loading the align models unless the gate runs.)
-        from .. import relevance
-        occ_rows, skill_rows, blocked, gstats = relevance.filter_rows(occ_rows, skill_rows, self.name)
+        # keep ingest cheap and avoid loading the align models unless the gate runs.) A curated
+        # authoritative source (`screen_relevance=False`) bypasses it, like the built-in taxonomies.
+        blocked, gstats = set(), None
+        if self.screen_relevance:
+            from .. import relevance
+            occ_rows, skill_rows, blocked, gstats = relevance.filter_rows(occ_rows, skill_rows, self.name)
         if blocked:
             label_rows = [l for l in label_rows if l["entity_id"] not in blocked]
             rel_rows = [r for r in rel_rows if r["occupation_entity_id"] not in blocked

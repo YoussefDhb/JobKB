@@ -959,7 +959,7 @@ USKL_5c2dd08dc9c7,image recognition,reconnaissance d’images,image interpretati
 USKL_8e0990282e99,create data sets,créer des ensembles de données,data set creation | establish data sets | create a data set | produce data sets | design data sets | develop data sets | creating data sets,,hard,other_hard,ESCO,SKL_7493dcb6b2b6
 USKL_d4005aace623,data security principles,principes de sécurité des données,data security methods | information security principles,principes de sécurité de l'information | méthodes de sécurité des données,hard,security,ESCO,SKL_1e9e1aed4fe4
 USKL_ec5ebd5c22df,MATLAB,MATLAB,MATLAB software development principles | MATLAB coding techniques | MATLAB algorithms | MATLAB software development techniques | MATLAB programming paradigms | matlab,,hard,programming_languages,CSO | ESCO | KAGGLE,SKL_5c98d3d7f7bf | SKL_81167559edfd | SKL_938050719a4a
-USKL_53fddbc55f40,data visualisation software,logiciel de visualisation des données,data presentation software,logiciel de présentation de données,hard,programming_languages,ESCO,SKL_6062e63b2ca0
+USKL_53fddbc55f40,data visualisation software,logiciel de visualisation des données,data presentation software,logiciel de présentation de données,hard,data_databases,ESCO,SKL_6062e63b2ca0
 USKL_29e08700c9a4,operate an emergency communication system,faire fonctionner un système de communication d’urgence,operate emergency communication systems | communicate using emergency communication tools | handle emergency communication system tools | operate emergency communication system | use emergency communication system | operate communication system used in emergencies,,hard,other_hard,ESCO,SKL_618e331dd705
 USKL_0a0de99d7ea6,state estimation,estimation de l’état interne d'un système  énergétique,state inference | energy state estimation | state estimation and prediction,estimation de l'état énergétique | estimation et prédiction de l'état | inférence d'état,hard,knowledge_general,ESCO,SKL_f76e03586a5e
 USKL_4d75687496b4,electronics principles,fonctionnement des appareils électroniques,electronic principles,fonctionnement des dispositifs électroniques | principes d’utilisation des appareils électroniques | théorie des appareils électroniques | fonctionnement des équipements électroniques | caractéristiques des appareils électroniques | principes des appareils électroniques,hard,knowledge_general,ESCO,SKL_3b734a41feb7
@@ -1212,7 +1212,7 @@ USKL_ccbb3e935255,APL,APL,APL programming paradigms,,hard,knowledge_general,ESCO
 USKL_fb5cbe785a13,use presentation software,utiliser un logiciel de présentation,Kingsoft Office Presentation | Corel Presentations | using presentation software | Slide Bureau | make use of presentation software | CustomShow | SnagIt | Adobe Persuation | Preseria | Haiku Deck | Google Slides | Adobe Ovation | LibreOffice Impress | Evernote Presentations | Prezi | ClearSlide | Emaze | SlideShare | VisualBee | MediaShout | SlideDog | able to use presentation software | Slideshark | produce electronic presentations | utilise presentation software | Microsoft Office PowerPoint | apply presentation software | use presentation program | Articulate Presenter | Powtoon | GoAnimate | KnowledgeVision | Kineticast | use slide show software,,hard,programming_languages,ESCO,SKL_d4b77317c825
 USKL_e138c2babeaa,Sakai,Sakai,Sakai Project,,hard,knowledge_general,ESCO,SKL_f8c48b903158
 USKL_cc71b34d458d,decentralized application frameworks,cadres d’applications décentralisées,decentralized applications on blockchain infrastructure | decentralized software characteristics | decentralized software frameworks,,hard,programming_languages,ESCO,SKL_4b1e0bbd899c
-USKL_ee2a0d55968d,Jenkins,Jenkins (outils de gestion de configuration logicielle),Jenkins (tools for software configuration management) | Jenkins Continuous Integration server | Jenkins CI,,hard,cloud_devops,ESCO | KAGGLE | LIGHTCAST,SKL_47f2166fb857 | SKL_c025dd130783 | SKL_c587e57b8ba6
+USKL_20498fe612d8,Jenkins,Jenkins (outils de gestion de configuration logicielle),Jenkins (tools for software configuration management) | Jenkins Continuous Integration server | Jenkins CI | jenkins,,hard,cloud_devops,DATAJOBS | ESCO | KAGGLE | LIGHTCAST | ZENODO,SKL_46adf4874b7d | SKL_47f2166fb857 | SKL_c025dd130783 | SKL_c587e57b8ba6 | SKL_cdb764cffd11
 USKL_6e7dadea3838,maintain freelance database,gestion de la base de données des prestataires freelance,repair database | conserve database | maintain databases | preserve database | maintain database | maintaining database | upkeep database,préserver la base de données | maintenir des bases de données | maintenir la base de données des freelances | maintenir la base de données,hard,data_databases,ESCO,SKL_e57c2248a526
 USKL_d7bc98234a8a,set up sound reinforcement system,installer un système de renforcement du son,set up a sound system that is reinforced | set up a reinforced sound system | tune up sound reinforcement system | tune up the public address system | tune up the PA,,hard,other_hard,ESCO,SKL_af2ff39d72ae
 USKL_f84b574f9ad3,analyse supply chain trends,analyser les tendances de la chaîne d’approvisionnement,determine distribution activities | carry out analyses of supply chain trends | perform analyses of supply chain trends | forecast a distribution activity | perform supply chain analysis activities | evaluate supply chain trends | analyze supply chain trends | analyse evolutions in supply chains | assess trends in supply chains | conduct evaluations of supply chain trends | analyse trends in supply chains | assess supply chain trends | make assessments of supply chain tends,,hard,other_hard,ESCO,SKL_e71b22cd8326
@@ -1342,7 +1342,7 @@ USKL_34ecc39e94b4,digital compositing,composition numérique,digital compositing
 USKL_e0525f34a635,Authoring Software,logiciel de création,authoring software,,hard,programming_languages,ESCO | LIGHTCAST,SKL_ad8a6209aa68 | SKL_d935b91bd80b
 USKL_75a879aa4d32,apply systemic design thinking,appliquer la pensée systémique de conception,use system design | apply combined systemic design | apply combined system design | apply combined system thinking methodologies | use systemic design,,hard,other_hard,ESCO,SKL_c88ea684ad79
 USKL_57b61e8be9b7,Engrade,Engrade,Engrade e-learning platform,,hard,knowledge_general,ESCO,SKL_1a0aebeb2f8e
-USKL_365c05ec43b2,systems thinking,pensée systémique,systems thought | integrated thinking | system thinking | integration of thinking | integrate thinking,réflexion systémique,hard,knowledge_general,ESCO,SKL_b22bcd60a416
+USKL_ee10e9e11913,Systems thinking,pensée systémique,systems thinking | systems thought | integrated thinking | system thinking | integration of thinking | integrate thinking,réflexion systémique,hard,soft_cognitive,ESCO | WEF,SKL_b22bcd60a416 | SKL_f4645c1185dd
 USKL_a382e1b7540c,assist multimedia operator,assister un opérateur multimédia,fill in for the multimedia operator | help out multimedia operators | assist multimedia operators | assist operators of multimedia,,hard,other_hard,ESCO,SKL_6e8bbfce6061
 USKL_f4c549ccfd58,Adobe Photoshop Lightroom,Adobe Photoshop Lightroom,Adobe Photoshop Lightroom for 2D Raster Graphics Generation | Adobe Photoshop Lightroom graphical ICT tool | Adobe Photoshop Lightroom for 2D Vector Graphics Creation | Adobe Photoshop Lightroom for 2D raster generation | Adobe Photoshop Lightroom for 2D vector graphics generation | Adobe Photoshop Lightroom for digital editing,,hard,knowledge_general,ESCO,SKL_339e16dca95a
 USKL_a4eb3bf16aa5,analyse network configuration and performance,analyser la configuration et les performances du réseau,assess network setup and performance | examine network configuration and effectiveness | evaluate network setup and efficiency | analyse performance characteristics of ICT networks | assess network structure,,hard,networks,ESCO,SKL_09ae9c4724e9
@@ -1670,7 +1670,7 @@ USKL_430fa92ad214,Systems Design,conception des systèmes,system design | system
 USKL_0aab49e94b7e,type on electronic devices,taper sur des appareils électroniques,touch type on electronic devices | typing on an electronic device | type on an electronic device | typing on electronic devices | create text on electronic devices | write on electronic devices,,hard,other_hard,ESCO,SKL_5dbd23c13574
 USKL_e3973e58a135,set up tote board,installer un panneau totalisateur,set up tote boards | setting up tote board | construct tote board | install tote board,,hard,other_hard,ESCO,SKL_0bc0173c81a1
 USKL_6a2b05971100,design database backup specifications,concevoir les spécifications de sauvegarde des bases de données,create database backup specifications | draft database backup specifications | specify database backup procedures | define database backup specifications | lay out database backup specifications,,hard,data_databases,ESCO,SKL_1980883e820f
-USKL_975895aaa7db,use communication and collaboration software,utiliser des logiciels de communication et de collaboration,communicate in digital environments | interact through ICT | use e-mail software and services | communicate on-line | communicate online,,soft,soft_transversal,ESCO,SKL_2967c56cf4f1
+USKL_975895aaa7db,use communication and collaboration software,utiliser des logiciels de communication et de collaboration,communicate in digital environments | interact through ICT | use e-mail software and services | communicate on-line | communicate online,,soft,soft_collaboration,ESCO,SKL_2967c56cf4f1
 USKL_526ea5acc4be,blockchain-based services regulation,réglementation des services fondés sur la technologie de la chaine de blocs,regulatory framework for blockchain | legal guidance for blockchain | legal regulations for blockchain,réglementation des services fondés sur la technologie de la blockchain | cadre réglementaire de la blockchain | réglementations juridiques pour la blockchain | orientations juridiques pour la chaîne de blocs | cadre réglementaire pour la chaîne de blocs | réglementations légales pour la blockchain | conseils juridiques pour la blockchain,hard,emerging_tech,ESCO,SKL_1548ab6bfafd
 USKL_7f43ca1c1fbc,use ICT systems,utiliser des systèmes TIC,complete complex tasks through use of ICT systems | use information and communication technology systems | conduct work activities using ICT systems | complete complex tasks through utilisation of ICT systems | use computer systems | utilise ICT systems | perform work tasks using ICT systems | use information and communication technologies | use ICT | utilise information and communication technologies | work using ICT systems,,hard,other_hard,ESCO,SKL_f2275773560a
 USKL_133201efb7ca,Kali Linux,Kali Linux,Kali Tools | Kali Docs | Kali NetHunter | Kali penetration testing tool | Kali Linux distribution,,hard,systems_infrastructure,ESCO | LIGHTCAST | ONET,SKL_213caf5b9a1c | SKL_3aa64195f966 | SKL_62c2adcc87ca
@@ -1827,67 +1827,67 @@ USKL_2d0ae292c609,e-commerce systems,systèmes de commerce électronique,e-comme
 USKL_ef92b6c8a097,set up cybersecurity training programmes,mettre en place des programmes de formation à la cybersécurité,design cybersecurity training | deliver cybersecurity training | develop cybersecurity training,développer des formations en cybersécurité | dispenser des formations en cybersécurité | dispenser une formation en matière de cybersécurité | concevoir une formation en cybersécurité | développer la formation à la cybersécurité | concevoir des formations en cybersécurité,hard,security,ESCO,SKL_7b530497dcc8
 USKL_8b077abaf0bb,use personal protection equipment,utiliser des équipements de protection individuelle,oversee personal protection equipment | use equipment for personal protection | examine personal safety gear | oversee PPE,,hard,other_hard,ESCO,SKL_06426b923378
 USKL_30531d4d7624,implement strategic management,mettre en œuvre une gestion stratégique,formulate and implement company development strategy | devise strategy for company development | implement management strategy | develop and implement strategic management plan | develop strategy for company development | implement strategic management principles | devise company development strategy | deliver strategic management plan | implement strategic management plan | formulate strategy for company development,,hard,it_management,ESCO,SKL_b28bfaf7b173
-USKL_f6a4fdb26725,show initiative,,initiate action | be a driving force | give impetus | take the initiative | show sense of initiative | show active initiative | demonstrate sense of initiative,,soft,soft_transversal,ESCO,SKL_5dc382df1438
+USKL_f6a4fdb26725,show initiative,,initiate action | be a driving force | give impetus | take the initiative | show sense of initiative | show active initiative | demonstrate sense of initiative,,soft,soft_self_management,ESCO,SKL_5dc382df1438
 USKL_22083a53f144,adopt ways to foster biodiversity and animal welfare,,concretely support biodiversity and animal welfare | implement environmental choices in your own eating habit | adopt a sustainable eating habit | take sustainability issues into account in consumption choices | take animal welfare into account when buying food products | promoting organic and biological food consumption,,soft,soft_transversal,ESCO,SKL_19aeb7cb73b2
 USKL_c2bcb3e60adc,advise others,,mentor others | mentor individuals | counsel others | counselling | offer suggestions to others | guide others | make recommendations to others | give advice | advise customers | give constructive feedback | giving advice to others | advise colleagues | provide advisory services,,soft,soft_transversal,ESCO,SKL_46f9b42c75bd
 USKL_c80eda617b6f,accept criticism and guidance,,accept feedback | welcome criticism | accept constructive criticism | tolerate critics | accept critics | welcome feedback | handle feedback,,soft,soft_transversal,ESCO,SKL_cc2e6ec387e6
 USKL_84f602bcc9ce,"apply knowledge of philosophy, ethics and religion",,follow ethical values and religious believes | apply philosophical school of thoughts | act according to ethical and religious values | evaluate the moral and ethical consequences of actions | assess the consequences and impact of ideas,,soft,soft_transversal,ESCO,SKL_dbaca5910e03
 USKL_e9ffbba42fad,adopt ways to reduce pollution,,reduce noise | prefer public to private transport | use public transportation | handle your own waste | prevent pollution,,soft,soft_transversal,ESCO,SKL_0382fb7b6808
-USKL_92477fc09ff5,meet commitments,,show commitment | achieve goals | meet commitment | demonstrate steady effort | meet targets | show responsibility | show conscientiousness | work to deadlines | demonstrate loyalty | meeting commitments | demonstrate commitment | demonstrate reliability | demonstrate conscientiousness | show reliability | demonstrate punctuality | keep promises,,soft,soft_transversal,ESCO,SKL_249ccf2ac00c
+USKL_92477fc09ff5,meet commitments,,show commitment | achieve goals | meet commitment | demonstrate steady effort | meet targets | show responsibility | show conscientiousness | work to deadlines | demonstrate loyalty | meeting commitments | demonstrate commitment | demonstrate reliability | demonstrate conscientiousness | show reliability | demonstrate punctuality | keep promises,,soft,soft_self_management,ESCO,SKL_249ccf2ac00c
 USKL_50437761e680,adjust to physical demands,,tolerate unfavourable temperatures | work under adverse weather conditions | demonstrate physical resilience,,soft,soft_transversal,ESCO,SKL_ef5d231e6260
-USKL_2dcd5118fef6,assume responsibility,,showing responsibility | prove sense of responsibility | demonstrate responsibility | show responsible behaviour | be ready to take responsibilities | be ready to take on responsibility | be responsible | demonstrate a conscientious attitude | act responsibly,,soft,soft_transversal,ESCO,SKL_5fca413b3927
-USKL_e91477e7fa38,show determination,,demonstrate enthusiasm | demonstrate positive thinking | demonstrate positive attitude | persist | exhibit enthusiasm | strive for results | make an effort | show positive disposition | demonstrate a focussed approach | demonstrate positive disposition | strive for success | have clear goals,,soft,soft_transversal,ESCO,SKL_244c1cdeefce
+USKL_2dcd5118fef6,assume responsibility,,showing responsibility | prove sense of responsibility | demonstrate responsibility | show responsible behaviour | be ready to take responsibilities | be ready to take on responsibility | be responsible | demonstrate a conscientious attitude | act responsibly,,soft,soft_self_management,ESCO,SKL_5fca413b3927
+USKL_e91477e7fa38,show determination,,demonstrate enthusiasm | demonstrate positive thinking | demonstrate positive attitude | persist | exhibit enthusiasm | strive for results | make an effort | show positive disposition | demonstrate a focussed approach | demonstrate positive disposition | strive for success | have clear goals,,soft,soft_self_management,ESCO,SKL_244c1cdeefce
 USKL_f1b358b2f1f6,carry out calculations,,carry out work-related calculation | use numbers,,soft,soft_transversal,ESCO,SKL_64d0c3730751
-USKL_6b58e828964b,manage frustration,,manage emotions | control impulses | show capacity to deal with stress | recognise own potential | deal with frustration | managing frustration | foster hope | manage own emotions | cope with frustration | manage disappointments | regulate moods | handle frustration | cope well with setbacks | recover from setbacks,,soft,soft_transversal,ESCO,SKL_d166671fe4b5
+USKL_6b58e828964b,manage frustration,,manage emotions | control impulses | show capacity to deal with stress | recognise own potential | deal with frustration | managing frustration | foster hope | manage own emotions | cope with frustration | manage disappointments | regulate moods | handle frustration | cope well with setbacks | recover from setbacks,,soft,soft_self_management,ESCO,SKL_d166671fe4b5
 USKL_1a82cf4f4fa1,calculate probabilities,,estimate the probability of an outcome or fact | work with probabilities | make estimations,,soft,soft_transversal,ESCO,SKL_49cd87c36526
 USKL_a75a93be6e6a,manage financial and material resources,,manage personal budget for financial needs | select appropriate insurance products | exercise consumer rights | manage personal finances | undertake effective financial planning | use investments and credit to achieve long term goals | use financial advices and guidance services with a critical mindset | compare deals and offers when acquiring products or services,,soft,soft_transversal,ESCO,SKL_c3fb7706013d
-USKL_fbac66d091dc,show commitment,,demonstrate commitment | show willingness to work | have commitment | demonstrate motivation | enjoy one's profession | show willingness to perform | demonstrate enthusiasm | show motivation | enjoy working,,soft,soft_transversal,ESCO,SKL_e16588481cd9
+USKL_fbac66d091dc,show commitment,,demonstrate commitment | show willingness to work | have commitment | demonstrate motivation | enjoy one's profession | show willingness to perform | demonstrate enthusiasm | show motivation | enjoy working,,soft,soft_self_management,ESCO,SKL_e16588481cd9
 USKL_43917307b5e4,think quickly,,show a good level of perception | react quickly | understand quickly,,soft,soft_transversal,ESCO,SKL_481bbe53b9b3
 USKL_8b8432117075,evaluate environmental impact of personal behaviour,,demonstrate sensitivity for environmental issues | adopt an ecological attitude | consider the impact of your actions on the environment | apply ethical and sustainable thinking | adopt an environmental friendly attitude,,soft,soft_transversal,ESCO,SKL_4abb95a7d8eb
-USKL_79b92aec00a5,manage quality,,apply quality standards | managing quality | attend to quality | work to agreed standards | monitor quality | oversee quality,,soft,soft_transversal,ESCO,SKL_416b8573cd5d
+USKL_79b92aec00a5,manage quality,,apply quality standards | managing quality | attend to quality | work to agreed standards | monitor quality | oversee quality,,soft,soft_self_management,ESCO,SKL_416b8573cd5d
 USKL_dbf2ae3d1db1,exercise self-reflection,,reflect on practice | monitor the impact of your professional development | assess the impact of your professional development | evaluate the impact of your professional development | evaluate professional development impact | estimate the impact of your professional development | examine the impact of your professional development | gauge the impact of your professional development | do self-assessment | self-evaluate | perform self-evaluation | self-assess | be able to engage in self-reflection | perform self-assessment | conduct self-assessment,,soft,soft_transversal,ESCO,SKL_9a72439bbbfc
-USKL_b60e29b3767d,demonstrate curiosity,,show curiosity | display curiosity | be curious | demonstrate interest | show interest | demonstrating curiosity | exhibit curiosity | curiosity,,soft,soft_transversal,ESCO,SKL_21b146ea089f
+USKL_b60e29b3767d,demonstrate curiosity,,show curiosity | display curiosity | be curious | demonstrate interest | show interest | demonstrating curiosity | exhibit curiosity | curiosity,,soft,soft_learning,ESCO,SKL_21b146ea089f
 USKL_10c67a32ab71,manage personal progression,,plan your career | manage career goals | manage life goals,,soft,soft_transversal,ESCO,SKL_1f267c14eff9
 USKL_40e936614d75,approach challenges positively,,keep a positive attitude | adopt a constructive approach | show sense of humour | maintain a positive attitude,,soft,soft_transversal,ESCO,SKL_9601b9bb5665
-USKL_0c9f9f301ff0,think analytically,,think in an analytical way | apply logical thinking | use logical reasoning | apply structured thinking | think logically | develop an analytical approach | analytical thinking | apply structural analysis,,soft,soft_transversal,ESCO,SKL_d80a5842fd95
-USKL_078971e5b0bb,adapt to change,,openness to change | be open to change | revise plans to deal with changes | adapt to changes | be flexible | show willingness to change | adapting to change | demonstrate flexibility | adjust to change | conform to change | assimilate to change,,soft,soft_transversal,ESCO,SKL_0348dd5625d1
+USKL_0c9f9f301ff0,think analytically,,think in an analytical way | apply logical thinking | use logical reasoning | apply structured thinking | think logically | develop an analytical approach | analytical thinking | apply structural analysis,,soft,soft_cognitive,ESCO,SKL_d80a5842fd95
+USKL_078971e5b0bb,adapt to change,,openness to change | be open to change | revise plans to deal with changes | adapt to changes | be flexible | show willingness to change | adapting to change | demonstrate flexibility | adjust to change | conform to change | assimilate to change,,soft,soft_self_management,ESCO,SKL_0348dd5625d1
 USKL_34667c730e19,adopt ways to reduce negative impact of consumption,,follow environmentally-sustainable work practices | reuse products | avoid plastic | practice a minimalist lifestyle | follow recycling collection schedules | share physical resources | avoid single-use items | reduce energy usage | reuse materials | minimise waste production in households | reduce water or energy consumption,,soft,soft_transversal,ESCO,SKL_5c1cafdcd539
 USKL_567b6107e8be,maintain psychological well-being,,maintain work-life balance | pursue mental wellbeing | protect the psychological wellbeing | safely use digital technologies | balance working time and personal life,,soft,soft_transversal,ESCO,SKL_1ba5b7de1077
 USKL_1ecd87ae2f25,protect the health of others,,intervene promptly in case of need | react adequately in case of accidents | provide first aid | safeguard one's person health,,soft,soft_transversal,ESCO,SKL_ba4b591cdd44
-USKL_17da1cf17987,moderate a discussion,,guide a discussion | moderate workshops | oversee a discussion | lead discussions | moderate conferences | apply moderation techniques | carry out moderation,,soft,soft_transversal,ESCO,SKL_52b55f5a19f4
+USKL_17da1cf17987,moderate a discussion,,guide a discussion | moderate workshops | oversee a discussion | lead discussions | moderate conferences | apply moderation techniques | carry out moderation,,soft,soft_collaboration,ESCO,SKL_52b55f5a19f4
 USKL_08ee5b5946cc,"apply knowledge of science, technology and engineering",,carry out measurements | demonstrate scientific literacy | take on new technology | demonstrate technical abilities,,soft,soft_transversal,ESCO,SKL_dd733976fe12
 USKL_d4e6d247b1e7,process spatial information,,exhibit three-dimensional imagination | show three-dimensional imagination | display three-dimensional imagination | demonstrate spatial intelligence | manage shape and space | work with shape and space | apply spatial reasoning | work with form and space | utilise spatial orientation | work with shapes and spaces,,soft,soft_transversal,ESCO,SKL_a341429e6402
 USKL_23e7bef0fc5b,respect the diversity of cultural values and norms,,take national cultural identity in consideration | take account of the diversity of cultural values and norms | show sensitivity towards different worldviews | support cultural diversity | demonstrate knowledge of the multi-cultural dimension of European societies,,soft,soft_transversal,ESCO,SKL_4018c6dd5f4f
 USKL_28c22dcfbbc3,cope with uncertainty,,handle uncertainty | deal with uncertainties | handle ambiguity | dealing with uncertainty | manage uncertainty,,soft,soft_transversal,ESCO,SKL_3bd897deb869
-USKL_82f884db3c8c,address an audience,,lecture | addressing an audience | speak to an audience | give a lecture to an audience | deliver a speech | address audiences | give a talk to an audience | present ideas,,soft,soft_transversal,ESCO,SKL_b21cf1a5d4b7
-USKL_210bac427a09,work in teams,,working in teams | handle team dynamics | cooperate | cooperate with colleagues | support colleagues | collaborate on tasks | work in groups | team-working | foster social networks | work in squads,,soft,soft_transversal,ESCO,SKL_afda1dab404c
+USKL_82f884db3c8c,address an audience,,lecture | addressing an audience | speak to an audience | give a lecture to an audience | deliver a speech | address audiences | give a talk to an audience | present ideas,,soft,soft_collaboration,ESCO,SKL_b21cf1a5d4b7
+USKL_210bac427a09,work in teams,,working in teams | handle team dynamics | cooperate | cooperate with colleagues | support colleagues | collaborate on tasks | work in groups | team-working | foster social networks | work in squads,,soft,soft_collaboration,ESCO,SKL_afda1dab404c
 USKL_4e30f1bff55e,show confidence,,confidence showing | display confidence | exhibit confidence | demonstrate confidence | show of confidence | showing confidence | reveal confidence | behave confidently,,soft,soft_transversal,ESCO,SKL_74413dbf0c1d
-USKL_d947bcc45a96,instruct others,,teach others | educate others | instructing others | instruct colleagues | tutoring | train others,,soft,soft_transversal,ESCO,SKL_cff6a6e08edc
-USKL_0fe8ecb6701b,"organise information, objects and resources",,structure information | have organisational skills | record information | take in information | organise resources | demonstrate organizational skills,,soft,soft_transversal,ESCO,SKL_8f434db53f66
+USKL_d947bcc45a96,instruct others,,teach others | educate others | instructing others | instruct colleagues | tutoring | train others,,soft,soft_leadership,ESCO,SKL_cff6a6e08edc
+USKL_0fe8ecb6701b,"organise information, objects and resources",,structure information | have organisational skills | record information | take in information | organise resources | demonstrate organizational skills,,soft,soft_self_management,ESCO,SKL_8f434db53f66
 USKL_1e3d9322a97d,interpret mathematical information,,enjoy working with numbers | apply numeracy skills | apply numerical reasoning | apply mathematical reasoning | demonstrate an understanding of numbers,,soft,soft_transversal,ESCO,SKL_df7bd352b749
 USKL_fd9eb4aed4f9,demonstrate loyalty,,back company plan | follow organisation's vision | support plans of the company | support company mission | show loyalty | support company plan | champion company plan,,soft,soft_transversal,ESCO,SKL_84f1843c952b
-USKL_5b71f76ce29b,lead others,,guide others | make use of leadership abilities for team coordination | make use of result-oriented leadership abilities | lead colleagues | exert a result-oriented leadership role towards colleagues | show an exemplary leading role in an organisation | exert a goal-oriented leadership role towards colleagues | show leadership attitude | exert a result-oriented leadership role | exert a leadership role towards colleagues | exert result-oriented leadership | exert a goal-oriented leadership role | lead | make use of goal-driven leadership abilities | leading others | manage people | give direction | direct others | take on a leadership role | supervise others,,soft,soft_transversal,ESCO,SKL_790fe3c6937a
-USKL_777d83f81672,show empathy,,show good manners | display consideration | concern for others | show concern for others | treat people fairly | demonstrate concern for others | showing empathy | show courtesy | demonstrate consideration | be empathic | communicate an empathic response | exhibit consideration,,soft,soft_transversal,ESCO,SKL_a03e3e9e052f
-USKL_c65574691a59,negotiate compromises,,bargain | resolve conflict | defuse conflict | influence decision-making processes | seek agreement | manage complaints | negotiating compromise | negotiate | bargaining,,soft,soft_transversal,ESCO,SKL_10d562320667
-USKL_b4f29cee0ea9,cope with stress,,show mental resilience | manage pressure | coping with pressure | deal with pressure | handle pressure | accept challenges | cope with pressures | perform under pressure | stay cool under pressure | work under pressure,,soft,soft_transversal,ESCO,SKL_abe2c7df8fba
+USKL_5b71f76ce29b,lead others,,guide others | make use of leadership abilities for team coordination | make use of result-oriented leadership abilities | lead colleagues | exert a result-oriented leadership role towards colleagues | show an exemplary leading role in an organisation | exert a goal-oriented leadership role towards colleagues | show leadership attitude | exert a result-oriented leadership role | exert a leadership role towards colleagues | exert result-oriented leadership | exert a goal-oriented leadership role | lead | make use of goal-driven leadership abilities | leading others | manage people | give direction | direct others | take on a leadership role | supervise others,,soft,soft_leadership,ESCO,SKL_790fe3c6937a
+USKL_777d83f81672,show empathy,,show good manners | display consideration | concern for others | show concern for others | treat people fairly | demonstrate concern for others | showing empathy | show courtesy | demonstrate consideration | be empathic | communicate an empathic response | exhibit consideration,,soft,soft_collaboration,ESCO,SKL_a03e3e9e052f
+USKL_c65574691a59,negotiate compromises,,bargain | resolve conflict | defuse conflict | influence decision-making processes | seek agreement | manage complaints | negotiating compromise | negotiate | bargaining,,soft,soft_leadership,ESCO,SKL_10d562320667
+USKL_90ae91ef536e,Stress management,,cope with stress | show mental resilience | manage pressure | coping with pressure | deal with pressure | handle pressure | accept challenges | cope with pressures | perform under pressure | stay cool under pressure | work under pressure | stress management | resilience | composure | manage stress,,soft,soft_self_management,ESCO | SOFTSKILLS | WEF,SKL_9b94f139e6e1 | SKL_abe2c7df8fba | SKL_f24637aa3ec4
 USKL_8c265142608d,work efficiently,,working efficiently | labor efficiently | efficiently work | do your job efficiently | work in an economical way,,soft,soft_transversal,ESCO,SKL_e821afde5430
 USKL_c50c2027dd3b,participate actively in civic life,,be involved in civic activities | perform community work | do neighbouring activity | demonstrate active citisenship,,soft,soft_transversal,ESCO,SKL_614950908b5b
 USKL_9c5159afeae1,think critically,,detect bias | distinguish fact from opinion | weigh information | evaluate important information | assess facts | check facts | critically evaluate information and its sources | evaluating information | evaluate information and its sources | assess information | assess processes | apply critical thinking | review information | verify information | assess opinions | evaluate facts | consider alternative views | evaluate opinions | evaluate truth,,soft,soft_transversal,ESCO,SKL_0c7f1dd9abf3
 USKL_17ed27ab40ff,engage others in environment friendly behaviours,,advocate sustainability | promote sustainability | encourage others to respect the environment | promote environmental friendly behaviours | inform about sustainability,,soft,soft_transversal,ESCO,SKL_38a7b22f4dbe
-USKL_f78c61d377ef,attend to detail,,work meticulously | attend to precision | attend to details | deal with details | sort out details | attend to accuracy | work carefully | to work precisely | work in a proper manner | attending to details | manage details,,soft,soft_transversal,ESCO,SKL_7b9281bcde1f
+USKL_f78c61d377ef,attend to detail,,work meticulously | attend to precision | attend to details | deal with details | sort out details | attend to accuracy | work carefully | to work precisely | work in a proper manner | attending to details | manage details,,soft,soft_self_management,ESCO,SKL_7b9281bcde1f
 USKL_c0537aafed02,make an informed use of the health-care system,,manage appropriate medications | apply preventive care measures to avoid physical or psychological harm | find the right healthcare service,,soft,soft_transversal,ESCO,SKL_20d234eddd45
 USKL_ad7ba96df1ef,promote the principles of democracy and rule of law,,support gender equality | mainstream gender | support gender mainstreaming | implement equality policies | support democracy | promote a culture of piece and non violence | confront discriminations | demonstrate an understanding of European common values | fight discrimination,,soft,soft_transversal,ESCO,SKL_9ceba7edd185
-USKL_ca3e210d3db0,express yourself creatively,,draw | engage in artistic self-expression | play instruments | sing | express ideas experiences and emotions creatively | paint | demonstrate sense of rhythm | dance,,soft,soft_transversal,ESCO,SKL_0433197adf10
+USKL_ca3e210d3db0,express yourself creatively,,draw | engage in artistic self-expression | play instruments | sing | express ideas experiences and emotions creatively | paint | demonstrate sense of rhythm | dance,,soft,soft_cognitive,ESCO,SKL_0433197adf10
 USKL_86c18f71716d,resolve conflicts,,mediate in debates | act as mediator | mediate in collisions | mediate in tense debate | handle tense situations | be able to create consensus | demonstrate willingness to compromise | be able to find compromises | handle tense situation | mediate tense situations | manage conflicts | mediate in conflicts,,soft,soft_transversal,ESCO,SKL_71c5bfd3aab5
 USKL_5f7e7de62042,appreciate diverse cultural and artistic expression,,appreciate artistic expressions | appreciate cultural heritage | demonstrate cultural awareness | have a feeling for aesthetics,,soft,soft_transversal,ESCO,SKL_0f59cbd01984
-USKL_1dab219b9371,demonstrate willingness to learn,,work towards own potential | show self-knowledge | display willingness to learn | direct own learning | exhibit willingness to learn | show willingness to learn,,soft,soft_transversal,ESCO,SKL_2e8814e0c022
+USKL_1dab219b9371,demonstrate willingness to learn,,work towards own potential | show self-knowledge | display willingness to learn | direct own learning | exhibit willingness to learn | show willingness to learn,,soft,soft_learning,ESCO,SKL_2e8814e0c022
 USKL_7dc56060a6bc,"use equipment, tools or technology with precision",,demonstrate technical acumen | carry out manual activities | use hand tools | use precision instrumentation,,soft,soft_transversal,ESCO,SKL_ba0949a519d4
 USKL_0e4162218750,maintain concentration for long periods,,maintain concentration for extended periods | maintain focus for long periods of time | focus for prolonged periods | stay concentrated for long periods | work in a focused manner | preserve concentration for long periods | keep focused for extended periods | keep concentration for long periods | stay focused for extended periods of time,,soft,soft_transversal,ESCO,SKL_7aa460ac3f36
 USKL_133ecd7071a6,identify problems,,detect problems | signal problems | diagnose problems,,soft,soft_transversal,ESCO,SKL_99fe55e00127
 USKL_7a834edb420f,maintain physical fitness,,care about your fitness | keep yourself in good conditions | adopt an healthy lifestyle | apply preventive healthy behaviours,,soft,soft_transversal,ESCO,SKL_8cb18b8c928c
 USKL_8771086febcf,solve problems,,develop strategies to solve problems | come up with strategy to solve problems | develop strategy to solve problems | create solutions to problems | demonstrate problem solving skills | act intuitevely | manage problems | apply problem solving | create strategies to solve problems | resolve problems,,soft,soft_transversal,ESCO,SKL_7674a3b6283b
-USKL_af2cbc88dcd2,delegate responsibilities,,delegate | delegate activities to others | share duties | distribute activities | distribute tasks | share tasks | delegate activities | delegate tasks,,soft,soft_transversal,ESCO,SKL_95add2a3d691
-USKL_ec315ac7d913,build team spirit,,plan team building | design team building | project team building | arrange team building | build teams | organise a team,,soft,soft_transversal,ESCO,SKL_edf4141c1769
+USKL_af2cbc88dcd2,delegate responsibilities,,delegate | delegate activities to others | share duties | distribute activities | distribute tasks | share tasks | delegate activities | delegate tasks,,soft,soft_leadership,ESCO,SKL_95add2a3d691
+USKL_ec315ac7d913,build team spirit,,plan team building | design team building | project team building | arrange team building | build teams | organise a team,,soft,soft_collaboration,ESCO,SKL_edf4141c1769
 USKL_1f9959db4943,improvise,,demonstrate ability to improvise | show talent for improvisation,,soft,soft_transversal,ESCO,SKL_73b7c046080c
 USKL_4af4f3f7f9d1,comply with regulations,,adhere to legislation or policies | work in a thoughtful manner | follow directions and procedures | comply with legislative provisions,,soft,soft_transversal,ESCO,SKL_ea8aac6d5be1
 USKL_53de1610d9e4,move objects,,climb | perform physical activities | load and unload good and materials | store goods | move and lift objects | lift things,,soft,soft_transversal,ESCO,SKL_b9455465e130
@@ -1896,25 +1896,25 @@ USKL_a5edfd00db30,show entrepreneurial spirit,,identify opportunities | show an 
 USKL_e6394db9bb91,report facts,,detail the facts | write minutes | report | give an account of the facts | report facts or ideas | communicate facts | reporting facts,,soft,soft_transversal,ESCO,SKL_f666d0082580
 USKL_b6756c7de7b7,build networks,,create networks | building effective relationships | maintain networks | show ability to network | maintain contact with others | liaise with others | make contacts | establish contacts,,soft,soft_transversal,ESCO,SKL_df70abc2e857
 USKL_a56522554118,demonstrate intercultural competence,,show cultural competence | consider different cultural backgrounds | respect different cultural backgrounds | display intercultural competence | exhibit intercultural competence | show intercultural competence | adapt to cultural differences | use culturally appropriate body language | demonstrate cross-cultural competence,,soft,soft_transversal,ESCO,SKL_c4e529c9f31f
-USKL_98f8236e00bf,work independently,,ability to work autonomously | work on your own | like to work independently | working independently | act independently | work in a self-reliant manner | work autonomously | independently working | work without supervision,,soft,soft_transversal,ESCO,SKL_322c73cb66e8
-USKL_48e5ad44137d,think innovatively,,show innovativeness | apply innovative thinking | think ahead | be innovative | apply forward-thinking | demonstrate pioneering spirit | invent | shape the future,,soft,soft_transversal,ESCO,SKL_536912e60310
+USKL_98f8236e00bf,work independently,,ability to work autonomously | work on your own | like to work independently | working independently | act independently | work in a self-reliant manner | work autonomously | independently working | work without supervision,,soft,soft_self_management,ESCO,SKL_322c73cb66e8
+USKL_48e5ad44137d,think innovatively,,show innovativeness | apply innovative thinking | think ahead | be innovative | apply forward-thinking | demonstrate pioneering spirit | invent | shape the future,,soft,soft_cognitive,ESCO,SKL_536912e60310
 USKL_3d7976f06060,demonstrate awareness of health risks,,know the effects of drugs and alcohol on individuals | follow work-place safety regulations | apply ergonomics | manage health risk | meet health and safety requirements | work safely with hazardous material,,soft,soft_transversal,ESCO,SKL_aa64964a668e
-USKL_66a25e46b6ae,think creatively,,show originality | thinking creatively | innovate | work conceptually | brainstorming | find new ideas | innovative thinking | seek out questions | use imagination | experiment | design | visualise completed work | anticipate needs | think in a creative way | visualise completed project,,soft,soft_transversal,ESCO,SKL_7d91794b64e6
+USKL_66a25e46b6ae,think creatively,,show originality | thinking creatively | innovate | work conceptually | brainstorming | find new ideas | innovative thinking | seek out questions | use imagination | experiment | design | visualise completed work | anticipate needs | think in a creative way | visualise completed project,,soft,soft_cognitive,ESCO,SKL_7d91794b64e6
 USKL_08db24faba4b,think holistically,,recognise connections | apply conceptual thinking | identify key issues in complex situations | apply systemic thinking | understand complex processes | identify interrelationships | demonstrate holistic thinking | understand complexity,,soft,soft_transversal,ESCO,SKL_9e7b6e284f35
-USKL_37c705e67800,make decisions,,making decisions | make choices | choose | decide | make decision | take decisions,,soft,soft_transversal,ESCO,SKL_0a5f047090fe
-USKL_8a8bf9137389,manage time,,managing time | schedule | prioritise tasks | prioritise actions | manage schedule | set priorities | meet deadlines | define milestones | draw up time line | work out time line | adhere to schedules | plan deadlines | plan time | coordinate actions,,soft,soft_transversal,ESCO,SKL_bb75147adbcb
+USKL_37c705e67800,make decisions,,making decisions | make choices | choose | decide | make decision | take decisions,,soft,soft_cognitive,ESCO,SKL_0a5f047090fe
+USKL_8a8bf9137389,manage time,,managing time | schedule | prioritise tasks | prioritise actions | manage schedule | set priorities | meet deadlines | define milestones | draw up time line | work out time line | adhere to schedules | plan deadlines | plan time | coordinate actions,,soft,soft_self_management,ESCO,SKL_bb75147adbcb
 USKL_486beb9196c8,apply hygiene standards,,conform to hygienic work practices | follow hygienic work practices | identify hygiene risks | attend to hygiene | attend to cleanliness | care for hygiene | look after hygiene,,soft,soft_transversal,ESCO,SKL_b90b0e526a8b
 USKL_575f66d3e21e,critically evaluate information and its sources,,detect bias | weigh information | check facts | assess information | verify information | understand the role of media in democratic societies | verify the source of information | evaluate information,,soft,soft_transversal,ESCO,SKL_abe63d2a4aae
 USKL_042be42635c6,manage chronic health conditions,,seek for appropriate care | utilise walking aids | utilise hearing aids | utilise seeing aids,,soft,soft_transversal,ESCO,SKL_4b44e9b302c7
 USKL_5cb0088a7691,apply knowledge of social sciences and humanities,,demonstrate interest in politics | demonstrate knowledge of European history | understand the role of social movements in society | demonstrate social knowledge,,soft,soft_transversal,ESCO,SKL_ac849d14848f
 USKL_ff577f4c833a,"promote ideas, products, services",,persuade others | convince others | persuade | be able to close sales regularly and confidently | influence others | enjoys selling | present products | influence decisions,,soft,soft_transversal,ESCO,SKL_60e996ac75cf
-USKL_9ed57b401017,motivate others,,stimulate action | inspire others | encourage others | empower others | motivating others | energise others | motivate staff and colleages,,soft,soft_transversal,ESCO,SKL_acefb6869f54
+USKL_9ed57b401017,motivate others,,stimulate action | inspire others | encourage others | empower others | motivating others | energise others | motivate staff and colleages,,soft,soft_leadership,ESCO,SKL_acefb6869f54
 USKL_911956eab638,respect confidentiality obligations,,be discrete | ensure privacy | ensure absolute discretion | keep secret information | protect privacy | handle sensitive information | comply with confidentiality obligations,,soft,soft_transversal,ESCO,SKL_5967172f87ff
 USKL_a1dd1e3b3e45,plan,,plan activities | performance planning | implement planning | planning performance | undertake planning | complete planning,,soft,soft_transversal,ESCO,SKL_b825d30d64b1
 USKL_498352f28cd4,react to physical changes or hazards,,demonstrate agility | be reactive | show responsivness,,soft,soft_transversal,ESCO,SKL_123761be71d3
-USKL_2a9606c58a3c,exercise rights and responsibilities,,exercise constitutional rights | participate in democratic decision-making | demonstrate interest in current events | exercise legal rights | be aware of legal rights,,soft,soft_transversal,ESCO,SKL_4a53b7862886
+USKL_2a9606c58a3c,exercise rights and responsibilities,,exercise constitutional rights | participate in democratic decision-making | demonstrate interest in current events | exercise legal rights | be aware of legal rights,,soft,soft_self_management,ESCO,SKL_4a53b7862886
 USKL_f22871126015,memorise information,,memorising information | memorise info | commit information to memory | memorise facts | learn information by heart | memorise procedures | mnemonics principles | remember information,,soft,soft_transversal,ESCO,SKL_66409b87c3c6
-USKL_87b7652db51a,keep an open mind,,being open minded | show acceptance of others | demonstrate freedom from prejudice | take on new ideas and experiences,,soft,soft_transversal,ESCO,SKL_587bf6d883a3
+USKL_87b7652db51a,keep an open mind,,being open minded | show acceptance of others | demonstrate freedom from prejudice | take on new ideas and experiences,,soft,soft_learning,ESCO,SKL_587bf6d883a3
 USKL_236e376099bf,,Adapter les outils de traitement statistique de données,,,hard,data_databases,ROME,SKL_fecc378f72fb
 USKL_d18e9fb836f3,,"Optimiser des algorithmes, une application informatique et mettre en oeuvre leur développement",,,hard,programming_languages,ROME,SKL_de2ac235bf99
 USKL_117f2ce2a7d9,,"Concevoir des modèles théoriques (calcul, simulation, modélisation)",,,hard,other_hard,ROME,SKL_88e8a7f29707
@@ -1950,11 +1950,11 @@ USKL_81d76910b2a8,,Argumenter et anticiper les objections,,,hard,other_hard,ROME
 USKL_dbed9dc1ec86,,Manager la connaissance,,,hard,other_hard,ROME,SKL_4cd2b4cf57ef
 USKL_a65ef2509f98,,Coordonner des projets d'intelligence économique,,,hard,other_hard,ROME,SKL_a8ef1d1757f0
 USKL_0797c4b2a6f3,,Utiliser l'anglais dans un contexte professionnel,,,hard,other_hard,ROME,SKL_d91a44f032c5
-USKL_cb94d2fd2692,,"Etre à l'écoute, faire preuve d'empathie",,,soft,soft_transversal,ROME,SKL_fa389da017d8
+USKL_cb94d2fd2692,,"Etre à l'écoute, faire preuve d'empathie",,,soft,soft_collaboration,ROME,SKL_fa389da017d8
 USKL_c2bfd1ee6704,,Avoir l'esprit d'équipe,,,soft,soft_transversal,ROME,SKL_ae15b39d88c3
 USKL_1948b651cfa8,,Etre force de proposition,,,soft,soft_transversal,ROME,SKL_e801bfda02fa
 USKL_2c0c9519a350,,Faire preuve de rigueur et de précision,,,soft,soft_transversal,ROME,SKL_ae4554764278
-USKL_0066e9ac6bf4,,"Faire preuve de curiosité, d'ouverture d'esprit",,,soft,soft_transversal,ROME,SKL_716cc6ef3d57
+USKL_0066e9ac6bf4,,"Faire preuve de curiosité, d'ouverture d'esprit",,,soft,soft_learning,ROME,SKL_716cc6ef3d57
 USKL_8ef9d70d1d66,,Logiciels de gestion de base de données,,,hard,data_databases,ROME,SKL_e0a61de86781
 USKL_fbe205722e05,,Analyse de données expérimentales,,,hard,data_databases,ROME,SKL_8c006e9b51f2
 USKL_84eb18d00f42,,Modélisation et simulation,,,hard,other_hard,ROME,SKL_364abc5ea927
@@ -2004,7 +2004,7 @@ USKL_b6c6c025ef2e,,Communiquer des insights clés aux parties prenantes,,,hard,o
 USKL_6235e834f531,,Développer des modèles prédictifs pour l'analyse de données,,,hard,data_databases,ROME,SKL_021d6b0c3f47
 USKL_ef37a1c36c8c,,Interpréter des résultats de campagne média,,,hard,other_hard,ROME,SKL_8b38e798127e
 USKL_eb1fbecf29c8,,Faire preuve d'autonomie,,,soft,soft_transversal,ROME,SKL_9f5a0fe8656c
-USKL_5e091abe3f4a,,Organiser son travail selon les priorités et les objectifs,,,soft,soft_transversal,ROME,SKL_be83c4db2bba
+USKL_5e091abe3f4a,,Organiser son travail selon les priorités et les objectifs,,,soft,soft_self_management,ROME,SKL_be83c4db2bba
 USKL_02cb541fa9f4,,Econométrie,,,hard,other_hard,ROME,SKL_ee1bdc4eab2d
 USKL_67fa8d1652a9,,Principes de rédaction du plan média,,,hard,other_hard,ROME,SKL_500302f19b2d
 USKL_267cfcd9112f,,Planification média,,,hard,other_hard,ROME,SKL_92524fed0da6
@@ -2040,7 +2040,7 @@ USKL_d1910e278650,,Développer des stratégies de gestion des données,,,hard,da
 USKL_f7d7bc4a7173,,Assurer la conformité des pratiques de données avec la réglementation,,,hard,data_databases,ROME,SKL_70603dfb9c0c
 USKL_b19f8dff2e31,,Implémenter des solutions de sécurité des données,,,hard,security,ROME,SKL_602600f904f8
 USKL_a000bdb0c33b,,Présenter des insights basés sur les données aux parties prenantes,,,hard,data_databases,ROME,SKL_000f40452279
-USKL_1bf6474b18bd,,Evaluer l'efficacité des outils de data visualisation,,,hard,other_hard,ROME,SKL_c4094712d495
+USKL_1bf6474b18bd,,Evaluer l'efficacité des outils de data visualisation,,,hard,data_databases,ROME,SKL_c4094712d495
 USKL_796816f2b4e2,,Former les équipes à l'utilisation des outils de données,,,hard,data_databases,ROME,SKL_54f6b50277a8
 USKL_444328939a41,,Concevoir des modèles prédictifs pour le business,,,hard,other_hard,ROME,SKL_3f4fb93bd0f8
 USKL_15ad6f675c3c,,Planifier des mises à jour systématiques des infrastructures de données,,,hard,data_databases,ROME,SKL_b23f1a30877e
@@ -2202,7 +2202,7 @@ USKL_d69cd96736e0,,Gérer les projets d'infrastructure IT,,,hard,systems_infrast
 USKL_436bc7d3fc82,,Diagnostiquer des dysfonctionnements sur des installations de réseau,,,hard,networks,ROME,SKL_d30ff688d610
 USKL_d67daa5ef476,,Mettre en place des solutions de virtualisation,,,hard,other_hard,ROME,SKL_99e96389a157
 USKL_402980990def,,Analyser les performances d'un système d'information,,,hard,other_hard,ROME,SKL_50d6456b747f
-USKL_c6ef95a99821,,Faire preuve de leadership,,,soft,soft_transversal,ROME,SKL_aa28aa5a9f1c
+USKL_c6ef95a99821,,Faire preuve de leadership,,,soft,soft_leadership,ROME,SKL_aa28aa5a9f1c
 USKL_4a047cb03b6c,,"Méthodes d'analyse (systémique, fonctionnelle, de risques, ...)",,,hard,methodology,ROME,SKL_ee8064121586
 USKL_261ead12dc82,,Intelligence artificielle,,,hard,ai_ml,ROME,SKL_403e473ff83b
 USKL_02cc12b2b67c,,Procédures de tests,,,hard,other_hard,ROME,SKL_5c6fcea869b4
@@ -2309,7 +2309,7 @@ USKL_273c9c61fb51,,Maintenir à jour la documentation technique et les manuels d
 USKL_69703fc916a1,,Respecter les normes de sécurité informatique dans le développement,,,hard,security,ROME,SKL_93423768e0fd
 USKL_a4837863f56c,,Argumenter les choix technologiques auprès des parties prenantes,,,hard,other_hard,ROME,SKL_1c262b09accc
 USKL_2994721c4d6a,,Déployer le code de façon conteneurisée,,,hard,cloud_devops,ROME,SKL_d1318a959a5c
-USKL_1298b9ec3d3f,,"Faire preuve de créativité, d'inventivité",,,soft,soft_transversal,ROME,SKL_a5a975eca638
+USKL_1298b9ec3d3f,,"Faire preuve de créativité, d'inventivité",,,soft,soft_cognitive,ROME,SKL_a5a975eca638
 USKL_b16630fa1c0d,HTML,HTML,,,hard,web,KAGGLE | ROME,SKL_48db99e58bbe | SKL_7ab923aeea6d
 USKL_87715e8c40ac,,Architecture web,,,hard,web,ROME,SKL_8cdc8c54c76e
 USKL_3be36ea9e819,,AutoItScript,,,hard,other_hard,ROME,SKL_e6410332ac65
@@ -3950,7 +3950,7 @@ USKL_8674a6a2eabe,Reading Comprehension,,,,hard,other_hard,ONET,SKL_c8988e651df2
 USKL_d3466420e70d,Active Listening,,,,hard,other_hard,ONET,SKL_3d61fc469c3f
 USKL_a1f23a1d30bb,Writing,,,,hard,other_hard,ONET,SKL_d4f36a2d7798
 USKL_51d43418a6c3,Speaking,,,,hard,other_hard,ONET,SKL_bf076076b707
-USKL_048a185f7804,Critical Thinking,,,,hard,other_hard,ONET,SKL_f428e4ac555b
+USKL_5010ed47bcaa,Critical Thinking,,think critically,,hard,other_hard,ONET | WEF,SKL_bfb628e53655 | SKL_f428e4ac555b
 USKL_6f0506e867b1,Active Learning,,active learning,,hard,ai_ml,CSO | ONET,SKL_783fb33429e5 | SKL_fd89a06cee45
 USKL_e06c8021d2c2,Learning Strategies,,,,hard,it_management,ONET,SKL_9bb6ef2e8bab
 USKL_4316aa181557,Monitoring,,System Monitoring,,hard,networks,KAGGLE | LIGHTCAST | ONET,SKL_3b3742796df8 | SKL_3c928f967afe | SKL_6f9adfc8c637
@@ -3982,13 +3982,13 @@ USKL_e4f097129bb7,Written Expression,,,,soft,soft_transversal,ONET,SKL_db7e0ce2a
 USKL_8ee63e387e98,Fluency of Ideas,,,,soft,soft_transversal,ONET,SKL_23d1aef04881
 USKL_ab71f1c8bb13,Originality,,,,soft,soft_transversal,ONET,SKL_0d8c86e774f0
 USKL_a90f7d874748,Problem Sensitivity,,,,soft,soft_transversal,ONET,SKL_ae5a17bcf408
-USKL_eb4fb262a335,Deductive Reasoning,,,,soft,soft_transversal,ONET,SKL_831ad790d2d7
-USKL_881187a20195,Inductive Reasoning,,,,soft,soft_transversal,ONET,SKL_7c4928fcb451
+USKL_eb4fb262a335,Deductive Reasoning,,,,soft,soft_cognitive,ONET,SKL_831ad790d2d7
+USKL_881187a20195,Inductive Reasoning,,,,soft,soft_cognitive,ONET,SKL_7c4928fcb451
 USKL_7e142a1ab157,Information Ordering,,,,soft,data_databases,LIGHTCAST | ONET,SKL_036f3d113bbc | SKL_5f941f323e7c
-USKL_c2c5f405e305,Category Flexibility,,,,soft,soft_transversal,ONET,SKL_4ef4030f2dd2
-USKL_0a8a7f36db2d,Mathematical Reasoning,,,,soft,soft_transversal,ONET,SKL_1fa4715aee9a
+USKL_c2c5f405e305,Category Flexibility,,,,soft,soft_self_management,ONET,SKL_4ef4030f2dd2
+USKL_0a8a7f36db2d,Mathematical Reasoning,,,,soft,soft_cognitive,ONET,SKL_1fa4715aee9a
 USKL_0621471f5b19,Number Facility,,,,soft,soft_transversal,ONET,SKL_6eb59efa8e79
-USKL_0c79d1526b7d,Flexibility of Closure,,,,soft,soft_transversal,ONET,SKL_8e823ad57eaf
+USKL_0c79d1526b7d,Flexibility of Closure,,,,soft,soft_self_management,ONET,SKL_8e823ad57eaf
 USKL_ec04fef56323,Visualization,,visualization,,soft,web,CSO | ONET,SKL_469a005ccae3 | SKL_d207032bb640
 USKL_403664042e54,Near Vision,,,,soft,soft_transversal,ONET,SKL_9eb47227e858
 USKL_93aeb4ef9c04,Speech Clarity,,,,soft,soft_transversal,ONET,SKL_8dade5c29560
@@ -4013,7 +4013,7 @@ USKL_6632dd9ab1ff,Apple iMovie,,,,hard,other_hard,ONET,SKL_33bf76912d32
 USKL_da44ccc8d01c,Apple iWork Keynote,,,,hard,other_hard,ONET,SKL_adaa297a2eb7
 USKL_98140f132cf1,Apple iWork Numbers,,,,hard,other_hard,ONET,SKL_3cd0c8281529
 USKL_a03ebc6d68ec,Apple iWork Pages,,,,hard,other_hard,ONET,SKL_981741ac4f48
-USKL_7e73c6c7fd62,Apple macOS,,Mac OS | macOS,,hard,networks,KAGGLE | LIGHTCAST | ONET,SKL_04f11403178c | SKL_9eaadad8e9a2 | SKL_ea0f7dfdd533
+USKL_b8c9dab797d1,macOS,,Apple macOS | Mac OS | macos,,hard,systems_infrastructure,DATAJOBS | KAGGLE | LIGHTCAST | ONET | ZENODO,SKL_04f11403178c | SKL_1eb0f0bb44d8 | SKL_245ca5d9afdd | SKL_9eaadad8e9a2 | SKL_ea0f7dfdd533
 USKL_bd590099e5e4,Atlassian JIRA,,,,hard,other_hard,ONET,SKL_8a54c888c8de
 USKL_6822d99b2c7f,Backbone.js,,,,hard,web,KAGGLE | LIGHTCAST | ONET,SKL_06e29ee21632 | SKL_2147a0febd80 | SKL_2ff52ce7a705
 USKL_bb5577b0173c,Billing software,,,,hard,programming_languages,ONET,SKL_8deab908eba1
@@ -4091,7 +4091,7 @@ USKL_af742ff4a462,MongoDB,,,,hard,data_databases,KAGGLE | LIGHTCAST | ONET,SKL_6
 USKL_c289f89697ee,Nagios,,,,hard,other_hard,LIGHTCAST | ONET,SKL_597a898a291d | SKL_aebaa430f86c
 USKL_f11f287134d4,Netscape Navigator,,,,hard,other_hard,ONET,SKL_15935f8cda49
 USKL_258f2945b53c,NetSuite ERP,,,,hard,other_hard,ONET,SKL_8807e10ea504
-USKL_49d201cfefab,Node.js,,,,hard,web,KAGGLE | LIGHTCAST | ONET,SKL_19c09cb00b2d | SKL_863bdffc9483 | SKL_c60de007a2c0
+USKL_7b28d8af6121,Node.js,,node.js,,hard,web,DATAJOBS | KAGGLE | LIGHTCAST | ONET | ZENODO,SKL_19c09cb00b2d | SKL_863bdffc9483 | SKL_9a86b53be913 | SKL_c60de007a2c0 | SKL_d55e424443ad
 USKL_aa2924fc684a,NortonLifeLock cybersecurity software,,,,hard,security,ONET,SKL_37655ce770f3
 USKL_7e74568d28dd,Objective C,,,,hard,other_hard,ONET,SKL_85b1f6363c26
 USKL_3983eadb8eee,Oracle Business Intelligence Enterprise Edition,,,,hard,data_databases,ONET,SKL_46e88be339d1
@@ -4126,7 +4126,7 @@ USKL_38e9f46f11e7,Quest Erwin Data Modeler,,,,hard,other_hard,ONET,SKL_560781df3
 USKL_e4888b3c1b50,Red Hat Enterprise Linux,,Red Hat Linux,,hard,systems_infrastructure,LIGHTCAST | ONET,SKL_2b011985311b | SKL_40c94a701990 | SKL_8ab2721182a1
 USKL_640a229c3fd2,Red Hat WildFly,,,,hard,other_hard,ONET,SKL_eff76123aadf
 USKL_94255b72d308,Relational database management software,,,,hard,data_databases,ONET,SKL_f3bfb31e3e81
-USKL_7664f44c376e,Ruby On Rails,,Ruby on Rails,,hard,programming_languages,KAGGLE | LIGHTCAST | ONET,SKL_032caca388b6 | SKL_7982194e9fa0 | SKL_941998b1a15f
+USKL_f86df01a5ba1,Ruby On Rails,,Ruby on Rails | ruby on rails | ruby-on-rails,,hard,programming_languages,DATAJOBS | KAGGLE | LIGHTCAST | ONET | ZENODO,SKL_032caca388b6 | SKL_7982194e9fa0 | SKL_7a6ee243453e | SKL_941998b1a15f | SKL_e71887d311cd
 USKL_d5fba0ab5f5d,Samba,,Samba (Software),,hard,networks,LIGHTCAST | ONET,SKL_17ea20e7e685 | SKL_920733bc425a
 USKL_c13d25fdaf4c,SAP Business Objects,,,,hard,other_hard,ONET,SKL_407d4aafc2a6
 USKL_493b3946622a,SAP Crystal Reports,,,,hard,other_hard,ONET,SKL_986a0e3a9f7a
@@ -4249,11 +4249,11 @@ USKL_be1e38ccc9be,Microsoft Power BI,,,,hard,other_hard,ONET,SKL_9186d4e6c3e1
 USKL_961987c87ff4,PowerShell,,Microsoft PowerShell | Microsoft Windows PowerShell | Windows PowerShell,,hard,programming_languages,KAGGLE | LIGHTCAST | ONET,SKL_3323980910d3 | SKL_47e153a43f16 | SKL_4f23d5776af1 | SKL_bab796767b98 | SKL_f0ca695ecf13
 USKL_63c20bb71519,Microsoft Publisher,,,,hard,other_hard,ONET,SKL_d86bf9f08651
 USKL_585fdd0399ec,Microsoft Team Foundation Server,,Team Foundation Server,,hard,programming_languages,LIGHTCAST | ONET,SKL_07c8d45ed285 | SKL_a050e8d858eb
-USKL_3afe19f3b57b,Microsoft Teams,,,,hard,networks,KAGGLE | ONET,SKL_0863ac3ef467 | SKL_7f518c92dcfe
+USKL_4749fc556d84,Microsoft Teams,,microsoft teams,,hard,other_hard,DATAJOBS | KAGGLE | ONET,SKL_0863ac3ef467 | SKL_7f518c92dcfe | SKL_b5de89795015
 USKL_199774b85a03,Microsoft Visual Basic for Applications VBA,,,,hard,programming_languages,ONET,SKL_16e721ee0783
 USKL_0f83454ab2e3,Microsoft Visual Basic.NET,,,,hard,programming_languages,ONET,SKL_b16918fc75e4
 USKL_b0aec3fee8d5,Microsoft Visual C# .NET,,,,hard,programming_languages,ONET,SKL_294be644b939
-USKL_bb02d392e860,Microsoft Windows,,microsoft windows | Windows,,hard,systems_infrastructure,CSO | KAGGLE | LIGHTCAST | ONET,SKL_1ed5f5c0db37 | SKL_6d6c7fcc1579 | SKL_c525c50c43fb | SKL_c8061bfbbcb0
+USKL_e734029990ca,Microsoft Windows,,microsoft windows | Windows | windows,,hard,systems_infrastructure,CSO | DATAJOBS | KAGGLE | LIGHTCAST | ONET | ZENODO,SKL_1ed5f5c0db37 | SKL_6d6c7fcc1579 | SKL_994d4ddb884b | SKL_b814d8064b38 | SKL_c525c50c43fb | SKL_c8061bfbbcb0
 USKL_74cc38b4e419,Migration testing software,,,,hard,programming_languages,ONET,SKL_f5376f6af2db
 USKL_3a98f75c4b8e,Minitab,,,,hard,other_hard,ONET,SKL_8cffefdf40ee
 USKL_934a59a58e19,Mutation testing software,,,,hard,programming_languages,ONET,SKL_e439c8b3fad8
@@ -4453,7 +4453,7 @@ USKL_4476038b2fe4,Chatbot software,,,,hard,programming_languages,ONET,SKL_f2be87
 USKL_be881fe4bc2e,Clustermatic,,,,hard,other_hard,ONET,SKL_ca4611342f2d
 USKL_ae40a01e0230,CMake,,,,hard,other_hard,LIGHTCAST | ONET,SKL_f3a3f48c8693 | SKL_f6dea72a7caf
 USKL_d8e33c326c51,Computational statistics software,,,,hard,programming_languages,ONET,SKL_7a5b256bf704
-USKL_89128f2a2115,Data visualization software,,,,hard,programming_languages,ONET,SKL_77b553ad6431
+USKL_89128f2a2115,Data visualization software,,,,hard,data_databases,ONET,SKL_77b553ad6431
 USKL_39ebc1a52c9b,Doxygen,,,,hard,other_hard,LIGHTCAST | ONET,SKL_9902a593c63b | SKL_a7bb2484c862
 USKL_d896a663e12e,Extensible Stylesheet Language Transformations (XSLT),,Extensible stylesheet language transformations XSLT,,hard,other_hard,LIGHTCAST | ONET,SKL_121daff6f5e2 | SKL_7077c4747054
 USKL_463ae6a2c62a,GitLab,,Gitlab,,hard,other_hard,LIGHTCAST | ONET,SKL_289fc2b140e4 | SKL_f523fe72a2e3
@@ -4468,7 +4468,7 @@ USKL_4cee4c147193,IBM Terraform,,,,hard,cloud_devops,ONET,SKL_2eec15108b98
 USKL_df53a62bf2eb,Intel Integrated Performance Primitives,,,,hard,other_hard,ONET,SKL_846f0daf1fd8
 USKL_44e89d4a28d9,Intel Math Kernel Library,,,,hard,other_hard,ONET,SKL_ae65372e76f0
 USKL_7cffd8131da6,Jenkins CI,,,,hard,cloud_devops,ONET,SKL_0ed74f44c582
-USKL_d906413fcf03,Kubernetes,,,,hard,cloud_devops,KAGGLE | LIGHTCAST | ONET,SKL_3fd011dd9df9 | SKL_99b301553401 | SKL_b1fbee363ce2
+USKL_c0168b47be45,Kubernetes,,kubernetes,,hard,cloud_devops,DATAJOBS | KAGGLE | LIGHTCAST | ONET | ZENODO,SKL_3fd011dd9df9 | SKL_5cc22aa00ef5 | SKL_99b301553401 | SKL_a164ec646a06 | SKL_b1fbee363ce2
 USKL_a50f971917b1,LangChain,,,,hard,other_hard,KAGGLE | ONET,SKL_39899f467fa2 | SKL_72e607733e3f
 USKL_918ea7b56bbb,List processing language LISP,,,,hard,other_hard,ONET,SKL_aefe98f842ef
 USKL_b70d85a592ce,Low-level virtual machine LLVM compilers,,,,hard,programming_languages,ONET,SKL_677a9261be08
@@ -4479,7 +4479,7 @@ USKL_9c451b36cc7f,Multisensory data representation software,,,,hard,programming_
 USKL_36bccb1ad38e,Object oriented development environment software,,,,hard,programming_languages,ONET,SKL_6b5351526bce
 USKL_f36f37158ae3,Open Graphics Library OpenGL,,,,hard,other_hard,ONET,SKL_efd4265502f0
 USKL_ded72f78439e,Optimization software,,,,hard,programming_languages,ONET,SKL_f400a224a05f
-USKL_46cd7e7cdffc,pandas,,,,hard,other_hard,ONET,SKL_cbf13f5af024
+USKL_984ed40cbb78,pandas,,,,hard,other_hard,DATAJOBS | ONET,SKL_1e0df81fa6f6 | SKL_cbf13f5af024
 USKL_e0e101ba6d00,Parallel systems software,,,,hard,programming_languages,ONET,SKL_750f36903fb0
 USKL_9fcd7a02ccc7,Perforce Software Configuration Management System,,,,hard,programming_languages,ONET,SKL_ad190627c36d
 USKL_dba765249a9c,Plug-in file software,,,,hard,programming_languages,ONET,SKL_31939ec98017
@@ -4488,7 +4488,7 @@ USKL_168d2f7e85cf,Polhemus Fasttrack System,,,,hard,other_hard,ONET,SKL_427bb727
 USKL_28dcd38a7327,Prometheus,,Prometheus (Software),,hard,web,KAGGLE | LIGHTCAST | ONET,SKL_0646243a91a4 | SKL_2cfe931c4a4c | SKL_c7830e24b9d6
 USKL_6ed770291fc5,PTC Creo Parametric,,,,hard,other_hard,ONET,SKL_5aed07e5423c
 USKL_f99c52e3bde7,PyTorch,,PyTorch (Machine Learning Library),,hard,ai_ml,KAGGLE | LIGHTCAST | ONET,SKL_18541275428e | SKL_8bfca637e672 | SKL_96bbb5a2518d
-USKL_8754f5b3154c,Redis,,,,hard,web,KAGGLE | LIGHTCAST | ONET,SKL_d395252a6752 | SKL_f052441a8df3 | SKL_f9d99d212cd8
+USKL_653ff55973f5,Redis,,redis,,hard,data_databases,DATAJOBS | KAGGLE | LIGHTCAST | ONET | ZENODO,SKL_0aa91c9d0d7e | SKL_cfd01b1a2bfd | SKL_d395252a6752 | SKL_f052441a8df3 | SKL_f9d99d212cd8
 USKL_5e2ff1aaba5a,Relational database management system software,,,,hard,data_databases,ONET,SKL_b5b0756a9ddb
 USKL_b01d285d66d0,Rice Simulator for ILP Multiprocessors RSIM,,,,hard,other_hard,ONET,SKL_301c4a37c8ca
 USKL_d1faed45c24d,Scikit-learn,,Scikit-learn (Machine Learning Library),,hard,ai_ml,KAGGLE | LIGHTCAST | ONET,SKL_4bf1d47e5519 | SKL_a2bc560a6883 | SKL_d11672107a8d
@@ -4988,7 +4988,7 @@ USKL_8bea3fa5fd3f,Software distribution management software,,,,hard,programming_
 USKL_811dd8d7dbbc,SonarQube,,,,hard,other_hard,LIGHTCAST | ONET,SKL_7603a9d0e714 | SKL_95fc283db324
 USKL_600d476baf27,Java Persistence API,,Sun Microsystems Java Persistence API,,hard,programming_languages,LIGHTCAST | ONET,SKL_d9d7250f43c6 | SKL_ef283ec07b57
 USKL_0ca1f130e865,Visible Razor,,,,hard,other_hard,ONET,SKL_67af9e2df32e
-USKL_6cc3faeacf29,Vue.js,,,,hard,web,KAGGLE | LIGHTCAST | ONET,SKL_33ed010d9708 | SKL_a2404009d347 | SKL_a6efdbea9c98
+USKL_6ab192c7d5a1,Vue.js,,vue.js,,hard,web,DATAJOBS | KAGGLE | LIGHTCAST | ONET | ZENODO,SKL_33ed010d9708 | SKL_731215ab210e | SKL_a2404009d347 | SKL_a6efdbea9c98 | SKL_f02fd12d78e8
 USKL_5a1ec75df288,Web application software,,,,hard,web,ONET,SKL_1d47e7c91fe2
 USKL_721492cb6444,Win CE,,,,hard,other_hard,ONET,SKL_39dc48edafa0
 USKL_531b568a57f0,Wind River VxWorks,,,,hard,other_hard,ONET,SKL_d844e32b2b7b
@@ -5339,7 +5339,7 @@ USKL_38603f3c0681,Business intelligence software,,,,hard,data_databases,ONET,SKL
 USKL_251570140135,Flask,,Flask (Web Framework),,hard,web,KAGGLE | LIGHTCAST | ONET,SKL_23fb77173c34 | SKL_b7f56ce8ea38 | SKL_d8bd1c33de95
 USKL_47023493d83c,Julia,,Julia (Programming Language),,hard,programming_languages,KAGGLE | LIGHTCAST | ONET,SKL_6ea4eca1c77b | SKL_a8c3cf66d5c1 | SKL_b4e564d8a446
 USKL_de7b245c0fba,Jupyter software,,,,hard,programming_languages,ONET,SKL_ca6b8ad543b8
-USKL_7936d4c83401,Keras,,Keras (Neural Network Library),,hard,ai_ml,KAGGLE | LIGHTCAST | ONET,SKL_acc417f4229e | SKL_b825f84b78da | SKL_fb7bd4a83795
+USKL_ca70d3dc301f,Keras,,Keras (Neural Network Library) | keras,,hard,other_hard,DATAJOBS | KAGGLE | LIGHTCAST | ONET,SKL_acc417f4229e | SKL_b825f84b78da | SKL_e5e35d0ddcce | SKL_fb7bd4a83795
 USKL_e3974a4a430f,Kubeflow,,,,hard,ai_ml,KAGGLE | LIGHTCAST | ONET,SKL_153dc46cafa6 | SKL_b2f3f5aa2449 | SKL_bf97780ba1ce
 USKL_d921dec2afe5,MapReduce big data software,,,,hard,data_databases,ONET,SKL_07316b3e898b
 USKL_1431743059e2,MLflow,,Mlflow,,hard,ai_ml,KAGGLE | LIGHTCAST | ONET,SKL_24b0e7ee199b | SKL_60d9633e1bf2 | SKL_7646ded4e542
@@ -5914,7 +5914,7 @@ USKL_2558d2629552,tactile feedback,,,,,web,CSO,SKL_bfdf9c9abd54
 USKL_a63b5a9cd311,tangible interfaces,,tangible interface,,,web,CSO,SKL_d942710c4779
 USKL_b5d81c465517,usability evaluation,,usability testing,,,web,CSO,SKL_af9c5105f6f2
 USKL_3fa792d7582d,user centered designs,,user centered design | user-centered design,,,web,CSO,SKL_8ca715d632a3
-USKL_322b8f35a1cb,User Experience,,user experience,,hard,web,CSO | ECF,SKL_7b60c33062db | SKL_a066f2cc5da0
+USKL_7e438184f275,User Experience,,user experience | user-experience,,hard,web,CSO | ECF | ZENODO,SKL_79e77ac4a537 | SKL_7b60c33062db | SKL_a066f2cc5da0
 USKL_626f5698d198,user interface designs,,user interface design,,,web,CSO,SKL_6925d79a15ef
 USKL_520edb0d2fd1,vibrotactile,,,,,web,CSO,SKL_18ac50cd7592
 USKL_a9f3bccc698f,work environments,,,,,web,CSO,SKL_610e0fa574fa
@@ -6625,7 +6625,7 @@ USKL_2bb572e5fa00,Cellular Data Communication Protocols,,,,,networks,LIGHTCAST,S
 USKL_452d4f7eaf6d,Cellular Digital Packet Data,,,,,networks,LIGHTCAST,SKL_425407b165ea
 USKL_bec4f5994ab6,Cellular Networks,,,,,networks,LIGHTCAST,SKL_ab64224ebd80
 USKL_2f6db5619aba,Cellular Repeaters,,,,,networks,LIGHTCAST,SKL_69e2765991ee
-USKL_18a333f4a6e0,CentOS,,,,,systems_infrastructure,LIGHTCAST,SKL_17ac5efbf01b
+USKL_f7769f3564d6,CentOS,,centos,,hard,systems_infrastructure,DATAJOBS | LIGHTCAST,SKL_16dbf2d64e50 | SKL_17ac5efbf01b
 USKL_36316afd83a3,Centralized Storage Systems,,,,,data_databases,LIGHTCAST,SKL_4e09f77d4e5f
 USKL_ab7f850e0918,Certificate Authority,,,,,security,LIGHTCAST,SKL_03e062c5ed8a
 USKL_20f6ddab018d,Certificate Signing Request,,,,,security,LIGHTCAST,SKL_0a740b14199d
@@ -6896,7 +6896,7 @@ USKL_662aa9f87d0c,Context-Based Access Controls,,,,,security,LIGHTCAST,SKL_72dff
 USKL_e2b89091286d,Contextual Query Language,,,,,data_databases,LIGHTCAST,SKL_8901632f84a4
 USKL_45ef96c5bae7,Continuous Availability,,,,,systems_infrastructure,LIGHTCAST,SKL_6ddd77684425
 USKL_6203701ee5d5,Continuous Delivery,,,,,programming_languages,LIGHTCAST,SKL_80b4eb9e9e8f
-USKL_3b0abbd6dbd5,Continuous Deployment,,,,,programming_languages,LIGHTCAST,SKL_8ee1a4de3f35
+USKL_3afcfd00fe4f,Continuous Deployment,,continuous-deployment,,hard,other_hard,LIGHTCAST | ZENODO,SKL_20f57807db41 | SKL_8ee1a4de3f35
 USKL_391196705c0a,Continuous Integration,,,,,programming_languages,LIGHTCAST,SKL_f59d9b053a39
 USKL_5e845900f7fe,Control Communications,,,,,systems_infrastructure,LIGHTCAST,SKL_0cb217c04fa0
 USKL_5403d0e561c3,Control-M (Batch Scheduling Software),,,,,cloud_devops,LIGHTCAST,SKL_a9416a475ce9
@@ -6983,7 +6983,7 @@ USKL_5e1b125a07d6,Cyclomatic Complexity,,,,,programming_languages,LIGHTCAST,SKL_
 USKL_4b14ab96ba4e,Cygwin,,,,,programming_languages,LIGHTCAST,SKL_549f51ec49ba
 USKL_42351a585c65,Cypher Query Language,,,,,data_databases,LIGHTCAST,SKL_b237c3e20389
 USKL_a2d305fa7134,CypressIO,,,,,methodology,LIGHTCAST,SKL_cc743a03af90
-USKL_70c292082685,D3.js,,,,,web,KAGGLE | LIGHTCAST,SKL_0e8f35c4633d | SKL_9e1e85a6b161
+USKL_df73d78044de,D3.js,,d3.js,,hard,web,KAGGLE | LIGHTCAST | ZENODO,SKL_0e8f35c4633d | SKL_23477a87d3c6 | SKL_9e1e85a6b161
 USKL_3a4afea7b91f,DB2 SQL,,,,,data_databases,LIGHTCAST,SKL_7fb65d31b1fe
 USKL_69e86f8530fd,DB2/400,,,,,data_databases,LIGHTCAST,SKL_579a81ecd5c2
 USKL_f98e6dd60b26,DBArtisan,,,,,data_databases,LIGHTCAST,SKL_78333c6b56c2
@@ -7440,7 +7440,7 @@ USKL_d5f2f93bfe23,Embedded SQL,,,,,data_databases,LIGHTCAST,SKL_621776ecd0ed
 USKL_073526b263ce,Embedded Software,,,,,knowledge_general,LIGHTCAST,SKL_6490847ee491
 USKL_bad7208e5461,Embedded Video,,,,,web,LIGHTCAST,SKL_c2743c2c2777
 USKL_c71df17a5d34,Ember CLI,,,,,web,LIGHTCAST,SKL_034782c21fae
-USKL_1065b02d2b40,Ember.js,,,,,web,KAGGLE | LIGHTCAST,SKL_06358acaf93a | SKL_9e6c3b5b4e30
+USKL_2fb802536e2c,Ember.js,,ember.js,,hard,web,KAGGLE | LIGHTCAST | ZENODO,SKL_06358acaf93a | SKL_9e6c3b5b4e30 | SKL_bfcf29820ba4
 USKL_0f6bcdfd4c72,Emerging Technologies,,,,,knowledge_general,LIGHTCAST,SKL_c50b4b0fe509
 USKL_aeedfb09dd74,Emulators,,,,,cloud_devops,LIGHTCAST,SKL_ca0fdab5dc97
 USKL_f5fab608a789,Encapsulation (Networking),,,,,networks,LIGHTCAST,SKL_b2703fb13d80
@@ -8627,7 +8627,7 @@ USKL_ecc06a468db8,Microcode,,,,,systems_infrastructure,LIGHTCAST,SKL_543590dd92d
 USKL_ce8c9d7da306,Microcomputer,,,,,systems_infrastructure,LIGHTCAST,SKL_eb4fe2a2f895
 USKL_7a5c2ebcf1bc,Microcontrollers,,,,,systems_infrastructure,LIGHTCAST,SKL_719204f5cb23
 USKL_a487f3b238fc,Micronaut Framework,,,,,programming_languages,LIGHTCAST,SKL_2520ed90a15b
-USKL_f1469a06d9d0,Microservices,,,,,ai_ml,KAGGLE | LIGHTCAST,SKL_028c8cc4e31f | SKL_120e5acb6dd8
+USKL_79d1ee2820ef,Microservices,,microservices,,hard,ai_ml,KAGGLE | LIGHTCAST | ZENODO,SKL_028c8cc4e31f | SKL_120e5acb6dd8 | SKL_cf30d21501a5
 USKL_9b8e3064f0b6,Microservices Development,,,,,programming_languages,LIGHTCAST,SKL_64c33cc82380
 USKL_5689e8c5b4eb,Microservices Security,,,,,security,LIGHTCAST,SKL_b6bdcdc619a2
 USKL_aab0d4504928,Microsites,,,,,web,LIGHTCAST,SKL_538a341cf66b
@@ -8737,7 +8737,7 @@ USKL_2c76910fd67d,Mobileiron,,,,,it_management,LIGHTCAST,SKL_d050cd5d30ad
 USKL_0c1a1f27835c,Mocha,,Mocha (JavaScript Framework),,,ai_ml,KAGGLE | LIGHTCAST,SKL_1f983df7f845 | SKL_52644c15b221 | SKL_d8dda965f337
 USKL_08cf13e35741,Mockito,,,,,methodology,LIGHTCAST,SKL_e4d337fff113
 USKL_a319dba1cfe8,Mod Rewrite,,,,,programming_languages,LIGHTCAST,SKL_0ffe3a2fa6f3
-USKL_9ae5b563bea0,Model View Controller,,,,,programming_languages,LIGHTCAST,SKL_7805582cbdcf
+USKL_9e62f54e609d,Model View Controller,,model-view-controller,,hard,methodology,LIGHTCAST | ZENODO,SKL_71061d2bf2a9 | SKL_7805582cbdcf
 USKL_8852939c46cd,Model View Presenter,,,,,programming_languages,LIGHTCAST,SKL_4e12008143af
 USKL_44b1f30120ee,Model View ViewModel,,,,,programming_languages,LIGHTCAST,SKL_c5ac6f58ad8c
 USKL_bff605edc2da,Model-Driven Development,,,,,programming_languages,LIGHTCAST,SKL_5a3c417413e7
@@ -8927,7 +8927,7 @@ USKL_d122c2fbe571,Neutral Build,,,,,programming_languages,LIGHTCAST,SKL_190d61e2
 USKL_06ff18ec1f0c,New Relic (SaaS),,,,,methodology,LIGHTCAST,SKL_c9149b33fe5b
 USKL_b4ef81fe5e67,Next Unit Of Computing (NUC),,,,,systems_infrastructure,LIGHTCAST,SKL_34ac509e77d7
 USKL_e4f3fd60a66e,Next-Generation Networks,,,,,networks,LIGHTCAST,SKL_9ec91104dac0
-USKL_cb9c3d95a8fe,Next.js,,,,,web,KAGGLE | LIGHTCAST,SKL_2c2af062d232 | SKL_ee21dcc70887
+USKL_30279fc360e0,Next.js,,next.js,,hard,web,DATAJOBS | KAGGLE | LIGHTCAST,SKL_2c2af062d232 | SKL_98bbf2f104b4 | SKL_ee21dcc70887
 USKL_cd93d5b14e92,NgRx,,NgRx (Framework),,,programming_languages,KAGGLE | LIGHTCAST,SKL_5d55f4f7b7d1 | SKL_9701f7aa2b7f
 USKL_56c8fe8ef0ff,NgRx Store,,,,,programming_languages,LIGHTCAST,SKL_1b987f9948b7
 USKL_e176785ca431,NGINX,,Nginx,,,cloud_devops,KAGGLE | LIGHTCAST,SKL_b579b4bb62eb | SKL_ddd908c37427
@@ -9418,7 +9418,7 @@ USKL_2792a4a620a8,Rate Limiting,,,,,security,LIGHTCAST,SKL_6847bdb8814e
 USKL_b4d0af3b2c47,Rational Rhapsody,,,,,programming_languages,LIGHTCAST,SKL_c65db828e364
 USKL_6d9597610caa,RavenDB,,,,,data_databases,LIGHTCAST,SKL_1a07bf83c337
 USKL_d67811f473dd,React Jsx,,,,,web,LIGHTCAST,SKL_3a14f8f89cbd
-USKL_fa829c011ff3,React.js,,,,,web,LIGHTCAST,SKL_411185098410
+USKL_ede6702aaf97,React.js,,react.js,,hard,web,DATAJOBS | LIGHTCAST,SKL_411185098410 | SKL_97c3fc9e9761
 USKL_6891803548a2,Reactstrap,,,,,web,LIGHTCAST,SKL_e97bdeff8ae9
 USKL_8881a34ef7dc,Read Code,,,,,knowledge_general,LIGHTCAST,SKL_f800fe6f85eb
 USKL_cb091623edfc,Reasoning Systems,,,,,ai_ml,LIGHTCAST,SKL_e3a0541667e7
@@ -10029,7 +10029,7 @@ USKL_d8fefae7f676,System Status,,,,,systems_infrastructure,LIGHTCAST,SKL_07cdb77
 USKL_6910d3a9565f,System Support,,,,,it_management,LIGHTCAST,SKL_2145cec0c82e
 USKL_d3bebbdf0f47,SystemC,,,,,programming_languages,LIGHTCAST,SKL_db4659c91844
 USKL_b034bab4c4d7,SystemJS,,,,,web,KAGGLE | LIGHTCAST,SKL_3201b9304262 | SKL_608e434d5b9f
-USKL_2229f9a2403f,Systems Analysis,,,,,systems_infrastructure,LIGHTCAST,SKL_990e6b93280a
+USKL_66093f7a7400,Systems Analysis,,Systems analysis,,soft,soft_cognitive,LIGHTCAST | WEF,SKL_767382232493 | SKL_990e6b93280a
 USKL_b64f01b59ff5,Systems Development,,,,,systems_infrastructure,LIGHTCAST,SKL_291419f67374
 USKL_ce9498610139,Systems Development Life Cycle,,,,,systems_infrastructure,LIGHTCAST,SKL_0a5928a37871
 USKL_ff5418b358d5,Systems Engineering,,,,,systems_infrastructure,LIGHTCAST,SKL_4ac16bc8f6b5
@@ -10245,7 +10245,7 @@ USKL_98954b7f9e5c,Unified Extensible Firmware Interface,,,,,systems_infrastructu
 USKL_3229b9539a72,Unified Process,,,,,methodology,LIGHTCAST,SKL_e2da441ee9c1
 USKL_fd23a1c111d3,Unisys DMSII,,,,,data_databases,LIGHTCAST,SKL_2f493c4fa084
 USKL_116bb66d0315,Unit Test-Driven Development,,,,,programming_languages,LIGHTCAST,SKL_b560506285fe
-USKL_ed8d135be543,Unit Testing,,,,,ai_ml,KAGGLE | LIGHTCAST,SKL_a0bf964777ac | SKL_dcdb1c739cb2
+USKL_52295add7185,Unit Testing,,unit-testing,,hard,methodology,KAGGLE | LIGHTCAST | ZENODO,SKL_a0bf964777ac | SKL_b434dcea8aa5 | SKL_dcdb1c739cb2
 USKL_e3632ae90fbb,United Nations/Electronic Data Interchange For Administration Commerce And Transport (UN/EDIFACT),,,,,data_databases,LIGHTCAST,SKL_0a15f3b953c8
 USKL_040664cf8280,United States Government Configuration Baseline (USGCB),,,,,security,LIGHTCAST,SKL_451edf87ad79
 USKL_b7ec578b6000,Unity Container,,,,,programming_languages,LIGHTCAST,SKL_d1d13eb10227
@@ -11031,3 +11031,141 @@ USKL_fe7078f2335d,Process Improvement,,,,hard,methodology,ECF,SKL_266315e8f521
 USKL_9d0e3b2bbd2d,ICT Quality Management,,,,hard,methodology,ECF,SKL_8f65f28c99c7
 USKL_544a4dc4cc4d,Business Change Management,,,,hard,it_management,ECF,SKL_0b096b1bc3db
 USKL_7739fd1091cf,Information Systems Governance,,,,hard,it_management,ECF,SKL_9e6e2706f94d
+USKL_2ada18a17b20,dax,,,,hard,data_databases,DATAJOBS,SKL_9439dbdeaefe
+USKL_e33d00c9951d,databricks,,,,hard,cloud_devops,DATAJOBS,SKL_5ecc364373f0
+USKL_cc793f435755,looker,,,,hard,data_databases,DATAJOBS,SKL_483277f84bcd
+USKL_ac19d2359a83,matplotlib,,,,hard,data_databases,DATAJOBS,SKL_da6bbe034826
+USKL_eb9cc62bd3ca,mongo,,,,hard,programming_languages,DATAJOBS,SKL_74ae70591117
+USKL_cacf54f91608,flow,,,,hard,other_hard,DATAJOBS,SKL_cf5d8c1a3f18
+USKL_5b4ccf34d017,vba,,,,hard,programming_languages,DATAJOBS,SKL_e6850be14b13
+USKL_bec6fefaf919,cognos,,,,hard,data_databases,DATAJOBS,SKL_f0bea18359e1
+USKL_135a11d2cba1,vue,,,,hard,web,DATAJOBS,SKL_97a15fc7b843
+USKL_df4743a56e99,golang,,,,hard,programming_languages,DATAJOBS,SKL_51f27fa594bf
+USKL_c86d16633740,express,,,,hard,web,DATAJOBS,SKL_8d512f15875c
+USKL_6e81842a213b,ssis,,,,hard,data_databases,DATAJOBS,SKL_18720bd0b661
+USKL_069f3050309c,terminal,,,,hard,other_hard,DATAJOBS,SKL_2c5fb2d1f8d1
+USKL_67bf695ebf5c,couchbase,,,,hard,data_databases,DATAJOBS,SKL_c8cc49cf3bf0
+USKL_028e6a02a9f5,redhat,,,,hard,systems_infrastructure,DATAJOBS,SKL_ad6fdc7aa891
+USKL_2bcb4c5158e7,electron,,,,hard,other_hard,DATAJOBS,SKL_b9a54bccb782
+USKL_f6252c379c37,no-sql,,,,hard,programming_languages,DATAJOBS,SKL_493510213fbd
+USKL_cbfad5cb4ac8,datarobot,,,,hard,data_databases,DATAJOBS,SKL_eb4a6eefe436
+USKL_132cd8ea08c1,ssrs,,,,hard,data_databases,DATAJOBS,SKL_9861aa9629dc
+USKL_028d3954a3ba,tidyverse,,,,hard,other_hard,DATAJOBS,SKL_08f74cb408bd
+USKL_913455754826,rshiny,,,,hard,other_hard,DATAJOBS,SKL_ca8217f3a94b
+USKL_d870a3d142f9,plotly,,,,hard,data_databases,DATAJOBS,SKL_f6e3d6c7d30e
+USKL_ebc3bd6b4c97,unify,,,,hard,other_hard,DATAJOBS,SKL_110b92d5ef9c
+USKL_76fddc8f8533,spreadsheet,,,,hard,data_databases,DATAJOBS,SKL_438a8ba690f6
+USKL_4e51f88921b7,atlassian,,,,hard,other_hard,DATAJOBS,SKL_3596d18e6a1b
+USKL_9197494382ef,seaborn,,,,hard,data_databases,DATAJOBS,SKL_a45d435f0a09
+USKL_8be3965d5e0f,ggplot2,,,,hard,data_databases,DATAJOBS,SKL_bf31332be6aa
+USKL_96f1efb50cf2,sheets,,,,hard,data_databases,DATAJOBS,SKL_98723039d5da
+USKL_8d380b34dec7,powerbi,,,,hard,data_databases,DATAJOBS,SKL_09e66c122c47
+USKL_75aa460a7b31,debian,,,,hard,systems_infrastructure,DATAJOBS,SKL_d01e35a61c4c
+USKL_abb097b9e64e,planner,,,,hard,other_hard,DATAJOBS,SKL_f7e933778d2f
+USKL_1966373b155f,pulumi,,,,hard,other_hard,DATAJOBS,SKL_31397096f7b3
+USKL_b7f7a2496efc,dplyr,,,,hard,other_hard,DATAJOBS,SKL_1debe6adc85e
+USKL_8c772d2f3489,svn,,,,hard,other_hard,DATAJOBS,SKL_b45c02bc3bd2
+USKL_eb077d910da7,watson,,,,hard,cloud_devops,DATAJOBS,SKL_1814e958f27e
+USKL_33b7a23c6675,symphony,,,,hard,other_hard,DATAJOBS,SKL_8c5892e57cbc
+USKL_b75c252816d7,wire,,,,hard,other_hard,DATAJOBS,SKL_dee3c9496a92
+USKL_364e14cf2340,unreal,,,,hard,other_hard,DATAJOBS,SKL_ca3bb1e1f767
+USKL_e8ca08c144ff,teamwork,,team player | team collaboration | collaboration | work in a team | team work | build team spirit | work in teams,,soft,soft_collaboration,SOFTSKILLS,SKL_6145c8f6094e
+USKL_80e1eca8c5b4,Communication,,communication | communication skills | verbal communication | written communication | excellent communication skills | communicate effectively | address an audience | communicate,,soft,soft_collaboration,SOFTSKILLS | WEF,SKL_eab71384e56e | SKL_eb7ec1104598
+USKL_c8a5d0c1c5f2,leadership,,leadership skills | lead a team | team leadership | display leadership | lead others,,soft,soft_leadership,SOFTSKILLS,SKL_00fb7f292966
+USKL_a9d4b47334ad,Problem solving,,problem solving | problem-solving | problem solving skills | analytical problem solving | solving problems | troubleshooting | identify problems | solve problems,,soft,soft_cognitive,SOFTSKILLS | WEF,SKL_4c2250dd5932 | SKL_4fd06c29ae7d
+USKL_5bd64b654cb3,time management,,manage time | meet deadlines | prioritisation | prioritization | manage workload,,soft,soft_self_management,SOFTSKILLS,SKL_7d87f1befa45
+USKL_1ecef094afc0,flexibility,,adaptability | adaptable | flexible | adapt to change | versatility,,soft,soft_self_management,SOFTSKILLS,SKL_f5da1d19e7e7
+USKL_3e1db018f7cd,Creativity,,creativity | creative | creative thinking | innovation | think creatively | express yourself creatively,,soft,soft_cognitive,SOFTSKILLS | WEF,SKL_01334a2de949 | SKL_a9654a4fb820
+USKL_b3ac2ed637de,emotional intelligence,,emotional quotient | self-awareness | empathy | social awareness,,soft,soft_transversal,SOFTSKILLS,SKL_dc52a0f84a4e
+USKL_bf0002b30a6f,work ethic,,strong work ethic | professional work ethic | diligence | dedication | commitment,,soft,soft_transversal,SOFTSKILLS,SKL_6198a403d2bd
+USKL_5ace3ee9272d,Attention to detail,,attention to detail | detail-oriented | detail oriented | attention to details | meticulous | attend to detail,,soft,soft_self_management,SOFTSKILLS | WEF,SKL_45ec4783f179 | SKL_83cf14a025a7
+USKL_22eafad5c469,interpersonal skills,,interpersonal | interpersonal communication | people skills | relationship building | build networks,,soft,soft_collaboration,SOFTSKILLS,SKL_a21c11507a22
+USKL_a8fa624183dd,decision making,,decision-making | make decisions | sound judgement | judgement,,soft,soft_cognitive,SOFTSKILLS,SKL_234f005d177a
+USKL_6e33eaf3b603,responsibility,,accountability | sense of responsibility | take responsibility | reliability | assume responsibility | ownership,,soft,soft_self_management,SOFTSKILLS,SKL_cf6d6ca72a5d
+USKL_7a529d5f982b,professionalism,,professional attitude | professional conduct | courtesy | integrity at work,,soft,soft_transversal,SOFTSKILLS,SKL_38a63f23c242
+USKL_47e2d4e58576,conflict resolution,,resolve conflict | resolving conflict | conflict management | manage disagreements,,soft,soft_transversal,SOFTSKILLS,SKL_c1e74249f29f
+USKL_108329abf03f,presentation skills,,presentation | presenting | present to stakeholders | public speaking,,soft,soft_transversal,SOFTSKILLS,SKL_b05216a31e2b
+USKL_89b25331cecb,self-motivation,,self-motivated | self-starter | highly motivated | proactive | proactivity | autonomy | ability to work independently,,soft,soft_self_management,SOFTSKILLS,SKL_1fb01dfa5894
+USKL_a3bc086dab86,positive attitude,,positive | enthusiasm | enthusiastic | optimism | can-do attitude,,soft,soft_transversal,SOFTSKILLS,SKL_7a90560223bc
+USKL_aa9568a4370c,integrity,,honesty | trustworthiness | ethics | demonstrate trustworthiness,,soft,soft_transversal,SOFTSKILLS,SKL_08bfaa34c15f
+USKL_804f90fe8d6d,organization,,organisation | organized | organised | organizational skills | organisational skills | planning,,soft,soft_self_management,SOFTSKILLS,SKL_ed4d4f6b27a5
+USKL_582975d456c0,continuous learning,,willingness to learn | eager to learn | fast learner | self-learning | demonstrate willingness to learn | curiosity,,soft,soft_learning,SOFTSKILLS,SKL_f1fbeb99bac2
+USKL_2790e27da431,java-ee,,,,hard,programming_languages,ZENODO,SKL_c237dccb9700
+USKL_23e33992ed56,amazon-web-services,,,,hard,systems_infrastructure,ZENODO,SKL_bfdc40d2540a
+USKL_7d8e8db70e45,angularjs,,,,hard,web,ZENODO,SKL_8062f41c8fc4
+USKL_d4afcc158e09,spring-boot,,,,hard,other_hard,ZENODO,SKL_abed5c5e032e
+USKL_35aaccf7133a,apache-kafka,,,,hard,systems_infrastructure,ZENODO,SKL_8c54f6c262d8
+USKL_936ffb9f6ab7,spring-mvc,,,,hard,other_hard,ZENODO,SKL_0bdf22018108
+USKL_3e2b3fe7589c,distributed-system,,,,hard,systems_infrastructure,ZENODO,SKL_2cde56c8dbcb
+USKL_012197ae8833,reactjs,,,,hard,web,ZENODO,SKL_02baf16953ce
+USKL_0ed78285d50a,soa,,,,hard,methodology,ZENODO,SKL_ef102c6a628e
+USKL_db725fb8a145,apache-spark,,,,hard,data_databases,ZENODO,SKL_1cfb819fe347
+USKL_7da6137ad48a,rest,,,,hard,data_databases,ZENODO,SKL_372d518e892c
+USKL_93204b685cde,continuous-integration,,,,hard,other_hard,ZENODO,SKL_538e995a9526
+USKL_3440c53adf15,qa,,,,hard,methodology,ZENODO,SKL_8fb286d94f90
+USKL_54e1e54ce0c2,web-services,,,,hard,systems_infrastructure,ZENODO,SKL_612c95dc5dd3
+USKL_96099f70d856,symfony2,,,,hard,other_hard,ZENODO,SKL_704c138dc566
+USKL_d744bec33edb,java-8,,,,hard,programming_languages,ZENODO,SKL_2fabfef3a6d8
+USKL_64aea51b32ff,project-management,,,,hard,methodology,ZENODO,SKL_ac8e5af76b97
+USKL_8055ec6187a6,asp.net-web-api,,,,hard,web,ZENODO,SKL_efed3440d7da
+USKL_164d9d69739f,asp.net-mvc,,,,hard,programming_languages,ZENODO,SKL_fbf8a567928d
+USKL_aa6c9c625a12,automated-tests,,,,hard,methodology,ZENODO,SKL_447ac64d23c0
+USKL_88f1255cf086,data-science,,,,hard,data_databases,ZENODO,SKL_e6463d7c440c
+USKL_848a6e05245a,saas,,,,hard,methodology,ZENODO,SKL_7be897e1f4b1
+USKL_44e5181da2f3,c#-4.0,,,,hard,programming_languages,ZENODO,SKL_3198ea77ac6f
+USKL_03e70b58f045,aws-lambda,,,,hard,systems_infrastructure,ZENODO,SKL_e6ea75d92466
+USKL_6545566433ea,.net-core,,,,hard,other_hard,ZENODO,SKL_5c509561c886
+USKL_7e5ff9c7d321,google-cloud-platform,,,,hard,systems_infrastructure,ZENODO,SKL_f1983e5cba17
+USKL_7a5e81c2c41f,tsql,,,,hard,programming_languages,ZENODO,SKL_2e432fdeef4a
+USKL_59c39e8b6f82,bigdata,,,,hard,data_databases,ZENODO,SKL_b09308d46f15
+USKL_404f534fbab4,sql-server,,,,hard,data_databases,ZENODO,SKL_131e52204085
+USKL_d8fc7848b705,user-interface,,,,hard,methodology,ZENODO,SKL_678ec2172e19
+USKL_1a65228093a0,wpf,,,,hard,other_hard,ZENODO,SKL_30483da63495
+USKL_466b34297abd,wcf,,,,hard,other_hard,ZENODO,SKL_24df9a2011bf
+USKL_45a64e35fd6e,osx,,,,hard,systems_infrastructure,ZENODO,SKL_65090ebefde4
+USKL_67bc11461fc0,mvvm,,,,hard,methodology,ZENODO,SKL_a4b392bff07e
+USKL_8e9d2602a1eb,react-native,,,,hard,web,ZENODO,SKL_c73e473d26fc
+USKL_614553c533db,rx-java,,,,hard,programming_languages,ZENODO,SKL_49c503b1e16f
+USKL_992c317b4bf0,react-redux,,,,hard,web,ZENODO,SKL_5511bf9abb23
+USKL_c384f9ec796b,iphone,,,,hard,systems_infrastructure,ZENODO,SKL_f946136934cc
+USKL_00d90fbde1d7,ecmascript-6,,,,hard,programming_languages,ZENODO,SKL_dc25e8f94fc6
+USKL_9b3dcbfef626,css3,,,,hard,programming_languages,ZENODO,SKL_84a98d41bbad
+USKL_af235e7ac704,Creative thinking,,creativity | express yourself creatively | think creatively,,soft,soft_cognitive,WEF,SKL_092701b38abf
+USKL_785c5b6b9daf,Analytical thinking,,analysis | analytical skills | think analytically,,soft,soft_cognitive,WEF,SKL_6ce23ffd2d8f
+USKL_baf3ef04e914,Internal self-awareness,,,,soft,soft_self_management,WEF,SKL_6e9f4d27e479
+USKL_3349b1394f7d,External self-awareness,,,,soft,soft_self_management,WEF,SKL_5542e43cf881
+USKL_6415d1eabb33,Self-control,,composure | exercise self-control,,soft,soft_self_management,WEF,SKL_ac80e94ba72b
+USKL_a9fdb4827050,Working independently,,autonomy | work independently,,soft,soft_self_management,WEF,SKL_509cf7aeac84
+USKL_e6bd972e518f,Initiative,,proactivity | self-starter | show initiative | take initiative,,soft,soft_self_management,WEF,SKL_8728aea34331
+USKL_d6d46f9d7482,Curiosity,,demonstrate curiosity | inquisitiveness,,soft,soft_learning,WEF,SKL_a9d0bcafcac8
+USKL_65bcdb3012fb,Willingness to learn,,continuous learning | demonstrate willingness to learn | eager to learn | lifelong learning,,soft,soft_learning,WEF,SKL_3aa823045b34
+USKL_95719ce77be8,Meeting commitments and deadlines,,,,soft,soft_self_management,WEF,SKL_3e40f696ee82
+USKL_51e974287856,Time management and prioritisation,,Time Management and Prioritization | manage time | meet deadlines | prioritisation | prioritization | time management,,soft,soft_self_management,WEF,SKL_4c8d43515472
+USKL_878e652bf674,Assuming responsibility,,accountability | assume responsibility | responsibility | take responsibility,,soft,soft_self_management,WEF,SKL_576f476dadd1
+USKL_812815b86979,Frustration management,,manage frustration,,soft,soft_self_management,WEF,SKL_bbe811c10db3
+USKL_1a7961875de0,Adaptation to change,,adapt to change | adaptability | adaptable | flexibility,,soft,soft_self_management,WEF,SKL_6c3d00532974
+USKL_2d3aa828f397,Persistence,,grit | perseverance | show determination,,soft,soft_self_management,WEF,SKL_ef95b070316c
+USKL_c1d3ec3d1052,Empathy,,empathy & kindness | show empathy | socio-emotional awareness,,soft,soft_collaboration,WEF,SKL_6ad2447515a4
+USKL_6446930cbbed,Asking questions,,,,soft,soft_collaboration,WEF,SKL_1165a7b4167f
+USKL_4884741ead37,Giving and receiving feedback,,feedback | give feedback | receiving feedback,,soft,soft_collaboration,WEF,SKL_c4d93819050b
+USKL_182a586af2b8,Following instructions and procedures,,,,soft,soft_collaboration,WEF,SKL_0ec285d995dc
+USKL_f19694b75330,Assisting and supporting co-workers,,,,soft,soft_collaboration,WEF,SKL_12deced66edf
+USKL_27ab6b2a9435,Teaching,,instruct others | teaching and training | train others,,soft,soft_leadership,WEF,SKL_3c49fed13137
+USKL_86d3c22de44f,Mentoring,,mentor others | mentorship,,soft,soft_leadership,WEF,SKL_e2ca4a344a8a
+USKL_10b25929b5fc,Coaching,,coach others,,soft,soft_leadership,WEF,SKL_ac77412b3aa3
+USKL_38f30fd16b6b,Persuasion and negotiation,,negotiate | negotiation | persuade | persuasion,,soft,soft_leadership,WEF,SKL_913d2de69f03
+USKL_ad1afc35e563,"Liaising, networking and exchanging information",,build networks | liaising and networking | networking,,soft,soft_leadership,WEF,SKL_0f67d6641917
+USKL_003fbf6f5273,Building trust,,build trust | trustworthiness,,soft,soft_leadership,WEF,SKL_2a63490a865d
+USKL_2a6ed0746685,Ethical leadership,,ethical leader | lead others | leadership,,soft,soft_leadership,WEF,SKL_99207524380b
+USKL_7ef78c0344f4,Teaching and Training,,,,soft,soft_collaboration,WEF,SKL_06ea65ae2810
+USKL_fe46758330db,Receiving Feedback,,,,soft,soft_collaboration,WEF,SKL_c59d75fb4be4
+USKL_000b897cd2b7,Liaising and Networking,,,,soft,soft_leadership,WEF,SKL_f72fa7a25039
+USKL_7e0f6fb40258,Demonstrating Consideration,,,,soft,soft_leadership,WEF,SKL_4c5b223ecfce
+USKL_fa00856f426f,Managing Quality,,,,soft,soft_self_management,WEF,SKL_42c763c7901a
+USKL_db013ddcbcda,Collaboration,,build team spirit | team player | teamwork | work in teams,,soft,soft_collaboration,WEF,SKL_8a47d871d763
+USKL_51ed626a024b,Negotiation,,,,soft,soft_collaboration,WEF,SKL_0cbfe60cae70
+USKL_0a115fe9c5d8,Socio-emotional Awareness,,,,soft,soft_collaboration,WEF,SKL_fe0f1adf74da
+USKL_bfb14380b2f3,Adaptability,,,,soft,soft_self_management,WEF,SKL_f360e90a5f96
+USKL_2c8ba2cf3189,Conscientiousness,,conscientious | diligence,,soft,soft_self_management,WEF,SKL_c4d98b8b6460
+USKL_31755efbc0dd,Grit,,,,soft,soft_self_management,WEF,SKL_8d34cd9725d3
+USKL_1269f1d6929e,Growth Mindset,,learning mindset,,soft,soft_self_management,WEF,SKL_d7670a8cb540

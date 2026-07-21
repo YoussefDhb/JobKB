@@ -17,8 +17,13 @@ from .cso import CsoSource
 from .lightcast import LightcastSource
 from .kaggle_skills import KaggleSkillsSource
 from .ecf import EcfSource
+from .soft_skills import SoftSkillsSource
+from .wef import WefSource
+from .emerging_roles import EmergingRolesSource
 from .adem_demand import AdemDemandSource
 from .jobs_evidence import JobsEvidenceSource
+from .data_jobs import DataJobsSource
+from .zenodo import ZenodoSource
 
 
 class _WrappedIngest(Source):
@@ -63,12 +68,29 @@ register(LightcastSource())
 register(KaggleSkillsSource())
 # e-CF: the European e-Competence Framework — 41 authoritative EU ICT competences.
 register(EcfSource())
+# SOFTSKILLS: curated noun-form soft/transversal skills used in IT hiring (recruiter vocabulary the
+# ESCO verb-phrase competences lack). Registered before the demand sources so ZENODO can link them.
+register(SoftSkillsSource())
+# WEF Global Skills Taxonomy: structured soft skills (5 WEF-aligned soft sub-domains) + a transversal
+# occupation layer. Skills-only; its transversal attach reads existing occupations at ingest.
+register(WefSource())
+
+# --- curated emerging IT roles (real occupations absent from ESCO/O*NET; attach to ISCO) -----
+# Registered before DATAJOBS so its occupations exist when data_jobs attributes demand to them.
+register(EmergingRolesSource())
 
 # --- built-in relation-only enrichment (must run after ESCO/ROME/skills exist) ---------
 # ADEM (real vacancy demand) and JOBS (mined postings) add weighted occupation->skill edges
 # between entities that already exist in the KB — no new nodes.
 register(AdemDemandSource())
 register(JobsEvidenceSource())
+# DATAJOBS is a hybrid (harvests a few new tool skills + adds large-scale demand relations); it
+# resolves endpoints against the existing KB at ingest, so it registers after the taxonomies/skills.
+register(DataJobsSource())
+# ZENODO is a hybrid like DATAJOBS (Stack Overflow postings): harvests tools + adds demand relations
+# for hard skills AND the curated SOFTSKILLS vocabulary. Registers after SOFTSKILLS/EMERGING so both
+# its soft-skill and back-end-developer endpoints exist when it resolves demand.
+register(ZenodoSource())
 
 # --- plugin sources --------------------------------------------------------------------
 register(DemoSource())

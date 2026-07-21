@@ -60,6 +60,15 @@ SFIA_EN_DIR = os.path.join(RESOURCES, "SFIA", "en")
 CSO_EN_DIR = os.path.join(RESOURCES, "CSO", "en")
 LIGHTCAST_EN_DIR = os.path.join(RESOURCES, "LIGHTCAST", "en")
 OTHERS_EN_DIR = os.path.join(RESOURCES, "OTHERS", "en")
+# Zenodo 3906955 (Stack Overflow IT job postings + companion hard-skill category taxonomy).
+ZENODO_DIR = os.path.join(OTHERS_EN_DIR, "zenodo")
+ZENODO_JOBS_CSV = os.path.join(ZENODO_DIR, "jobs_complete.csv")
+ZENODO_HL_CSV = os.path.join(ZENODO_DIR, "high-level-hard-skills.csv")
+# WEF Global Skills Taxonomy 2021 + Education 4.0 (soft-skill enrichment).
+WEF_SOFT_DIR = os.path.join(OTHERS_EN_DIR, "Soft-skills")
+WEF_GLOBAL_CSV = os.path.join(WEF_SOFT_DIR, "Global-Skills-Taxonomy.csv")
+WEF_COMPETENCIES_CSV = os.path.join(WEF_SOFT_DIR, "Skills-Taxonomy-Competencies.csv")
+WEF_EDUCATION_CSV = os.path.join(WEF_SOFT_DIR, "Education4.0.csv")
 # Wikidata enrichment: the provided (noisy) programming-language/library export, plus a
 # `retrieved/` folder where every SPARQL/API resolution is snapshotted so rebuilds are offline.
 WIKIDATA_EN_DIR = os.path.join(RESOURCES, "WIKIDATA", "en")
@@ -241,16 +250,22 @@ SRC_KAGGLE = "KAGGLE"        # skills-only: small curated IT technical-skills ta
 SRC_ECF = "ECF"              # skills-only: European e-Competence Framework (EU ICT competences)
 SRC_ADEM = "ADEM"            # relations-only: ADEM (Luxembourg) vacancy demand (ESCO×ROME)
 SRC_JOBS = "JOBS"            # relations-only: mined IT job-posting evidence (role×skill)
+SRC_DATAJOBS = "DATAJOBS"    # hybrid: harvested tool skills + large-scale demand (lukebarousse/data_jobs)
+SRC_ZENODO = "ZENODO"        # hybrid: harvested tools + demand (Zenodo 3906955, Stack Overflow postings)
+SRC_EMERGING = "EMERGING"    # curated emerging IT roles observed in data_jobs but absent from ESCO/O*NET
+SRC_SOFTSKILLS = "SOFTSKILLS"  # curated noun-form soft/transversal skills used in IT hiring
+SRC_WEF = "WEF"              # WEF Global Skills Taxonomy (2021): structured soft skills + transversal attach
 
 # Sources that contribute real (non ISCO-group) occupations that get aligned.
-REAL_OCC_SOURCES = (SRC_ESCO, SRC_ONET, SRC_NOC, SRC_ROME)
+REAL_OCC_SOURCES = (SRC_ESCO, SRC_ONET, SRC_NOC, SRC_ROME, SRC_EMERGING)
 
 # Sources trusted to set their own IT sub-domain (`it_subtype`) at ingest time; the neutral
 # hierarchy keeps that placement instead of re-deriving it from the label regex. SFIA ships a
 # hand-curated code->sub-domain map (its own category export is unreliable) and CSO derives the
 # sub-domain from the IT root branch each topic descends from — both more reliable than a
 # keyword match on a bare skill/topic label.
-SELF_CLASSIFIED_SUBDOMAIN_SOURCES = {SRC_SFIA, SRC_CSO, SRC_LIGHTCAST, SRC_KAGGLE, SRC_ECF}
+SELF_CLASSIFIED_SUBDOMAIN_SOURCES = {SRC_SFIA, SRC_CSO, SRC_LIGHTCAST, SRC_KAGGLE, SRC_ECF,
+                                     SRC_DATAJOBS, SRC_ZENODO, SRC_WEF}
 
 # CSO curation: CSO 3.5 is ~14.6k CS *research topics* — far broader than a jobs/skills KB
 # needs, and deep branches are noisy research fragments. We keep only the IT-relevant, shallow
@@ -287,6 +302,50 @@ CSO_BRANCH_SUBDOMAIN = {
 # pairs seen in at least JOBS_MIN_FREQ postings (drops one-off extraction noise).
 ADEM_ROME_PREFIX = "M18"
 JOBS_MIN_FREQ = 2
+
+# DATAJOBS (lukebarousse/data_jobs): 785k real postings, 10 data/IT roles, pre-extracted skills.
+# A hybrid source: it (a) harvests the few genuinely-absent, high-frequency IT tools as new skill
+# nodes (gate-screened, self-classified via job_type_skills) and (b) adds large-scale weighted
+# `demand` role->skill relations. `job_type_skills` category -> neutral sub-domain (self-classified;
+# "" -> defer to the hierarchy regex, e.g. mixed `libraries`/`other`).
+DATAJOBS_MIN_FREQ = 50          # keep a (role, skill) demand pair only if seen in >= this many postings
+DATAJOBS_MIN_SKILL_FREQ = 150   # harvest an absent token as a new skill only above this frequency
+DATAJOBS_TYPE_SUBDOMAIN = {
+    "programming": "programming_languages",
+    "analyst_tools": "data_databases",
+    "cloud": "cloud_devops",
+    "databases": "data_databases",
+    "os": "systems_infrastructure",
+    "webframeworks": "web",
+    "libraries": "",   # mixed (ML/data/viz) -> regex fallback
+    "other": "",
+    "async": "",
+    "sync": "",
+}
+
+# ZENODO (Zenodo 3906955 — Montandon et al. 2019, "What Skills do IT Companies Look for in New
+# Developers?", mined from Stack Overflow postings): 21k postings (we take the ~17.9k English) with
+# clean `roles` (14 IT dev types), extracted `hard_skills` + `soft_skills`, and a companion
+# hard-skill -> high-level-category taxonomy. A hybrid source like DATAJOBS: it (a) harvests the few
+# genuinely-absent, frequent IT tools as new skill nodes (gate-screened, self-classified via the
+# high-level category) and (b) adds weighted `demand` role->skill relations for BOTH hard skills and
+# the curated SOFTSKILLS vocabulary (from the postings' extracted soft_skills). No occupations of its
+# own (roles resolve to existing occupations; the one gap, back-end developer, is added via EMERGING).
+# The dataset is ~45x smaller than DATAJOBS, so the demand/harvest gates are proportionally lower.
+ZENODO_MIN_FREQ = 15        # keep a (role, hard-skill) demand pair only if seen in >= this many postings
+ZENODO_MIN_SOFT_FREQ = 8    # soft-skill demand is legitimately sparser (from the clean soft_skills column)
+ZENODO_MIN_SKILL_FREQ = 25  # harvest an absent hard token as a new skill only above this frequency
+# high-level-hard-skills.csv category -> neutral sub-domain ("" -> defer to the hierarchy regex,
+# which already classifies frameworks/tools like react/spring/docker/git precisely).
+ZENODO_HL_SUBDOMAIN = {
+    "Languages": "programming_languages",
+    "Data Systems": "data_databases",
+    "OS & Infrastructure": "systems_infrastructure",
+    "Process & Methods": "methodology",
+    "Libs & Frameworks": "",   # mixed web/backend/ML frameworks -> regex fallback
+    "Development Tools": "",    # mixed (git/docker/jira/...) -> regex fallback
+    "INVALIDO": "",
+}
 
 # --------------------------------------------------------------------------------------
 # HuggingFace models (fully open-source; no API keys)

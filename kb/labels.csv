@@ -29300,3 +29300,405 @@ SKL_8f65f28c99c7,skill,ICT Quality Management,ict quality management,preferred,e
 SKL_0b096b1bc3db,skill,Business Change Management,business change management,preferred,en,ECF
 SKL_be91e3c1efac,skill,Information Security Management,information security management,preferred,en,ECF
 SKL_9e6e2706f94d,skill,Information Systems Governance,information systems governance,preferred,en,ECF
+SKL_9439dbdeaefe,skill,dax,dax,preferred,en,DATAJOBS
+SKL_cdb764cffd11,skill,jenkins,jenkins,preferred,en,DATAJOBS
+SKL_5cc22aa00ef5,skill,kubernetes,kubernetes,preferred,en,DATAJOBS
+SKL_e5e35d0ddcce,skill,keras,keras,preferred,en,DATAJOBS
+SKL_5ecc364373f0,skill,databricks,databricks,preferred,en,DATAJOBS
+SKL_994d4ddb884b,skill,windows,windows,preferred,en,DATAJOBS
+SKL_1e0df81fa6f6,skill,pandas,pandas,preferred,en,DATAJOBS
+SKL_483277f84bcd,skill,looker,looker,preferred,en,DATAJOBS
+SKL_da6bbe034826,skill,matplotlib,matplotlib,preferred,en,DATAJOBS
+SKL_74ae70591117,skill,mongo,mongo,preferred,en,DATAJOBS
+SKL_cf5d8c1a3f18,skill,flow,flow,preferred,en,DATAJOBS
+SKL_e6850be14b13,skill,vba,vba,preferred,en,DATAJOBS
+SKL_f0bea18359e1,skill,cognos,cognos,preferred,en,DATAJOBS
+SKL_97a15fc7b843,skill,vue,vue,preferred,en,DATAJOBS
+SKL_cfd01b1a2bfd,skill,redis,redis,preferred,en,DATAJOBS
+SKL_51f27fa594bf,skill,golang,golang,preferred,en,DATAJOBS
+SKL_8d512f15875c,skill,express,express,preferred,en,DATAJOBS
+SKL_18720bd0b661,skill,ssis,ssis,preferred,en,DATAJOBS
+SKL_2c5fb2d1f8d1,skill,terminal,terminal,preferred,en,DATAJOBS
+SKL_c8cc49cf3bf0,skill,couchbase,couchbase,preferred,en,DATAJOBS
+SKL_ad6fdc7aa891,skill,redhat,redhat,preferred,en,DATAJOBS
+SKL_b9a54bccb782,skill,electron,electron,preferred,en,DATAJOBS
+SKL_d55e424443ad,skill,node.js,node.js,preferred,en,DATAJOBS
+SKL_493510213fbd,skill,no-sql,no-sql,preferred,en,DATAJOBS
+SKL_eb4a6eefe436,skill,datarobot,datarobot,preferred,en,DATAJOBS
+SKL_9861aa9629dc,skill,ssrs,ssrs,preferred,en,DATAJOBS
+SKL_08f74cb408bd,skill,tidyverse,tidyverse,preferred,en,DATAJOBS
+SKL_ca8217f3a94b,skill,rshiny,rshiny,preferred,en,DATAJOBS
+SKL_f6e3d6c7d30e,skill,plotly,plotly,preferred,en,DATAJOBS
+SKL_110b92d5ef9c,skill,unify,unify,preferred,en,DATAJOBS
+SKL_438a8ba690f6,skill,spreadsheet,spreadsheet,preferred,en,DATAJOBS
+SKL_3596d18e6a1b,skill,atlassian,atlassian,preferred,en,DATAJOBS
+SKL_a45d435f0a09,skill,seaborn,seaborn,preferred,en,DATAJOBS
+SKL_bf31332be6aa,skill,ggplot2,ggplot2,preferred,en,DATAJOBS
+SKL_98723039d5da,skill,sheets,sheets,preferred,en,DATAJOBS
+SKL_09e66c122c47,skill,powerbi,powerbi,preferred,en,DATAJOBS
+SKL_b5de89795015,skill,microsoft teams,microsoft teams,preferred,en,DATAJOBS
+SKL_d01e35a61c4c,skill,debian,debian,preferred,en,DATAJOBS
+SKL_f7e933778d2f,skill,planner,planner,preferred,en,DATAJOBS
+SKL_245ca5d9afdd,skill,macos,macos,preferred,en,DATAJOBS
+SKL_16dbf2d64e50,skill,centos,centos,preferred,en,DATAJOBS
+SKL_31397096f7b3,skill,pulumi,pulumi,preferred,en,DATAJOBS
+SKL_1debe6adc85e,skill,dplyr,dplyr,preferred,en,DATAJOBS
+SKL_97c3fc9e9761,skill,react.js,react.js,preferred,en,DATAJOBS
+SKL_b45c02bc3bd2,skill,svn,svn,preferred,en,DATAJOBS
+SKL_1814e958f27e,skill,watson,watson,preferred,en,DATAJOBS
+SKL_8c5892e57cbc,skill,symphony,symphony,preferred,en,DATAJOBS
+SKL_f02fd12d78e8,skill,vue.js,vue.js,preferred,en,DATAJOBS
+SKL_e71887d311cd,skill,ruby on rails,ruby on rails,preferred,en,DATAJOBS
+SKL_dee3c9496a92,skill,wire,wire,preferred,en,DATAJOBS
+SKL_ca3bb1e1f767,skill,unreal,unreal,preferred,en,DATAJOBS
+SKL_98bbf2f104b4,skill,next.js,next.js,preferred,en,DATAJOBS
+OCC_146cef3838e1,occupation,analytics engineer,analytics engineer,preferred,en,EMERGING
+OCC_146cef3838e1,occupation,analytics developer,analytics developer,alt,en,EMERGING
+OCC_146cef3838e1,occupation,dbt developer,dbt developer,alt,en,EMERGING
+OCC_146cef3838e1,occupation,data analytics engineer,data analytics engineer,alt,en,EMERGING
+OCC_84c57fdb2850,occupation,MLOps engineer,mlops engineer,preferred,en,EMERGING
+OCC_84c57fdb2850,occupation,machine learning operations engineer,machine learning operations engineer,alt,en,EMERGING
+OCC_84c57fdb2850,occupation,ML operations engineer,ml operations engineer,alt,en,EMERGING
+OCC_84c57fdb2850,occupation,ML platform engineer,ml platform engineer,alt,en,EMERGING
+OCC_171d6e86049e,occupation,business intelligence developer,business intelligence developer,preferred,en,EMERGING
+OCC_171d6e86049e,occupation,BI developer,bi developer,alt,en,EMERGING
+OCC_171d6e86049e,occupation,BI engineer,bi engineer,alt,en,EMERGING
+OCC_171d6e86049e,occupation,business intelligence engineer,business intelligence engineer,alt,en,EMERGING
+OCC_171d6e86049e,occupation,reporting developer,reporting developer,alt,en,EMERGING
+OCC_e86eea97848c,occupation,data governance analyst,data governance analyst,preferred,en,EMERGING
+OCC_e86eea97848c,occupation,data governance manager,data governance manager,alt,en,EMERGING
+OCC_e86eea97848c,occupation,data governance specialist,data governance specialist,alt,en,EMERGING
+OCC_e86eea97848c,occupation,data governance lead,data governance lead,alt,en,EMERGING
+OCC_d3fe9a83e0b7,occupation,full stack developer,full stack developer,preferred,en,EMERGING
+OCC_d3fe9a83e0b7,occupation,full-stack developer,full-stack developer,alt,en,EMERGING
+OCC_d3fe9a83e0b7,occupation,full stack engineer,full stack engineer,alt,en,EMERGING
+OCC_d3fe9a83e0b7,occupation,full-stack engineer,full-stack engineer,alt,en,EMERGING
+OCC_d3fe9a83e0b7,occupation,full stack software developer,full stack software developer,alt,en,EMERGING
+OCC_d3fe9a83e0b7,occupation,full stack web developer,full stack web developer,alt,en,EMERGING
+SKL_6145c8f6094e,skill,teamwork,teamwork,preferred,en,SOFTSKILLS
+SKL_6145c8f6094e,skill,team player,team player,alt,en,SOFTSKILLS
+SKL_6145c8f6094e,skill,team collaboration,team collaboration,alt,en,SOFTSKILLS
+SKL_6145c8f6094e,skill,collaboration,collaboration,alt,en,SOFTSKILLS
+SKL_6145c8f6094e,skill,work in a team,work in a team,alt,en,SOFTSKILLS
+SKL_6145c8f6094e,skill,team work,team work,alt,en,SOFTSKILLS
+SKL_6145c8f6094e,skill,build team spirit,build team spirit,alt,en,SOFTSKILLS
+SKL_6145c8f6094e,skill,work in teams,work in teams,alt,en,SOFTSKILLS
+SKL_eab71384e56e,skill,communication,communication,preferred,en,SOFTSKILLS
+SKL_eab71384e56e,skill,communication skills,communication skills,alt,en,SOFTSKILLS
+SKL_eab71384e56e,skill,verbal communication,verbal communication,alt,en,SOFTSKILLS
+SKL_eab71384e56e,skill,written communication,written communication,alt,en,SOFTSKILLS
+SKL_eab71384e56e,skill,excellent communication skills,excellent communication skills,alt,en,SOFTSKILLS
+SKL_eab71384e56e,skill,communicate effectively,communicate effectively,alt,en,SOFTSKILLS
+SKL_eab71384e56e,skill,address an audience,address an audience,alt,en,SOFTSKILLS
+SKL_00fb7f292966,skill,leadership,leadership,preferred,en,SOFTSKILLS
+SKL_00fb7f292966,skill,leadership skills,leadership skills,alt,en,SOFTSKILLS
+SKL_00fb7f292966,skill,lead a team,lead a team,alt,en,SOFTSKILLS
+SKL_00fb7f292966,skill,team leadership,team leadership,alt,en,SOFTSKILLS
+SKL_00fb7f292966,skill,display leadership,display leadership,alt,en,SOFTSKILLS
+SKL_00fb7f292966,skill,lead others,lead others,alt,en,SOFTSKILLS
+SKL_4fd06c29ae7d,skill,problem solving,problem solving,preferred,en,SOFTSKILLS
+SKL_4fd06c29ae7d,skill,problem-solving,problem-solving,alt,en,SOFTSKILLS
+SKL_4fd06c29ae7d,skill,problem solving skills,problem solving skills,alt,en,SOFTSKILLS
+SKL_4fd06c29ae7d,skill,analytical problem solving,analytical problem solving,alt,en,SOFTSKILLS
+SKL_4fd06c29ae7d,skill,solving problems,solving problems,alt,en,SOFTSKILLS
+SKL_4fd06c29ae7d,skill,troubleshooting,troubleshooting,alt,en,SOFTSKILLS
+SKL_7d87f1befa45,skill,time management,time management,preferred,en,SOFTSKILLS
+SKL_7d87f1befa45,skill,manage time,manage time,alt,en,SOFTSKILLS
+SKL_7d87f1befa45,skill,meet deadlines,meet deadlines,alt,en,SOFTSKILLS
+SKL_7d87f1befa45,skill,prioritisation,prioritisation,alt,en,SOFTSKILLS
+SKL_7d87f1befa45,skill,prioritization,prioritization,alt,en,SOFTSKILLS
+SKL_7d87f1befa45,skill,manage workload,manage workload,alt,en,SOFTSKILLS
+SKL_f5da1d19e7e7,skill,flexibility,flexibility,preferred,en,SOFTSKILLS
+SKL_f5da1d19e7e7,skill,adaptability,adaptability,alt,en,SOFTSKILLS
+SKL_f5da1d19e7e7,skill,adaptable,adaptable,alt,en,SOFTSKILLS
+SKL_f5da1d19e7e7,skill,flexible,flexible,alt,en,SOFTSKILLS
+SKL_f5da1d19e7e7,skill,adapt to change,adapt to change,alt,en,SOFTSKILLS
+SKL_f5da1d19e7e7,skill,versatility,versatility,alt,en,SOFTSKILLS
+SKL_01334a2de949,skill,creativity,creativity,preferred,en,SOFTSKILLS
+SKL_01334a2de949,skill,creative,creative,alt,en,SOFTSKILLS
+SKL_01334a2de949,skill,creative thinking,creative thinking,alt,en,SOFTSKILLS
+SKL_01334a2de949,skill,innovation,innovation,alt,en,SOFTSKILLS
+SKL_01334a2de949,skill,think creatively,think creatively,alt,en,SOFTSKILLS
+SKL_01334a2de949,skill,express yourself creatively,express yourself creatively,alt,en,SOFTSKILLS
+SKL_dc52a0f84a4e,skill,emotional intelligence,emotional intelligence,preferred,en,SOFTSKILLS
+SKL_dc52a0f84a4e,skill,emotional quotient,emotional quotient,alt,en,SOFTSKILLS
+SKL_dc52a0f84a4e,skill,self-awareness,self-awareness,alt,en,SOFTSKILLS
+SKL_dc52a0f84a4e,skill,empathy,empathy,alt,en,SOFTSKILLS
+SKL_dc52a0f84a4e,skill,social awareness,social awareness,alt,en,SOFTSKILLS
+SKL_6198a403d2bd,skill,work ethic,work ethic,preferred,en,SOFTSKILLS
+SKL_6198a403d2bd,skill,strong work ethic,strong work ethic,alt,en,SOFTSKILLS
+SKL_6198a403d2bd,skill,professional work ethic,professional work ethic,alt,en,SOFTSKILLS
+SKL_6198a403d2bd,skill,diligence,diligence,alt,en,SOFTSKILLS
+SKL_6198a403d2bd,skill,dedication,dedication,alt,en,SOFTSKILLS
+SKL_6198a403d2bd,skill,commitment,commitment,alt,en,SOFTSKILLS
+SKL_83cf14a025a7,skill,attention to detail,attention to detail,preferred,en,SOFTSKILLS
+SKL_83cf14a025a7,skill,detail-oriented,detail-oriented,alt,en,SOFTSKILLS
+SKL_83cf14a025a7,skill,detail oriented,detail oriented,alt,en,SOFTSKILLS
+SKL_83cf14a025a7,skill,attention to details,attention to details,alt,en,SOFTSKILLS
+SKL_83cf14a025a7,skill,meticulous,meticulous,alt,en,SOFTSKILLS
+SKL_83cf14a025a7,skill,attend to detail,attend to detail,alt,en,SOFTSKILLS
+SKL_a21c11507a22,skill,interpersonal skills,interpersonal skills,preferred,en,SOFTSKILLS
+SKL_a21c11507a22,skill,interpersonal,interpersonal,alt,en,SOFTSKILLS
+SKL_a21c11507a22,skill,interpersonal communication,interpersonal communication,alt,en,SOFTSKILLS
+SKL_a21c11507a22,skill,people skills,people skills,alt,en,SOFTSKILLS
+SKL_a21c11507a22,skill,relationship building,relationship building,alt,en,SOFTSKILLS
+SKL_a21c11507a22,skill,build networks,build networks,alt,en,SOFTSKILLS
+SKL_234f005d177a,skill,decision making,decision making,preferred,en,SOFTSKILLS
+SKL_234f005d177a,skill,decision-making,decision-making,alt,en,SOFTSKILLS
+SKL_234f005d177a,skill,make decisions,make decisions,alt,en,SOFTSKILLS
+SKL_234f005d177a,skill,sound judgement,sound judgement,alt,en,SOFTSKILLS
+SKL_234f005d177a,skill,judgement,judgement,alt,en,SOFTSKILLS
+SKL_cf6d6ca72a5d,skill,responsibility,responsibility,preferred,en,SOFTSKILLS
+SKL_cf6d6ca72a5d,skill,accountability,accountability,alt,en,SOFTSKILLS
+SKL_cf6d6ca72a5d,skill,sense of responsibility,sense of responsibility,alt,en,SOFTSKILLS
+SKL_cf6d6ca72a5d,skill,take responsibility,take responsibility,alt,en,SOFTSKILLS
+SKL_cf6d6ca72a5d,skill,reliability,reliability,alt,en,SOFTSKILLS
+SKL_cf6d6ca72a5d,skill,assume responsibility,assume responsibility,alt,en,SOFTSKILLS
+SKL_cf6d6ca72a5d,skill,ownership,ownership,alt,en,SOFTSKILLS
+SKL_38a63f23c242,skill,professionalism,professionalism,preferred,en,SOFTSKILLS
+SKL_38a63f23c242,skill,professional attitude,professional attitude,alt,en,SOFTSKILLS
+SKL_38a63f23c242,skill,professional conduct,professional conduct,alt,en,SOFTSKILLS
+SKL_38a63f23c242,skill,courtesy,courtesy,alt,en,SOFTSKILLS
+SKL_38a63f23c242,skill,integrity at work,integrity at work,alt,en,SOFTSKILLS
+SKL_c1e74249f29f,skill,conflict resolution,conflict resolution,preferred,en,SOFTSKILLS
+SKL_c1e74249f29f,skill,resolve conflict,resolve conflict,alt,en,SOFTSKILLS
+SKL_c1e74249f29f,skill,resolving conflict,resolving conflict,alt,en,SOFTSKILLS
+SKL_c1e74249f29f,skill,conflict management,conflict management,alt,en,SOFTSKILLS
+SKL_c1e74249f29f,skill,manage disagreements,manage disagreements,alt,en,SOFTSKILLS
+SKL_b05216a31e2b,skill,presentation skills,presentation skills,preferred,en,SOFTSKILLS
+SKL_b05216a31e2b,skill,presentation,presentation,alt,en,SOFTSKILLS
+SKL_b05216a31e2b,skill,presenting,presenting,alt,en,SOFTSKILLS
+SKL_b05216a31e2b,skill,present to stakeholders,present to stakeholders,alt,en,SOFTSKILLS
+SKL_b05216a31e2b,skill,public speaking,public speaking,alt,en,SOFTSKILLS
+SKL_1fb01dfa5894,skill,self-motivation,self-motivation,preferred,en,SOFTSKILLS
+SKL_1fb01dfa5894,skill,self-motivated,self-motivated,alt,en,SOFTSKILLS
+SKL_1fb01dfa5894,skill,self-starter,self-starter,alt,en,SOFTSKILLS
+SKL_1fb01dfa5894,skill,highly motivated,highly motivated,alt,en,SOFTSKILLS
+SKL_1fb01dfa5894,skill,proactive,proactive,alt,en,SOFTSKILLS
+SKL_1fb01dfa5894,skill,proactivity,proactivity,alt,en,SOFTSKILLS
+SKL_1fb01dfa5894,skill,autonomy,autonomy,alt,en,SOFTSKILLS
+SKL_1fb01dfa5894,skill,ability to work independently,ability to work independently,alt,en,SOFTSKILLS
+SKL_f24637aa3ec4,skill,stress management,stress management,preferred,en,SOFTSKILLS
+SKL_f24637aa3ec4,skill,work under pressure,work under pressure,alt,en,SOFTSKILLS
+SKL_f24637aa3ec4,skill,cope with stress,cope with stress,alt,en,SOFTSKILLS
+SKL_f24637aa3ec4,skill,manage pressure,manage pressure,alt,en,SOFTSKILLS
+SKL_f24637aa3ec4,skill,resilience,resilience,alt,en,SOFTSKILLS
+SKL_f24637aa3ec4,skill,composure,composure,alt,en,SOFTSKILLS
+SKL_7a90560223bc,skill,positive attitude,positive attitude,preferred,en,SOFTSKILLS
+SKL_7a90560223bc,skill,positive,positive,alt,en,SOFTSKILLS
+SKL_7a90560223bc,skill,enthusiasm,enthusiasm,alt,en,SOFTSKILLS
+SKL_7a90560223bc,skill,enthusiastic,enthusiastic,alt,en,SOFTSKILLS
+SKL_7a90560223bc,skill,optimism,optimism,alt,en,SOFTSKILLS
+SKL_7a90560223bc,skill,can-do attitude,can-do attitude,alt,en,SOFTSKILLS
+SKL_08bfaa34c15f,skill,integrity,integrity,preferred,en,SOFTSKILLS
+SKL_08bfaa34c15f,skill,honesty,honesty,alt,en,SOFTSKILLS
+SKL_08bfaa34c15f,skill,trustworthiness,trustworthiness,alt,en,SOFTSKILLS
+SKL_08bfaa34c15f,skill,ethics,ethics,alt,en,SOFTSKILLS
+SKL_08bfaa34c15f,skill,demonstrate trustworthiness,demonstrate trustworthiness,alt,en,SOFTSKILLS
+SKL_ed4d4f6b27a5,skill,organization,organization,preferred,en,SOFTSKILLS
+SKL_ed4d4f6b27a5,skill,organisation,organisation,alt,en,SOFTSKILLS
+SKL_ed4d4f6b27a5,skill,organized,organized,alt,en,SOFTSKILLS
+SKL_ed4d4f6b27a5,skill,organised,organised,alt,en,SOFTSKILLS
+SKL_ed4d4f6b27a5,skill,organizational skills,organizational skills,alt,en,SOFTSKILLS
+SKL_ed4d4f6b27a5,skill,organisational skills,organisational skills,alt,en,SOFTSKILLS
+SKL_ed4d4f6b27a5,skill,planning,planning,alt,en,SOFTSKILLS
+SKL_f1fbeb99bac2,skill,continuous learning,continuous learning,preferred,en,SOFTSKILLS
+SKL_f1fbeb99bac2,skill,willingness to learn,willingness to learn,alt,en,SOFTSKILLS
+SKL_f1fbeb99bac2,skill,eager to learn,eager to learn,alt,en,SOFTSKILLS
+SKL_f1fbeb99bac2,skill,fast learner,fast learner,alt,en,SOFTSKILLS
+SKL_f1fbeb99bac2,skill,self-learning,self-learning,alt,en,SOFTSKILLS
+SKL_f1fbeb99bac2,skill,demonstrate willingness to learn,demonstrate willingness to learn,alt,en,SOFTSKILLS
+SKL_f1fbeb99bac2,skill,curiosity,curiosity,alt,en,SOFTSKILLS
+OCC_6cbe95f0223e,occupation,back-end developer,back-end developer,preferred,en,EMERGING
+OCC_6cbe95f0223e,occupation,backend developer,backend developer,alt,en,EMERGING
+OCC_6cbe95f0223e,occupation,back end developer,back end developer,alt,en,EMERGING
+OCC_6cbe95f0223e,occupation,back-end engineer,back-end engineer,alt,en,EMERGING
+OCC_6cbe95f0223e,occupation,backend engineer,backend engineer,alt,en,EMERGING
+OCC_6cbe95f0223e,occupation,server-side developer,server-side developer,alt,en,EMERGING
+OCC_6cbe95f0223e,occupation,back-end software developer,back-end software developer,alt,en,EMERGING
+SKL_c237dccb9700,skill,java-ee,java-ee,preferred,en,ZENODO
+SKL_bfdc40d2540a,skill,amazon-web-services,amazon-web-services,preferred,en,ZENODO
+SKL_9a86b53be913,skill,node.js,node.js,preferred,en,ZENODO
+SKL_8062f41c8fc4,skill,angularjs,angularjs,preferred,en,ZENODO
+SKL_a164ec646a06,skill,kubernetes,kubernetes,preferred,en,ZENODO
+SKL_abed5c5e032e,skill,spring-boot,spring-boot,preferred,en,ZENODO
+SKL_8c54f6c262d8,skill,apache-kafka,apache-kafka,preferred,en,ZENODO
+SKL_0bdf22018108,skill,spring-mvc,spring-mvc,preferred,en,ZENODO
+SKL_2cde56c8dbcb,skill,distributed-system,distributed-system,preferred,en,ZENODO
+SKL_02baf16953ce,skill,reactjs,reactjs,preferred,en,ZENODO
+SKL_ef102c6a628e,skill,soa,soa,preferred,en,ZENODO
+SKL_cf30d21501a5,skill,microservices,microservices,preferred,en,ZENODO
+SKL_1cfb819fe347,skill,apache-spark,apache-spark,preferred,en,ZENODO
+SKL_7a6ee243453e,skill,ruby-on-rails,ruby-on-rails,preferred,en,ZENODO
+SKL_372d518e892c,skill,rest,rest,preferred,en,ZENODO
+SKL_538e995a9526,skill,continuous-integration,continuous-integration,preferred,en,ZENODO
+SKL_8fb286d94f90,skill,qa,qa,preferred,en,ZENODO
+SKL_612c95dc5dd3,skill,web-services,web-services,preferred,en,ZENODO
+SKL_0aa91c9d0d7e,skill,redis,redis,preferred,en,ZENODO
+SKL_46adf4874b7d,skill,jenkins,jenkins,preferred,en,ZENODO
+SKL_704c138dc566,skill,symfony2,symfony2,preferred,en,ZENODO
+SKL_2fabfef3a6d8,skill,java-8,java-8,preferred,en,ZENODO
+SKL_ac8e5af76b97,skill,project-management,project-management,preferred,en,ZENODO
+SKL_efed3440d7da,skill,asp.net-web-api,asp.net-web-api,preferred,en,ZENODO
+SKL_fbf8a567928d,skill,asp.net-mvc,asp.net-mvc,preferred,en,ZENODO
+SKL_447ac64d23c0,skill,automated-tests,automated-tests,preferred,en,ZENODO
+SKL_b434dcea8aa5,skill,unit-testing,unit-testing,preferred,en,ZENODO
+SKL_e6463d7c440c,skill,data-science,data-science,preferred,en,ZENODO
+SKL_7be897e1f4b1,skill,saas,saas,preferred,en,ZENODO
+SKL_3198ea77ac6f,skill,c#-4.0,c#-4.0,preferred,en,ZENODO
+SKL_b814d8064b38,skill,windows,windows,preferred,en,ZENODO
+SKL_e6ea75d92466,skill,aws-lambda,aws-lambda,preferred,en,ZENODO
+SKL_5c509561c886,skill,.net-core,.net-core,preferred,en,ZENODO
+SKL_f1983e5cba17,skill,google-cloud-platform,google-cloud-platform,preferred,en,ZENODO
+SKL_2e432fdeef4a,skill,tsql,tsql,preferred,en,ZENODO
+SKL_b09308d46f15,skill,bigdata,bigdata,preferred,en,ZENODO
+SKL_bfcf29820ba4,skill,ember.js,ember.js,preferred,en,ZENODO
+SKL_71061d2bf2a9,skill,model-view-controller,model-view-controller,preferred,en,ZENODO
+SKL_131e52204085,skill,sql-server,sql-server,preferred,en,ZENODO
+SKL_678ec2172e19,skill,user-interface,user-interface,preferred,en,ZENODO
+SKL_79e77ac4a537,skill,user-experience,user-experience,preferred,en,ZENODO
+SKL_731215ab210e,skill,vue.js,vue.js,preferred,en,ZENODO
+SKL_1eb0f0bb44d8,skill,macos,macos,preferred,en,ZENODO
+SKL_30483da63495,skill,wpf,wpf,preferred,en,ZENODO
+SKL_24df9a2011bf,skill,wcf,wcf,preferred,en,ZENODO
+SKL_65090ebefde4,skill,osx,osx,preferred,en,ZENODO
+SKL_a4b392bff07e,skill,mvvm,mvvm,preferred,en,ZENODO
+SKL_23477a87d3c6,skill,d3.js,d3.js,preferred,en,ZENODO
+SKL_c73e473d26fc,skill,react-native,react-native,preferred,en,ZENODO
+SKL_49c503b1e16f,skill,rx-java,rx-java,preferred,en,ZENODO
+SKL_5511bf9abb23,skill,react-redux,react-redux,preferred,en,ZENODO
+SKL_f946136934cc,skill,iphone,iphone,preferred,en,ZENODO
+SKL_dc25e8f94fc6,skill,ecmascript-6,ecmascript-6,preferred,en,ZENODO
+SKL_84a98d41bbad,skill,css3,css3,preferred,en,ZENODO
+SKL_20f57807db41,skill,continuous-deployment,continuous-deployment,preferred,en,ZENODO
+SKL_092701b38abf,skill,Creative thinking,creative thinking,preferred,en,WEF
+SKL_092701b38abf,skill,creativity,creativity,alt,en,WEF
+SKL_092701b38abf,skill,express yourself creatively,express yourself creatively,alt,en,WEF
+SKL_092701b38abf,skill,think creatively,think creatively,alt,en,WEF
+SKL_6ce23ffd2d8f,skill,Analytical thinking,analytical thinking,preferred,en,WEF
+SKL_6ce23ffd2d8f,skill,analysis,analysis,alt,en,WEF
+SKL_6ce23ffd2d8f,skill,analytical skills,analytical skills,alt,en,WEF
+SKL_6ce23ffd2d8f,skill,think analytically,think analytically,alt,en,WEF
+SKL_f4645c1185dd,skill,Systems thinking,systems thinking,preferred,en,WEF
+SKL_6e9f4d27e479,skill,Internal self-awareness,internal self-awareness,preferred,en,WEF
+SKL_5542e43cf881,skill,External self-awareness,external self-awareness,preferred,en,WEF
+SKL_ac80e94ba72b,skill,Self-control,self-control,preferred,en,WEF
+SKL_ac80e94ba72b,skill,composure,composure,alt,en,WEF
+SKL_ac80e94ba72b,skill,exercise self-control,exercise self-control,alt,en,WEF
+SKL_509cf7aeac84,skill,Working independently,working independently,preferred,en,WEF
+SKL_509cf7aeac84,skill,autonomy,autonomy,alt,en,WEF
+SKL_509cf7aeac84,skill,work independently,work independently,alt,en,WEF
+SKL_8728aea34331,skill,Initiative,initiative,preferred,en,WEF
+SKL_8728aea34331,skill,proactivity,proactivity,alt,en,WEF
+SKL_8728aea34331,skill,self-starter,self-starter,alt,en,WEF
+SKL_8728aea34331,skill,show initiative,show initiative,alt,en,WEF
+SKL_8728aea34331,skill,take initiative,take initiative,alt,en,WEF
+SKL_a9d0bcafcac8,skill,Curiosity,curiosity,preferred,en,WEF
+SKL_a9d0bcafcac8,skill,demonstrate curiosity,demonstrate curiosity,alt,en,WEF
+SKL_a9d0bcafcac8,skill,inquisitiveness,inquisitiveness,alt,en,WEF
+SKL_3aa823045b34,skill,Willingness to learn,willingness to learn,preferred,en,WEF
+SKL_3aa823045b34,skill,continuous learning,continuous learning,alt,en,WEF
+SKL_3aa823045b34,skill,demonstrate willingness to learn,demonstrate willingness to learn,alt,en,WEF
+SKL_3aa823045b34,skill,eager to learn,eager to learn,alt,en,WEF
+SKL_3aa823045b34,skill,lifelong learning,lifelong learning,alt,en,WEF
+SKL_3e40f696ee82,skill,Meeting commitments and deadlines,meeting commitments and deadlines,preferred,en,WEF
+SKL_4c8d43515472,skill,Time management and prioritisation,time management and prioritisation,preferred,en,WEF
+SKL_4c8d43515472,skill,Time Management and Prioritization,time management and prioritization,alt,en,WEF
+SKL_4c8d43515472,skill,manage time,manage time,alt,en,WEF
+SKL_4c8d43515472,skill,meet deadlines,meet deadlines,alt,en,WEF
+SKL_4c8d43515472,skill,prioritisation,prioritisation,alt,en,WEF
+SKL_4c8d43515472,skill,prioritization,prioritization,alt,en,WEF
+SKL_4c8d43515472,skill,time management,time management,alt,en,WEF
+SKL_45ec4783f179,skill,Attention to detail,attention to detail,preferred,en,WEF
+SKL_45ec4783f179,skill,attend to detail,attend to detail,alt,en,WEF
+SKL_45ec4783f179,skill,detail-oriented,detail-oriented,alt,en,WEF
+SKL_45ec4783f179,skill,meticulous,meticulous,alt,en,WEF
+SKL_576f476dadd1,skill,Assuming responsibility,assuming responsibility,preferred,en,WEF
+SKL_576f476dadd1,skill,accountability,accountability,alt,en,WEF
+SKL_576f476dadd1,skill,assume responsibility,assume responsibility,alt,en,WEF
+SKL_576f476dadd1,skill,responsibility,responsibility,alt,en,WEF
+SKL_576f476dadd1,skill,take responsibility,take responsibility,alt,en,WEF
+SKL_bbe811c10db3,skill,Frustration management,frustration management,preferred,en,WEF
+SKL_bbe811c10db3,skill,manage frustration,manage frustration,alt,en,WEF
+SKL_9b94f139e6e1,skill,Stress management,stress management,preferred,en,WEF
+SKL_9b94f139e6e1,skill,cope with stress,cope with stress,alt,en,WEF
+SKL_9b94f139e6e1,skill,manage stress,manage stress,alt,en,WEF
+SKL_9b94f139e6e1,skill,work under pressure,work under pressure,alt,en,WEF
+SKL_6c3d00532974,skill,Adaptation to change,adaptation to change,preferred,en,WEF
+SKL_6c3d00532974,skill,adapt to change,adapt to change,alt,en,WEF
+SKL_6c3d00532974,skill,adaptability,adaptability,alt,en,WEF
+SKL_6c3d00532974,skill,adaptable,adaptable,alt,en,WEF
+SKL_6c3d00532974,skill,flexibility,flexibility,alt,en,WEF
+SKL_ef95b070316c,skill,Persistence,persistence,preferred,en,WEF
+SKL_ef95b070316c,skill,grit,grit,alt,en,WEF
+SKL_ef95b070316c,skill,perseverance,perseverance,alt,en,WEF
+SKL_ef95b070316c,skill,show determination,show determination,alt,en,WEF
+SKL_6ad2447515a4,skill,Empathy,empathy,preferred,en,WEF
+SKL_6ad2447515a4,skill,empathy & kindness,empathy & kindness,alt,en,WEF
+SKL_6ad2447515a4,skill,show empathy,show empathy,alt,en,WEF
+SKL_6ad2447515a4,skill,socio-emotional awareness,socio-emotional awareness,alt,en,WEF
+SKL_1165a7b4167f,skill,Asking questions,asking questions,preferred,en,WEF
+SKL_c4d93819050b,skill,Giving and receiving feedback,giving and receiving feedback,preferred,en,WEF
+SKL_c4d93819050b,skill,feedback,feedback,alt,en,WEF
+SKL_c4d93819050b,skill,give feedback,give feedback,alt,en,WEF
+SKL_c4d93819050b,skill,receiving feedback,receiving feedback,alt,en,WEF
+SKL_0ec285d995dc,skill,Following instructions and procedures,following instructions and procedures,preferred,en,WEF
+SKL_12deced66edf,skill,Assisting and supporting co-workers,assisting and supporting co-workers,preferred,en,WEF
+SKL_3c49fed13137,skill,Teaching,teaching,preferred,en,WEF
+SKL_3c49fed13137,skill,instruct others,instruct others,alt,en,WEF
+SKL_3c49fed13137,skill,teaching and training,teaching and training,alt,en,WEF
+SKL_3c49fed13137,skill,train others,train others,alt,en,WEF
+SKL_e2ca4a344a8a,skill,Mentoring,mentoring,preferred,en,WEF
+SKL_e2ca4a344a8a,skill,mentor others,mentor others,alt,en,WEF
+SKL_e2ca4a344a8a,skill,mentorship,mentorship,alt,en,WEF
+SKL_ac77412b3aa3,skill,Coaching,coaching,preferred,en,WEF
+SKL_ac77412b3aa3,skill,coach others,coach others,alt,en,WEF
+SKL_913d2de69f03,skill,Persuasion and negotiation,persuasion and negotiation,preferred,en,WEF
+SKL_913d2de69f03,skill,negotiate,negotiate,alt,en,WEF
+SKL_913d2de69f03,skill,negotiation,negotiation,alt,en,WEF
+SKL_913d2de69f03,skill,persuade,persuade,alt,en,WEF
+SKL_913d2de69f03,skill,persuasion,persuasion,alt,en,WEF
+SKL_0f67d6641917,skill,"Liaising, networking and exchanging information","liaising, networking and exchanging information",preferred,en,WEF
+SKL_0f67d6641917,skill,build networks,build networks,alt,en,WEF
+SKL_0f67d6641917,skill,liaising and networking,liaising and networking,alt,en,WEF
+SKL_0f67d6641917,skill,networking,networking,alt,en,WEF
+SKL_2a63490a865d,skill,Building trust,building trust,preferred,en,WEF
+SKL_2a63490a865d,skill,build trust,build trust,alt,en,WEF
+SKL_2a63490a865d,skill,trustworthiness,trustworthiness,alt,en,WEF
+SKL_99207524380b,skill,Ethical leadership,ethical leadership,preferred,en,WEF
+SKL_99207524380b,skill,ethical leader,ethical leader,alt,en,WEF
+SKL_99207524380b,skill,lead others,lead others,alt,en,WEF
+SKL_99207524380b,skill,leadership,leadership,alt,en,WEF
+SKL_bfb628e53655,skill,Critical Thinking,critical thinking,preferred,en,WEF
+SKL_bfb628e53655,skill,think critically,think critically,alt,en,WEF
+SKL_06ea65ae2810,skill,Teaching and Training,teaching and training,preferred,en,WEF
+SKL_c59d75fb4be4,skill,Receiving Feedback,receiving feedback,preferred,en,WEF
+SKL_f72fa7a25039,skill,Liaising and Networking,liaising and networking,preferred,en,WEF
+SKL_4c5b223ecfce,skill,Demonstrating Consideration,demonstrating consideration,preferred,en,WEF
+SKL_42c763c7901a,skill,Managing Quality,managing quality,preferred,en,WEF
+SKL_a9654a4fb820,skill,Creativity,creativity,preferred,en,WEF
+SKL_a9654a4fb820,skill,creative thinking,creative thinking,alt,en,WEF
+SKL_a9654a4fb820,skill,think creatively,think creatively,alt,en,WEF
+SKL_4c2250dd5932,skill,Problem solving,problem solving,preferred,en,WEF
+SKL_4c2250dd5932,skill,identify problems,identify problems,alt,en,WEF
+SKL_4c2250dd5932,skill,problem-solving,problem-solving,alt,en,WEF
+SKL_4c2250dd5932,skill,solve problems,solve problems,alt,en,WEF
+SKL_767382232493,skill,Systems analysis,systems analysis,preferred,en,WEF
+SKL_8a47d871d763,skill,Collaboration,collaboration,preferred,en,WEF
+SKL_8a47d871d763,skill,build team spirit,build team spirit,alt,en,WEF
+SKL_8a47d871d763,skill,team player,team player,alt,en,WEF
+SKL_8a47d871d763,skill,teamwork,teamwork,alt,en,WEF
+SKL_8a47d871d763,skill,work in teams,work in teams,alt,en,WEF
+SKL_eb7ec1104598,skill,Communication,communication,preferred,en,WEF
+SKL_eb7ec1104598,skill,address an audience,address an audience,alt,en,WEF
+SKL_eb7ec1104598,skill,communicate,communicate,alt,en,WEF
+SKL_eb7ec1104598,skill,communication skills,communication skills,alt,en,WEF
+SKL_0cbfe60cae70,skill,Negotiation,negotiation,preferred,en,WEF
+SKL_fe0f1adf74da,skill,Socio-emotional Awareness,socio-emotional awareness,preferred,en,WEF
+SKL_f360e90a5f96,skill,Adaptability,adaptability,preferred,en,WEF
+SKL_c4d98b8b6460,skill,Conscientiousness,conscientiousness,preferred,en,WEF
+SKL_c4d98b8b6460,skill,conscientious,conscientious,alt,en,WEF
+SKL_c4d98b8b6460,skill,diligence,diligence,alt,en,WEF
+SKL_8d34cd9725d3,skill,Grit,grit,preferred,en,WEF
+SKL_d7670a8cb540,skill,Growth Mindset,growth mindset,preferred,en,WEF
+SKL_d7670a8cb540,skill,learning mindset,learning mindset,alt,en,WEF

@@ -62,6 +62,10 @@ def qa():
     demand_by_src = {}
     for r in demand_rels:
         demand_by_src[r.get("source", "?")] = demand_by_src.get(r.get("source", "?"), 0) + 1
+    # relations must reference existing entities (a relation-source re-ingest can otherwise leave
+    # edges pointing at deleted nodes — caught here, not by the hierarchy dangling check above).
+    rel_dangling = [r for r in rels if r["occupation_entity_id"] not in node_ids
+                    or r["skill_entity_id"] not in node_ids]
 
     blocked = K.read_all(C.BLOCKED_ENTITIES_CSV) if os.path.isfile(C.BLOCKED_ENTITIES_CSV) else []
     gate_block = [b for b in blocked if b.get("decision") == "block"]
@@ -82,7 +86,8 @@ def qa():
     print(f"relevance gate — blocked: {len(gate_block)} (non-IT {gate_nonit}, malformed "
           f"{gate_malformed}); borderline-kept: {gate_border}")
     print(f"occupation-skill relations: {len(rels)} (demand: {len(demand_rels)}"
-          f"{' — ' + ', '.join(f'{s} {n}' for s, n in sorted(demand_by_src.items())) if demand_by_src else ''})")
+          f"{' — ' + ', '.join(f'{s} {n}' for s, n in sorted(demand_by_src.items())) if demand_by_src else ''})"
+          f"  |  dangling refs: {len(rel_dangling)}")
     if os.path.isfile(C.WIKIDATA_LINKS_CSV):
         wl = K.read_all(C.WIKIDATA_LINKS_CSV)
         wl_skill = sum(1 for r in wl if r.get("entity_kind") == "skill")
@@ -93,11 +98,14 @@ def qa():
     if dangling:
         print(f"  WARNING: {len(dangling)} dangling edges e.g. "
               f"{[(e['parent_entity_id'], e['child_entity_id']) for e in dangling[:3]]}")
+    if rel_dangling:
+        print(f"  WARNING: {len(rel_dangling)} occupation-skill relations reference missing entities")
     return {"occupations": len(occ), "skills": len(real_skl), "edges": len(hier),
             "dangling": len(dangling), "occ_orphans": len(occ_orphans),
             "skl_flat": len(skl_flat), "attach_lowconf": len(attach_lowconf),
             "gate_blocked": len(gate_block), "gate_borderline": gate_border,
-            "relations": len(rels), "demand_relations": len(demand_rels)}
+            "relations": len(rels), "demand_relations": len(demand_rels),
+            "rel_dangling": len(rel_dangling)}
 
 
 # --------------------------------------------------------------------------------------

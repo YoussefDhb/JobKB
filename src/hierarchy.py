@@ -40,8 +40,18 @@ SUBDOMAINS = {
     "emerging_tech": ("hard", "Emerging tech (IoT, AR/VR, blockchain)"),
     "knowledge_general": ("hard", "General IT knowledge"),
     "other_hard": ("hard", "Other technical"),
-    "soft_transversal": ("soft", "Soft & transversal"),
+    # Soft / transversal branch — structured after the WEF Global Skills Taxonomy (2021) groups.
+    "soft_cognitive": ("soft", "Cognitive: creativity & problem-solving"),
+    "soft_self_management": ("soft", "Self-management, resilience & dependability"),
+    "soft_collaboration": ("soft", "Communication & collaboration"),
+    "soft_leadership": ("soft", "Leadership & social influence"),
+    "soft_learning": ("soft", "Curiosity & lifelong learning"),
+    "soft_transversal": ("soft", "Soft & transversal (other)"),  # catch-all
 }
+
+# Soft-skill sub-domain keys (the WEF-based groups + catch-all), for callers that need the set.
+SOFT_SUBDOMAINS = ("soft_cognitive", "soft_self_management", "soft_collaboration",
+                   "soft_leadership", "soft_learning", "soft_transversal")
 
 
 def _rx(p):
@@ -60,7 +70,8 @@ _RULES = [
                           r"quantum comput|metaverse|wearable|\bnft\b)")),
     ("data_databases", _rx(r"(database|data warehouse|base de donnee|\bsql\b|nosql|\betl\b|"
                            r"big data|bigdata|hadoop|spark|analytics|donnee|business intelligence|"
-                           r"\bbdd\b|datastage|oracle|mongodb|postgres)")),
+                           r"\bbdd\b|datastage|oracle|mongodb|postgres|matplotlib|seaborn|plotly|"
+                           r"ggplot|bokeh|data visuali)")),
     ("cloud_devops", _rx(r"(\bcloud\b|\baws\b|azure|\bgcp\b|docker|kubernetes|devops|ci/cd|"
                          r"jenkins|terraform|ansible|conteneur|serverless|microservice)")),
     ("web", _rx(r"(\bweb\b|html|\bcss\b|javascript|typescript|react|angular|\bvue\b|node\.?js|"
@@ -84,10 +95,38 @@ _RULES = [
 ]
 
 
+# Soft-skill classifier — routes any soft skill (ESCO verb-phrases, SOFTSKILLS nouns, WEF terms) into
+# a WEF-aligned soft sub-domain. Ordered, first match wins; checked on the accent-folded label.
+# Leadership/collaboration are tested before self-management so "lead a team" / "team work" win over
+# generic tokens. Unmatched soft skills fall back to the `soft_transversal` catch-all.
+_SOFT_RULES = [
+    ("soft_leadership", _rx(r"(leader|lead others|lead a|manage a team|mentor|coach|teach|instruct|"
+                            r"train|persuas|negotiat|influence|delegat|networking|liais|build.*trust|"
+                            r"stakeholder|motivat.*(team|other))")),
+    ("soft_collaboration", _rx(r"(team|collaborat|cooperat|communicat|\bempath|listen|feedback|"
+                               r"interpersonal|co-?worker|colleague|service orient|customer|assist|"
+                               r"support.*(other|co)|address an audience|moderate|consideration|"
+                               r"relationship|social skill|work.*with.*people)")),
+    ("soft_learning", _rx(r"(curiosit|lifelong|willing.*learn|eager to learn|open.?mind|"
+                          r"self.?develop|upskill|continuous learning)")),
+    ("soft_cognitive", _rx(r"(creativ|critical think|analytical|analyse|systems think|system thinking|"
+                           r"problem.solv|problem solving|reasoning|innovat|ideation|conceptual|"
+                           r"decision|judgement|judgment)")),
+    ("soft_self_management", _rx(r"(self.?aware|self.?control|self.?regulat|initiative|independ|"
+                                 r"motivat|responsib|accountab|commit|deadline|\btime\b|priorit|"
+                                 r"attention to detail|\bdetail|quality|stress|frustrat|resilien|"
+                                 r"adapt|flexib|agilit|persist|persever|conscientious|\bgrit\b|"
+                                 r"mindset|reliab|dependab|determination|discipline|proactiv|organi[sz])")),
+]
+
+
 def classify_subdomain(text, hard_soft, esco_type):
-    if hard_soft == "soft":
-        return "soft_transversal"
     t = " " + K.normalize_label(text) + " "
+    if hard_soft == "soft":
+        for sub, rx in _SOFT_RULES:
+            if rx.search(t):
+                return sub
+        return "soft_transversal"
     for sub, rx in _RULES:
         if rx.search(t):
             return sub
