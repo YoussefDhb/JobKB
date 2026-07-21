@@ -220,6 +220,7 @@ SRC_SFIA = "SFIA"   # skills-only: professional IT/digital competency framework
 SRC_CSO = "CSO"     # skills-only: curated subset of computer-science research topics
 SRC_LIGHTCAST = "LIGHTCAST"  # skills-only: Lightcast Open Skills (IT category)
 SRC_KAGGLE = "KAGGLE"        # skills-only: small curated IT technical-skills taxonomy
+SRC_ECF = "ECF"              # skills-only: European e-Competence Framework (EU ICT competences)
 SRC_ADEM = "ADEM"            # relations-only: ADEM (Luxembourg) vacancy demand (ESCO×ROME)
 SRC_JOBS = "JOBS"            # relations-only: mined IT job-posting evidence (role×skill)
 
@@ -231,7 +232,7 @@ REAL_OCC_SOURCES = (SRC_ESCO, SRC_ONET, SRC_NOC, SRC_ROME)
 # hand-curated code->sub-domain map (its own category export is unreliable) and CSO derives the
 # sub-domain from the IT root branch each topic descends from — both more reliable than a
 # keyword match on a bare skill/topic label.
-SELF_CLASSIFIED_SUBDOMAIN_SOURCES = {SRC_SFIA, SRC_CSO, SRC_LIGHTCAST, SRC_KAGGLE}
+SELF_CLASSIFIED_SUBDOMAIN_SOURCES = {SRC_SFIA, SRC_CSO, SRC_LIGHTCAST, SRC_KAGGLE, SRC_ECF}
 
 # CSO curation: CSO 3.5 is ~14.6k CS *research topics* — far broader than a jobs/skills KB
 # needs, and deep branches are noisy research fragments. We keep only the IT-relevant, shallow

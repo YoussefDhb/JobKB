@@ -16,6 +16,7 @@ from .sfia import SfiaSource
 from .cso import CsoSource
 from .lightcast import LightcastSource
 from .kaggle_skills import KaggleSkillsSource
+from .ecf import EcfSource
 from .adem_demand import AdemDemandSource
 from .jobs_evidence import JobsEvidenceSource
 
@@ -60,6 +61,8 @@ register(SfiaSource())
 register(CsoSource())
 register(LightcastSource())
 register(KaggleSkillsSource())
+# e-CF: the European e-Competence Framework — 41 authoritative EU ICT competences.
+register(EcfSource())
 
 # --- built-in relation-only enrichment (must run after ESCO/ROME/skills exist) ---------
 # ADEM (real vacancy demand) and JOBS (mined postings) add weighted occupation->skill edges

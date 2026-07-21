@@ -289,7 +289,7 @@ USKL_b5eeeaf7e853,set up projection equipment,installer du matériel de projecti
 USKL_30f5fd619bf3,Computer Programming,programmation informatique,computer programming | GCC | Ada | ALGOL | Visual Basic .NET | Visual Basic | HyperTalk | AppleScript | Ceylon | LabVIEW | Euphoria | Subversion | OCaml | PL/I | MSVC++ | Dylan | AspectJ | Korn-shell | STL | Io | Hack | Turing | Object Pascal | Curl | DIBOL | cT | KnockoutJS | bash | Seed7 | Emacs Lisp | OpenCV | Rebol | Lua | BCPL | ActionScript | C shell | AWK | INTERCAL | COMAL | PowerShell | occam | Fantom | Caml | Z shell | Tcl | Squirrel-script | IDL | Gosu | Fortran | X10 | AngularJS | REXX | BizTalk | ColdFusion | PostScript | TACL,,hard,knowledge_general,CSO | ESCO | LIGHTCAST,SKL_59c64ba70b70 | SKL_81200438e43a | SKL_cec36711af26
 USKL_6eaad0c1dd46,Lisp,Lisp,Lisp software development principles | Lisp algorithms | Lisp software development techniques | Lisp programming paradigms | Lisp coding techniques | Lisp (Programming Language),,hard,knowledge_general,ESCO | LIGHTCAST,SKL_9cdd580294bf | SKL_fbe0e8eacd3c
 USKL_5fe0f9790672,application usability,convivialité de l’application,software usability,pratiques d’ingénierie du logiciel | utilisabilité de l’application | ergonomie informatique | convivialité du logiciel | usabilité de l’application | ergonomie de l’application,hard,programming_languages,ESCO,SKL_027b4b2aa1a9
-USKL_effe2cb4d41e,solution deployment,déploiement de solutions,implementation of solutions | software solution deployment,,hard,knowledge_general,ESCO,SKL_9ce640be2540
+USKL_cf3718cf9798,Solution Deployment,déploiement de solutions,solution deployment | implementation of solutions | software solution deployment,,hard,cloud_devops,ECF | ESCO,SKL_25d366d4f12a | SKL_9ce640be2540
 USKL_0b4b1c1cf592,develop an artistic framework,créer un cadre artistique,develop artistic research framework | develop an artistic research framework | create a research framework plan | create a plan for artistic research | produce artistic framework | develop a framework for artistic research | develop artistic frameworks | create artistic framework | generate artistic framework | developing artistic framework,,hard,programming_languages,ESCO,SKL_de288f29553a
 USKL_fb53f342faca,plan research process,planifier le processus de recherche,outline research process | plan research schedule | organise research schedule | organise research process | define research methodologies,,hard,other_hard,ESCO,SKL_64d0f91234b1
 USKL_e80adf5de851,draw up artistic production,élaborer une production artistique,drawing up artistic production | document artistic production | draw up artistic productions | write down artistic production | register artistic production | record artistic production,,hard,other_hard,ESCO,SKL_0ac8a9d46706
@@ -418,7 +418,7 @@ USKL_a82b2800557c,Project management,gestion de projets,project management | fun
 USKL_ecfe0c652d80,maintain computerised records of railway traffic,tenir des registres informatisés du trafic ferroviaire,keep digital records of railroad activities | keep digital records of railroad operations | maintain computer records of railway traffic | maintain computerised records of rail traffic | keep digital records of railway activities | maintain computer records of rail traffic | maintain computerised records of railroad traffic | keep digital records of railway operational | keep digital records of rail operations | maintain computer records of railroad traffic,,hard,other_hard,ESCO,SKL_fb30eca923cf
 USKL_181c748f2415,maintain telephony system,gérer un système de téléphonie,maintain phone systems | uphold phone systems,,hard,other_hard,ESCO,SKL_0086eea0ffdc
 USKL_e8b42b189068,design infrastructure for surface mines,concevoir des infrastructures pour mines à ciel ouvert,assisting in infrastructure designing for surface mines | assisting infrastructure designing for surface mines | assist in infrastructure design for surface mines | infrastructure design for surface mines | assist surface mine infrastructure design | assisting surface mine infrastructure design | infrastructure designing for surface mines | designing of infrastructure for surface mines | assist infrastructure designing for surface mines | surface mine infrastructure designing | designing infrastructure for surface mines | surface mine infrastructure design,,hard,systems_infrastructure,ESCO,SKL_897834066456
-USKL_6ba67115b644,Risk management,gestion des risques,risk management | risk governance | risk administration | hazard manamagent | risk assessment | BURM,Gestion des risques (Risk Management),hard,it_management,ESCO | ROME | SFIA,SKL_81e0ff8acbba | SKL_a78ae910546c | SKL_c70564109e85
+USKL_1d122aebdc1c,Risk Management,gestion des risques,risk management | risk governance | risk administration | hazard manamagent | risk assessment | Risk management | BURM,Gestion des risques (Risk Management),hard,it_management,ECF | ESCO | ROME | SFIA,SKL_72044b9497c9 | SKL_81e0ff8acbba | SKL_a78ae910546c | SKL_c70564109e85
 USKL_4d76d2b83737,mix ink,mélanger de l’encre,blend ink | stir ink | mixing ink | prepare ink | mix inks,,hard,other_hard,ESCO,SKL_cd10e93dfdcc
 USKL_4feb2da58dac,Microsoft Access,Microsoft Access,Microsoft Office Access | MS Access,,hard,other_hard,ESCO | ONET,SKL_2bf7432b2d4b | SKL_b03868bc7aa0
 USKL_21d097652127,develop blockchain innovative architectures,développer des architectures innovantes dans le domaine de la technologie de la blockchain,build innovative blockchain architectures,construire des architectures blockchain innovantes,hard,emerging_tech,ESCO,SKL_0bdc80704838
@@ -5428,7 +5428,7 @@ USKL_b0d805003b54,Content design and authoring,,INCA,,,web,SFIA,SKL_5de77ee85334
 USKL_c09396a35a9f,Innovation management,,INOV,,,it_management,SFIA,SKL_a70d9841725b
 USKL_3702639e4bc8,Information Management,,Information management | IRMG,,,data_databases,LIGHTCAST | SFIA,SKL_142401f2ced9 | SKL_563cfecda4f5
 USKL_f42daa9fca61,Information systems coordination,,ISCO,,,it_management,SFIA,SKL_2648310d0179
-USKL_59508926ea38,Contract management,,ITCM,,,it_management,SFIA,SKL_a0e23de1a15f
+USKL_c7a3ad1eb41b,Contract Management,,Contract management | ITCM,,hard,it_management,ECF | SFIA,SKL_488ba3fe0e91 | SKL_a0e23de1a15f
 USKL_5ac080a06790,Technology service management,,ITMG,,,it_management,SFIA,SKL_9ad7739fb802
 USKL_509a8e4302bf,Infrastructure operations,,ITOP,,,systems_infrastructure,SFIA,SKL_c56b1cd05711
 USKL_920db444d7f8,Knowledge Management,,Knowledge management | KNOW,,,it_management,LIGHTCAST | SFIA,SKL_2114096801b7 | SKL_34ac18523697
@@ -5439,7 +5439,7 @@ USKL_2a87081f525e,Network Support,,Network support | NTAS,,,networks,LIGHTCAST |
 USKL_1a088b9c6e87,Network design,,NTDS,,,networks,SFIA,SKL_9c1699211b96
 USKL_20871e6db3e9,Numerical analysis,,NUAN,,,knowledge_general,SFIA,SKL_9b23359d1468
 USKL_9683bbcf709d,Offensive cyber operations,,OCOP,,,security,SFIA,SKL_3efd0b83fa25
-USKL_5b794e6989fe,Problem Management,,Problem management | PBMG,,,it_management,LIGHTCAST | SFIA,SKL_91b4b64ecd99 | SKL_adde03876632
+USKL_0da5b8565ab6,Problem Management,,Problem management | PBMG,,hard,it_management,ECF | LIGHTCAST | SFIA,SKL_5a73571c2f35 | SKL_91b4b64ecd99 | SKL_adde03876632
 USKL_5fb8c1f7e8fb,Information and data compliance,,PEDP,,,it_management,SFIA,SKL_b40bb4857c84
 USKL_ebe12a8aa65f,Penetration Testing,,Penetration testing | PENT,,,security,KAGGLE | LIGHTCAST | SFIA,SKL_1c86aa5c3d4e | SKL_4ee6d8538d3b | SKL_52bb65522f1c
 USKL_8e37102ac4e3,Programme management,,PGMG,,,it_management,SFIA,SKL_f32c92fc5847
@@ -5460,7 +5460,7 @@ USKL_48fdbb994dca,Security operations,,SCAD,,,security,SFIA,SKL_c671635e0419
 USKL_e3a5a4f6751d,Service catalogue management,,SCMG,,,it_management,SFIA,SKL_a08d72ca09cb
 USKL_08dee30779dc,Information security,,SCTY | information security,,,security,CSO | SFIA,SKL_7dae86013cde | SKL_bc26ea1f9963
 USKL_c7abdf039c96,Systems integration and build,,SINT,,,systems_infrastructure,SFIA,SKL_e4c9688c6662
-USKL_1bc2df9e4bfa,Service level management,,SLMO,,,it_management,SFIA,SKL_c773eb87479d
+USKL_f44b3ed543dc,Service Level Management,,Service level management | SLMO,,hard,it_management,ECF | SFIA,SKL_c773eb87479d | SKL_e777b34b94e7
 USKL_a98f08d93836,Storage Management,,Storage management | STMG,,,it_management,LIGHTCAST | SFIA,SKL_8eae280be68f | SKL_a1b11f81eae3
 USKL_780ea2152fd4,Enterprise and business architecture,,STPL,,,systems_infrastructure,SFIA,SKL_16bd843f4bd2
 USKL_da58d0628561,Software Design,,Software design | SWDN | software design,,,programming_languages,CSO | LIGHTCAST | SFIA,SKL_3c9570f8b67e | SKL_b17c6b80b8b9 | SKL_f5befd850541
@@ -5914,7 +5914,7 @@ USKL_2558d2629552,tactile feedback,,,,,web,CSO,SKL_bfdf9c9abd54
 USKL_a63b5a9cd311,tangible interfaces,,tangible interface,,,web,CSO,SKL_d942710c4779
 USKL_b5d81c465517,usability evaluation,,usability testing,,,web,CSO,SKL_af9c5105f6f2
 USKL_3fa792d7582d,user centered designs,,user centered design | user-centered design,,,web,CSO,SKL_8ca715d632a3
-USKL_cc44f5a410ed,user experience,,,,,web,CSO,SKL_7b60c33062db
+USKL_322b8f35a1cb,User Experience,,user experience,,hard,web,CSO | ECF,SKL_7b60c33062db | SKL_a066f2cc5da0
 USKL_626f5698d198,user interface designs,,user interface design,,,web,CSO,SKL_6925d79a15ef
 USKL_520edb0d2fd1,vibrotactile,,,,,web,CSO,SKL_18ac50cd7592
 USKL_a9f3bccc698f,work environments,,,,,web,CSO,SKL_610e0fa574fa
@@ -6274,8 +6274,8 @@ USKL_d8470b2cee1e,Application Delivery Controller,,,,,networks,LIGHTCAST,SKL_654
 USKL_f8c9c4f9144c,Application Delivery Network,,,,,programming_languages,LIGHTCAST,SKL_ec556675d5a5
 USKL_96524c5b4b07,Application Dependency,,,,,programming_languages,LIGHTCAST,SKL_39f347cfa1bc
 USKL_3dd6a5add132,Application Deployment,,,,,programming_languages,LIGHTCAST,SKL_7840fdb175cf
-USKL_ba15d8430a6b,Application Design,,,,,programming_languages,LIGHTCAST,SKL_330630e97c21
-USKL_c98bae4e486c,Application Development,,,,,programming_languages,LIGHTCAST,SKL_c5906ec8f0b8
+USKL_eb9544da95fc,Application Design,,,,hard,programming_languages,ECF | LIGHTCAST,SKL_330630e97c21 | SKL_490ac0dad2dd
+USKL_cd6d3755d4ac,Application Development,,,,hard,programming_languages,ECF | LIGHTCAST,SKL_c5906ec8f0b8 | SKL_d5edc7709b76
 USKL_2f6264b1a9ca,Application Development Languages,,,,,programming_languages,LIGHTCAST,SKL_790a67371d3d
 USKL_3538a8852462,Application Development System Online (ADSO),,,,,programming_languages,LIGHTCAST,SKL_1ba9f80132db
 USKL_251c27b904ed,Application Environments,,,,,programming_languages,LIGHTCAST,SKL_261f2a74f6aa
@@ -8105,7 +8105,7 @@ USKL_2bf833fe7233,Information Privacy,,,,,security,LIGHTCAST,SKL_0be9ab910485
 USKL_c417a8afd87f,Information Processing,,,,,data_databases,LIGHTCAST,SKL_77f8fdeda62a
 USKL_184c47dd2478,Information Processor,,,,,knowledge_general,LIGHTCAST,SKL_ea0a687d76ba
 USKL_b58488ad11e2,Information Security Audits,,,,,security,LIGHTCAST,SKL_02c7bc5ea445
-USKL_1c55214cee8b,Information Security Management,,,,,it_management,LIGHTCAST,SKL_cc4ef0d3e4ea
+USKL_fd22a9223672,Information Security Management,,,,hard,security,ECF | LIGHTCAST,SKL_be91e3c1efac | SKL_cc4ef0d3e4ea
 USKL_3df8978cb234,Information Security Management Systems,,,,,it_management,LIGHTCAST,SKL_d33b4dab0f21
 USKL_7f1f86b00f01,Information Servers,,,,,systems_infrastructure,LIGHTCAST,SKL_089d3a66b1ad
 USKL_30db969230fa,Information Systems,,,,,knowledge_general,LIGHTCAST,SKL_2dcbf891eea1
@@ -10999,3 +10999,35 @@ USKL_c7fe674e1f2a,Digital Twins,,,,,methodology,KAGGLE,SKL_7a3c7b11ddb3
 USKL_cdbbb5914a60,Low Code,,,,,methodology,KAGGLE,SKL_43d0fc5aa297
 USKL_95bfa8583f0d,No Code,,,,,methodology,KAGGLE,SKL_e6cd89b2eb17
 USKL_a5c3cc2982a4,RPA,,,,,methodology,KAGGLE,SKL_11646cb4bb4a
+USKL_226651f13b50,IS and Business Strategy Alignment,,,,hard,it_management,ECF,SKL_6206df906e6b
+USKL_77438558d5a0,Business Plan Development,,,,hard,it_management,ECF,SKL_c8f00652d6cb
+USKL_d51c332b65de,Product / Service Planning,,,,hard,it_management,ECF,SKL_1377c37b3b9c
+USKL_862f7eba8e91,Architecture Design,,,,hard,systems_infrastructure,ECF,SKL_dc0c68ed7785
+USKL_125fa0c3c6ac,Technology Trend Monitoring,,,,hard,emerging_tech,ECF,SKL_5895c4bf9c73
+USKL_1f0ee69bcd3d,Sustainability Management,,,,hard,it_management,ECF,SKL_4e28b151db7b
+USKL_6ef90dc8e077,Innovating,,,,hard,it_management,ECF,SKL_1adc97391f70
+USKL_167d338975a3,Component Integration,,,,hard,systems_infrastructure,ECF,SKL_a9db0bb715d4
+USKL_72f924632ad9,Testing,,,,hard,methodology,ECF,SKL_266c442d0e95
+USKL_33888918b554,Documentation Production,,,,hard,methodology,ECF,SKL_3f84c10e4137
+USKL_527220f0ddb0,ICT Systems Engineering,,,,hard,networks,ECF,SKL_3734b24a1c2b
+USKL_73a008273df8,User Support,,,,hard,it_management,ECF,SKL_07e3164a8229
+USKL_087d0dd9f461,Change Support,,,,hard,methodology,ECF,SKL_9bc9e1a522b6
+USKL_63f25703fc5b,Service Delivery,,,,hard,it_management,ECF,SKL_602294aa846e
+USKL_c8d9ba0dcbb2,Systems Management,,,,hard,systems_infrastructure,ECF,SKL_b98122259f8e
+USKL_da67c85b0229,Information Security Strategy Development,,,,hard,security,ECF,SKL_ecf145e99feb
+USKL_b6d0e8e03eb9,ICT Quality Strategy Development,,,,hard,methodology,ECF,SKL_bcc8a5a60444
+USKL_1f376b2585b3,Education and Training Provision,,,,hard,it_management,ECF,SKL_e9c1549a8a19
+USKL_9b7ebf91f4bb,Purchasing,,,,hard,it_management,ECF,SKL_9ccbd9898152
+USKL_0342bdc69f4b,Sales Development,,,,hard,it_management,ECF,SKL_c8c583d07ca9
+USKL_419906fdfdb0,Digital Marketing,,,,hard,it_management,ECF,SKL_9ee54efeb835
+USKL_57f04a27bdf3,Data Science and Analytics,,,,hard,ai_ml,ECF,SKL_2ff6a69db8de
+USKL_eb0154662b47,Personnel Development,,,,hard,it_management,ECF,SKL_6e8d22dfdb72
+USKL_54127aa0b491,Information and Knowledge Management,,,,hard,data_databases,ECF,SKL_5e14fde6dd27
+USKL_4b2315fd52e9,Needs Identification,,,,hard,methodology,ECF,SKL_cfa8a0d2734e
+USKL_2de63b8b6d9a,Forecast Development,,,,hard,it_management,ECF,SKL_b4501b824aec
+USKL_f55b67890e05,Project and Portfolio Management,,,,hard,it_management,ECF,SKL_cd2faca2c37c
+USKL_a46be71ebab3,Relationship Management,,,,hard,it_management,ECF,SKL_e1bcfff8ae23
+USKL_fe7078f2335d,Process Improvement,,,,hard,methodology,ECF,SKL_266315e8f521
+USKL_9d0e3b2bbd2d,ICT Quality Management,,,,hard,methodology,ECF,SKL_8f65f28c99c7
+USKL_544a4dc4cc4d,Business Change Management,,,,hard,it_management,ECF,SKL_0b096b1bc3db
+USKL_7739fd1091cf,Information Systems Governance,,,,hard,it_management,ECF,SKL_9e6e2706f94d

@@ -22,6 +22,7 @@ tier, and cross-branch data roles), applied consistently to every source.
 | **CSO 3.5** | **Skills only** — curated subset of the Computer Science Ontology (emerging-tech vocabulary) | ~530 topics: IT branches (AI/ML, security, software, data, networks, …) via `superTopicOf`, depth≤2, per-branch balanced, de-duped |
 | **Lightcast Open Skills** | **Skills only** — large, cleanly-categorised skills taxonomy | Information Technology category (`17.0`) = ~5,240 skills across 70 authoritative IT subcategories |
 | **Kaggle technical skills** | **Skills only** — small curated IT technical-skills list | 528 skills, 9 IT categories |
+| **e-CF 4.0** | **Skills only** — European e-Competence Framework (EU-standard ICT competences) | 41 professional ICT competences (Plan/Build/Run/Enable/Manage), self-classified into the 14 sub-domains |
 | **ADEM (Luxembourg)** | **Relations only** — real vacancy demand (ESCO×ROME) | 1,758 weighted `demand` edges on IT ROME occupations (`M18*`) |
 | **Job postings (mined)** | **Relations only** — mined IT postings (25 roles) | 1,013 role→skill `demand` edges (matched to existing entities) |
 
@@ -30,12 +31,14 @@ cross-source **alignment itself acts as the crosswalk**. **No source is privileg
 ESCO uses its native ISCO code; ONET, NOC and ROME each attach **directly** to the
 ISCO groups by embedding similarity (never routed through ESCO).
 
-**Skills-only sources.** SFIA, CSO, Lightcast and Kaggle contribute skills but no occupations
+**Skills-only sources.** SFIA, CSO, Lightcast, Kaggle and e-CF contribute skills but no occupations
 (`contributes_occupations = False`, `needs_attach = False`), so they skip ISCO attachment
 entirely. Their skills are classified into the neutral ontology, aligned/merged against the
 existing skill vocabulary, and reach occupations **transitively** — a skill that merges into a
-unified skill inherits that concept's occupation relations. Lightcast/Kaggle self-classify via
-their authoritative category maps.
+unified skill inherits that concept's occupation relations. Lightcast/Kaggle/e-CF self-classify via
+their authoritative category maps (e-CF's 41 competences merge cleanly with existing skills where
+they overlap — e.g. Risk Management with SFIA/ROME/ESCO, User Experience with CSO, Application
+Development with Lightcast — and add higher-level professional competences where they are distinct).
 
 **Relation-only enrichment sources.** ADEM (real Luxembourg vacancy demand, already linked to
 ESCO + ROME) and the mined IT job postings add weighted `demand` occupation→skill edges **between
