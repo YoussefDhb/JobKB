@@ -58,6 +58,8 @@ ROME_FR_DIR = os.path.join(RESOURCES, "ROME", "fr")
 # (computer-science research topics, curated subset). English-only.
 SFIA_EN_DIR = os.path.join(RESOURCES, "SFIA", "en")
 CSO_EN_DIR = os.path.join(RESOURCES, "CSO", "en")
+LIGHTCAST_EN_DIR = os.path.join(RESOURCES, "LIGHTCAST", "en")
+OTHERS_EN_DIR = os.path.join(RESOURCES, "OTHERS", "en")
 
 KB_DIR = os.path.join(ROOT, "kb")   # built knowledge base output
 
@@ -92,7 +94,10 @@ LABEL_FIELDS = [
     "entity_id", "entity_kind", "label_text", "label_norm",
     "label_type", "language", "source",
 ]
-REL_FIELDS = ["occupation_entity_id", "skill_entity_id", "relation_type", "source"]
+# `weight` carries a demand/frequency signal for evidence relations (ADEM vacancy positions,
+# JOBS posting co-occurrence counts); "" for taxonomy relations. Missing keys default to "" on
+# write, so the added column is backward-compatible with every existing relation writer.
+REL_FIELDS = ["occupation_entity_id", "skill_entity_id", "relation_type", "source", "weight"]
 HIERARCHY_FIELDS = ["parent_entity_id", "child_entity_id", "entity_kind", "relation_type", "source"]
 ALIGNMENT_FIELDS = [
     "entity_id_a", "source_a", "entity_id_b", "source_b",
@@ -213,6 +218,10 @@ SRC_NOC = "NOC"
 SRC_ROME = "ROME"
 SRC_SFIA = "SFIA"   # skills-only: professional IT/digital competency framework
 SRC_CSO = "CSO"     # skills-only: curated subset of computer-science research topics
+SRC_LIGHTCAST = "LIGHTCAST"  # skills-only: Lightcast Open Skills (IT category)
+SRC_KAGGLE = "KAGGLE"        # skills-only: small curated IT technical-skills taxonomy
+SRC_ADEM = "ADEM"            # relations-only: ADEM (Luxembourg) vacancy demand (ESCO×ROME)
+SRC_JOBS = "JOBS"            # relations-only: mined IT job-posting evidence (role×skill)
 
 # Sources that contribute real (non ISCO-group) occupations that get aligned.
 REAL_OCC_SOURCES = (SRC_ESCO, SRC_ONET, SRC_NOC, SRC_ROME)
@@ -222,7 +231,7 @@ REAL_OCC_SOURCES = (SRC_ESCO, SRC_ONET, SRC_NOC, SRC_ROME)
 # hand-curated code->sub-domain map (its own category export is unreliable) and CSO derives the
 # sub-domain from the IT root branch each topic descends from — both more reliable than a
 # keyword match on a bare skill/topic label.
-SELF_CLASSIFIED_SUBDOMAIN_SOURCES = {SRC_SFIA, SRC_CSO}
+SELF_CLASSIFIED_SUBDOMAIN_SOURCES = {SRC_SFIA, SRC_CSO, SRC_LIGHTCAST, SRC_KAGGLE}
 
 # CSO curation: CSO 3.5 is ~14.6k CS *research topics* — far broader than a jobs/skills KB
 # needs, and deep branches are noisy research fragments. We keep only the IT-relevant, shallow
@@ -252,6 +261,13 @@ CSO_BRANCH_SUBDOMAIN = {
     "human_computer_interaction": "web",
     "computer_operating_systems": "systems_infrastructure",
 }
+
+# Evidence / demand relation sources (ADEM vacancies, mined job postings). These add
+# occupation->skill edges between entities that ALREADY exist in the KB (no new nodes), tagged
+# relation_type="demand" and weighted. ADEM keeps ROME IT families (M18*); JOBS keeps role->skill
+# pairs seen in at least JOBS_MIN_FREQ postings (drops one-off extraction noise).
+ADEM_ROME_PREFIX = "M18"
+JOBS_MIN_FREQ = 2
 
 # --------------------------------------------------------------------------------------
 # HuggingFace models (fully open-source; no API keys)

@@ -6,7 +6,11 @@ ROME,ROME,ROME v461,2026-07-20T12:53:37+00:00,official_fr_csv,"93 M18 metiers, 2
 ONET,ONET,O*NET 28.x,2026-07-20T12:56:45+00:00,official_en_csv,"32 occ, 1506 skills, 6831 relations"
 SFIA,SFIA,sfia-9,2026-07-20T23:05:40+00:00,sfia_csv,"0 occ, 95 skills, 0 relations; gate blocked 0 (malformed 0, non-IT 0), borderline-kept 0"
 CSO,CSO,cso-3.5,2026-07-20T23:07:58+00:00,cso_curated_subset,"0 occ, 527 skills, 0 relations; gate blocked 4 (malformed 0, non-IT 4), borderline-kept 1"
-SKILL_ONTO,SKILL_ONTO,-,2026-07-20T23:07:59+00:00,neutral_skill_ontology,"6096 skills classified, 131 soft, 13 sub-domains, 6109 edges"
-MERGE,MERGE,-,2026-07-20T23:08:05+00:00,connected_components(exactMatch),"233 unified occ (13 merged), 5982 unified skills (104 merged)"
-ALIGNMENT,ALIGNMENT,-,2026-07-20T23:08:05+00:00,incremental,97015 alignments total
-ATTACH,ATTACH,-,2026-07-20T23:08:05+00:00,incremental,140 ISCO attach edges total
+LIGHTCAST,LIGHTCAST,lightcast-open-skills,2026-07-21T09:43:58+00:00,lightcast_csv,"0 occ, 5243 skills, 0 relations; gate blocked 1 (malformed 0, non-IT 1), borderline-kept 2"
+KAGGLE,KAGGLE,kaggle-technical-skills,2026-07-21T09:46:40+00:00,kaggle_csv,"0 occ, 528 skills, 0 relations; gate blocked 0 (malformed 0, non-IT 0), borderline-kept 0"
+ADEM,ADEM,adem-2025,2026-07-21T09:47:35+00:00,adem_vacancies,1758 demand relations (M18* IT vacancies)
+JOBS,JOBS,jobs-processed,2026-07-21T09:49:42+00:00,job_postings_mined,"1013 evidence relations from 3000 postings, 13 roles matched to existing occupations"
+SKILL_ONTO,SKILL_ONTO,-,2026-07-21T09:49:45+00:00,neutral_skill_ontology,"11867 skills classified, 131 soft, 14 sub-domains, 11881 edges"
+MERGE,MERGE,-,2026-07-21T09:50:06+00:00,connected_components(exactMatch),"233 unified occ (13 merged), 11000 unified skills (654 merged)"
+ALIGNMENT,ALIGNMENT,-,2026-07-21T09:50:07+00:00,incremental,253176 alignments total
+ATTACH,ATTACH,-,2026-07-21T09:50:07+00:00,incremental,140 ISCO attach edges total

@@ -37,6 +37,7 @@ SUBDOMAINS = {
     "systems_infrastructure": ("hard", "Systems & infrastructure"),
     "it_management": ("hard", "IT management & governance"),
     "methodology": ("hard", "Methodologies & practices"),
+    "emerging_tech": ("hard", "Emerging tech (IoT, AR/VR, blockchain)"),
     "knowledge_general": ("hard", "General IT knowledge"),
     "other_hard": ("hard", "Other technical"),
     "soft_transversal": ("soft", "Soft & transversal"),
@@ -54,6 +55,9 @@ _RULES = [
     ("ai_ml", _rx(r"(machine learning|deep learning|neural network|artificial intelligence|"
                   r"apprentissage automatique|intelligence artificielle|\bnlp\b|computer vision|"
                   r"tensorflow|pytorch|data science|datascience|data mining)")),
+    ("emerging_tech", _rx(r"(internet of things|\biot\b|augmented reality|virtual reality|"
+                          r"\bar/vr\b|\bvr\b headset|blockchain|distributed ledger|smart contract|"
+                          r"quantum comput|metaverse|wearable|\bnft\b)")),
     ("data_databases", _rx(r"(database|data warehouse|base de donnee|\bsql\b|nosql|\betl\b|"
                            r"big data|bigdata|hadoop|spark|analytics|donnee|business intelligence|"
                            r"\bbdd\b|datastage|oracle|mongodb|postgres)")),

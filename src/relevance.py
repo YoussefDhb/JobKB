@@ -30,16 +30,22 @@ from .align import verify as _verify
 
 _IT_HYP = "This is a concept in information technology, computing, software or data."
 
-# math/list notation or non-alphanumeric start => malformed CSO-style slug
-_JUNK = re.compile(r"[+=]| ,")
+# Space-before-comma is the CSO math-list junk signal ("(min ,max ,+)"); a comma normally has
+# no leading space in real labels. Deliberately NOT flagging "+" / "." / "#" — they are common in
+# genuine tech skills (C++, .NET, C#, X++, NIS+).
+_JUNK = re.compile(r" ,")
 
 _ANCHOR_CACHE = {}          # kind -> (it_matrix, nonit_matrix)
 
 
 def is_structural_noise(label: str) -> bool:
-    """Deterministic junk detector (shared with source-specific cleaners)."""
+    """Deterministic junk detector (shared with source-specific cleaners). Flags empty labels,
+    labels with no letters (pure numbers/symbols), leading-bracket fragments, and math-list
+    notation — but keeps real tech tokens like ".NET Framework" and "C++"."""
     label = (label or "").strip()
-    if not label or not label[:1].isalnum():
+    if not label or not re.search(r"[A-Za-z]", label):
+        return True
+    if label[0] in "([{":
         return True
     return bool(_JUNK.search(label))
 

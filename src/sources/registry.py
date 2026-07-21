@@ -14,6 +14,10 @@ from .base import Source
 from .demo_dataset import DemoSource
 from .sfia import SfiaSource
 from .cso import CsoSource
+from .lightcast import LightcastSource
+from .kaggle_skills import KaggleSkillsSource
+from .adem_demand import AdemDemandSource
+from .jobs_evidence import JobsEvidenceSource
 
 
 class _WrappedIngest(Source):
@@ -50,10 +54,18 @@ register(_WrappedIngest(C.SRC_NOC, noc.run, contributes_occupations=True, needs_
 register(_WrappedIngest(C.SRC_ROME, rome.run, contributes_occupations=True, needs_attach=True))
 
 # --- built-in skills-only frameworks ---------------------------------------------------
-# SFIA and CSO contribute skills but no occupations; they classify + align/merge into the
-# shared skill layer and reach occupations transitively via unified skills.
+# SFIA/CSO/Lightcast/Kaggle contribute skills but no occupations; they classify + align/merge
+# into the shared skill layer and reach occupations transitively via unified skills.
 register(SfiaSource())
 register(CsoSource())
+register(LightcastSource())
+register(KaggleSkillsSource())
+
+# --- built-in relation-only enrichment (must run after ESCO/ROME/skills exist) ---------
+# ADEM (real vacancy demand) and JOBS (mined postings) add weighted occupation->skill edges
+# between entities that already exist in the KB — no new nodes.
+register(AdemDemandSource())
+register(JobsEvidenceSource())
 
 # --- plugin sources --------------------------------------------------------------------
 register(DemoSource())
