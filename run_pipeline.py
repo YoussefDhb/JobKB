@@ -84,6 +84,11 @@ def main():
                     help="incrementally remove one source from the existing KB")
     ap.add_argument("--list-sources", action="store_true",
                     help="list the registered sources and exit")
+    # wikidata enrichment (network read-only; snapshotted for offline reproducibility)
+    ap.add_argument("--wikidata", action="store_true",
+                    help="anchor tech-skills + occupations to Wikidata QIDs (kb/wikidata_links.csv)")
+    ap.add_argument("--refresh-wikidata", action="store_true",
+                    help="re-query Wikidata ignoring the resolutions snapshot")
     args = ap.parse_args()
 
     if args.list_stages:
@@ -95,6 +100,11 @@ def main():
         for n, s in registry.REGISTRY.items():
             print(f"  {n:6}  builtin={s.builtin}  occupations={s.contributes_occupations}  "
                   f"needs_attach={s.needs_attach}")
+        return
+
+    if args.wikidata or args.refresh_wikidata:
+        from src import wikidata
+        wikidata.run(refresh=args.refresh_wikidata)
         return
 
     if args.add:

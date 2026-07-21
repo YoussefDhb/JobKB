@@ -83,6 +83,13 @@ def qa():
           f"{gate_malformed}); borderline-kept: {gate_border}")
     print(f"occupation-skill relations: {len(rels)} (demand: {len(demand_rels)}"
           f"{' — ' + ', '.join(f'{s} {n}' for s, n in sorted(demand_by_src.items())) if demand_by_src else ''})")
+    if os.path.isfile(C.WIKIDATA_LINKS_CSV):
+        wl = K.read_all(C.WIKIDATA_LINKS_CSV)
+        wl_skill = sum(1 for r in wl if r.get("entity_kind") == "skill")
+        wl_occ = sum(1 for r in wl if r.get("entity_kind") == "occupation")
+        wl_high = sum(1 for r in wl if r.get("confidence") == "high")
+        print(f"wikidata anchors: {len(wl)} ({wl_skill} skills, {wl_occ} occupations; "
+              f"{wl_high} high-confidence)")
     if dangling:
         print(f"  WARNING: {len(dangling)} dangling edges e.g. "
               f"{[(e['parent_entity_id'], e['child_entity_id']) for e in dangling[:3]]}")

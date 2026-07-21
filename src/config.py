@@ -60,6 +60,12 @@ SFIA_EN_DIR = os.path.join(RESOURCES, "SFIA", "en")
 CSO_EN_DIR = os.path.join(RESOURCES, "CSO", "en")
 LIGHTCAST_EN_DIR = os.path.join(RESOURCES, "LIGHTCAST", "en")
 OTHERS_EN_DIR = os.path.join(RESOURCES, "OTHERS", "en")
+# Wikidata enrichment: the provided (noisy) programming-language/library export, plus a
+# `retrieved/` folder where every SPARQL/API resolution is snapshotted so rebuilds are offline.
+WIKIDATA_EN_DIR = os.path.join(RESOURCES, "WIKIDATA", "en")
+WIKIDATA_RETRIEVED_DIR = os.path.join(RESOURCES, "WIKIDATA", "retrieved")
+WIKIDATA_SRC_CSV = os.path.join(WIKIDATA_EN_DIR, "ESCO_v1.2.1-wikidata.csv")
+WIKIDATA_SNAPSHOT_CSV = os.path.join(WIKIDATA_RETRIEVED_DIR, "resolutions.csv")
 
 KB_DIR = os.path.join(ROOT, "kb")   # built knowledge base output
 
@@ -73,6 +79,7 @@ UNIFIED_OCCUPATIONS_CSV = os.path.join(KB_DIR, "unified_occupations.csv")
 UNIFIED_SKILLS_CSV = os.path.join(KB_DIR, "unified_skills.csv")
 PROVENANCE_CSV = os.path.join(KB_DIR, "provenance.csv")
 BLOCKED_ENTITIES_CSV = os.path.join(KB_DIR, "blocked_entities.csv")  # relevance-gate rejects
+WIKIDATA_LINKS_CSV = os.path.join(KB_DIR, "wikidata_links.csv")      # entity -> Wikidata QID anchors
 
 # --------------------------------------------------------------------------------------
 # Knowledge-base schema (English-primary; French secondary when present)
@@ -119,6 +126,17 @@ PROVENANCE_FIELDS = [
 BLOCKED_FIELDS = [
     "entity_kind", "source", "source_id", "label", "decision", "reason",
     "sim_it", "sim_non", "nli",
+]
+# Wikidata cross-reference (side table produced by the `--wikidata` enrichment).
+WIKIDATA_LINKS_FIELDS = [
+    "entity_id", "entity_kind", "unified_id", "label_en", "qid", "wikidata_url",
+    "wd_label", "wd_description", "instance_of", "match_method", "confidence",
+]
+# Snapshot of every label resolved against Wikidata (empty qid = verified-unresolved, cached so a
+# re-run is fully offline). Keyed by normalized label + kind.
+WIKIDATA_SNAPSHOT_FIELDS = [
+    "norm_label", "entity_kind", "qid", "wd_label", "wd_description",
+    "instance_of", "match_method", "confidence",
 ]
 
 # --------------------------------------------------------------------------------------
@@ -374,4 +392,68 @@ REL_NONIT_ANCHORS = (
     "retail and store operations", "occupational health and physical safety",
     "hairdressing, beauty and personal care", "manufacturing, welding and metal fabrication",
     "driving and vehicle operation", "biology, genetics and laboratory science",
+)
+
+# --------------------------------------------------------------------------------------
+# Wikidata enrichment (`--wikidata`) — resolve KB tech-skills/occupations to stable QIDs.
+# Network READ-only via ONE batched SPARQL query per ~50 labels (label/alias match + class
+# verification together). Every resolution is snapshotted to WIKIDATA_SNAPSHOT_CSV so rebuilds
+# are offline/reproducible and interrupted runs resume. Precision: exact/alias label match AND an
+# instance-of class check — QIDs are never hardcoded (all verified live).
+# --------------------------------------------------------------------------------------
+WIKIDATA_SPARQL_URL = "https://query.wikidata.org/sparql"
+# Wikidata etiquette asks for a descriptive User-Agent identifying the client.
+WIKIDATA_USER_AGENT = "JobKB/1.0 (IT knowledge-base research; enrichment) python-urllib"
+WIKIDATA_RATE_SLEEP = 1.00     # seconds between SPARQL calls (gentle pacing; avoids WDQS throttling)
+WIKIDATA_MAX_RETRIES = 5       # exponential backoff on 429/5xx/timeout, then fail-open
+
+# Only concrete-technology sub-domains are resolved (competence-phrase skills rarely have a
+# Wikidata item; verification would reject them anyway — this just bounds the network cost).
+WIKIDATA_SKILL_SUBDOMAINS = frozenset({
+    "programming_languages", "data_databases", "cloud_devops", "ai_ml", "web",
+    "networks", "security", "systems_infrastructure", "emerging_tech",
+})
+WIKIDATA_SKILL_MAX_TOKENS = 3  # only short (entity-like) labels are candidates
+
+# instance-of (P31) / subclass-of (P279*) allowlist. Q7397 (software) as a superclass captures
+# most software subtypes (IDEs, version-control systems, …) through the P279* closure.
+WIKIDATA_SKILL_CLASSES = (
+    # concrete technologies / tools / products
+    "Q9143",    # programming language
+    "Q7397",    # software
+    "Q341",     # free software
+    "Q188860",  # software library
+    "Q1330336", # web framework
+    "Q271680",  # software framework
+    "Q166142",  # application software
+    "Q9135",    # operating system
+    "Q8513",    # database
+    "Q3966",    # computer hardware
+    "Q783794",  # company
+)
+# Abstract IT fields / disciplines / techniques (data science, cloud computing, AI, cybersecurity,
+# software development, …). These are matched by **direct P31** (the field concepts are directly
+# instance-of these), NOT by P279* closure — walking the subclass tree of e.g. "academic discipline"
+# is huge and times the query out. Candidates are already IT-scoped + exact-label-matched, so these
+# broad classes stay IT-relevant in practice.
+WIKIDATA_SKILL_FIELD_CLASSES = (
+    "Q11862829",  # academic discipline
+    "Q2465832",   # branch of science
+    "Q1047113",   # field of study
+    "Q2267705",   # field of study
+    "Q112057532", # type of technology
+    "Q123370638", # branch of computer science
+    "Q4671286",   # academic major
+)
+WIKIDATA_OCC_CLASSES = (
+    "Q28640",     # profession
+    "Q12737077",  # occupation
+)
+# Backstop: reject a candidate whose instance-of hits any of these, even on a label match.
+WIKIDATA_DENY_CLASSES = (
+    "Q5",       # human
+    "Q11424",   # film
+    "Q482994",  # album
+    "Q16521",   # taxon
+    "Q7889",    # video game
 )
