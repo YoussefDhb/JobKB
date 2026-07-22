@@ -22,5 +22,5 @@ ALIGNMENT,ALIGNMENT,-,2026-07-22T08:40:11+00:00,incremental,350865 alignments to
 ATTACH,ATTACH,-,2026-07-22T08:40:11+00:00,incremental,146 ISCO attach edges total
 ISCO,ISCO,ISCO-08,2026-07-22T11:38:50+00:00,official_en_csv,"24 groups, 23 edges (IT branches 25/35/133)"
 SKILL_ONTO,SKILL_ONTO,-,2026-07-22T11:46:08+00:00,neutral_faceted_ontology,"12084 skills -> 22 categories / 10 domains / 2 types; 200 soft; 12116 skill edges, 256 occupation-domain facet edges"
-MERGE,MERGE,-,2026-07-22T11:46:51+00:00,connected_components(exactMatch),"239 unified occ (13 merged), 11170 unified skills (674 merged)"
-WIKIDATA,WIKIDATA,live query.wikidata.org,2026-07-22T19:27:20+00:00,sparql label-match + class verify,"1248 QID anchors (1209 skills, 31 occ, 8 domains, 1114 high-conf); 4 SPARQL queries this run"
+WIKIDATA,WIKIDATA,live query.wikidata.org,2026-07-22T23:28:50+00:00,sparql label-match + class verify + metadata,"1099 QID anchors (1060 skills, 31 occ, 8 domains, 955 high-conf); 1 SPARQL queries this run"
+MERGE,MERGE,-,2026-07-22T23:29:16+00:00,connected_components(exactMatch),"239 unified occ (13 merged), 11170 unified skills (674 merged)"

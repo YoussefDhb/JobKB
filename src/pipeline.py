@@ -108,6 +108,25 @@ def qa():
         wl_high = sum(1 for r in wl if r.get("confidence") == "high")
         print(f"wikidata anchors: {len(wl)} ({wl_skill} skills, {wl_occ} occupations, "
               f"{wl_dom} domains; {wl_high} high-confidence)")
+        occ_u = K.read_all(C.UNIFIED_OCCUPATIONS_CSV)
+        skl_u = K.read_all(C.UNIFIED_SKILLS_CSV)
+        # Referential integrity: every anchor must resolve to a live KB concept/node.
+        occ_ids = {r["unified_id"] for r in occ_u}
+        skl_ids = {r["unified_id"] for r in skl_u}
+        dom_ids = {r["entity_id"] for r in skl if r.get("esco_skill_type") == "skill_domain"}
+        valid = {"skill": skl_ids, "occupation": occ_ids, "domain": dom_ids}
+        wl_dangling = [r for r in wl
+                       if (r.get("unified_id") or r.get("entity_id"))
+                       not in valid.get(r.get("entity_kind"), set())]
+        # In-graph enrichment coverage on the concept layer.
+        enr_skl = sum(1 for r in skl_u if r.get("wikidata_qid"))
+        enr_occ = sum(1 for r in occ_u if r.get("wikidata_qid"))
+        enr_desc = sum(1 for r in skl_u + occ_u if r.get("wikidata_description"))
+        print(f"wikidata in-graph: {enr_skl} skills + {enr_occ} occupations carry a QID; "
+              f"{enr_desc} carry a Wikidata description  |  dangling anchors: {len(wl_dangling)}")
+        if wl_dangling:
+            print(f"  WARNING: {len(wl_dangling)} wikidata anchors reference missing concepts e.g. "
+                  f"{[ (r.get('entity_kind'), r.get('unified_id') or r.get('entity_id')) for r in wl_dangling[:3] ]}")
     if dangling:
         print(f"  WARNING: {len(dangling)} dangling edges e.g. "
               f"{[(e['parent_entity_id'], e['child_entity_id']) for e in dangling[:3]]}")

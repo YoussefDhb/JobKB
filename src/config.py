@@ -127,15 +127,20 @@ ALIGNMENT_FIELDS = [
     "entity_id_a", "source_a", "entity_id_b", "source_b",
     "relation", "confidence", "method", "validated", "merge", "notes",
 ]
+# Unified concepts carry their Wikidata anchor in-graph: qid + URL + Wikidata's terse description (a
+# dedicated column that NEVER overwrites KB-authored text). Populated by wikidata.enrich_rows() from
+# the side table; empty until `--wikidata` has run. Wikidata aliases are merged into alt_labels_*.
 UNIFIED_OCC_FIELDS = [
     "unified_id", "primary_label_en", "primary_label_fr",
     "alt_labels_en", "alt_labels_fr", "isco_code",
     "occupation_type", "sources", "member_entity_ids",
+    "wikidata_qid", "wikidata_url", "wikidata_description",
 ]
 UNIFIED_SKILL_FIELDS = [
     "unified_id", "primary_label_en", "primary_label_fr",
     "alt_labels_en", "alt_labels_fr", "hard_soft", "it_subtype",
     "sources", "member_entity_ids",
+    "wikidata_qid", "wikidata_url", "wikidata_description",
 ]
 PROVENANCE_FIELDS = [
     "entity_id", "source", "source_version", "retrieved_at", "retrieval_method", "notes",
@@ -144,15 +149,19 @@ BLOCKED_FIELDS = [
     "entity_kind", "source", "source_id", "label", "decision", "reason",
     "sim_it", "sim_non", "nli",
 ]
-# Wikidata cross-reference (side table produced by the `--wikidata` enrichment).
+# Wikidata cross-reference (side table produced by the `--wikidata` enrichment). `relation` carries
+# SKOS-typed semantics (skos:exactMatch / skos:closeMatch) so the layer is RDF-export-ready;
+# `wd_aliases_en`/`wd_aliases_fr` are the fetched alternate labels (' | '-joined).
 WIKIDATA_LINKS_FIELDS = [
-    "entity_id", "entity_kind", "unified_id", "label_en", "qid", "wikidata_url",
-    "wd_label", "wd_description", "instance_of", "match_method", "confidence",
+    "entity_id", "entity_kind", "unified_id", "label_en", "qid", "relation", "wikidata_url",
+    "wd_label", "wd_description", "wd_aliases_en", "wd_aliases_fr",
+    "instance_of", "match_method", "confidence",
 ]
 # Snapshot of every label resolved against Wikidata (empty qid = verified-unresolved, cached so a
 # re-run is fully offline). Keyed by normalized label + kind.
 WIKIDATA_SNAPSHOT_FIELDS = [
     "norm_label", "entity_kind", "qid", "wd_label", "wd_description",
+    "wd_aliases_en", "wd_aliases_fr",
     "instance_of", "match_method", "confidence",
 ]
 
@@ -523,6 +532,13 @@ WIKIDATA_SKILL_SUBDOMAINS = frozenset({
 })
 WIKIDATA_SKILL_MAX_TOKENS = 3  # only short (entity-like) labels are candidates
 
+# In-graph enrichment: Wikidata aliases merged into a concept's alt_labels are hygiene-filtered to
+# avoid noise — dropped if they duplicate an existing label, exceed these bounds, or are structural
+# noise (relevance.is_structural_noise); at most WIKIDATA_MAX_ALIASES kept per concept.
+WIKIDATA_MAX_ALIASES = 8
+WIKIDATA_ALIAS_MAX_TOKENS = 4
+WIKIDATA_ALIAS_MAX_CHARS = 40
+
 # instance-of (P31) / subclass-of (P279*) allowlist. Q7397 (software) as a superclass captures
 # most software subtypes (IDEs, version-control systems, …) through the P279* closure.
 WIKIDATA_SKILL_CLASSES = (
@@ -586,9 +602,46 @@ WIKIDATA_DOMAIN_CLASSES = ("Q638608",)  # software development (process) — for
 WIKIDATA_DOMAIN_FIELD_CLASSES = WIKIDATA_SKILL_FIELD_CLASSES + ("Q131339603",)
 # Backstop: reject a candidate whose instance-of hits any of these, even on a label match.
 WIKIDATA_DENY_CLASSES = (
-    "Q5",       # human
-    "Q11424",   # film
-    "Q482994",  # album
-    "Q16521",   # taxon
-    "Q7889",    # video game
+    "Q5",         # human
+    "Q11424",     # film
+    "Q482994",    # album
+    "Q16521",     # taxon
+    "Q7889",      # video game
+    "Q4167410",   # Wikimedia disambiguation page — many tech acronyms (SQL/Git/AWS/…) have a
+                  # disambiguation item that spuriously satisfies the P279* class closure; the real
+                  # concept is a distinct QID, so disambiguation pages must be rejected outright.
+    # Same-name non-tech homonyms that outrank the real concept: field-name skills (AI, ML, NLP)
+    # collide with the academic JOURNAL of that name; product names collide with magazines. Journals
+    # and magazines carry these standard P31s, so denying them lets the real field/tech item win.
+    "Q5633421",   # scientific journal
+    "Q737498",    # academic journal
+    "Q41298",     # magazine
+    "Q1002697",   # periodical
+)
+# Second, description-based precision guard (offline, robust): an anchor whose fetched Wikidata
+# description reads as a settlement / periodical / creative work / place is a same-name homonym, not
+# the technology — drop it. Complements the class deny for cases with many distinct P31 QIDs (cities,
+# communes) that are impractical to enumerate as deny classes. Terse WD descriptions start with the
+# type ("city in the United States", "scientific journal", "commune in …"), so these match safely.
+# Patterns are deliberately specific (matched against a terse WD description) to avoid dropping a
+# legitimate tech item whose description merely mentions a word — e.g. "video game development
+# framework" (SpriteKit) or "…in a single executable file" (BusyBox) must NOT be flagged. Applied to
+# skills/domains only; occupation anchors resolve via profession/occupation and are not homonym-prone.
+WIKIDATA_NONIT_DESC_PATTERNS = (
+    r"\b(city|town|village|municipality|commune|hamlet|borough|county|province|prefecture|"
+    r"human settlement|census-designated place)\b",
+    r"\b(journal|magazine|periodical|newspaper|manga|book series|anthology)\b",
+    r"\bcomic books?\b|\bcomics\b|\bgraphic novel\b",
+    r"\b(feature film|film directed|album by|studio album|song by|musical group|rock band)\b",
+    r"\b(river|mountain|lake|island|airport|railway station|crater|asteroid|moth|butterfly)\b",
+    r"\b(given name|surname|family name|first name|footballer|politician|actor|actress)\b",
+    r"\bvideo game (publisher|developer|company|console|series)\b",
+    r"\b(19|20)\d\d video game\b",
+    # Tech-adjacent homonyms: a field/topic name that matched its Q&A site or a Wikimedia-internal
+    # page, not the concept. Kept specific so real web tools (WordPress, Cloudflare, Stack Overflow,
+    # phpBB, Google Sites) are NOT dropped.
+    r"\bStack Exchange site\b",
+    r"\bWikimedia (template|category|module|project|permanent duplicate|duplicat)",
+    r"\bsystem tray\b",
+    r"\bnews (website|site|and media website)\b",
 )

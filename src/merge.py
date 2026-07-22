@@ -13,6 +13,7 @@ from . import config as C
 from collections import Counter
 
 from . import common as K
+from . import wikidata as W
 
 
 class _UF:
@@ -141,6 +142,7 @@ def _merge_occupations():
             "sources": " | ".join(sorted({m["source"] for m in members})),
             "member_entity_ids": " | ".join(sorted(comp)),
         })
+    W.enrich_rows(rows, "occupation")  # weave in Wikidata anchors if the side table exists
     K.write_csv(C.UNIFIED_OCCUPATIONS_CSV, C.UNIFIED_OCC_FIELDS, rows)
     return rows
 
@@ -166,6 +168,7 @@ def _merge_skills():
             "sources": " | ".join(sorted({m["source"] for m in members})),
             "member_entity_ids": " | ".join(sorted(comp)),
         })
+    W.enrich_rows(rows, "skill")  # weave in Wikidata anchors if the side table exists
     K.write_csv(C.UNIFIED_SKILLS_CSV, C.UNIFIED_SKILL_FIELDS, rows)
     return rows
 

@@ -34,6 +34,7 @@ from __future__ import annotations
 import csv
 import json
 import os
+import re
 import time
 import urllib.parse
 import urllib.request
@@ -284,6 +285,83 @@ def _resolve(items, kind, allow_classes, snap, seed=None, checkpoint=None, field
     return queries
 
 
+_NONIT_DESC = [re.compile(p, re.I) for p in C.WIKIDATA_NONIT_DESC_PATTERNS]
+
+
+def _is_nonit_desc(desc: str) -> bool:
+    """True if a fetched Wikidata description reads as a non-tech same-name homonym (settlement,
+    periodical, creative work, place) — a precision guard applied when building the side table."""
+    d = (desc or "").strip()
+    return bool(d) and any(p.search(d) for p in _NONIT_DESC)
+
+
+def _relation(match_method: str) -> str:
+    """SKOS mapping relation for the side table (RDF-export-ready): an exact rdfs:label match is an
+    exactMatch; an alias (skos:altLabel) match is the slightly looser closeMatch."""
+    return "skos:exactMatch" if (match_method or "").startswith("exact") else "skos:closeMatch"
+
+
+# ------------------------------------------------------------------------------------------
+# Metadata pass: fetch description + aliases (en/fr) for the anchored QIDs, keyed BY QID (cheap).
+# Fills the snapshot so the enrichment is resumable and offline-reproducible like the resolution.
+# ------------------------------------------------------------------------------------------
+def _fetch_metadata(snap, checkpoint=None) -> int:
+    """For every anchored QID lacking metadata, fetch en/fr `schema:description` + `skos:altLabel`
+    in ~50-QID batches. Updates wd_description / wd_aliases_en / wd_aliases_fr on every snapshot row
+    carrying that QID. Resumable (skips QIDs already carrying a description or aliases). Returns the
+    network-query count."""
+    # QID -> the snapshot rows that reference it, restricted to anchors without metadata yet.
+    need = {}
+    for key, r in snap.items():
+        qid = r.get("qid")
+        if not qid:
+            continue
+        if r.get("wd_description") or r.get("wd_aliases_en") or r.get("wd_aliases_fr"):
+            continue
+        need.setdefault(qid, []).append(key)
+    qids = list(need)
+    queries = 0
+    for i in range(0, len(qids), _CHUNK):
+        batch = qids[i:i + _CHUNK]
+        values = " ".join(f"wd:{q}" for q in batch)
+        query = (
+            "SELECT ?item ?d_en ?d_fr "
+            '(GROUP_CONCAT(DISTINCT ?ae; separator=" | ") AS ?a_en) '
+            '(GROUP_CONCAT(DISTINCT ?af; separator=" | ") AS ?a_fr) WHERE { '
+            f"VALUES ?item {{ {values} }} "
+            'OPTIONAL { ?item schema:description ?d_en. FILTER(LANG(?d_en)="en") } '
+            'OPTIONAL { ?item schema:description ?d_fr. FILTER(LANG(?d_fr)="fr") } '
+            'OPTIONAL { ?item skos:altLabel ?ae. FILTER(LANG(?ae)="en") } '
+            'OPTIONAL { ?item skos:altLabel ?af. FILTER(LANG(?af)="fr") } '
+            "} GROUP BY ?item ?d_en ?d_fr"
+        )
+        js = _http_get(C.WIKIDATA_SPARQL_URL, {"query": query, "format": "json"})
+        queries += 1
+        if js is None:
+            continue  # failed -> leave this batch's QIDs for a resume (no false empty cached)
+        got = {}
+        for b in js.get("results", {}).get("bindings", []):
+            qid = b["item"]["value"].rsplit("/", 1)[-1]
+            got[qid] = {
+                "wd_description": b.get("d_en", {}).get("value", "")
+                                  or b.get("d_fr", {}).get("value", ""),
+                "wd_description_fr": b.get("d_fr", {}).get("value", ""),
+                "wd_aliases_en": b.get("a_en", {}).get("value", ""),
+                "wd_aliases_fr": b.get("a_fr", {}).get("value", ""),
+            }
+        for qid in batch:
+            m = got.get(qid)
+            if not m:
+                continue
+            for key in need[qid]:
+                snap[key]["wd_description"] = m["wd_description"]
+                snap[key]["wd_aliases_en"] = m["wd_aliases_en"]
+                snap[key]["wd_aliases_fr"] = m["wd_aliases_fr"]
+        if checkpoint is not None:
+            checkpoint()
+    return queries
+
+
 def run(refresh: bool = False) -> dict:
     """Resolve tech-skills + occupations to Wikidata QIDs; write kb/wikidata_links.csv + snapshot."""
     snap = {} if refresh else _load_snapshot()
@@ -311,20 +389,31 @@ def run(refresh: bool = False) -> dict:
                   checkpoint=_checkpoint, field_classes=C.WIKIDATA_DOMAIN_FIELD_CLASSES)
     _save_snapshot(snap)
 
+    # Metadata pass: description + aliases (en/fr) for the anchored QIDs, for in-graph enrichment.
+    qm = _fetch_metadata(snap, checkpoint=_checkpoint)
+    _save_snapshot(snap)
+
     # Build the KB side table (only entities that actually resolved to a QID).
+    def _row(uid, kind, label, r):
+        return {
+            "entity_id": uid, "entity_kind": kind, "unified_id": uid,
+            "label_en": label, "qid": r["qid"], "relation": _relation(r["match_method"]),
+            "wikidata_url": f"https://www.wikidata.org/wiki/{r['qid']}",
+            "wd_label": r["wd_label"], "wd_description": r.get("wd_description", ""),
+            "wd_aliases_en": r.get("wd_aliases_en", ""), "wd_aliases_fr": r.get("wd_aliases_fr", ""),
+            "instance_of": r.get("instance_of", ""),
+            "match_method": r["match_method"], "confidence": r["confidence"],
+        }
+
     def _links(items, kind):
+        # The non-IT description guard is a homonym filter for concept/tech labels; occupation anchors
+        # resolve via profession/occupation classes and are not homonym-prone, so they skip it.
+        guard = kind != "occupation"
         rows = []
         for uid, label in items:
             r = snap.get((K.normalize_label(label), kind))
-            if r and r.get("qid"):
-                rows.append({
-                    "entity_id": uid, "entity_kind": kind, "unified_id": uid,
-                    "label_en": label, "qid": r["qid"],
-                    "wikidata_url": f"https://www.wikidata.org/wiki/{r['qid']}",
-                    "wd_label": r["wd_label"], "wd_description": r["wd_description"],
-                    "instance_of": r.get("instance_of", ""),
-                    "match_method": r["match_method"], "confidence": r["confidence"],
-                })
+            if r and r.get("qid") and not (guard and _is_nonit_desc(r.get("wd_description", ""))):
+                rows.append(_row(uid, kind, label, r))
         return rows
 
     # Domains: one anchor per domain node, choosing the first probe label that resolved to a QID.
@@ -333,15 +422,8 @@ def run(refresh: bool = False) -> dict:
         for did, labels in dom_probes.items():
             for label in labels:
                 r = snap.get((K.normalize_label(label), "domain"))
-                if r and r.get("qid"):
-                    rows.append({
-                        "entity_id": did, "entity_kind": "domain", "unified_id": did,
-                        "label_en": label, "qid": r["qid"],
-                        "wikidata_url": f"https://www.wikidata.org/wiki/{r['qid']}",
-                        "wd_label": r["wd_label"], "wd_description": r["wd_description"],
-                        "instance_of": r.get("instance_of", ""),
-                        "match_method": r["match_method"], "confidence": r["confidence"],
-                    })
+                if r and r.get("qid") and not _is_nonit_desc(r.get("wd_description", "")):
+                    rows.append(_row(did, "domain", label, r))
                     break  # best (first) resolving probe wins for this domain
         return rows
 
@@ -354,11 +436,101 @@ def run(refresh: bool = False) -> dict:
     n_high = sum(1 for l in links if l["confidence"] == "high")
     K.log_provenance("WIKIDATA", [{
         "entity_id": "WIKIDATA", "source": "WIKIDATA", "source_version": "live query.wikidata.org",
-        "retrieved_at": K.now_iso(), "retrieval_method": "sparql label-match + class verify",
+        "retrieved_at": K.now_iso(), "retrieval_method": "sparql label-match + class verify + metadata",
         "notes": f"{len(links)} QID anchors ({n_skill} skills, {n_occ} occ, {n_dom} domains, "
-                 f"{n_high} high-conf); {q1 + q2 + q3} SPARQL queries this run",
+                 f"{n_high} high-conf); {q1 + q2 + q3 + qm} SPARQL queries this run",
     }])
     print(f"[WIKIDATA] {len(links)} QID anchors written ({n_skill} skills, {n_occ} occupations, "
-          f"{n_dom} domains, {n_high} high-confidence); {q1 + q2 + q3} SPARQL queries.", flush=True)
+          f"{n_dom} domains, {n_high} high-confidence); {q1 + q2 + q3 + qm} SPARQL queries.", flush=True)
+
+    # Weave the anchors into the concept layer (identifiers + descriptions + cleaned aliases).
+    integrate()
     return {"anchors": len(links), "skills": n_skill, "occupations": n_occ,
             "domains": n_dom, "high": n_high}
+
+
+# ------------------------------------------------------------------------------------------
+# In-graph integration: join the side table onto the unified concept layer (idempotent, offline).
+# ------------------------------------------------------------------------------------------
+def _links_by_uid() -> dict:
+    """unified_id -> side-table row (only anchored). Empty dict if the side table is absent."""
+    idx = {}
+    if os.path.isfile(C.WIKIDATA_LINKS_CSV):
+        for r in K.read_all(C.WIKIDATA_LINKS_CSV):
+            if r.get("qid"):
+                idx[r.get("unified_id") or r.get("entity_id")] = r
+    return idx
+
+
+_PAREN = re.compile(r"\([^)]*\)")
+
+
+def _clean_aliases(existing_norm, raw):
+    """Hygiene-filter Wikidata aliases before merging into a concept's alt_labels: drop duplicates
+    (of the primary/existing labels, case-insensitive), parenthetical near-duplicates
+    (e.g. "Python (software)"/"Python (language)" -> reduce to an existing label), over-long
+    phrases, and structural noise; cap the count. Keeps the alt-label set useful, not flooded."""
+    from . import relevance  # lazy: keep merge model-free at import
+    out, out_norm = [], set()
+    for a in (p.strip() for p in (raw or "").split(" | ")):
+        n = K.normalize_label(a)
+        if not a or not n or n in existing_norm or n in out_norm:
+            continue
+        # a "X (qualifier)" alias that reduces to an existing label is a disambiguation variant.
+        stripped = K.normalize_label(_PAREN.sub("", a))
+        if stripped and stripped != n and (stripped in existing_norm or stripped in out_norm):
+            continue
+        if len(a.split()) > C.WIKIDATA_ALIAS_MAX_TOKENS or len(a) > C.WIKIDATA_ALIAS_MAX_CHARS:
+            continue
+        if relevance.is_structural_noise(a):
+            continue
+        out.append(a)
+        out_norm.add(n)
+        if len(out) >= C.WIKIDATA_MAX_ALIASES:
+            break
+    return out
+
+
+def enrich_rows(rows, kind):
+    """Mutate unified `rows` in place: attach wikidata_qid/url/description and merge cleaned Wikidata
+    aliases into alt_labels_en/fr. Idempotent (re-merge safe); a no-op that just blanks the columns
+    when the side table is absent. Called by both `integrate()` and `merge.run()`."""
+    idx = _links_by_uid()
+    for r in rows:
+        link = idx.get(r.get("unified_id", ""))
+        if not link:
+            # Always overwrite from the side table (the source of truth) — never preserve a stale
+            # value, so a dropped anchor (e.g. a corrected disambiguation match) is blanked here.
+            r["wikidata_qid"] = ""
+            r["wikidata_url"] = ""
+            r["wikidata_description"] = ""
+            continue
+        r["wikidata_qid"] = link["qid"]
+        r["wikidata_url"] = link.get("wikidata_url", "")
+        r["wikidata_description"] = link.get("wd_description", "")
+        for lang in ("en", "fr"):
+            field = f"alt_labels_{lang}"
+            existing = [p.strip() for p in (r.get(field) or "").split(" | ") if p.strip()]
+            existing_norm = {K.normalize_label(r.get(f"primary_label_{lang}", ""))}
+            existing_norm |= {K.normalize_label(x) for x in existing}
+            add = _clean_aliases(existing_norm, link.get(f"wd_aliases_{lang}", ""))
+            if add:
+                r[field] = " | ".join(existing + add)
+    return rows
+
+
+def integrate():
+    """Weave the Wikidata side table into the concept layer by re-running the merge stage: it rebuilds
+    the unified tables from member rows (so alt_labels are clean, never carrying stale prior-run
+    aliases) and enriches them from the current side table via `enrich_rows`. Idempotent."""
+    if not os.path.isfile(C.WIKIDATA_LINKS_CSV):
+        return (0, 0)
+    from . import merge  # lazy: avoid an import cycle (merge imports this module)
+    merge.run()
+    occ = K.read_all(C.UNIFIED_OCCUPATIONS_CSV)
+    skl = K.read_all(C.UNIFIED_SKILLS_CSV)
+    n_occ = sum(1 for r in occ if r.get("wikidata_qid"))
+    n_skl = sum(1 for r in skl if r.get("wikidata_qid"))
+    print(f"[WIKIDATA] integrated into concept layer: {n_skl} skills + {n_occ} occupations carry a QID.",
+          flush=True)
+    return (n_skl, n_occ)
