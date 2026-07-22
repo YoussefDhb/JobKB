@@ -22,7 +22,7 @@ tier, and cross-branch data roles), applied consistently to every source.
 | **CSO 3.5** | **Skills only** — curated subset of the Computer Science Ontology (emerging-tech vocabulary) | ~530 topics: IT branches (AI/ML, security, software, data, networks, …) via `superTopicOf`, depth≤2, per-branch balanced, de-duped |
 | **Lightcast Open Skills** | **Skills only** — large, cleanly-categorised skills taxonomy | Information Technology category (`17.0`) = ~5,240 skills across 70 authoritative IT subcategories |
 | **Kaggle technical skills** | **Skills only** — small curated IT technical-skills list | 528 skills, 9 IT categories |
-| **e-CF 4.0** | **Skills only** — European e-Competence Framework (EU-standard ICT competences) | 41 professional ICT competences (Plan/Build/Run/Enable/Manage), self-classified into the 19 sub-domains |
+| **e-CF 4.0** | **Skills only** — European e-Competence Framework (EU-standard ICT competences) | 41 professional ICT competences (Plan/Build/Run/Enable/Manage), self-classified into the taxonomy's 22 categories |
 | **Soft skills** (curated) | **Skills only** — noun-form soft/transversal skills used in IT hiring | 22 recruiter-vocabulary soft skills (teamwork, communication, problem solving, work ethic, …) the ESCO verb-phrase competences lack; linked to occupations by posting evidence |
 | **WEF Global Skills Taxonomy** (2021) | **Skills only** — authoritative soft-skill standard (World Economic Forum) | 47 structured soft skills (creative/systems thinking, mentoring, building trust, grit, growth mindset, …) across 5 WEF-aligned soft sub-domains; 16 core ones attached to every IT occupation as a `transversal` layer |
 | **ADEM (Luxembourg)** | **Relations only** — real vacancy demand (ESCO×ROME) | 1,758 weighted `demand` edges on IT ROME occupations (`M18*`) |
@@ -161,7 +161,7 @@ src/
   common.py        # deterministic ids, label normalization, idempotent CSV IO, provenance
   ingest/          # isco, esco, onet, noc, rome  (each IT-filtered, EN-primary)
   sources/         # pluggable source framework: base (StructuredSource/ExtractionSource) + registry + sfia, cso, demo
-  hierarchy.py     # neutral skill ontology: every skill -> IT sub-domain -> Hard/Soft
+  hierarchy.py     # faceted ontology: skill -> category -> domain -> type + occupation -> domain facet
   align/           # candidates (embeddings) -> verify (batched NLI) -> attach (ISCO, all sources)
   merge.py         # source-neutral unified concept clustering / de-duplication
   incremental.py   # add/remove ONE source without a full rebuild
@@ -281,10 +281,38 @@ source rows, and `run_pipeline.py` rebuilds `kb/` clean by default.
    consensus** (no source ranking) — English-primary, French secondary, merged synonyms,
    consensus ISCO code, back-links to source members.
 
-The **skill hierarchy** is a single neutral ontology: every skill of every source is
-classified into an IT **sub-domain** (programming, data, networks, security, cloud,
-web, AI/ML, systems, IT management, methodology, ...) under a **Hard/Soft** type —
-`skill → sub-domain → type`. No skill is left flat, and no source shapes the tree.
+### The taxonomy — a faceted, graph-navigable ontology
+
+Occupations and skills share one **functional-domain** vocabulary, so the graph is navigable
+end-to-end: **`occupation ↔ domain ↔ category ↔ skill`**.
+
+**Skills — a 4-level tree** (`skill → category → domain → type`). Every skill of every source is
+classified into one of **22 fine categories**, which roll up into **10 broad domains** (Software
+Development · Web & Mobile · Data, Analytics & AI · Infrastructure, Systems & Cloud · Networks &
+Telecom · Cybersecurity · IT Management, Governance & Support · Emerging Technologies · General &
+Cross-cutting IT · Soft & Transversal), which roll up into **2 types** (Hard / Soft). No skill is left
+flat, and no source shapes the tree — a self-classified source's category is trusted, otherwise a
+label classifier assigns it (with high-precision overrides for the fine categories `mobile_development`,
+`data_engineering`, `hardware_embedded` that post-date the source maps). The soft branch is structured
+after the WEF Global Skills Taxonomy (5 soft categories + a catch-all).
+
+**Occupations — the ISCO-08 backbone, connected + faceted.** Occupations attach to ISCO groups
+(`occupation → unit → minor → sub-major`), now rooted under a single **"ICT professions"** super-root
+over branches 25/35/133 (one connected tree). Each real occupation is **also** linked (`in_domain`) to
+one of the same 10 domain nodes — resolved from its label then ISCO code — so e.g. *data scientist* and
+the *TensorFlow*/*Spark* skills both hang under **Data, Analytics & AI**. ISCO remains the authoritative
+occupation standard; the domain facet only enriches navigation.
+
+```
+TYPE      Technical skills                                   Soft & transversal skills
+            │                                                      │
+DOMAIN    Data, Analytics & AI ─────────┐                    Soft & Transversal
+            │                           │ (in_domain)              │
+CATEGORY  AI & ML   Big data & data-eng │                    Leadership · Collaboration · …
+            │          │                │                         │
+SKILL     TensorFlow  Apache Spark      └── data scientist   teamwork · mentoring · …
+                                            (occupation)
+```
 
 All models are open-source; if none can be loaded (e.g. offline) the pipeline
 degrades gracefully (TF-IDF candidates, NLI off) and still produces the KB.
@@ -294,10 +322,10 @@ degrades gracefully (TF-IDF candidates, NLI off) and still produces the KB.
 | File | Contents |
 |---|---|
 | `occupations.csv` | one row per source occupation / ISCO-group node (EN + FR labels, ISCO & source codes) |
-| `skills.csv` | one row per source skill (+ `TAXONOMY` type/sub-domain nodes), hard/soft + IT sub-domain |
+| `skills.csv` | one row per source skill (+ `TAXONOMY` type/domain/category nodes), hard/soft + IT category |
 | `labels.csv` | every preferred/alt/hidden label per entity, per language |
 | `occupation_skill_relations.csv` | occupation ↔ skill links (essential/optional) |
-| `hierarchy.csv` | ISCO tree + every-source→ISCO attachment + skill→sub-domain→type (`broader_than`) |
+| `hierarchy.csv` | ISCO tree (rooted at "ICT professions") + every-source→ISCO attachment + skill→category→domain→type (`broader_than`) + occupation→domain facet (`in_domain`) |
 | `concept_alignments.csv` | cross-source matches with SKOS relation, confidence, method, `validated` |
 | `unified_occupations.csv` | de-duplicated unified occupations (merged members) |
 | `unified_skills.csv` | de-duplicated unified skills |

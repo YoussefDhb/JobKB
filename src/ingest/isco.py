@@ -64,17 +64,33 @@ def run():
         label_rows.extend(K.make_label_rows(eid, "occupation", C.SRC_ISCO,
                                             preferred={"en": [pref]}))
 
+    # Synthetic super-root over the three in-scope ISCO branches (25/35/133) so the occupation tree is
+    # a single connected hierarchy instead of three disconnected roots. Empty isco_code (it is not an
+    # ISCO group itself) -> QA skips it in the IT-leakage check.
+    root_eid = K.mint_id("OCC_", C.SRC_ISCO, "ICT")
+    occ_rows.append({
+        "entity_id": root_eid, "source": C.SRC_ISCO, "source_id": "ICT",
+        "isco_code": "", "source_code": "",
+        "pref_label_en": "Information and Communications Technology professions", "pref_label_fr": "",
+        "alt_labels_en": "ICT occupations | IT occupations", "alt_labels_fr": "",
+        "description_en": "Root of the IT occupation backbone: ISCO-08 ICT professionals (25), "
+                          "ICT technicians (35) and ICT service managers (133).", "description_fr": "",
+        "occupation_type": "isco_group", "label_language_status": "en_native",
+    })
+    label_rows.extend(K.make_label_rows(root_eid, "occupation", C.SRC_ISCO,
+                                        preferred={"en": ["Information and Communications Technology professions"]}))
+
     # Bottom-up edges: parent = code without last digit, only if the parent is in scope
-    # (so 25/35/133 become roots; 133's out-of-scope parent 13 is dropped).
+    # (so 25/35/133 attach to the ICT super-root; 133's out-of-scope parent 13 is dropped).
     for code in nodes:
         parent = code[:-1]
-        if parent in nodes:
-            hier_rows.append({
-                "parent_entity_id": K.mint_id("OCC_", C.SRC_ISCO, parent),
-                "child_entity_id": K.mint_id("OCC_", C.SRC_ISCO, code),
-                "entity_kind": "occupation", "relation_type": "broader_than",
-                "source": C.SRC_ISCO,
-            })
+        parent_eid = K.mint_id("OCC_", C.SRC_ISCO, parent) if parent in nodes else root_eid
+        hier_rows.append({
+            "parent_entity_id": parent_eid,
+            "child_entity_id": K.mint_id("OCC_", C.SRC_ISCO, code),
+            "entity_kind": "occupation", "relation_type": "broader_than",
+            "source": C.SRC_ISCO,
+        })
 
     K.replace_source_rows(C.OCCUPATIONS_CSV, C.OCCUPATION_FIELDS, C.SRC_ISCO, occ_rows)
     K.upsert_labels(label_rows)

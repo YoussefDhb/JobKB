@@ -114,6 +114,10 @@ LABEL_FIELDS = [
     "entity_id", "entity_kind", "label_text", "label_norm",
     "label_type", "language", "source",
 ]
+# The neutral skill ontology stores its type/domain/category nodes as rows in skills.csv, tagged in
+# `esco_skill_type`. This is the single source of truth for "this skill row is a taxonomy node, not a
+# real skill" — used by hierarchy/merge/qa to exclude the 3 taxonomy tiers from the real-skill set.
+TAXONOMY_SKILL_MARKERS = ("skill_type", "skill_domain", "skill_category")
 # `weight` carries a demand/frequency signal for evidence relations (ADEM vacancy positions,
 # JOBS posting co-occurrence counts); "" for taxonomy relations. Missing keys default to "" on
 # write, so the added column is backward-compatible with every existing relation writer.
@@ -364,6 +368,7 @@ DJINNI_MIN_FREQ = 40          # keep a (role, skill) demand pair only if seen in
 DJINNI_CONCRETE_SUBDOMAINS = frozenset({
     "programming_languages", "cloud_devops", "data_databases", "ai_ml", "web",
     "networks", "security", "systems_infrastructure", "emerging_tech",
+    "mobile_development", "data_engineering", "hardware_embedded",
 })
 # Concrete-tech skill labels that are also common English words / too ambiguous for free-text matching.
 DJINNI_TEXT_DENY = frozenset({
@@ -510,6 +515,7 @@ WIKIDATA_MAX_RETRIES = 5       # exponential backoff on 429/5xx/timeout, then fa
 WIKIDATA_SKILL_SUBDOMAINS = frozenset({
     "programming_languages", "data_databases", "cloud_devops", "ai_ml", "web",
     "networks", "security", "systems_infrastructure", "emerging_tech",
+    "mobile_development", "data_engineering", "hardware_embedded",
 })
 WIKIDATA_SKILL_MAX_TOKENS = 3  # only short (entity-like) labels are candidates
 

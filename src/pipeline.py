@@ -23,7 +23,7 @@ _OUTPUTS = [
     C.UNIFIED_SKILLS_CSV, C.PROVENANCE_CSV, C.BLOCKED_ENTITIES_CSV,
 ]
 
-_TAXO = ("skill_type", "skill_domain")
+_TAXO = C.TAXONOMY_SKILL_MARKERS
 
 
 def _clean():
@@ -45,8 +45,10 @@ def qa():
 
     real_occ = [r for r in occ if r["occupation_type"] != "isco_group"]
     en_cov = sum(1 for r in real_occ if r.get("pref_label_en"))
+    # ISCO groups outside the IT branches leak scope. The synthetic ICT super-root has an empty
+    # isco_code (it is not itself an ISCO group) -> excluded from the check.
     it_leak = [r for r in occ if r["occupation_type"] == "isco_group"
-               and not C.is_isco_it(r.get("isco_code", ""))]
+               and r.get("isco_code") and not C.is_isco_it(r.get("isco_code", ""))]
 
     # Orphans: real occupations / real skills with no parent in the hierarchy.
     occ_children = {e["child_entity_id"] for e in hier if e["entity_kind"] == "occupation"}
@@ -73,11 +75,21 @@ def qa():
     gate_malformed = sum(1 for b in gate_block if b.get("reason") == "malformed")
     gate_border = sum(1 for b in blocked if b.get("decision") == "keep")
 
+    # Taxonomy structure: count the 3 skill-ontology tiers + the occupation->domain facet coverage.
+    n_types = sum(1 for r in skl if r.get("esco_skill_type") == "skill_type")
+    n_domains = sum(1 for r in skl if r.get("esco_skill_type") == "skill_domain")
+    n_cats = sum(1 for r in skl if r.get("esco_skill_type") == "skill_category")
+    facet = {e["child_entity_id"] for e in hier
+             if e["entity_kind"] == "occupation" and e["relation_type"] == "in_domain"}
+    occ_in_domain = sum(1 for r in real_occ if r["entity_id"] in facet)
+
     print("\n=== QA ===")
     print(f"occupations: {len(occ)} ({len(real_occ)} real, "
           f"{len(occ) - len(real_occ)} ISCO groups)")
     print(f"skills: {len(real_skl)} (+{len(skl) - len(real_skl)} taxonomy nodes)  |  "
           f"hierarchy edges: {len(hier)}  |  dangling: {len(dangling)}")
+    print(f"skill taxonomy: {n_types} types / {n_domains} domains / {n_cats} categories  |  "
+          f"occupations linked to a functional domain: {occ_in_domain}/{len(real_occ)}")
     print(f"EN label coverage (real occ): {en_cov}/{len(real_occ)}")
     print(f"occupation orphans (no hierarchy parent): {len(occ_orphans)}")
     print(f"low-confidence ISCO attachments (review): {len(attach_lowconf)}")

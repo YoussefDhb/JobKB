@@ -1,5 +1,4 @@
 entity_id,source,source_version,retrieved_at,retrieval_method,notes
-ISCO,ISCO,ISCO-08,2026-07-20T12:52:54+00:00,official_en_csv,"23 groups, 20 edges (IT branches 25/35/133)"
 ESCO,ESCO,ESCO v1.2 (en),2026-07-20T12:52:59+00:00,official_en_csv,"110 occ, 1828 skills, 6613 relations"
 NOC,NOC,NOC 2021 v1.0,2026-07-20T12:53:30+00:00,official_en_fr_csv,15 IT unit-group occupations (bilingual)
 ROME,ROME,ROME v461,2026-07-20T12:53:37+00:00,official_fr_csv,"93 M18 metiers, 2052 skills, 5146 relations"
@@ -19,7 +18,8 @@ WEF,WEF,WEF-global-skills-taxonomy-2021,2026-07-21T23:07:53+00:00,wef_taxonomy_c
 KAGGLE_JOBS,KAGGLE_JOBS,kaggle-job-skill-set-it,2026-07-22T08:25:59+00:00,job_postings_mined,"162 demand relations from 240 IT postings, 9 occupations"
 LINKEDIN_SWE,LINKEDIN_SWE,kaggle-linkedin-swe,2026-07-22T08:32:13+00:00,job_postings_mined,"888 demand relations from 9380 postings, 3661 titles matched"
 DJINNI,DJINNI,djinni-recruitment-en,2026-07-22T08:39:46+00:00,job_postings_text_mined,"2402 demand relations from 110623/141897 IT postings (34 roles, 15 occupations)"
-SKILL_ONTO,SKILL_ONTO,-,2026-07-22T08:39:49+00:00,neutral_skill_ontology,"12084 skills classified, 200 soft, 19 sub-domains, 12103 edges"
-MERGE,MERGE,-,2026-07-22T08:40:10+00:00,connected_components(exactMatch),"239 unified occ (13 merged), 11170 unified skills (674 merged)"
 ALIGNMENT,ALIGNMENT,-,2026-07-22T08:40:11+00:00,incremental,350865 alignments total
 ATTACH,ATTACH,-,2026-07-22T08:40:11+00:00,incremental,146 ISCO attach edges total
+ISCO,ISCO,ISCO-08,2026-07-22T11:38:50+00:00,official_en_csv,"24 groups, 23 edges (IT branches 25/35/133)"
+SKILL_ONTO,SKILL_ONTO,-,2026-07-22T11:46:08+00:00,neutral_faceted_ontology,"12084 skills -> 22 categories / 10 domains / 2 types; 200 soft; 12116 skill edges, 256 occupation-domain facet edges"
+MERGE,MERGE,-,2026-07-22T11:46:51+00:00,connected_components(exactMatch),"239 unified occ (13 merged), 11170 unified skills (674 merged)"

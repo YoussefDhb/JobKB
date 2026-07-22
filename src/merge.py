@@ -147,7 +147,7 @@ def _merge_occupations():
 
 def _merge_skills():
     skl = [r for r in K.read_all(C.SKILLS_CSV)
-           if r.get("esco_skill_type") not in ("skill_type", "skill_domain")]
+           if r.get("esco_skill_type") not in C.TAXONOMY_SKILL_MARKERS]
     by_id = {r["entity_id"]: r for r in skl}
     comps = _components(list(by_id), [(a, b) for a, b, _k in _merge_edges("SKL_")])
 
