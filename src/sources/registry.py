@@ -24,6 +24,9 @@ from .adem_demand import AdemDemandSource
 from .jobs_evidence import JobsEvidenceSource
 from .data_jobs import DataJobsSource
 from .zenodo import ZenodoSource
+from .djinni import DjinniSource
+from .linkedin_swe import LinkedInSweSource
+from .kaggle_jobs import KaggleJobsSource
 
 
 class _WrappedIngest(Source):
@@ -91,6 +94,12 @@ register(DataJobsSource())
 # for hard skills AND the curated SOFTSKILLS vocabulary. Registers after SOFTSKILLS/EMERGING so both
 # its soft-skill and back-end-developer endpoints exist when it resolves demand.
 register(ZenodoSource())
+# Three more job-posting demand sources (resolve endpoints against the existing KB at ingest):
+# DJINNI (relation-only, free-text extraction over ~142k IT postings), LINKEDIN_SWE (hybrid, pre-
+# extracted skills), KAGGLE_JOBS (small hybrid, IT-management/support subset).
+register(DjinniSource())
+register(LinkedInSweSource())
+register(KaggleJobsSource())
 
 # --- plugin sources --------------------------------------------------------------------
 register(DemoSource())

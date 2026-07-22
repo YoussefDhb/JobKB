@@ -69,6 +69,10 @@ WEF_SOFT_DIR = os.path.join(OTHERS_EN_DIR, "Soft-skills")
 WEF_GLOBAL_CSV = os.path.join(WEF_SOFT_DIR, "Global-Skills-Taxonomy.csv")
 WEF_COMPETENCIES_CSV = os.path.join(WEF_SOFT_DIR, "Skills-Taxonomy-Competencies.csv")
 WEF_EDUCATION_CSV = os.path.join(WEF_SOFT_DIR, "Education4.0.csv")
+# Job-posting demand datasets added 2026-07-22.
+DJINNI_CSV = os.path.join(OTHERS_EN_DIR, "djinni-recruitment-dataset-job-descriptions-english.csv")
+LINKEDIN_SWE_CSV = os.path.join(OTHERS_EN_DIR, "kaggle-LinkedIn-Software-Engineering-Jobs-Dataset.csv")
+KAGGLE_JOBS_CSV = os.path.join(OTHERS_EN_DIR, "kaggle-job-skill-set.csv")
 # Wikidata enrichment: the provided (noisy) programming-language/library export, plus a
 # `retrieved/` folder where every SPARQL/API resolution is snapshotted so rebuilds are offline.
 WIKIDATA_EN_DIR = os.path.join(RESOURCES, "WIKIDATA", "en")
@@ -255,6 +259,9 @@ SRC_ZENODO = "ZENODO"        # hybrid: harvested tools + demand (Zenodo 3906955,
 SRC_EMERGING = "EMERGING"    # curated emerging IT roles observed in data_jobs but absent from ESCO/O*NET
 SRC_SOFTSKILLS = "SOFTSKILLS"  # curated noun-form soft/transversal skills used in IT hiring
 SRC_WEF = "WEF"              # WEF Global Skills Taxonomy (2021): structured soft skills + transversal attach
+SRC_DJINNI = "DJINNI"        # relation-only demand: Djinni IT postings (role tag + free-text JD extraction)
+SRC_LINKEDIN_SWE = "LINKEDIN_SWE"  # hybrid: LinkedIn software-engineering postings (pre-extracted skills)
+SRC_KAGGLE_JOBS = "KAGGLE_JOBS"    # hybrid: kaggle job-skill-set, IT subset (pre-extracted skills)
 
 # Sources that contribute real (non ISCO-group) occupations that get aligned.
 REAL_OCC_SOURCES = (SRC_ESCO, SRC_ONET, SRC_NOC, SRC_ROME, SRC_EMERGING)
@@ -346,6 +353,38 @@ ZENODO_HL_SUBDOMAIN = {
     "Development Tools": "",    # mixed (git/docker/jira/...) -> regex fallback
     "INVALIDO": "",
 }
+
+# DJINNI (djinni.com IT recruitment, ~142k EN postings, role tag + free-text JD). Relation-only demand
+# (no harvest): the role (Primary Keyword) resolves to an occupation and skills are extracted from the
+# Long Description by strict dictionary matching against the KB's CONCRETE-tech vocabulary. Free-text
+# extraction must NOT use the augmented matcher's vendor/suffix-strip or paren-acronym variants (they
+# match common English words like "teams"/"application"); only full labels (parens removed), single
+# tokens >= 4 chars, minus a common-word denylist.
+DJINNI_MIN_FREQ = 40          # keep a (role, skill) demand pair only if seen in >= this many postings
+DJINNI_CONCRETE_SUBDOMAINS = frozenset({
+    "programming_languages", "cloud_devops", "data_databases", "ai_ml", "web",
+    "networks", "security", "systems_infrastructure", "emerging_tech",
+})
+# Concrete-tech skill labels that are also common English words / too ambiguous for free-text matching.
+DJINNI_TEXT_DENY = frozenset({
+    "go", "r", "c", "d", "ml", "ai", "it", "ui", "ux", "qa", "os", "sql", "css", "html", "bi", "ci",
+    "cd", "sap", "crm", "erp", "react", "spark", "rust", "swift", "scala", "unity", "word", "excel",
+    "access", "ruby", "shell", "bash", "rest", "make", "servers", "server", "docking", "test", "testing",
+    "design", "support", "lead", "other", "scale", "science", "software", "automation", "monitoring",
+    "deployment", "english", "language", "communication", "statistics", "analytics", "security",
+    "network", "database", "cloud", "agile", "scrum", "visualization", "scripting", "algorithms",
+    "algorithm", "engineering", "development", "operations", "management",
+})
+
+# LINKEDIN_SWE (kaggle LinkedIn software-engineering postings, ~9.4k, pre-extracted comma-sep skills).
+# Relation-only demand: role (job_title) -> software-developer family, skills resolved against existing
+# KB skills via the augmented matcher. No harvest — LinkedIn's job_skills is a noisy free-form extraction
+# (generic phrases like "coding"/"analysis"/"best practices") that would pollute the vocabulary.
+LINKEDIN_SWE_MIN_FREQ = 15        # keep a (role, skill) demand pair only if seen in >= this many postings
+
+# KAGGLE_JOBS (kaggle job-skill-set, IT subset = 240 postings, pre-extracted list skills). Small hybrid:
+# generic IT-management/support titles -> occupations, demand relations; harvest disabled (too few rows).
+KAGGLE_JOBS_MIN_FREQ = 3          # keep a (role, skill) demand pair only if seen in >= this many postings
 
 # --------------------------------------------------------------------------------------
 # HuggingFace models (fully open-source; no API keys)

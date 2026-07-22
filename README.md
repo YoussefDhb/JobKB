@@ -29,6 +29,9 @@ tier, and cross-branch data roles), applied consistently to every source.
 | **Job postings (mined)** | **Relations only** — mined IT postings (25 roles) | 1,013 role→skill `demand` edges (matched to existing entities) |
 | **data_jobs** (lukebarousse) | **Hybrid** — 785k real postings, 10 data/IT roles | harvests ~50 genuinely-absent IT tools as new skills + 1,193 large-scale weighted `demand` edges |
 | **zenodo** (Montandon 2019) | **Hybrid** — 17.9k English Stack Overflow postings, 14 IT dev roles | harvests 55 absent tools + 533 `demand` edges (hard **and** soft skills; roles resolve to existing occupations) |
+| **Djinni** (IT recruitment) | **Relations only** — 142k IT postings, 34 role tags, free-text JDs | 2,402 `demand` edges across **15 occupations** (DevOps/mobile/QA/data/sysadmin/security/…) via strict concrete-tech text extraction |
+| **LinkedIn SWE** (kaggle) | **Relations only** — 9.4k software-engineering postings | 888 `demand` edges (pre-extracted skills → software-developer family) |
+| **kaggle job-skill-set** (IT) | **Relations only** — 240 IT-management/support postings | 162 `demand` edges (IT support/PM/manager/security-analyst — under-represented occupations) |
 | **Emerging roles** (curated) | **Occupations** — labor-market roles absent from ESCO/O*NET | 6 roles (Analytics Engineer, MLOps Engineer, BI Developer, Data Governance Analyst, Full Stack Developer, Back-End Developer), ISCO-attached, demand-profiled from data_jobs + zenodo |
 
 There is no ISCO↔SOC↔NOC↔ROME crosswalk shipped with these datasets, so the
@@ -92,6 +95,23 @@ jenkins, react-native, vue.js, spring-boot, …) classified via the dataset's co
 category taxonomy, and it writes 533 weighted `demand` edges for **both** hard skills and the curated
 soft skills (giving Back-End Developer a Java/Spring/DBMS/AWS profile, Full-Stack a JavaScript/React/
 Node.js/C# one).
+
+Three further job-posting sources add **relation-only** demand (no new nodes — endpoints resolve against
+the existing KB). **Djinni** (142k English IT postings from the Djinni recruitment platform, tagged with
+a role keyword and a free-text description) is the largest and most role-diverse: it resolves the role
+tag to an occupation and mines skills from the description. Free-text extraction is precision-critical —
+the token-list matcher's vendor/suffix-strip and paren-acronym variants match common English words on
+prose ("teams"←Microsoft Teams, "application"←PuTTY (Application)) — so Djinni matches **only full
+labels, restricted to concrete-tech sub-domains, with a min-length + common-word denylist guard**,
+yielding clean profiles (DevOps→Kubernetes/Docker/Terraform/Jenkins/Ansible; Android→Kotlin/Flutter/
+Firebase; QA→Selenium/Jira/Postman) across 15 occupations (2,402 edges). **LinkedIn SWE** (9.4k
+software-engineering postings) and the **kaggle job-skill-set** IT subset (240 IT-management/support
+postings) add 888 and 162 demand edges from their pre-extracted skill lists — both relation-only (no
+harvest: their extractions mix genuine tools with generic phrases like "coding"/"best practices" that
+would pollute the vocabulary). A fourth candidate, the **1.3M-row "LinkedIn Jobs & Skills" file, was
+rejected** after careful analysis: it has no role column (titles only in URL slugs), is ~90% non-IT, and
+mining 500k rows surfaced **zero genuinely-new IT skills** (all frequent absent tokens are non-IT /
+credentials) — nothing to add.
 
 **Occupation-gap augmentation.** Mining raw job titles/roles against every KB occupation label
 (pref **and** alt, all sources) surfaced a few well-attested roles that the standard taxonomies

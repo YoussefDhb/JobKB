@@ -16,7 +16,10 @@ SOFTSKILLS,SOFTSKILLS,curated-softskills-2026,2026-07-21T21:29:59+00:00,soft_ski
 EMERGING,EMERGING,curated-emerging-2026,2026-07-21T21:31:03+00:00,labor_market_gap_curation,"6 occ, 0 skills, 0 relations; gate blocked 0 (malformed 0, non-IT 0), borderline-kept 0"
 ZENODO,ZENODO,zenodo-3906955-montandon2019,2026-07-21T21:49:01+00:00,job_postings_mined,"55 harvested tool skills, 533 demand relations (42 soft) from 17900 English postings, 14 roles matched; gate blocked 0 (non-IT 0, malformed 0)"
 WEF,WEF,WEF-global-skills-taxonomy-2021,2026-07-21T23:07:53+00:00,wef_taxonomy_curation,47 soft skills; 4096 transversal relations (16 core skills × 256 occupations)
-SKILL_ONTO,SKILL_ONTO,-,2026-07-21T23:07:56+00:00,neutral_skill_ontology,"12084 skills classified, 200 soft, 19 sub-domains, 12103 edges"
-MERGE,MERGE,-,2026-07-21T23:08:24+00:00,connected_components(exactMatch),"239 unified occ (13 merged), 11170 unified skills (674 merged)"
-ALIGNMENT,ALIGNMENT,-,2026-07-21T23:08:26+00:00,incremental,350865 alignments total
-ATTACH,ATTACH,-,2026-07-21T23:08:26+00:00,incremental,146 ISCO attach edges total
+KAGGLE_JOBS,KAGGLE_JOBS,kaggle-job-skill-set-it,2026-07-22T08:25:59+00:00,job_postings_mined,"162 demand relations from 240 IT postings, 9 occupations"
+LINKEDIN_SWE,LINKEDIN_SWE,kaggle-linkedin-swe,2026-07-22T08:32:13+00:00,job_postings_mined,"888 demand relations from 9380 postings, 3661 titles matched"
+DJINNI,DJINNI,djinni-recruitment-en,2026-07-22T08:39:46+00:00,job_postings_text_mined,"2402 demand relations from 110623/141897 IT postings (34 roles, 15 occupations)"
+SKILL_ONTO,SKILL_ONTO,-,2026-07-22T08:39:49+00:00,neutral_skill_ontology,"12084 skills classified, 200 soft, 19 sub-domains, 12103 edges"
+MERGE,MERGE,-,2026-07-22T08:40:10+00:00,connected_components(exactMatch),"239 unified occ (13 merged), 11170 unified skills (674 merged)"
+ALIGNMENT,ALIGNMENT,-,2026-07-22T08:40:11+00:00,incremental,350865 alignments total
+ATTACH,ATTACH,-,2026-07-22T08:40:11+00:00,incremental,146 ISCO attach edges total

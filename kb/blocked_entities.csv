@@ -7,3 +7,7 @@ skill,CSO,virtual_classroom,virtual classroom,block,non_it,0.533,0.664,0.136
 skill,LIGHTCAST,BGS1C79190E69E09F979,Build Management,keep,borderline,0.582,0.674,0.155
 skill,LIGHTCAST,BGS536BA8FEBF2B770BA,Hardware Asset Management,keep,borderline,0.605,0.657,0.163
 skill,LIGHTCAST,KS44018725W7WRZPF5CD,Resource Access Control Facility,block,non_it,0.521,0.662,0.095
+skill,LINKEDIN_SWE,engineering,engineering,keep,borderline,0.648,0.699,0.31
+skill,LINKEDIN_SWE,compliance,compliance,block,non_it,0.499,0.715,0.112
+skill,LINKEDIN_SWE,people management,people management,keep,borderline,0.623,0.738,0.222
+skill,LINKEDIN_SWE,operations,operations,keep,borderline,0.581,0.692,0.287
