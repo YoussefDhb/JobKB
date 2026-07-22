@@ -133,23 +133,34 @@ and each topic is classified by the IT **root branch** it descends from (`CSO_BR
 rather than dumped into one flat bucket.
 
 **Wikidata QID enrichment (connective tissue).** `python run_pipeline.py --wikidata` anchors the
-KB's concrete technology/tool skills and its occupations to **stable Wikidata QIDs** — the
-general-purpose, richly-linked hub that gives free entity resolution for technologies, tools and
-companies no occupation taxonomy provides. It is a **side table** (`kb/wikidata_links.csv`), so it
-adds **no nodes or relations** — the core graph is untouched. Resolution is a **single batched
-SPARQL query per ~50 labels** that does label matching *and* class verification at once (QIDs are
-never hardcoded — a guessed QID is often a person/film): a candidate is accepted only when our label
-equals the item's `rdfs:label` (`match_method=exact`) or a `skos:altLabel` (`alias`) **and** its
-instance-of lands in a class allowlist — concrete tech via `P31`/`P279*` closure (software /
-programming language / library / framework / OS / database / hardware / company) plus IT
-fields/disciplines via direct `P31` (academic discipline / branch of science / field of study /
-type of technology — so *data science*→Q2374463, *AI*→Q11660, *cybersecurity*, *machine learning*,
-*blockchain* anchor too), and never a denylist class (human / film / album / taxon / video game).
-Ties break exact>alias, then by sitelink count. Every resolution — including verified-*unresolved* —
-is **snapshotted** to `resources/WIKIDATA/retrieved/` and flushed each chunk, so a re-run is fully
-offline/reproducible and an interruption resumes from the last flush; a failed query leaves its
-labels *inconclusive* (retried), never a false 'unresolved'. HTTP is polite (descriptive User-Agent,
-paced, backed-off, **fail-open**). Batching keeps the whole enrichment to ~110 queries. The provided
+KB's concrete technology/tool skills, its occupations, and its **10 functional-domain taxonomy
+nodes** to **stable Wikidata QIDs** — the general-purpose, richly-linked hub that gives free entity
+resolution for technologies, tools and companies no occupation taxonomy provides. It is a **side
+table** (`kb/wikidata_links.csv`), so it adds **no nodes or relations** — the core graph is
+untouched. **Populated: 1,248 anchors — 1,209 skills, 31 occupations, 8 domains (1,114
+high-confidence, exact-match).** Resolution is a **single batched SPARQL query per ~50 labels** that
+does label matching *and* class verification at once (QIDs are never hardcoded — a guessed QID is
+often a person/film): a candidate is accepted only when our label equals the item's `rdfs:label`
+(`match_method=exact`) or a `skos:altLabel` (`alias`) **and** its instance-of lands in a class
+allowlist — concrete tech via `P31`/`P279*` closure over **bounded** roots (software / programming
+language / library / framework / OS / database / hardware / company), plus IT fields/disciplines
+**and occupations** via direct `P31` (academic discipline / branch of science / field of study /
+type of technology / **profession / occupation** — closure over the last two, whose instance sets
+run to millions, times the query out, so they resolve by direct `P31`; *data science*→Q2374463,
+*software developer*→Q183888, *data engineer*→Q104659813 anchor this way), and never a denylist class
+(human / film / album / taxon / video game). Ties break exact>alias, then by sitelink count. The 10
+domain nodes are resolved by curated English **label probes** (case-exact — `rdfs:label` matching is
+case-sensitive, so a Title-Cased probe hits a disambiguation page) verified by the same class check:
+*software development*→Q638608, *web development*→Q386275, *data science*→Q2374463, *IT
+infrastructure*→Q594593, *telecommunications*→Q418, *computer security*→Q3510521, *IT
+management*→Q1473265, *emerging technologies*→Q120208 (the two composite domains — *General &
+Cross-cutting IT*, *Soft & Transversal* — have no clean single concept and stay honestly unresolved).
+Every resolution — including verified-*unresolved* — is **snapshotted** to
+`resources/WIKIDATA/retrieved/` and flushed each chunk, so a re-run is fully offline/reproducible and
+an interruption resumes from the last flush; a failed query leaves its labels *inconclusive*
+(retried), never a false 'unresolved'. HTTP is polite (descriptive User-Agent, paced, backed-off,
+**fail-open**) and **throttle-resilient** — on a `429` it waits for the query-service token bucket to
+refill (the run above completed straight through an active WDQS rate-limit outage). The provided
 `ESCO_v1.2.1-wikidata.csv` is a noisy export whose QIDs were lost; its one clean signal —
 programming-language synonyms — broadens matching for language skills (e.g. `golang`→Go).
 

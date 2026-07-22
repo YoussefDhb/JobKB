@@ -1,0 +1,1249 @@
+entity_id,entity_kind,unified_id,label_en,qid,wikidata_url,wd_label,wd_description,instance_of,match_method,confidence
+USKL_3935d8d5c92a,skill,USKL_3935d8d5c92a,business analytics,Q5001829,https://www.wikidata.org/wiki/Q5001829,business analytics,,,exact,high
+USKL_aafaa70e7b52,skill,USKL_aafaa70e7b52,Joomla,Q13167,https://www.wikidata.org/wiki/Q13167,Joomla,,,exact,high
+USKL_dd964ca18d6c,skill,USKL_dd964ca18d6c,electronics,Q11650,https://www.wikidata.org/wiki/Q11650,electronics,,,exact,high
+USKL_316e45d8321e,skill,USKL_316e45d8321e,Robotics,Q131920116,https://www.wikidata.org/wiki/Q131920116,Robotics,,,exact,high
+USKL_55837d589fa9,skill,USKL_55837d589fa9,telecommunications engineering,Q1061219,https://www.wikidata.org/wiki/Q1061219,telecommunications engineering,,,exact,high
+USKL_ba929b0ce4dc,skill,USKL_ba929b0ce4dc,mechatronics,Q180165,https://www.wikidata.org/wiki/Q180165,mechatronics,,,exact,high
+USKL_22d267e5a02a,skill,USKL_22d267e5a02a,Wireshark,Q403539,https://www.wikidata.org/wiki/Q403539,Wireshark,,,exact,high
+USKL_00c57890b0fc,skill,USKL_00c57890b0fc,Distributed Computing,Q5283113,https://www.wikidata.org/wiki/Q5283113,Distributed Computing,,,exact,high
+USKL_ed6d17b5959e,skill,USKL_ed6d17b5959e,Python,Q28865,https://www.wikidata.org/wiki/Q28865,Python,,,exact+csv_seed,high
+USKL_411a71b404b2,skill,USKL_411a71b404b2,DevOps,Q110262633,https://www.wikidata.org/wiki/Q110262633,DevOps,,,exact,high
+USKL_e5f7e4078b1f,skill,USKL_e5f7e4078b1f,database,Q132198157,https://www.wikidata.org/wiki/Q132198157,database,,,exact,high
+USKL_3331ff4490ba,skill,USKL_3331ff4490ba,Oracle Warehouse Builder,Q3354986,https://www.wikidata.org/wiki/Q3354986,Oracle Warehouse Builder,,,exact,high
+USKL_883936c34ecd,skill,USKL_883936c34ecd,GDPR,Q24625274,https://www.wikidata.org/wiki/Q24625274,GDPR,,,exact,high
+USKL_9727fdad2f9d,skill,USKL_9727fdad2f9d,Chef,Q1068916,https://www.wikidata.org/wiki/Q1068916,Chef,,,exact,high
+USKL_60cd6bee3526,skill,USKL_60cd6bee3526,information extraction,Q1662562,https://www.wikidata.org/wiki/Q1662562,information extraction,,,exact,high
+USKL_08befd8aa54c,skill,USKL_08befd8aa54c,cyber security,Q3510521,https://www.wikidata.org/wiki/Q3510521,computer security,,,alias,medium
+USKL_d8d49bff75e8,skill,USKL_d8d49bff75e8,Pascal,Q102072,https://www.wikidata.org/wiki/Q102072,Pascal,,,exact,high
+USKL_d1fb015160b9,skill,USKL_d1fb015160b9,Network Engineering,Q110262567,https://www.wikidata.org/wiki/Q110262567,Network Engineering,,,exact,high
+USKL_171379b5a44a,skill,USKL_171379b5a44a,Virtual Reality,Q15750987,https://www.wikidata.org/wiki/Q15750987,Virtual Reality,,,exact,high
+USKL_78b9bc79ad5a,skill,USKL_78b9bc79ad5a,NoSQL,Q5999165,https://www.wikidata.org/wiki/Q5999165,NoSQL,,,exact,high
+USKL_653fdb1438fd,skill,USKL_653fdb1438fd,Cisco,Q980092,https://www.wikidata.org/wiki/Q980092,Cisco,,,exact,high
+USKL_a9581386c02e,skill,USKL_a9581386c02e,Puppet,Q2095962,https://www.wikidata.org/wiki/Q2095962,Puppet,,,exact,high
+USKL_4f7e565d9edf,skill,USKL_4f7e565d9edf,social network analysis,Q7551269,https://www.wikidata.org/wiki/Q7551269,social network analysis,,,exact,high
+USKL_0f5e05abaa53,skill,USKL_0f5e05abaa53,IBM InfoSphere DataStage,Q5968866,https://www.wikidata.org/wiki/Q5968866,IBM InfoSphere DataStage,,,exact,high
+USKL_9109d1400572,skill,USKL_9109d1400572,Perl,Q256617,https://www.wikidata.org/wiki/Q256617,Perl,,,exact,high
+USKL_fb21cd60fdd4,skill,USKL_fb21cd60fdd4,Vagrant,Q7908548,https://www.wikidata.org/wiki/Q7908548,Vagrant,,,exact,high
+USKL_450126b167f3,skill,USKL_450126b167f3,Ansible,Q2852503,https://www.wikidata.org/wiki/Q2852503,Ansible,,,exact,high
+USKL_0def91adf6c8,skill,USKL_0def91adf6c8,Microsoft Visual C++,Q847296,https://www.wikidata.org/wiki/Q847296,Visual C++,,,exact+csv_seed,high
+USKL_d73535f50e8e,skill,USKL_d73535f50e8e,SPARK,Q3493345,https://www.wikidata.org/wiki/Q3493345,SPARK,,,exact,high
+USKL_7e5374753278,skill,USKL_7e5374753278,Swift,Q17118377,https://www.wikidata.org/wiki/Q17118377,Swift,,,exact+csv_seed,high
+USKL_5fd2bcf26299,skill,USKL_5fd2bcf26299,Scala,Q460584,https://www.wikidata.org/wiki/Q460584,Scala,,,exact+csv_seed,high
+USKL_c71731dc59d7,skill,USKL_c71731dc59d7,Parrot Security OS,Q19768087,https://www.wikidata.org/wiki/Q19768087,Parrot OS,,,alias,medium
+USKL_9d65f68df42f,skill,USKL_9d65f68df42f,Ruby,Q218935,https://www.wikidata.org/wiki/Q218935,Ruby,,,exact,high
+USKL_d109730089ff,skill,USKL_d109730089ff,Angular,Q28925578,https://www.wikidata.org/wiki/Q28925578,Angular,,,exact+csv_seed,high
+USKL_6b9d7c433810,skill,USKL_6b9d7c433810,C#,Q110857100,https://www.wikidata.org/wiki/Q110857100,C#,,,exact,high
+USKL_688e11c601f9,skill,USKL_688e11c601f9,R,Q206904,https://www.wikidata.org/wiki/Q206904,R,,,exact+csv_seed,high
+USKL_abc7409fe51f,skill,USKL_abc7409fe51f,Java,Q251,https://www.wikidata.org/wiki/Q251,Java,,,exact+csv_seed,high
+USKL_adfe96a6d21a,skill,USKL_adfe96a6d21a,data protection,Q456632,https://www.wikidata.org/wiki/Q456632,information privacy,,,alias,medium
+USKL_5c2dd08dc9c7,skill,USKL_5c2dd08dc9c7,image recognition,Q28038508,https://www.wikidata.org/wiki/Q28038508,image recognition,,,exact,high
+USKL_ec5ebd5c22df,skill,USKL_ec5ebd5c22df,MATLAB,Q169478,https://www.wikidata.org/wiki/Q169478,MATLAB,,,exact+csv_seed,high
+USKL_c49f3e245d08,skill,USKL_c49f3e245d08,Oracle Data Integrator,Q18154822,https://www.wikidata.org/wiki/Q18154822,Oracle Data Integrator,,,exact,high
+USKL_b409cb1c558a,skill,USKL_b409cb1c558a,Haskell,Q974187,https://www.wikidata.org/wiki/Q974187,Haskell,,,exact,high
+USKL_fdf7b9cb2819,skill,USKL_fdf7b9cb2819,WordPress,Q2001888,https://www.wikidata.org/wiki/Q2001888,WordPress.com,,,alias,medium
+USKL_7f3178e6e84a,skill,USKL_7f3178e6e84a,Groovy,Q3116945,https://www.wikidata.org/wiki/Q3116945,groovy,,,alias,medium
+USKL_4f8e7d8aaf5b,skill,USKL_4f8e7d8aaf5b,OmniPage,Q3227436,https://www.wikidata.org/wiki/Q3227436,OmniPage,,,exact,high
+USKL_35a6b42460fe,skill,USKL_35a6b42460fe,SQL Server,Q400708,https://www.wikidata.org/wiki/Q400708,SQL Server,,,exact,high
+USKL_9d9ef45ad4f9,skill,USKL_9d9ef45ad4f9,Solidity,Q24909565,https://www.wikidata.org/wiki/Q24909565,Solidity,,,exact+csv_seed,high
+USKL_20498fe612d8,skill,USKL_20498fe612d8,Jenkins,Q529830,https://www.wikidata.org/wiki/Q529830,Jenkins,,,exact,high
+USKL_9ed38d324f1f,skill,USKL_9ed38d324f1f,Eclipse,Q214685,https://www.wikidata.org/wiki/Q214685,Eclipse,,,exact,high
+USKL_496b654bff86,skill,USKL_496b654bff86,Xcode,Q250328,https://www.wikidata.org/wiki/Q250328,Xcode,,,exact+csv_seed,high
+USKL_ea958e3f8ddb,skill,USKL_ea958e3f8ddb,CSS,Q223794,https://www.wikidata.org/wiki/Q223794,CSS,,,exact+csv_seed,high
+USKL_8e2bdb5f7ced,skill,USKL_8e2bdb5f7ced,Teradata Database,Q65746013,https://www.wikidata.org/wiki/Q65746013,Teradata Database,,,exact,high
+USKL_d2739385cb7e,skill,USKL_d2739385cb7e,Nessus,Q1070329,https://www.wikidata.org/wiki/Q1070329,Nessus,,,exact,high
+USKL_a0a48ed87982,skill,USKL_a0a48ed87982,PostgreSQL,Q192490,https://www.wikidata.org/wiki/Q192490,PostgreSQL,,,exact,high
+USKL_f29d26fe8542,skill,USKL_f29d26fe8542,DB2,Q564782,https://www.wikidata.org/wiki/Q564782,DB2,,,exact,high
+USKL_57052e59dc8c,skill,USKL_57052e59dc8c,Objective-C,Q188531,https://www.wikidata.org/wiki/Q188531,Objective-C,,,exact+csv_seed,high
+USKL_92301e58d36e,skill,USKL_92301e58d36e,computer forensics,Q878553,https://www.wikidata.org/wiki/Q878553,computer forensics,,,exact,high
+USKL_a5dbd0ae2462,skill,USKL_a5dbd0ae2462,PHP,Q59,https://www.wikidata.org/wiki/Q59,PHP,,,exact+csv_seed,high
+USKL_ff4ad01c3bd0,skill,USKL_ff4ad01c3bd0,TypeScript,Q978185,https://www.wikidata.org/wiki/Q978185,TypeScript,,,exact+csv_seed,high
+USKL_f7bc1a65854e,skill,USKL_f7bc1a65854e,Metasploit,Q1147445,https://www.wikidata.org/wiki/Q1147445,Metasploit,,,exact,high
+USKL_31e9298306ca,skill,USKL_31e9298306ca,COBOL,Q5013256,https://www.wikidata.org/wiki/Q5013256,COBOL,,,exact,high
+USKL_07425585776d,skill,USKL_07425585776d,Natural Language Processing,Q59289206,https://www.wikidata.org/wiki/Q59289206,Natural Language Processing,,,exact,high
+USKL_3a623de75052,skill,USKL_3a623de75052,Data Science,Q110262588,https://www.wikidata.org/wiki/Q110262588,Data Science,,,exact,high
+USKL_08cf80b07ead,skill,USKL_08cf80b07ead,SQL,Q3943857,https://www.wikidata.org/wiki/Q3943857,SQL,,,exact,high
+USKL_5a744b7dd30d,skill,USKL_5a744b7dd30d,cybernetics,Q123637,https://www.wikidata.org/wiki/Q123637,cybernetics,,,exact,high
+USKL_f86a787aed78,skill,USKL_f86a787aed78,LESS,Q1107192,https://www.wikidata.org/wiki/Q1107192,LESS,,,exact+csv_seed,high
+USKL_b215fd27c9ef,skill,USKL_b215fd27c9ef,ASP.NET,Q178817,https://www.wikidata.org/wiki/Q178817,ASP.NET,,,exact+csv_seed,high
+USKL_a2b0659f5384,skill,USKL_a2b0659f5384,Cloud Technologies,Q140136708,https://www.wikidata.org/wiki/Q140136708,Cloud Technologies S.A.,,,alias,medium
+USKL_43fa93dd5462,skill,USKL_43fa93dd5462,Hadoop,Q29120,https://www.wikidata.org/wiki/Q29120,Apache Hadoop,,,alias,medium
+USKL_3fdd26c3e51a,skill,USKL_3fdd26c3e51a,Internet of Things,Q110262629,https://www.wikidata.org/wiki/Q110262629,Internet of Things,,,exact,high
+USKL_a737e3fdeca0,skill,USKL_a737e3fdeca0,decision support systems,Q330268,https://www.wikidata.org/wiki/Q330268,decision support system,,,alias,medium
+USKL_133201efb7ca,skill,USKL_133201efb7ca,Kali Linux,Q8364850,https://www.wikidata.org/wiki/Q8364850,Kali Linux,,,exact,high
+USKL_5ef1bf06a146,skill,USKL_5ef1bf06a146,Machine Learning,Q6723676,https://www.wikidata.org/wiki/Q6723676,Machine Learning,,,exact,high
+USKL_b16630fa1c0d,skill,USKL_b16630fa1c0d,HTML,Q8811,https://www.wikidata.org/wiki/Q8811,HTML,,,exact+csv_seed,high
+USKL_a595ee0ed70d,skill,USKL_a595ee0ed70d,Fortran,Q83303,https://www.wikidata.org/wiki/Q83303,Fortran,,,exact+csv_seed,high
+USKL_aed462dda9da,skill,USKL_aed462dda9da,Cryptography,Q110262525,https://www.wikidata.org/wiki/Q110262525,Cryptography,,,exact,high
+USKL_00c26f29f272,skill,USKL_00c26f29f272,Bash,Q189248,https://www.wikidata.org/wiki/Q189248,GNU Bash,,,exact+csv_seed,high
+USKL_2bc8bde6d9ac,skill,USKL_2bc8bde6d9ac,Telecommunications,Q96334266,https://www.wikidata.org/wiki/Q96334266,Telecommunications,,,exact,high
+USKL_ec04fef56323,skill,USKL_ec04fef56323,Visualization,Q1696827,https://www.wikidata.org/wiki/Q1696827,Visualization,,,exact,high
+USKL_85a5abe424ef,skill,USKL_85a5abe424ef,Apache Hadoop,Q29120,https://www.wikidata.org/wiki/Q29120,Apache Hadoop,,,exact,high
+USKL_fab607ccbaf9,skill,USKL_fab607ccbaf9,Apache HTTP Server,Q11354,https://www.wikidata.org/wiki/Q11354,Apache HTTP Server,,,exact,high
+USKL_b8c9dab797d1,skill,USKL_b8c9dab797d1,macOS,Q14116,https://www.wikidata.org/wiki/Q14116,macOS,,,exact,high
+USKL_6822d99b2c7f,skill,USKL_6822d99b2c7f,Backbone.js,Q3736988,https://www.wikidata.org/wiki/Q3736988,Backbone.js,,,exact,high
+USKL_d26d451225be,skill,USKL_d26d451225be,Eclipse IDE,Q82268,https://www.wikidata.org/wiki/Q82268,Q82268,,,alias,medium
+USKL_cc6c0e0ce9d5,skill,USKL_cc6c0e0ce9d5,Google Analytics,Q220577,https://www.wikidata.org/wiki/Q220577,Google Analytics,,,exact,high
+USKL_97eefbe93ae6,skill,USKL_97eefbe93ae6,Linux,Q261593,https://www.wikidata.org/wiki/Q261593,Linux,,,exact,high
+USKL_bf10b1111320,skill,USKL_bf10b1111320,Microsoft SQL Server,Q215819,https://www.wikidata.org/wiki/Q215819,Microsoft SQL Server,,,exact,high
+USKL_848d6859e97d,skill,USKL_848d6859e97d,Microsoft Windows Server,Q11219,https://www.wikidata.org/wiki/Q11219,Q11219,,,alias,medium
+USKL_af742ff4a462,skill,USKL_af742ff4a462,MongoDB,Q1165204,https://www.wikidata.org/wiki/Q1165204,MongoDB,,,exact+csv_seed,high
+USKL_7b28d8af6121,skill,USKL_7b28d8af6121,Node.js,Q756100,https://www.wikidata.org/wiki/Q756100,Node.js,,,exact+csv_seed,high
+USKL_f2acd243ebe7,skill,USKL_f2acd243ebe7,Oracle Database,Q185524,https://www.wikidata.org/wiki/Q185524,Oracle Database,,,exact,high
+USKL_3bf36318f640,skill,USKL_3bf36318f640,Oracle E-Business Suite,Q2426725,https://www.wikidata.org/wiki/Q2426725,Oracle E-Business Suite,,,exact,high
+USKL_f749ab962f2c,skill,USKL_f749ab962f2c,Oracle Hyperion,Q1431991,https://www.wikidata.org/wiki/Q1431991,Hyperion Solutions Corporation,,,alias,medium
+USKL_a20864eebe9f,skill,USKL_a20864eebe9f,Oracle PeopleSoft,Q1928814,https://www.wikidata.org/wiki/Q1928814,PeopleSoft,,,alias,medium
+USKL_be249c47fdd2,skill,USKL_be249c47fdd2,PL/SQL,Q41574,https://www.wikidata.org/wiki/Q41574,PL/SQL,,,exact+csv_seed,high
+USKL_745bd3d27837,skill,USKL_745bd3d27837,Oracle Solaris,Q14646,https://www.wikidata.org/wiki/Q14646,Solaris,,,alias,medium
+USKL_85b54c8aa7d6,skill,USKL_85b54c8aa7d6,Oracle WebLogic Server,Q83589,https://www.wikidata.org/wiki/Q83589,Oracle WebLogic Server,,,exact,high
+USKL_d5fba0ab5f5d,skill,USKL_d5fba0ab5f5d,Samba,Q1830735,https://www.wikidata.org/wiki/Q1830735,Samba,,,exact,high
+USKL_6e34f8faa349,skill,USKL_6e34f8faa349,Spring Framework,Q720314,https://www.wikidata.org/wiki/Q720314,Spring Framework,,,exact,high
+USKL_ff94537fada5,skill,USKL_ff94537fada5,Tableau,Q343131,https://www.wikidata.org/wiki/Q343131,Tableau,,,exact,high
+USKL_7531d8057cdf,skill,USKL_7531d8057cdf,UNIX,Q105994387,https://www.wikidata.org/wiki/Q105994387,AT&T UNIX,,,alias,medium
+USKL_3115d62a26cc,skill,USKL_3115d62a26cc,Veritas NetBackup,Q2063698,https://www.wikidata.org/wiki/Q2063698,NetBackup,,,alias,medium
+USKL_82365271a773,skill,USKL_82365271a773,Adobe ColdFusion,Q468446,https://www.wikidata.org/wiki/Q468446,Adobe ColdFusion,,,exact,high
+USKL_8ce010afc780,skill,USKL_8ce010afc780,Adobe Dreamweaver,Q192324,https://www.wikidata.org/wiki/Q192324,Adobe Dreamweaver,,,exact,high
+USKL_6276198c8ecf,skill,USKL_6276198c8ecf,Amazon Redshift,Q17012109,https://www.wikidata.org/wiki/Q17012109,Amazon Redshift,,,exact,high
+USKL_758fd9a48efa,skill,USKL_758fd9a48efa,Apache Hive,Q4778914,https://www.wikidata.org/wiki/Q4778914,Apache Hive,,,exact,high
+USKL_877c1fb2747a,skill,USKL_877c1fb2747a,Apache Kafka,Q16235208,https://www.wikidata.org/wiki/Q16235208,Apache Kafka,,,exact,high
+USKL_457814fa0c07,skill,USKL_457814fa0c07,Apache Spark,Q7573619,https://www.wikidata.org/wiki/Q7573619,Apache Spark,,,exact,high
+USKL_6d9dca5ee86b,skill,USKL_6d9dca5ee86b,Apache Struts,Q900957,https://www.wikidata.org/wiki/Q900957,Apache Struts,,,exact,high
+USKL_2818ab675ac2,skill,USKL_2818ab675ac2,Django,Q842014,https://www.wikidata.org/wiki/Q842014,Django,,,exact+csv_seed,high
+USKL_37037c699375,skill,USKL_37037c699375,Docker,Q910577,https://www.wikidata.org/wiki/Q910577,Docker,,,exact,high
+USKL_90a3e73c4e36,skill,USKL_90a3e73c4e36,Elasticsearch,Q3050461,https://www.wikidata.org/wiki/Q3050461,Elasticsearch,,,exact,high
+USKL_3928d132146a,skill,USKL_3928d132146a,Git,Q363944,https://www.wikidata.org/wiki/Q363944,Git,,,exact,high
+USKL_9598440044a2,skill,USKL_9598440044a2,Go,Q37227,https://www.wikidata.org/wiki/Q37227,Go,,,exact+csv_seed,high
+USKL_c12ce6f709f6,skill,USKL_c12ce6f709f6,Jupyter Notebook,Q105099901,https://www.wikidata.org/wiki/Q105099901,Jupyter Notebook,,,exact+csv_seed,high
+USKL_b5432b43962d,skill,USKL_b5432b43962d,ASP.NET Core MVC,Q24833297,https://www.wikidata.org/wiki/Q24833297,ASP.NET Core MVC,,,exact,high
+USKL_be1e38ccc9be,skill,USKL_be1e38ccc9be,Microsoft Power BI,Q23542287,https://www.wikidata.org/wiki/Q23542287,Microsoft Power BI,,,exact,high
+USKL_e734029990ca,skill,USKL_e734029990ca,Microsoft Windows,Q1406,https://www.wikidata.org/wiki/Q1406,Microsoft Windows,,,exact,high
+USKL_e71444f4108e,skill,USKL_e71444f4108e,Oracle Application Server,Q2027912,https://www.wikidata.org/wiki/Q2027912,Oracle Application Server,,,exact,high
+USKL_c956a2e1b3b2,skill,USKL_c956a2e1b3b2,Oracle SQL Developer,Q931351,https://www.wikidata.org/wiki/Q931351,Oracle SQL Developer,,,exact,high
+USKL_167ddc72e5d5,skill,USKL_167ddc72e5d5,Oracle Taleo,Q7679213,https://www.wikidata.org/wiki/Q7679213,Taleo,,,alias,medium
+USKL_14f0dfa1ed9e,skill,USKL_14f0dfa1ed9e,React,Q19399674,https://www.wikidata.org/wiki/Q19399674,React,,,exact+csv_seed,high
+USKL_d33a0364fa97,skill,USKL_d33a0364fa97,Selenium,Q752522,https://www.wikidata.org/wiki/Q752522,Selenium,,,exact,high
+USKL_22e49ffc0bb6,skill,USKL_22e49ffc0bb6,Slack,Q17130715,https://www.wikidata.org/wiki/Q17130715,Slack,,,exact,high
+USKL_d85c6f4d1360,skill,USKL_d85c6f4d1360,Snort,Q1332255,https://www.wikidata.org/wiki/Q1332255,Snort,,,exact,high
+USKL_ebab5d096862,skill,USKL_ebab5d096862,Spring Boot,Q98731994,https://www.wikidata.org/wiki/Q98731994,Spring Boot,,,exact,high
+USKL_0eae9fd893a7,skill,USKL_0eae9fd893a7,Transact-SQL,Q1411245,https://www.wikidata.org/wiki/Q1411245,Transact-SQL,,,exact+csv_seed,high
+USKL_0b7624ee865f,skill,USKL_0b7624ee865f,Google Sites,Q623456,https://www.wikidata.org/wiki/Q623456,Google Sites,,,exact,high
+USKL_47d6a139ead7,skill,USKL_47d6a139ead7,Honeypot,Q2134058,https://www.wikidata.org/wiki/Q2134058,Honeypot,,,exact,high
+USKL_83ceb3aec2db,skill,USKL_83ceb3aec2db,HP WebInspect,Q2781532,https://www.wikidata.org/wiki/Q2781532,HP WebInspect,,,exact,high
+USKL_cfb5fd688af6,skill,USKL_cfb5fd688af6,McAfee VirusScan,Q1629915,https://www.wikidata.org/wiki/Q1629915,McAfee VirusScan,,,exact,high
+USKL_c791d855cde7,skill,USKL_c791d855cde7,Active Directory,Q55692,https://www.wikidata.org/wiki/Q55692,Active Directory,,,exact,high
+USKL_52aef8c83c75,skill,USKL_52aef8c83c75,Microsoft Hyper-V Server,Q4044226,https://www.wikidata.org/wiki/Q4044226,Microsoft Hyper-V Server,,,exact,high
+USKL_fe6a191b83c1,skill,USKL_fe6a191b83c1,Norton AntiVirus,Q741128,https://www.wikidata.org/wiki/Q741128,Norton AntiVirus,,,exact,high
+USKL_feab1791e645,skill,USKL_feab1791e645,Symantec Endpoint Protection,Q1055444,https://www.wikidata.org/wiki/Q1055444,Symantec Endpoint Protection,,,exact,high
+USKL_5b4566323199,skill,USKL_5b4566323199,Tcpdump,Q306039,https://www.wikidata.org/wiki/Q306039,tcpdump,,,alias,medium
+USKL_17951f59017f,skill,USKL_17951f59017f,Apache Airflow,Q28915062,https://www.wikidata.org/wiki/Q28915062,Apache Airflow,,,exact,high
+USKL_a1b0d5e9dfa9,skill,USKL_a1b0d5e9dfa9,Apache Flume,Q19599376,https://www.wikidata.org/wiki/Q19599376,Apache Flume,,,exact,high
+USKL_c0168b47be45,skill,USKL_c0168b47be45,Kubernetes,Q22661306,https://www.wikidata.org/wiki/Q22661306,Kubernetes,,,exact,high
+USKL_28dcd38a7327,skill,USKL_28dcd38a7327,Prometheus,Q108759,https://www.wikidata.org/wiki/Q108759,Prometheus,,,exact,high
+USKL_f99c52e3bde7,skill,USKL_f99c52e3bde7,PyTorch,Q47509047,https://www.wikidata.org/wiki/Q47509047,PyTorch,,,exact+csv_seed,high
+USKL_653ff55973f5,skill,USKL_653ff55973f5,Redis,Q17086822,https://www.wikidata.org/wiki/Q17086822,Redis,,,exact,high
+USKL_69a0568f9e50,skill,USKL_69a0568f9e50,Snowflake,Q1012644,https://www.wikidata.org/wiki/Q1012644,Snowflake,,,exact,high
+USKL_7bd735fcd8bb,skill,USKL_7bd735fcd8bb,BlackBerry Enterprise Server,Q2613503,https://www.wikidata.org/wiki/Q2613503,BlackBerry Enterprise Server,,,exact,high
+USKL_1b15bd77cc73,skill,USKL_1b15bd77cc73,EMC NetWorker,Q3045961,https://www.wikidata.org/wiki/Q3045961,EMC NetWorker,,,exact,high
+USKL_ebe1ebcd3e9e,skill,USKL_ebe1ebcd3e9e,Microsoft Network Monitor,Q6840173,https://www.wikidata.org/wiki/Q6840173,Microsoft Network Monitor,,,exact,high
+USKL_db380889ec4c,skill,USKL_db380889ec4c,Nbtstat,Q6983630,https://www.wikidata.org/wiki/Q6983630,Nbtstat,,,exact,high
+USKL_9fd5fcab2334,skill,USKL_9fd5fcab2334,Nslookup,Q283972,https://www.wikidata.org/wiki/Q283972,Nslookup,,,exact,high
+USKL_9d2c096ecd30,skill,USKL_9d2c096ecd30,Zabbix,Q136722,https://www.wikidata.org/wiki/Q136722,Zabbix,,,exact,high
+USKL_6a878000aaf7,skill,USKL_6a878000aaf7,Cisco IOS,Q753576,https://www.wikidata.org/wiki/Q753576,Cisco IOS,,,exact,high
+USKL_053c316ddd6f,skill,USKL_053c316ddd6f,Zoom,Q94979732,https://www.wikidata.org/wiki/Q94979732,Zoom,,,exact,high
+USKL_738d3f2d85b8,skill,USKL_738d3f2d85b8,Citrix XenApp,Q1093482,https://www.wikidata.org/wiki/Q1093482,Citrix Virtual Apps,,,alias,medium
+USKL_fac06dbb1ebb,skill,USKL_fac06dbb1ebb,ADO.NET,Q290508,https://www.wikidata.org/wiki/Q290508,ADO.NET,,,exact,high
+USKL_1d114aece9c5,skill,USKL_1d114aece9c5,Apache Mahout,Q4778931,https://www.wikidata.org/wiki/Q4778931,Apache Mahout,,,exact,high
+USKL_716ea1eddf68,skill,USKL_716ea1eddf68,Couchbase Server,Q10858568,https://www.wikidata.org/wiki/Q10858568,Couchbase Server,,,exact,high
+USKL_9a993523e945,skill,USKL_9a993523e945,MariaDB,Q787177,https://www.wikidata.org/wiki/Q787177,MariaDB,,,exact,high
+USKL_98592a47c14f,skill,USKL_98592a47c14f,Azure Data Factory,Q119454396,https://www.wikidata.org/wiki/Q119454396,Azure Data Factory,,,exact,high
+USKL_c6470f27ee4c,skill,USKL_c6470f27ee4c,Oracle Data Guard,Q2027927,https://www.wikidata.org/wiki/Q2027927,Oracle Data Guard,,,exact,high
+USKL_c38a8354a7ea,skill,USKL_c38a8354a7ea,Oracle Designer,Q7099261,https://www.wikidata.org/wiki/Q7099261,Oracle Designer,,,exact,high
+USKL_416dee57927f,skill,USKL_416dee57927f,Oracle Reports,Q4045946,https://www.wikidata.org/wiki/Q4045946,Oracle Reports,,,exact,high
+USKL_974d6f9ab986,skill,USKL_974d6f9ab986,Amazon Kinesis,Q56358285,https://www.wikidata.org/wiki/Q56358285,Amazon Kinesis,,,exact,high
+USKL_f7eb7c5f01e3,skill,USKL_f7eb7c5f01e3,Oracle Recovery Manager,Q7276968,https://www.wikidata.org/wiki/Q7276968,RMAN,,,alias,medium
+USKL_d5f2ed1f80a1,skill,USKL_d5f2ed1f80a1,Bootstrap,Q893195,https://www.wikidata.org/wiki/Q893195,Bootstrap,,,exact,high
+USKL_64ec1ce2a609,skill,USKL_64ec1ce2a609,Figma,Q96186334,https://www.wikidata.org/wiki/Q96186334,Figma,,,exact,high
+USKL_f0421b30c2a6,skill,USKL_f0421b30c2a6,GraphQL,Q25104949,https://www.wikidata.org/wiki/Q25104949,GraphQL,,,exact,high
+USKL_add0a1c99d7f,skill,USKL_add0a1c99d7f,Kotlin,Q3816639,https://www.wikidata.org/wiki/Q3816639,Kotlin,,,exact,high
+USKL_2c25aa3ca380,skill,USKL_2c25aa3ca380,Azure DevOps,Q70538247,https://www.wikidata.org/wiki/Q70538247,Azure DevOps,,,exact,high
+USKL_e68304d085df,skill,USKL_e68304d085df,React Native,Q55774523,https://www.wikidata.org/wiki/Q55774523,React Native,,,exact+csv_seed,high
+USKL_6ab192c7d5a1,skill,USKL_6ab192c7d5a1,Vue.js,Q24589705,https://www.wikidata.org/wiki/Q24589705,Vue.js,,,exact+csv_seed,high
+USKL_2329dd9fd09f,skill,USKL_2329dd9fd09f,Apache JMeter,Q616885,https://www.wikidata.org/wiki/Q616885,Apache JMeter,,,exact,high
+USKL_d06cd699a6c3,skill,USKL_d06cd699a6c3,Appium,Q27208114,https://www.wikidata.org/wiki/Q27208114,Appium,,,exact,high
+USKL_52717b8d2e3b,skill,USKL_52717b8d2e3b,Microsoft Windows SDK,Q1062589,https://www.wikidata.org/wiki/Q1062589,Microsoft Windows SDK,,,exact,high
+USKL_97b79c49fb97,skill,USKL_97b79c49fb97,Postman,Q450788,https://www.wikidata.org/wiki/Q450788,Postman,,,exact,high
+USKL_9d862224e02a,skill,USKL_9d862224e02a,InVision,Q1660583,https://www.wikidata.org/wiki/Q1660583,InVision,,,exact,high
+USKL_53776944cd84,skill,USKL_53776944cd84,Jest,Q65121527,https://www.wikidata.org/wiki/Q65121527,Jest,,,exact,high
+USKL_a2f94527214f,skill,USKL_a2f94527214f,Microsoft Commerce Server,Q3312374,https://www.wikidata.org/wiki/Q3312374,Microsoft Commerce Server,,,exact,high
+USKL_9f20f183d1ec,skill,USKL_9f20f183d1ec,PhantomJS,Q20712371,https://www.wikidata.org/wiki/Q20712371,PhantomJS,,,exact,high
+USKL_4d075f970f9d,skill,USKL_4d075f970f9d,RequireJS,Q15842219,https://www.wikidata.org/wiki/Q15842219,RequireJS,,,exact,high
+USKL_24305f9cc595,skill,USKL_24305f9cc595,Zend Framework,Q189475,https://www.wikidata.org/wiki/Q189475,Laminas,,,alias,medium
+USKL_18b6937ef7be,skill,USKL_18b6937ef7be,Adobe XD,Q24060074,https://www.wikidata.org/wiki/Q24060074,Adobe XD,,,exact,high
+USKL_41ea1f4af150,skill,USKL_41ea1f4af150,Lua,Q207316,https://www.wikidata.org/wiki/Q207316,Lua,,,exact+csv_seed,high
+USKL_ffd488be5fe2,skill,USKL_ffd488be5fe2,Adobe Experience Manager,Q98841196,https://www.wikidata.org/wiki/Q98841196,Adobe Experience Manager,,,exact,high
+USKL_5fcf34e90676,skill,USKL_5fcf34e90676,Microsoft Virtual Server,Q1315909,https://www.wikidata.org/wiki/Q1315909,Microsoft Virtual Server,,,exact,high
+USKL_7a153e42ac5f,skill,USKL_7a153e42ac5f,Salesforce Marketing Cloud,Q5419210,https://www.wikidata.org/wiki/Q5419210,Salesforce Marketing Cloud,,,exact,high
+USKL_c4521d697c1c,skill,USKL_c4521d697c1c,Ghidra,Q61983083,https://www.wikidata.org/wiki/Q61983083,Ghidra,,,exact,high
+USKL_dd0f8150ae1a,skill,USKL_dd0f8150ae1a,Nmap,Q623332,https://www.wikidata.org/wiki/Q623332,Nmap,,,exact,high
+USKL_ebb0e9cc961d,skill,USKL_ebb0e9cc961d,Rapid7,Q85874460,https://www.wikidata.org/wiki/Q85874460,Rapid7,,,exact,high
+USKL_81763881e73c,skill,USKL_81763881e73c,Rust,Q254206,https://www.wikidata.org/wiki/Q254206,Rust,,,exact+csv_seed,high
+USKL_72a3eeef7238,skill,USKL_72a3eeef7238,Azure Sentinel,Q120668020,https://www.wikidata.org/wiki/Q120668020,Microsoft Sentinel,,,alias,medium
+USKL_4cb459b934e5,skill,USKL_4cb459b934e5,OpenVAS,Q1810573,https://www.wikidata.org/wiki/Q1810573,OpenVAS,,,exact,high
+USKL_25809973cd8c,skill,USKL_25809973cd8c,Grails,Q848544,https://www.wikidata.org/wiki/Q848544,Grails,,,exact,high
+USKL_ef20c4189ab0,skill,USKL_ef20c4189ab0,Project.net,Q1769157,https://www.wikidata.org/wiki/Q1769157,Project.net,,,exact,high
+USKL_8ccbbe256fbf,skill,USKL_8ccbbe256fbf,Scheduling software,Q38765323,https://www.wikidata.org/wiki/Q38765323,Scheduling software,,,exact,high
+USKL_cd061e162499,skill,USKL_cd061e162499,Apache MXNet,Q22348165,https://www.wikidata.org/wiki/Q22348165,Apache MXNet,,,exact,high
+USKL_526153c3bbf1,skill,USKL_526153c3bbf1,BigQuery,Q4904867,https://www.wikidata.org/wiki/Q4904867,BigQuery,,,exact,high
+USKL_251570140135,skill,USKL_251570140135,Flask,Q289281,https://www.wikidata.org/wiki/Q289281,Flask,,,exact,high
+USKL_47023493d83c,skill,USKL_47023493d83c,Julia,Q2613697,https://www.wikidata.org/wiki/Q2613697,Julia,,,exact+csv_seed,high
+USKL_e3974a4a430f,skill,USKL_e3974a4a430f,Kubeflow,Q65048974,https://www.wikidata.org/wiki/Q65048974,Kubeflow,,,exact,high
+USKL_b734575aa384,skill,USKL_b734575aa384,Neo4j,Q1628290,https://www.wikidata.org/wiki/Q1628290,Neo4j,,,exact,high
+USKL_3a2a7ec04cea,skill,USKL_3a2a7ec04cea,XGBoost,Q23793561,https://www.wikidata.org/wiki/Q23793561,XGBoost,,,exact,high
+USKL_4335219d8a46,skill,USKL_4335219d8a46,Deployment,Q439664,https://www.wikidata.org/wiki/Q439664,Deployment,,,exact,high
+USKL_da58d0628561,skill,USKL_da58d0628561,Software Design,Q11315260,https://www.wikidata.org/wiki/Q11315260,Software Design,,,exact,high
+USKL_9e4e59768bc7,skill,USKL_9e4e59768bc7,Artificial Intelligence,Q4801030,https://www.wikidata.org/wiki/Q4801030,Artificial Intelligence,,,exact,high
+USKL_84bfea053ef1,skill,USKL_84bfea053ef1,Information Retrieval,Q13732663,https://www.wikidata.org/wiki/Q13732663,Information Retrieval,,,exact,high
+USKL_9f2c1d569048,skill,USKL_9f2c1d569048,Computer Networks,Q5157456,https://www.wikidata.org/wiki/Q5157456,Computer Networks,,,exact,high
+USKL_27491da8184f,skill,USKL_27491da8184f,human computer interaction,Q207434,https://www.wikidata.org/wiki/Q207434,human–computer interaction,,,alias,medium
+USKL_3453c206922c,skill,USKL_3453c206922c,Software Engineering,Q110262494,https://www.wikidata.org/wiki/Q110262494,Software Engineering,,,exact,high
+USKL_1835d4cd6bed,skill,USKL_1835d4cd6bed,software,Q445019,https://www.wikidata.org/wiki/Q445019,software,,,exact,high
+USKL_232b64a388cf,skill,USKL_232b64a388cf,cryptology,Q1430062,https://www.wikidata.org/wiki/Q1430062,cryptology,,,exact,high
+USKL_1cc6d6761683,skill,USKL_1cc6d6761683,cybersecurity,Q17233037,https://www.wikidata.org/wiki/Q17233037,cybersecurity,,,exact,high
+USKL_ac7b58aa40c2,skill,USKL_ac7b58aa40c2,few-shot learning,Q117134065,https://www.wikidata.org/wiki/Q117134065,few-shot learning,,,exact,high
+USKL_d5c1d4baf54d,skill,USKL_d5c1d4baf54d,link prediction,Q98925312,https://www.wikidata.org/wiki/Q98925312,Link prediction,,,alias,medium
+USKL_7246238f50ff,skill,USKL_7246238f50ff,one-shot learning,Q7092335,https://www.wikidata.org/wiki/Q7092335,one-shot learning,,,exact,high
+USKL_f31b6795fb08,skill,USKL_f31b6795fb08,pattern recognition,Q378859,https://www.wikidata.org/wiki/Q378859,pattern recognition,,,exact,high
+USKL_67427af95db6,skill,USKL_67427af95db6,statistical learning,Q2539,https://www.wikidata.org/wiki/Q2539,machine learning,,,alias,medium
+USKL_ba76b5f3970d,skill,USKL_ba76b5f3970d,supervised machine learning,Q334384,https://www.wikidata.org/wiki/Q334384,supervised learning,,,alias,medium
+USKL_26a4d653aa96,skill,USKL_26a4d653aa96,topic model,Q3532085,https://www.wikidata.org/wiki/Q3532085,topic model,,,exact,high
+USKL_aef4017e33cc,skill,USKL_aef4017e33cc,zero-shot learning,Q96416030,https://www.wikidata.org/wiki/Q96416030,zero-shot learning,,,exact,high
+USKL_7536049433e1,skill,USKL_7536049433e1,ambient intelligence,Q457396,https://www.wikidata.org/wiki/Q457396,ambient intelligence,,,exact,high
+USKL_1cea695f5c77,skill,USKL_1cea695f5c77,decision theory,Q177571,https://www.wikidata.org/wiki/Q177571,decision theory,,,exact,high
+USKL_d13a0d9b61dc,skill,USKL_d13a0d9b61dc,Expert Systems,Q15758673,https://www.wikidata.org/wiki/Q15758673,Expert Systems,,,exact,high
+USKL_9c8634903d9e,skill,USKL_9c8634903d9e,formal logic,Q1003009,https://www.wikidata.org/wiki/Q1003009,formal logic,,,exact,high
+USKL_f337e0b8e387,skill,USKL_f337e0b8e387,Intelligent Systems,Q150001,https://www.wikidata.org/wiki/Q150001,Intelligent Systems,,,exact,high
+USKL_62c3c4e00743,skill,USKL_62c3c4e00743,intelligent tutoring system,Q3055492,https://www.wikidata.org/wiki/Q3055492,intelligent tutoring system,,,exact,high
+USKL_944582222bba,skill,USKL_944582222bba,machine perception,Q6723726,https://www.wikidata.org/wiki/Q6723726,machine perception,,,exact,high
+USKL_d00ae26262f3,skill,USKL_d00ae26262f3,Classification,Q1744625,https://www.wikidata.org/wiki/Q1744625,Classification,,,exact,high
+USKL_13a7d3ccdf78,skill,USKL_13a7d3ccdf78,knowledge discovery,Q1582085,https://www.wikidata.org/wiki/Q1582085,knowledge extraction,,,alias,medium
+USKL_80682a2f6d04,skill,USKL_80682a2f6d04,process mining,Q2608526,https://www.wikidata.org/wiki/Q2608526,process mining,,,exact,high
+USKL_3497dad81201,skill,USKL_3497dad81201,relational learning,Q7604413,https://www.wikidata.org/wiki/Q7604413,statistical relational learning,,,alias,medium
+USKL_431ef37cc045,skill,USKL_431ef37cc045,image retrieval,Q10927554,https://www.wikidata.org/wiki/Q10927554,image retrieval,,,exact,high
+USKL_62269e96bc04,skill,USKL_62269e96bc04,bandwidth,Q194158,https://www.wikidata.org/wiki/Q194158,bit rate,,,alias,medium
+USKL_c9533b4e4f66,skill,USKL_c9533b4e4f66,Network Security,Q53996446,https://www.wikidata.org/wiki/Q53996446,Network Security,,,exact,high
+USKL_22f93af334d8,skill,USKL_22f93af334d8,assistive technology,Q688498,https://www.wikidata.org/wiki/Q688498,assistive technology,,,exact,high
+USKL_b09d29799f82,skill,USKL_b09d29799f82,central processing unit,P880,https://www.wikidata.org/wiki/P880,CPU,,,alias,medium
+USKL_a887b22b977e,skill,USKL_a887b22b977e,process engineering,Q83588,https://www.wikidata.org/wiki/Q83588,chemical engineering,,,alias,medium
+USKL_3e65b762f137,skill,USKL_3e65b762f137,Unified Modeling Language,Q169411,https://www.wikidata.org/wiki/Q169411,Unified Modeling Language,,,exact,high
+USKL_b38f15aab095,skill,USKL_b38f15aab095,electronic mail,P968,https://www.wikidata.org/wiki/P968,email address,,,alias,medium
+USKL_894830e833d4,skill,USKL_894830e833d4,protein database,Q7251462,https://www.wikidata.org/wiki/Q7251462,Protein database,,,alias,medium
+USKL_4b43416700b6,skill,USKL_4b43416700b6,revenue,P2139,https://www.wikidata.org/wiki/P2139,total revenue,,,alias,medium
+USKL_3db5d8d35464,skill,USKL_3db5d8d35464,computer applications,Q5157412,https://www.wikidata.org/wiki/Q5157412,computer applications,,,exact,high
+USKL_d59ea182797e,skill,USKL_d59ea182797e,gps,P625,https://www.wikidata.org/wiki/P625,coordinate location,,,alias,medium
+USKL_36829feb6b2d,skill,USKL_36829feb6b2d,biometrics,Q214746,https://www.wikidata.org/wiki/Q214746,biostatistics,,,alias,medium
+USKL_96884f81fa43,skill,USKL_96884f81fa43,data privacy,Q456632,https://www.wikidata.org/wiki/Q456632,information privacy,,,alias,medium
+USKL_947538ac377a,skill,USKL_947538ac377a,rule mining,Q120969795,https://www.wikidata.org/wiki/Q120969795,rule mining,,,exact,high
+USKL_e754d48c9855,skill,USKL_e754d48c9855,Taxonomy,Q101246305,https://www.wikidata.org/wiki/Q101246305,Taxonomy,,,exact,high
+USKL_c6db3ce64dec,skill,USKL_c6db3ce64dec,Jitter,Q1689679,https://www.wikidata.org/wiki/Q1689679,Jitter,,,exact+csv_seed,high
+USKL_646725015d26,skill,USKL_646725015d26,affective state,Q120970769,https://www.wikidata.org/wiki/Q120970769,affective state,,,exact,high
+USKL_06a1fb2095c7,skill,USKL_06a1fb2095c7,brain machine interface,Q897410,https://www.wikidata.org/wiki/Q897410,brain–computer interface,,,alias,medium
+USKL_c5013546cc07,skill,USKL_c5013546cc07,Message Passing Interface,Q127879,https://www.wikidata.org/wiki/Q127879,Message Passing Interface,,,exact,high
+USKL_b649d73de347,skill,USKL_b649d73de347,brain computer interface,Q897410,https://www.wikidata.org/wiki/Q897410,brain–computer interface,,,alias,medium
+USKL_612446915e5f,skill,USKL_612446915e5f,facial expression,P6022,https://www.wikidata.org/wiki/P6022,"expression, gesture or body pose",,,alias,medium
+USKL_4f7a8c5f37ca,skill,USKL_4f7a8c5f37ca,Kinect,Q474334,https://www.wikidata.org/wiki/Q474334,Kinect,,,exact,high
+USKL_ca4218e00f94,skill,USKL_ca4218e00f94,ergonomics,Q1750812,https://www.wikidata.org/wiki/Q1750812,ergonomics,,,exact,high
+USKL_40ec7dce0aed,skill,USKL_40ec7dce0aed,human factors,Q121029188,https://www.wikidata.org/wiki/Q121029188,human factors,,,exact,high
+USKL_02f8ec19517a,skill,USKL_02f8ec19517a,interaction design,Q1061656,https://www.wikidata.org/wiki/Q1061656,interaction design,,,exact,high
+USKL_7e438184f275,skill,USKL_7e438184f275,User Experience,Q110262486,https://www.wikidata.org/wiki/Q110262486,User Experience,,,exact,high
+USKL_0501f69d180e,skill,USKL_0501f69d180e,Botnet,Q9178176,https://www.wikidata.org/wiki/Q9178176,Botnet,,,exact,high
+USKL_acbb29682d44,skill,USKL_acbb29682d44,bug tracking system,P1401,https://www.wikidata.org/wiki/P1401,issue tracker URL,,,alias,medium
+USKL_5f50b7c1839e,skill,USKL_5f50b7c1839e,1Password,Q2150861,https://www.wikidata.org/wiki/Q2150861,1Password,,,exact,high
+USKL_91d36bc7f51f,skill,USKL_91d36bc7f51f,ADABAS,Q346434,https://www.wikidata.org/wiki/Q346434,ADABAS,,,exact,high
+USKL_5c604fae7fd3,skill,USKL_5c604fae7fd3,AMPL,Q295250,https://www.wikidata.org/wiki/Q295250,AMPL,,,exact+csv_seed,high
+USKL_82a69ce7fa05,skill,USKL_82a69ce7fa05,ARCore,Q48839221,https://www.wikidata.org/wiki/Q48839221,ARCore,,,exact,high
+USKL_0deefbbd1dbc,skill,USKL_0deefbbd1dbc,ARKit,Q66314506,https://www.wikidata.org/wiki/Q66314506,ARKit,,,exact,high
+USKL_4c180a63371f,skill,USKL_4c180a63371f,ASP.NET Core,Q17513350,https://www.wikidata.org/wiki/Q17513350,ASP.NET Core,,,exact,high
+USKL_8019ebc5b610,skill,USKL_8019ebc5b610,ASP.NET MVC Framework,Q581643,https://www.wikidata.org/wiki/Q581643,ASP.NET MVC Framework,,,exact,high
+USKL_a91713025d99,skill,USKL_a91713025d99,ASP.NET Razor,Q6840077,https://www.wikidata.org/wiki/Q6840077,ASP.NET Razor,,,exact,high
+USKL_3244698d60bd,skill,USKL_3244698d60bd,AWS CloudFormation,Q117272797,https://www.wikidata.org/wiki/Q117272797,AWS CloudFormation,,,exact,high
+USKL_39b586c12c36,skill,USKL_39b586c12c36,AWS CloudTrail,Q119292509,https://www.wikidata.org/wiki/Q119292509,Amazon CloudTrail,,,alias,medium
+USKL_932d820e9f43,skill,USKL_932d820e9f43,AWS CodeBuild,Q110705619,https://www.wikidata.org/wiki/Q110705619,AWS CodeBuild,,,exact,high
+USKL_70b6955cac88,skill,USKL_70b6955cac88,AWS CodePipeline,Q110720922,https://www.wikidata.org/wiki/Q110720922,AWS CodePipeline,,,exact,high
+USKL_d9d029faa24e,skill,USKL_d9d029faa24e,AWS Elastic Beanstalk,Q4655150,https://www.wikidata.org/wiki/Q4655150,AWS Elastic Beanstalk,,,exact,high
+USKL_2c3ee247353d,skill,USKL_2c3ee247353d,AWS Glue,Q104861519,https://www.wikidata.org/wiki/Q104861519,AWS Glue,,,exact,high
+USKL_12c65451adc1,skill,USKL_12c65451adc1,AWS SDK,Q130167569,https://www.wikidata.org/wiki/Q130167569,AWS SDK,,,exact,high
+USKL_de0519ceea35,skill,USKL_de0519ceea35,Accelerated Mobile Pages,Q25452619,https://www.wikidata.org/wiki/Q25452619,Accelerated Mobile Pages,,,exact,high
+USKL_6fe72570ad67,skill,USKL_6fe72570ad67,Access Control Facility,Q4650640,https://www.wikidata.org/wiki/Q4650640,ACF2,,,alias,medium
+USKL_c0659f7cad4b,skill,USKL_c0659f7cad4b,AccuRev SCM,Q4672895,https://www.wikidata.org/wiki/Q4672895,AccuRev SCM,,,exact,high
+USKL_3260631182c8,skill,USKL_3260631182c8,Acronis True Image,Q2422684,https://www.wikidata.org/wiki/Q2422684,Acronis True Image,,,exact,high
+USKL_966e1bfdffce,skill,USKL_966e1bfdffce,ActivePerl,Q4033363,https://www.wikidata.org/wiki/Q4033363,ActivePerl,,,exact,high
+USKL_8226a2de6edc,skill,USKL_8226a2de6edc,ActiveReports,Q4677476,https://www.wikidata.org/wiki/Q4677476,ActiveReports,,,exact,high
+USKL_209b7d4dd857,skill,USKL_209b7d4dd857,ActiveSync,Q343961,https://www.wikidata.org/wiki/Q343961,ActiveSync,,,exact,high
+USKL_8380b4582c06,skill,USKL_8380b4582c06,Acunetix,Q60168780,https://www.wikidata.org/wiki/Q60168780,Acunetix,,,exact,high
+USKL_93b0347d3d49,skill,USKL_93b0347d3d49,Adobe Contribute,Q1191002,https://www.wikidata.org/wiki/Q1191002,Contribute,,,alias,medium
+USKL_1dcdfa1b4095,skill,USKL_1dcdfa1b4095,Adobe Edge Animate,Q360119,https://www.wikidata.org/wiki/Q360119,Adobe Edge Animate,,,exact,high
+USKL_ffb4ce180f14,skill,USKL_ffb4ce180f14,Adobe Flash Builder,Q1140557,https://www.wikidata.org/wiki/Q1140557,Adobe Flash Builder,,,exact,high
+USKL_67c3c3a6c7f3,skill,USKL_67c3c3a6c7f3,Adobe Flash Player,Q857177,https://www.wikidata.org/wiki/Q857177,Adobe Flash Player,,,exact,high
+USKL_d08030f1038b,skill,USKL_d08030f1038b,Adobe JRun,Q2912004,https://www.wikidata.org/wiki/Q2912004,Adobe JRun,,,exact,high
+USKL_5f3e24586271,skill,USKL_5f3e24586271,Advanced Installer,Q113849629,https://www.wikidata.org/wiki/Q113849629,Advanced Installer,,,exact,high
+USKL_b477ea2b446d,skill,USKL_b477ea2b446d,Aerospike,Q4688456,https://www.wikidata.org/wiki/Q4688456,Aerospike,,,exact,high
+USKL_1fe4bf8cd82b,skill,USKL_1fe4bf8cd82b,Aggregator,Q4057063,https://www.wikidata.org/wiki/Q4057063,Aggregator,,,exact,high
+USKL_cf9dc95a71bd,skill,USKL_cf9dc95a71bd,Agility,Q4692547,https://www.wikidata.org/wiki/Q4692547,Agility,,,exact,high
+USKL_6ee130244478,skill,USKL_6ee130244478,AirSnort,Q409086,https://www.wikidata.org/wiki/Q409086,AirSnort,,,exact,high
+USKL_3ff1109a9afd,skill,USKL_3ff1109a9afd,Akamai,Q415598,https://www.wikidata.org/wiki/Q415598,Akamai Technologies,,,alias,medium
+USKL_c01fdc884234,skill,USKL_c01fdc884234,Alamofire,Q115916294,https://www.wikidata.org/wiki/Q115916294,Alamofire,,,exact,high
+USKL_2c9719198c39,skill,USKL_2c9719198c39,Alibaba Cloud,Q17062154,https://www.wikidata.org/wiki/Q17062154,Alibaba Cloud,,,exact,high
+USKL_e526abfdd8dc,skill,USKL_e526abfdd8dc,AlienVault,Q20311382,https://www.wikidata.org/wiki/Q20311382,AT&T Cybersecurity,,,alias,medium
+USKL_18a39599d9cc,skill,USKL_18a39599d9cc,AllegroGraph,Q4731408,https://www.wikidata.org/wiki/Q4731408,AllegroGraph,,,exact,high
+USKL_910e3bf0da59,skill,USKL_910e3bf0da59,Alluxio,Q65074533,https://www.wikidata.org/wiki/Q65074533,Alluxio,,,exact,high
+USKL_46d302dbecb3,skill,USKL_46d302dbecb3,Altera Quartus,Q843225,https://www.wikidata.org/wiki/Q843225,Altera Quartus,,,exact,high
+USKL_d87d1be18c62,skill,USKL_d87d1be18c62,Amazon Alexa,Q28022144,https://www.wikidata.org/wiki/Q28022144,Amazon Alexa,,,exact,high
+USKL_4f6d2779cbff,skill,USKL_4f6d2779cbff,Amazon Athena,Q65203360,https://www.wikidata.org/wiki/Q65203360,Amazon Athena,,,exact,high
+USKL_88ea907a33fa,skill,USKL_88ea907a33fa,Amazon Aurora,Q18754151,https://www.wikidata.org/wiki/Q18754151,Amazon Aurora,,,exact,high
+USKL_fa9939c5cd34,skill,USKL_fa9939c5cd34,Amazon CloudWatch,Q456090,https://www.wikidata.org/wiki/Q456090,Amazon CloudWatch,,,exact,high
+USKL_45421e2946f4,skill,USKL_45421e2946f4,Amazon DocumentDB,Q60787643,https://www.wikidata.org/wiki/Q60787643,Amazon DocumentDB,,,exact,high
+USKL_54453cbdfaac,skill,USKL_54453cbdfaac,Amazon ElastiCache,Q28035268,https://www.wikidata.org/wiki/Q28035268,Amazon ElastiCache,,,exact,high
+USKL_23482778580f,skill,USKL_23482778580f,Amazon GuardDuty,Q110659313,https://www.wikidata.org/wiki/Q110659313,Amazon GuardDuty,,,exact,high
+USKL_e15d73614014,skill,USKL_e15d73614014,Amazon MQ,Q110705906,https://www.wikidata.org/wiki/Q110705906,Amazon MQ,,,exact,high
+USKL_17fe7f5e224b,skill,USKL_17fe7f5e224b,Amazon Mechanical Turk,Q733115,https://www.wikidata.org/wiki/Q733115,Amazon Mechanical Turk,,,exact,high
+USKL_c50b0c7d1e27,skill,USKL_c50b0c7d1e27,Amazon Neptune,Q48843359,https://www.wikidata.org/wiki/Q48843359,Amazon Neptune,,,exact,high
+USKL_cddecb627a21,skill,USKL_cddecb627a21,Amazon S3,Q2593067,https://www.wikidata.org/wiki/Q2593067,Amazon S3,,,exact,high
+USKL_465eed311531,skill,USKL_465eed311531,Amazon S3 Glacier,Q4740857,https://www.wikidata.org/wiki/Q4740857,Amazon S3 Glacier,,,exact,high
+USKL_d1a600271ff2,skill,USKL_d1a600271ff2,Amazon SimpleDB,Q2656963,https://www.wikidata.org/wiki/Q2656963,Amazon SimpleDB,,,exact,high
+USKL_a9d031caf0cf,skill,USKL_a9d031caf0cf,Android Debug Bridge,Q107980224,https://www.wikidata.org/wiki/Q107980224,Android Debug Bridge,,,exact,high
+USKL_86feaf66b226,skill,USKL_86feaf66b226,Android Jetpack,Q114646133,https://www.wikidata.org/wiki/Q114646133,Android Jetpack,,,exact,high
+USKL_00a7fe502027,skill,USKL_00a7fe502027,Android NDK,Q110745757,https://www.wikidata.org/wiki/Q110745757,Android NDK,,,exact,high
+USKL_1f30c37c0b61,skill,USKL_1f30c37c0b61,Android SDK,Q29364625,https://www.wikidata.org/wiki/Q29364625,Android SDK,,,exact,high
+USKL_7b901da6f937,skill,USKL_7b901da6f937,Apache Accumulo,Q2822898,https://www.wikidata.org/wiki/Q2822898,Apache Accumulo,,,exact,high
+USKL_7a024d7a4b8b,skill,USKL_7a024d7a4b8b,Apache ActiveMQ,Q773135,https://www.wikidata.org/wiki/Q773135,Apache ActiveMQ,,,exact,high
+USKL_d7ebc74df74e,skill,USKL_d7ebc74df74e,Apache Ambari,Q21711047,https://www.wikidata.org/wiki/Q21711047,Apache Ambari,,,exact,high
+USKL_71425c0ef14d,skill,USKL_71425c0ef14d,Apache Archiva,Q616575,https://www.wikidata.org/wiki/Q616575,Apache Archiva,,,exact,high
+USKL_c80d55cfaa81,skill,USKL_c80d55cfaa81,Apache Atlas,Q28915124,https://www.wikidata.org/wiki/Q28915124,Apache Atlas,,,exact,high
+USKL_4e471ab04f93,skill,USKL_4e471ab04f93,Apache Axis2,Q2445002,https://www.wikidata.org/wiki/Q2445002,Apache Axis2,,,exact,high
+USKL_da4004bc8dd1,skill,USKL_da4004bc8dd1,Apache Beam,Q27926168,https://www.wikidata.org/wiki/Q27926168,Apache Beam,,,exact,high
+USKL_c8973fa9d2d5,skill,USKL_c8973fa9d2d5,Apache CXF,Q223449,https://www.wikidata.org/wiki/Q223449,Apache CXF,,,exact,high
+USKL_170f726b02ed,skill,USKL_170f726b02ed,Apache Camel,Q616626,https://www.wikidata.org/wiki/Q616626,Apache Camel,,,exact,high
+USKL_ba218f14eb0e,skill,USKL_ba218f14eb0e,Apache CloudStack,Q2496860,https://www.wikidata.org/wiki/Q2496860,Apache CloudStack,,,exact,high
+USKL_a113754fa724,skill,USKL_a113754fa724,Apache Cordova,Q16626338,https://www.wikidata.org/wiki/Q16626338,Apache Cordova,,,exact,high
+USKL_301ef1b095da,skill,USKL_301ef1b095da,Apache Drill,Q4778908,https://www.wikidata.org/wiki/Q4778908,Apache Drill,,,exact,high
+USKL_c9ecb9a6d60f,skill,USKL_c9ecb9a6d60f,Apache Druid,Q3715530,https://www.wikidata.org/wiki/Q3715530,Apache Druid,,,exact,high
+USKL_d1a982eb2176,skill,USKL_d1a982eb2176,Apache Felix,Q4034164,https://www.wikidata.org/wiki/Q4034164,Apache Felix,,,exact,high
+USKL_fac200074ce2,skill,USKL_fac200074ce2,Apache Flex,Q616759,https://www.wikidata.org/wiki/Q616759,Apache Flex,,,exact+csv_seed,high
+USKL_712c52282b02,skill,USKL_712c52282b02,Apache Ignite,Q28915265,https://www.wikidata.org/wiki/Q28915265,Apache Ignite,,,exact,high
+USKL_a50c134d6ad3,skill,USKL_a50c134d6ad3,Apache Impala,Q28915268,https://www.wikidata.org/wiki/Q28915268,Apache Impala,,,exact,high
+USKL_711e1dcdf547,skill,USKL_711e1dcdf547,Apache Karaf,Q2858084,https://www.wikidata.org/wiki/Q2858084,Apache Karaf,,,exact,high
+USKL_c69a1bd67e58,skill,USKL_c69a1bd67e58,Apache Lucene,Q773196,https://www.wikidata.org/wiki/Q773196,Apache Lucene,,,exact,high
+USKL_ef0d23206309,skill,USKL_ef0d23206309,Apache Mesos,Q19315319,https://www.wikidata.org/wiki/Q19315319,Apache Mesos,,,exact,high
+USKL_7614f030b5ce,skill,USKL_7614f030b5ce,Apache POI,Q616991,https://www.wikidata.org/wiki/Q616991,Apache POI,,,exact,high
+USKL_27a93be7190a,skill,USKL_27a93be7190a,Apache Parquet,Q28915683,https://www.wikidata.org/wiki/Q28915683,Apache Parquet,,,exact,high
+USKL_31855e6ce201,skill,USKL_31855e6ce201,Apache Phoenix,Q19646047,https://www.wikidata.org/wiki/Q19646047,Apache Phoenix,,,exact,high
+USKL_4055a5f7e429,skill,USKL_4055a5f7e429,Apache Pulsar,Q89693880,https://www.wikidata.org/wiki/Q89693880,Apache Pulsar,,,exact,high
+USKL_0e3fdc6d7142,skill,USKL_0e3fdc6d7142,Apache Ranger,Q28915718,https://www.wikidata.org/wiki/Q28915718,Apache Ranger,,,exact,high
+USKL_502052b690c2,skill,USKL_502052b690c2,Apache Sling,Q4778948,https://www.wikidata.org/wiki/Q4778948,Apache Sling,,,exact,high
+USKL_d872076470a2,skill,USKL_d872076470a2,Apache Subversion,Q46794,https://www.wikidata.org/wiki/Q46794,Apache Subversion,,,exact,high
+USKL_487b823d3eb2,skill,USKL_487b823d3eb2,Apache Thrift,Q266257,https://www.wikidata.org/wiki/Q266257,Apache Thrift,,,exact,high
+USKL_36e0e2a7f06b,skill,USKL_36e0e2a7f06b,Apache Tiles,Q28912908,https://www.wikidata.org/wiki/Q28912908,Apache Tiles,,,exact,high
+USKL_832dece0dbce,skill,USKL_832dece0dbce,Apache TinkerPop,Q20942022,https://www.wikidata.org/wiki/Q20942022,Apache TinkerPop,,,exact,high
+USKL_1bc5d1faf6aa,skill,USKL_1bc5d1faf6aa,Apache TomEE,Q4778959,https://www.wikidata.org/wiki/Q4778959,Apache TomEE,,,exact,high
+USKL_9cf81b3c1582,skill,USKL_9cf81b3c1582,Apache Torque,Q4778956,https://www.wikidata.org/wiki/Q4778956,Apache Torque,,,exact,high
+USKL_96ac1eb66bf9,skill,USKL_96ac1eb66bf9,Apache Traffic Server,Q1061377,https://www.wikidata.org/wiki/Q1061377,Apache Traffic Server,,,exact,high
+USKL_dc0793778021,skill,USKL_dc0793778021,Apache Turbine,Q11251534,https://www.wikidata.org/wiki/Q11251534,Apache Turbine,,,exact,high
+USKL_d653175679d3,skill,USKL_d653175679d3,Apache Velocity,Q617156,https://www.wikidata.org/wiki/Q617156,Apache Velocity,,,exact+csv_seed,high
+USKL_23712e1ff988,skill,USKL_23712e1ff988,Apache Wicket,Q617162,https://www.wikidata.org/wiki/Q617162,Apache Wicket,,,exact,high
+USKL_e888715d1f64,skill,USKL_e888715d1f64,Apex Data Loader,Q115602902,https://www.wikidata.org/wiki/Q115602902,Data Loader,,,alias,medium
+USKL_9052657807fe,skill,USKL_9052657807fe,AppSense,Q4780799,https://www.wikidata.org/wiki/Q4780799,AppSense,,,exact,high
+USKL_8ef32881a936,skill,USKL_8ef32881a936,Apple Configurator,Q15733937,https://www.wikidata.org/wiki/Q15733937,Apple Configurator,,,exact,high
+USKL_160c71db6d66,skill,USKL_160c71db6d66,Apple Watch,Q70820895,https://www.wikidata.org/wiki/Q70820895,Apple Watch,,,exact,high
+USKL_20592581a686,skill,USKL_20592581a686,Application Foundation Classes,Q4781469,https://www.wikidata.org/wiki/Q4781469,Application Foundation Classes,,,exact,high
+USKL_5529ab06ad24,skill,USKL_5529ab06ad24,Appveyor,Q25100033,https://www.wikidata.org/wiki/Q25100033,Appveyor,,,exact,high
+USKL_5dff8b1d8e23,skill,USKL_5dff8b1d8e23,Aptana,Q2618907,https://www.wikidata.org/wiki/Q2618907,Aptana Inc.,,,alias,medium
+USKL_85972eb8ac5d,skill,USKL_85972eb8ac5d,Aqua Data Studio,Q622921,https://www.wikidata.org/wiki/Q622921,Aqua Data Studio,,,exact,high
+USKL_2112ec43630c,skill,USKL_2112ec43630c,ArangoDB,Q20072115,https://www.wikidata.org/wiki/Q20072115,ArangoDB,,,exact,high
+USKL_6f4460ca997a,skill,USKL_6f4460ca997a,ArcEditor,Q4784989,https://www.wikidata.org/wiki/Q4784989,ArcEditor,,,exact,high
+USKL_745a83969824,skill,USKL_745a83969824,ArcGIS Engine,Q4784988,https://www.wikidata.org/wiki/Q4784988,ArcGIS Engine,,,exact,high
+USKL_d646630358b6,skill,USKL_d646630358b6,ArcGIS StoryMaps,Q124101816,https://www.wikidata.org/wiki/Q124101816,ArcGIS StoryMap,,,alias,medium
+USKL_8b4b720e32d2,skill,USKL_8b4b720e32d2,ArcIMS,Q4784986,https://www.wikidata.org/wiki/Q4784986,ArcIMS,,,exact,high
+USKL_8fce334c2dc4,skill,USKL_8fce334c2dc4,ArcInfo,Q2062851,https://www.wikidata.org/wiki/Q2062851,ArcInfo,,,exact,high
+USKL_3da451e2eec1,skill,USKL_3da451e2eec1,ArcMap,Q4784993,https://www.wikidata.org/wiki/Q4784993,ArcMap,,,exact,high
+USKL_61cef638d5c0,skill,USKL_61cef638d5c0,AspectJ,Q735604,https://www.wikidata.org/wiki/Q735604,AspectJ,,,exact,high
+USKL_df14ef031cc3,skill,USKL_df14ef031cc3,Aurelia,Q1947771,https://www.wikidata.org/wiki/Q1947771,Aurelia,,,exact,high
+USKL_2141db659481,skill,USKL_2141db659481,Auth0,Q56072164,https://www.wikidata.org/wiki/Q56072164,Auth0,,,exact,high
+USKL_3f0043a84f4a,skill,USKL_3f0043a84f4a,AutoIt,Q784845,https://www.wikidata.org/wiki/Q784845,AutoIt,,,exact+csv_seed,high
+USKL_be2f2b91d291,skill,USKL_be2f2b91d291,AutoLISP,Q782397,https://www.wikidata.org/wiki/Q782397,AutoLISP,,,exact+csv_seed,high
+USKL_5ecc99ed8ca0,skill,USKL_5ecc99ed8ca0,Automake,Q1324275,https://www.wikidata.org/wiki/Q1324275,Automake,,,exact+csv_seed,high
+USKL_70a54f77a660,skill,USKL_70a54f77a660,Automatic Storage Management,Q2872616,https://www.wikidata.org/wiki/Q2872616,Automatic Storage Management,,,exact,high
+USKL_f3f236666cc3,skill,USKL_f3f236666cc3,Automatically Programmed Tool,Q787227,https://www.wikidata.org/wiki/Q787227,Automatically Programmed Tool,,,exact,high
+USKL_951b6274f080,skill,USKL_951b6274f080,Azure Active Directory,Q24833870,https://www.wikidata.org/wiki/Q24833870,Microsoft Entra ID,,,alias,medium
+USKL_999682e0e298,skill,USKL_999682e0e298,Azure Cosmos DB,Q20707889,https://www.wikidata.org/wiki/Q20707889,Azure Cosmos DB,,,exact,high
+USKL_3a9f109a90bd,skill,USKL_3a9f109a90bd,BIOS,Q226264,https://www.wikidata.org/wiki/Q226264,BIOS,,,exact,high
+USKL_b06e8dad0d71,skill,USKL_b06e8dad0d71,BRFplus,Q796935,https://www.wikidata.org/wiki/Q796935,BRFplus,,,exact,high
+USKL_3946aa810f64,skill,USKL_3946aa810f64,BackupPC,Q798540,https://www.wikidata.org/wiki/Q798540,BackupPC,,,exact,high
+USKL_c3d5c28adfd6,skill,USKL_c3d5c28adfd6,Bacula,Q591063,https://www.wikidata.org/wiki/Q591063,Bacula,,,exact,high
+USKL_71958918512e,skill,USKL_71958918512e,Baidu,Q14772,https://www.wikidata.org/wiki/Q14772,Baidu,,,exact,high
+USKL_f8a5cc0058b4,skill,USKL_f8a5cc0058b4,Bazel,Q25345982,https://www.wikidata.org/wiki/Q25345982,Bazel,,,exact,high
+USKL_036ab7175cd2,skill,USKL_036ab7175cd2,BeanShell,Q812964,https://www.wikidata.org/wiki/Q812964,BeanShell,,,exact,high
+USKL_0cf5393629ee,skill,USKL_0cf5393629ee,Behat,Q18357265,https://www.wikidata.org/wiki/Q18357265,Behat,,,exact,high
+USKL_a6c44b29e037,skill,USKL_a6c44b29e037,Berkeley DB,Q820854,https://www.wikidata.org/wiki/Q820854,Berkeley DB,,,exact,high
+USKL_2e41cf5ef158,skill,USKL_2e41cf5ef158,Bing Search,Q62664806,https://www.wikidata.org/wiki/Q62664806,Bing Search,,,exact,high
+USKL_9d64937f201b,skill,USKL_9d64937f201b,BitLocker Drive Encryption,Q871861,https://www.wikidata.org/wiki/Q871861,BitLocker,,,alias,medium
+USKL_1c5bc31ad16d,skill,USKL_1c5bc31ad16d,Bitbucket,Q2493781,https://www.wikidata.org/wiki/Q2493781,Bitbucket,,,exact,high
+USKL_1de3a18896ae,skill,USKL_1de3a18896ae,BlackBerry OS,Q880016,https://www.wikidata.org/wiki/Q880016,BlackBerry OS,,,exact,high
+USKL_5c64d6cb11a7,skill,USKL_5c64d6cb11a7,BlackBerry World,Q122381,https://www.wikidata.org/wiki/Q122381,BlackBerry World,,,exact,high
+USKL_1bd10527066f,skill,USKL_1bd10527066f,Blazor,Q60749742,https://www.wikidata.org/wiki/Q60749742,Blazor,,,exact,high
+USKL_4212bb065e32,skill,USKL_4212bb065e32,Bluetooth,Q20554203,https://www.wikidata.org/wiki/Q20554203,Bluetooth,,,exact,high
+USKL_a766f6afbc73,skill,USKL_a766f6afbc73,Brakeman,Q54886541,https://www.wikidata.org/wiki/Q54886541,Brakeman,,,exact,high
+USKL_7b351ea8ab5c,skill,USKL_7b351ea8ab5c,Breakpoint,Q1215119,https://www.wikidata.org/wiki/Q1215119,Breakpoint,,,exact,high
+USKL_363baa3be4b5,skill,USKL_363baa3be4b5,Browserify,Q22906933,https://www.wikidata.org/wiki/Q22906933,Browserify,,,exact,high
+USKL_465691cb0d11,skill,USKL_465691cb0d11,Buildbot,Q4986417,https://www.wikidata.org/wiki/Q4986417,Buildbot,,,exact,high
+USKL_eec3dd429e5f,skill,USKL_eec3dd429e5f,Bulma,Q56297974,https://www.wikidata.org/wiki/Q56297974,Bulma,,,exact,high
+USKL_37fdf0afec21,skill,USKL_37fdf0afec21,Bundler,Q4997554,https://www.wikidata.org/wiki/Q4997554,Bundler,,,exact,high
+USKL_caafab9e159a,skill,USKL_caafab9e159a,Burp Suite,Q2324584,https://www.wikidata.org/wiki/Q2324584,Burp Suite,,,exact,high
+USKL_8a7d36c0c27a,skill,USKL_8a7d36c0c27a,Business Information System,Q10501290,https://www.wikidata.org/wiki/Q10501290,Business Information System,,,exact,high
+USKL_d751dc1149db,skill,USKL_d751dc1149db,BusyBox,Q620558,https://www.wikidata.org/wiki/Q620558,BusyBox,,,exact,high
+USKL_c7c4cb04c4ec,skill,USKL_c7c4cb04c4ec,C++/CLI,Q1022268,https://www.wikidata.org/wiki/Q1022268,C++/CLI,,,exact,high
+USKL_e56127633578,skill,USKL_e56127633578,CA Gen,Q2125673,https://www.wikidata.org/wiki/Q2125673,CA Gen,,,exact,high
+USKL_c2124ae7e013,skill,USKL_c2124ae7e013,CA-Telon,Q2383975,https://www.wikidata.org/wiki/Q2383975,CA-Telon,,,exact,high
+USKL_0ed8813a5961,skill,USKL_0ed8813a5961,CA/EZTEST,Q5008463,https://www.wikidata.org/wiki/Q5008463,CA/EZTEST,,,exact,high
+USKL_056593f0dc57,skill,USKL_056593f0dc57,CBASIC,Q1022951,https://www.wikidata.org/wiki/Q1022951,CBASIC,,,exact,high
+USKL_569531420b66,skill,USKL_569531420b66,CFScript,Q5010855,https://www.wikidata.org/wiki/Q5010855,CFScript,,,exact,high
+USKL_f8260dae2403,skill,USKL_f8260dae2403,CI/CD,Q28136854,https://www.wikidata.org/wiki/Q28136854,CI/CD,,,exact,high
+USKL_efaa15f50cfd,skill,USKL_efaa15f50cfd,CLIST,Q579880,https://www.wikidata.org/wiki/Q579880,CLIST,,,exact,high
+USKL_bc92705dec9a,skill,USKL_bc92705dec9a,CVSNT,Q5014778,https://www.wikidata.org/wiki/Q5014778,CVSNT,,,exact,high
+USKL_156108828abe,skill,USKL_156108828abe,Cacti,Q1025056,https://www.wikidata.org/wiki/Q1025056,Cacti,,,exact,high
+USKL_46c2aa76ad73,skill,USKL_46c2aa76ad73,Cadence SKILL,Q5016377,https://www.wikidata.org/wiki/Q5016377,Cadence SKILL,,,exact,high
+USKL_919d118cb8d4,skill,USKL_919d118cb8d4,Caffe,Q27643379,https://www.wikidata.org/wiki/Q27643379,Caffe,,,exact,high
+USKL_ef7fa0ee78ac,skill,USKL_ef7fa0ee78ac,CakePHP,Q647055,https://www.wikidata.org/wiki/Q647055,CakePHP,,,exact,high
+USKL_a0c20470b394,skill,USKL_a0c20470b394,Camunda,Q29551089,https://www.wikidata.org/wiki/Q29551089,Camunda,,,exact,high
+USKL_8d22afa8d876,skill,USKL_8d22afa8d876,CartoDB,Q14933257,https://www.wikidata.org/wiki/Q14933257,Carto,,,alias,medium
+USKL_0c280d7c1b9e,skill,USKL_0c280d7c1b9e,Chai,Q360306,https://www.wikidata.org/wiki/Q360306,Chai,,,exact,high
+USKL_8b1f4ad1ab1f,skill,USKL_8b1f4ad1ab1f,Chatbot,Q138632409,https://www.wikidata.org/wiki/Q138632409,Chatbot,,,exact,high
+USKL_f8931f6985cc,skill,USKL_f8931f6985cc,Checkmarx,Q99546157,https://www.wikidata.org/wiki/Q99546157,Checkmarx,,,exact,high
+USKL_787c4eddd503,skill,USKL_787c4eddd503,Checkstyle,Q1068794,https://www.wikidata.org/wiki/Q1068794,Checkstyle,,,exact,high
+USKL_8ef0322b1fb3,skill,USKL_8ef0322b1fb3,Cipher,Q5121267,https://www.wikidata.org/wiki/Q5121267,Cipher,,,exact,high
+USKL_f872181501e7,skill,USKL_f872181501e7,CircleCI,Q38922434,https://www.wikidata.org/wiki/Q38922434,CircleCI,,,exact,high
+USKL_85515e08ef51,skill,USKL_85515e08ef51,Citrix Workspace,Q105394670,https://www.wikidata.org/wiki/Q105394670,Citrix Workspace,,,exact,high
+USKL_313f4f2dd2be,skill,USKL_313f4f2dd2be,Claroty,Q109986619,https://www.wikidata.org/wiki/Q109986619,Claroty,,,exact,high
+USKL_590eb1e3db4c,skill,USKL_590eb1e3db4c,ClickOnce,Q1100928,https://www.wikidata.org/wiki/Q1100928,ClickOnce,,,exact,high
+USKL_ffecfc33e581,skill,USKL_ffecfc33e581,Clojure,Q51798,https://www.wikidata.org/wiki/Q51798,Clojure,,,exact+csv_seed,high
+USKL_fb6ae29e219c,skill,USKL_fb6ae29e219c,Clonezilla,Q1102277,https://www.wikidata.org/wiki/Q1102277,Clonezilla,,,exact,high
+USKL_3945a1bb48d1,skill,USKL_3945a1bb48d1,Closed Loop,Q132470780,https://www.wikidata.org/wiki/Q132470780,Closed Loop,,,exact,high
+USKL_27210e22565c,skill,USKL_27210e22565c,Cloud Foundry,Q5135664,https://www.wikidata.org/wiki/Q5135664,Cloud Foundry,,,exact,high
+USKL_8ba8c621567a,skill,USKL_8ba8c621567a,Cloud Storage,Q114396281,https://www.wikidata.org/wiki/Q114396281,Cloud Storage,,,exact,high
+USKL_ed9bc9dd2aa3,skill,USKL_ed9bc9dd2aa3,Cloudflare,Q4778915,https://www.wikidata.org/wiki/Q4778915,Cloudflare,,,exact,high
+USKL_82804b6141f0,skill,USKL_82804b6141f0,Cloudify,Q17087093,https://www.wikidata.org/wiki/Q17087093,Cloudify,,,exact,high
+USKL_ea5f643fc035,skill,USKL_ea5f643fc035,Cocoa Touch,Q2628895,https://www.wikidata.org/wiki/Q2628895,Cocoa Touch,,,exact,high
+USKL_c03dd463eb27,skill,USKL_c03dd463eb27,CocoaPods,Q16247893,https://www.wikidata.org/wiki/Q16247893,CocoaPods,,,exact,high
+USKL_246e1e26d169,skill,USKL_246e1e26d169,Code Composer Studio,Q2981424,https://www.wikidata.org/wiki/Q2981424,Code Composer Studio,,,exact,high
+USKL_55c88fbf4b67,skill,USKL_55c88fbf4b67,Code Review,Q110262507,https://www.wikidata.org/wiki/Q110262507,Code Review,,,exact,high
+USKL_b1413c537645,skill,USKL_b1413c537645,CodeIgniter,Q339829,https://www.wikidata.org/wiki/Q339829,CodeIgniter,,,exact+csv_seed,high
+USKL_2909d5b4ed6a,skill,USKL_2909d5b4ed6a,Cognitive Robotics,Q111912154,https://www.wikidata.org/wiki/Q111912154,Cognitive Robotics,,,exact,high
+USKL_0fa1f12a12b7,skill,USKL_0fa1f12a12b7,ColdFusion Markup Language,Q2524362,https://www.wikidata.org/wiki/Q2524362,ColdFusion Markup Language,,,exact+csv_seed,high
+USKL_e7066143bee5,skill,USKL_e7066143bee5,Colocation,Q2983522,https://www.wikidata.org/wiki/Q2983522,Colocation,,,exact,high
+USKL_689fa46c3873,skill,USKL_689fa46c3873,Command Prompt,Q310897,https://www.wikidata.org/wiki/Q310897,Command Prompt,,,exact,high
+USKL_782aae2f0694,skill,USKL_782aae2f0694,Common Language Runtime,Q733134,https://www.wikidata.org/wiki/Q733134,Common Language Runtime,,,exact,high
+USKL_680f72569986,skill,USKL_680f72569986,CommunityViz,Q5154605,https://www.wikidata.org/wiki/Q5154605,CommunityViz,,,exact,high
+USKL_580169aa9416,skill,USKL_580169aa9416,Complex Networks,Q5156550,https://www.wikidata.org/wiki/Q5156550,Complex,,,alias,medium
+USKL_f780ff24eb46,skill,USKL_f780ff24eb46,Computational Intelligence,Q5157288,https://www.wikidata.org/wiki/Q5157288,Computational Intelligence,,,exact,high
+USKL_7d03a3f0421d,skill,USKL_7d03a3f0421d,Connected Devices,Q27790582,https://www.wikidata.org/wiki/Q27790582,Connected Devices,,,exact,high
+USKL_a2ed97f6f04f,skill,USKL_a2ed97f6f04f,Content Security Policy,Q1128636,https://www.wikidata.org/wiki/Q1128636,Content Security Policy,,,exact,high
+USKL_b0731823c01d,skill,USKL_b0731823c01d,Core Audio,Q1132463,https://www.wikidata.org/wiki/Q1132463,Core Audio,,,exact,high
+USKL_178118f5be52,skill,USKL_178118f5be52,CoreOS,Q15984850,https://www.wikidata.org/wiki/Q15984850,Container Linux,,,alias,medium
+USKL_4ddf850159e0,skill,USKL_4ddf850159e0,Cortana,Q16033350,https://www.wikidata.org/wiki/Q16033350,Cortana,,,exact,high
+USKL_7a635174d4d2,skill,USKL_7a635174d4d2,CouchDB,Q1136882,https://www.wikidata.org/wiki/Q1136882,Apache CouchDB,,,alias,medium
+USKL_6a44457cd3d7,skill,USKL_6a44457cd3d7,Cron,Q2765479,https://www.wikidata.org/wiki/Q2765479,Cron,,,exact,high
+USKL_dc04a5943c09,skill,USKL_dc04a5943c09,Cucumber,Q5192416,https://www.wikidata.org/wiki/Q5192416,Cucumber,,,exact,high
+USKL_82b59406a056,skill,USKL_82b59406a056,Cyber Security,Q3510521,https://www.wikidata.org/wiki/Q3510521,computer security,,,alias,medium
+USKL_d58a74f3883e,skill,USKL_d58a74f3883e,CyberArk,Q5197666,https://www.wikidata.org/wiki/Q5197666,CyberArk,,,exact,high
+USKL_bd642e95c8f1,skill,USKL_bd642e95c8f1,Cyberduck,Q1147137,https://www.wikidata.org/wiki/Q1147137,Cyberduck,,,exact,high
+USKL_4b14ab96ba4e,skill,USKL_4b14ab96ba4e,Cygwin,Q216192,https://www.wikidata.org/wiki/Q216192,Cygwin,,,exact,high
+USKL_42351a585c65,skill,USKL_42351a585c65,Cypher Query Language,Q16834355,https://www.wikidata.org/wiki/Q16834355,Cypher Query Language,,,exact,high
+USKL_df73d78044de,skill,USKL_df73d78044de,D3.js,Q3011087,https://www.wikidata.org/wiki/Q3011087,D3.js,,,exact,high
+USKL_b7a55695e3b3,skill,USKL_b7a55695e3b3,DIGITAL Command Language,Q427002,https://www.wikidata.org/wiki/Q427002,DIGITAL Command Language,,,exact+csv_seed,high
+USKL_295a3b54d25f,skill,USKL_295a3b54d25f,DLX,Q563258,https://www.wikidata.org/wiki/Q563258,DLX,,,exact,high
+USKL_efd3659c3a0a,skill,USKL_efd3659c3a0a,Daemon Tools,Q874892,https://www.wikidata.org/wiki/Q874892,Daemon Tools,,,exact,high
+USKL_fdcff931cae7,skill,USKL_fdcff931cae7,Dalvik,Q444176,https://www.wikidata.org/wiki/Q444176,Dalvik,,,exact,high
+USKL_46b3a53578f6,skill,USKL_46b3a53578f6,Dapper ORM,Q5221802,https://www.wikidata.org/wiki/Q5221802,Dapper ORM,,,exact,high
+USKL_07416491d48d,skill,USKL_07416491d48d,Dart,Q406009,https://www.wikidata.org/wiki/Q406009,Dart,,,exact+csv_seed,high
+USKL_fe5212457af8,skill,USKL_fe5212457af8,Das U-Boot,Q1170607,https://www.wikidata.org/wiki/Q1170607,Das U-Boot,,,exact,high
+USKL_379f6c7604a5,skill,USKL_379f6c7604a5,Data Administration,Q132680496,https://www.wikidata.org/wiki/Q132680496,Data Administration,,,exact,high
+USKL_cd52234d5158,skill,USKL_cd52234d5158,Data Processing,Q96332510,https://www.wikidata.org/wiki/Q96332510,Data Processing,,,exact,high
+USKL_fad1be0a55fc,skill,USKL_fad1be0a55fc,Datadog,Q16248637,https://www.wikidata.org/wiki/Q16248637,Datadog,,,exact,high
+USKL_07e714eb7a2b,skill,USKL_07e714eb7a2b,Dataflow,Q3702959,https://www.wikidata.org/wiki/Q3702959,Dataflow,,,exact,high
+USKL_4050dbc6a9bd,skill,USKL_4050dbc6a9bd,Dataframe,Q110551915,https://www.wikidata.org/wiki/Q110551915,Dataframe,,,exact,high
+USKL_88f8a00c3b19,skill,USKL_88f8a00c3b19,DbVisualizer,Q104404504,https://www.wikidata.org/wiki/Q104404504,DbVisualizer,,,exact,high
+USKL_b683716a1107,skill,USKL_b683716a1107,Decoding,Q5249547,https://www.wikidata.org/wiki/Q5249547,Decoding,,,exact,high
+USKL_6a7b1050b498,skill,USKL_6a7b1050b498,Deeplearning4j,Q18206387,https://www.wikidata.org/wiki/Q18206387,Deeplearning4j,,,exact,high
+USKL_0f9497adec75,skill,USKL_0f9497adec75,DevExpress,Q139659916,https://www.wikidata.org/wiki/Q139659916,DevExpress,,,exact,high
+USKL_2813cf693205,skill,USKL_2813cf693205,Digital Guardian,Q24807559,https://www.wikidata.org/wiki/Q24807559,Digital Guardian,,,exact,high
+USKL_b71049c8409d,skill,USKL_b71049c8409d,DirSync Pro,Q3029316,https://www.wikidata.org/wiki/Q3029316,DirSync Pro,,,exact,high
+USKL_fef3754d87de,skill,USKL_fef3754d87de,Direct3D,Q939208,https://www.wikidata.org/wiki/Q939208,Direct3D,,,exact,high
+USKL_ae8f555bbfbf,skill,USKL_ae8f555bbfbf,Docker Compose,Q66317867,https://www.wikidata.org/wiki/Q66317867,Docker Compose,,,exact,high
+USKL_082e4840fe6e,skill,USKL_082e4840fe6e,Docker Hub,Q100769064,https://www.wikidata.org/wiki/Q100769064,Docker Hub,,,exact,high
+USKL_3a3505be99c9,skill,USKL_3a3505be99c9,Dockerfile,Q105856101,https://www.wikidata.org/wiki/Q105856101,Dockerfile,,,exact,high
+USKL_f17c09cda0bf,skill,USKL_f17c09cda0bf,Document Structure Description,Q265904,https://www.wikidata.org/wiki/Q265904,Document Structure Description,,,exact,high
+USKL_a830cbab0262,skill,USKL_a830cbab0262,Document Type Definition,Q212327,https://www.wikidata.org/wiki/Q212327,Document Type Definition,,,exact,high
+USKL_2a1c8d7f4763,skill,USKL_2a1c8d7f4763,Documentum,Q5287684,https://www.wikidata.org/wiki/Q5287684,Documentum,,,exact,high
+USKL_4138c7971df5,skill,USKL_4138c7971df5,Dojo Toolkit,Q956343,https://www.wikidata.org/wiki/Q956343,Dojo,,,alias,medium
+USKL_aa0fce5c9064,skill,USKL_aa0fce5c9064,DotNetNuke,Q1251148,https://www.wikidata.org/wiki/Q1251148,DNN,,,alias,medium
+USKL_9f0b7c0df9d5,skill,USKL_9f0b7c0df9d5,Dovecot,Q742820,https://www.wikidata.org/wiki/Q742820,Dovecot,,,exact,high
+USKL_b96dc7120b61,skill,USKL_b96dc7120b61,Drush,Q15783391,https://www.wikidata.org/wiki/Q15783391,Drush,,,exact,high
+USKL_518f62a38ca2,skill,USKL_518f62a38ca2,Durandal,Q605710,https://www.wikidata.org/wiki/Q605710,Durandal,,,exact,high
+USKL_c2db2eb0d53a,skill,USKL_c2db2eb0d53a,EHealth,Q20160772,https://www.wikidata.org/wiki/Q20160772,eHealth platform,,,alias,medium
+USKL_5d38ed9e477f,skill,USKL_5d38ed9e477f,EXT3,Q5324713,https://www.wikidata.org/wiki/Q5324713,EXT3,,,exact,high
+USKL_298ebf685e32,skill,USKL_298ebf685e32,Easy Java Simulations,Q5331134,https://www.wikidata.org/wiki/Q5331134,Easy Java Simulations,,,exact,high
+USKL_56378aa3fc5e,skill,USKL_56378aa3fc5e,Easytrieve,Q1278381,https://www.wikidata.org/wiki/Q1278381,Easytrieve,,,exact,high
+USKL_ab7ae7b979b7,skill,USKL_ab7ae7b979b7,Ebean,Q5331584,https://www.wikidata.org/wiki/Q5331584,Ebean,,,exact,high
+USKL_2bd6bd227910,skill,USKL_2bd6bd227910,EchoSign,Q5332650,https://www.wikidata.org/wiki/Q5332650,Adobe Sign,,,alias,medium
+USKL_0662ec4b108b,skill,USKL_0662ec4b108b,Eclipse Modeling Framework,Q1281972,https://www.wikidata.org/wiki/Q1281972,Eclipse Modeling Framework,,,exact,high
+USKL_f9703c0339b8,skill,USKL_f9703c0339b8,EclipseLink,Q897058,https://www.wikidata.org/wiki/Q897058,EclipseLink,,,exact,high
+USKL_db675d3efe37,skill,USKL_db675d3efe37,Ehcache,Q277784,https://www.wikidata.org/wiki/Q277784,Ehcache,,,exact,high
+USKL_882006baea67,skill,USKL_882006baea67,Ekahau Site Survey,Q5350272,https://www.wikidata.org/wiki/Q5350272,Ekahau Site Survey,,,exact,high
+USKL_7510af2562e9,skill,USKL_7510af2562e9,Ektron,Q5350618,https://www.wikidata.org/wiki/Q5350618,Ektron,,,exact,high
+USKL_1cee85026edb,skill,USKL_1cee85026edb,Elixir,Q5362035,https://www.wikidata.org/wiki/Q5362035,Elixir,,,exact+csv_seed,high
+USKL_365ce77f8ac2,skill,USKL_365ce77f8ac2,Eltron Programming Language,Q5367900,https://www.wikidata.org/wiki/Q5367900,Eltron Programming Language,,,exact,high
+USKL_6c8b3efa886c,skill,USKL_6c8b3efa886c,Emacs,Q189722,https://www.wikidata.org/wiki/Q189722,Emacs,,,exact,high
+USKL_6e9b58217e1c,skill,USKL_6e9b58217e1c,Embedded C,Q5369984,https://www.wikidata.org/wiki/Q5369984,Embedded C,,,exact,high
+USKL_2fb802536e2c,skill,USKL_2fb802536e2c,Ember.js,Q13592527,https://www.wikidata.org/wiki/Q13592527,Ember.js,,,exact,high
+USKL_4d6097134e87,skill,USKL_4d6097134e87,Endpoint Security,Q125475382,https://www.wikidata.org/wiki/Q125475382,Endpoint Security,,,exact,high
+USKL_6fb6ebae2ec0,skill,USKL_6fb6ebae2ec0,Enscribe,Q5379930,https://www.wikidata.org/wiki/Q5379930,Enscribe,,,exact,high
+USKL_af3681685046,skill,USKL_af3681685046,Entity Framework,Q851939,https://www.wikidata.org/wiki/Q851939,Entity Framework,,,exact,high
+USKL_6ca04c199207,skill,USKL_6ca04c199207,Erdas Imagine,Q1275764,https://www.wikidata.org/wiki/Q1275764,Octave Imagine remote sensing software,,,alias,medium
+USKL_8f30d7194e22,skill,USKL_8f30d7194e22,ESLint,Q55452824,https://www.wikidata.org/wiki/Q55452824,ESLint,,,exact,high
+USKL_4ad6770c9c53,skill,USKL_4ad6770c9c53,Ethereum,Q16783523,https://www.wikidata.org/wiki/Q16783523,Ethereum,,,exact,high
+USKL_f565a17da4d9,skill,USKL_f565a17da4d9,Ethereum Virtual Machine,Q139953717,https://www.wikidata.org/wiki/Q139953717,Ethereum Virtual Machine,,,exact,high
+USKL_2f50cce4110e,skill,USKL_2f50cce4110e,Event Viewer,Q360204,https://www.wikidata.org/wiki/Q360204,Event Viewer,,,exact,high
+USKL_cc3236cbd711,skill,USKL_cc3236cbd711,Express.js,Q16878131,https://www.wikidata.org/wiki/Q16878131,Express.js,,,exact,high
+USKL_16ea747bec10,skill,USKL_16ea747bec10,F#,Q648619,https://www.wikidata.org/wiki/Q648619,F#,,,exact+csv_seed,high
+USKL_37717942a588,skill,USKL_37717942a588,Facelets,Q917721,https://www.wikidata.org/wiki/Q917721,Facelets,,,exact,high
+USKL_1eccccc92c49,skill,USKL_1eccccc92c49,FastAPI,Q101119404,https://www.wikidata.org/wiki/Q101119404,FastAPI,,,exact,high
+USKL_48244fba08a0,skill,USKL_48244fba08a0,Fedora Linux,Q48267,https://www.wikidata.org/wiki/Q48267,Fedora Linux,,,exact,high
+USKL_1161f8f1b4dd,skill,USKL_1161f8f1b4dd,File Manager,Q1172307,https://www.wikidata.org/wiki/Q1172307,File Manager,,,exact,high
+USKL_426457228e42,skill,USKL_426457228e42,FileZilla,Q300662,https://www.wikidata.org/wiki/Q300662,FileZilla,,,exact,high
+USKL_c7dc39568660,skill,USKL_c7dc39568660,Firebase,Q18150728,https://www.wikidata.org/wiki/Q18150728,Firebase,,,exact,high
+USKL_c6dce8226f26,skill,USKL_c6dce8226f26,Firebug,Q1321700,https://www.wikidata.org/wiki/Q1321700,Firebug,,,exact,high
+USKL_82c4cf92cd04,skill,USKL_82c4cf92cd04,Firewall,Q8351206,https://www.wikidata.org/wiki/Q8351206,Firewall,,,exact,high
+USKL_c516fb306297,skill,USKL_c516fb306297,Flutter,Q39072787,https://www.wikidata.org/wiki/Q39072787,Flutter,,,exact+csv_seed,high
+USKL_2ee493f024bf,skill,USKL_2ee493f024bf,Flux,Q10549877,https://www.wikidata.org/wiki/Q10549877,Flux,,,exact,high
+USKL_70baf713b0f2,skill,USKL_70baf713b0f2,Fortinet,Q2749364,https://www.wikidata.org/wiki/Q2749364,Fortinet,,,exact,high
+USKL_cff4b0cf558e,skill,USKL_cff4b0cf558e,FoxPro,Q2507721,https://www.wikidata.org/wiki/Q2507721,FoxPro,,,exact,high
+USKL_5fbb5d5112e3,skill,USKL_5fbb5d5112e3,FpML,Q1306880,https://www.wikidata.org/wiki/Q1306880,Financial products Markup Language,,,alias,medium
+USKL_c2355efe83da,skill,USKL_c2355efe83da,FreeBSD,Q34236,https://www.wikidata.org/wiki/Q34236,FreeBSD,,,exact,high
+USKL_af2d58f30a19,skill,USKL_af2d58f30a19,FreeMarker,Q1138215,https://www.wikidata.org/wiki/Q1138215,FreeMarker,,,exact+csv_seed,high
+USKL_df1611af4190,skill,USKL_df1611af4190,FreeNAS,Q1328132,https://www.wikidata.org/wiki/Q1328132,TrueNAS,,,alias,medium
+USKL_23ceaae09243,skill,USKL_23ceaae09243,FreeRADIUS,Q2424806,https://www.wikidata.org/wiki/Q2424806,FreeRADIUS,,,exact,high
+USKL_ba3aa10a23b1,skill,USKL_ba3aa10a23b1,FreeRTOS,Q1186761,https://www.wikidata.org/wiki/Q1186761,FreeRTOS,,,exact,high
+USKL_dfcbc64c657c,skill,USKL_dfcbc64c657c,FreeSWITCH,Q2071303,https://www.wikidata.org/wiki/Q2071303,FreeSWITCH,,,exact,high
+USKL_ac17039f4405,skill,USKL_ac17039f4405,FxCop,Q1478575,https://www.wikidata.org/wiki/Q1478575,FxCop,,,exact,high
+USKL_80755a615fca,skill,USKL_80755a615fca,GNS3,Q15077385,https://www.wikidata.org/wiki/Q15077385,GNS3,,,exact,high
+USKL_d0f222ad3f74,skill,USKL_d0f222ad3f74,GNU Compiler Collection,Q178940,https://www.wikidata.org/wiki/Q178940,GNU Compiler Collection,,,exact,high
+USKL_8e2a70cc8041,skill,USKL_8e2a70cc8041,Galera,Q1491841,https://www.wikidata.org/wiki/Q1491841,Galera,,,exact,high
+USKL_d35449cb55fe,skill,USKL_d35449cb55fe,Gearman,Q5529489,https://www.wikidata.org/wiki/Q5529489,Gearman,,,exact,high
+USKL_c3d77c0fa7bd,skill,USKL_c3d77c0fa7bd,General Graphics Interface,Q5531930,https://www.wikidata.org/wiki/Q5531930,General Graphics Interface,,,exact,high
+USKL_3d437dd9e9d3,skill,USKL_3d437dd9e9d3,Genesys,Q5532848,https://www.wikidata.org/wiki/Q5532848,Genesys,,,exact,high
+USKL_47bfa86416c6,skill,USKL_47bfa86416c6,Gentoo Linux,Q170378,https://www.wikidata.org/wiki/Q170378,Gentoo Linux,,,exact,high
+USKL_c59ab69d69a3,skill,USKL_c59ab69d69a3,GeoMedia,Q5533906,https://www.wikidata.org/wiki/Q5533906,GeoMedia,,,exact,high
+USKL_9b4e0e323653,skill,USKL_9b4e0e323653,GeoServer,Q1502779,https://www.wikidata.org/wiki/Q1502779,GeoServer,,,exact,high
+USKL_32f109797a9c,skill,USKL_32f109797a9c,Geoinformatics,Q15757364,https://www.wikidata.org/wiki/Q15757364,Geoinformatics,,,exact,high
+USKL_7fab87d64b78,skill,USKL_7fab87d64b78,Geonames,Q65923914,https://www.wikidata.org/wiki/Q65923914,Geonames,,,exact,high
+USKL_29fea8adce24,skill,USKL_29fea8adce24,Gitorious,Q5565140,https://www.wikidata.org/wiki/Q5565140,Gitorious,,,exact,high
+USKL_0cadeecafc9e,skill,USKL_0cadeecafc9e,Global File System,Q5486715,https://www.wikidata.org/wiki/Q5486715,Global File System,,,exact,high
+USKL_4bb808e5224b,skill,USKL_4bb808e5224b,Global Mapper,Q4039494,https://www.wikidata.org/wiki/Q4039494,Global Mapper,,,exact,high
+USKL_bd3d490848f8,skill,USKL_bd3d490848f8,GlusterFS,Q830550,https://www.wikidata.org/wiki/Q830550,GlusterFS,,,exact,high
+USKL_37e83f2c0923,skill,USKL_37e83f2c0923,GoToAssist,Q5574647,https://www.wikidata.org/wiki/Q5574647,GoToAssist,,,exact,high
+USKL_1b7875973011,skill,USKL_1b7875973011,Google APIs,Q5583797,https://www.wikidata.org/wiki/Q5583797,Google APIs,,,exact,high
+USKL_bae9cfefba5c,skill,USKL_bae9cfefba5c,Google Alerts,Q2067785,https://www.wikidata.org/wiki/Q2067785,Google Alerts,,,exact,high
+USKL_dea382385f73,skill,USKL_dea382385f73,Google Apps Script,Q5583799,https://www.wikidata.org/wiki/Q5583799,Google Apps Script,,,exact,high
+USKL_de41ce793b47,skill,USKL_de41ce793b47,Google AutoML,Q59902830,https://www.wikidata.org/wiki/Q59902830,Google AutoML,,,exact,high
+USKL_6afa846ba08c,skill,USKL_6afa846ba08c,Google Closure Tools,Q79554,https://www.wikidata.org/wiki/Q79554,Google Closure Tools,,,exact,high
+USKL_c5c4825b0bf6,skill,USKL_c5c4825b0bf6,Google Cloud,Q5583815,https://www.wikidata.org/wiki/Q5583815,Google Cloud,,,exact,high
+USKL_5dcc054333d4,skill,USKL_5dcc054333d4,Google Cloud Messaging,Q5583818,https://www.wikidata.org/wiki/Q5583818,Google Cloud Messaging,,,exact,high
+USKL_80fe5403ad1a,skill,USKL_80fe5403ad1a,Google Code,Q10507565,https://www.wikidata.org/wiki/Q10507565,Google Code,,,exact,high
+USKL_d1a4c560d007,skill,USKL_d1a4c560d007,Google Earth,Q42274,https://www.wikidata.org/wiki/Q42274,Google Earth,,,exact,high
+USKL_ffa2c8bafa88,skill,USKL_ffa2c8bafa88,Google Groups,Q840820,https://www.wikidata.org/wiki/Q840820,Google Groups,,,exact,high
+USKL_355a8fb12919,skill,USKL_355a8fb12919,Google Guice,Q1537677,https://www.wikidata.org/wiki/Q1537677,Google Guice,,,exact,high
+USKL_ea0f03e8ee19,skill,USKL_ea0f03e8ee19,Google Home,Q125464114,https://www.wikidata.org/wiki/Q125464114,Google Home,,,exact,high
+USKL_1aca66410fa9,skill,USKL_1aca66410fa9,Google Kubernetes Engine,Q59848767,https://www.wikidata.org/wiki/Q59848767,Google Kubernetes Engine,,,exact,high
+USKL_f3632e7965d5,skill,USKL_f3632e7965d5,Google Play,Q79576,https://www.wikidata.org/wiki/Q79576,Google Play,,,exact,high
+USKL_ec739cabe4cc,skill,USKL_ec739cabe4cc,Google Search Appliance,Q3306623,https://www.wikidata.org/wiki/Q3306623,Google Search Appliance,,,exact,high
+USKL_d59d0bc77e4f,skill,USKL_d59d0bc77e4f,Google Cloud Storage,Q4605228,https://www.wikidata.org/wiki/Q4605228,Google Cloud Storage,,,exact,high
+USKL_674c58a3ab30,skill,USKL_674c58a3ab30,Google Voice,Q51712,https://www.wikidata.org/wiki/Q51712,Google Voice,,,exact,high
+USKL_53c7aaea5753,skill,USKL_53c7aaea5753,Gprof,Q3112910,https://www.wikidata.org/wiki/Q3112910,GNU profiler,,,alias,medium
+USKL_3e3f0f97ca24,skill,USKL_3e3f0f97ca24,GraphDB,Q58425577,https://www.wikidata.org/wiki/Q58425577,Ontotext GraphDB,,,alias,medium
+USKL_e6c52c24cadc,skill,USKL_e6c52c24cadc,Graphics Device Interface,Q1046656,https://www.wikidata.org/wiki/Q1046656,Graphics Device Interface,,,exact,high
+USKL_205d6bf0a083,skill,USKL_205d6bf0a083,Graphite,Q1027984,https://www.wikidata.org/wiki/Q1027984,Graphite,,,exact,high
+USKL_e6c61dbd658e,skill,USKL_e6c61dbd658e,Grep,Q3093370,https://www.wikidata.org/wiki/Q3093370,Grep,,,exact,high
+USKL_126237cffb0b,skill,USKL_126237cffb0b,Group Policy,Q263678,https://www.wikidata.org/wiki/Q263678,Group Policy,,,exact,high
+USKL_89d9763e93d7,skill,USKL_89d9763e93d7,Gunicorn,Q5618801,https://www.wikidata.org/wiki/Q5618801,Gunicorn,,,exact,high
+USKL_e0fef01ad031,skill,USKL_e0fef01ad031,HAProxy,Q5628948,https://www.wikidata.org/wiki/Q5628948,HAProxy,,,exact,high
+USKL_0426e7f1f4e5,skill,USKL_0426e7f1f4e5,HFS Plus,Q1071337,https://www.wikidata.org/wiki/Q1071337,HFS Plus,,,exact,high
+USKL_4d1a8202cdf4,skill,USKL_4d1a8202cdf4,HP 3000,Q1259157,https://www.wikidata.org/wiki/Q1259157,HP 3000,,,exact,high
+USKL_e2d3319cf264,skill,USKL_e2d3319cf264,HP BASIC,Q5635639,https://www.wikidata.org/wiki/Q5635639,HP BASIC,,,exact,high
+USKL_f3bdcb52a8e8,skill,USKL_f3bdcb52a8e8,HP OpenView,Q515316,https://www.wikidata.org/wiki/Q515316,HP OpenView,,,exact,high
+USKL_aa6066fd1590,skill,USKL_aa6066fd1590,HP Web Jetadmin,Q3177794,https://www.wikidata.org/wiki/Q3177794,Jetadmin,,,alias,medium
+USKL_ba89d43589bd,skill,USKL_ba89d43589bd,HP-UX,Q847593,https://www.wikidata.org/wiki/Q847593,HP-UX,,,exact,high
+USKL_c2d399cb393c,skill,USKL_c2d399cb393c,HTML Application,Q1566078,https://www.wikidata.org/wiki/Q1566078,HTML Application,,,exact,high
+USKL_e37f3061662c,skill,USKL_e37f3061662c,HTML Components,Q5636096,https://www.wikidata.org/wiki/Q5636096,HTML Components,,,exact,high
+USKL_540beec04038,skill,USKL_540beec04038,HTML5,Q2053,https://www.wikidata.org/wiki/Q2053,HTML5,,,exact+csv_seed,high
+USKL_d36575084641,skill,USKL_d36575084641,HackerOne,Q22022648,https://www.wikidata.org/wiki/Q22022648,HackerOne,,,exact,high
+USKL_4cd9df48fdf0,skill,USKL_4cd9df48fdf0,Hardening,Q5655896,https://www.wikidata.org/wiki/Q5655896,Hardening,,,exact,high
+USKL_91ef14c21b65,skill,USKL_91ef14c21b65,Hazelcast,Q17021540,https://www.wikidata.org/wiki/Q17021540,Hazelcast,,,exact,high
+USKL_914376eead60,skill,USKL_914376eead60,Hiera,Q12900261,https://www.wikidata.org/wiki/Q12900261,Hiera,,,exact,high
+USKL_4e7cadedf811,skill,USKL_4e7cadedf811,Highcharts,Q22908888,https://www.wikidata.org/wiki/Q22908888,Highcharts,,,exact,high
+USKL_38f895274ed8,skill,USKL_38f895274ed8,HyperACCESS,Q1516517,https://www.wikidata.org/wiki/Q1516517,HyperACCESS,,,exact,high
+USKL_da094068f2b6,skill,USKL_da094068f2b6,Hystrix,Q403549,https://www.wikidata.org/wiki/Q403549,Hystrix,,,exact,high
+USKL_0ca13d854328,skill,USKL_0ca13d854328,IBM Bluemix,Q18378690,https://www.wikidata.org/wiki/Q18378690,IBM Bluemix,,,exact,high
+USKL_d7862f8295d6,skill,USKL_d7862f8295d6,IBM DFSMS,Q28871078,https://www.wikidata.org/wiki/Q28871078,DFSMS,,,alias,medium
+USKL_84a234f7c7f7,skill,USKL_84a234f7c7f7,IBM Informix-4GL,Q2816938,https://www.wikidata.org/wiki/Q2816938,IBM Informix-4GL,,,exact,high
+USKL_9c40cc48be50,skill,USKL_9c40cc48be50,IBM Lotus Symphony,Q259201,https://www.wikidata.org/wiki/Q259201,IBM Lotus Symphony,,,exact,high
+USKL_b60b1c901b7c,skill,USKL_b60b1c901b7c,IBM OMEGAMON,Q5968908,https://www.wikidata.org/wiki/Q5968908,IBM OMEGAMON,,,exact,high
+USKL_4867c48d4524,skill,USKL_4867c48d4524,IBM Parallel Sysplex,Q358927,https://www.wikidata.org/wiki/Q358927,IBM Parallel Sysplex,,,exact,high
+USKL_a0eebd0632fc,skill,USKL_a0eebd0632fc,IBM SQL/DS,Q5969010,https://www.wikidata.org/wiki/Q5969010,IBM SQL/DS,,,exact,high
+USKL_b82f31a5dd63,skill,USKL_b82f31a5dd63,IBM Spufi,Q1604254,https://www.wikidata.org/wiki/Q1604254,IBM Spufi,,,exact,high
+USKL_7654564b3d21,skill,USKL_7654564b3d21,IBM VisualAge,Q1370704,https://www.wikidata.org/wiki/Q1370704,VisualAge,,,alias,medium
+USKL_c0bcee8000db,skill,USKL_c0bcee8000db,ICEfaces,Q1653245,https://www.wikidata.org/wiki/Q1653245,ICEfaces,,,exact,high
+USKL_c836ca805dbe,skill,USKL_c836ca805dbe,IDoc,Q5970139,https://www.wikidata.org/wiki/Q5970139,IDoc,,,exact,high
+USKL_85943e922ee4,skill,USKL_85943e922ee4,IEFBR14,Q1653463,https://www.wikidata.org/wiki/Q1653463,IEFBR14,,,exact,high
+USKL_3e40d955848e,skill,USKL_3e40d955848e,IP Multimedia Subsystem,Q1140664,https://www.wikidata.org/wiki/Q1140664,IP Multimedia Subsystem,,,exact,high
+USKL_e26bf6283172,skill,USKL_e26bf6283172,IPython,Q2659957,https://www.wikidata.org/wiki/Q2659957,IPython,,,exact,high
+USKL_a2ab16cb218d,skill,USKL_a2ab16cb218d,IRIX,Q627611,https://www.wikidata.org/wiki/Q627611,IRIX,,,exact,high
+USKL_4d4d3513e9bb,skill,USKL_4d4d3513e9bb,Icinga,Q3499542,https://www.wikidata.org/wiki/Q3499542,Icinga,,,exact,high
+USKL_d9ffee4cc1ed,skill,USKL_d9ffee4cc1ed,Icinga2,Q3499542,https://www.wikidata.org/wiki/Q3499542,Icinga,,,alias,medium
+USKL_cef24d83a699,skill,USKL_cef24d83a699,Image Server,Q123964697,https://www.wikidata.org/wiki/Q123964697,ArcGIS Image Server,,,alias,medium
+USKL_49a4fd22f892,skill,USKL_49a4fd22f892,Imperva,Q6007092,https://www.wikidata.org/wiki/Q6007092,Imperva,,,exact,high
+USKL_6abec9feaf77,skill,USKL_6abec9feaf77,IndexedDB,Q125176,https://www.wikidata.org/wiki/Q125176,Indexed Database API,,,alias,medium
+USKL_e721a1b2c8fc,skill,USKL_e721a1b2c8fc,Indexer,Q6019134,https://www.wikidata.org/wiki/Q6019134,Indexer,,,exact,high
+USKL_b5bec452b6d3,skill,USKL_b5bec452b6d3,Infinispan,Q18152516,https://www.wikidata.org/wiki/Q18152516,Infinispan,,,exact,high
+USKL_148fd8a5b33c,skill,USKL_148fd8a5b33c,InfluxDB,Q28127110,https://www.wikidata.org/wiki/Q28127110,InfluxDB,,,exact,high
+USKL_e98efc8f3ca3,skill,USKL_e98efc8f3ca3,Informatica,Q941392,https://www.wikidata.org/wiki/Q941392,Informatica,,,exact,high
+USKL_eec54eb75058,skill,USKL_eec54eb75058,InnoDB,Q838388,https://www.wikidata.org/wiki/Q838388,InnoDB,,,exact,high
+USKL_7a17404f0cd6,skill,USKL_7a17404f0cd6,Instant Messaging,Q58199,https://www.wikidata.org/wiki/Q58199,instant messaging,,,alias,medium
+USKL_a5d0a4281220,skill,USKL_a5d0a4281220,Instantiation,Q437448,https://www.wikidata.org/wiki/Q437448,Instantiation,,,exact,high
+USKL_7a0569d03306,skill,USKL_7a0569d03306,IntelliJ IDEA,Q1206660,https://www.wikidata.org/wiki/Q1206660,IntelliJ IDEA,,,exact,high
+USKL_51379bc9e5f3,skill,USKL_51379bc9e5f3,Intercom,Q48965215,https://www.wikidata.org/wiki/Q48965215,Intercom,,,exact,high
+USKL_80d1f25f7522,skill,USKL_80d1f25f7522,Interface Builder,Q1196601,https://www.wikidata.org/wiki/Q1196601,Interface Builder,,,exact,high
+USKL_ee76ad55106e,skill,USKL_ee76ad55106e,Internet Information Services,Q11341,https://www.wikidata.org/wiki/Q11341,Internet Information Services,,,exact,high
+USKL_79bbb6b6e85a,skill,USKL_79bbb6b6e85a,Internetwork Operating System,Q753576,https://www.wikidata.org/wiki/Q753576,Cisco IOS,,,alias,medium
+USKL_63beae032bc2,skill,USKL_63beae032bc2,Interoperability,Q749647,https://www.wikidata.org/wiki/Q749647,interoperability,,,alias,medium
+USKL_3ab8f0a99f0f,skill,USKL_3ab8f0a99f0f,Istio,Q88464464,https://www.wikidata.org/wiki/Q88464464,Istio,,,exact,high
+USKL_af1fdd55c9cc,skill,USKL_af1fdd55c9cc,JBoss Developer Studio,Q1099065,https://www.wikidata.org/wiki/Q1099065,JBoss Developer Studio,,,exact,high
+USKL_08f4a2194bb7,skill,USKL_08f4a2194bb7,JBoss Messaging,Q6107819,https://www.wikidata.org/wiki/Q6107819,JBoss Messaging,,,exact,high
+USKL_ff2ec14f1b72,skill,USKL_ff2ec14f1b72,JBoss Seam,Q923560,https://www.wikidata.org/wiki/Q923560,JBoss Seam,,,exact,high
+USKL_ed3c92467e6b,skill,USKL_ed3c92467e6b,JBuilder,Q795932,https://www.wikidata.org/wiki/Q795932,JBuilder,,,exact,high
+USKL_6fc04cf093ad,skill,USKL_6fc04cf093ad,JDeveloper,Q41525,https://www.wikidata.org/wiki/Q41525,JDeveloper,,,exact,high
+USKL_dbce0d326c6e,skill,USKL_dbce0d326c6e,JIRA Studio,Q6108249,https://www.wikidata.org/wiki/Q6108249,JIRA Studio,,,exact,high
+USKL_d2bf419c5911,skill,USKL_d2bf419c5911,JRuby,Q605718,https://www.wikidata.org/wiki/Q605718,JRuby,,,exact,high
+USKL_3bde290e6b71,skill,USKL_3bde290e6b71,JSHint,Q6108931,https://www.wikidata.org/wiki/Q6108931,JSHint,,,exact,high
+USKL_35754e21a639,skill,USKL_35754e21a639,JSLint,Q1338047,https://www.wikidata.org/wiki/Q1338047,JSLint,,,exact,high
+USKL_b5e244d9a34f,skill,USKL_b5e244d9a34f,JSON,Q2063,https://www.wikidata.org/wiki/Q2063,JSON,,,exact,high
+USKL_09bd5280ada8,skill,USKL_09bd5280ada8,JScript,Q553514,https://www.wikidata.org/wiki/Q553514,JScript,,,exact+csv_seed,high
+USKL_e16de2905a87,skill,USKL_e16de2905a87,JaCoCo,Q6109486,https://www.wikidata.org/wiki/Q6109486,JaCoCo,,,exact,high
+USKL_0878eb317175,skill,USKL_0878eb317175,Jamstack,Q57204236,https://www.wikidata.org/wiki/Q57204236,Jamstack,,,exact,high
+USKL_da127027bb79,skill,USKL_da127027bb79,JanusGraph,Q56856628,https://www.wikidata.org/wiki/Q56856628,JanusGraph,,,exact,high
+USKL_505f3a01d4e7,skill,USKL_505f3a01d4e7,Jasmine,Q400816,https://www.wikidata.org/wiki/Q400816,Jasmine,,,exact,high
+USKL_b8f8724c7814,skill,USKL_b8f8724c7814,Java Advanced Imaging,Q1129895,https://www.wikidata.org/wiki/Q1129895,Java Advanced Imaging,,,exact,high
+USKL_4240e80b59db,skill,USKL_4240e80b59db,Java Database Connectivity,Q722772,https://www.wikidata.org/wiki/Q722772,Java Database Connectivity,,,exact+csv_seed,high
+USKL_f8c380ad63e4,skill,USKL_f8c380ad63e4,Java Development Kit,Q741303,https://www.wikidata.org/wiki/Q741303,Java Development Kit,,,exact,high
+USKL_2ca36500f24b,skill,USKL_2ca36500f24b,Java Development Tools,Q1684185,https://www.wikidata.org/wiki/Q1684185,Java Development Tools,,,exact,high
+USKL_cb5df5d5c2d8,skill,USKL_cb5df5d5c2d8,Java Foundation Classes,Q957782,https://www.wikidata.org/wiki/Q957782,Java Foundation Classes,,,exact,high
+USKL_9edfd5ac420e,skill,USKL_9edfd5ac420e,Java Media Framework,Q1684192,https://www.wikidata.org/wiki/Q1684192,Java Media Framework,,,exact,high
+USKL_7865146121c0,skill,USKL_7865146121c0,Java Runtime Environment,Q1504505,https://www.wikidata.org/wiki/Q1504505,Java Runtime Environment,,,exact,high
+USKL_0abb6821811e,skill,USKL_0abb6821811e,Java Web Start,Q33079,https://www.wikidata.org/wiki/Q33079,Java Web Start,,,exact,high
+USKL_052a06c51cd6,skill,USKL_052a06c51cd6,JavaBeans,Q259322,https://www.wikidata.org/wiki/Q259322,JavaBeans,,,exact,high
+USKL_8a581c13e874,skill,USKL_8a581c13e874,JavaFX,Q2270514,https://www.wikidata.org/wiki/Q2270514,JavaFX,,,exact,high
+USKL_ef86b59227f6,skill,USKL_ef86b59227f6,JavaMail,Q772456,https://www.wikidata.org/wiki/Q772456,Jakarta Mail,,,alias,medium
+USKL_a2d494c364ee,skill,USKL_a2d494c364ee,JavaServer Faces,Q729427,https://www.wikidata.org/wiki/Q729427,Jakarta Faces,,,alias,medium
+USKL_80223c61faf2,skill,USKL_80223c61faf2,JavaServer Pages,Q183169,https://www.wikidata.org/wiki/Q183169,Jakarta Server Pages,,,alias,medium
+USKL_0cb401bce0bb,skill,USKL_0cb401bce0bb,Javadoc,Q1413077,https://www.wikidata.org/wiki/Q1413077,Javadoc,,,exact,high
+USKL_12a6e20bcbed,skill,USKL_12a6e20bcbed,Jetty,Q1085688,https://www.wikidata.org/wiki/Q1085688,Jetty,,,exact,high
+USKL_4959384863ac,skill,USKL_4959384863ac,JiBX,Q1688838,https://www.wikidata.org/wiki/Q1688838,JiBX,,,exact,high
+USKL_2b306346b1ff,skill,USKL_2b306346b1ff,Junos,Q4041744,https://www.wikidata.org/wiki/Q4041744,Junos,,,exact,high
+USKL_23fff3eae168,skill,USKL_23fff3eae168,Jython,Q1053999,https://www.wikidata.org/wiki/Q1053999,Jython,,,exact,high
+USKL_9990c544cf4d,skill,USKL_9990c544cf4d,Kaldi,Q17045101,https://www.wikidata.org/wiki/Q17045101,Kaldi,,,exact,high
+USKL_e19b17a1a732,skill,USKL_e19b17a1a732,Kalido,Q16995570,https://www.wikidata.org/wiki/Q16995570,Kalido,,,exact,high
+USKL_e8fde6dd10a0,skill,USKL_e8fde6dd10a0,Kaspersky Anti-Virus,Q1043518,https://www.wikidata.org/wiki/Q1043518,Kaspersky Anti-Virus,,,exact,high
+USKL_52299dbc30f0,skill,USKL_52299dbc30f0,Kentico,Q1739065,https://www.wikidata.org/wiki/Q1739065,Kentico,,,exact,high
+USKL_8dbf3c7c8ff1,skill,USKL_8dbf3c7c8ff1,Kerberos,Q352066,https://www.wikidata.org/wiki/Q352066,Kerberos,,,exact,high
+USKL_1427e43c2389,skill,USKL_1427e43c2389,Kernel-Mode Driver Framework,Q10851258,https://www.wikidata.org/wiki/Q10851258,Kernel-Mode Driver Framework,,,exact,high
+USKL_42c156e66381,skill,USKL_42c156e66381,Keychain,Q250173,https://www.wikidata.org/wiki/Q250173,Keychain,,,exact,high
+USKL_e269e5b101cf,skill,USKL_e269e5b101cf,KiXtart,Q1477376,https://www.wikidata.org/wiki/Q1477376,KiXtart,,,exact,high
+USKL_5ab39fb949c2,skill,USKL_5ab39fb949c2,Knockout.js,Q1100240,https://www.wikidata.org/wiki/Q1100240,Knockout.js,,,exact,high
+USKL_68793291314c,skill,USKL_68793291314c,Knowledge Management Software,Q73908613,https://www.wikidata.org/wiki/Q73908613,Knowmax,,,alias,medium
+USKL_3aea6fb64654,skill,USKL_3aea6fb64654,Knowledge-Based Systems,Q39075939,https://www.wikidata.org/wiki/Q39075939,Knowledge-Based Systems,,,exact,high
+USKL_2e2c5bd7c5a6,skill,USKL_2e2c5bd7c5a6,Kohana,Q2449047,https://www.wikidata.org/wiki/Q2449047,Kohana,,,exact,high
+USKL_69d038381e46,skill,USKL_69d038381e46,LANSA,Q6711282,https://www.wikidata.org/wiki/Q6711282,LANSA,,,exact,high
+USKL_cf805b016122,skill,USKL_cf805b016122,LDAP Admin,Q28127124,https://www.wikidata.org/wiki/Q28127124,LDAP Admin,,,exact,high
+USKL_838196df54fa,skill,USKL_838196df54fa,Laravel,Q13634357,https://www.wikidata.org/wiki/Q13634357,Laravel,,,exact+csv_seed,high
+USKL_9b39c1e8a348,skill,USKL_9b39c1e8a348,Lauterbach,Q250268,https://www.wikidata.org/wiki/Q250268,Lauterbach,,,exact,high
+USKL_fb8814669a29,skill,USKL_fb8814669a29,Leap Motion,Q6509916,https://www.wikidata.org/wiki/Q6509916,Leap Motion,,,exact,high
+USKL_9c4d4712e02e,skill,USKL_9c4d4712e02e,Linden Scripting Language,Q1185543,https://www.wikidata.org/wiki/Q1185543,Linden Scripting Language,,,exact,high
+USKL_1cae0ce6a911,skill,USKL_1cae0ce6a911,Linux Security Modules,Q2550704,https://www.wikidata.org/wiki/Q2550704,Linux Security Modules,,,exact,high
+USKL_70b13d324b4f,skill,USKL_70b13d324b4f,Linux Virtual Server,Q1827146,https://www.wikidata.org/wiki/Q1827146,Linux Virtual Server,,,exact,high
+USKL_219ba3a1d5bc,skill,USKL_219ba3a1d5bc,Liquibase,Q17097280,https://www.wikidata.org/wiki/Q17097280,Liquibase,,,exact,high
+USKL_ea0183278e12,skill,USKL_ea0183278e12,Litespeed,Q6647807,https://www.wikidata.org/wiki/Q6647807,Litespeed,,,exact,high
+USKL_91661c610d15,skill,USKL_91661c610d15,Lodash,Q24033787,https://www.wikidata.org/wiki/Q24033787,Lodash,,,exact,high
+USKL_29e98edbb77e,skill,USKL_29e98edbb77e,Log4j,Q286923,https://www.wikidata.org/wiki/Q286923,Log4j,,,exact,high
+USKL_78952a43c664,skill,USKL_78952a43c664,Logical Volume Manager,Q6667482,https://www.wikidata.org/wiki/Q6667482,Logical Volume Manager,,,exact,high
+USKL_00c4600efaed,skill,USKL_00c4600efaed,Logstash,Q17620247,https://www.wikidata.org/wiki/Q17620247,Logstash,,,exact,high
+USKL_28f8eb432213,skill,USKL_28f8eb432213,LotusScript,Q3260092,https://www.wikidata.org/wiki/Q3260092,LotusScript,,,exact,high
+USKL_1ba887abed93,skill,USKL_1ba887abed93,LynxOS,Q1878937,https://www.wikidata.org/wiki/Q1878937,LynxOS,,,exact,high
+USKL_c3d54baf7c01,skill,USKL_c3d54baf7c01,MAMP,Q2125478,https://www.wikidata.org/wiki/Q2125478,MAMP,,,exact,high
+USKL_05945783de39,skill,USKL_05945783de39,MITRE ATT&CK Framework,Q104434300,https://www.wikidata.org/wiki/Q104434300,Mitre ATT&CK,,,alias,medium
+USKL_001e01c06b74,skill,USKL_001e01c06b74,MIVA Script,Q3026464,https://www.wikidata.org/wiki/Q3026464,MIVA Script,,,exact,high
+USKL_b61252e4e5cc,skill,USKL_b61252e4e5cc,MODX,Q74452,https://www.wikidata.org/wiki/Q74452,MODX,,,exact,high
+USKL_84e4d3e9481e,skill,USKL_84e4d3e9481e,MQX,Q6717408,https://www.wikidata.org/wiki/Q6717408,MQX,,,exact,high
+USKL_a4cb6491b8f4,skill,USKL_a4cb6491b8f4,MSBuild,Q2065919,https://www.wikidata.org/wiki/Q2065919,MSBuild,,,exact,high
+USKL_e0989169d7a0,skill,USKL_e0989169d7a0,Mac Defender,Q941302,https://www.wikidata.org/wiki/Q941302,Mac Defender,,,exact,high
+USKL_ed2e64310303,skill,USKL_ed2e64310303,MapInfo Professional,Q64189,https://www.wikidata.org/wiki/Q64189,MapInfo,,,alias,medium
+USKL_bdb7f0e07aa7,skill,USKL_bdb7f0e07aa7,Mapbox,Q17068357,https://www.wikidata.org/wiki/Q17068357,Mapbox,,,exact,high
+USKL_1cb92d9873bd,skill,USKL_1cb92d9873bd,Markup Languages,Q85417732,https://www.wikidata.org/wiki/Q85417732,Markup Languages: Theory and Practice,,,alias,medium
+USKL_46c4f14b6cec,skill,USKL_46c4f14b6cec,Matterport,Q107520260,https://www.wikidata.org/wiki/Q107520260,Matterport,,,exact,high
+USKL_a39953ba1efe,skill,USKL_a39953ba1efe,MaxDB,Q2143312,https://www.wikidata.org/wiki/Q2143312,MaxDB,,,exact,high
+USKL_c47680bfdfc4,skill,USKL_c47680bfdfc4,MediaWiki,Q19368816,https://www.wikidata.org/wiki/Q19368816,MediaWiki,,,exact,high
+USKL_ac38df4833fa,skill,USKL_ac38df4833fa,Memcached,Q306661,https://www.wikidata.org/wiki/Q306661,Memcached,,,exact,high
+USKL_48320427a553,skill,USKL_48320427a553,Mercurial,Q476543,https://www.wikidata.org/wiki/Q476543,Mercurial,,,exact,high
+USKL_8dbce241f216,skill,USKL_8dbce241f216,Micro Focus,Q1931458,https://www.wikidata.org/wiki/Q1931458,Micro Focus International,,,alias,medium
+USKL_f76ecc14fbd0,skill,USKL_f76ecc14fbd0,MicroC/OS-II,Q1140614,https://www.wikidata.org/wiki/Q1140614,MicroC/OS-II,,,exact,high
+USKL_ecc06a468db8,skill,USKL_ecc06a468db8,Microcode,Q123895713,https://www.wikidata.org/wiki/Q123895713,Microcode,,,exact,high
+USKL_77221d0c7d1b,skill,USKL_77221d0c7d1b,Microsoft App-V,Q1665339,https://www.wikidata.org/wiki/Q1665339,Microsoft App-V,,,exact,high
+USKL_16342ffac48f,skill,USKL_16342ffac48f,Azure,Q401091,https://www.wikidata.org/wiki/Q401091,Azure,,,exact,high
+USKL_af0e149b0f70,skill,USKL_af0e149b0f70,Microsoft Cluster Server,Q4215987,https://www.wikidata.org/wiki/Q4215987,Microsoft Cluster Server,,,exact,high
+USKL_5f37700d9cf6,skill,USKL_5f37700d9cf6,Microsoft Deployment Toolkit,Q1420900,https://www.wikidata.org/wiki/Q1420900,Microsoft Deployment Toolkit,,,exact,high
+USKL_14c9f5578987,skill,USKL_14c9f5578987,Microsoft Enterprise Library,Q6840128,https://www.wikidata.org/wiki/Q6840128,Microsoft Enterprise Library,,,exact,high
+USKL_f9645d0c50bc,skill,USKL_f9645d0c50bc,Microsoft File Compare,Q2985720,https://www.wikidata.org/wiki/Q2985720,FC,,,alias,medium
+USKL_7632bd90454d,skill,USKL_7632bd90454d,Microsoft Forefront,Q2312791,https://www.wikidata.org/wiki/Q2312791,Microsoft Forefront,,,exact,high
+USKL_6a1b079a3800,skill,USKL_6a1b079a3800,Microsoft Management Console,Q731135,https://www.wikidata.org/wiki/Q731135,Microsoft Management Console,,,exact,high
+USKL_eaeac8178082,skill,USKL_eaeac8178082,Microsoft MapPoint,Q1853389,https://www.wikidata.org/wiki/Q1853389,Microsoft MapPoint,,,exact,high
+USKL_acabe7cb9b4f,skill,USKL_acabe7cb9b4f,Microsoft Operations Manager,Q202861,https://www.wikidata.org/wiki/Q202861,System Center Operations Manager,,,alias,medium
+USKL_cccf5c89c8e8,skill,USKL_cccf5c89c8e8,Microsoft Security Essentials,Q51707,https://www.wikidata.org/wiki/Q51707,Microsoft Security Essentials,,,exact,high
+USKL_fa4a34278add,skill,USKL_fa4a34278add,Microsoft Stream,Q30694375,https://www.wikidata.org/wiki/Q30694375,Microsoft Stream,,,exact,high
+USKL_3db200a60b00,skill,USKL_3db200a60b00,Microsoft UI Automation,Q3547212,https://www.wikidata.org/wiki/Q3547212,UI Automation,,,alias,medium
+USKL_c6ac851dde0b,skill,USKL_c6ac851dde0b,Microsoft WebMatrix,Q1969827,https://www.wikidata.org/wiki/Q1969827,Microsoft WebMatrix,,,exact,high
+USKL_1769ee918055,skill,USKL_1769ee918055,Microsoft Windows CE,Q488244,https://www.wikidata.org/wiki/Q488244,Windows Embedded Compact,,,alias,medium
+USKL_a8be23550106,skill,USKL_a8be23550106,Mirth Connect,Q6874730,https://www.wikidata.org/wiki/Q6874730,Mirth Connect,,,exact,high
+USKL_71508245b936,skill,USKL_71508245b936,Mitel,Q1957521,https://www.wikidata.org/wiki/Q1957521,Mitel,,,exact,high
+USKL_4750fa627344,skill,USKL_4750fa627344,MobX,Q115570779,https://www.wikidata.org/wiki/Q115570779,MobX,,,exact,high
+USKL_0c1a1f27835c,skill,USKL_0c1a1f27835c,Mocha,Q1201377,https://www.wikidata.org/wiki/Q1201377,Mocha,,,exact,high
+USKL_37389b9fe8d1,skill,USKL_37389b9fe8d1,Modernizr,Q869483,https://www.wikidata.org/wiki/Q869483,Modernizr,,,exact,high
+USKL_d62492404c53,skill,USKL_d62492404c53,Modularity,Q104879174,https://www.wikidata.org/wiki/Q104879174,Modularity,,,exact,high
+USKL_59535a7e8020,skill,USKL_59535a7e8020,Monit,Q3320971,https://www.wikidata.org/wiki/Q3320971,Monit,,,exact,high
+USKL_bc664511ed68,skill,USKL_bc664511ed68,Monolith,Q394480,https://www.wikidata.org/wiki/Q394480,Monolith,,,exact,high
+USKL_ae15e36f0efa,skill,USKL_ae15e36f0efa,MooTools,Q279201,https://www.wikidata.org/wiki/Q279201,MooTools,,,exact,high
+USKL_1a053ea915fb,skill,USKL_1a053ea915fb,Motherboard,Q30154709,https://www.wikidata.org/wiki/Q30154709,Motherboard,,,exact,high
+USKL_11dd8056977c,skill,USKL_11dd8056977c,MrSID,Q1422885,https://www.wikidata.org/wiki/Q1422885,MrSID,,,exact,high
+USKL_18797eced583,skill,USKL_18797eced583,MyBatis,Q5851860,https://www.wikidata.org/wiki/Q5851860,MyBatis,,,exact,high
+USKL_d4db20d53071,skill,USKL_d4db20d53071,MyEclipse,Q6944810,https://www.wikidata.org/wiki/Q6944810,MyEclipse,,,exact,high
+USKL_ec40384bea33,skill,USKL_ec40384bea33,MyISAM,Q917941,https://www.wikidata.org/wiki/Q917941,MyISAM,,,exact,high
+USKL_375d2d2c0fe1,skill,USKL_375d2d2c0fe1,MySQL Workbench,Q640741,https://www.wikidata.org/wiki/Q640741,MySQL Workbench,,,exact,high
+USKL_57daca683d4d,skill,USKL_57daca683d4d,NDepend,Q3334327,https://www.wikidata.org/wiki/Q3334327,NDepend,,,exact,high
+USKL_16ee999b4a21,skill,USKL_16ee999b4a21,NHibernate,Q1213732,https://www.wikidata.org/wiki/Q1213732,NHibernate,,,exact,high
+USKL_ff2fc0d57d84,skill,USKL_ff2fc0d57d84,NativeScript,Q28127049,https://www.wikidata.org/wiki/Q28127049,NativeScript,,,exact,high
+USKL_31c5770fa0d6,skill,USKL_31c5770fa0d6,NetBackup,Q2063698,https://www.wikidata.org/wiki/Q2063698,NetBackup,,,exact,high
+USKL_d0e8a91471b3,skill,USKL_d0e8a91471b3,NetBeans,Q264456,https://www.wikidata.org/wiki/Q264456,Apache NetBeans,,,alias,medium
+USKL_341f1b264924,skill,USKL_341f1b264924,NetStumbler,Q285770,https://www.wikidata.org/wiki/Q285770,NetStumbler,,,exact,high
+USKL_8de2b151db88,skill,USKL_8de2b151db88,NetWare,Q691990,https://www.wikidata.org/wiki/Q691990,NetWare,,,exact,high
+USKL_8cd1bfba31d4,skill,USKL_8cd1bfba31d4,Netcat,Q306070,https://www.wikidata.org/wiki/Q306070,Netcat,,,exact,high
+USKL_aae58d38db1d,skill,USKL_aae58d38db1d,Netfilter,Q1545633,https://www.wikidata.org/wiki/Q1545633,Netfilter,,,exact,high
+USKL_d5103d4ea147,skill,USKL_d5103d4ea147,Netty,Q6107820,https://www.wikidata.org/wiki/Q6107820,Netty,,,exact,high
+USKL_2a969d216be8,skill,USKL_2a969d216be8,Network Management,Q7696095,https://www.wikidata.org/wiki/Q7696095,telecommunications systems management,,,alias,medium
+USKL_948a9480d67e,skill,USKL_948a9480d67e,Network Security Services,Q7000904,https://www.wikidata.org/wiki/Q7000904,Network Security Services,,,exact,high
+USKL_30279fc360e0,skill,USKL_30279fc360e0,Next.js,Q56062435,https://www.wikidata.org/wiki/Q56062435,Next.js,,,exact+csv_seed,high
+USKL_954b2aba1339,skill,USKL_954b2aba1339,Node Package Manager,Q7067518,https://www.wikidata.org/wiki/Q7067518,npm,,,alias,medium
+USKL_4a64af375199,skill,USKL_4a64af375199,Node-RED,Q22907329,https://www.wikidata.org/wiki/Q22907329,Node-RED,,,exact,high
+USKL_8e917f654557,skill,USKL_8e917f654557,NonStop SQL,Q1218487,https://www.wikidata.org/wiki/Q1218487,NonStop SQL,,,exact,high
+USKL_f70781a682a6,skill,USKL_f70781a682a6,Novell ZENworks,Q2002922,https://www.wikidata.org/wiki/Q2002922,Novell ZENworks,,,exact,high
+USKL_3c13fbcd551a,skill,USKL_3c13fbcd551a,NuGet,Q975870,https://www.wikidata.org/wiki/Q975870,NuGet,,,exact,high
+USKL_4e97029fa298,skill,USKL_4e97029fa298,Numba,Q17132992,https://www.wikidata.org/wiki/Q17132992,Numba,,,exact,high
+USKL_4fb03c4731fc,skill,USKL_4fb03c4731fc,Nutch,Q1372248,https://www.wikidata.org/wiki/Q1372248,Nutch,,,exact,high
+USKL_3130b8c64b2c,skill,USKL_3130b8c64b2c,OAuth,Q21677849,https://www.wikidata.org/wiki/Q21677849,OAuth,,,exact,high
+USKL_25f139268eb9,skill,USKL_25f139268eb9,OPNET,Q610728,https://www.wikidata.org/wiki/Q610728,OPNET,,,exact,high
+USKL_b30018d70a96,skill,USKL_b30018d70a96,OTN,Q562618,https://www.wikidata.org/wiki/Q562618,OTN,,,exact,high
+USKL_23e13a5c7647,skill,USKL_23e13a5c7647,Object Pascal,Q633894,https://www.wikidata.org/wiki/Q633894,Object Pascal,,,exact+csv_seed,high
+USKL_a840d7f98b62,skill,USKL_a840d7f98b62,OCaml,Q212587,https://www.wikidata.org/wiki/Q212587,OCaml,,,exact+csv_seed,high
+USKL_c9e93cacb791,skill,USKL_c9e93cacb791,Octave,Q223679,https://www.wikidata.org/wiki/Q223679,GNU Octave,,,exact+csv_seed,high
+USKL_0295e8b42de2,skill,USKL_0295e8b42de2,Oculus,Q1668981,https://www.wikidata.org/wiki/Q1668981,Oculus,,,exact,high
+USKL_83061565a941,skill,USKL_83061565a941,Okta,Q55627388,https://www.wikidata.org/wiki/Q55627388,Okta,,,exact,high
+USKL_8453b3f5a217,skill,USKL_8453b3f5a217,Omeka,Q3524651,https://www.wikidata.org/wiki/Q3524651,Omeka,,,exact,high
+USKL_f920a107f42f,skill,USKL_f920a107f42f,OmniMark,Q7090311,https://www.wikidata.org/wiki/Q7090311,OmniMark,,,exact,high
+USKL_c3ba70fc2812,skill,USKL_c3ba70fc2812,Omnis Studio,Q1460443,https://www.wikidata.org/wiki/Q1460443,Omnis Studio,,,exact,high
+USKL_20cf10bba3b4,skill,USKL_20cf10bba3b4,Open Enterprise Server,Q1197839,https://www.wikidata.org/wiki/Q1197839,Open Enterprise Server,,,exact,high
+USKL_a5d11cd190f3,skill,USKL_a5d11cd190f3,Open Interface,Q7096098,https://www.wikidata.org/wiki/Q7096098,Open Interface,,,exact,high
+USKL_72e588af8551,skill,USKL_72e588af8551,Open Programming Language,Q1700602,https://www.wikidata.org/wiki/Q1700602,Open Programming Language,,,exact,high
+USKL_595fa72ee6b6,skill,USKL_595fa72ee6b6,OpenAM,Q822258,https://www.wikidata.org/wiki/Q822258,OpenAM,,,exact,high
+USKL_a37cd590b380,skill,USKL_a37cd590b380,OpenAPI,Q7095730,https://www.wikidata.org/wiki/Q7095730,OpenAPI,,,exact,high
+USKL_a2ea6bf7f822,skill,USKL_a2ea6bf7f822,OpenBSD,Q34215,https://www.wikidata.org/wiki/Q34215,OpenBSD,,,exact,high
+USKL_dcd42e8f93f8,skill,USKL_dcd42e8f93f8,OpenCL,Q681360,https://www.wikidata.org/wiki/Q681360,OpenCL,,,exact,high
+USKL_fda5e53b166f,skill,USKL_fda5e53b166f,OpenDJ,Q7095765,https://www.wikidata.org/wiki/Q7095765,OpenDJ,,,exact,high
+USKL_8cc9914c322b,skill,USKL_8cc9914c322b,OpenGL Shading Language,Q779819,https://www.wikidata.org/wiki/Q779819,OpenGL Shading Language,,,exact+csv_seed,high
+USKL_6c309b901187,skill,USKL_6c309b901187,OpenLDAP,Q682918,https://www.wikidata.org/wiki/Q682918,OpenLDAP,,,exact,high
+USKL_53b7525a3ca6,skill,USKL_53b7525a3ca6,OpenLayers,Q736666,https://www.wikidata.org/wiki/Q736666,OpenLayers,,,exact,high
+USKL_4b4564f25128,skill,USKL_4b4564f25128,OpenMAX,Q2396434,https://www.wikidata.org/wiki/Q2396434,OpenMAX,,,exact,high
+USKL_e9d53402b5e9,skill,USKL_e9d53402b5e9,OpenMP,Q496579,https://www.wikidata.org/wiki/Q496579,OpenMP,,,exact,high
+USKL_5572c52c947d,skill,USKL_5572c52c947d,OpenNMS,Q1427813,https://www.wikidata.org/wiki/Q1427813,OpenNMS,,,exact,high
+USKL_28ea5d757568,skill,USKL_28ea5d757568,OpenSIPS,Q604911,https://www.wikidata.org/wiki/Q604911,OpenSIPS,,,exact,high
+USKL_53f23e114634,skill,USKL_53f23e114634,OpenSSH,Q847062,https://www.wikidata.org/wiki/Q847062,OpenSSH,,,exact,high
+USKL_331ad3107c39,skill,USKL_331ad3107c39,OpenSSO,Q1224849,https://www.wikidata.org/wiki/Q1224849,OpenSSO,,,exact,high
+USKL_ef78adb32747,skill,USKL_ef78adb32747,OpenShift,Q2912272,https://www.wikidata.org/wiki/Q2912272,OpenShift,,,exact,high
+USKL_8cf45b0d0aa6,skill,USKL_8cf45b0d0aa6,OpenStack,Q1470293,https://www.wikidata.org/wiki/Q1470293,OpenStack,,,exact,high
+USKL_a6b6734edc49,skill,USKL_a6b6734edc49,OpenVINO,Q85790839,https://www.wikidata.org/wiki/Q85790839,OpenVINO,,,exact,high
+USKL_0e5703c9b1b3,skill,USKL_0e5703c9b1b3,OpenVMS,Q479882,https://www.wikidata.org/wiki/Q479882,OpenVMS,,,exact,high
+USKL_c23349957ff9,skill,USKL_c23349957ff9,OpenVPN,Q509075,https://www.wikidata.org/wiki/Q509075,OpenVPN,,,exact,high
+USKL_104a66de3d46,skill,USKL_104a66de3d46,OpenVZ,Q990419,https://www.wikidata.org/wiki/Q990419,OpenVZ,,,exact,high
+USKL_6b1899dfde34,skill,USKL_6b1899dfde34,OpenWrt,Q1140401,https://www.wikidata.org/wiki/Q1140401,OpenWrt,,,exact,high
+USKL_2b1569f99335,skill,USKL_2b1569f99335,Openswan,Q3304404,https://www.wikidata.org/wiki/Q3304404,Openswan,,,exact,high
+USKL_b7d83b08956f,skill,USKL_b7d83b08956f,Oracle Advanced Queuing,Q4260174,https://www.wikidata.org/wiki/Q4260174,Oracle Advanced Queuing,,,exact,high
+USKL_f49e839b7a05,skill,USKL_f49e839b7a05,Oracle Advanced Security,Q7099240,https://www.wikidata.org/wiki/Q7099240,Oracle Advanced Security,,,exact,high
+USKL_7b0ff82b6af0,skill,USKL_7b0ff82b6af0,Oracle Application Express,Q1908291,https://www.wikidata.org/wiki/Q1908291,Oracle Application Express,,,exact,high
+USKL_0964ac8c54be,skill,USKL_0964ac8c54be,Oracle Cloud,Q43401211,https://www.wikidata.org/wiki/Q43401211,Oracle Cloud,,,exact,high
+USKL_574255cb3bf6,skill,USKL_574255cb3bf6,Oracle Exadata,Q4038419,https://www.wikidata.org/wiki/Q4038419,Oracle Exadata,,,exact,high
+USKL_cf6bf3441414,skill,USKL_cf6bf3441414,Oracle Forms,Q744707,https://www.wikidata.org/wiki/Q744707,Oracle Forms,,,exact,high
+USKL_9050ee50a909,skill,USKL_9050ee50a909,Oracle Linux,Q46094,https://www.wikidata.org/wiki/Q46094,Oracle Linux,,,exact,high
+USKL_f7c72c92bf72,skill,USKL_f7c72c92bf72,Oracle Spatial,Q3508244,https://www.wikidata.org/wiki/Q3508244,Oracle Spatial,,,exact,high
+USKL_a633cd11a81f,skill,USKL_a633cd11a81f,Oracle VM,Q10852040,https://www.wikidata.org/wiki/Q10852040,Oracle VM,,,exact,high
+USKL_730dc5c11701,skill,USKL_730dc5c11701,Orbix,Q4045955,https://www.wikidata.org/wiki/Q4045955,Orbix,,,exact,high
+USKL_14c0da93e268,skill,USKL_14c0da93e268,OrientDB,Q808716,https://www.wikidata.org/wiki/Q808716,OrientDB,,,exact,high
+USKL_bd07ec8bc447,skill,USKL_bd07ec8bc447,PL/pgSQL,Q2044345,https://www.wikidata.org/wiki/Q2044345,PL/pgSQL,,,exact+csv_seed,high
+USKL_05724976f5d5,skill,USKL_05724976f5d5,PSOS,Q16798002,https://www.wikidata.org/wiki/Q16798002,PSOS,,,exact,high
+USKL_be378807ba9e,skill,USKL_be378807ba9e,PVCS Version Manager,Q3359906,https://www.wikidata.org/wiki/Q3359906,PVCS,,,alias,medium
+USKL_985b7f7f12be,skill,USKL_985b7f7f12be,Pacbase,Q458034,https://www.wikidata.org/wiki/Q458034,Pacbase,,,exact,high
+USKL_bea36d765ec7,skill,USKL_bea36d765ec7,PaddlePaddle,Q116232709,https://www.wikidata.org/wiki/Q116232709,PaddlePaddle,,,exact,high
+USKL_3023e5286199,skill,USKL_3023e5286199,Panvalet,Q17073931,https://www.wikidata.org/wiki/Q17073931,Panvalet,,,exact,high
+USKL_d740f09158c8,skill,USKL_d740f09158c8,Parallel Computing,Q15751992,https://www.wikidata.org/wiki/Q15751992,Parallel Computing,,,exact,high
+USKL_6715ac712658,skill,USKL_6715ac712658,Parallel Patterns Library,Q7134966,https://www.wikidata.org/wiki/Q7134966,Parallel Patterns Library,,,exact,high
+USKL_2121a17e9b2b,skill,USKL_2121a17e9b2b,Pathfinder,Q231878,https://www.wikidata.org/wiki/Q231878,Pathfinder,,,exact,high
+USKL_2973162dbaef,skill,USKL_2973162dbaef,PeopleCode,Q7165836,https://www.wikidata.org/wiki/Q7165836,PeopleCode,,,exact,high
+USKL_404f7dadc898,skill,USKL_404f7dadc898,Perforce,Q1681038,https://www.wikidata.org/wiki/Q1681038,Perforce P4,,,alias,medium
+USKL_ca85eb03fba7,skill,USKL_ca85eb03fba7,Pervasive PSQL,Q7171236,https://www.wikidata.org/wiki/Q7171236,Pervasive PSQL,,,exact,high
+USKL_5f749e6b2489,skill,USKL_5f749e6b2489,Phabricator,Q42156541,https://www.wikidata.org/wiki/Q42156541,Wikimedia Phabricator,,,alias,medium
+USKL_f02a2e5a2746,skill,USKL_f02a2e5a2746,PhoneGap,Q1704018,https://www.wikidata.org/wiki/Q1704018,PhoneGap,,,exact,high
+USKL_efe5c4e8e92f,skill,USKL_efe5c4e8e92f,Photo Mechanic,Q7187677,https://www.wikidata.org/wiki/Q7187677,Photo Mechanic,,,exact,high
+USKL_12b1a72079cd,skill,USKL_12b1a72079cd,PhpStorm,Q1786113,https://www.wikidata.org/wiki/Q1786113,PhpStorm,,,exact,high
+USKL_130eec2b840c,skill,USKL_130eec2b840c,Play Framework,Q3392101,https://www.wikidata.org/wiki/Q3392101,Play Framework,,,exact,high
+USKL_924e9ff67ac9,skill,USKL_924e9ff67ac9,Plesk,Q2099390,https://www.wikidata.org/wiki/Q2099390,Plesk,,,exact,high
+USKL_0f9fbcf285d0,skill,USKL_0f9fbcf285d0,Plone,Q924422,https://www.wikidata.org/wiki/Q924422,Plone,,,exact,high
+USKL_50c29813fa9c,skill,USKL_50c29813fa9c,Pocket PC,Q3392961,https://www.wikidata.org/wiki/Q3392961,Pocket PC,,,exact,high
+USKL_70050988677b,skill,USKL_70050988677b,Polyspace,Q7226954,https://www.wikidata.org/wiki/Q7226954,Polyspace,,,exact,high
+USKL_c0760e30d8c4,skill,USKL_c0760e30d8c4,Portlet,Q848460,https://www.wikidata.org/wiki/Q848460,Portlet,,,exact,high
+USKL_f65e1c44149b,skill,USKL_f65e1c44149b,PostCSS,Q27145544,https://www.wikidata.org/wiki/Q27145544,PostCSS,,,exact,high
+USKL_47841fdfa2a2,skill,USKL_47841fdfa2a2,PostGIS,Q1569955,https://www.wikidata.org/wiki/Q1569955,PostGIS,,,exact,high
+USKL_288d72232430,skill,USKL_288d72232430,Postfix,Q1121334,https://www.wikidata.org/wiki/Q1121334,Postfix,,,exact,high
+USKL_0b322a41714b,skill,USKL_0b322a41714b,PowerVM,Q3400898,https://www.wikidata.org/wiki/Q3400898,PowerVM,,,exact,high
+USKL_4210847438f7,skill,USKL_4210847438f7,Preboot Execution Environment,Q105865631,https://www.wikidata.org/wiki/Q105865631,Preboot Execution Environment,,,exact,high
+USKL_fa0ad3d760c7,skill,USKL_fa0ad3d760c7,Predix,Q25345904,https://www.wikidata.org/wiki/Q25345904,Predix,,,exact,high
+USKL_1d0922b7ef29,skill,USKL_1d0922b7ef29,Prism,Q424426,https://www.wikidata.org/wiki/Q424426,Prism,,,exact,high
+USKL_9c29a76aac7c,skill,USKL_9c29a76aac7c,Pro*C,Q2111340,https://www.wikidata.org/wiki/Q2111340,Pro*C,,,exact,high
+USKL_c490ad50e6a9,skill,USKL_c490ad50e6a9,ProFTPD,Q2111436,https://www.wikidata.org/wiki/Q2111436,ProFTPD,,,exact,high
+USKL_e931d8917028,skill,USKL_e931d8917028,Protocol Buffers,Q1645574,https://www.wikidata.org/wiki/Q1645574,Protocol Buffers,,,exact,high
+USKL_8abeea33be8b,skill,USKL_8abeea33be8b,Prototype JavaScript Framework,Q746599,https://www.wikidata.org/wiki/Q746599,Prototype JavaScript Framework,,,exact,high
+USKL_513a7cbaf94a,skill,USKL_513a7cbaf94a,Proxmox,Q108039404,https://www.wikidata.org/wiki/Q108039404,Proxmox,,,exact,high
+USKL_ca14b4289f6d,skill,USKL_ca14b4289f6d,Puppeteer,Q4245777,https://www.wikidata.org/wiki/Q4245777,Puppeteer,,,exact,high
+USKL_55dc421c31b1,skill,USKL_55dc421c31b1,PyCharm,Q1484375,https://www.wikidata.org/wiki/Q1484375,PyCharm,,,exact,high
+USKL_7d30865755de,skill,USKL_7d30865755de,PyQt,Q2382780,https://www.wikidata.org/wiki/Q2382780,PyQt,,,exact+csv_seed,high
+USKL_c1f6b22f1a65,skill,USKL_c1f6b22f1a65,Pylint,Q772889,https://www.wikidata.org/wiki/Q772889,Pylint,,,exact,high
+USKL_06238839a3a5,skill,USKL_06238839a3a5,Qiskit,Q70490607,https://www.wikidata.org/wiki/Q70490607,Qiskit,,,exact,high
+USKL_e24f11e38e44,skill,USKL_e24f11e38e44,Qualys,Q7268802,https://www.wikidata.org/wiki/Q7268802,Qualys,,,exact,high
+USKL_db9d58af5339,skill,USKL_db9d58af5339,Quartz Composer,Q609180,https://www.wikidata.org/wiki/Q609180,Quartz Composer,,,exact,high
+USKL_71c1f80a40b8,skill,USKL_71c1f80a40b8,Query Builder,Q105550739,https://www.wikidata.org/wiki/Q105550739,Wikidata Query Builder,,,alias,medium
+USKL_2b64ae140acf,skill,USKL_2b64ae140acf,RTLinux,Q1928473,https://www.wikidata.org/wiki/Q1928473,RTLinux,,,exact,high
+USKL_ec74bad1a871,skill,USKL_ec74bad1a871,Radware,Q2907743,https://www.wikidata.org/wiki/Q2907743,Radware,,,exact,high
+USKL_b4d0af3b2c47,skill,USKL_b4d0af3b2c47,Rational Rhapsody,Q1977027,https://www.wikidata.org/wiki/Q1977027,Rational Rhapsody,,,exact,high
+USKL_6d9597610caa,skill,USKL_6d9597610caa,RavenDB,Q97280779,https://www.wikidata.org/wiki/Q97280779,RavenDB,,,exact,high
+USKL_ede6702aaf97,skill,USKL_ede6702aaf97,React.js,Q19399674,https://www.wikidata.org/wiki/Q19399674,React,,,exact+csv_seed,high
+USKL_5d92e7bf1ace,skill,USKL_5d92e7bf1ace,Rebase,Q12834262,https://www.wikidata.org/wiki/Q12834262,Rebase,,,exact,high
+USKL_f0a2dc68e6f8,skill,USKL_f0a2dc68e6f8,Recaptcha,Q188054,https://www.wikidata.org/wiki/Q188054,reCAPTCHA,,,alias,medium
+USKL_30c71dc40d81,skill,USKL_30c71dc40d81,Relation Extraction,Q7310755,https://www.wikidata.org/wiki/Q7310755,relationship extraction,,,alias,medium
+USKL_fbd9b9103955,skill,USKL_fbd9b9103955,Remote Application Platform,Q850689,https://www.wikidata.org/wiki/Q850689,Remote Application Platform,,,exact,high
+USKL_a00232f34ab7,skill,USKL_a00232f34ab7,Remote File Sharing,Q7312106,https://www.wikidata.org/wiki/Q7312106,Remote File Sharing,,,exact,high
+USKL_1d98c440c99d,skill,USKL_1d98c440c99d,RemoteView,Q12594368,https://www.wikidata.org/wiki/Q12594368,RemoteView,,,exact,high
+USKL_24447224919d,skill,USKL_24447224919d,Resource Monitor,Q7315809,https://www.wikidata.org/wiki/Q7315809,Resource Monitor,,,exact,high
+USKL_50f4f1cadddb,skill,USKL_50f4f1cadddb,Restlet,Q7316175,https://www.wikidata.org/wiki/Q7316175,Restlet,,,exact,high
+USKL_4e92b911cea8,skill,USKL_4e92b911cea8,RethinkDB,Q20890659,https://www.wikidata.org/wiki/Q20890659,RethinkDB,,,exact,high
+USKL_ef218d421e89,skill,USKL_ef218d421e89,Riak,Q2328712,https://www.wikidata.org/wiki/Q2328712,Riak,,,exact,high
+USKL_372c46594efb,skill,USKL_372c46594efb,RichFaces,Q677888,https://www.wikidata.org/wiki/Q677888,RichFaces,,,exact,high
+USKL_9cc57fbe7ab6,skill,USKL_9cc57fbe7ab6,Robocopy,Q1932245,https://www.wikidata.org/wiki/Q1932245,Robocopy,,,exact,high
+USKL_f58d6cd22739,skill,USKL_f58d6cd22739,Rocket U2,Q7355146,https://www.wikidata.org/wiki/Q7355146,Rocket U2,,,exact,high
+USKL_0f865de748ae,skill,USKL_0f865de748ae,RocksDB,Q22908356,https://www.wikidata.org/wiki/Q22908356,RocksDB,,,exact,high
+USKL_0ddda44e47c3,skill,USKL_0ddda44e47c3,Rollup,Q114900810,https://www.wikidata.org/wiki/Q114900810,Rollup,,,exact,high
+USKL_c9bcb0d4493d,skill,USKL_c9bcb0d4493d,Rsyslog,Q995115,https://www.wikidata.org/wiki/Q995115,Rsyslog,,,exact,high
+USKL_1d784ee30ac8,skill,USKL_1d784ee30ac8,RubyGems,Q1853420,https://www.wikidata.org/wiki/Q1853420,RubyGems,,,exact,high
+USKL_87c3a15d6a46,skill,USKL_87c3a15d6a46,RubyMine,Q4048590,https://www.wikidata.org/wiki/Q4048590,RubyMine,,,exact,high
+USKL_fda08e4d38d9,skill,USKL_fda08e4d38d9,Rundeck,Q56317793,https://www.wikidata.org/wiki/Q56317793,Rundeck,,,exact,high
+USKL_e40841771ac1,skill,USKL_e40841771ac1,RxJava,Q96277086,https://www.wikidata.org/wiki/Q96277086,RxJava,,,exact,high
+USKL_03f31fb823bc,skill,USKL_03f31fb823bc,SAP HANA,Q951374,https://www.wikidata.org/wiki/Q951374,SAP HANA,,,exact,high
+USKL_b3bbc88eef2c,skill,USKL_b3bbc88eef2c,SAP Solution Manager,Q2204860,https://www.wikidata.org/wiki/Q2204860,SAP Solution Manager,,,exact,high
+USKL_ce7ff668cca7,skill,USKL_ce7ff668cca7,SCons,Q539042,https://www.wikidata.org/wiki/Q539042,SCons,,,exact,high
+USKL_1986e69b01c3,skill,USKL_1986e69b01c3,SMS,Q225866,https://www.wikidata.org/wiki/Q225866,SMS,,,exact,high
+USKL_9def43f7f057,skill,USKL_9def43f7f057,SOCET SET,Q7392006,https://www.wikidata.org/wiki/Q7392006,SOCET SET,,,exact,high
+USKL_dcca4d90c87e,skill,USKL_dcca4d90c87e,SQL Anywhere,Q2247564,https://www.wikidata.org/wiki/Q2247564,SQL Anywhere,,,exact,high
+USKL_fdabe40e9533,skill,USKL_fdabe40e9533,SQL Server Agent,Q7392738,https://www.wikidata.org/wiki/Q7392738,SQL Server Agent,,,exact,high
+USKL_fd8a5b1ca605,skill,USKL_fd8a5b1ca605,SQL Server Compact,Q1814028,https://www.wikidata.org/wiki/Q1814028,SQL Server Compact,,,exact,high
+USKL_ce06ce028b9e,skill,USKL_ce06ce028b9e,SQL Server Express,Q1012765,https://www.wikidata.org/wiki/Q1012765,SQL Server Express,,,exact,high
+USKL_099afa131598,skill,USKL_099afa131598,SQL*Plus,Q2575010,https://www.wikidata.org/wiki/Q2575010,SQL*Plus,,,exact,high
+USKL_a44f900e3b7c,skill,USKL_a44f900e3b7c,SQLAlchemy,Q1092514,https://www.wikidata.org/wiki/Q1092514,SQLAlchemy,,,exact,high
+USKL_0e232a58e345,skill,USKL_0e232a58e345,Satellite Communications,Q96333463,https://www.wikidata.org/wiki/Q96333463,Satellite Communications,,,exact,high
+USKL_f980878405a4,skill,USKL_f980878405a4,Scapy,Q2645567,https://www.wikidata.org/wiki/Q2645567,Scapy,,,exact,high
+USKL_1bbde2907e36,skill,USKL_1bbde2907e36,Schematron,Q1780096,https://www.wikidata.org/wiki/Q1780096,Schematron,,,exact,high
+USKL_3937250a2ae3,skill,USKL_3937250a2ae3,Scientific Linux,Q839735,https://www.wikidata.org/wiki/Q839735,Scientific Linux,,,exact,high
+USKL_b2aad1fa51b9,skill,USKL_b2aad1fa51b9,Scrum,Q395820,https://www.wikidata.org/wiki/Q395820,Scrum,,,exact,high
+USKL_99cee0562533,skill,USKL_99cee0562533,SecureCRT,Q7444822,https://www.wikidata.org/wiki/Q7444822,SecureCRT,,,exact,high
+USKL_5739afa7459c,skill,USKL_5739afa7459c,Security Administration,Q7444937,https://www.wikidata.org/wiki/Q7444937,Security Administration,,,exact,high
+USKL_afed410de2bc,skill,USKL_afed410de2bc,Semantic UI,Q96276859,https://www.wikidata.org/wiki/Q96276859,Semantic UI,,,exact,high
+USKL_8e13b067b9bb,skill,USKL_8e13b067b9bb,Sencha Touch,Q886130,https://www.wikidata.org/wiki/Q886130,Sencha Touch,,,exact,high
+USKL_dfa7069b685e,skill,USKL_dfa7069b685e,Sensu,Q7451149,https://www.wikidata.org/wiki/Q7451149,Sensu,,,exact,high
+USKL_ce0715880cd1,skill,USKL_ce0715880cd1,Server Message Block,Q857655,https://www.wikidata.org/wiki/Q857655,Server Message Block,,,exact,high
+USKL_1b3a815e993b,skill,USKL_1b3a815e993b,Session Description Protocol,Q105852734,https://www.wikidata.org/wiki/Q105852734,Session Description Protocol,,,exact,high
+USKL_614f1ef3432b,skill,USKL_614f1ef3432b,Sidekiq,Q51002502,https://www.wikidata.org/wiki/Q51002502,Sidekiq,,,exact,high
+USKL_859ab77d4bbf,skill,USKL_859ab77d4bbf,SignalR,Q7512622,https://www.wikidata.org/wiki/Q7512622,SignalR,,,exact,high
+USKL_cbc0506b1365,skill,USKL_cbc0506b1365,Silk Performer,Q7515184,https://www.wikidata.org/wiki/Q7515184,Silk Performer,,,exact,high
+USKL_8f4d497b29de,skill,USKL_8f4d497b29de,Siteminder,Q109536250,https://www.wikidata.org/wiki/Q109536250,Siteminder,,,exact,high
+USKL_e2cd426cd27f,skill,USKL_e2cd426cd27f,Skybox,Q7537605,https://www.wikidata.org/wiki/Q7537605,Skybox,,,exact,high
+USKL_14be97350e0e,skill,USKL_14be97350e0e,Smarty,Q726196,https://www.wikidata.org/wiki/Q726196,Smarty,,,exact+csv_seed,high
+USKL_d25a56f665c2,skill,USKL_d25a56f665c2,SnapLogic,Q7547240,https://www.wikidata.org/wiki/Q7547240,SnapLogic,,,exact,high
+USKL_37edda01b776,skill,USKL_37edda01b776,SoapUI,Q2296314,https://www.wikidata.org/wiki/Q2296314,SoapUI,,,exact,high
+USKL_34ab3758e656,skill,USKL_34ab3758e656,Social Engineering,Q299257,https://www.wikidata.org/wiki/Q299257,Social engineering,,,alias,medium
+USKL_4d52cfebb136,skill,USKL_4d52cfebb136,Software Updater,Q3347080,https://www.wikidata.org/wiki/Q3347080,Software Updater,,,exact,high
+USKL_8d3046f1429d,skill,USKL_8d3046f1429d,Solaris Containers,Q1128477,https://www.wikidata.org/wiki/Q1128477,Solaris Containers,,,exact,high
+USKL_99c7dec642ab,skill,USKL_99c7dec642ab,Solaris Trusted Extensions,Q27865945,https://www.wikidata.org/wiki/Q27865945,Solaris Trusted Extensions,,,exact,high
+USKL_f00d69ffc22e,skill,USKL_f00d69ffc22e,Solution Deployment Descriptor,Q7558973,https://www.wikidata.org/wiki/Q7558973,Solution Deployment Descriptor,,,exact,high
+USKL_816949cbb6cd,skill,USKL_816949cbb6cd,Spring Batch,Q7580383,https://www.wikidata.org/wiki/Q7580383,Spring Batch,,,exact,high
+USKL_b151f0804046,skill,USKL_b151f0804046,Spring Security,Q4049968,https://www.wikidata.org/wiki/Q4049968,Spring Security,,,exact,high
+USKL_f8ce6d046a47,skill,USKL_f8ce6d046a47,SpriteKit,Q120359479,https://www.wikidata.org/wiki/Q120359479,SpriteKit,,,exact,high
+USKL_b453d598a877,skill,USKL_b453d598a877,Sqoop,Q773220,https://www.wikidata.org/wiki/Q773220,Sqoop,,,exact,high
+USKL_37543665be69,skill,USKL_37543665be69,Squarespace,Q7582097,https://www.wikidata.org/wiki/Q7582097,Squarespace,,,exact,high
+USKL_a719d74b81fb,skill,USKL_a719d74b81fb,Stack Overflow,Q549037,https://www.wikidata.org/wiki/Q549037,Stack Overflow,,,exact,high
+USKL_436c232a02d1,skill,USKL_436c232a02d1,Stackdriver,Q17088889,https://www.wikidata.org/wiki/Q17088889,Google Cloud's operations suite,,,alias,medium
+USKL_6b6033f11967,skill,USKL_6b6033f11967,StarTeam,Q7600567,https://www.wikidata.org/wiki/Q7600567,StarTeam,,,exact,high
+USKL_40b700e959d7,skill,USKL_40b700e959d7,Stratus VOS,Q7622298,https://www.wikidata.org/wiki/Q7622298,Stratus VOS,,,exact,high
+USKL_e63333620991,skill,USKL_e63333620991,StyleCop,Q7629378,https://www.wikidata.org/wiki/Q7629378,StyleCop,,,exact,high
+USKL_af444441971b,skill,USKL_af444441971b,Sudo,Q5999725,https://www.wikidata.org/wiki/Q5999725,Sudo,,,exact,high
+USKL_23c8701546ec,skill,USKL_23c8701546ec,SunOS,Q1208460,https://www.wikidata.org/wiki/Q1208460,SunOS,,,exact,high
+USKL_71d8057198ec,skill,USKL_71d8057198ec,Svelte,Q16863097,https://www.wikidata.org/wiki/Q16863097,Svelte,,,exact+csv_seed,high
+USKL_7131dee1b2c4,skill,USKL_7131dee1b2c4,Symbian,Q483318,https://www.wikidata.org/wiki/Q483318,Symbian,,,exact,high
+USKL_c006ee5df7f3,skill,USKL_c006ee5df7f3,Symfony,Q1322933,https://www.wikidata.org/wiki/Q1322933,Symfony,,,exact+csv_seed,high
+USKL_dfcfdb9dcfc2,skill,USKL_dfcfdb9dcfc2,Sympy,Q5971368,https://www.wikidata.org/wiki/Q5971368,SymPy,,,alias,medium
+USKL_1462aef02156,skill,USKL_1462aef02156,System Configuration,Q15947664,https://www.wikidata.org/wiki/Q15947664,System Configuration,,,exact,high
+USKL_d3bebbdf0f47,skill,USKL_d3bebbdf0f47,SystemC,Q1753563,https://www.wikidata.org/wiki/Q1753563,SystemC,,,exact,high
+USKL_ff5418b358d5,skill,USKL_ff5418b358d5,Systems Engineering,Q15758606,https://www.wikidata.org/wiki/Q15758606,Systems Engineering,,,exact,high
+USKL_3f994f478a7b,skill,USKL_3f994f478a7b,Systrace,Q7663906,https://www.wikidata.org/wiki/Q7663906,Systrace,,,exact,high
+USKL_ad6d60cbd516,skill,USKL_ad6d60cbd516,TCP Wrapper,Q3049304,https://www.wikidata.org/wiki/Q3049304,TCP Wrapper,,,exact,high
+USKL_38671a0aa44c,skill,USKL_38671a0aa44c,TIBCO Hawk,Q7670352,https://www.wikidata.org/wiki/Q7670352,TIBCO Hawk,,,exact,high
+USKL_009dfefd147a,skill,USKL_009dfefd147a,TYPO3,Q618512,https://www.wikidata.org/wiki/Q618512,TYPO3,,,exact,high
+USKL_75761ce95885,skill,USKL_75761ce95885,TargetLink,Q2394119,https://www.wikidata.org/wiki/Q2394119,TargetLink,,,exact,high
+USKL_09dd1dfac734,skill,USKL_09dd1dfac734,TeamForge,Q2379026,https://www.wikidata.org/wiki/Q2379026,TeamForge,,,exact,high
+USKL_29d58ea8fd6e,skill,USKL_29d58ea8fd6e,TeamCity,Q4050768,https://www.wikidata.org/wiki/Q4050768,TeamCity,,,exact,high
+USKL_c666baed955d,skill,USKL_c666baed955d,Telecommunications,Q96334266,https://www.wikidata.org/wiki/Q96334266,Telecommunications,,,exact,high
+USKL_bf994c19d98a,skill,USKL_bf994c19d98a,Telegraf,Q119859727,https://www.wikidata.org/wiki/Q119859727,Telegraf,,,exact,high
+USKL_021897ea03e6,skill,USKL_021897ea03e6,Telephony,Q96334271,https://www.wikidata.org/wiki/Q96334271,Telephony,,,exact,high
+USKL_9961e5aa80c1,skill,USKL_9961e5aa80c1,Telnet,Q3517414,https://www.wikidata.org/wiki/Q3517414,Telnet,,,exact,high
+USKL_7547956989f3,skill,USKL_7547956989f3,Terraform,Q50649493,https://www.wikidata.org/wiki/Q50649493,Terraform,,,exact,high
+USKL_14ab6e470134,skill,USKL_14ab6e470134,TestFlight,Q21041366,https://www.wikidata.org/wiki/Q21041366,TestFlight,,,exact,high
+USKL_2795f4673863,skill,USKL_2795f4673863,ThreadX,Q7797161,https://www.wikidata.org/wiki/Q7797161,ThreadX,,,exact,high
+USKL_11359e9f08c0,skill,USKL_11359e9f08c0,Three.js,Q3525922,https://www.wikidata.org/wiki/Q3525922,Three.js,,,exact,high
+USKL_853e15df954c,skill,USKL_853e15df954c,Thymeleaf,Q3526177,https://www.wikidata.org/wiki/Q3526177,Thymeleaf,,,exact,high
+USKL_c390d35814bb,skill,USKL_c390d35814bb,Tizen,Q609306,https://www.wikidata.org/wiki/Q609306,Tizen,,,exact,high
+USKL_cf7a91b87fba,skill,USKL_cf7a91b87fba,TopLink,Q339461,https://www.wikidata.org/wiki/Q339461,TopLink,,,exact,high
+USKL_8c90b1cf8f22,skill,USKL_8c90b1cf8f22,TortoiseSVN,Q1062467,https://www.wikidata.org/wiki/Q1062467,TortoiseSVN,,,exact,high
+USKL_c20c7da71f07,skill,USKL_c20c7da71f07,Traefik,Q96332968,https://www.wikidata.org/wiki/Q96332968,Traefik Proxy,,,alias,medium
+USKL_af5e8d25121e,skill,USKL_af5e8d25121e,Travis CI,Q73134,https://www.wikidata.org/wiki/Q73134,Travis CI,,,exact,high
+USKL_798c5036643d,skill,USKL_798c5036643d,Tridion,Q110262564,https://www.wikidata.org/wiki/Q110262564,Tridion,,,exact,high
+USKL_5d269dfa4af3,skill,USKL_5d269dfa4af3,Triple DES,Q134983,https://www.wikidata.org/wiki/Q134983,Triple DES,,,exact,high
+USKL_ba86cdfdb518,skill,USKL_ba86cdfdb518,Twilio,Q7858039,https://www.wikidata.org/wiki/Q7858039,Twilio,,,exact,high
+USKL_ed954f73e9a3,skill,USKL_ed954f73e9a3,Typesafe,Q16878480,https://www.wikidata.org/wiki/Q16878480,Typesafe,,,exact,high
+USKL_b43ff4d41d44,skill,USKL_b43ff4d41d44,USB,Q223594,https://www.wikidata.org/wiki/Q223594,USB,,,exact,high
+USKL_f9910faa9a28,skill,USKL_f9910faa9a28,UIKit,Q117480832,https://www.wikidata.org/wiki/Q117480832,UIKit,,,exact,high
+USKL_8c650731be85,skill,USKL_8c650731be85,Umbraco,Q285761,https://www.wikidata.org/wiki/Q285761,Umbraco,,,exact,high
+USKL_dc3a043bdb2e,skill,USKL_dc3a043bdb2e,Underscore.js,Q4052375,https://www.wikidata.org/wiki/Q4052375,Underscore.js,,,exact,high
+USKL_fd23a1c111d3,skill,USKL_fd23a1c111d3,Unisys DMSII,Q17027613,https://www.wikidata.org/wiki/Q17027613,Unisys DMSII,,,exact,high
+USKL_89a49168127c,skill,USKL_89a49168127c,Unobtrusive JavaScript,Q2298909,https://www.wikidata.org/wiki/Q2298909,Unobtrusive JavaScript,,,exact,high
+USKL_891dda65c5c1,skill,USKL_891dda65c5c1,VMware Fusion,Q935100,https://www.wikidata.org/wiki/Q935100,VMware Fusion,,,exact,high
+USKL_b1b32ff0bc22,skill,USKL_b1b32ff0bc22,VMware Horizon View,Q4052548,https://www.wikidata.org/wiki/Q4052548,Omnissa Horizon,,,alias,medium
+USKL_18e9cf67c66c,skill,USKL_18e9cf67c66c,VMware Infrastructure,Q7907330,https://www.wikidata.org/wiki/Q7907330,VMware Infrastructure,,,exact,high
+USKL_8ca4c70d3979,skill,USKL_8ca4c70d3979,VMware Player,Q742347,https://www.wikidata.org/wiki/Q742347,VMware Workstation Player,,,alias,medium
+USKL_8fe69abfd11b,skill,USKL_8fe69abfd11b,VMware ThinApp,Q2036703,https://www.wikidata.org/wiki/Q2036703,VMware ThinApp,,,exact,high
+USKL_011b3d0a10fe,skill,USKL_011b3d0a10fe,VMware VMFS,Q7907332,https://www.wikidata.org/wiki/Q7907332,VMware VMFS,,,exact,high
+USKL_b7b3a2aa2dcd,skill,USKL_b7b3a2aa2dcd,Vaadin,Q1400683,https://www.wikidata.org/wiki/Q1400683,Vaadin,,,exact,high
+USKL_e4317fa47c62,skill,USKL_e4317fa47c62,Valgrind,Q924041,https://www.wikidata.org/wiki/Q924041,Valgrind,,,exact,high
+USKL_b8d7e7de67e7,skill,USKL_b8d7e7de67e7,Vector Markup Language,Q1888930,https://www.wikidata.org/wiki/Q1888930,Vector Markup Language,,,exact,high
+USKL_ed1f9ce31341,skill,USKL_ed1f9ce31341,Verisign,Q734338,https://www.wikidata.org/wiki/Q734338,Verisign,,,exact,high
+USKL_9af3de6e0303,skill,USKL_9af3de6e0303,Veritas Software,Q498397,https://www.wikidata.org/wiki/Q498397,Veritas Software,,,exact,high
+USKL_27f8c52692a7,skill,USKL_27f8c52692a7,Vert.x,Q7922736,https://www.wikidata.org/wiki/Q7922736,Vert.x,,,exact,high
+USKL_49ed189a25a5,skill,USKL_49ed189a25a5,Vim,Q181174,https://www.wikidata.org/wiki/Q181174,Vim,,,exact,high
+USKL_f593556dd176,skill,USKL_f593556dd176,Virtual Machine Manager,Q3266778,https://www.wikidata.org/wiki/Q3266778,Virtual Machine Manager,,,exact,high
+USKL_ed78e0993202,skill,USKL_ed78e0993202,VirtualBox,Q11393,https://www.wikidata.org/wiki/Q11393,VirtualBox,,,exact,high
+USKL_48924035ba42,skill,USKL_48924035ba42,Virtuozzo,Q1781915,https://www.wikidata.org/wiki/Q1781915,Virtuozzo,,,exact,high
+USKL_e8ce18ad917a,skill,USKL_e8ce18ad917a,Visibroker,Q7936097,https://www.wikidata.org/wiki/Q7936097,Visibroker,,,exact,high
+USKL_4b44640e995f,skill,USKL_4b44640e995f,Visual Objects,Q1309721,https://www.wikidata.org/wiki/Q1309721,Visual Objects,,,exact,high
+USKL_c68b3c56f8e2,skill,USKL_c68b3c56f8e2,VisualVM,Q7936520,https://www.wikidata.org/wiki/Q7936520,VisualVM,,,exact,high
+USKL_5efc89af46ec,skill,USKL_5efc89af46ec,Vowpal Wabbit,Q7942323,https://www.wikidata.org/wiki/Q7942323,Vowpal Wabbit,,,exact,high
+USKL_0ebf49e09196,skill,USKL_0ebf49e09196,Vuetify,Q112943923,https://www.wikidata.org/wiki/Q112943923,Vuetify,,,exact,high
+USKL_746e9da885eb,skill,USKL_746e9da885eb,Vuex,Q61940611,https://www.wikidata.org/wiki/Q61940611,Vuex,,,exact,high
+USKL_a466c5a01da6,skill,USKL_a466c5a01da6,Vuforia,Q7943341,https://www.wikidata.org/wiki/Q7943341,Vuforia Augmented Reality SDK,,,alias,medium
+USKL_96f73f2b7aa9,skill,USKL_96f73f2b7aa9,VxWorks,Q757165,https://www.wikidata.org/wiki/Q757165,VxWorks,,,exact,high
+USKL_aafceefe59a5,skill,USKL_aafceefe59a5,WYSIWYG,Q7958158,https://www.wikidata.org/wiki/Q7958158,WYSIWYG,,,exact,high
+USKL_f21eb322fdc1,skill,USKL_f21eb322fdc1,Wear OS,Q15961745,https://www.wikidata.org/wiki/Q15961745,Wear OS,,,exact,high
+USKL_c3f456f3e4ae,skill,USKL_c3f456f3e4ae,Wearables,Q114397135,https://www.wikidata.org/wiki/Q114397135,Wearables,,,exact,high
+USKL_0f5f15f2a396,skill,USKL_0f5f15f2a396,Web Applications,Q110262472,https://www.wikidata.org/wiki/Q110262472,Web Applications,,,exact,high
+USKL_c504f3d979c2,skill,USKL_c504f3d979c2,Web Design,Q28777982,https://www.wikidata.org/wiki/Q28777982,Category:Link extensions,,,alias,medium
+USKL_e964644f2acb,skill,USKL_e964644f2acb,Web Dynpro,Q1804792,https://www.wikidata.org/wiki/Q1804792,Web Dynpro,,,exact,high
+USKL_05e586448400,skill,USKL_05e586448400,Web Language,Q1119743,https://www.wikidata.org/wiki/Q1119743,Web Language,,,exact,high
+USKL_afe141170852,skill,USKL_afe141170852,WebAssembly,Q20155677,https://www.wikidata.org/wiki/Q20155677,WebAssembly,,,exact+csv_seed,high
+USKL_f6d5433e30f5,skill,USKL_f6d5433e30f5,WebConfig,Q7978440,https://www.wikidata.org/wiki/Q7978440,WebConfig,,,exact,high
+USKL_38b56fca0cd9,skill,USKL_38b56fca0cd9,WebGL,Q375913,https://www.wikidata.org/wiki/Q375913,WebGL,,,exact,high
+USKL_914dfc8b1bea,skill,USKL_914dfc8b1bea,WebKit,Q654034,https://www.wikidata.org/wiki/Q654034,WebKit,,,exact,high
+USKL_3563e073cbbd,skill,USKL_3563e073cbbd,WebOS,Q305873,https://www.wikidata.org/wiki/Q305873,webOS,,,alias,medium
+USKL_b90651726a46,skill,USKL_b90651726a46,WebStorm,Q4053021,https://www.wikidata.org/wiki/Q4053021,WebStorm,,,exact,high
+USKL_e20aded8b007,skill,USKL_e20aded8b007,Webmin,Q576322,https://www.wikidata.org/wiki/Q576322,Webmin,,,exact,high
+USKL_7223b6528642,skill,USKL_7223b6528642,Weebly,Q2705110,https://www.wikidata.org/wiki/Q2705110,Weebly,,,exact,high
+USKL_23c221b4c2fa,skill,USKL_23c221b4c2fa,Wget,Q535461,https://www.wikidata.org/wiki/Q535461,Wget,,,exact,high
+USKL_3e238ceb4cfa,skill,USKL_3e238ceb4cfa,Wi-Fi Protected Access,Q272165,https://www.wikidata.org/wiki/Q272165,Wi-Fi Protected Access,,,exact,high
+USKL_37678393355a,skill,USKL_37678393355a,Wikimedia,Q2492014,https://www.wikidata.org/wiki/Q2492014,Wikimedia,,,exact,high
+USKL_20311a197081,skill,USKL_20311a197081,WinJS,Q16689197,https://www.wikidata.org/wiki/Q16689197,WinJS,,,exact,high
+USKL_c3d8609ba9ee,skill,USKL_c3d8609ba9ee,WinZip,Q688317,https://www.wikidata.org/wiki/Q688317,WinZip,,,exact,high
+USKL_c8acff087510,skill,USKL_c8acff087510,Winbatch,Q8023687,https://www.wikidata.org/wiki/Q8023687,Winbatch,,,exact,high
+USKL_1648a8493ab0,skill,USKL_1648a8493ab0,Windows App Studio,Q17089974,https://www.wikidata.org/wiki/Q17089974,Windows App Studio,,,exact,high
+USKL_bd37ff45694f,skill,USKL_bd37ff45694f,Windows Communication Foundation,Q261595,https://www.wikidata.org/wiki/Q261595,Windows Communication Foundation,,,exact,high
+USKL_c18fda1e83e8,skill,USKL_c18fda1e83e8,Windows Console,Q2994643,https://www.wikidata.org/wiki/Q2994643,Windows Console,,,exact,high
+USKL_7dd7c4bb6b18,skill,USKL_7dd7c4bb6b18,Windows Defender,Q243269,https://www.wikidata.org/wiki/Q243269,Microsoft Defender Antivirus,,,alias,medium
+USKL_f44692ddc6b0,skill,USKL_f44692ddc6b0,Windows Deployment Services,Q639977,https://www.wikidata.org/wiki/Q639977,Windows Deployment Services,,,exact,high
+USKL_fcf56a1dc459,skill,USKL_fcf56a1dc459,Windows Driver Kit,Q1062428,https://www.wikidata.org/wiki/Q1062428,Windows Driver Kit,,,exact,high
+USKL_59f1431ad292,skill,USKL_59f1431ad292,Windows Embedded,Q1314632,https://www.wikidata.org/wiki/Q1314632,Windows IoT,,,alias,medium
+USKL_81b7c9c5cce7,skill,USKL_81b7c9c5cce7,Windows Firewall,Q1068438,https://www.wikidata.org/wiki/Q1068438,Windows Firewall,,,exact,high
+USKL_3742d2a91258,skill,USKL_3742d2a91258,Windows Installer,Q181233,https://www.wikidata.org/wiki/Q181233,Windows Installer,,,exact,high
+USKL_75508285b215,skill,USKL_75508285b215,Windows Mail,Q736141,https://www.wikidata.org/wiki/Q736141,Windows Mail,,,exact,high
+USKL_2aaa12926936,skill,USKL_2aaa12926936,Windows Management Instrumentation,Q1423114,https://www.wikidata.org/wiki/Q1423114,Windows Management Instrumentation,,,exact,high
+USKL_ed306bd645ac,skill,USKL_ed306bd645ac,Windows Media,Q1189357,https://www.wikidata.org/wiki/Q1189357,Windows Media,,,exact,high
+USKL_d05c2ecb21ca,skill,USKL_d05c2ecb21ca,Windows Mobile,Q21207,https://www.wikidata.org/wiki/Q21207,Windows Mobile,,,exact,high
+USKL_fa2a2256fb06,skill,USKL_fa2a2256fb06,Windows Phone,Q110262548,https://www.wikidata.org/wiki/Q110262548,Windows Phone,,,exact,high
+USKL_a610a6224aba,skill,USKL_a610a6224aba,Windows Presentation Foundation,Q239084,https://www.wikidata.org/wiki/Q239084,Windows Presentation Foundation,,,exact,high
+USKL_285acb716cde,skill,USKL_285acb716cde,Windows Registry,Q463244,https://www.wikidata.org/wiki/Q463244,Windows Registry,,,exact,high
+USKL_8a5c63851e8b,skill,USKL_8a5c63851e8b,Windows Script Host,Q1152468,https://www.wikidata.org/wiki/Q1152468,Windows Script Host,,,exact,high
+USKL_2bdfd701e066,skill,USKL_2bdfd701e066,Windows Search,Q1194815,https://www.wikidata.org/wiki/Q1194815,Windows Search,,,exact,high
+USKL_e7388f99b0da,skill,USKL_e7388f99b0da,Windows Server Virtualization,Q11278,https://www.wikidata.org/wiki/Q11278,Q11278,,,alias,medium
+USKL_c4443559d9dc,skill,USKL_c4443559d9dc,Windows USER,Q8024460,https://www.wikidata.org/wiki/Q8024460,Windows USER,,,exact,high
+USKL_d800ec548e2e,skill,USKL_d800ec548e2e,Windows Virtual PC,Q748417,https://www.wikidata.org/wiki/Q748417,Windows Virtual PC,,,exact,high
+USKL_6f51d5503149,skill,USKL_6f51d5503149,Windows Workflow Foundation,Q1154450,https://www.wikidata.org/wiki/Q1154450,Windows Workflow Foundation,,,exact,high
+USKL_d2bdf9a97377,skill,USKL_d2bdf9a97377,Wix,Q2586995,https://www.wikidata.org/wiki/Q2586995,Wix,,,exact,high
+USKL_d46be82d28f4,skill,USKL_d46be82d28f4,Workgroup Manager,Q4020840,https://www.wikidata.org/wiki/Q4020840,Workgroup Manager,,,exact,high
+USKL_4e32f985b80c,skill,USKL_4e32f985b80c,Wufoo,Q126084774,https://www.wikidata.org/wiki/Q126084774,Wufoo,,,exact,high
+USKL_3f08c7d979e5,skill,USKL_3f08c7d979e5,WxWidgets,Q284982,https://www.wikidata.org/wiki/Q284982,wxWidgets,,,alias,medium
+USKL_12b89ad06f50,skill,USKL_12b89ad06f50,XDoclet,Q1623494,https://www.wikidata.org/wiki/Q1623494,XDoclet,,,exact,high
+USKL_1e921589d69e,skill,USKL_1e921589d69e,XML Metadata Interchange,Q548264,https://www.wikidata.org/wiki/Q548264,XML Metadata Interchange,,,exact,high
+USKL_284d1c01f103,skill,USKL_284d1c01f103,XML Schema,Q16342,https://www.wikidata.org/wiki/Q16342,XML Schema,,,exact,high
+USKL_d766f587ca53,skill,USKL_d766f587ca53,XML-RPC,Q1046238,https://www.wikidata.org/wiki/Q1046238,XML-RPC,,,exact,high
+USKL_6f04a22f6341,skill,USKL_6f04a22f6341,XMLBeans,Q617176,https://www.wikidata.org/wiki/Q617176,XMLBeans,,,exact,high
+USKL_7312f1191603,skill,USKL_7312f1191603,XMLSpy,Q444542,https://www.wikidata.org/wiki/Q444542,XMLSpy,,,exact,high
+USKL_317ac874e30c,skill,USKL_317ac874e30c,XMetaL,Q8042356,https://www.wikidata.org/wiki/Q8042356,XMetaL,,,exact,high
+USKL_73295e2e7d8d,skill,USKL_73295e2e7d8d,XPages,Q8042430,https://www.wikidata.org/wiki/Q8042430,XPages,,,exact,high
+USKL_e71b05eb8bc7,skill,USKL_e71b05eb8bc7,XPath,Q16340,https://www.wikidata.org/wiki/Q16340,XPath,,,exact,high
+USKL_31faffabfaa2,skill,USKL_31faffabfaa2,XStream,Q2746937,https://www.wikidata.org/wiki/Q2746937,XStream,,,exact,high
+USKL_0ee2d1367ada,skill,USKL_0ee2d1367ada,Xalan,Q773240,https://www.wikidata.org/wiki/Q773240,Apache Xalan,,,alias,medium
+USKL_edfb7377511b,skill,USKL_edfb7377511b,Xdebug,Q2588925,https://www.wikidata.org/wiki/Q2588925,Xdebug,,,exact,high
+USKL_39bcfe4e9f02,skill,USKL_39bcfe4e9f02,Xeon Phi,Q130272736,https://www.wikidata.org/wiki/Q130272736,Xeon Phi,,,exact,high
+USKL_c38947fc7c6d,skill,USKL_c38947fc7c6d,Xerces,Q8043779,https://www.wikidata.org/wiki/Q8043779,Xerces,,,exact,high
+USKL_28d051746115,skill,USKL_28d051746115,XtraDB,Q4021858,https://www.wikidata.org/wiki/Q4021858,XtraDB,,,exact,high
+USKL_3632824b758e,skill,USKL_3632824b758e,YAML,Q281876,https://www.wikidata.org/wiki/Q281876,YAML,,,exact,high
+USKL_55bace31712a,skill,USKL_55bace31712a,Yandex,Q5281,https://www.wikidata.org/wiki/Q5281,Yandex,,,exact,high
+USKL_d6d915cfd004,skill,USKL_d6d915cfd004,Yeoman Generator,Q8052438,https://www.wikidata.org/wiki/Q8052438,yeoman,,,alias,medium
+USKL_d6db52ce99e0,skill,USKL_d6db52ce99e0,Yocto Project,Q152242,https://www.wikidata.org/wiki/Q152242,Yocto Project,,,exact,high
+USKL_09bf192b6e5e,skill,USKL_09bf192b6e5e,Zenoss,Q189801,https://www.wikidata.org/wiki/Q189801,Zenoss,,,exact,high
+USKL_e709ad4b0674,skill,USKL_e709ad4b0674,Zepto,Q130301706,https://www.wikidata.org/wiki/Q130301706,Zepto,,,exact,high
+USKL_61f4c50c8a90,skill,USKL_61f4c50c8a90,Zuora,Q8075320,https://www.wikidata.org/wiki/Q8075320,Zuora,,,exact,high
+USKL_c6a064d92bff,skill,USKL_c6a064d92bff,cURL,Q286306,https://www.wikidata.org/wiki/Q286306,curl,,,alias,medium
+USKL_1009ed30cedc,skill,USKL_1009ed30cedc,gRPC,Q26356541,https://www.wikidata.org/wiki/Q26356541,gRPC,,,exact,high
+USKL_3efbb86f1d6f,skill,USKL_3efbb86f1d6f,macOS Mojave,Q54807273,https://www.wikidata.org/wiki/Q54807273,macOS Mojave,,,exact,high
+USKL_1c1a920fda7b,skill,USKL_1c1a920fda7b,macOS Sierra,Q22095865,https://www.wikidata.org/wiki/Q22095865,macOS Sierra,,,exact,high
+USKL_e294b9645e9a,skill,USKL_e294b9645e9a,mod_perl,Q292390,https://www.wikidata.org/wiki/Q292390,mod_perl,,,exact,high
+USKL_0a0557eab655,skill,USKL_0a0557eab655,phpBB,Q14270,https://www.wikidata.org/wiki/Q14270,phpBB,,,exact,high
+USKL_37ba60270e8d,skill,USKL_37ba60270e8d,tvOS,Q20965967,https://www.wikidata.org/wiki/Q20965967,tvOS,,,exact,high
+USKL_86f0dcb4b4a7,skill,USKL_86f0dcb4b4a7,watchOS,Q18012472,https://www.wikidata.org/wiki/Q18012472,watchOS,,,exact,high
+USKL_b94598d8955d,skill,USKL_b94598d8955d,z/OS,Q283705,https://www.wikidata.org/wiki/Q283705,z/OS,,,exact,high
+USKL_4076c00cc1ef,skill,USKL_4076c00cc1ef,Crystal,Q948360,https://www.wikidata.org/wiki/Q948360,Crystal,,,exact+csv_seed,high
+USKL_f77638294d9b,skill,USKL_f77638294d9b,Nim,Q20080327,https://www.wikidata.org/wiki/Q20080327,Nim,,,exact,high
+USKL_89ad07f3552a,skill,USKL_89ad07f3552a,Zig,Q51885456,https://www.wikidata.org/wiki/Q51885456,Zig,,,exact+csv_seed,high
+USKL_c2ec2b45f0ee,skill,USKL_c2ec2b45f0ee,V,Q27254,https://www.wikidata.org/wiki/Q27254,V,,,exact+csv_seed,high
+USKL_d2445c6e1791,skill,USKL_d2445c6e1791,Shell,Q154950,https://www.wikidata.org/wiki/Q154950,Shell,,,exact+csv_seed,high
+USKL_fc9143f1ee2c,skill,USKL_fc9143f1ee2c,T-SQL,Q1411245,https://www.wikidata.org/wiki/Q1411245,Transact-SQL,,,exact+csv_seed,high
+USKL_e88d1efd09a8,skill,USKL_e88d1efd09a8,Markdown,Q1193600,https://www.wikidata.org/wiki/Q1193600,Markdown,,,exact,high
+USKL_f8060bcd728a,skill,USKL_f8060bcd728a,.NET,Q1178185,https://www.wikidata.org/wiki/Q1178185,.NET,,,exact,high
+USKL_02ea3891cd77,skill,USKL_02ea3891cd77,Meteor,Q227200,https://www.wikidata.org/wiki/Q227200,Meteor,,,exact,high
+USKL_b795e57b9d3a,skill,USKL_b795e57b9d3a,Tailwind CSS,Q102173844,https://www.wikidata.org/wiki/Q102173844,Tailwind CSS,,,exact,high
+USKL_d60172f0900d,skill,USKL_d60172f0900d,Ant Design,Q96255221,https://www.wikidata.org/wiki/Q96255221,Ant Design,,,exact,high
+USKL_f7bc32ebf23b,skill,USKL_f7bc32ebf23b,Chakra UI,Q133980005,https://www.wikidata.org/wiki/Q133980005,Chakra UI,,,exact,high
+USKL_aa252ec159c1,skill,USKL_aa252ec159c1,Foundation,Q227744,https://www.wikidata.org/wiki/Q227744,Foundation,,,exact,high
+USKL_8a2ce4973d4f,skill,USKL_8a2ce4973d4f,Chart.js,Q83624620,https://www.wikidata.org/wiki/Q83624620,Chart.js,,,exact,high
+USKL_89afaba18f7d,skill,USKL_89afaba18f7d,Redux,Q28957057,https://www.wikidata.org/wiki/Q28957057,Redux,,,exact+csv_seed,high
+USKL_29abd5485d7f,skill,USKL_29abd5485d7f,Axios,Q28230873,https://www.wikidata.org/wiki/Q28230873,Axios,,,exact,high
+USKL_01fcc8197f09,skill,USKL_01fcc8197f09,Cypress,Q685224,https://www.wikidata.org/wiki/Q685224,Cypress,,,exact,high
+USKL_a4147c4f4c5e,skill,USKL_a4147c4f4c5e,Playwright,Q123162820,https://www.wikidata.org/wiki/Q123162820,Playwright,,,exact,high
+USKL_ec93181530ff,skill,USKL_ec93181530ff,Vite,Q111590996,https://www.wikidata.org/wiki/Q111590996,Vite,,,exact,high
+USKL_22f0d2471ab0,skill,USKL_22f0d2471ab0,Parcel,Q7136418,https://www.wikidata.org/wiki/Q7136418,Parcel,,,exact,high
+USKL_f7f8a6f2fc45,skill,USKL_f7f8a6f2fc45,Babel,Q29449,https://www.wikidata.org/wiki/Q29449,Babel,,,exact,high
+USKL_df10de51ff34,skill,USKL_df10de51ff34,Prettier,Q30147525,https://www.wikidata.org/wiki/Q30147525,Prettier,,,exact,high
+USKL_8f34cb87c52c,skill,USKL_8f34cb87c52c,Husky,Q702049,https://www.wikidata.org/wiki/Q702049,Husky,,,exact,high
+USKL_1f5d7a7235aa,skill,USKL_1f5d7a7235aa,NPM,Q2725083,https://www.wikidata.org/wiki/Q2725083,NPM,,,exact,high
+USKL_a896cbd70250,skill,USKL_a896cbd70250,Yarn,Q28518314,https://www.wikidata.org/wiki/Q28518314,Yarn,,,exact,high
+USKL_c3fba4034fb4,skill,USKL_c3fba4034fb4,Bun,Q773223,https://www.wikidata.org/wiki/Q773223,Bun,,,exact,high
+USKL_a73f10044f8b,skill,USKL_a73f10044f8b,Gulp,Q1218890,https://www.wikidata.org/wiki/Q1218890,Gulp,,,exact,high
+USKL_bcc687621694,skill,USKL_bcc687621694,Grunt,Q1499903,https://www.wikidata.org/wiki/Q1499903,Grunt,,,exact,high
+USKL_7829d4a60c1c,skill,USKL_7829d4a60c1c,Brunch,Q4095841,https://www.wikidata.org/wiki/Q4095841,Brunch,,,exact,high
+USKL_9ed957ea87d7,skill,USKL_9ed957ea87d7,Ionic,Q17576071,https://www.wikidata.org/wiki/Q17576071,Ionic,,,exact,high
+USKL_f6d80ae4c241,skill,USKL_f6d80ae4c241,SwiftUI,Q97455771,https://www.wikidata.org/wiki/Q97455771,SwiftUI,,,exact+csv_seed,high
+USKL_b6abf31a7d7d,skill,USKL_b6abf31a7d7d,Jetpack Compose,Q114646061,https://www.wikidata.org/wiki/Q114646061,Jetpack Compose,,,exact+csv_seed,high
+USKL_b947faefeba0,skill,USKL_b947faefeba0,Expo,Q1384640,https://www.wikidata.org/wiki/Q1384640,Expo,,,exact,high
+USKL_b2e3ab85ad93,skill,USKL_b2e3ab85ad93,Branch,Q80180,https://www.wikidata.org/wiki/Q80180,Branch,,,exact,high
+USKL_32f209d3ef28,skill,USKL_32f209d3ef28,AppCenter,Q70029,https://www.wikidata.org/wiki/Q70029,Ubuntu Software Center,,,alias,medium
+USKL_4fbd54a65dff,skill,USKL_4fbd54a65dff,Fastlane,Q5437109,https://www.wikidata.org/wiki/Q5437109,Fastlane,,,exact,high
+USKL_eae75c975c01,skill,USKL_eae75c975c01,Bitrise,Q110630145,https://www.wikidata.org/wiki/Q110630145,Bitrise,,,exact,high
+USKL_35c6bb428e9f,skill,USKL_35c6bb428e9f,Oracle,Q399841,https://www.wikidata.org/wiki/Q399841,Oracle,,,exact,high
+USKL_ec40ca9e8f20,skill,USKL_ec40ca9e8f20,Cassandra,Q1133009,https://www.wikidata.org/wiki/Q1133009,Cassandra,,,exact,high
+USKL_e22072cb2c9d,skill,USKL_e22072cb2c9d,DynamoDB,Q15731832,https://www.wikidata.org/wiki/Q15731832,Amazon DynamoDB,,,alias,medium
+USKL_52ccf40f532c,skill,USKL_52ccf40f532c,Cosmos DB,Q20707889,https://www.wikidata.org/wiki/Q20707889,Azure Cosmos DB,,,alias,medium
+USKL_4f27288d94ba,skill,USKL_4f27288d94ba,Firestore,Q59908994,https://www.wikidata.org/wiki/Q59908994,Firestore,,,exact,high
+USKL_fba94f83b859,skill,USKL_fba94f83b859,Firebase Realtime Database,Q59909615,https://www.wikidata.org/wiki/Q59909615,Firebase Realtime Database,,,exact,high
+USKL_b6aee8f8d119,skill,USKL_b6aee8f8d119,Solr,Q2858103,https://www.wikidata.org/wiki/Q2858103,Apache Solr,,,alias,medium
+USKL_aeb46f9bd3b4,skill,USKL_aeb46f9bd3b4,Splunk,Q125525849,https://www.wikidata.org/wiki/Q125525849,Splunk,,,exact,high
+USKL_826838dfd1cd,skill,USKL_826838dfd1cd,TimescaleDB,Q111012643,https://www.wikidata.org/wiki/Q111012643,TimescaleDB,,,exact,high
+USKL_204369233a7e,skill,USKL_204369233a7e,CockroachDB,Q98731903,https://www.wikidata.org/wiki/Q98731903,CockroachDB,,,exact,high
+USKL_1a082ce03331,skill,USKL_1a082ce03331,ClickHouse,Q27825826,https://www.wikidata.org/wiki/Q27825826,ClickHouse,,,exact,high
+USKL_33d840302d88,skill,USKL_33d840302d88,Redshift,Q7306255,https://www.wikidata.org/wiki/Q7306255,Redshift,,,exact,high
+USKL_3fb0ca8db017,skill,USKL_3fb0ca8db017,HBase,Q2538066,https://www.wikidata.org/wiki/Q2538066,Apache HBase,,,alias,medium
+USKL_684c219c003c,skill,USKL_684c219c003c,Hive,Q1207170,https://www.wikidata.org/wiki/Q1207170,Hive,,,exact,high
+USKL_797a93c43d79,skill,USKL_797a93c43d79,Spark,Q3493345,https://www.wikidata.org/wiki/Q3493345,SPARK,,,exact,high
+USKL_fcea017781cd,skill,USKL_fcea017781cd,Kafka,Q510418,https://www.wikidata.org/wiki/Q510418,Kafka,,,exact,high
+USKL_7b5c523ff2ac,skill,USKL_7b5c523ff2ac,ActiveMQ,Q773135,https://www.wikidata.org/wiki/Q773135,Apache ActiveMQ,,,alias,medium
+USKL_e19170f0116f,skill,USKL_e19170f0116f,ZeroMQ,Q8079189,https://www.wikidata.org/wiki/Q8079189,ZeroMQ,,,exact,high
+USKL_9388ca12b03d,skill,USKL_9388ca12b03d,NATS,Q6952612,https://www.wikidata.org/wiki/Q6952612,NATS,,,exact,high
+USKL_86eebec63c74,skill,USKL_86eebec63c74,Varnish,Q11252905,https://www.wikidata.org/wiki/Q11252905,Varnish,,,exact,high
+USKL_beb8425ae011,skill,USKL_beb8425ae011,CDN,Q350490,https://www.wikidata.org/wiki/Q350490,CDN,,,exact,high
+USKL_ae5c526b876a,skill,USKL_ae5c526b876a,AWS,Q300239,https://www.wikidata.org/wiki/Q300239,AWS,,,exact,high
+USKL_2d56a8e6756d,skill,USKL_2d56a8e6756d,Packer,Q238972,https://www.wikidata.org/wiki/Q238972,Packer,,,exact,high
+USKL_efc3cda967c3,skill,USKL_efc3cda967c3,Consul,Q28709844,https://www.wikidata.org/wiki/Q28709844,Consul,,,exact,high
+USKL_48421a717661,skill,USKL_48421a717661,Vault,Q399060,https://www.wikidata.org/wiki/Q399060,Vault,,,exact,high
+USKL_5b9efcb82779,skill,USKL_5b9efcb82779,Nomad,Q429262,https://www.wikidata.org/wiki/Q429262,Nomad,,,exact,high
+USKL_c9fd8bcd046d,skill,USKL_c9fd8bcd046d,Helm,Q405970,https://www.wikidata.org/wiki/Q405970,Helm,,,exact,high
+USKL_dc93fa82f3e2,skill,USKL_dc93fa82f3e2,Kustomize,Q136456654,https://www.wikidata.org/wiki/Q136456654,Kustomize,,,exact,high
+USKL_5b24158733fa,skill,USKL_5b24158733fa,Spinnaker,Q65046096,https://www.wikidata.org/wiki/Q65046096,Spinnaker,,,exact,high
+USKL_b275cce93815,skill,USKL_b275cce93815,Tekton,Q110745469,https://www.wikidata.org/wiki/Q110745469,Tekton,,,exact,high
+USKL_0b44c9f67543,skill,USKL_0b44c9f67543,GitHub Actions,Q97185096,https://www.wikidata.org/wiki/Q97185096,GitHub Actions,,,exact,high
+USKL_1e90f3b8e2e8,skill,USKL_1e90f3b8e2e8,Bamboo,Q412839,https://www.wikidata.org/wiki/Q412839,Bamboo,,,exact,high
+USKL_12cc9f0f6add,skill,USKL_12cc9f0f6add,AWS Fargate,Q110731414,https://www.wikidata.org/wiki/Q110731414,AWS Fargate,,,exact,high
+USKL_8b31e8ec7935,skill,USKL_8b31e8ec7935,Azure Resource Manager,Q123198738,https://www.wikidata.org/wiki/Q123198738,Azure Resource Manager,,,exact,high
+USKL_74f93a5c3573,skill,USKL_74f93a5c3573,Google BigQuery,Q4904867,https://www.wikidata.org/wiki/Q4904867,BigQuery,,,alias,medium
+USKL_f4424fc52c0d,skill,USKL_f4424fc52c0d,DigitalOcean,Q17052116,https://www.wikidata.org/wiki/Q17052116,DigitalOcean,,,exact,high
+USKL_d44e5b718191,skill,USKL_d44e5b718191,Vercel,Q124404421,https://www.wikidata.org/wiki/Q124404421,Vercel,,,exact,high
+USKL_bc22b77de158,skill,USKL_bc22b77de158,Fastly,Q34045622,https://www.wikidata.org/wiki/Q34045622,Fastly,,,exact,high
+USKL_30a1af12f59f,skill,USKL_30a1af12f59f,Vultr,Q137343200,https://www.wikidata.org/wiki/Q137343200,Vultr,,,exact,high
+USKL_fda83f135b3d,skill,USKL_fda83f135b3d,OVH,Q568183,https://www.wikidata.org/wiki/Q568183,OVHcloud,,,alias,medium
+USKL_f49d9e4fffe5,skill,USKL_f49d9e4fffe5,Workday,Q629143,https://www.wikidata.org/wiki/Q629143,Workday,,,exact,high
+USKL_856e65d6c4e1,skill,USKL_856e65d6c4e1,LightGBM,Q57267665,https://www.wikidata.org/wiki/Q57267665,LightGBM,,,exact,high
+USKL_1d5ad441a84c,skill,USKL_1d5ad441a84c,NLTK,Q1635410,https://www.wikidata.org/wiki/Q1635410,Natural Language Toolkit,,,alias,medium
+USKL_6066d47f5250,skill,USKL_6066d47f5250,Transformers,Q296264,https://www.wikidata.org/wiki/Q296264,Transformers,,,exact,high
+USKL_43ea58c1402d,skill,USKL_43ea58c1402d,BERT,Q406457,https://www.wikidata.org/wiki/Q406457,Bert,,,alias,medium
+USKL_01376b93fa6a,skill,USKL_01376b93fa6a,GPT,Q358444,https://www.wikidata.org/wiki/Q358444,GPT,,,exact,high
+USKL_ae1bdb59a9af,skill,USKL_ae1bdb59a9af,DALL-E,Q105078662,https://www.wikidata.org/wiki/Q105078662,DALL-E,,,exact,high
+USKL_8822d6eb16a1,skill,USKL_8822d6eb16a1,Stable Diffusion,Q113660857,https://www.wikidata.org/wiki/Q113660857,Stable Diffusion,,,exact,high
+USKL_bef6ba8c6d93,skill,USKL_bef6ba8c6d93,LLM,Q1798199,https://www.wikidata.org/wiki/Q1798199,LLM,,,exact,high
+USKL_4aa2783ba8b3,skill,USKL_4aa2783ba8b3,Weaviate,Q106201926,https://www.wikidata.org/wiki/Q106201926,Weaviate,,,exact,high
+USKL_b35221c22f7d,skill,USKL_b35221c22f7d,Chroma,Q1206391,https://www.wikidata.org/wiki/Q1206391,Chroma,,,exact,high
+USKL_ba607432499f,skill,USKL_ba607432499f,Airflow,Q408703,https://www.wikidata.org/wiki/Q408703,Airflow,,,exact,high
+USKL_b6b9bd5ac721,skill,USKL_b6b9bd5ac721,Prefect,Q28487842,https://www.wikidata.org/wiki/Q28487842,Prefect,,,exact,high
+USKL_bc10f0656a46,skill,USKL_bc10f0656a46,Pachyderm,Q7122117,https://www.wikidata.org/wiki/Q7122117,Pachyderm,,,exact,high
+USKL_287df57fbe51,skill,USKL_287df57fbe51,Colab,Q126084995,https://www.wikidata.org/wiki/Q126084995,Google Colab,,,alias,medium
+USKL_477add5d7637,skill,USKL_477add5d7637,Kaggle,Q10996045,https://www.wikidata.org/wiki/Q10996045,Kaggle,,,exact,high
+USKL_af3f2b4aaa47,skill,USKL_af3f2b4aaa47,CNN,Q48340,https://www.wikidata.org/wiki/Q48340,CNN,,,exact,high
+USKL_3024488205b2,skill,USKL_3024488205b2,RNN,Q3928345,https://www.wikidata.org/wiki/Q3928345,RNN,,,exact,high
+USKL_01c1903b9872,skill,USKL_01c1903b9872,LSTM,Q63385331,https://www.wikidata.org/wiki/Q63385331,LSTM,,,exact,high
+USKL_f04a1579bb37,skill,USKL_f04a1579bb37,GRU,Q254529,https://www.wikidata.org/wiki/Q254529,GRU,,,exact,high
+USKL_c9f70e698628,skill,USKL_c9f70e698628,GAN,Q1431353,https://www.wikidata.org/wiki/Q1431353,Gan International Airport,,,alias,medium
+USKL_bdeabde24e9b,skill,USKL_bdeabde24e9b,HTTP,Q3782235,https://www.wikidata.org/wiki/Q3782235,HTTP,,,exact,high
+USKL_71875c5c484c,skill,USKL_71875c5c484c,DNS,Q232651,https://www.wikidata.org/wiki/Q232651,DNS,,,exact,high
+USKL_8e8b7a3f9ac7,skill,USKL_8e8b7a3f9ac7,SSH,Q411778,https://www.wikidata.org/wiki/Q411778,SSH,,,exact,high
+USKL_56c799aebdfa,skill,USKL_56c799aebdfa,VPN,Q295570,https://www.wikidata.org/wiki/Q295570,VPN,,,exact,high
+USKL_f99dd354890d,skill,USKL_f99dd354890d,CDN,Q350490,https://www.wikidata.org/wiki/Q350490,CDN,,,exact,high
+USKL_a2b333c8866b,skill,USKL_a2b333c8866b,Linkerd,Q88465954,https://www.wikidata.org/wiki/Q88465954,Linkerd,,,exact,high
+USKL_d2e2185730ee,skill,USKL_d2e2185730ee,Consul,Q28709844,https://www.wikidata.org/wiki/Q28709844,Consul,,,exact,high
+USKL_41c54577bc4f,skill,USKL_41c54577bc4f,Caddy,Q415652,https://www.wikidata.org/wiki/Q415652,Caddy,,,exact,high
+USKL_e7bd7eedd2bd,skill,USKL_e7bd7eedd2bd,OpenID Connect,Q21677911,https://www.wikidata.org/wiki/Q21677911,OpenID Connect,,,exact,high
+USKL_4175016c2b22,skill,USKL_4175016c2b22,JWT,Q20999400,https://www.wikidata.org/wiki/Q20999400,JWT,,,exact,high
+USKL_81ac68316453,skill,USKL_81ac68316453,SAML,Q1630562,https://www.wikidata.org/wiki/Q1630562,SAML,,,exact,high
+USKL_2f5b5b82f471,skill,USKL_2f5b5b82f471,RADIUS,Q137756020,https://www.wikidata.org/wiki/Q137756020,GNU Radius,,,alias,medium
+USKL_37b280c31faa,skill,USKL_37b280c31faa,PKI,Q361878,https://www.wikidata.org/wiki/Q361878,PKI,,,exact,high
+USKL_7c01a02a9e69,skill,USKL_7c01a02a9e69,SOC,Q295387,https://www.wikidata.org/wiki/Q295387,SOC,,,exact,high
+USKL_c6290010b0ef,skill,USKL_c6290010b0ef,WAF,Q238037,https://www.wikidata.org/wiki/Q238037,WAF,,,exact,high
+USKL_f3d7856950d2,skill,USKL_f3d7856950d2,Karma,Q224407,https://www.wikidata.org/wiki/Q224407,Karma,,,exact,high
+USKL_874caab6d7be,skill,USKL_874caab6d7be,Cypress,Q685224,https://www.wikidata.org/wiki/Q685224,Cypress,,,exact,high
+USKL_393792048134,skill,USKL_393792048134,Playwright,Q123162820,https://www.wikidata.org/wiki/Q123162820,Playwright,,,exact,high
+USKL_d295f34b115f,skill,USKL_d295f34b115f,Detox,Q26900167,https://www.wikidata.org/wiki/Q26900167,Detox,,,exact,high
+USKL_8280f95b9c2a,skill,USKL_8280f95b9c2a,Robot Framework,Q2160022,https://www.wikidata.org/wiki/Q2160022,Robot Framework,,,exact,high
+USKL_ef86ac233724,skill,USKL_ef86ac233724,Agile,Q393742,https://www.wikidata.org/wiki/Q393742,Agile,,,exact,high
+USKL_c520fc4ccf6c,skill,USKL_c520fc4ccf6c,Kanban,Q20037359,https://www.wikidata.org/wiki/Q20037359,Kanban,,,exact,high
+USKL_eb0fc0977d7f,skill,USKL_eb0fc0977d7f,Waterfall,Q239285,https://www.wikidata.org/wiki/Q239285,Waterfall,,,exact,high
+USKL_34d58c4b8b26,skill,USKL_34d58c4b8b26,API,Q227704,https://www.wikidata.org/wiki/Q227704,API,,,exact,high
+USKL_65c9ad8a07c0,skill,USKL_65c9ad8a07c0,Serverless,Q22952981,https://www.wikidata.org/wiki/Q22952981,Serverless Framework,,,alias,medium
+USKL_60f487250e58,skill,USKL_60f487250e58,KISS,Q114729860,https://www.wikidata.org/wiki/Q114729860,KISS,,,exact,high
+USKL_24733827e213,skill,USKL_24733827e213,Logging,Q59940633,https://www.wikidata.org/wiki/Q59940633,Cloud Logging,,,alias,medium
+USKL_a27180a6f8ff,skill,USKL_a27180a6f8ff,VS Code,Q19841877,https://www.wikidata.org/wiki/Q19841877,Visual Studio Code,,,alias,medium
+USKL_fd84b9267ea5,skill,USKL_fd84b9267ea5,IntelliJ,Q1206660,https://www.wikidata.org/wiki/Q1206660,IntelliJ IDEA,,,alias,medium
+USKL_2af4e9617f06,skill,USKL_2af4e9617f06,Sublime Text,Q267193,https://www.wikidata.org/wiki/Q267193,Sublime Text,,,exact,high
+USKL_446a93e33f94,skill,USKL_446a93e33f94,Atom,Q16766305,https://www.wikidata.org/wiki/Q16766305,Atom,,,exact,high
+USKL_b579ff7150e5,skill,USKL_b579ff7150e5,RStudio,Q4798119,https://www.wikidata.org/wiki/Q4798119,RStudio,,,exact,high
+USKL_1b2c28cab7c0,skill,USKL_1b2c28cab7c0,Insomnia,Q226426,https://www.wikidata.org/wiki/Q226426,Insomnia,,,exact,high
+USKL_f5505416c84c,skill,USKL_f5505416c84c,Swagger,Q39069667,https://www.wikidata.org/wiki/Q39069667,Swagger,,,exact,high
+USKL_55b49f177dc2,skill,USKL_55b49f177dc2,Sketch,Q22808097,https://www.wikidata.org/wiki/Q22808097,Sketch,,,exact,high
+USKL_2c66dea229d1,skill,USKL_2c66dea229d1,Zeplin,Q98824731,https://www.wikidata.org/wiki/Q98824731,Zeplin,,,exact,high
+USKL_9bbfd8a3b808,skill,USKL_9bbfd8a3b808,Miro,Q1141869,https://www.wikidata.org/wiki/Q1141869,Miro,,,exact,high
+USKL_509ebec43d59,skill,USKL_509ebec43d59,Confluence,Q941857,https://www.wikidata.org/wiki/Q941857,Confluence,,,exact,high
+USKL_677bbfef3518,skill,USKL_677bbfef3518,Notion,Q60747998,https://www.wikidata.org/wiki/Q60747998,Notion,,,exact,high
+USKL_aa6742fb0e9f,skill,USKL_aa6742fb0e9f,Discord,Q22907849,https://www.wikidata.org/wiki/Q22907849,Discord,,,exact,high
+USKL_e33d00c9951d,skill,USKL_e33d00c9951d,databricks,Q107385220,https://www.wikidata.org/wiki/Q107385220,databricks,,,exact,high
+USKL_ac19d2359a83,skill,USKL_ac19d2359a83,matplotlib,Q2985668,https://www.wikidata.org/wiki/Q2985668,Matplotlib,,,alias,medium
+USKL_5b4ccf34d017,skill,USKL_5b4ccf34d017,vba,Q667566,https://www.wikidata.org/wiki/Q667566,Visual Basic for Applications,,,exact+csv_seed,high
+USKL_135a11d2cba1,skill,USKL_135a11d2cba1,vue,Q24589705,https://www.wikidata.org/wiki/Q24589705,Vue.js,,,exact+csv_seed,high
+USKL_c86d16633740,skill,USKL_c86d16633740,express,Q115684402,https://www.wikidata.org/wiki/Q115684402,Express Magazine,,,alias,medium
+USKL_67bf695ebf5c,skill,USKL_67bf695ebf5c,couchbase,Q107381860,https://www.wikidata.org/wiki/Q107381860,couchbase,,,exact,high
+USKL_cbfad5cb4ac8,skill,USKL_cbfad5cb4ac8,datarobot,Q107386070,https://www.wikidata.org/wiki/Q107386070,datarobot,,,exact,high
+USKL_76fddc8f8533,skill,USKL_76fddc8f8533,spreadsheet,Q120245887,https://www.wikidata.org/wiki/Q120245887,spreadsheet,,,exact,high
+USKL_9197494382ef,skill,USKL_9197494382ef,seaborn,Q95716584,https://www.wikidata.org/wiki/Q95716584,seaborn,,,exact,high
+USKL_8be3965d5e0f,skill,USKL_8be3965d5e0f,ggplot2,Q326489,https://www.wikidata.org/wiki/Q326489,ggplot2,,,exact,high
+USKL_eb077d910da7,skill,USKL_eb077d910da7,watson,Q15677016,https://www.wikidata.org/wiki/Q15677016,watson,,,exact,high
+USKL_012197ae8833,skill,USKL_012197ae8833,reactjs,Q19399674,https://www.wikidata.org/wiki/Q19399674,React,,,exact+csv_seed,high
+USKL_992c317b4bf0,skill,USKL_992c317b4bf0,react-redux,Q95958062,https://www.wikidata.org/wiki/Q95958062,react-redux,,,exact,high
+USKL_9b3dcbfef626,skill,USKL_9b3dcbfef626,css3,Q27826469,https://www.wikidata.org/wiki/Q27826469,Cascading Style Sheets Level 3,,,exact+csv_seed,high
+UOCC_66a1790ba933,occupation,UOCC_66a1790ba933,software analyst,Q2058241,https://www.wikidata.org/wiki/Q2058241,software analyst,,,exact,high
+UOCC_133d5fecaede,occupation,UOCC_133d5fecaede,sound operator,Q10341105,https://www.wikidata.org/wiki/Q10341105,sound operator,,,exact,high
+UOCC_9b38722f3b0b,occupation,UOCC_9b38722f3b0b,software tester,Q53471584,https://www.wikidata.org/wiki/Q53471584,software tester,,,exact,high
+UOCC_0df85846acab,occupation,UOCC_0df85846acab,computer vision engineer,Q116952811,https://www.wikidata.org/wiki/Q116952811,computer vision engineer,,,exact,high
+UOCC_58e96e252caa,occupation,UOCC_58e96e252caa,data engineer,Q104659813,https://www.wikidata.org/wiki/Q104659813,data engineer,,,exact,high
+UOCC_58c82a3ba66a,occupation,UOCC_58c82a3ba66a,sound mastering engineer,Q6785368,https://www.wikidata.org/wiki/Q6785368,mastering engineer,,,alias,medium
+UOCC_3523e479c349,occupation,UOCC_3523e479c349,enterprise architect,Q17089045,https://www.wikidata.org/wiki/Q17089045,enterprise architect,,,exact,high
+UOCC_d3e538f6a7a1,occupation,UOCC_d3e538f6a7a1,artificial intelligence engineer,Q126116209,https://www.wikidata.org/wiki/Q126116209,artificial intelligence engineer,,,exact,high
+UOCC_6a46a76ef41d,occupation,UOCC_6a46a76ef41d,sound editor,Q3180462,https://www.wikidata.org/wiki/Q3180462,sound editor,,,exact,high
+UOCC_303392f49891,occupation,UOCC_303392f49891,boom operator,Q373709,https://www.wikidata.org/wiki/Q373709,boom operator,,,exact,high
+UOCC_548f9bd14d3e,occupation,UOCC_548f9bd14d3e,audio-visual technician,Q93922873,https://www.wikidata.org/wiki/Q93922873,audiovisual technician,,,alias,medium
+UOCC_c342c11ce256,occupation,UOCC_c342c11ce256,ethical hacker,Q18922761,https://www.wikidata.org/wiki/Q18922761,white hat,,,alias,medium
+UOCC_ae658dbbacbd,occupation,UOCC_ae658dbbacbd,sound designer,Q3024424,https://www.wikidata.org/wiki/Q3024424,sound designer,,,exact,high
+UOCC_a2147e78ce09,occupation,UOCC_a2147e78ce09,chief technology officer,Q5287861,https://www.wikidata.org/wiki/Q5287861,chief technology officer,,,exact,high
+UOCC_cf7b34afe3ab,occupation,UOCC_cf7b34afe3ab,knowledge engineer,Q3141282,https://www.wikidata.org/wiki/Q3141282,knowledge engineer,,,exact,high
+UOCC_bc4b786f93ea,occupation,UOCC_bc4b786f93ea,chief information officer,Q2589465,https://www.wikidata.org/wiki/Q2589465,chief information officer,,,exact,high
+UOCC_8debc3db028d,occupation,UOCC_8debc3db028d,database administrator,Q1078262,https://www.wikidata.org/wiki/Q1078262,database administrator,,,exact,high
+UOCC_9e99acd060fe,occupation,UOCC_9e99acd060fe,user interface designer,Q29381289,https://www.wikidata.org/wiki/Q29381289,user interface designer,,,exact,high
+UOCC_18b8a8762e00,occupation,UOCC_18b8a8762e00,video technician,Q10429552,https://www.wikidata.org/wiki/Q10429552,vision engineer,,,alias,medium
+UOCC_aa9b656898a7,occupation,UOCC_aa9b656898a7,web content manager,Q31197581,https://www.wikidata.org/wiki/Q31197581,web content manager,,,exact,high
+UOCC_7c838b1ba9f7,occupation,UOCC_7c838b1ba9f7,recording studio technician,Q21009829,https://www.wikidata.org/wiki/Q21009829,recording studio technician,,,exact,high
+UOCC_2d36c281a066,occupation,UOCC_2d36c281a066,database developer,Q115641904,https://www.wikidata.org/wiki/Q115641904,database developer,,,exact,high
+UOCC_1087c62b62b3,occupation,UOCC_1087c62b62b3,web developer,Q6859454,https://www.wikidata.org/wiki/Q6859454,web developer,,,exact,high
+UOCC_7ee4ae3ace9e,occupation,UOCC_7ee4ae3ace9e,software architect,Q1548249,https://www.wikidata.org/wiki/Q1548249,software architect,,,exact,high
+UOCC_f37b961d0d4b,occupation,UOCC_f37b961d0d4b,data analyst,Q77293133,https://www.wikidata.org/wiki/Q77293133,data analyst,,,exact,high
+UOCC_2ff8180bcc06,occupation,UOCC_2ff8180bcc06,webmaster,Q41674,https://www.wikidata.org/wiki/Q41674,webmaster,,,exact,high
+UOCC_9ffd4ab6d016,occupation,UOCC_9ffd4ab6d016,computer scientist,Q82594,https://www.wikidata.org/wiki/Q82594,computer scientist,,,exact,high
+UOCC_a11d5d70d77c,occupation,UOCC_a11d5d70d77c,software developer,Q183888,https://www.wikidata.org/wiki/Q183888,software developer,,,exact,high
+UOCC_0763469b1f67,occupation,UOCC_0763469b1f67,ICT business analyst,Q119561639,https://www.wikidata.org/wiki/Q119561639,ICT business analyst,,,exact,high
+UOCC_ab6f9c8a4414,occupation,UOCC_ab6f9c8a4414,full stack developer,Q96072517,https://www.wikidata.org/wiki/Q96072517,full stack developer,,,exact,high
+UOCC_d118ecc3112a,occupation,UOCC_d118ecc3112a,back-end developer,Q110245834,https://www.wikidata.org/wiki/Q110245834,back-end developer,,,exact,high
+SKD_32d4e08d44c0,domain,SKD_32d4e08d44c0,software development,Q638608,https://www.wikidata.org/wiki/Q638608,software development,,,exact,high
+SKD_7eb2d37514e2,domain,SKD_7eb2d37514e2,web development,Q386275,https://www.wikidata.org/wiki/Q386275,web development,,,exact,high
+SKD_5185aa901f10,domain,SKD_5185aa901f10,data science,Q2374463,https://www.wikidata.org/wiki/Q2374463,data science,,,exact,high
+SKD_fef453318c05,domain,SKD_fef453318c05,IT infrastructure,Q594593,https://www.wikidata.org/wiki/Q594593,IT infrastructure,,,exact,high
+SKD_90e58c199bec,domain,SKD_90e58c199bec,telecommunications,Q418,https://www.wikidata.org/wiki/Q418,telecommunications,,,exact,high
+SKD_69d0aabb106c,domain,SKD_69d0aabb106c,computer security,Q3510521,https://www.wikidata.org/wiki/Q3510521,computer security,,,exact,high
+SKD_2da37cb954b8,domain,SKD_2da37cb954b8,information technology management,Q1473265,https://www.wikidata.org/wiki/Q1473265,information technology management,,,exact,high
+SKD_88c07b7fa717,domain,SKD_88c07b7fa717,emerging technologies,Q120208,https://www.wikidata.org/wiki/Q120208,emerging technology,,,alias,medium

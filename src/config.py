@@ -508,7 +508,11 @@ WIKIDATA_SPARQL_URL = "https://query.wikidata.org/sparql"
 # Wikidata etiquette asks for a descriptive User-Agent identifying the client.
 WIKIDATA_USER_AGENT = "JobKB/1.0 (IT knowledge-base research; enrichment) python-urllib"
 WIKIDATA_RATE_SLEEP = 1.00     # seconds between SPARQL calls (gentle pacing; avoids WDQS throttling)
-WIKIDATA_MAX_RETRIES = 5       # exponential backoff on 429/5xx/timeout, then fail-open
+WIKIDATA_MAX_RETRIES = 15      # attempts on 429/5xx/timeout, then fail-open (429s wait for bucket refill)
+# During the WDQS outage the service caps to ~1 req/min; on 429 we wait for the token bucket to refill
+# (observed ~60s) rather than fail fast. Retry-After is honoured but capped so a huge hint can't stall.
+WIKIDATA_THROTTLE_WAIT = 65        # seconds to wait after a 429 (bucket refill; empirically sufficient)
+WIKIDATA_THROTTLE_MAX_WAIT = 120   # cap on a server-provided Retry-After
 
 # Only concrete-technology sub-domains are resolved (competence-phrase skills rarely have a
 # Wikidata item; verification would reject them anyway — this just bounds the network cost).
@@ -553,6 +557,33 @@ WIKIDATA_OCC_CLASSES = (
     "Q28640",     # profession
     "Q12737077",  # occupation
 )
+# The 10 faceted-taxonomy functional-domain nodes (hierarchy.DOMAINS) are also anchored, so the KB's
+# top-level skill/occupation domains carry stable QIDs. Domain node labels are composite
+# ("Data, Analytics & AI") and never exact-match Wikidata, so each domain KEY supplies a few candidate
+# English **label probes** (label alternates, exactly like the programming-language _language_seed) —
+# each still verified live by class allowlist, best chosen. Domains resolve as abstract fields, so
+# WIKIDATA_SKILL_FIELD_CLASSES applies by direct P31, plus the software-development process concept.
+# dom_cross / dom_soft are custom composites with no clean single concept -> no probes (stay unresolved).
+# Probe labels are in Wikidata's exact label case (mostly lowercase; rdfs:label matching is
+# case-sensitive — Title Case matches disambiguation pages, e.g. "Software development" -> a disambig
+# item). Each maps to a verified real concept (item + P31 confirmed live 2026-07-22): software
+# development Q638608, web development Q386275, data science Q2374463, IT infrastructure Q594593,
+# telecommunications Q418, computer security Q3510521, IT management Q1473265, emerging technologies
+# Q120208. First probe that resolves + class-verifies wins; the alternates are honest fallbacks.
+WIKIDATA_DOMAIN_PROBES = {
+    "dom_software":    ("software development", "software engineering"),
+    "dom_web_mobile":  ("web development", "mobile app development"),
+    "dom_data_ai":     ("data science", "artificial intelligence"),
+    "dom_infra_cloud": ("IT infrastructure", "cloud computing"),
+    "dom_networks":    ("telecommunications", "computer network"),
+    "dom_security":    ("computer security", "cybersecurity"),
+    "dom_it_mgmt":     ("information technology management", "IT service management"),
+    "dom_emerging":    ("emerging technologies",),
+}
+WIKIDATA_DOMAIN_CLASSES = ("Q638608",)  # software development (process) — for P279* closure
+# fields/disciplines via direct P31, plus 'type of infrastructure' (Q131339603) so IT infrastructure
+# resolves for the Infrastructure/Cloud domain (cloud computing itself has no P31).
+WIKIDATA_DOMAIN_FIELD_CLASSES = WIKIDATA_SKILL_FIELD_CLASSES + ("Q131339603",)
 # Backstop: reject a candidate whose instance-of hits any of these, even on a label match.
 WIKIDATA_DENY_CLASSES = (
     "Q5",       # human

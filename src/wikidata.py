@@ -65,7 +65,22 @@ def _http_get(url: str, params: dict) -> dict | None:
             return json.loads(data)
         except Exception as e:  # noqa: BLE001 — deliberately broad: HTTP/timeout/JSON all fail-open
             code = getattr(e, "code", None)
-            if code and code != 429 and 400 <= code < 500:
+            if code == 429:
+                # Throttled (WDQS outage rule caps to ~1 req/min). Wait for the token bucket to refill
+                # instead of failing fast — a fixed ~65s pause matches the observed refill; the server's
+                # Retry-After is honoured but capped so a huge hint doesn't stall the run for hours.
+                if attempt == C.WIKIDATA_MAX_RETRIES - 1:
+                    return None
+                ra = None
+                try:
+                    hdrs = getattr(e, "headers", None)
+                    ra = int(hdrs.get("Retry-After")) if hdrs and hdrs.get("Retry-After") else None
+                except (TypeError, ValueError):
+                    ra = None
+                wait = min(ra, C.WIKIDATA_THROTTLE_MAX_WAIT) if ra else C.WIKIDATA_THROTTLE_WAIT
+                time.sleep(max(wait, C.WIKIDATA_THROTTLE_WAIT))
+                continue
+            if code and 400 <= code < 500:
                 return None  # a real 4xx (bad query) won't improve on retry
             if attempt == C.WIKIDATA_MAX_RETRIES - 1:
                 return None
@@ -142,6 +157,28 @@ def _occupation_candidates():
     return out
 
 
+def _domain_candidates():
+    """The 10 faceted-taxonomy functional-domain nodes (hierarchy.DOMAINS). Each domain node stores its
+    domain KEY in `it_subtype` (e.g. dom_software); we resolve it via curated English label PROBES
+    (WIKIDATA_DOMAIN_PROBES) rather than its composite display label. Returns:
+      items  = [(domain_id, probe_label), ...]  (one row per probe; probes share the domain_id)
+      probes = {domain_id: [probe_label, ...]}  (ordered, for best-probe selection in _domain_links)
+    """
+    items, probes = [], {}
+    for r in K.read_all(C.SKILLS_CSV):
+        if r.get("esco_skill_type") != "skill_domain":
+            continue
+        dom_key = (r.get("it_subtype") or "").strip()
+        labels = C.WIKIDATA_DOMAIN_PROBES.get(dom_key)
+        if not labels:  # dom_cross / dom_soft: no clean single concept -> intentionally unresolved
+            continue
+        did = r["entity_id"]
+        probes[did] = list(labels)
+        for lbl in labels:
+            items.append((did, lbl))
+    return items, probes
+
+
 # ------------------------------------------------------------------------------------------
 # Batched SPARQL resolution: label-match + class-verification in one query per ~50 labels
 # ------------------------------------------------------------------------------------------
@@ -154,9 +191,9 @@ def _resolve_chunk(items, allow_classes, seed, field_classes=()):
     (resolved, ok): resolved = {norm: best-resolution-dict}; ok = whether the query succeeded
     (if False, callers keep the labels inconclusive instead of caching a false 'unresolved').
 
-    `allow_classes` are matched by P31/P279* closure (concrete tech / professions); `field_classes`
-    (abstract IT fields) by cheap DIRECT P31 — closing over e.g. 'academic discipline' would time
-    the query out."""
+    `allow_classes` are matched by P31/P279* closure (bounded concrete-tech roots only); `field_classes`
+    (abstract IT fields, and profession/occupation) by cheap DIRECT P31 — closing over e.g. 'academic
+    discipline' or 'profession' (huge instance sets) would time the query out."""
     # Map each query string -> the KB norm it serves (KB label + optional CSV-seed canonical name).
     str2norm = {}
     for norm, label in items:
@@ -164,13 +201,19 @@ def _resolve_chunk(items, allow_classes, seed, field_classes=()):
         if seed is not None and norm in seed and seed[norm].lower() != label.lower():
             str2norm.setdefault(seed[norm], norm)
     values = " ".join(f'"{_sparql_escape(s)}"@en' for s in str2norm)
-    allow = " ".join(f"wd:{q}" for q in allow_classes)
     deny = " ".join(f"wd:{q}" for q in C.WIKIDATA_DENY_CLASSES)
-    # class filter: P279* closure for concrete classes, direct P31 for broad field classes.
-    class_filter = f"{{ ?item wdt:P31 ?t. ?t wdt:P279* ?ac. VALUES ?ac {{ {allow} }} }}"
+    # class filter (UNION of the applicable branches): P279* closure for concrete tech classes,
+    # direct P31 for broad classes. Closure is only safe for bounded roots (software/library/…);
+    # roots with huge instance sets (profession/occupation) MUST use direct P31 or the query times
+    # out — so those are passed as `field_classes`, and `allow_classes` is left empty for them.
+    branches = []
+    if allow_classes:
+        allow = " ".join(f"wd:{q}" for q in allow_classes)
+        branches.append(f"{{ ?item wdt:P31 ?t. ?t wdt:P279* ?ac. VALUES ?ac {{ {allow} }} }}")
     if field_classes:
         field = " ".join(f"wd:{q}" for q in field_classes)
-        class_filter += f" UNION {{ ?item wdt:P31 ?fc. VALUES ?fc {{ {field} }} }}"
+        branches.append(f"{{ ?item wdt:P31 ?fc. VALUES ?fc {{ {field} }} }}")
+    class_filter = " UNION ".join(branches)
     # Lean query: label/alias match + class filter + deny filter + sitelinks. (Fetching descriptions
     # here made the query time out, so wd_description is left empty.)
     query = (
@@ -247,7 +290,9 @@ def run(refresh: bool = False) -> dict:
     seed = _language_seed()
     skills = _skill_candidates()
     occs = _occupation_candidates()
-    print(f"[WIKIDATA] candidates: {len(skills)} tech-skills, {len(occs)} occupations "
+    dom_items, dom_probes = _domain_candidates()
+    print(f"[WIKIDATA] candidates: {len(skills)} tech-skills, {len(occs)} occupations, "
+          f"{len(dom_probes)} domains ({len(dom_items)} probes) "
           f"(snapshot has {len(snap)} cached; refresh={refresh}).", flush=True)
 
     def _checkpoint():
@@ -258,7 +303,12 @@ def run(refresh: bool = False) -> dict:
 
     q1 = _resolve(skills, "skill", C.WIKIDATA_SKILL_CLASSES, snap, seed=seed,
                   checkpoint=_checkpoint, field_classes=C.WIKIDATA_SKILL_FIELD_CLASSES)
-    q2 = _resolve(occs, "occupation", C.WIKIDATA_OCC_CLASSES, snap, seed=None, checkpoint=_checkpoint)
+    # Occupations resolve by DIRECT P31 (profession/occupation) — a P279* closure over those roots
+    # (millions of instances) times the query out. Passed as field_classes with empty allow_classes.
+    q2 = _resolve(occs, "occupation", (), snap, seed=None, checkpoint=_checkpoint,
+                  field_classes=C.WIKIDATA_OCC_CLASSES)
+    q3 = _resolve(dom_items, "domain", C.WIKIDATA_DOMAIN_CLASSES, snap, seed=None,
+                  checkpoint=_checkpoint, field_classes=C.WIKIDATA_DOMAIN_FIELD_CLASSES)
     _save_snapshot(snap)
 
     # Build the KB side table (only entities that actually resolved to a QID).
@@ -277,18 +327,38 @@ def run(refresh: bool = False) -> dict:
                 })
         return rows
 
-    links = _links(skills, "skill") + _links(occs, "occupation")
+    # Domains: one anchor per domain node, choosing the first probe label that resolved to a QID.
+    def _domain_links():
+        rows = []
+        for did, labels in dom_probes.items():
+            for label in labels:
+                r = snap.get((K.normalize_label(label), "domain"))
+                if r and r.get("qid"):
+                    rows.append({
+                        "entity_id": did, "entity_kind": "domain", "unified_id": did,
+                        "label_en": label, "qid": r["qid"],
+                        "wikidata_url": f"https://www.wikidata.org/wiki/{r['qid']}",
+                        "wd_label": r["wd_label"], "wd_description": r["wd_description"],
+                        "instance_of": r.get("instance_of", ""),
+                        "match_method": r["match_method"], "confidence": r["confidence"],
+                    })
+                    break  # best (first) resolving probe wins for this domain
+        return rows
+
+    links = _links(skills, "skill") + _links(occs, "occupation") + _domain_links()
     K.write_csv(C.WIKIDATA_LINKS_CSV, C.WIKIDATA_LINKS_FIELDS, links)
 
     n_skill = sum(1 for l in links if l["entity_kind"] == "skill")
     n_occ = sum(1 for l in links if l["entity_kind"] == "occupation")
+    n_dom = sum(1 for l in links if l["entity_kind"] == "domain")
     n_high = sum(1 for l in links if l["confidence"] == "high")
     K.log_provenance("WIKIDATA", [{
         "entity_id": "WIKIDATA", "source": "WIKIDATA", "source_version": "live query.wikidata.org",
         "retrieved_at": K.now_iso(), "retrieval_method": "sparql label-match + class verify",
-        "notes": f"{len(links)} QID anchors ({n_skill} skills, {n_occ} occ, {n_high} high-conf); "
-                 f"{q1 + q2} SPARQL queries this run",
+        "notes": f"{len(links)} QID anchors ({n_skill} skills, {n_occ} occ, {n_dom} domains, "
+                 f"{n_high} high-conf); {q1 + q2 + q3} SPARQL queries this run",
     }])
     print(f"[WIKIDATA] {len(links)} QID anchors written ({n_skill} skills, {n_occ} occupations, "
-          f"{n_high} high-confidence); {q1 + q2} SPARQL queries.", flush=True)
-    return {"anchors": len(links), "skills": n_skill, "occupations": n_occ, "high": n_high}
+          f"{n_dom} domains, {n_high} high-confidence); {q1 + q2 + q3} SPARQL queries.", flush=True)
+    return {"anchors": len(links), "skills": n_skill, "occupations": n_occ,
+            "domains": n_dom, "high": n_high}

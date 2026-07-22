@@ -104,9 +104,10 @@ def qa():
         wl = K.read_all(C.WIKIDATA_LINKS_CSV)
         wl_skill = sum(1 for r in wl if r.get("entity_kind") == "skill")
         wl_occ = sum(1 for r in wl if r.get("entity_kind") == "occupation")
+        wl_dom = sum(1 for r in wl if r.get("entity_kind") == "domain")
         wl_high = sum(1 for r in wl if r.get("confidence") == "high")
-        print(f"wikidata anchors: {len(wl)} ({wl_skill} skills, {wl_occ} occupations; "
-              f"{wl_high} high-confidence)")
+        print(f"wikidata anchors: {len(wl)} ({wl_skill} skills, {wl_occ} occupations, "
+              f"{wl_dom} domains; {wl_high} high-confidence)")
     if dangling:
         print(f"  WARNING: {len(dangling)} dangling edges e.g. "
               f"{[(e['parent_entity_id'], e['child_entity_id']) for e in dangling[:3]]}")
