@@ -178,6 +178,29 @@ refill (the run above completed straight through an active WDQS rate-limit outag
 `ESCO_v1.2.1-wikidata.csv` is a noisy export whose QIDs were lost; its one clean signal —
 programming-language synonyms — broadens matching for language skills (e.g. `golang`→Go).
 
+**LLM-powered enrichment (pillar 3), auto-validated (pillar 4).** `python run_pipeline.py --llm
+[tasks]` uses a HuggingFace LLM to make the KB more complete without sacrificing reliability. Because
+the KB is built **with no human in the loop**, every LLM output is **validated before it touches the
+graph** — the IT-relevance gate (`src/relevance.py`) + the mDeBERTa NLI verifier (`src/align/verify.py`)
+— tagged with provenance (`description_source="llm"`, `relation_type="llm_inferred"`, `source="LLM"`),
+and it **never overwrites** a source/curated value. Four tasks (`src/llm.py`): **(T1) descriptions** —
+concise, factual, NLI-validated definitions for occupations and emerging/niche skills that have none,
+grounded on label + taxonomy context + any Wikidata description; **(T2) fill `hard_soft`** —
+deterministically derived from each skill's taxonomy category→domain→type (coherent with the
+hierarchy; mDeBERTa zero-shot for the genuinely ambiguous residue) so **every** skill is typed; **(T3)
+inferred links** — occupation→skill relations the demand data missed, chosen by the LLM from an
+embedding shortlist of the *existing* KB vocabulary (never invented) and NLI-verified; **(T4) emerging
+tech** — the LLM proposes emerging technologies absent from the taxonomies, and only those a **real
+Wikidata QID confirms** are added (`source="LLM"`, hierarchy-classified). The unified `description`
+column is filled by precedence **source → Wikidata → LLM** (`description_source` records which). The
+client is **HuggingFace-only**: HF Inference Providers (a small capable instruct model,
+`meta-llama/Llama-3.1-8B-Instruct` by default) as primary, an optional **local** `transformers` model
+(`JOBKB_LLM_LOCAL=1`) as offline fallback, and **fail-open** — on no credits / offline the generation
+tasks are simply skipped and the build still succeeds. Every generation is **snapshotted**
+(`resources/LLM/retrieved/`) so re-runs make **zero** API calls (free-tier-friendly) and are
+resumable; validation rejects are logged to `kb/llm_rejected.csv`. `--llm` runs **after merge**; its
+values are re-woven idempotently on every subsequent `--stages merge`.
+
 ## Pipeline (package + orchestrator)
 
 ```

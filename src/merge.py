@@ -107,6 +107,28 @@ def _merged_alts(members, primary_en, primary_fr):
     return " | ".join(en), " | ".join(fr)
 
 
+def _member_description(members):
+    """Best source-authored description for a unified concept: the most common non-empty English
+    description among members (ties: longest). This is the primary, most-trusted description."""
+    vals = [(m.get("description_en") or "").strip() for m in members if (m.get("description_en") or "").strip()]
+    if not vals:
+        return ""
+    counts = Counter(vals)
+    top = max(counts.values())
+    return sorted([v for v, c in counts.items() if c == top], key=lambda s: (-len(s), s))[0]
+
+
+def _fill_descriptions(rows, kind):
+    """Description precedence: source (member) -> Wikidata -> LLM. `description` is already set to the
+    member description during row build; here fill remaining empties from Wikidata, then LLM."""
+    for r in rows:
+        if not (r.get("description") or "").strip() and (r.get("wikidata_description") or "").strip():
+            r["description"] = r["wikidata_description"]
+            r["description_source"] = "wikidata"
+    from . import llm  # lazy: llm imports nothing from merge at module load
+    llm.apply_enrichment(rows, kind)  # fills description(llm) + hard_soft from the LLM snapshot
+
+
 def _merge_edges(kind_prefix):
     """Cross-source pairs flagged for merge, as (a, b, kind) with kind in {label, semantic}."""
     edges = []
@@ -141,8 +163,11 @@ def _merge_occupations():
             "occupation_type": "unified_occupation",
             "sources": " | ".join(sorted({m["source"] for m in members})),
             "member_entity_ids": " | ".join(sorted(comp)),
+            "description": _member_description(members),
+            "description_source": "source" if _member_description(members) else "",
         })
     W.enrich_rows(rows, "occupation")  # weave in Wikidata anchors if the side table exists
+    _fill_descriptions(rows, "occupation")  # description precedence + LLM enrichment
     K.write_csv(C.UNIFIED_OCCUPATIONS_CSV, C.UNIFIED_OCC_FIELDS, rows)
     return rows
 
@@ -167,8 +192,11 @@ def _merge_skills():
             "it_subtype": _majority(members, "it_subtype"),
             "sources": " | ".join(sorted({m["source"] for m in members})),
             "member_entity_ids": " | ".join(sorted(comp)),
+            "description": _member_description(members),
+            "description_source": "source" if _member_description(members) else "",
         })
     W.enrich_rows(rows, "skill")  # weave in Wikidata anchors if the side table exists
+    _fill_descriptions(rows, "skill")  # description precedence + LLM enrichment
     K.write_csv(C.UNIFIED_SKILLS_CSV, C.UNIFIED_SKILL_FIELDS, rows)
     return rows
 

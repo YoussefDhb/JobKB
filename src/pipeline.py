@@ -127,6 +127,25 @@ def qa():
         if wl_dangling:
             print(f"  WARNING: {len(wl_dangling)} wikidata anchors reference missing concepts e.g. "
                   f"{[ (r.get('entity_kind'), r.get('unified_id') or r.get('entity_id')) for r in wl_dangling[:3] ]}")
+
+    # LLM enrichment coverage (pillar 3): descriptions by source, hard_soft completeness, inferred
+    # links, new Wikidata-confirmed entities, and validation rejects.
+    occ_u = K.read_all(C.UNIFIED_OCCUPATIONS_CSV)
+    skl_u = K.read_all(C.UNIFIED_SKILLS_CSV)
+    from collections import Counter as _Cnt
+    desc_src = _Cnt(r.get("description_source", "") for r in occ_u + skl_u if r.get("description"))
+    n_desc = sum(1 for r in occ_u + skl_u if (r.get("description") or "").strip())
+    n_hs = sum(1 for r in skl_u if (r.get("hard_soft") or "").strip())
+    llm_links = [r for r in rels if r.get("relation_type") == "llm_inferred"]
+    llm_skills = sum(1 for r in skl if r.get("source") == C.SRC_LLM)
+    n_rej = len(K.read_all(C.LLM_REJECTED_CSV)) if os.path.isfile(C.LLM_REJECTED_CSV) else 0
+    print(f"descriptions: {n_desc}/{len(occ_u) + len(skl_u)} concepts "
+          f"(by source: {dict(desc_src)})  |  hard_soft: {n_hs}/{len(skl_u)} skills")
+    if llm_links or llm_skills or n_rej or "llm" in desc_src:
+        print(f"llm enrichment: {sum(1 for r in occ_u + skl_u if r.get('description_source') == 'llm')} "
+              f"descriptions, {len(llm_links)} inferred links, {llm_skills} new Wikidata-confirmed skills; "
+              f"{n_rej} outputs rejected by validation")
+
     if dangling:
         print(f"  WARNING: {len(dangling)} dangling edges e.g. "
               f"{[(e['parent_entity_id'], e['child_entity_id']) for e in dangling[:3]]}")

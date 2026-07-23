@@ -80,6 +80,8 @@ WIKIDATA_RETRIEVED_DIR = os.path.join(RESOURCES, "WIKIDATA", "retrieved")
 WIKIDATA_SRC_CSV = os.path.join(WIKIDATA_EN_DIR, "ESCO_v1.2.1-wikidata.csv")
 WIKIDATA_SNAPSHOT_CSV = os.path.join(WIKIDATA_RETRIEVED_DIR, "resolutions.csv")
 
+LLM_RETRIEVED_DIR = os.path.join(RESOURCES, "LLM", "retrieved")   # LLM generation snapshots (cache)
+
 KB_DIR = os.path.join(ROOT, "kb")   # built knowledge base output
 
 OCCUPATIONS_CSV = os.path.join(KB_DIR, "occupations.csv")
@@ -92,6 +94,8 @@ UNIFIED_OCCUPATIONS_CSV = os.path.join(KB_DIR, "unified_occupations.csv")
 UNIFIED_SKILLS_CSV = os.path.join(KB_DIR, "unified_skills.csv")
 PROVENANCE_CSV = os.path.join(KB_DIR, "provenance.csv")
 BLOCKED_ENTITIES_CSV = os.path.join(KB_DIR, "blocked_entities.csv")  # relevance-gate rejects
+LLM_SNAPSHOT_CSV = os.path.join(LLM_RETRIEVED_DIR, "generations.csv")  # cached LLM generations
+LLM_REJECTED_CSV = os.path.join(KB_DIR, "llm_rejected.csv")   # LLM outputs that failed validation
 WIKIDATA_LINKS_CSV = os.path.join(KB_DIR, "wikidata_links.csv")      # entity -> Wikidata QID anchors
 
 # --------------------------------------------------------------------------------------
@@ -130,17 +134,22 @@ ALIGNMENT_FIELDS = [
 # Unified concepts carry their Wikidata anchor in-graph: qid + URL + Wikidata's terse description (a
 # dedicated column that NEVER overwrites KB-authored text). Populated by wikidata.enrich_rows() from
 # the side table; empty until `--wikidata` has run. Wikidata aliases are merged into alt_labels_*.
+# `description` is a single authoritative concept description with `description_source` provenance:
+# merge.py fills it by precedence (member-source description -> Wikidata description); the LLM stage
+# (`--llm`) fills the remaining empties with `description_source="llm"`. Never overwrites a source desc.
 UNIFIED_OCC_FIELDS = [
     "unified_id", "primary_label_en", "primary_label_fr",
     "alt_labels_en", "alt_labels_fr", "isco_code",
     "occupation_type", "sources", "member_entity_ids",
     "wikidata_qid", "wikidata_url", "wikidata_description",
+    "description", "description_source",
 ]
 UNIFIED_SKILL_FIELDS = [
     "unified_id", "primary_label_en", "primary_label_fr",
     "alt_labels_en", "alt_labels_fr", "hard_soft", "it_subtype",
     "sources", "member_entity_ids",
     "wikidata_qid", "wikidata_url", "wikidata_description",
+    "description", "description_source",
 ]
 PROVENANCE_FIELDS = [
     "entity_id", "source", "source_version", "retrieved_at", "retrieval_method", "notes",
@@ -275,6 +284,8 @@ SRC_WEF = "WEF"              # WEF Global Skills Taxonomy (2021): structured sof
 SRC_DJINNI = "DJINNI"        # relation-only demand: Djinni IT postings (role tag + free-text JD extraction)
 SRC_LINKEDIN_SWE = "LINKEDIN_SWE"  # hybrid: LinkedIn software-engineering postings (pre-extracted skills)
 SRC_KAGGLE_JOBS = "KAGGLE_JOBS"    # hybrid: kaggle job-skill-set, IT subset (pre-extracted skills)
+SRC_LLM = "LLM"              # LLM-powered enrichment: generated descriptions, inferred links, and
+                             # new emerging entities (each auto-validated + Wikidata-confirmed)
 
 # Sources that contribute real (non ISCO-group) occupations that get aligned.
 REAL_OCC_SOURCES = (SRC_ESCO, SRC_ONET, SRC_NOC, SRC_ROME, SRC_EMERGING)
@@ -420,6 +431,42 @@ NLI_MODEL = os.environ.get("JOBKB_NLI_MODEL",
                            "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli")
 NLI_BATCH_SIZE = 16
 EMBED_BATCH_SIZE = 32
+
+# --------------------------------------------------------------------------------------
+# LLM-powered enrichment (pillar 3) — HuggingFace, validated (pillar 4), free-tier-economical
+# --------------------------------------------------------------------------------------
+# Generative LLM: HF Inference Providers (serverless) is primary; a small local transformers model is
+# the offline fallback; if neither loads the enrichment is skipped (fail-open). Kept HuggingFace-only.
+# Llama-3.1-8B-Instruct is fast/capable and reachable on the free tier (validated live). Override via
+# env for a stronger model (e.g. Qwen/Qwen2.5-72B-Instruct) at higher credit cost.
+LLM_API_MODEL = os.environ.get("JOBKB_LLM_MODEL", "meta-llama/Llama-3.1-8B-Instruct")
+LLM_API_PROVIDER = os.environ.get("JOBKB_LLM_PROVIDER", "auto")   # HF Inference Providers routing
+LLM_LOCAL_MODEL = os.environ.get("JOBKB_LLM_LOCAL_MODEL", "Qwen/Qwen2.5-3B-Instruct")  # offline fallback
+LLM_MAX_TOKENS = 200
+LLM_TEMPERATURE = 0.2       # low — factual, deterministic-ish definitions
+LLM_TIMEOUT = 60
+LLM_MAX_RETRIES = 4
+LLM_RATE_SLEEP = 0.30       # polite pacing between API calls (free tier)
+LLM_USE_LOCAL_FALLBACK = os.environ.get("JOBKB_LLM_LOCAL", "0") == "1"  # opt-in (local gen is slow on CPU)
+
+# Validation thresholds for LLM outputs (reuses the IT-relevance gate + mDeBERTa NLI verifier).
+LLM_DESC_MIN_CHARS = 20
+LLM_DESC_MAX_CHARS = 400
+LLM_DESC_NLI_MIN = 0.50     # generated description must entail "<label> is <description>" this strongly
+LLM_HARDSOFT_NLI_MARGIN = 0.10  # zero-shot hard-vs-soft margin required to fill hard_soft
+LLM_LINK_TOPK = 25          # embedding shortlist size per occupation for link inference
+LLM_LINK_MIN_SIM = 0.45     # inferred occ->skill link must clear this embedding cosine (stored as weight)
+LLM_LINK_MAX_PER_OCC = 15   # cap inferred links per occupation (avoid flooding)
+LLM_LINK_MAX_OCC = int(os.environ.get("JOBKB_LLM_LINK_MAX", "40"))  # cap occupations processed (cost)
+LLM_LINK_SPARSE_MAX = 6     # an occupation with <= this many existing relations is a link target
+LLM_EMERGING_MAX_NEW = int(os.environ.get("JOBKB_LLM_EMERGING_MAX", "40"))  # cap new entities added
+
+# Bounded work sets (free-tier economy): descriptions only for niche roles + these skill sub-domains.
+LLM_DESC_SKILL_SUBDOMAINS = frozenset({"emerging_tech", "mobile_development", "data_engineering",
+                                       "hardware_embedded", "ai_ml"})
+LLM_DESC_MAX_TARGETS = int(os.environ.get("JOBKB_LLM_DESC_MAX", "0"))  # 0 = unlimited (bounds API cost)
+LLM_SNAPSHOT_FIELDS = ["task", "key", "model", "prompt_hash", "output", "created_at"]
+LLM_REJECTED_FIELDS = ["task", "entity_id", "label", "output", "reason", "score"]
 
 # --------------------------------------------------------------------------------------
 # Alignment tunables

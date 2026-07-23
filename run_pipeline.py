@@ -89,6 +89,10 @@ def main():
                     help="anchor tech-skills + occupations to Wikidata QIDs (kb/wikidata_links.csv)")
     ap.add_argument("--refresh-wikidata", action="store_true",
                     help="re-query Wikidata ignoring the resolutions snapshot")
+    # LLM enrichment (pillar 3): generation is snapshotted; validated; fail-open on no credits/offline
+    ap.add_argument("--llm", nargs="?", const="all", metavar="TASKS",
+                    help="run LLM enrichment after merge; optional comma-list of tasks "
+                         "(descriptions,hardsoft,links,emerging); default all")
     args = ap.parse_args()
 
     if args.list_stages:
@@ -105,6 +109,12 @@ def main():
     if args.wikidata or args.refresh_wikidata:
         from src import wikidata
         wikidata.run(refresh=args.refresh_wikidata)
+        return
+
+    if args.llm:
+        from src import llm
+        tasks = llm.ALL_TASKS if args.llm == "all" else tuple(t.strip() for t in args.llm.split(","))
+        llm.run(tasks=tasks)
         return
 
     if args.add:
