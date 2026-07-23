@@ -26,6 +26,7 @@ tier, and cross-branch data roles), applied consistently to every source.
 | **e-CF 4.0** | **Skills only** — European e-Competence Framework (EU-standard ICT competences) | 41 professional ICT competences (Plan/Build/Run/Enable/Manage), self-classified into the taxonomy's 22 categories |
 | **Soft skills** (curated) | **Skills only** — noun-form soft/transversal skills used in IT hiring | 22 recruiter-vocabulary soft skills (teamwork, communication, problem solving, work ethic, …) the ESCO verb-phrase competences lack; linked to occupations by posting evidence |
 | **WEF Global Skills Taxonomy** (2021) | **Skills only** — authoritative soft-skill standard (World Economic Forum) | 47 structured soft skills (creative/systems thinking, mentoring, building trust, grit, growth mindset, …) across 5 WEF-aligned soft sub-domains; 16 core ones attached to every IT occupation as a `transversal` layer |
+| **IT soft-skills taxonomy** (curated) | **Skills only** — comprehensive IT soft skills across the 5 soft sub-domains | 38 genuinely-new soft skills (technical communication, stakeholder management, resilience, technical leadership, learning agility, data-driven decision making, code-review etiquette, …) grounded in WEF/O*NET/SFIA + engineering "power-skills"; self-classified, dedup-skips already-covered terms; 10 universal ones attached to every IT occupation as `transversal` |
 | **ADEM (Luxembourg)** | **Relations only** — real vacancy demand (ESCO×ROME) | 1,758 weighted `demand` edges on IT ROME occupations (`M18*`) |
 | **Job postings (mined)** | **Relations only** — mined IT postings (25 roles) | 1,013 role→skill `demand` edges (matched to existing entities) |
 | **data_jobs** (lukebarousse) | **Hybrid** — 785k real postings, 10 data/IT roles | harvests ~50 genuinely-absent IT tools as new skills + 1,193 large-scale weighted `demand` edges |
@@ -76,6 +77,35 @@ solving, communication, collaboration, adaptability, resilience, curiosity, init
 detail, time management, responsibility, empathy, feedback) are attached to **every IT occupation**
 as a distinct `relation_type="transversal"` layer (source `WEF`, no weight — kept separate from the
 `demand` signal so it stays auditable and never dilutes demand rankings).
+
+The **IT soft-skills taxonomy** (`src/sources/soft_taxonomy.py`, source `SOFTTAXO`) then makes the soft
+branch **comprehensive**: since soft skills are the KB's minority, it adds **38 genuinely-new** soft
+skills that IT hiring and performance reviews actually name but the KB still lacked — technical &
+written communication, active-listening/stakeholder management, cross-functional & remote collaboration,
+technical leadership, ownership, delegation, resilience, dealing with ambiguity, learning agility,
+staying current with technology, data-driven decision making, product thinking, code-review etiquette,
+and more — curated from established frameworks (WEF Global Skills Taxonomy, O*NET Work Styles, SFIA
+behavioural factors) and the software-engineering "power-skills" literature. Each carries an **explicit
+soft sub-domain** (`SOFTTAXO` is in `SELF_CLASSIFIED_SUBDOMAIN_SOURCES`) so it lands in the right group
+rather than the catch-all — this nearly doubled `soft_learning` and materially grew every soft
+sub-domain. It is **self-deduping**: any candidate whose normalized label already names an existing
+skill (any source) is skipped (9 were), so only genuinely-new nodes are created and the `align` stage
+confirmed **0 further merges**. A curated **`core` subset of 10 universal** IT soft skills is attached to
+**every IT occupation** as `transversal` edges (2,560 edges), exactly like the WEF core — distinct from
+`demand`. Gate-bypassed and (like every source) run through the normal ingest→hierarchy→align→merge→qa
+pipeline, then given French labels by `--translate`; all QA invariants stay 0 and the `demand` count is
+unchanged.
+
+Finally, a **curated IT-relevance filter keeps the soft branch IT-focused** (`relevance.is_non_it_soft`):
+O*NET's **Abilities** are psychometric aptitudes, not workplace soft skills, and ESCO's transversal
+collection carries broad **life skills** — so physical/sensory/perceptual O*NET abilities (Far/Near
+Vision, Finger Dexterity, Speech Clarity, Perceptual Speed, …) and non-IT ESCO transversal skills
+(maintain physical fitness, apply hygiene standards, foster biodiversity, participate in civic life, …)
+are pruned at the O*NET ingest and the ESCO transversal load (35 removed). Matching is **exact-normalized-
+label only** — substrings would wrongly hit real IT skills ("integrated development environment", "Cyber
+Hygiene", "Physical Layers", "healthcare data systems") — and the cognitive/verbal O*NET abilities
+(reasoning, comprehension/expression) plus every IT-relevant ESCO transversal skill (cope with
+uncertainty, respect confidentiality, manage digital identity, think critically, …) are kept.
 
 **Relation-only enrichment sources.** ADEM (real Luxembourg vacancy demand, already linked to
 ESCO + ROME) and the mined IT job postings add weighted `demand` occupation→skill edges **between
@@ -187,8 +217,10 @@ graph** — the IT-relevance gate (`src/relevance.py`) + the mDeBERTa NLI verifi
 and it **never overwrites** a source/curated value. Four tasks (`src/llm.py`): **(T1) descriptions** —
 concise, factual, NLI-validated definitions for occupations and emerging/niche skills that have none,
 grounded on label + taxonomy context + any Wikidata description; **(T2) fill `hard_soft`** —
-deterministically derived from each skill's taxonomy category→domain→type (coherent with the
-hierarchy; mDeBERTa zero-shot for the genuinely ambiguous residue) so **every** skill is typed; **(T3)
+**deterministically derived from each skill's taxonomy placement** (category→domain→type; `merge`
+applies `hierarchy.skill_type` as the single source of truth, so `hard_soft` can never contradict the
+category — e.g. a technical skill in a hard category can't be tagged soft) so **every** skill is typed
+consistently; **(T3)
 inferred links** — occupation→skill relations the demand data missed, chosen by the LLM from an
 embedding shortlist of the *existing* KB vocabulary (never invented) and NLI-verified; **(T4) emerging
 tech** — the LLM proposes emerging technologies absent from the taxonomies, and only those a **real

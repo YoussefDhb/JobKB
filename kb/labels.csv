@@ -17135,25 +17135,12 @@ SKL_e16fabcf79b1,skill,Oral Comprehension,oral comprehension,preferred,en,ONET
 SKL_5cda8baac008,skill,Written Comprehension,written comprehension,preferred,en,ONET
 SKL_ef71b59eeb03,skill,Oral Expression,oral expression,preferred,en,ONET
 SKL_db7e0ce2a4b5,skill,Written Expression,written expression,preferred,en,ONET
-SKL_23d1aef04881,skill,Fluency of Ideas,fluency of ideas,preferred,en,ONET
-SKL_0d8c86e774f0,skill,Originality,originality,preferred,en,ONET
-SKL_ae5a17bcf408,skill,Problem Sensitivity,problem sensitivity,preferred,en,ONET
 SKL_831ad790d2d7,skill,Deductive Reasoning,deductive reasoning,preferred,en,ONET
 SKL_7c4928fcb451,skill,Inductive Reasoning,inductive reasoning,preferred,en,ONET
 SKL_036f3d113bbc,skill,Information Ordering,information ordering,preferred,en,ONET
-SKL_4ef4030f2dd2,skill,Category Flexibility,category flexibility,preferred,en,ONET
 SKL_1fa4715aee9a,skill,Mathematical Reasoning,mathematical reasoning,preferred,en,ONET
-SKL_6eb59efa8e79,skill,Number Facility,number facility,preferred,en,ONET
-SKL_8e823ad57eaf,skill,Flexibility of Closure,flexibility of closure,preferred,en,ONET
 SKL_469a005ccae3,skill,Visualization,visualization,preferred,en,ONET
-SKL_9eb47227e858,skill,Near Vision,near vision,preferred,en,ONET
 SKL_e0d251af67aa,skill,Speech Recognition,speech recognition,preferred,en,ONET
-SKL_8dade5c29560,skill,Speech Clarity,speech clarity,preferred,en,ONET
-SKL_4f7187338781,skill,Speed of Closure,speed of closure,preferred,en,ONET
-SKL_8ca778fb5b96,skill,Perceptual Speed,perceptual speed,preferred,en,ONET
-SKL_b8c51028d943,skill,Far Vision,far vision,preferred,en,ONET
-SKL_49c323b2d16e,skill,Selective Attention,selective attention,preferred,en,ONET
-SKL_e07b0476c7f3,skill,Finger Dexterity,finger dexterity,preferred,en,ONET
 SKL_97824ec06fcf,skill,ACT! Premium,act! premium,preferred,en,ONET
 SKL_65e4edff1665,skill,Adobe Distiller,adobe distiller,preferred,en,ONET
 SKL_d48392438ce7,skill,Adobe Flex,adobe flex,preferred,en,ONET
@@ -21720,13 +21707,6 @@ SKL_5dc382df1438,skill,take the initiative,take the initiative,alt,en,ESCO
 SKL_5dc382df1438,skill,show sense of initiative,show sense of initiative,alt,en,ESCO
 SKL_5dc382df1438,skill,show active initiative,show active initiative,alt,en,ESCO
 SKL_5dc382df1438,skill,demonstrate sense of initiative,demonstrate sense of initiative,alt,en,ESCO
-SKL_19aeb7cb73b2,skill,adopt ways to foster biodiversity and animal welfare,adopt ways to foster biodiversity and animal welfare,preferred,en,ESCO
-SKL_19aeb7cb73b2,skill,concretely support biodiversity and animal welfare,concretely support biodiversity and animal welfare,alt,en,ESCO
-SKL_19aeb7cb73b2,skill,implement environmental choices in your own eating habit,implement environmental choices in your own eating habit,alt,en,ESCO
-SKL_19aeb7cb73b2,skill,adopt a sustainable eating habit,adopt a sustainable eating habit,alt,en,ESCO
-SKL_19aeb7cb73b2,skill,take sustainability issues into account in consumption choices,take sustainability issues into account in consumption choices,alt,en,ESCO
-SKL_19aeb7cb73b2,skill,take animal welfare into account when buying food products,take animal welfare into account when buying food products,alt,en,ESCO
-SKL_19aeb7cb73b2,skill,promoting organic and biological food consumption,promoting organic and biological food consumption,alt,en,ESCO
 SKL_46f9b42c75bd,skill,advise others,advise others,preferred,en,ESCO
 SKL_46f9b42c75bd,skill,mentor others,mentor others,alt,en,ESCO
 SKL_46f9b42c75bd,skill,mentor individuals,mentor individuals,alt,en,ESCO
@@ -21749,18 +21729,6 @@ SKL_cc2e6ec387e6,skill,tolerate critics,tolerate critics,alt,en,ESCO
 SKL_cc2e6ec387e6,skill,accept critics,accept critics,alt,en,ESCO
 SKL_cc2e6ec387e6,skill,welcome feedback,welcome feedback,alt,en,ESCO
 SKL_cc2e6ec387e6,skill,handle feedback,handle feedback,alt,en,ESCO
-SKL_dbaca5910e03,skill,"apply knowledge of philosophy, ethics and religion","apply knowledge of philosophy, ethics and religion",preferred,en,ESCO
-SKL_dbaca5910e03,skill,follow ethical values and religious believes,follow ethical values and religious believes,alt,en,ESCO
-SKL_dbaca5910e03,skill,apply philosophical school of thoughts,apply philosophical school of thoughts,alt,en,ESCO
-SKL_dbaca5910e03,skill,act according to ethical and religious values,act according to ethical and religious values,alt,en,ESCO
-SKL_dbaca5910e03,skill,evaluate the moral and ethical consequences of actions,evaluate the moral and ethical consequences of actions,alt,en,ESCO
-SKL_dbaca5910e03,skill,assess the consequences and impact of ideas,assess the consequences and impact of ideas,alt,en,ESCO
-SKL_0382fb7b6808,skill,adopt ways to reduce pollution,adopt ways to reduce pollution,preferred,en,ESCO
-SKL_0382fb7b6808,skill,reduce noise,reduce noise,alt,en,ESCO
-SKL_0382fb7b6808,skill,prefer public to private transport,prefer public to private transport,alt,en,ESCO
-SKL_0382fb7b6808,skill,use public transportation,use public transportation,alt,en,ESCO
-SKL_0382fb7b6808,skill,handle your own waste,handle your own waste,alt,en,ESCO
-SKL_0382fb7b6808,skill,prevent pollution,prevent pollution,alt,en,ESCO
 SKL_249ccf2ac00c,skill,meet commitments,meet commitments,preferred,en,ESCO
 SKL_249ccf2ac00c,skill,show commitment,show commitment,alt,en,ESCO
 SKL_249ccf2ac00c,skill,achieve goals,achieve goals,alt,en,ESCO
@@ -21778,10 +21746,6 @@ SKL_249ccf2ac00c,skill,demonstrate conscientiousness,demonstrate conscientiousne
 SKL_249ccf2ac00c,skill,show reliability,show reliability,alt,en,ESCO
 SKL_249ccf2ac00c,skill,demonstrate punctuality,demonstrate punctuality,alt,en,ESCO
 SKL_249ccf2ac00c,skill,keep promises,keep promises,alt,en,ESCO
-SKL_ef5d231e6260,skill,adjust to physical demands,adjust to physical demands,preferred,en,ESCO
-SKL_ef5d231e6260,skill,tolerate unfavourable temperatures,tolerate unfavourable temperatures,alt,en,ESCO
-SKL_ef5d231e6260,skill,work under adverse weather conditions,work under adverse weather conditions,alt,en,ESCO
-SKL_ef5d231e6260,skill,demonstrate physical resilience,demonstrate physical resilience,alt,en,ESCO
 SKL_5fca413b3927,skill,assume responsibility,assume responsibility,preferred,en,ESCO
 SKL_5fca413b3927,skill,showing responsibility,showing responsibility,alt,en,ESCO
 SKL_5fca413b3927,skill,prove sense of responsibility,prove sense of responsibility,alt,en,ESCO
@@ -21827,15 +21791,6 @@ SKL_49cd87c36526,skill,calculate probabilities,calculate probabilities,preferred
 SKL_49cd87c36526,skill,estimate the probability of an outcome or fact,estimate the probability of an outcome or fact,alt,en,ESCO
 SKL_49cd87c36526,skill,work with probabilities,work with probabilities,alt,en,ESCO
 SKL_49cd87c36526,skill,make estimations,make estimations,alt,en,ESCO
-SKL_c3fb7706013d,skill,manage financial and material resources,manage financial and material resources,preferred,en,ESCO
-SKL_c3fb7706013d,skill,manage personal budget for financial needs,manage personal budget for financial needs,alt,en,ESCO
-SKL_c3fb7706013d,skill,select appropriate insurance products,select appropriate insurance products,alt,en,ESCO
-SKL_c3fb7706013d,skill,exercise consumer rights,exercise consumer rights,alt,en,ESCO
-SKL_c3fb7706013d,skill,manage personal finances,manage personal finances,alt,en,ESCO
-SKL_c3fb7706013d,skill,undertake effective financial planning,undertake effective financial planning,alt,en,ESCO
-SKL_c3fb7706013d,skill,use investments and credit to achieve long term goals,use investments and credit to achieve long term goals,alt,en,ESCO
-SKL_c3fb7706013d,skill,use financial advices and guidance services with a critical mindset,use financial advices and guidance services with a critical mindset,alt,en,ESCO
-SKL_c3fb7706013d,skill,compare deals and offers when acquiring products or services,compare deals and offers when acquiring products or services,alt,en,ESCO
 SKL_e16588481cd9,skill,show commitment,show commitment,preferred,en,ESCO
 SKL_e16588481cd9,skill,demonstrate commitment,demonstrate commitment,alt,en,ESCO
 SKL_e16588481cd9,skill,show willingness to work,show willingness to work,alt,en,ESCO
@@ -21850,12 +21805,6 @@ SKL_481bbe53b9b3,skill,think quickly,think quickly,preferred,en,ESCO
 SKL_481bbe53b9b3,skill,show a good level of perception,show a good level of perception,alt,en,ESCO
 SKL_481bbe53b9b3,skill,react quickly,react quickly,alt,en,ESCO
 SKL_481bbe53b9b3,skill,understand quickly,understand quickly,alt,en,ESCO
-SKL_4abb95a7d8eb,skill,evaluate environmental impact of personal behaviour,evaluate environmental impact of personal behaviour,preferred,en,ESCO
-SKL_4abb95a7d8eb,skill,demonstrate sensitivity for environmental issues,demonstrate sensitivity for environmental issues,alt,en,ESCO
-SKL_4abb95a7d8eb,skill,adopt an ecological attitude,adopt an ecological attitude,alt,en,ESCO
-SKL_4abb95a7d8eb,skill,consider the impact of your actions on the environment,consider the impact of your actions on the environment,alt,en,ESCO
-SKL_4abb95a7d8eb,skill,apply ethical and sustainable thinking,apply ethical and sustainable thinking,alt,en,ESCO
-SKL_4abb95a7d8eb,skill,adopt an environmental friendly attitude,adopt an environmental friendly attitude,alt,en,ESCO
 SKL_416b8573cd5d,skill,manage quality,manage quality,preferred,en,ESCO
 SKL_416b8573cd5d,skill,apply quality standards,apply quality standards,alt,en,ESCO
 SKL_416b8573cd5d,skill,managing quality,managing quality,alt,en,ESCO
@@ -21918,29 +21867,6 @@ SKL_0348dd5625d1,skill,demonstrate flexibility,demonstrate flexibility,alt,en,ES
 SKL_0348dd5625d1,skill,adjust to change,adjust to change,alt,en,ESCO
 SKL_0348dd5625d1,skill,conform to change,conform to change,alt,en,ESCO
 SKL_0348dd5625d1,skill,assimilate to change,assimilate to change,alt,en,ESCO
-SKL_5c1cafdcd539,skill,adopt ways to reduce negative impact of consumption,adopt ways to reduce negative impact of consumption,preferred,en,ESCO
-SKL_5c1cafdcd539,skill,follow environmentally-sustainable work practices,follow environmentally-sustainable work practices,alt,en,ESCO
-SKL_5c1cafdcd539,skill,reuse products,reuse products,alt,en,ESCO
-SKL_5c1cafdcd539,skill,avoid plastic,avoid plastic,alt,en,ESCO
-SKL_5c1cafdcd539,skill,practice a minimalist lifestyle,practice a minimalist lifestyle,alt,en,ESCO
-SKL_5c1cafdcd539,skill,follow recycling collection schedules,follow recycling collection schedules,alt,en,ESCO
-SKL_5c1cafdcd539,skill,share physical resources,share physical resources,alt,en,ESCO
-SKL_5c1cafdcd539,skill,avoid single-use items,avoid single-use items,alt,en,ESCO
-SKL_5c1cafdcd539,skill,reduce energy usage,reduce energy usage,alt,en,ESCO
-SKL_5c1cafdcd539,skill,reuse materials,reuse materials,alt,en,ESCO
-SKL_5c1cafdcd539,skill,minimise waste production in households,minimise waste production in households,alt,en,ESCO
-SKL_5c1cafdcd539,skill,reduce water or energy consumption,reduce water or energy consumption,alt,en,ESCO
-SKL_1ba5b7de1077,skill,maintain psychological well-being,maintain psychological well-being,preferred,en,ESCO
-SKL_1ba5b7de1077,skill,maintain work-life balance,maintain work-life balance,alt,en,ESCO
-SKL_1ba5b7de1077,skill,pursue mental wellbeing,pursue mental wellbeing,alt,en,ESCO
-SKL_1ba5b7de1077,skill,protect the psychological wellbeing,protect the psychological wellbeing,alt,en,ESCO
-SKL_1ba5b7de1077,skill,safely use digital technologies,safely use digital technologies,alt,en,ESCO
-SKL_1ba5b7de1077,skill,balance working time and personal life,balance working time and personal life,alt,en,ESCO
-SKL_ba4b591cdd44,skill,protect the health of others,protect the health of others,preferred,en,ESCO
-SKL_ba4b591cdd44,skill,intervene promptly in case of need,intervene promptly in case of need,alt,en,ESCO
-SKL_ba4b591cdd44,skill,react adequately in case of accidents,react adequately in case of accidents,alt,en,ESCO
-SKL_ba4b591cdd44,skill,provide first aid,provide first aid,alt,en,ESCO
-SKL_ba4b591cdd44,skill,safeguard one's person health,safeguard one's person health,alt,en,ESCO
 SKL_52b55f5a19f4,skill,moderate a discussion,moderate a discussion,preferred,en,ESCO
 SKL_52b55f5a19f4,skill,guide a discussion,guide a discussion,alt,en,ESCO
 SKL_52b55f5a19f4,skill,moderate workshops,moderate workshops,alt,en,ESCO
@@ -21965,12 +21891,6 @@ SKL_a341429e6402,skill,apply spatial reasoning,apply spatial reasoning,alt,en,ES
 SKL_a341429e6402,skill,work with form and space,work with form and space,alt,en,ESCO
 SKL_a341429e6402,skill,utilise spatial orientation,utilise spatial orientation,alt,en,ESCO
 SKL_a341429e6402,skill,work with shapes and spaces,work with shapes and spaces,alt,en,ESCO
-SKL_4018c6dd5f4f,skill,respect the diversity of cultural values and norms,respect the diversity of cultural values and norms,preferred,en,ESCO
-SKL_4018c6dd5f4f,skill,take national cultural identity in consideration,take national cultural identity in consideration,alt,en,ESCO
-SKL_4018c6dd5f4f,skill,take account of the diversity of cultural values and norms,take account of the diversity of cultural values and norms,alt,en,ESCO
-SKL_4018c6dd5f4f,skill,show sensitivity towards different worldviews,show sensitivity towards different worldviews,alt,en,ESCO
-SKL_4018c6dd5f4f,skill,support cultural diversity,support cultural diversity,alt,en,ESCO
-SKL_4018c6dd5f4f,skill,demonstrate knowledge of the multi-cultural dimension of European societies,demonstrate knowledge of the multi-cultural dimension of european societies,alt,en,ESCO
 SKL_3bd897deb869,skill,cope with uncertainty,cope with uncertainty,preferred,en,ESCO
 SKL_3bd897deb869,skill,handle uncertainty,handle uncertainty,alt,en,ESCO
 SKL_3bd897deb869,skill,deal with uncertainties,deal with uncertainties,alt,en,ESCO
@@ -22095,11 +22015,6 @@ SKL_e821afde5430,skill,labor efficiently,labor efficiently,alt,en,ESCO
 SKL_e821afde5430,skill,efficiently work,efficiently work,alt,en,ESCO
 SKL_e821afde5430,skill,do your job efficiently,do your job efficiently,alt,en,ESCO
 SKL_e821afde5430,skill,work in an economical way,work in an economical way,alt,en,ESCO
-SKL_614950908b5b,skill,participate actively in civic life,participate actively in civic life,preferred,en,ESCO
-SKL_614950908b5b,skill,be involved in civic activities,be involved in civic activities,alt,en,ESCO
-SKL_614950908b5b,skill,perform community work,perform community work,alt,en,ESCO
-SKL_614950908b5b,skill,do neighbouring activity,do neighbouring activity,alt,en,ESCO
-SKL_614950908b5b,skill,demonstrate active citisenship,demonstrate active citisenship,alt,en,ESCO
 SKL_0c7f1dd9abf3,skill,think critically,think critically,preferred,en,ESCO
 SKL_0c7f1dd9abf3,skill,detect bias,detect bias,alt,en,ESCO
 SKL_0c7f1dd9abf3,skill,distinguish fact from opinion,distinguish fact from opinion,alt,en,ESCO
@@ -22120,12 +22035,6 @@ SKL_0c7f1dd9abf3,skill,evaluate facts,evaluate facts,alt,en,ESCO
 SKL_0c7f1dd9abf3,skill,consider alternative views,consider alternative views,alt,en,ESCO
 SKL_0c7f1dd9abf3,skill,evaluate opinions,evaluate opinions,alt,en,ESCO
 SKL_0c7f1dd9abf3,skill,evaluate truth,evaluate truth,alt,en,ESCO
-SKL_38a7b22f4dbe,skill,engage others in environment friendly behaviours,engage others in environment friendly behaviours,preferred,en,ESCO
-SKL_38a7b22f4dbe,skill,advocate sustainability,advocate sustainability,alt,en,ESCO
-SKL_38a7b22f4dbe,skill,promote sustainability,promote sustainability,alt,en,ESCO
-SKL_38a7b22f4dbe,skill,encourage others to respect the environment,encourage others to respect the environment,alt,en,ESCO
-SKL_38a7b22f4dbe,skill,promote environmental friendly behaviours,promote environmental friendly behaviours,alt,en,ESCO
-SKL_38a7b22f4dbe,skill,inform about sustainability,inform about sustainability,alt,en,ESCO
 SKL_7b9281bcde1f,skill,attend to detail,attend to detail,preferred,en,ESCO
 SKL_7b9281bcde1f,skill,work meticulously,work meticulously,alt,en,ESCO
 SKL_7b9281bcde1f,skill,attend to precision,attend to precision,alt,en,ESCO
@@ -22138,20 +22047,6 @@ SKL_7b9281bcde1f,skill,to work precisely,to work precisely,alt,en,ESCO
 SKL_7b9281bcde1f,skill,work in a proper manner,work in a proper manner,alt,en,ESCO
 SKL_7b9281bcde1f,skill,attending to details,attending to details,alt,en,ESCO
 SKL_7b9281bcde1f,skill,manage details,manage details,alt,en,ESCO
-SKL_20d234eddd45,skill,make an informed use of the health-care system,make an informed use of the health-care system,preferred,en,ESCO
-SKL_20d234eddd45,skill,manage appropriate medications,manage appropriate medications,alt,en,ESCO
-SKL_20d234eddd45,skill,apply preventive care measures to avoid physical or psychological harm,apply preventive care measures to avoid physical or psychological harm,alt,en,ESCO
-SKL_20d234eddd45,skill,find the right healthcare service,find the right healthcare service,alt,en,ESCO
-SKL_9ceba7edd185,skill,promote the principles of democracy and rule of law,promote the principles of democracy and rule of law,preferred,en,ESCO
-SKL_9ceba7edd185,skill,support gender equality,support gender equality,alt,en,ESCO
-SKL_9ceba7edd185,skill,mainstream gender,mainstream gender,alt,en,ESCO
-SKL_9ceba7edd185,skill,support gender mainstreaming,support gender mainstreaming,alt,en,ESCO
-SKL_9ceba7edd185,skill,implement equality policies,implement equality policies,alt,en,ESCO
-SKL_9ceba7edd185,skill,support democracy,support democracy,alt,en,ESCO
-SKL_9ceba7edd185,skill,promote a culture of piece and non violence,promote a culture of piece and non violence,alt,en,ESCO
-SKL_9ceba7edd185,skill,confront discriminations,confront discriminations,alt,en,ESCO
-SKL_9ceba7edd185,skill,demonstrate an understanding of European common values,demonstrate an understanding of european common values,alt,en,ESCO
-SKL_9ceba7edd185,skill,fight discrimination,fight discrimination,alt,en,ESCO
 SKL_0433197adf10,skill,express yourself creatively,express yourself creatively,preferred,en,ESCO
 SKL_0433197adf10,skill,draw,draw,alt,en,ESCO
 SKL_0433197adf10,skill,engage in artistic self-expression,engage in artistic self-expression,alt,en,ESCO
@@ -22174,11 +22069,6 @@ SKL_71c5bfd3aab5,skill,handle tense situation,handle tense situation,alt,en,ESCO
 SKL_71c5bfd3aab5,skill,mediate tense situations,mediate tense situations,alt,en,ESCO
 SKL_71c5bfd3aab5,skill,manage conflicts,manage conflicts,alt,en,ESCO
 SKL_71c5bfd3aab5,skill,mediate in conflicts,mediate in conflicts,alt,en,ESCO
-SKL_0f59cbd01984,skill,appreciate diverse cultural and artistic expression,appreciate diverse cultural and artistic expression,preferred,en,ESCO
-SKL_0f59cbd01984,skill,appreciate artistic expressions,appreciate artistic expressions,alt,en,ESCO
-SKL_0f59cbd01984,skill,appreciate cultural heritage,appreciate cultural heritage,alt,en,ESCO
-SKL_0f59cbd01984,skill,demonstrate cultural awareness,demonstrate cultural awareness,alt,en,ESCO
-SKL_0f59cbd01984,skill,have a feeling for aesthetics,have a feeling for aesthetics,alt,en,ESCO
 SKL_2e8814e0c022,skill,demonstrate willingness to learn,demonstrate willingness to learn,preferred,en,ESCO
 SKL_2e8814e0c022,skill,work towards own potential,work towards own potential,alt,en,ESCO
 SKL_2e8814e0c022,skill,show self-knowledge,show self-knowledge,alt,en,ESCO
@@ -22205,11 +22095,6 @@ SKL_99fe55e00127,skill,identify problems,identify problems,preferred,en,ESCO
 SKL_99fe55e00127,skill,detect problems,detect problems,alt,en,ESCO
 SKL_99fe55e00127,skill,signal problems,signal problems,alt,en,ESCO
 SKL_99fe55e00127,skill,diagnose problems,diagnose problems,alt,en,ESCO
-SKL_8cb18b8c928c,skill,maintain physical fitness,maintain physical fitness,preferred,en,ESCO
-SKL_8cb18b8c928c,skill,care about your fitness,care about your fitness,alt,en,ESCO
-SKL_8cb18b8c928c,skill,keep yourself in good conditions,keep yourself in good conditions,alt,en,ESCO
-SKL_8cb18b8c928c,skill,adopt an healthy lifestyle,adopt an healthy lifestyle,alt,en,ESCO
-SKL_8cb18b8c928c,skill,apply preventive healthy behaviours,apply preventive healthy behaviours,alt,en,ESCO
 SKL_7674a3b6283b,skill,solve problems,solve problems,preferred,en,ESCO
 SKL_7674a3b6283b,skill,develop strategies to solve problems,develop strategies to solve problems,alt,en,ESCO
 SKL_7674a3b6283b,skill,come up with strategy to solve problems,come up with strategy to solve problems,alt,en,ESCO
@@ -22245,13 +22130,6 @@ SKL_ea8aac6d5be1,skill,adhere to legislation or policies,adhere to legislation o
 SKL_ea8aac6d5be1,skill,work in a thoughtful manner,work in a thoughtful manner,alt,en,ESCO
 SKL_ea8aac6d5be1,skill,follow directions and procedures,follow directions and procedures,alt,en,ESCO
 SKL_ea8aac6d5be1,skill,comply with legislative provisions,comply with legislative provisions,alt,en,ESCO
-SKL_b9455465e130,skill,move objects,move objects,preferred,en,ESCO
-SKL_b9455465e130,skill,climb,climb,alt,en,ESCO
-SKL_b9455465e130,skill,perform physical activities,perform physical activities,alt,en,ESCO
-SKL_b9455465e130,skill,load and unload good and materials,load and unload good and materials,alt,en,ESCO
-SKL_b9455465e130,skill,store goods,store goods,alt,en,ESCO
-SKL_b9455465e130,skill,move and lift objects,move and lift objects,alt,en,ESCO
-SKL_b9455465e130,skill,lift things,lift things,alt,en,ESCO
 SKL_03db30fda874,skill,demonstrate trustworthiness,demonstrate trustworthiness,preferred,en,ESCO
 SKL_03db30fda874,skill,establish trust,establish trust,alt,en,ESCO
 SKL_03db30fda874,skill,be trustworthy,be trustworthy,alt,en,ESCO
@@ -22315,13 +22193,6 @@ SKL_536912e60310,skill,apply forward-thinking,apply forward-thinking,alt,en,ESCO
 SKL_536912e60310,skill,demonstrate pioneering spirit,demonstrate pioneering spirit,alt,en,ESCO
 SKL_536912e60310,skill,invent,invent,alt,en,ESCO
 SKL_536912e60310,skill,shape the future,shape the future,alt,en,ESCO
-SKL_aa64964a668e,skill,demonstrate awareness of health risks,demonstrate awareness of health risks,preferred,en,ESCO
-SKL_aa64964a668e,skill,know the effects of drugs and alcohol on individuals,know the effects of drugs and alcohol on individuals,alt,en,ESCO
-SKL_aa64964a668e,skill,follow work-place safety regulations,follow work-place safety regulations,alt,en,ESCO
-SKL_aa64964a668e,skill,apply ergonomics,apply ergonomics,alt,en,ESCO
-SKL_aa64964a668e,skill,manage health risk,manage health risk,alt,en,ESCO
-SKL_aa64964a668e,skill,meet health and safety requirements,meet health and safety requirements,alt,en,ESCO
-SKL_aa64964a668e,skill,work safely with hazardous material,work safely with hazardous material,alt,en,ESCO
 SKL_7d91794b64e6,skill,think creatively,think creatively,preferred,en,ESCO
 SKL_7d91794b64e6,skill,show originality,show originality,alt,en,ESCO
 SKL_7d91794b64e6,skill,thinking creatively,thinking creatively,alt,en,ESCO
@@ -22369,14 +22240,6 @@ SKL_bb75147adbcb,skill,adhere to schedules,adhere to schedules,alt,en,ESCO
 SKL_bb75147adbcb,skill,plan deadlines,plan deadlines,alt,en,ESCO
 SKL_bb75147adbcb,skill,plan time,plan time,alt,en,ESCO
 SKL_bb75147adbcb,skill,coordinate actions,coordinate actions,alt,en,ESCO
-SKL_b90b0e526a8b,skill,apply hygiene standards,apply hygiene standards,preferred,en,ESCO
-SKL_b90b0e526a8b,skill,conform to hygienic work practices,conform to hygienic work practices,alt,en,ESCO
-SKL_b90b0e526a8b,skill,follow hygienic work practices,follow hygienic work practices,alt,en,ESCO
-SKL_b90b0e526a8b,skill,identify hygiene risks,identify hygiene risks,alt,en,ESCO
-SKL_b90b0e526a8b,skill,attend to hygiene,attend to hygiene,alt,en,ESCO
-SKL_b90b0e526a8b,skill,attend to cleanliness,attend to cleanliness,alt,en,ESCO
-SKL_b90b0e526a8b,skill,care for hygiene,care for hygiene,alt,en,ESCO
-SKL_b90b0e526a8b,skill,look after hygiene,look after hygiene,alt,en,ESCO
 SKL_abe63d2a4aae,skill,critically evaluate information and its sources,critically evaluate information and its sources,preferred,en,ESCO
 SKL_abe63d2a4aae,skill,detect bias,detect bias,alt,en,ESCO
 SKL_abe63d2a4aae,skill,weigh information,weigh information,alt,en,ESCO
@@ -22386,16 +22249,6 @@ SKL_abe63d2a4aae,skill,verify information,verify information,alt,en,ESCO
 SKL_abe63d2a4aae,skill,understand the role of media in democratic societies,understand the role of media in democratic societies,alt,en,ESCO
 SKL_abe63d2a4aae,skill,verify the source of information,verify the source of information,alt,en,ESCO
 SKL_abe63d2a4aae,skill,evaluate information,evaluate information,alt,en,ESCO
-SKL_4b44e9b302c7,skill,manage chronic health conditions,manage chronic health conditions,preferred,en,ESCO
-SKL_4b44e9b302c7,skill,seek for appropriate care,seek for appropriate care,alt,en,ESCO
-SKL_4b44e9b302c7,skill,utilise walking aids,utilise walking aids,alt,en,ESCO
-SKL_4b44e9b302c7,skill,utilise hearing aids,utilise hearing aids,alt,en,ESCO
-SKL_4b44e9b302c7,skill,utilise seeing aids,utilise seeing aids,alt,en,ESCO
-SKL_ac849d14848f,skill,apply knowledge of social sciences and humanities,apply knowledge of social sciences and humanities,preferred,en,ESCO
-SKL_ac849d14848f,skill,demonstrate interest in politics,demonstrate interest in politics,alt,en,ESCO
-SKL_ac849d14848f,skill,demonstrate knowledge of European history,demonstrate knowledge of european history,alt,en,ESCO
-SKL_ac849d14848f,skill,understand the role of social movements in society,understand the role of social movements in society,alt,en,ESCO
-SKL_ac849d14848f,skill,demonstrate social knowledge,demonstrate social knowledge,alt,en,ESCO
 SKL_60e996ac75cf,skill,"promote ideas, products, services","promote ideas, products, services",preferred,en,ESCO
 SKL_60e996ac75cf,skill,persuade others,persuade others,alt,en,ESCO
 SKL_60e996ac75cf,skill,convince others,convince others,alt,en,ESCO
@@ -22428,10 +22281,6 @@ SKL_b825d30d64b1,skill,implement planning,implement planning,alt,en,ESCO
 SKL_b825d30d64b1,skill,planning performance,planning performance,alt,en,ESCO
 SKL_b825d30d64b1,skill,undertake planning,undertake planning,alt,en,ESCO
 SKL_b825d30d64b1,skill,complete planning,complete planning,alt,en,ESCO
-SKL_123761be71d3,skill,react to physical changes or hazards,react to physical changes or hazards,preferred,en,ESCO
-SKL_123761be71d3,skill,demonstrate agility,demonstrate agility,alt,en,ESCO
-SKL_123761be71d3,skill,be reactive,be reactive,alt,en,ESCO
-SKL_123761be71d3,skill,show responsivness,show responsivness,alt,en,ESCO
 SKL_4a53b7862886,skill,exercise rights and responsibilities,exercise rights and responsibilities,preferred,en,ESCO
 SKL_4a53b7862886,skill,exercise constitutional rights,exercise constitutional rights,alt,en,ESCO
 SKL_4a53b7862886,skill,participate in democratic decision-making,participate in democratic decision-making,alt,en,ESCO
@@ -29703,3 +29552,157 @@ SKL_8d34cd9725d3,skill,Grit,grit,preferred,en,WEF
 SKL_d7670a8cb540,skill,Growth Mindset,growth mindset,preferred,en,WEF
 SKL_d7670a8cb540,skill,learning mindset,learning mindset,alt,en,WEF
 OCC_3aace0eaca7e,occupation,Information and Communications Technology professions,information and communications technology professions,preferred,en,ISCO
+SKL_07d4ba678cd2,skill,logical reasoning,logical reasoning,preferred,en,SOFTTAXO
+SKL_07d4ba678cd2,skill,logical thinking,logical thinking,alt,en,SOFTTAXO
+SKL_07d4ba678cd2,skill,reason logically,reason logically,alt,en,SOFTTAXO
+SKL_07d4ba678cd2,skill,structured reasoning,structured reasoning,alt,en,SOFTTAXO
+SKL_d7281b2e53d8,skill,root cause analysis,root cause analysis,preferred,en,SOFTTAXO
+SKL_d7281b2e53d8,skill,root-cause analysis,root-cause analysis,alt,en,SOFTTAXO
+SKL_d7281b2e53d8,skill,identify root causes,identify root causes,alt,en,SOFTTAXO
+SKL_d7281b2e53d8,skill,diagnose root causes,diagnose root causes,alt,en,SOFTTAXO
+SKL_b6ead3d6f88b,skill,research skills,research skills,preferred,en,SOFTTAXO
+SKL_b6ead3d6f88b,skill,technical research,technical research,alt,en,SOFTTAXO
+SKL_b6ead3d6f88b,skill,information gathering,information gathering,alt,en,SOFTTAXO
+SKL_b6ead3d6f88b,skill,conduct research,conduct research,alt,en,SOFTTAXO
+SKL_163596893dfc,skill,data-driven decision making,data-driven decision making,preferred,en,SOFTTAXO
+SKL_163596893dfc,skill,data-driven thinking,data-driven thinking,alt,en,SOFTTAXO
+SKL_163596893dfc,skill,evidence-based decision making,evidence-based decision making,alt,en,SOFTTAXO
+SKL_163596893dfc,skill,use data to decide,use data to decide,alt,en,SOFTTAXO
+SKL_c91744387530,skill,business acumen,business acumen,preferred,en,SOFTTAXO
+SKL_c91744387530,skill,commercial awareness,commercial awareness,alt,en,SOFTTAXO
+SKL_c91744387530,skill,business understanding,business understanding,alt,en,SOFTTAXO
+SKL_c91744387530,skill,business sense,business sense,alt,en,SOFTTAXO
+SKL_f04e5a783edf,skill,product thinking,product thinking,preferred,en,SOFTTAXO
+SKL_f04e5a783edf,skill,product mindset,product mindset,alt,en,SOFTTAXO
+SKL_f04e5a783edf,skill,product-oriented thinking,product-oriented thinking,alt,en,SOFTTAXO
+SKL_f04e5a783edf,skill,user-value focus,user-value focus,alt,en,SOFTTAXO
+SKL_ba16366b85d6,skill,estimation,estimation,preferred,en,SOFTTAXO
+SKL_ba16366b85d6,skill,effort estimation,effort estimation,alt,en,SOFTTAXO
+SKL_ba16366b85d6,skill,work estimation,work estimation,alt,en,SOFTTAXO
+SKL_ba16366b85d6,skill,estimate tasks,estimate tasks,alt,en,SOFTTAXO
+SKL_e1ac466052c1,skill,technical communication,technical communication,preferred,en,SOFTTAXO
+SKL_e1ac466052c1,skill,communicate technical concepts,communicate technical concepts,alt,en,SOFTTAXO
+SKL_e1ac466052c1,skill,explain technical topics,explain technical topics,alt,en,SOFTTAXO
+SKL_e1ac466052c1,skill,translate technical to non-technical,translate technical to non-technical,alt,en,SOFTTAXO
+SKL_6f4b5b726668,skill,cross-functional collaboration,cross-functional collaboration,preferred,en,SOFTTAXO
+SKL_6f4b5b726668,skill,work across teams,work across teams,alt,en,SOFTTAXO
+SKL_6f4b5b726668,skill,cross-team collaboration,cross-team collaboration,alt,en,SOFTTAXO
+SKL_6f4b5b726668,skill,interdisciplinary collaboration,interdisciplinary collaboration,alt,en,SOFTTAXO
+SKL_0bf92f41a276,skill,remote collaboration,remote collaboration,preferred,en,SOFTTAXO
+SKL_0bf92f41a276,skill,distributed teamwork,distributed teamwork,alt,en,SOFTTAXO
+SKL_0bf92f41a276,skill,asynchronous collaboration,asynchronous collaboration,alt,en,SOFTTAXO
+SKL_0bf92f41a276,skill,virtual teamwork,virtual teamwork,alt,en,SOFTTAXO
+SKL_5ccc12c0506c,skill,cross-cultural competence,cross-cultural competence,preferred,en,SOFTTAXO
+SKL_5ccc12c0506c,skill,intercultural competence,intercultural competence,alt,en,SOFTTAXO
+SKL_5ccc12c0506c,skill,cultural awareness,cultural awareness,alt,en,SOFTTAXO
+SKL_5ccc12c0506c,skill,work across cultures,work across cultures,alt,en,SOFTTAXO
+SKL_4df6d4a256cf,skill,customer orientation,customer orientation,preferred,en,SOFTTAXO
+SKL_4df6d4a256cf,skill,customer focus,customer focus,alt,en,SOFTTAXO
+SKL_4df6d4a256cf,skill,client focus,client focus,alt,en,SOFTTAXO
+SKL_4df6d4a256cf,skill,customer-centricity,customer-centricity,alt,en,SOFTTAXO
+SKL_4df6d4a256cf,skill,service orientation,service orientation,alt,en,SOFTTAXO
+SKL_55ebf1a967dc,skill,stakeholder management,stakeholder management,preferred,en,SOFTTAXO
+SKL_55ebf1a967dc,skill,manage stakeholders,manage stakeholders,alt,en,SOFTTAXO
+SKL_55ebf1a967dc,skill,stakeholder engagement,stakeholder engagement,alt,en,SOFTTAXO
+SKL_55ebf1a967dc,skill,stakeholder communication,stakeholder communication,alt,en,SOFTTAXO
+SKL_3ff4ec515548,skill,knowledge sharing,knowledge sharing,preferred,en,SOFTTAXO
+SKL_3ff4ec515548,skill,share knowledge,share knowledge,alt,en,SOFTTAXO
+SKL_3ff4ec515548,skill,knowledge transfer,knowledge transfer,alt,en,SOFTTAXO
+SKL_3ff4ec515548,skill,share expertise,share expertise,alt,en,SOFTTAXO
+SKL_e181f3e5e395,skill,technical writing,technical writing,preferred,en,SOFTTAXO
+SKL_e181f3e5e395,skill,documentation writing,documentation writing,alt,en,SOFTTAXO
+SKL_e181f3e5e395,skill,write documentation,write documentation,alt,en,SOFTTAXO
+SKL_e181f3e5e395,skill,technical documentation,technical documentation,alt,en,SOFTTAXO
+SKL_684633bafa17,skill,code review etiquette,code review etiquette,preferred,en,SOFTTAXO
+SKL_684633bafa17,skill,constructive code review,constructive code review,alt,en,SOFTTAXO
+SKL_684633bafa17,skill,giving code feedback,giving code feedback,alt,en,SOFTTAXO
+SKL_684633bafa17,skill,respectful code review,respectful code review,alt,en,SOFTTAXO
+SKL_be47a6b444c3,skill,facilitation,facilitation,preferred,en,SOFTTAXO
+SKL_be47a6b444c3,skill,facilitate meetings,facilitate meetings,alt,en,SOFTTAXO
+SKL_be47a6b444c3,skill,workshop facilitation,workshop facilitation,alt,en,SOFTTAXO
+SKL_be47a6b444c3,skill,facilitate discussions,facilitate discussions,alt,en,SOFTTAXO
+SKL_5e1bee3f14ee,skill,storytelling,storytelling,preferred,en,SOFTTAXO
+SKL_5e1bee3f14ee,skill,data storytelling,data storytelling,alt,en,SOFTTAXO
+SKL_5e1bee3f14ee,skill,narrative communication,narrative communication,alt,en,SOFTTAXO
+SKL_5e1bee3f14ee,skill,storytelling with data,storytelling with data,alt,en,SOFTTAXO
+SKL_67942780f949,skill,diplomacy,diplomacy,preferred,en,SOFTTAXO
+SKL_67942780f949,skill,tactfulness,tactfulness,alt,en,SOFTTAXO
+SKL_67942780f949,skill,tact,tact,alt,en,SOFTTAXO
+SKL_67942780f949,skill,political awareness,political awareness,alt,en,SOFTTAXO
+SKL_0b510d15f203,skill,technical leadership,technical leadership,preferred,en,SOFTTAXO
+SKL_0b510d15f203,skill,tech lead skills,tech lead skills,alt,en,SOFTTAXO
+SKL_0b510d15f203,skill,lead technically,lead technically,alt,en,SOFTTAXO
+SKL_0b510d15f203,skill,technical direction,technical direction,alt,en,SOFTTAXO
+SKL_399bf3dca1a7,skill,delegation,delegation,preferred,en,SOFTTAXO
+SKL_399bf3dca1a7,skill,delegate tasks,delegate tasks,alt,en,SOFTTAXO
+SKL_399bf3dca1a7,skill,delegate responsibilities,delegate responsibilities,alt,en,SOFTTAXO
+SKL_399bf3dca1a7,skill,distribute work,distribute work,alt,en,SOFTTAXO
+SKL_dfcd953b1a02,skill,influence,influence,preferred,en,SOFTTAXO
+SKL_dfcd953b1a02,skill,influencing,influencing,alt,en,SOFTTAXO
+SKL_dfcd953b1a02,skill,influence without authority,influence without authority,alt,en,SOFTTAXO
+SKL_dfcd953b1a02,skill,build buy-in,build buy-in,alt,en,SOFTTAXO
+SKL_782eab587f66,skill,team building,team building,preferred,en,SOFTTAXO
+SKL_782eab587f66,skill,build teams,build teams,alt,en,SOFTTAXO
+SKL_782eab587f66,skill,foster team cohesion,foster team cohesion,alt,en,SOFTTAXO
+SKL_782eab587f66,skill,team development,team development,alt,en,SOFTTAXO
+SKL_7c5ca2b60c71,skill,servant leadership,servant leadership,preferred,en,SOFTTAXO
+SKL_7c5ca2b60c71,skill,servant-leader,servant-leader,alt,en,SOFTTAXO
+SKL_7c5ca2b60c71,skill,supportive leadership,supportive leadership,alt,en,SOFTTAXO
+SKL_7c5ca2b60c71,skill,enabling leadership,enabling leadership,alt,en,SOFTTAXO
+SKL_df43b2fc518f,skill,vision setting,vision setting,preferred,en,SOFTTAXO
+SKL_df43b2fc518f,skill,set vision,set vision,alt,en,SOFTTAXO
+SKL_df43b2fc518f,skill,articulate vision,articulate vision,alt,en,SOFTTAXO
+SKL_df43b2fc518f,skill,provide direction,provide direction,alt,en,SOFTTAXO
+SKL_2272d162a4a6,skill,self-discipline,self-discipline,preferred,en,SOFTTAXO
+SKL_2272d162a4a6,skill,discipline,discipline,alt,en,SOFTTAXO
+SKL_2272d162a4a6,skill,disciplined work,disciplined work,alt,en,SOFTTAXO
+SKL_2272d162a4a6,skill,self-regulation,self-regulation,alt,en,SOFTTAXO
+SKL_0904ff32bd52,skill,dependability,dependability,preferred,en,SOFTTAXO
+SKL_0904ff32bd52,skill,dependable,dependable,alt,en,SOFTTAXO
+SKL_0904ff32bd52,skill,reliable delivery,reliable delivery,alt,en,SOFTTAXO
+SKL_0904ff32bd52,skill,follow through,follow through,alt,en,SOFTTAXO
+SKL_3885c44e6d05,skill,dealing with ambiguity,dealing with ambiguity,preferred,en,SOFTTAXO
+SKL_3885c44e6d05,skill,tolerate ambiguity,tolerate ambiguity,alt,en,SOFTTAXO
+SKL_3885c44e6d05,skill,comfort with uncertainty,comfort with uncertainty,alt,en,SOFTTAXO
+SKL_3885c44e6d05,skill,navigate ambiguity,navigate ambiguity,alt,en,SOFTTAXO
+SKL_2eb70d56b130,skill,patience,patience,preferred,en,SOFTTAXO
+SKL_2eb70d56b130,skill,patient,patient,alt,en,SOFTTAXO
+SKL_2eb70d56b130,skill,composure,composure,alt,en,SOFTTAXO
+SKL_2eb70d56b130,skill,even-temperedness,even-temperedness,alt,en,SOFTTAXO
+SKL_1a42ba959d82,skill,goal orientation,goal orientation,preferred,en,SOFTTAXO
+SKL_1a42ba959d82,skill,goal-setting,goal-setting,alt,en,SOFTTAXO
+SKL_1a42ba959d82,skill,results orientation,results orientation,alt,en,SOFTTAXO
+SKL_1a42ba959d82,skill,outcome focus,outcome focus,alt,en,SOFTTAXO
+SKL_ee7e12c4cca4,skill,self-directed learning,self-directed learning,preferred,en,SOFTTAXO
+SKL_ee7e12c4cca4,skill,self-learning,self-learning,alt,en,SOFTTAXO
+SKL_ee7e12c4cca4,skill,learn independently,learn independently,alt,en,SOFTTAXO
+SKL_ee7e12c4cca4,skill,autodidactic learning,autodidactic learning,alt,en,SOFTTAXO
+SKL_1307ae98a956,skill,learning agility,learning agility,preferred,en,SOFTTAXO
+SKL_1307ae98a956,skill,agile learning,agile learning,alt,en,SOFTTAXO
+SKL_1307ae98a956,skill,quick to learn,quick to learn,alt,en,SOFTTAXO
+SKL_1307ae98a956,skill,adapt and learn,adapt and learn,alt,en,SOFTTAXO
+SKL_5fcbf9c9c9eb,skill,staying current with technology,staying current with technology,preferred,en,SOFTTAXO
+SKL_5fcbf9c9c9eb,skill,keep up with technology,keep up with technology,alt,en,SOFTTAXO
+SKL_5fcbf9c9c9eb,skill,tech trend awareness,tech trend awareness,alt,en,SOFTTAXO
+SKL_5fcbf9c9c9eb,skill,continuous upskilling,continuous upskilling,alt,en,SOFTTAXO
+SKL_5fcbf9c9c9eb,skill,stay up to date,stay up to date,alt,en,SOFTTAXO
+SKL_4f493d8a1c57,skill,experimentation,experimentation,preferred,en,SOFTTAXO
+SKL_4f493d8a1c57,skill,experimental mindset,experimental mindset,alt,en,SOFTTAXO
+SKL_4f493d8a1c57,skill,willingness to experiment,willingness to experiment,alt,en,SOFTTAXO
+SKL_4f493d8a1c57,skill,prototyping mindset,prototyping mindset,alt,en,SOFTTAXO
+SKL_0403db4fe62d,skill,openness to feedback,openness to feedback,preferred,en,SOFTTAXO
+SKL_0403db4fe62d,skill,receptive to feedback,receptive to feedback,alt,en,SOFTTAXO
+SKL_0403db4fe62d,skill,coachability,coachability,alt,en,SOFTTAXO
+SKL_0403db4fe62d,skill,act on feedback,act on feedback,alt,en,SOFTTAXO
+SKL_b0b73dac4fc7,skill,reflective practice,reflective practice,preferred,en,SOFTTAXO
+SKL_b0b73dac4fc7,skill,self-reflection,self-reflection,alt,en,SOFTTAXO
+SKL_b0b73dac4fc7,skill,retrospective mindset,retrospective mindset,alt,en,SOFTTAXO
+SKL_b0b73dac4fc7,skill,reflective learning,reflective learning,alt,en,SOFTTAXO
+SKL_57a2554d1bca,skill,ethical judgment,ethical judgment,preferred,en,SOFTTAXO
+SKL_57a2554d1bca,skill,professional ethics,professional ethics,alt,en,SOFTTAXO
+SKL_57a2554d1bca,skill,ethical decision making,ethical decision making,alt,en,SOFTTAXO
+SKL_57a2554d1bca,skill,ethical awareness,ethical awareness,alt,en,SOFTTAXO
+SKL_489020a3c2f0,skill,customer empathy,customer empathy,preferred,en,SOFTTAXO
+SKL_489020a3c2f0,skill,user empathy,user empathy,alt,en,SOFTTAXO
+SKL_489020a3c2f0,skill,empathise with users,empathise with users,alt,en,SOFTTAXO
+SKL_489020a3c2f0,skill,understand user needs,understand user needs,alt,en,SOFTTAXO

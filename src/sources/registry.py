@@ -18,6 +18,7 @@ from .lightcast import LightcastSource
 from .kaggle_skills import KaggleSkillsSource
 from .ecf import EcfSource
 from .soft_skills import SoftSkillsSource
+from .soft_taxonomy import SoftTaxonomySource
 from .wef import WefSource
 from .emerging_roles import EmergingRolesSource
 from .adem_demand import AdemDemandSource
@@ -77,6 +78,9 @@ register(SoftSkillsSource())
 # WEF Global Skills Taxonomy: structured soft skills (5 WEF-aligned soft sub-domains) + a transversal
 # occupation layer. Skills-only; its transversal attach reads existing occupations at ingest.
 register(WefSource())
+# Comprehensive curated IT soft-skills taxonomy: genuinely-new soft skills self-classified into the 5
+# soft sub-domains (dedup-skips already-covered terms) + a universal `core` transversal occupation attach.
+register(SoftTaxonomySource())
 
 # --- curated emerging IT roles (real occupations absent from ESCO/O*NET; attach to ISCO) -----
 # Registered before DATAJOBS so its occupations exist when data_jobs attributes demand to them.

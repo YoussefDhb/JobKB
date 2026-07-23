@@ -50,6 +50,66 @@ def is_structural_noise(label: str) -> bool:
     return bool(_JUNK.search(label))
 
 
+# --------------------------------------------------------------------------------------
+# Soft-branch IT-relevance filter (curated). O*NET "Abilities" and ESCO's broad transversal
+# collection dragged psychometric / physical / non-IT-life-skill entries into the soft branch
+# (Far Vision, Finger Dexterity, Perceptual Speed, "apply hygiene standards", "maintain physical
+# fitness", "foster biodiversity", "participate in civic life", …). These are not IT-workplace soft
+# skills. `is_non_it_soft()` (EXACT normalized-label match — substrings are unsafe: they would hit
+# real IT skills like "integrated development environment", "Cyber Hygiene", "Physical Layers",
+# "healthcare data systems") is applied at the ONET/ESCO ingests to keep them out. Kept deliberately:
+# the cognitive/verbal O*NET reasoning abilities (Deductive/Inductive/Mathematical Reasoning, Oral/
+# Written Comprehension/Expression) and every IT-relevant ESCO transversal skill (accept criticism,
+# cope with uncertainty, respect confidentiality, manage digital identity, think critically, …).
+_NON_IT_SOFT_RAW = [
+    # O*NET physical / sensory / psychomotor abilities (never IT soft skills)
+    "Far Vision", "Near Vision", "Night Vision", "Peripheral Vision", "Depth Perception",
+    "Glare Sensitivity", "Visual Color Discrimination", "Speech Clarity",
+    # NB: "Speech Recognition" deliberately NOT listed — it is a real hard IT/ML skill (ASR), not the
+    # O*NET sensory ability, and must not be pruned.
+    "Hearing Sensitivity", "Auditory Attention", "Sound Localization", "Finger Dexterity",
+    "Manual Dexterity", "Arm-Hand Steadiness", "Control Precision", "Multilimb Coordination",
+    "Response Orientation", "Rate Control", "Reaction Time", "Wrist-Finger Speed",
+    "Speed of Limb Movement", "Static Strength", "Explosive Strength", "Dynamic Strength",
+    "Trunk Strength", "Stamina", "Extent Flexibility", "Dynamic Flexibility",
+    "Gross Body Coordination", "Gross Body Equilibrium",
+    # O*NET raw perceptual / attention / aptitude abilities (psychometric traits, not hiring skills)
+    "Perceptual Speed", "Speed of Closure", "Flexibility of Closure", "Selective Attention",
+    "Time Sharing", "Spatial Orientation", "Number Facility", "Problem Sensitivity",
+    "Fluency of Ideas", "Originality", "Category Flexibility", "Memorization",
+    # ESCO non-IT transversal "life skills" (health / physical / civic / environmental / cultural)
+    "adopt ways to foster biodiversity and animal welfare",
+    "adopt ways to reduce pollution",
+    "adopt ways to reduce negative impact of consumption",
+    "evaluate environmental impact of personal behaviour",
+    "engage others in environment friendly behaviours",
+    "apply hygiene standards",
+    "maintain physical fitness",
+    "maintain psychological well-being",
+    "demonstrate awareness of health risks",
+    "make an informed use of the health-care system",
+    "manage chronic health conditions",
+    "protect the health of others",
+    "adjust to physical demands",
+    "react to physical changes or hazards",
+    "move objects",
+    "manage financial and material resources",
+    "participate actively in civic life",
+    "promote the principles of democracy and rule of law",
+    "appreciate diverse cultural and artistic expression",
+    "respect the diversity of cultural values and norms",
+    "apply knowledge of philosophy, ethics and religion",
+    "apply knowledge of social sciences and humanities",
+]
+_NON_IT_SOFT = {K.normalize_label(x) for x in _NON_IT_SOFT_RAW}
+
+
+def is_non_it_soft(label: str) -> bool:
+    """True if `label` is a curated non-IT soft-branch entry (physical/psychometric O*NET ability or
+    a non-IT ESCO life-skill) that should be pruned from the soft branch. Exact normalized match only."""
+    return K.normalize_label(label) in _NON_IT_SOFT
+
+
 def _anchors(kind, embedder):
     """(it_matrix, nonit_matrix) of anchor embeddings for a kind, built once per process."""
     if kind in _ANCHOR_CACHE:

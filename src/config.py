@@ -284,6 +284,7 @@ SRC_DATAJOBS = "DATAJOBS"    # hybrid: harvested tool skills + large-scale deman
 SRC_ZENODO = "ZENODO"        # hybrid: harvested tools + demand (Zenodo 3906955, Stack Overflow postings)
 SRC_EMERGING = "EMERGING"    # curated emerging IT roles observed in data_jobs but absent from ESCO/O*NET
 SRC_SOFTSKILLS = "SOFTSKILLS"  # curated noun-form soft/transversal skills used in IT hiring
+SRC_SOFTTAXO = "SOFTTAXO"    # comprehensive curated IT soft-skills taxonomy (5 sub-domains + universal attach)
 SRC_WEF = "WEF"              # WEF Global Skills Taxonomy (2021): structured soft skills + transversal attach
 SRC_DJINNI = "DJINNI"        # relation-only demand: Djinni IT postings (role tag + free-text JD extraction)
 SRC_LINKEDIN_SWE = "LINKEDIN_SWE"  # hybrid: LinkedIn software-engineering postings (pre-extracted skills)
@@ -301,7 +302,7 @@ REAL_OCC_SOURCES = (SRC_ESCO, SRC_ONET, SRC_NOC, SRC_ROME, SRC_EMERGING)
 # sub-domain from the IT root branch each topic descends from — both more reliable than a
 # keyword match on a bare skill/topic label.
 SELF_CLASSIFIED_SUBDOMAIN_SOURCES = {SRC_SFIA, SRC_CSO, SRC_LIGHTCAST, SRC_KAGGLE, SRC_ECF,
-                                     SRC_DATAJOBS, SRC_ZENODO, SRC_WEF}
+                                     SRC_DATAJOBS, SRC_ZENODO, SRC_WEF, SRC_SOFTTAXO}
 
 # CSO curation: CSO 3.5 is ~14.6k CS *research topics* — far broader than a jobs/skills KB
 # needs, and deep branches are noisy research fragments. We keep only the IT-relevant, shallow

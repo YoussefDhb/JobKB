@@ -14,6 +14,7 @@ from collections import Counter
 
 from . import common as K
 from . import wikidata as W
+from . import hierarchy as H
 
 
 class _UF:
@@ -192,12 +193,17 @@ def _merge_skills():
         primary_en = _consensus_label(members, "en")
         primary_fr = _consensus_label(members, "fr")
         alt_en, alt_fr = _merged_alts(members, primary_en, primary_fr)
+        # hard_soft is a DETERMINISTIC function of the skill's taxonomy placement (it_subtype -> domain
+        # -> hard/soft), so it can never contradict the category (e.g. a tech skill in a hard category
+        # tagged "soft"). Fall back to the member consensus only if the category is somehow unknown.
+        it_sub = _majority(members, "it_subtype")
+        hard_soft = H.skill_type(it_sub) or _majority(members, "hard_soft_provisional")
         rows.append({
             "unified_id": _unified_id("USKL_", comp),
             "primary_label_en": primary_en, "primary_label_fr": primary_fr,
             "alt_labels_en": alt_en, "alt_labels_fr": alt_fr,
-            "hard_soft": _majority(members, "hard_soft_provisional"),
-            "it_subtype": _majority(members, "it_subtype"),
+            "hard_soft": hard_soft,
+            "it_subtype": it_sub,
             "sources": " | ".join(sorted({m["source"] for m in members})),
             "member_entity_ids": " | ".join(sorted(comp)),
             "description": _member_description(members),

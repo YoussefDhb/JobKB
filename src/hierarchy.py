@@ -83,6 +83,15 @@ def _cat_type(cat):
     return DOMAINS[CATEGORIES[cat][0]][0]
 
 
+def skill_type(cat):
+    """Authoritative hard/soft type for a skill from its category (a category belongs to one domain,
+    and a domain is hard or soft). Returns "hard"/"soft", or "" if `cat` is not a known category — so
+    a skill's `hard_soft` is a deterministic function of its taxonomy placement, never a separate
+    (and possibly contradictory) guess. This is the single source of truth used by `merge`."""
+    c = CATEGORIES.get(cat)
+    return DOMAINS[c[0]][0] if c else ""
+
+
 def _rx(p):
     return re.compile(p)
 
@@ -252,13 +261,16 @@ def _occupation_domain(occ):
 
 
 def _add_transversal(esco, esco_ids, label_rows):
-    """Add the ESCO transversal collection as soft skills (the soft vocabulary)."""
+    """Add the ESCO transversal collection as soft skills (the soft vocabulary). Non-IT "life skills"
+    (health / physical / civic / environmental / cultural) are pruned via the curated soft-relevance
+    filter, so the soft branch stays IT-focused."""
     if not os.path.isfile(TRANSVERSAL):
         return 0
+    from . import relevance as R  # lazy: relevance pulls in the align models
     tdf = K.read_csv_smart(TRANSVERSAL)
     transv_ids = {K.uri_tail((r.get("conceptUri") or "").strip()) for _, r in tdf.iterrows()}
     for r in esco:
-        if r["source_id"] in transv_ids:
+        if r["source_id"] in transv_ids and not R.is_non_it_soft(r.get("pref_label_en", "")):
             r["hard_soft_provisional"] = "soft"
             r["hard_soft_method"] = "esco_transversal_collection"
     added = 0
@@ -266,8 +278,10 @@ def _add_transversal(esco, esco_ids, label_rows):
         tail = K.uri_tail((r.get("conceptUri") or "").strip())
         if not tail or tail in esco_ids:
             continue
-        eid = K.mint_id("SKL_", C.SRC_ESCO, tail)
         pref = (r.get("preferredLabel") or "").strip()
+        if R.is_non_it_soft(pref):      # prune non-IT transversal life-skills
+            continue
+        eid = K.mint_id("SKL_", C.SRC_ESCO, tail)
         alts = K.split_multi(r.get("altLabels", ""))
         esco.append({
             "entity_id": eid, "source": C.SRC_ESCO, "source_id": tail,

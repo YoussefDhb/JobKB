@@ -310,43 +310,25 @@ _AMBIGUOUS_CATS = {"other_hard", "knowledge_general"}
 
 
 def _task_hardsoft(validator, snap):
+    """Fill any empty `hard_soft` deterministically from the taxonomy: a skill's category belongs to a
+    domain, and a domain is hard or soft, so `hard_soft` is a pure function of `it_subtype`
+    (`hierarchy.skill_type`). `merge` now applies this same rule authoritatively, so this task is a
+    safety net; it never guesses. (An earlier NLI zero-shot on the catch-all categories was removed —
+    it mislabeled clearly-technical skills like "Nvidia CUDA"/"JPEG 2000" as soft.)"""
     from . import hierarchy as H
     skl = K.read_all(C.UNIFIED_SKILLS_CSV)
     targets = [r for r in skl if not (r.get("hard_soft") or "").strip()
                and (r.get("primary_label_en") or r.get("primary_label_fr"))]
-    filled = nli_used = 0
-    # Pre-batch NLI only for the ambiguous residual categories (where the domain type is least certain).
-    amb = [r for r in targets if r.get("it_subtype") in _AMBIGUOUS_CATS]
-    nli_dec = {}
-    if amb and validator.nli_ok:
-        texts = []
-        for r in amb:
-            lbl = r.get("primary_label_en") or r.get("primary_label_fr")
-            prem = f"{lbl}. {r.get('wikidata_description','')}".strip()
-            texts.append((prem, f"{lbl} is a technical or technology-related hard skill."))
-            texts.append((prem, f"{lbl} is a soft, interpersonal or transversal skill."))
-        scores = validator.v.entail_batch(texts)
-        for i, r in enumerate(amb):
-            eh, es = scores[2 * i], scores[2 * i + 1]
-            if eh is not None and es is not None and abs(eh - es) >= C.LLM_HARDSOFT_NLI_MARGIN:
-                nli_dec[r["unified_id"]] = "hard" if eh > es else "soft"
-
+    filled = 0
     for r in targets:
-        uid, subtype = r["unified_id"], r.get("it_subtype", "")
-        cat = H.CATEGORIES.get(subtype)
-        dom = H.DOMAINS.get(cat[0]) if cat else None
-        taxo_type = dom[0] if dom else "hard"  # domain type (hard/soft); unknown -> hard
-        if uid in nli_dec:
-            decision, method = nli_dec[uid], "nli-zeroshot"
-        elif cat:
-            decision, method = taxo_type, "taxonomy"
-        else:
+        decision = H.skill_type(r.get("it_subtype", ""))
+        if not decision:
             continue
-        snap[("hardsoft", uid)] = {"task": "hardsoft", "key": uid, "model": method,
-                                   "prompt_hash": "", "output": decision, "created_at": K.now_iso()}
+        snap[("hardsoft", r["unified_id"])] = {
+            "task": "hardsoft", "key": r["unified_id"], "model": "taxonomy",
+            "prompt_hash": "", "output": decision, "created_at": K.now_iso()}
         filled += 1
-        nli_used += (method == "nli-zeroshot")
-    return {"targets": len(targets), "filled": filled, "nli_used": nli_used}
+    return {"targets": len(targets), "filled": filled, "nli_used": 0}
 
 
 _LINK_SYS = (

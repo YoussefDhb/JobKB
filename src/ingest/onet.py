@@ -11,6 +11,7 @@ import os
 
 from .. import config as C
 from .. import common as K
+from .. import relevance as R
 
 OCC = os.path.join(C.ONET_EN_DIR, "occupation_data.csv")
 ESS_SKILLS = os.path.join(C.ONET_EN_DIR, "essential_skills.csv")
@@ -75,6 +76,10 @@ def run():
             return
         norm = K.normalize_label(name)
         if not norm:
+            return
+        # Prune O*NET psychometric / physical / sensory abilities from the soft branch — they are
+        # aptitudes, not IT-workplace soft skills (the real soft-skill equivalents exist as named nodes).
+        if hard_soft == "soft" and R.is_non_it_soft(name):
             return
         sid = f"{method}:{norm}"
         eid = K.mint_id("SKL_", C.SRC_ONET, sid)
