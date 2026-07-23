@@ -1,11 +1,16 @@
 # JobKB
 
 An **English-primary**, IT-focused occupation & skill **knowledge base**, built
-**fully automatically** from five local public taxonomies. French is a first-class
+**fully automatically** from local public taxonomies. French is a first-class
 secondary language: every concept's EN/FR labels are completed bilingually from
 authoritative Wikidata labels and validated HuggingFace machine translation. There
-is **no scraping, no live web calls, and no human in the loop** — cross-source
-duplicates are resolved and alignments validated with open-source HuggingFace models.
+is **no scraping and no human in the loop** — cross-source duplicates are resolved and
+alignments validated with open-source HuggingFace models. **Enrichment is automatic**:
+a single build runs the full pipeline — cross-source alignment, faceted ontology, ISCO
+attachment, unified merge, then Wikidata QID anchoring, LLM description/link generation,
+and bilingual label completion — all validated before anything touches the graph, all
+snapshot-resumable and fail-open (the only network calls are read-only, cached Wikidata
+SPARQL and HuggingFace inference; a build with no token still succeeds).
 
 ## Sources (IT-filtered, English where available)
 
@@ -23,7 +28,7 @@ tier, and cross-branch data roles), applied consistently to every source.
 | **CSO 3.5** | **Skills only** — curated subset of the Computer Science Ontology (emerging-tech vocabulary) | ~530 topics: IT branches (AI/ML, security, software, data, networks, …) via `superTopicOf`, depth≤2, per-branch balanced, de-duped |
 | **Lightcast Open Skills** | **Skills only** — large, cleanly-categorised skills taxonomy | Information Technology category (`17.0`) = ~5,240 skills across 70 authoritative IT subcategories |
 | **Kaggle technical skills** | **Skills only** — small curated IT technical-skills list | 528 skills, 9 IT categories |
-| **e-CF 4.0** | **Skills only** — European e-Competence Framework (EU-standard ICT competences) | 41 professional ICT competences (Plan/Build/Run/Enable/Manage), self-classified into the taxonomy's 22 categories |
+| **e-CF 4.0** | **Skills only** — European e-Competence Framework (EU-standard ICT competences) | 41 professional ICT competences (Plan/Build/Run/Enable/Manage), self-classified into the taxonomy's 22 categories; source CSV's pre-mangled apostrophes (U+FFFD) repaired at ingest |
 | **Soft skills** (curated) | **Skills only** — noun-form soft/transversal skills used in IT hiring | 22 recruiter-vocabulary soft skills (teamwork, communication, problem solving, work ethic, …) the ESCO verb-phrase competences lack; linked to occupations by posting evidence |
 | **WEF Global Skills Taxonomy** (2021) | **Skills only** — authoritative soft-skill standard (World Economic Forum) | 47 structured soft skills (creative/systems thinking, mentoring, building trust, grit, growth mindset, …) across 5 WEF-aligned soft sub-domains; 16 core ones attached to every IT occupation as a `transversal` layer |
 | **IT soft-skills taxonomy** (curated) | **Skills only** — comprehensive IT soft skills across the 5 soft sub-domains | 38 genuinely-new soft skills (technical communication, stakeholder management, resilience, technical leadership, learning agility, data-driven decision making, code-review etiquette, …) grounded in WEF/O*NET/SFIA + engineering "power-skills"; self-classified, dedup-skips already-covered terms; 10 universal ones attached to every IT occupation as `transversal` |
@@ -164,11 +169,20 @@ and each topic is classified by the IT **root branch** it descends from (`CSO_BR
 rather than dumped into one flat bucket.
 
 **Wikidata QID enrichment (connective tissue, woven into the graph).** `python run_pipeline.py
---wikidata` anchors the KB's concrete technology/tool skills, its occupations, and its **10
-functional-domain taxonomy nodes** to **stable Wikidata QIDs** — the general-purpose, richly-linked
-hub that gives free entity resolution for technologies, tools and companies no occupation taxonomy
-provides. **Populated: 1,099 anchors — 1,060 skills, 31 occupations, 8 domains (955 high-confidence,
-exact-match).** The anchors are **woven into the concept layer**: each unified skill/occupation
+--wikidata` (also run automatically in the full build) anchors the KB's technology/tool/knowledge
+skills, its occupations, and its **10 functional-domain taxonomy nodes** to **stable Wikidata QIDs** —
+the general-purpose, richly-linked hub that gives free entity resolution for technologies, tools and
+companies no occupation taxonomy provides. **Populated: 1,202 anchors — 1,163 skills, 31 occupations,
+8 domains (1,038 high-confidence, exact-match); 1,134 carry a Wikidata description.** The skill
+candidate gate spans the concrete-technology sub-domains **plus the two further hard sub-domains that
+carry genuine named entities** — `methodology` (Scrum, Git, Agile) and `knowledge_general` (computer
+science, information systems) — while the phrase-heavy sub-domains (`it_management`, `other_hard`) are
+excluded (their competence-phrase labels have no Wikidata item, so each would be a wasted rate-limited
+query the class check rejects — those descriptions are the LLM's job). Short, entity-like labels only
+(≤3 tokens); the resolver's own instance-of/subclass **class verification protects precision** as
+recall widens. Each anchored skill's authoritative `wikidata_description` becomes the concept's
+description where it has none (precedence source → Wikidata → LLM) — the highest-precision way to close
+the description gap for well-known tech. The anchors are **woven into the concept layer**: each unified skill/occupation
 carries `wikidata_qid` + `wikidata_url` + a `wikidata_description` (Wikidata's terse one-liner, in a
 dedicated column that never overwrites KB-authored text), and cleaned Wikidata aliases are merged
 into `alt_labels` (hygiene-filtered: deduped against existing labels, parenthetical near-duplicates
@@ -215,8 +229,11 @@ the KB is built **with no human in the loop**, every LLM output is **validated b
 graph** — the IT-relevance gate (`src/relevance.py`) + the mDeBERTa NLI verifier (`src/align/verify.py`)
 — tagged with provenance (`description_source="llm"`, `relation_type="llm_inferred"`, `source="LLM"`),
 and it **never overwrites** a source/curated value. Four tasks (`src/llm.py`): **(T1) descriptions** —
-concise, factual, NLI-validated definitions for occupations and emerging/niche skills that have none,
-grounded on label + taxonomy context + any Wikidata description; **(T2) fill `hard_soft`** —
+concise, factual, NLI-validated definitions for **every occupation and hard skill that still lacks one
+after the Wikidata pass** (the eligibility gate was widened from 5 niche sub-domains to all hard
+categories, so the ~8k description-less Lightcast/ROME/Kaggle skills are now in scope), grounded on
+label + taxonomy context + any Wikidata description; because generation is credit-bound but
+snapshot-resumable, coverage **converges across successive automatic builds**; **(T2) fill `hard_soft`** —
 **deterministically derived from each skill's taxonomy placement** (category→domain→type; `merge`
 applies `hierarchy.skill_type` as the single source of truth, so `hard_soft` can never contradict the
 category — e.g. a technical skill in a hard category can't be tagged soft) so **every** skill is typed
@@ -251,10 +268,21 @@ against the translation directly — a single clean signal) plus **structural fi
 of-label, length blow-up, lost tech token); rejects are logged to `kb/translate_rejected.csv`. Everything
 is **snapshotted** (`resources/TRANSLATE/retrieved/`) so re-runs recompute **nothing** and the job is
 resumable/observable (checkpointed every 200 labels). Fully local ⇒ **free-tier-safe**; provenance is
-tagged `source="TRANSLATE"`. This lifted primary-label coverage to **EN 11,389/11,409 (99.8%)** and
-**FR 11,021/11,409 (96.6%)** — up from 81.6 % / 35.7 % — with all QA invariants unchanged (labels are
-purely additive). `--translate` runs **after merge**; its values re-weave idempotently on every subsequent
-`--stages merge`.
+tagged `source="TRANSLATE"`. This lifted primary-label coverage to **EN 11,346/11,366 (99.8%)** and
+**FR 10,980/11,366 (96.6%)** — up from 81.6 % / 35.7 % — with all QA invariants unchanged (labels are
+purely additive). `--translate` runs **after merge** (automatically, last of the enrichment stages, so it
+also lifts the French-only ROME concepts into English via `fr→en`); its values re-weave idempotently on
+every subsequent `--stages merge`.
+
+**Description coverage — Wikidata now, LLM converging.** The two prongs above make description coverage
+a first-class, unbounded target: the Wikidata pass supplies **990 authoritative descriptions** for
+well-known tech, and the LLM description gate is widened from 5 niche sub-domains to **all hard
+categories** (~8,000 description-less Lightcast/ROME/Kaggle skills are now eligible, up from ~356). LLM
+generation is **credit-bound and snapshot-resumable** — on a depleted HuggingFace free tier it fails
+open (0 generated, build still succeeds) and simply resumes on the next automatic build when credits
+refresh, so coverage **converges over successive builds** rather than in one shot. Current concept
+descriptions: **3,319/11,366** (source 2,305 · Wikidata 990 · LLM 24), with the LLM prong ready to fill
+the remainder as credits allow.
 
 ## Pipeline (package + orchestrator)
 
@@ -265,27 +293,43 @@ src/
   ingest/          # isco, esco, onet, noc, rome  (each IT-filtered, EN-primary)
   sources/         # pluggable source framework: base (StructuredSource/ExtractionSource) + registry + sfia, cso, demo
   hierarchy.py     # faceted ontology: skill -> category -> domain -> type + occupation -> domain facet
-  align/           # candidates (embeddings) -> verify (batched NLI) -> attach (ISCO, all sources)
-  merge.py         # source-neutral unified concept clustering / de-duplication
+  align/           # candidates (embeddings) -> verify (batched NLI) + deterministic match_key dedup -> attach (ISCO, curated overrides)
+  merge.py         # source-neutral unified concept clustering / de-duplication (+ hard_soft & it_subtype reconciliation)
+  wikidata.py      # QID anchoring + authoritative descriptions/aliases (enrichment stage)
+  llm.py           # HF LLM descriptions / inferred links / emerging tech, auto-validated (enrichment stage)
+  translate.py     # bilingual EN/FR label completion (Wikidata labels + validated MT) (enrichment stage)
   incremental.py   # add/remove ONE source without a full rebuild
-  pipeline.py      # orchestrator + QA/integrity report
+  pipeline.py      # orchestrator (core + enrichment stages) + QA/integrity report
 run_pipeline.py    # CLI entry point
 notebooks/
   inspect.ipynb    # QA & spot-checks over kb/
 ```
 
-A full build takes **~2 h** on CPU, **dominated by mDeBERTa NLI verification** (~2 s/pair)
-— a deliberate accuracy-over-speed trade-off (no human reviews the merges, so the models
-must). bge-m3 embeddings are cached on disk (`kb/.emb_cache_*.pkl`, keyed by model + text)
-so they are computed once and reused across runs; NLI re-verifies each build.
+**Enrichment is part of the build.** The full pipeline is
+`ingest → hierarchy → align → attach → merge → **wikidata → llm → translate** → qa`: the three
+post-merge enrichment stages (Wikidata QID anchoring, LLM descriptions/links, bilingual label
+completion) run **automatically** after `merge`, in that dependency order (Wikidata first — its QIDs
+and descriptions feed the others), so a plain `python run_pipeline.py` produces a **fully-enriched** KB
+in one command. Each enrichment stage is **fail-open** (no HF token / credits / offline → it logs and
+skips, the build still succeeds) and **snapshot-resumable** (`resources/*/retrieved/`), so a rebuild
+with complete snapshots re-weaves cheaply and `qa` (which runs last) reports the enriched coverage.
+Pass **`--core-only`** for a fast, network-free core build without the enrichment stages; the standalone
+`--wikidata` / `--llm` / `--translate` flags still run any one stage on its own.
+
+A full build takes **a few hours** on CPU: the core is **dominated by mDeBERTa NLI verification**
+(~2 s/pair; no human reviews the merges, so the models must — a deliberate accuracy-over-speed
+trade-off), and enrichment adds rate-limited Wikidata SPARQL + LLM generation on top. bge-m3 embeddings
+are cached on disk (`kb/.emb_cache_*.pkl`, keyed by model + text) so they are computed once and reused;
+NLI re-verifies each build.
 
 Run it:
 
 ```bash
 python -m venv .venv && .venv\Scripts\activate
 pip install -r requirements.txt
-python run_pipeline.py            # full build (ingest -> ontology -> align -> attach -> merge)
-python run_pipeline.py --no-align # ingest + skill ontology only (no HF model downloads)
+python run_pipeline.py             # full build + enrichment (ingest -> ... -> merge -> wikidata,llm,translate -> qa)
+python run_pipeline.py --core-only # full build WITHOUT enrichment (fast, network-free)
+python run_pipeline.py --no-align  # ingest + skill ontology only (no HF model downloads)
 ```
 
 ### Run only the stages you need
@@ -374,15 +418,37 @@ source rows, and `run_pipeline.py` rebuilds `kb/` clean by default.
    occupation definition → each group's definition **re-ranks** the shortlist, so a
    strong embedding to the wrong group can be overridden by the definition semantics.
    The inferred ISCO code is written back; placements with weak embedding *or* weak
-   entailment are **flagged low-confidence** for QA (never dropped). No ESCO gateway,
-   **zero hierarchy orphans**.
+   entailment are **flagged low-confidence** for QA (never dropped). A small **curated
+   `ISCO_OCC_OVERRIDE` map** (`src/config.py`) fixes the handful of emerging roles the
+   automatic attach placed poorly (e.g. *Data scientist* → Systems Analysts rather than
+   Computer Network Professionals, *Product Owner* / *MOA coordinators* → ICT Service
+   Managers): keyed by occupation `source_id`, applied deterministically before the
+   automatic choice, forcing a high-confidence edge. No ESCO gateway, **zero hierarchy
+   orphans**.
 4. **Merge** — connected components of the merge graph become **unified concepts**.
    `label` edges always merge. A `semantic` **occupation** merge is triple-guarded —
    strong embedding **and** mutual NLI entailment on the definitions **and** the same
    ISCO group — so no occupation is de-duplicated on embedding similarity alone (the
    no-human-review safety gate). Labels/attributes are chosen by **source-neutral
    consensus** (no source ranking) — English-primary, French secondary, merged synonyms,
-   consensus ISCO code, back-links to source members.
+   consensus ISCO code, back-links to source members. A skill's `hard_soft` is a
+   **deterministic function of its taxonomy placement** (`it_subtype → domain → type`), and
+   a small curated **`IT_SUBTYPE_OVERRIDE`** reconciles the few labels sources tag
+   inconsistently (e.g. *Cypress*/*Playwright* → web, not ML; *computer science* →
+   knowledge_general, not other_hard).
+
+   **Deterministic same-concept dedup.** Cross-source embedding candidate generation never
+   compares two rows from the *same* source, and cross-lingual duplicates only surface once a
+   French label is translated — so a **deterministic exact-`match_key` linker** (`src/align`)
+   adds high-precision `exactMatch`/`label` edges for every group of skills whose English label
+   (native, else the validated MT of the French label from the translate snapshot) shares an
+   identical normalized+singularized key. It collapses same-source duplicates (ROME's two
+   "Team management" entries) and cross-lingual ones ("Informatique" ↔ "computer science") while
+   two guards preserve genuinely-distinct concepts: grouping by (key, **hard/soft class**) keeps
+   the hard vs soft "time management" apart, and a curated **`MATCH_KEY_DISTINCT`** allowlist
+   skips keys that collide across distinct concepts (HTTP vs HTTPS, the "cybersecurity expert
+   (MS)" degree variant). This cut the unified-skill match_key collisions from ~48 groups to the
+   3 deliberately-distinct ones.
 
 ### The taxonomy — a faceted, graph-navigable ontology
 
@@ -436,7 +502,8 @@ degrades gracefully (TF-IDF candidates, NLI off) and still produces the KB.
 
 ## Not in this build (deliberate follow-ons)
 
-RDF/OWL graph export, and LLM content-enrichment (niche IT roles, emerging-tech
-concepts, missing links) are intentionally out of scope for this reconstruction.
-The previous French-primary, scraping/Wikidata/manual-translation pipeline and its
-human `gold` alignment review have been fully removed.
+RDF/OWL graph export is intentionally out of scope for this reconstruction. (LLM
+content-enrichment — descriptions, inferred links, emerging-tech concepts — is **now
+part of the automatic pipeline**, see the enrichment stages above.) The previous
+French-primary, scraping/Wikidata/manual-translation pipeline and its human `gold`
+alignment review have been fully removed.

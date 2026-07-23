@@ -197,6 +197,8 @@ def _merge_skills():
         # -> hard/soft), so it can never contradict the category (e.g. a tech skill in a hard category
         # tagged "soft"). Fall back to the member consensus only if the category is somehow unknown.
         it_sub = _majority(members, "it_subtype")
+        # Curated reconciliation for the known same-concept / different-tag conflicts across sources.
+        it_sub = C.IT_SUBTYPE_OVERRIDE.get(K.normalize_label(primary_en), it_sub)
         hard_soft = H.skill_type(it_sub) or _majority(members, "hard_soft_provisional")
         rows.append({
             "unified_id": _unified_id("USKL_", comp),

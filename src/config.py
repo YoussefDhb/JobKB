@@ -467,9 +467,16 @@ LLM_LINK_MAX_OCC = int(os.environ.get("JOBKB_LLM_LINK_MAX", "40"))  # cap occupa
 LLM_LINK_SPARSE_MAX = 6     # an occupation with <= this many existing relations is a link target
 LLM_EMERGING_MAX_NEW = int(os.environ.get("JOBKB_LLM_EMERGING_MAX", "40"))  # cap new entities added
 
-# Bounded work sets (free-tier economy): descriptions only for niche roles + these skill sub-domains.
-LLM_DESC_SKILL_SUBDOMAINS = frozenset({"emerging_tech", "mobile_development", "data_engineering",
-                                       "hardware_embedded", "ai_ml"})
+# Description generation is eligible for EVERY hard skill lacking a description (the full-coverage push;
+# soft skills already sit near-complete). This is the complete set of hard categories from
+# hierarchy.CATEGORIES (kept in sync here to avoid a config<-hierarchy import cycle). Coverage is
+# credit-bound but snapshot-resumable, so it converges over successive runs. Set JOBKB_LLM_DESC_MAX to
+# cap per-run cost when iterating.
+LLM_DESC_SKILL_SUBDOMAINS = frozenset({
+    "programming_languages", "methodology", "web", "mobile_development", "data_databases",
+    "data_engineering", "ai_ml", "systems_infrastructure", "cloud_devops", "hardware_embedded",
+    "networks", "security", "it_management", "emerging_tech", "knowledge_general", "other_hard",
+})
 LLM_DESC_MAX_TARGETS = int(os.environ.get("JOBKB_LLM_DESC_MAX", "0"))  # 0 = unlimited (bounds API cost)
 LLM_SNAPSHOT_FIELDS = ["task", "key", "model", "prompt_hash", "output", "created_at"]
 LLM_REJECTED_FIELDS = ["task", "entity_id", "label", "output", "reason", "score"]
@@ -544,6 +551,35 @@ NLI_MIN_SIM = 0.70         # run the mDeBERTa verifier from just below the seman
 MERGE_EMBED_OCC = 0.72     # embedding floor for a semantic occupation merge (NLI + ISCO gated)
 MERGE_EMBED_SKILL = 0.90   # near-identical embedding floor for a skill merge (no NLI gate)
 
+# Deterministic same-concept dedup (align): skills with an identical match_key (normalized +
+# singularized label) are the same concept and are merged even when embedding candidate generation
+# missed the pair (notably intra-source exact duplicates the cross-source aligner never compares).
+# MATCH_KEY_DISTINCT lists match_keys to LEAVE ALONE because the key collides across genuinely-distinct
+# concepts: "http" collides HTTP with HTTPS (singularize https -> http); "cybersecurity expert" would
+# fold the Master's-qualified variant into the base skill. The hard-vs-soft split (e.g. the hard vs soft
+# "time management") is handled by a separate hard/soft guard in the linker, not this list.
+MATCH_KEY_DISTINCT = frozenset({"http", "cybersecurity expert"})
+
+# Authoritative it_subtype for skills whose members disagree across sources (same concept, different
+# tag). Applied in merge after the member majority, keyed by the unified primary label in
+# normalize_label() form. Resolves the known cross-source conflicts (e.g. ESCO tags "computer science"
+# knowledge_general while ROME tags it other_hard; Cypress/Playwright are web testing tools, not ML).
+IT_SUBTYPE_OVERRIDE = {
+    "cypress": "web",                       # Cypress.io — front-end E2E testing framework
+    "playwright": "web",                    # Playwright — browser automation/testing
+    "cdn": "cloud_devops",                  # content delivery network — infra/devops
+    "consul": "cloud_devops",               # HashiCorp Consul — service mesh/discovery
+    "a/b testing": "methodology",           # experimentation practice
+    "test driven development": "methodology",
+    "workflow software": "other_hard",
+    "distributed computing": "knowledge_general",
+    "computer science": "knowledge_general",
+    "computer technology": "knowledge_general",
+    "digital systems": "knowledge_general",
+    "information systems": "knowledge_general",
+    "cryptocurrency": "emerging_tech",      # blockchain family
+}
+
 # Attachment (source -> ISCO group). The best group is chosen by NLI-re-ranking the top-K
 # embedding candidates: embedding gives a shortlist, then mDeBERTa entailment (occupation
 # definition -> ISCO group definition) decides among them, so a strong embedding to the
@@ -557,6 +593,30 @@ MERGE_EMBED_SKILL = 0.90   # near-identical embedding floor for a skill merge (n
 ATTACH_MIN_SIM = 0.60
 ATTACH_TOPK = 3            # embedding shortlist size that NLI re-ranks
 ATTACH_NLI_WEIGHT = 0.5   # weight of NLI entailment vs embedding cosine in the re-rank score
+
+# Curated ISCO-08 unit-group overrides for emerging IT roles the embedding+NLI attach placed poorly
+# (all were low-confidence). Keyed by occupation source_id -> 4-digit ISCO code; applied in attach
+# BEFORE the automatic choice, forcing a high-confidence placement (removes them from the low-conf
+# set). Deterministic, auditable, no human-in-loop at runtime. Only clearly-mis-attached roles with a
+# confident better group are listed; genuinely-niche roles are left honestly low-confidence.
+ISCO_OCC_OVERRIDE = {
+    "M1405": "2511",   # Data scientist                 -> Systems Analysts (was 2523 Network Prof.)
+    "M1423": "1330",   # Chief Data Officer             -> ICT Service Managers (executive; was 2521)
+    "M1822": "2519",   # Spécialiste Jumeau Numérique   -> SW/Analysts n.e.c. (was 2523 Network Prof.)
+    "M1835": "2523",   # Architecte systèmes et réseaux -> Network Professionals (was 3513 technician)
+    "M1846": "2529",   # Ingénieur Cybersécurité        -> DB/Network Prof. n.e.c. (was 3513 technician)
+    "M1857": "2522",   # Urbaniste Datacenter           -> Systems Administrators (was 2521 DB)
+    "M1858": "1330",   # Chef de projet TMA             -> ICT Service Managers (was 2522 SysAdmin)
+    "M1864": "1330",   # Product Owner                  -> ICT Service Managers (was 2522 SysAdmin)
+    "M1865": "2512",   # Ingénieur blockchain           -> Software Developers (was 2523 Network Prof.)
+    "M1866": "2529",   # Pentesteur                     -> DB/Network Prof. n.e.c. (security; was 2511)
+    "M1872": "2511",   # Consultant décisionnel (BI)    -> Systems Analysts (was 2523 Network Prof.)
+    "M1873": "2512",   # Spécialiste IA embarquée       -> Software Developers (was 2522 SysAdmin)
+    "M1875": "1330",   # Coordinateur MOA SI            -> ICT Service Managers (was 2522 SysAdmin)
+    "M1877": "2512",   # Développeur blockchain         -> Software Developers (was 2521 DB)
+    "M1881": "1330",   # Chef de projet MOA SI          -> ICT Service Managers (was 2522 SysAdmin)
+    "M1889": "2512",   # Ingénieur en IA                -> Software Developers (was 2523 Network Prof.)
+}
 
 # --------------------------------------------------------------------------------------
 # Relevance / noise gate (src/relevance.py) — automatic, at ingest, for NEW sources
@@ -618,14 +678,23 @@ WIKIDATA_MAX_RETRIES = 15      # attempts on 429/5xx/timeout, then fail-open (42
 WIKIDATA_THROTTLE_WAIT = 65        # seconds to wait after a 429 (bucket refill; empirically sufficient)
 WIKIDATA_THROTTLE_MAX_WAIT = 120   # cap on a server-provided Retry-After
 
-# Only concrete-technology sub-domains are resolved (competence-phrase skills rarely have a
-# Wikidata item; verification would reject them anyway — this just bounds the network cost).
+# Sub-domains eligible for Wikidata anchoring. Widened (for the description push) beyond the concrete-
+# technology set to the two further hard sub-domains that carry genuine *named entities* — methodology
+# (Scrum, Git, Agile, Kanban, Jira) and knowledge_general (computer science, information systems,
+# distributed computing). The phrase-heavy sub-domains (it_management, other_hard) are deliberately
+# EXCLUDED: their labels are competence phrases with no Wikidata item, so every candidate is a wasted
+# (rate-limited) SPARQL round-trip that the class verification rejects anyway — those descriptions are
+# the LLM stage's job. The authoritative wikidata_description is the highest-precision description
+# source; the resolver's instance-of/subclass class check protects precision as recall widens, and the
+# MAX_TOKENS bound keeps candidates to short, entity-like labels (e.g. "Scrum", "React Native").
 WIKIDATA_SKILL_SUBDOMAINS = frozenset({
     "programming_languages", "data_databases", "cloud_devops", "ai_ml", "web",
     "networks", "security", "systems_infrastructure", "emerging_tech",
     "mobile_development", "data_engineering", "hardware_embedded",
+    "methodology", "knowledge_general",
 })
-WIKIDATA_SKILL_MAX_TOKENS = 3  # only short (entity-like) labels are candidates
+WIKIDATA_SKILL_MAX_TOKENS = 3  # only short (entity-like) labels are candidates (4-token labels are
+                               # overwhelmingly competence phrases with no Wikidata item)
 
 # In-graph enrichment: Wikidata aliases merged into a concept's alt_labels are hygiene-filtered to
 # avoid noise — dropped if they duplicate an existing label, exceed these bounds, or are structural

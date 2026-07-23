@@ -28,6 +28,14 @@ from .base import StructuredSource
 
 _CSV = os.path.join(C.OTHERS_EN_DIR, "e-Cf_ESCO.csv")
 
+
+def _fix(text):
+    """Repair the source CSV's baked-in mojibake. The file already stores U+FFFD (the replacement
+    char) wherever an apostrophe was lost upstream — these are the only non-ASCII bytes in it, and
+    every one sits between letters as an English apostrophe (e.g. "organisation�s" ->
+    "organisation's"), so restoring a straight apostrophe is correct and lossless."""
+    return (text or "").replace("�", "'")
+
 # e-CF competence ID -> neutral sub-domain (all 41 competences are in-scope IT).
 _ECF_SUBDOMAIN = {
     # A — Plan
@@ -60,17 +68,18 @@ class EcfSource(StructuredSource):
     retrieval_method = "ecf_csv"
 
     def skills(self):
-        # Semicolon-delimited, UTF-8 with BOM; a few smart-quote bytes -> errors="replace".
+        # Semicolon-delimited, UTF-8 (no BOM); the source has apostrophes pre-mangled to U+FFFD
+        # (repaired by _fix). errors="replace" kept as a defensive net for any future stray bytes.
         with open(_CSV, encoding="utf-8-sig", errors="replace", newline="") as fh:
             for r in csv.DictReader(fh, delimiter=";"):
                 cid = (r.get("Dimension 2 (ID)") or "").strip()
-                label = (r.get("Dimension 2 (Title)") or "").strip()
+                label = _fix((r.get("Dimension 2 (Title)") or "").strip())
                 if not cid or not label:
                     continue
                 yield {
                     "source_id": cid,
                     "label_en": label,
-                    "desc_en": (r.get("Dimension 2 (Generic Description)") or "").strip(),
+                    "desc_en": _fix((r.get("Dimension 2 (Generic Description)") or "").strip()),
                     "hard_soft": "hard",
                     "method": "ecf_competence",
                     "it_subtype": _ECF_SUBDOMAIN.get(cid, ""),   # "" -> regex fallback

@@ -105,7 +105,25 @@ def run(focus_source=None):
     counts = defaultdict(int)
     low = []
     overrides = 0
+    curated = 0
+    code_to_j = {targets[j]["source_code"]: j for j in range(len(targets))}
     for i, o in enumerate(to_attach):              # `o` is the same dict object as in `occ`
+        # Curated ISCO override: a hand-verified placement for an emerging role the automatic attach
+        # got wrong. Forces a high-confidence edge (skips the low-conf flag) — deterministic, no human
+        # in the loop at runtime. Only applies when the target group exists.
+        forced_code = C.ISCO_OCC_OVERRIDE.get(o.get("source_id", ""))
+        if forced_code in code_to_j:
+            j = code_to_j[forced_code]
+            o["isco_code"] = targets[j]["source_code"]
+            edges.append({
+                "parent_entity_id": targets[j]["entity_id"],
+                "child_entity_id": o["entity_id"],
+                "entity_kind": "occupation", "relation_type": "broader_than",
+                "source": ATTACH_SRC,
+            })
+            counts[o["source"]] += 1
+            curated += 1
+            continue
         # Choice = NLI re-ranking of the embedding shortlist: score = cosine + weighted
         # entailment, so a strong embedding to the wrong group can be overridden by the
         # definition semantics. Missing definition -> reduces to embedding argmax.
@@ -152,13 +170,14 @@ def run(focus_source=None):
         "retrieved_at": K.now_iso(),
         "retrieval_method": f"embed:{embedder.model_id}+nli:{C.NLI_MODEL}",
         "notes": f"{len(edges)+len(lowconf_edges)} attached, top-{k} NLI re-ranked "
-                 f"({overrides} NLI overrode embedding top-1; "
+                 f"({overrides} NLI overrode embedding top-1; {curated} curated ISCO overrides; "
                  f"{len(lowconf_edges)} low-confidence: sim<{C.ATTACH_MIN_SIM})",
     }])
     print(f"[ATTACH] {len(edges)+len(lowconf_edges)} occupations attached to ISCO "
           f"(embed={embedder.model_id}, NLI re-rank top-{k}, nli={'on' if verifier.nli_ok else 'off'}); "
           f"{', '.join(f'{s}:{counts[s]}' for s in sorted(counts))}; "
-          f"NLI moved {overrides} off embedding top-1; {len(lowconf_edges)} low-confidence.")
+          f"NLI moved {overrides} off embedding top-1; {curated} curated overrides; "
+          f"{len(lowconf_edges)} low-confidence.")
     for lbl, src, code, s, e in low[:10]:
         es = f"{e:.2f}" if e is not None else "n/a"
         print(f"    low-conf: [{src}] {lbl} -> ISCO {code} (sim={s:.2f}, entail={es})")

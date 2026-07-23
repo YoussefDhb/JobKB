@@ -233,10 +233,35 @@ def _qa(source=None):
     return qa()
 
 
+# Post-merge enrichment stages (pillar 3): resolve Wikidata QIDs/descriptions, generate LLM
+# descriptions + inferred links, then complete bilingual labels. Each is fail-open (skips cleanly
+# with no HF token/credits/offline) and snapshot-resumable, and each re-weaves its snapshot into the
+# unified tables via its own trailing merge — so chaining them in order is idempotent. Wikidata runs
+# first (its QIDs/descriptions feed the description precedence source->wikidata->llm and the label
+# completion); translate runs last (also lifts FR-only ROME labels into EN via fr_en).
+def _enrich_wikidata(source=None):
+    from . import wikidata
+    wikidata.run()
+
+
+def _enrich_llm(source=None):
+    from . import llm
+    llm.run()
+
+
+def _enrich_translate(source=None):
+    from . import translate
+    translate.run()
+
+
 _STAGES = {
     "ingest": _ingest, "hierarchy": _hierarchy, "align": _align,
     "attach": _attach, "merge": _merge, "qa": _qa,
+    "wikidata": _enrich_wikidata, "llm": _enrich_llm, "translate": _enrich_translate,
 }
+
+# Enrichment stages, in dependency order, inserted between merge and qa on a full build.
+ENRICH_ORDER = ["wikidata", "llm", "translate"]
 
 
 def run_stages(stages, source=None, clean=False):
@@ -286,9 +311,36 @@ def run_stages(stages, source=None, clean=False):
     return result
 
 
-def run_all(clean=True, do_align=True):
-    """Full build: every stage, cleaning kb/ first. `do_align=False` stops after hierarchy."""
-    stages = list(STAGE_ORDER)
+def _run_enrichment():
+    """Run the post-merge enrichment stages (wikidata -> llm -> translate) against the built kb/.
+
+    Each stage is fail-open and snapshot-resumable and re-weaves merge internally, so this is safe to
+    run on every full build: a fresh build enriches from scratch, a rebuild with complete snapshots
+    re-weaves cheaply, and a missing HF token simply skips generation without failing the build.
+    """
+    import time as _t
+    for name in ENRICH_ORDER:
+        t0 = _t.time()
+        print(f"--- {name} (enrich) ---", flush=True)
+        _STAGES[name]()
+        print(f"    [{name} done +{_t.time() - t0:.1f}s]", flush=True)
+
+
+def run_all(clean=True, do_align=True, core_only=False):
+    """Full build: every stage, cleaning kb/ first.
+
+    `do_align=False` stops after hierarchy (no align/attach/merge, so no enrichment). Otherwise the
+    build runs ingest..merge, then (unless `core_only`) the enrichment stages wikidata->llm->translate,
+    then qa on the enriched kb/. Enrichment is default-on so a plain rebuild produces an enriched KB;
+    pass `core_only=True` (CLI: --core-only) for a fast, network-free core build.
+    """
     if not do_align:
-        stages = [s for s in stages if s not in ("align", "attach", "merge")]
-    return run_stages(stages, clean=clean)
+        stages = [s for s in STAGE_ORDER if s not in ("align", "attach", "merge")]
+        return run_stages(stages, clean=clean)
+
+    # Build core (ingest..merge), then enrich, then qa — so qa's coverage lines reflect enrichment.
+    core = [s for s in STAGE_ORDER if s != "qa"]
+    run_stages(core, clean=clean)
+    if not core_only:
+        _run_enrichment()
+    return run_stages(["qa"])

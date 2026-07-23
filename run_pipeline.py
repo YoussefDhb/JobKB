@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 """CLI entry point for the JobKB build.
 
-Full build:
-    python run_pipeline.py                 # full clean build (all stages)
+Full build (enrichment is automatic: ingest..merge -> wikidata -> llm -> translate -> qa):
+    python run_pipeline.py                 # full clean build + enrichment (all stages)
+    python run_pipeline.py --core-only     # full build WITHOUT enrichment (fast, network-free)
     python run_pipeline.py --no-align      # ingest + hierarchy only (skip HF models)
     python run_pipeline.py --keep          # do not wipe kb/ before the full build
 
@@ -65,6 +66,9 @@ def main():
                     help="full build without alignment/attach/merge (no HF model downloads)")
     ap.add_argument("--keep", action="store_true",
                     help="full build without wiping kb/ first")
+    ap.add_argument("--core-only", "--no-enrich", dest="core_only", action="store_true",
+                    help="full build without the post-merge enrichment stages "
+                         "(wikidata/llm/translate) — fast, network-free core build")
     # stage selection
     ap.add_argument("--stages", metavar="A,B,C",
                     help="run only these comma-separated stages (in canonical order)")
@@ -144,7 +148,7 @@ def main():
     if args.source:
         sys.exit("error: --source only applies to a stage selection "
                  "(--stages/--from/--to) or --add/--remove.")
-    pipeline.run_all(clean=not args.keep, do_align=not args.no_align)
+    pipeline.run_all(clean=not args.keep, do_align=not args.no_align, core_only=args.core_only)
 
 
 if __name__ == "__main__":
