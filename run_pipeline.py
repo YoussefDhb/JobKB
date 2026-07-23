@@ -93,6 +93,9 @@ def main():
     ap.add_argument("--llm", nargs="?", const="all", metavar="TASKS",
                     help="run LLM enrichment after merge; optional comma-list of tasks "
                          "(descriptions,hardsoft,links,emerging); default all")
+    ap.add_argument("--translate", nargs="?", const="all", metavar="DIRS",
+                    help="fill empty EN/FR labels after merge (Wikidata labels + validated MT); "
+                         "optional comma-list of directions (wikidata,en_fr,fr_en); default all")
     args = ap.parse_args()
 
     if args.list_stages:
@@ -115,6 +118,11 @@ def main():
         from src import llm
         tasks = llm.ALL_TASKS if args.llm == "all" else tuple(t.strip() for t in args.llm.split(","))
         llm.run(tasks=tasks)
+        return
+
+    if args.translate:
+        from src import translate
+        translate.run(directions=args.translate)
         return
 
     if args.add:

@@ -129,6 +129,13 @@ def _fill_descriptions(rows, kind):
     llm.apply_enrichment(rows, kind)  # fills description(llm) + hard_soft from the LLM snapshot
 
 
+def _fill_labels(rows, kind):
+    """Fill empty EN/FR primary + alt labels from the translate stage's Wikidata/MT snapshots, only
+    where still empty (never overwrites source labels). No-op until `--translate` has run."""
+    from . import translate  # lazy: translate imports nothing from merge at module load
+    translate.apply_enrichment(rows, kind)
+
+
 def _merge_edges(kind_prefix):
     """Cross-source pairs flagged for merge, as (a, b, kind) with kind in {label, semantic}."""
     edges = []
@@ -168,6 +175,7 @@ def _merge_occupations():
         })
     W.enrich_rows(rows, "occupation")  # weave in Wikidata anchors if the side table exists
     _fill_descriptions(rows, "occupation")  # description precedence + LLM enrichment
+    _fill_labels(rows, "occupation")        # fill empty EN/FR labels from Wikidata + validated MT
     K.write_csv(C.UNIFIED_OCCUPATIONS_CSV, C.UNIFIED_OCC_FIELDS, rows)
     return rows
 
@@ -197,6 +205,7 @@ def _merge_skills():
         })
     W.enrich_rows(rows, "skill")  # weave in Wikidata anchors if the side table exists
     _fill_descriptions(rows, "skill")  # description precedence + LLM enrichment
+    _fill_labels(rows, "skill")        # fill empty EN/FR labels from Wikidata + validated MT
     K.write_csv(C.UNIFIED_SKILLS_CSV, C.UNIFIED_SKILL_FIELDS, rows)
     return rows
 

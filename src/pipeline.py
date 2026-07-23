@@ -146,6 +146,19 @@ def qa():
               f"descriptions, {len(llm_links)} inferred links, {llm_skills} new Wikidata-confirmed skills; "
               f"{n_rej} outputs rejected by validation")
 
+    # Multilingual label coverage (`--translate`): EN/FR primary + alt fill rates and MT provenance.
+    n_all = len(occ_u) + len(skl_u)
+    def _cov(col):
+        return sum(1 for r in occ_u + skl_u if (r.get(col) or "").strip())
+    print(f"label coverage: primary EN {_cov('primary_label_en')}/{n_all}, "
+          f"FR {_cov('primary_label_fr')}/{n_all}  |  alt EN {_cov('alt_labels_en')}/{n_all}, "
+          f"FR {_cov('alt_labels_fr')}/{n_all}")
+    if os.path.isfile(C.TRANSLATE_SNAPSHOT_CSV):
+        tr = K.read_all(C.TRANSLATE_SNAPSHOT_CSV)
+        tr_ok = _Cnt(r.get("direction", "") for r in tr if r.get("validated") == "1")
+        tr_rej = len(K.read_all(C.TRANSLATE_REJECTED_CSV)) if os.path.isfile(C.TRANSLATE_REJECTED_CSV) else 0
+        print(f"translation: validated MT by direction {dict(tr_ok)}; {tr_rej} rejected by validation")
+
     if dangling:
         print(f"  WARNING: {len(dangling)} dangling edges e.g. "
               f"{[(e['parent_entity_id'], e['child_entity_id']) for e in dangling[:3]]}")

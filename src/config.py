@@ -81,6 +81,7 @@ WIKIDATA_SRC_CSV = os.path.join(WIKIDATA_EN_DIR, "ESCO_v1.2.1-wikidata.csv")
 WIKIDATA_SNAPSHOT_CSV = os.path.join(WIKIDATA_RETRIEVED_DIR, "resolutions.csv")
 
 LLM_RETRIEVED_DIR = os.path.join(RESOURCES, "LLM", "retrieved")   # LLM generation snapshots (cache)
+TRANSLATE_RETRIEVED_DIR = os.path.join(RESOURCES, "TRANSLATE", "retrieved")  # MT / Wikidata-label cache
 
 KB_DIR = os.path.join(ROOT, "kb")   # built knowledge base output
 
@@ -96,6 +97,9 @@ PROVENANCE_CSV = os.path.join(KB_DIR, "provenance.csv")
 BLOCKED_ENTITIES_CSV = os.path.join(KB_DIR, "blocked_entities.csv")  # relevance-gate rejects
 LLM_SNAPSHOT_CSV = os.path.join(LLM_RETRIEVED_DIR, "generations.csv")  # cached LLM generations
 LLM_REJECTED_CSV = os.path.join(KB_DIR, "llm_rejected.csv")   # LLM outputs that failed validation
+TRANSLATE_SNAPSHOT_CSV = os.path.join(TRANSLATE_RETRIEVED_DIR, "translations.csv")  # cached MT (resumable)
+TRANSLATE_WD_LABELS_CSV = os.path.join(TRANSLATE_RETRIEVED_DIR, "wd_labels.csv")    # authoritative @en/@fr
+TRANSLATE_REJECTED_CSV = os.path.join(KB_DIR, "translate_rejected.csv")  # MT outputs that failed validation
 WIKIDATA_LINKS_CSV = os.path.join(KB_DIR, "wikidata_links.csv")      # entity -> Wikidata QID anchors
 
 # --------------------------------------------------------------------------------------
@@ -286,6 +290,7 @@ SRC_LINKEDIN_SWE = "LINKEDIN_SWE"  # hybrid: LinkedIn software-engineering posti
 SRC_KAGGLE_JOBS = "KAGGLE_JOBS"    # hybrid: kaggle job-skill-set, IT subset (pre-extracted skills)
 SRC_LLM = "LLM"              # LLM-powered enrichment: generated descriptions, inferred links, and
                              # new emerging entities (each auto-validated + Wikidata-confirmed)
+SRC_TRANSLATE = "TRANSLATE"  # multilingual label completion: Wikidata @en/@fr labels + validated MT
 
 # Sources that contribute real (non ISCO-group) occupations that get aligned.
 REAL_OCC_SOURCES = (SRC_ESCO, SRC_ONET, SRC_NOC, SRC_ROME, SRC_EMERGING)
@@ -467,6 +472,48 @@ LLM_DESC_SKILL_SUBDOMAINS = frozenset({"emerging_tech", "mobile_development", "d
 LLM_DESC_MAX_TARGETS = int(os.environ.get("JOBKB_LLM_DESC_MAX", "0"))  # 0 = unlimited (bounds API cost)
 LLM_SNAPSHOT_FIELDS = ["task", "key", "model", "prompt_hash", "output", "created_at"]
 LLM_REJECTED_FIELDS = ["task", "entity_id", "label", "output", "reason", "score"]
+
+# --------------------------------------------------------------------------------------
+# Multilingual label completion (`--translate`): fills empty EN/FR primary + alt labels on the
+# unified tables. Quality-first ordering: authoritative Wikidata @en/@fr labels + aliases, then
+# local HuggingFace MT (NLLB) with a tech-term guard, each cross-lingually validated. Fully local
+# + snapshotted (free-tier-safe, resumable); never overwrites a non-empty cell or source data.
+# --------------------------------------------------------------------------------------
+TRANSLATE_MT_MODEL = os.environ.get("JOBKB_TRANSLATE_MODEL", "facebook/nllb-200-distilled-600M")
+TRANSLATE_LANG_CODES = {"en": "eng_Latn", "fr": "fra_Latn"}   # NLLB BCP-47-ish codes
+TRANSLATE_MAX_NEW_TOKENS = 96          # labels are short; caps runaway generation
+TRANSLATE_BATCH_SIZE = 16              # MT batch size (CPU)
+TRANSLATE_XLING_MIN = 0.62             # lenient cross-lingual floor: src vs output must be at least this
+                                       # similar (bge-m3 is multilingual). A lenient floor catches gross
+                                       # semantic failures; the structural filters below catch the rest.
+                                       # (Back-translation round-trip was too noisy on short labels — it
+                                       # dropped correct translations like "Monitoring"->"Surveillance".)
+# Output looks like a generated sentence, not a label → reject (MT sometimes describes instead of names).
+TRANSLATE_SENTENCE_STARTS = ("je ", "j'", "nous ", "vous ", "il s'agit", "c'est ", "cela ",
+                             "i am ", "i'm ", "we ", "it is ", "this is ", "there ")
+TRANSLATE_LEN_RATIO_MIN = 0.30         # output/source char-length ratio bounds (reject collapses/blow-ups)
+TRANSLATE_LEN_RATIO_MAX = 3.50
+TRANSLATE_ROME_EN_ENABLED = os.environ.get("JOBKB_TRANSLATE_ROME_EN", "1") == "1"  # fr->en for ROME rows
+TRANSLATE_MAX_TARGETS = int(os.environ.get("JOBKB_TRANSLATE_MAX", "0"))  # 0 = unlimited (bounds runtime)
+# Tech proper-noun / acronym guard: labels that are wholly one of these (or a single protected token)
+# are kept verbatim, never machine-translated. Token-level heuristics (acronyms, CamelCase, version
+# tokens) are applied in code; this lexicon covers common lowercase tech terms the heuristics miss.
+TRANSLATE_TECH_LEXICON = frozenset({
+    "python", "java", "javascript", "typescript", "kotlin", "swift", "golang", "rust", "scala",
+    "docker", "kubernetes", "terraform", "ansible", "jenkins", "git", "linux", "unix", "bash",
+    "react", "angular", "vue", "django", "flask", "spring", "node", "nodejs", "npm", "webpack",
+    "tensorflow", "pytorch", "keras", "numpy", "pandas", "spark", "hadoop", "kafka", "airflow",
+    "mongodb", "postgresql", "mysql", "redis", "elasticsearch", "snowflake", "databricks",
+    "kubernetes", "openshift", "helm", "grafana", "prometheus", "nginx", "apache", "tomcat",
+    "machine learning", "deep learning", "data science", "big data", "cloud", "cloud computing",
+    "devops", "mlops", "cicd", "microservices", "blockchain", "cybersecurity", "middleware",
+    "business intelligence", "business objects", "sharepoint", "power bi", "sql server",
+    "active directory", "data warehouse", "data lake", "data mining", "web services",
+})
+TRANSLATE_SNAPSHOT_FIELDS = ["direction", "src_hash", "src_text", "output", "model", "validated",
+                             "score", "reason", "created_at"]
+TRANSLATE_WD_LABELS_FIELDS = ["qid", "label_en", "label_fr"]
+TRANSLATE_REJECTED_FIELDS = ["direction", "src_text", "output", "reason", "score"]
 
 # --------------------------------------------------------------------------------------
 # Alignment tunables

@@ -1,10 +1,11 @@
 # JobKB
 
 An **English-primary**, IT-focused occupation & skill **knowledge base**, built
-**fully automatically** from five local public taxonomies. French is kept as a
-secondary language wherever a source provides it. There is **no scraping, no live
-web calls, and no human in the loop** — cross-source duplicates are resolved and
-alignments validated with open-source HuggingFace models.
+**fully automatically** from five local public taxonomies. French is a first-class
+secondary language: every concept's EN/FR labels are completed bilingually from
+authoritative Wikidata labels and validated HuggingFace machine translation. There
+is **no scraping, no live web calls, and no human in the loop** — cross-source
+duplicates are resolved and alignments validated with open-source HuggingFace models.
 
 ## Sources (IT-filtered, English where available)
 
@@ -200,6 +201,28 @@ tasks are simply skipped and the build still succeeds. Every generation is **sna
 (`resources/LLM/retrieved/`) so re-runs make **zero** API calls (free-tier-friendly) and are
 resumable; validation rejects are logged to `kb/llm_rejected.csv`. `--llm` runs **after merge**; its
 values are re-woven idempotently on every subsequent `--stages merge`.
+
+**Multilingual label completion (bilingual KB), auto-validated.** `python run_pipeline.py --translate`
+fills the empty `primary_label_en/fr` and `alt_labels_en/fr` columns so the KB is a complete bilingual
+resource (`src/translate.py`). Because there is **no human in the loop**, every filled label is
+**validated before it touches the graph** and source/curated labels are **never overwritten**. It works
+in three quality-first layers: **(L1) Wikidata** — for concepts carrying a QID, the authoritative
+`@en`/`@fr` `rdfs:label` and multilingual aliases are used directly (free, accurate; this is the **only**
+source used for `alt_labels`, so no alias noise); **(L2) machine translation** — a **local** HuggingFace
+model (`facebook/nllb-200-distilled-600M`) translates the remaining primary labels (`fr→en` for the
+French-only ROME concepts, `en→fr` for the English sources) behind a **tech-term preservation guard** so
+technology names are **never** Frenchified — "Docker", "Python", "Machine Learning", "Business
+Intelligence" etc. are kept verbatim (word- and phrase-level, plus acronyms/CamelCase/versions); **(L3)**
+if MT is unavailable or an output fails validation, the cell is simply **left empty** (fail-open, no bad
+data). Each MT output is checked by a **lenient cross-lingual semantic floor** (bge-m3 compares the source
+against the translation directly — a single clean signal) plus **structural filters** (sentence-instead-
+of-label, length blow-up, lost tech token); rejects are logged to `kb/translate_rejected.csv`. Everything
+is **snapshotted** (`resources/TRANSLATE/retrieved/`) so re-runs recompute **nothing** and the job is
+resumable/observable (checkpointed every 200 labels). Fully local ⇒ **free-tier-safe**; provenance is
+tagged `source="TRANSLATE"`. This lifted primary-label coverage to **EN 11,389/11,409 (99.8%)** and
+**FR 11,021/11,409 (96.6%)** — up from 81.6 % / 35.7 % — with all QA invariants unchanged (labels are
+purely additive). `--translate` runs **after merge**; its values re-weave idempotently on every subsequent
+`--stages merge`.
 
 ## Pipeline (package + orchestrator)
 
