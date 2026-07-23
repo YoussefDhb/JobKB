@@ -164,7 +164,16 @@ def qa():
               f"{[(e['parent_entity_id'], e['child_entity_id']) for e in dangling[:3]]}")
     if rel_dangling:
         print(f"  WARNING: {len(rel_dangling)} occupation-skill relations reference missing entities")
+
+    # Logical-consistency certificate: the graph-logic invariants asserted explicitly (acyclicity,
+    # single-parent, hard_soft<->taxonomy, no skill->skill edges, backbone reachability, endpoint types,
+    # unified integrity, id uniqueness, relation dedup). Read-only; see src/validation/consistency.py.
+    from .validation import consistency as _consistency
+    _cons = _consistency.check()
+    print(_consistency.summary_line(_cons))
+
     return {"occupations": len(occ), "skills": len(real_skl), "edges": len(hier),
+            "consistency_pass": sum(1 for _, ok, _ in _cons if ok), "consistency_total": len(_cons),
             "dangling": len(dangling), "occ_orphans": len(occ_orphans),
             "skl_flat": len(skl_flat), "attach_lowconf": len(attach_lowconf),
             "gate_blocked": len(gate_block), "gate_borderline": gate_border,

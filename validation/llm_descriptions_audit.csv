@@ -1,0 +1,25 @@
+label,nli,pass,description
+Hierarchical simulation program with integrated circuit emphasis HSPICE,0.818,True,HSPICE is a specialized simulation tool for analog and digital circuits in hardware and embedded systems.
+Verilog,0.929,True,Verilog is a hardware description language used in the design of electronic systems.
+"Network, hardware, and software auditing software",0.868,True,"Skill involves using auditing software to assess network, hardware, and software configurations for security and compliance."
+Scikit-learn,0.911,True,Scikit-learn is a Python library for machine learning in the domain of AI & data analytics.
+Snowflake,0.878,True,Snowflake is a cloud-based data warehousing service designed for handling large datasets efficiently.
+TensorFlow,0.711,True,TensorFlow is an open-source software library for numerical computation using data flow graphs.
+Apple IOS,0.795,True,mobile operating system for iOS devices; domain: Mobile development / Web & Mobile Development
+Google Android,0.944,True,Google Android is a platform for mobile device operating systems developed by Google.
+Amazon Data Pipeline,0.921,True,"Amazon Data Pipeline is a service for designing, scheduling, and monitoring data workflows in big data and data engineering."
+Apache Sqoop,0.9,True,Apache Sqoop is a tool for efficiently transferring bulk data between Hadoop and traditional relational databases.
+Informatica Big Data,0.941,True,Informatica Big Data is a tool for managing and integrating big data across enterprise systems.
+Informatica software,0.973,True,Skill in Informatica software for managing and integrating large datasets in big data and data engineering roles.
+Teradata Active Enterprise Data Warehouse,0.937,True,Skill involves managing and optimizing Teradata's active enterprise data warehouse for big data and analytics tasks.
+Adeptia ETL Suite,0.923,True,Adeptia ETL Suite is a tool for extracting transforming and loading data in big data and data engineering domains.
+Talend Big Data Integration,0.968,True,Talend Big Data Integration is a skill in big data and data engineering focusing on data integration solutions.
+Simulation program with integrated circuit emphasis SPICE,0.932,True,SPICE is a simulation tool for analog and digital circuits in hardware and embedded systems.
+Embedded systems development software,0.973,True,Embedded systems development software involves designing software for specialized hardware within larger systems.
+Magellan Firmware,0.96,True,Magellan Firmware refers to specialized software for embedded systems in hardware infrastructure and cloud services.
+Real time operating system RTOS software,0.979,True,RTOS software is real-time operating system software for hardware and embedded systems infrastructure.
+MapReduce big data software,0.973,True,MapReduce is a big data software framework for processing large datasets across clusters.
+MLflow,0.78,True,MLflow is an open source platform for managing the life cycle of machine learning workflows.
+Data warehouse software,0.97,True,Data warehouse software is used for storing and querying large datasets to support analytics in big data and data engineering fields.
+Informatica Data Explorer,0.828,True,Skill involves using Informatica Data Explorer for data integration and management in big data environments.
+adaptive learning,0.952,True,adaptive learning is an AI technique adjusting learning approaches based on user performance analytics

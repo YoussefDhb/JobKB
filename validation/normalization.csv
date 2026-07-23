@@ -1,0 +1,109 @@
+cluster_id,cluster_size,resolved,distinct_kb_nodes,collapsed,example
+0,6,5,2,False,ability to work effectively with people
+1,4,2,2,False,ability to work with children
+2,4,4,1,True,ability to motivate people
+3,3,3,2,False,ability to present proposals
+4,4,4,2,False,ability to apply the gained knowledge
+5,14,12,4,False,leadership skills
+6,13,7,2,False,action oriented
+7,2,2,1,True,open minded
+8,4,4,2,False,open to change
+12,8,6,4,False,flexibility with working hours when necessary
+13,3,3,1,True,flexibility
+14,14,8,6,False,ability to work under pressure
+15,5,5,3,False,ability to work in a stressful environment
+16,7,2,2,False,able to work hard
+18,10,7,5,False,ability to learn fast
+19,13,12,3,False,ability to learn authoring technologies
+20,15,7,7,False,ability to resolve difficult problems
+21,11,10,4,False,problemsolving attitude
+22,2,2,1,True,facilitating skills
+25,2,2,1,True,commitment to work
+26,3,2,2,False,team commitment
+30,59,59,6,False,ability to function as part of a team
+32,3,2,2,False,ability to manage tasks independently
+33,4,4,2,False,ability to complete the tasks to assigned deadlines
+34,27,27,7,False,ability to complete multiple tasks
+35,10,6,5,False,ability to prioritize competing tasks even under pressure
+36,6,4,3,False,ability to develop relations
+38,2,2,1,True,ability to interpret
+39,14,2,2,False,able to work unusual work hours
+40,15,14,5,False,ability to organize tasks
+41,5,4,3,False,ability to negotiate
+42,3,2,1,True,ability to promptly respond to rapidly changing situations
+43,10,7,3,False,ability to meet goals
+44,36,35,4,False,ability to balance deadlines
+45,13,12,3,False,responsible person
+46,4,2,2,False,honesty and commitment
+47,6,6,2,False,respect for colleagues
+49,8,6,2,False,client orientation
+50,14,11,3,False,ability to work in a crosscultural environment
+51,5,5,2,False,skills to build a team
+53,6,6,2,False,ability to communicate with diplomacy
+54,4,3,2,False,self organizational skills
+55,8,7,6,False,management skills
+56,2,2,2,False,conflict management skills
+57,3,2,2,False,ability to collect information
+58,21,16,6,False,ability to communicate effectively
+64,7,5,1,True,self confidence
+66,6,6,2,False,self motivated
+67,4,4,1,True,ability to interact with groups
+68,18,13,6,False,ability to establish positive relationships
+69,9,7,5,False,ability to balance multiple priorities
+71,4,4,3,False,ability to integrate team members
+72,5,5,1,True,ability to deal with confidential information
+74,13,12,3,False,decision making skills
+77,4,2,1,True,punctual
+78,7,7,3,False,professional
+79,5,3,3,False,ability to correct reporting
+81,3,3,2,False,coordinating skills
+82,11,8,5,False,ability to demonstrate initiative
+83,5,3,2,False,competency of business ethics
+84,4,4,1,True,sense of ethics
+85,10,10,3,False,analytical abilities
+87,3,2,2,False,ability to think conceptually
+88,6,4,4,False,ability to think strategically
+89,13,8,2,False,ability to work with limited time frame
+90,4,4,3,False,ability to provide training
+92,5,5,3,False,manages time effectively
+97,9,9,3,False,ability to function independently
+98,6,2,1,True,crosscultural sensitivity
+101,4,2,2,False,growth orientation
+103,7,7,4,False,ability to operate in a multitasking enviroment
+104,2,2,1,True,research skills
+106,7,6,3,False,able to persuade through influence
+107,7,3,3,False,ability to communicate with tact
+108,4,3,2,False,ability to integrate immediately into the fast moving environment
+109,2,2,1,True,positive attitude
+110,2,2,2,False,team based management style
+111,6,6,5,False,ability to plan the work
+112,3,2,2,False,dedication to quality
+114,13,13,4,False,ability to work collaboratively
+115,6,6,3,False,ability to work individually
+118,3,3,2,False,ability to coach staff
+119,4,3,1,True,ability to handle a workload
+120,4,2,2,False,ability to analyze problems
+121,4,2,2,False,ability to work as a self starter
+123,6,6,5,False,encouraging innovation
+130,3,2,1,True,enthusiastic
+132,7,6,2,False,public speaking skills
+139,13,11,4,False,creative approach
+141,3,2,2,False,ability to intervene in crisis situation
+145,5,2,2,False,ability to exercise judgment
+146,4,3,2,False,accuracy
+157,2,2,1,True,interpersonal skills
+159,4,3,2,False,ability to foster and maintain a spirit of unity
+163,2,2,1,True,disciplined
+167,3,3,2,False,critical thinking
+173,5,2,1,True,organized
+178,2,2,2,False,telephone skills
+179,6,3,3,False,ability to listen to others opinions
+182,12,3,2,False,ability to express ideas clearly
+187,2,2,1,True,ability to operate efficiently
+189,2,2,2,False,educational skills
+197,10,7,1,True,attention to details
+198,4,4,3,False,ability to adapt to dynamic business environment
+204,10,10,4,False,crosscultural communication skills
+209,3,2,2,False,commitment to improvements
+217,3,3,2,False,self learning
+222,14,13,7,False,people management skills

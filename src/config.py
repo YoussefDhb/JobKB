@@ -103,6 +103,29 @@ TRANSLATE_REJECTED_CSV = os.path.join(KB_DIR, "translate_rejected.csv")  # MT ou
 WIKIDATA_LINKS_CSV = os.path.join(KB_DIR, "wikidata_links.csv")      # entity -> Wikidata QID anchors
 
 # --------------------------------------------------------------------------------------
+# KB validation (`--validate`): external gold benchmark + LLM-connection audit. Read-only over the
+# graph (adds NO entities); consumes the three expert-annotated NER corpora the user provided. The
+# graph logical-consistency suite (validation/consistency.py) runs automatically inside qa().
+# --------------------------------------------------------------------------------------
+VALIDATION_RES_DIR = os.path.join(RESOURCES, "validation")     # SkillSpan / Sayfullina / FIJO corpora
+VALIDATION_OUT_DIR = os.path.join(ROOT, "validation")          # written report + per-track metrics CSVs
+VALIDATION_DATASETS = {
+    # name -> (subdir, splits, has tags_knowledge, has source col, language)
+    "skillspan":  ("skillspan",  ("train", "dev", "test"), True,  True,  "en"),
+    "sayfullina": ("sayfullina", ("train", "dev", "test"), False, False, "en"),
+    "fijo":       ("fijo",       ("train", "dev", "test"), False, False, "fr"),
+}
+SAYFULLINA_CLUSTERS_CSV = os.path.join(VALIDATION_RES_DIR, "sayfullina", "sayfullina_clusters.csv")
+VALIDATION_SEMANTIC_MIN = 0.75   # bge-m3 cosine floor for "semantically covered" (a gold mention is
+                                 # covered if its nearest KB skill label clears this); reported next to
+                                 # the stricter exact/alias coverage, never instead of it.
+VALIDATION_ANON_TOKENS = ("<organization>", "<address>", "<location>", "<anon_company>", "<anon_misc>")
+# LLM-connection audit thresholds (Track 3): re-verify the 84 llm_inferred links + 24 llm descriptions.
+VALIDATION_LINK_NLI_MIN = 0.50       # occ-definition -> "requires {skill}" entailment to count as NLI-ok
+VALIDATION_DEMAND_SEMANTIC_MIN = 0.75  # a link is demand-corroborated if the occ demands the skill OR a
+                                       # skill this close to it (embedding) in its real posting profile
+
+# --------------------------------------------------------------------------------------
 # Knowledge-base schema (English-primary; French secondary when present)
 # --------------------------------------------------------------------------------------
 

@@ -1,0 +1,693 @@
+surface,layer,subset,category,count,exact,exact_uid,sem_score,sem_uid,semantic
+"Fournir ou demander, par téléphone, entrevue ou correspondance, des informations",skill,,RELATIONNEL,3,False,,0.745,USKL_2de2e7c7d9f7,False
+Effectuer les recherches nécessaires,skill,,PENSEE,5,False,,0.859,USKL_c447ab221c24,True
+donner suite aux informations demandées,skill,,PENSEE,2,False,,0.839,USKL_2de2e7c7d9f7,True
+"par téléphone, entrevue ou correspondance",skill,,RELATIONNEL,2,False,,0.638,USKL_c5ac09b9aa95,False
+Communiquer avec les autres directions de l'assurance de personnes,skill,,RELATIONNEL,2,False,,0.765,USKL_ab4c7be0ce3c,True
+via une procédure établie,skill,,PERSONNEL,1,False,,0.711,USKL_1ee27234af59,False
+obtenir les renseignements,skill,,PENSEE,1,False,,0.866,USKL_2de2e7c7d9f7,True
+permettant de répondre à la demande de service du client,skill,,PENSEE,1,False,,0.858,USKL_8a2a5c03b181,True
+Dicter,skill,,RELATIONNEL,4,False,,0.648,USKL_a7bce216d225,False
+corriger,skill,,PERSONNEL,5,False,,0.633,USKL_d76e2176a6b6,False
+signer ses lettres,skill,,PERSONNEL,3,False,,0.725,USKL_717d915a7363,False
+"Offrir, par écrit ou par téléphone, des services ou produits",skill,,RELATIONNEL,4,False,,0.719,USKL_a5a738d7533d,False
+Gérer ses activités quotidiennes,skill,,RESULTATS,4,False,,0.738,USKL_80d45ff85d6d,False
+selon les règles établies,skill,,PERSONNEL,4,False,,0.749,USKL_4af4f3f7f9d1,False
+avec l'outil « »,skill,,PENSEE,2,False,,0.688,USKL_68a9a9fd5c93,False
+Effectuer occasionnellement des sondages téléphoniques,skill,,RELATIONNEL,6,False,,0.692,USKL_7b078f5ab0d5,False
+Effectuer des demandes de remboursement,skill,,RELATIONNEL,3,False,,0.698,USKL_2389cca45236,False
+à la suite d'une vérification d'un dossier ou de la liste des déchéances rétroactives,skill,,PERSONNEL,2,False,,0.646,USKL_75e10b4a4e2c,False
+"Annuler ou encaisser des chèques ou d'assurés et demander, via la procédure établie, l'émission de chèques par l’administration",skill,,PERSONNEL,1,False,,0.607,USKL_ad353ccd4429,False
+Participer régulièrement à une formation continue pour le perfectionnement des connaissances à maîtriser,skill,,PERSONNEL,4,False,,0.822,USKL_9d20e94563ee,True
+l'exécution des tâches quotidiennes,skill,,RESULTATS,4,False,,0.699,USKL_80d45ff85d6d,False
+la transmission des informations aux clients,skill,,PENSEE,4,False,,0.828,USKL_0c6e6a230427,True
+Interpréter les demandes des clients,skill,,PENSEE,4,False,,0.902,USKL_538a064b628a,True
+soumettre des suggestions d’amélioration,skill,,RESULTATS,7,False,,0.888,USKL_b5fb3be66b5c,True
+"Maîtriser les modalités, cibler et référer les assurés aux différents programmes gouvernementaux",skill,,PENSEE,3,False,,0.647,USKL_096440798d20,False
+Participer aux travaux collectifs,skill,,RELATIONNEL,13,False,,0.761,USKL_97f85e92146f,True
+Exercer d'autres fonctions sur demande,skill,,PERSONNEL,11,False,,0.696,USKL_2cd81291694a,False
+"Fournir ou demander, par téléphone, entrevue ou correspondance des informations",skill,,RELATIONNEL,1,False,,0.726,USKL_2de2e7c7d9f7,False
+"Effectuer les recherches nécessaires pour donner suite aux informations demandées par téléphone, entrevue ou correspondance",skill,,PENSEE,2,False,,0.692,USKL_f47d474610fc,False
+selon une procédure établie,skill,,PERSONNEL,3,False,,0.717,USKL_4af4f3f7f9d1,False
+obtenir les renseignements permettant de répondre à la demande de service du client,skill,,PENSEE,1,False,,0.805,USKL_8a2a5c03b181,True
+Participer au réseau téléphonique,skill,,RELATIONNEL,3,False,,0.706,USKL_2a87081f525e,False
+fournir les renseignements nécessaires aux assurés,skill,,PENSEE,1,False,,0.806,USKL_2de2e7c7d9f7,True
+"Effectuer, occasionnellement, différents travaux dans les diverses directions de l'administration des contrats selon les besoins des directions",skill,,PERSONNEL,1,False,,0.698,USKL_8bbced18bb75,False
+Annuler ou encaisser des chèques ou d'assurés et demander selon la procédure établie l'émission de chèques par l’administration,skill,,PERSONNEL,1,False,,0.605,USKL_ad353ccd4429,False
+Assurer le service à la clientèle,skill,,PENSEE,1,False,,0.818,USKL_b0d221cd031d,True
+"concernant les dossiers d’épargne, de retraite ou des informations d’ordre général concernant le fonctionnement des véhicules de placements ou des produits offerts",skill,,PENSEE,1,False,,0.617,USKL_365be8ce2413,False
+pour donner suite aux informations demandées,skill,,PENSEE,1,False,,0.821,USKL_2de2e7c7d9f7,True
+tenir à jour certaines statistiques liées aux activités du secteur,skill,,PERSONNEL,1,False,,0.741,USKL_810c0c2b17b9,False
+"Analyser les demandes d’enregistrement ou de modification des dossiers d’adhérents, d’intermédiaires, de groupes ou de responsables de groupes et procéder à l’inscription au système en tenant compte de l’aspect légal, contractuel et du type de produit choisi",skill,,PENSEE,1,False,,0.687,USKL_0a995dfd0cdb,False
+Maîtriser les différentes règles fiscales ou légales ainsi que les différentes modalités des véhicules de placement,skill,,PENSEE,1,False,,0.677,USKL_36cd7f807ae8,False
+Accueillir les visiteurs et répondre à leurs diverses demandes d’information,skill,,PENSEE,1,False,,0.74,USKL_8a2a5c03b181,False
+Opérer un micro ordinateur pour recevoir et transmettre de l’information aux systèmes de gestion,skill,,PENSEE,1,False,,0.7,USKL_ce8c9d7da306,False
+À l’aide des logiciels appropriés,skill,,PENSEE,1,False,,0.863,USKL_42bc59bec0d4,True
+"effectuer divers calculs, compilations et produire divers rapports, listes et mémos",skill,,PERSONNEL,1,False,,0.757,USKL_1d176d0b5b3f,True
+Solliciter des responsables de groupes ou de paies chez les employeurs pour leur offrir les services du WEB,skill,,RELATIONNEL,1,False,,0.676,USKL_0522b7853f08,False
+Gérer ses activités quotidiennes selon les priorités établies dans le secteur d’activités,skill,,RESULTATS,1,False,,0.777,USKL_5e091abe3f4a,True
+Composer,skill,,PENSEE,1,False,,0.682,USKL_db9d58af5339,False
+signer des lettres,skill,,PERSONNEL,2,False,,0.721,USKL_717d915a7363,False
+Collaborer,skill,,RELATIONNEL,3,False,,0.862,USKL_db013ddcbcda,True
+à la rédaction des textes pour de nouvelles lettres et formules ou à la modification de celles déjà existantes,skill,,PENSEE,1,False,,0.653,USKL_7fd6b56b8302,False
+à l’établissement ou à la modification des procédures relatives aux activités du service,skill,,RESULTATS,1,False,,0.704,USKL_5c7f7c6e9def,False
+Planifier et coordonner en équipe,skill,,RELATIONNEL,3,False,,0.828,USKL_210bac427a09,True
+les activités inhérentes à une saine gestion des dossiers des clients,skill,,PENSEE,3,False,,0.715,USKL_fcaf2be0295a,False
+en respectant les normes de qualité et de quantité,skill,,PERSONNEL,4,False,,0.861,USKL_5563c12765fd,True
+Collaborer avec les autres,skill,,RELATIONNEL,4,False,,0.897,USKL_ad08ea7e1c1d,True
+dans le but d’atteindre des objectifs communs,skill,,RESULTATS,3,False,,0.821,USKL_518f49bc69db,True
+"Aborder un problème dans son ensemble afin d'en déterminer avec précision son origine, les causes et d'identifier les solutions pertinentes",skill,,RESULTATS,2,False,,0.74,USKL_8f534f5e1ad4,False
+"Adhérer à la vision de l'entreprise, à sa mission, à ses valeurs corporatives",skill,,PERSONNEL,4,False,,0.69,USKL_da35b7f04983,False
+et aux objectifs à atteindre,skill,,RESULTATS,3,False,,0.717,USKL_d882f40dd691,False
+"Effectuer des adhésions et des changements de protections, d'adresses, de bénéficiaires et autres opérations de mise à jour des dossiers des adhérents",skill,,PENSEE,1,False,,0.649,USKL_949d74d72a96,False
+effectuer des terminaisons de groupes ou d'adhérents,skill,,PENSEE,2,False,,0.647,USKL_7879b253076a,False
+Préparer,skill,,PENSEE,2,False,,0.715,USKL_1736e451af19,False
+vérifier et contrôler,skill,,PERSONNEL,2,False,,0.77,USKL_b8e230067fc4,True
+l'inscription des nouveaux groupes et effectuer les modifications demandées lors des transferts ou renouvellements de groupes,skill,,PENSEE,2,False,,0.694,USKL_ecfe15b8f860,False
+Vérifier et balancer les encaissements relatifs aux primes d’assurance,skill,,PERSONNEL,4,False,,0.604,USKL_5981120531e3,False
+s’assurer que les changements indiqués par les responsables de groupes sont conformes aux contrats,skill,,PERSONNEL,2,False,,0.693,USKL_bbf50a567532,False
+calculer les taux de primes et vérifier qu’ils ont été appliqués correctement,skill,,PERSONNEL,2,False,,0.671,USKL_5981120531e3,False
+enregistrer et modifier des comptes à recevoir,skill,,PERSONNEL,4,False,,0.714,USKL_100e70f9adfe,False
+effectuer des encaissements et des retraits,skill,,PERSONNEL,4,False,,0.715,USKL_f1b358b2f1f6,False
+préparer des factures d'ajustement ou des demandes de remboursement,skill,,PERSONNEL,3,False,,0.697,USKL_2c351f457893,False
+Effectuer les recherches nécessaires pour donner suite au courrier quotidien,skill,,PENSEE,2,False,,0.699,USKL_c447ab221c24,False
+"Fournir ou demander, par téléphone ou correspondance, des informations",skill,,RELATIONNEL,4,False,,0.774,USKL_2de2e7c7d9f7,True
+Analyser,skill,,PENSEE,6,False,,0.762,USKL_f86a7aa1417b,True
+"corriger certains cas rejetés lors des traitements informatiques en référence avec le fichier des assurés, le fichier des groupes et le fichier de revenu de primes",skill,,PERSONNEL,1,False,,0.61,USKL_d76e2176a6b6,False
+"Utiliser l’intranet et l’extranet du service, les logiciels de la suite Microsoft (Excel, Word, Outlook), <anon_misc>, <anon_misc>, les logiciels de gestion des tâches et de gestion numérique des dossiers",skill,,PENSEE,2,False,,0.689,USKL_975895aaa7db,False
+Utiliser des systèmes externes,skill,,PENSEE,2,False,,0.788,USKL_b30970eb02e7,True
+mettre à jour les informations,skill,,PERSONNEL,2,False,,0.835,USKL_8d169cf3763b,True
+vérifier et corriger les cas rejetés lors des traitements informatiques,skill,,PERSONNEL,2,False,,0.68,USKL_5b69605d69a7,False
+régler les cas soumis par le service à la clientèle suite à une demande des adhérents,skill,,PENSEE,1,False,,0.736,USKL_9d4a0901366a,False
+Effectuer l’analyse des renseignements contenus aux dossiers,skill,,PENSEE,1,False,,0.775,USKL_43e1f75bb0bf,True
+"Tenir compte des dispositions contractuelles, des preuves médicales et/ou de décès, des programmes gouvernementaux, des politiques et des procédures internes",skill,,PENSEE,1,False,,0.632,USKL_096440798d20,False
+"Communiquer principalement par correspondance les décisions prises selon qu’il s’agisse d’une acceptation aux prestations, d’une demande de renseignements additionnels ou d’un refus",skill,,RELATIONNEL,1,False,,0.645,USKL_564037f5c4e5,False
+Effectuer le service à la clientèle,skill,,PENSEE,4,False,,0.774,USKL_c96a05e3a767,True
+"en communiquant avec les assurés, les preneurs et/ou les bénéficiaires",skill,,RELATIONNEL,1,False,,0.778,USKL_ab4c7be0ce3c,True
+afin d’obtenir certains renseignements spécifiques,skill,,PENSEE,1,False,,0.757,USKL_2de2e7c7d9f7,True
+en répondant à leurs appels,skill,,RELATIONNEL,1,False,,0.791,USKL_af428de72d6c,True
+Effectuer des tâches techniques pour appuyer la gestion des dossiers qui lui sont attribués,skill,,PERSONNEL,1,False,,0.778,USKL_12bc5dcf00e9,True
+Interagir avec les systèmes informatiques pertinents,skill,,PENSEE,4,False,,0.783,USKL_fe841e9b696f,True
+pour mettre à jour les données et effectuer les paiements,skill,,PERSONNEL,2,False,,0.777,USKL_f8de61fe58de,True
+en tenant compte des particularités propres aux contrats et aux directives internes,skill,,PENSEE,2,False,,0.672,USKL_e71683ccf779,False
+Acquérir et maintenir de façon proactive,skill,,PERSONNEL,2,False,,0.69,USKL_57a7a456305b,False
+"une connaissance des outils, des politiques, des processus",skill,,PENSEE,1,False,,0.707,USKL_096440798d20,False
+Soumettre au directeur adjoint toute suggestion visant à améliorer l’efficacité des tâches de son poste,skill,,RESULTATS,1,False,,0.728,USKL_738461cc8d74,False
+"Analyser et évaluer chacune des demandes de prestations reçues, décider à quelle garantie se référer",skill,,PENSEE,1,False,,0.678,USKL_2e1c85408d3d,False
+saisir les informations pertinentes,skill,,PERSONNEL,1,False,,0.82,USKL_2de2e7c7d9f7,True
+Soumettre à la pharmacienne ou au dentiste conseil les dossiers qui demandent une analyse plus approfondie,skill,,RELATIONNEL,1,False,,0.652,USKL_a25f4f454cb8,False
+Opérer une calculatrice pour exécuter différents travaux,skill,,PENSEE,1,False,,0.744,USKL_f1b358b2f1f6,False
+Obtenir par téléphone ou correspondance des informations,skill,,PENSEE,1,False,,0.746,USKL_2de2e7c7d9f7,False
+"Calculer, après vérification des garanties, les cas de « doubles protections »",skill,,PERSONNEL,1,False,,0.609,USKL_bef97dc9ba4a,False
+Corriger les cas rejetés des listes de cas spéciaux et de validation,skill,,PERSONNEL,1,False,,0.687,USKL_d76e2176a6b6,False
+Réévaluer tous les cas soumis par le Service à la clientèle,skill,,PENSEE,1,False,,0.639,USKL_9d4a0901366a,False
+Déterminer les cas et la nature des demandes de renseignements nécessaires à l'acceptation des demandes de prestations,skill,,PENSEE,1,False,,0.744,USKL_cc28d43ed380,False
+remplir les formules appropriées,skill,,PERSONNEL,1,False,,0.742,USKL_611ba053966e,False
+"Opérer un écran informatique pour recevoir, transmettre ou corriger des informations au fichier central",skill,,PENSEE,1,False,,0.691,USKL_62b6b9adb519,False
+Effectuer l’analyse de tous les renseignements pertinents à la détermination des obligations,skill,,PENSEE,1,False,,0.681,USKL_fa9c74fb4083,False
+Communiquer avec tous les intervenants impliqués aux dossiers,skill,,RELATIONNEL,4,False,,0.809,USKL_bfceff313fbb,True
+afin de rassembler tous les renseignements pertinents,skill,,PENSEE,1,False,,0.721,USKL_9d85974e0eb6,False
+transmettre les décisions et les plans d’action relatifs aux demandes de règlements,skill,,RELATIONNEL,1,False,,0.689,USKL_2389cca45236,False
+Faire une sélection et une utilisation judicieuses et appropriées des interventions internes et externes,skill,,PENSEE,3,False,,0.729,USKL_5b755bac0526,False
+Interagir avec les mandataires externes,skill,,RELATIONNEL,3,False,,0.779,USKL_b5540068528e,True
+de manière à faire respecter les objectifs et les budgets qui leur sont donnés et s’assurer d’une bonne évolution des interventions,skill,,RESULTATS,1,False,,0.726,USKL_5a3d119852e2,False
+en répondant aux appels de toutes les parties prenantes aux dossiers,skill,,RELATIONNEL,1,False,,0.705,USKL_ab4c7be0ce3c,False
+Élaborer et mettre en œuvre les interventions qui réduisent la durée des invalidités,skill,,RESULTATS,1,False,,0.664,USKL_5c7f7c6e9def,False
+"Participer, à l’occasion, à des rencontres avec les preneurs",skill,,RELATIONNEL,3,False,,0.743,USKL_ca325f270a5c,False
+afin de procéder à la revue critique de dossiers,skill,,PERSONNEL,1,False,,0.716,USKL_a7c984e5fea7,False
+Recommander des mesures destinées à améliorer les réalisations de la direction principale en matière de service et de productivité,skill,,RESULTATS,1,False,,0.758,USKL_738461cc8d74,True
+"une connaissance des outils, des politiques, des processus, des produits et des services",skill,,PENSEE,1,False,,0.699,USKL_08ee5b5946cc,False
+Effectuer certaines tâches techniques et administratives pour appuyer la gestion des dossiers,skill,,PERSONNEL,1,False,,0.774,USKL_fcaf2be0295a,True
+"Aider, à l’occasion, les employés moins expérimentés et collaborer à des projets spécifiques",skill,,RELATIONNEL,1,False,,0.744,USKL_658badcab5ba,False
+Communiquer avec les autres directions de l'assurance collective,skill,,RELATIONNEL,2,False,,0.745,USKL_c5ac09b9aa95,False
+pour obtenir les renseignements,skill,,PENSEE,1,False,,0.841,USKL_2de2e7c7d9f7,True
+permettant de répondre à la demande de service aux administrateurs,skill,,RESULTATS,1,False,,0.779,USKL_8a2a5c03b181,True
+"Effectuer, occasionnellement, différents travaux dans les divers services de l'administration des contrats selon les besoins des services",skill,,PERSONNEL,1,False,,0.687,USKL_8bbced18bb75,False
+dans l'exécution des tâches quotidiennes,skill,,RESULTATS,2,False,,0.668,USKL_80d45ff85d6d,False
+la transmission des informations aux administrateurs,skill,,RELATIONNEL,1,False,,0.751,USKL_564037f5c4e5,True
+Recenser et interpréter les demandes des administrateurs,skill,,PENSEE,1,False,,0.802,USKL_2e1c85408d3d,True
+"Effectuer des adhésions et des changements de protections, d'adresses, de bénéficiaires et autres opérations de mise à jour du dossier des adhérents",skill,,PENSEE,3,False,,0.647,USKL_4875992f574f,False
+"corriger certains cas rejetés lors des traitements informatiques en référence avec le fichier des assurés, le fichier des groupes et le fichier de revenu de prime",skill,,PERSONNEL,2,False,,0.61,USKL_d76e2176a6b6,False
+régler les cas soumis par le service à la clientèle à la suite d’une demande des adhérents,skill,,PENSEE,1,False,,0.734,USKL_9d4a0901366a,False
+Vérifier,skill,,PERSONNEL,1,False,,0.802,USKL_7bd3127cdc34,True
+traiter chacune des demandes de prestations reçues,skill,,PENSEE,1,False,,0.743,USKL_2389cca45236,False
+déterminer à quelle garantie se référer,skill,,PENSEE,1,False,,0.635,USKL_ec92e928dd88,False
+saisir les informations pertinentes dans le système de traitement des réclamations,skill,,PENSEE,1,False,,0.74,USKL_ce2a7be952dc,False
+Obtenir ou fournir par téléphone ou correspondance des informations,skill,,RELATIONNEL,1,False,,0.763,USKL_2de2e7c7d9f7,True
+tout en s’assurant de la satisfaction de la clientèle,skill,,PENSEE,1,False,,0.854,USKL_b0d221cd031d,True
+Réévaluer les demandes de révision soumises par les clients,skill,,PERSONNEL,1,False,,0.732,USKL_a9e440b4bd43,False
+Communiquer ou répondre à nos fournisseurs,skill,,RELATIONNEL,1,False,,0.792,USKL_1376f758a2b3,True
+pour toutes informations en lien avec une demande de prestation ou pour les guider dans la navigation de nos divers systèmes,skill,,PENSEE,1,False,,0.681,USKL_564037f5c4e5,False
+Participer à des formations continues pour le perfectionnement des connaissances à maîtriser,skill,,PERSONNEL,1,False,,0.787,USKL_2bbbd3735b75,True
+Offrir des services ou produits,skill,,RELATIONNEL,2,False,,0.79,USKL_fa45d279783a,True
+Répondre aux appels ou aux communications des clients internes et externes,skill,,RELATIONNEL,2,False,,0.779,USKL_af428de72d6c,True
+anticiper leurs besoins,skill,,PENSEE,2,False,,0.772,USKL_8a2a5c03b181,True
+documenter les renseignements obtenus,skill,,PERSONNEL,2,False,,0.802,USKL_2de2e7c7d9f7,True
+Effectuer les tâches administratives quotidiennes,skill,,RESULTATS,2,False,,0.732,USKL_d6a3ab833105,False
+les demandes d'annulation,skill,,PENSEE,2,False,,0.716,USKL_cc25b2b25372,False
+la gestion des différentes boîtes courriels communes,skill,,PENSEE,2,False,,0.693,USKL_92bc93bcf9ad,False
+la gestion du courrier,skill,,PERSONNEL,2,False,,0.753,USKL_e324e4b8b3d1,True
+le tout en suivant les politiques et procédures exigées,skill,,PERSONNEL,2,False,,0.755,USKL_95cdedb49d59,True
+communiquer avec le client,skill,,RELATIONNEL,2,False,,0.958,USKL_0c6e6a230427,True
+valider son besoin pour obtenir son approbation afin de maintenir en vigueur ses produits,skill,,PENSEE,2,False,,0.701,USKL_8b1e89fe54a9,False
+"Recevoir les plaintes, critiques et réclamations de clients mécontents",skill,,RELATIONNEL,2,False,,0.813,USKL_ce2a7be952dc,True
+en tentant de trouver des solutions aux problèmes ou insatisfactions,skill,,PENSEE,2,False,,0.871,USKL_ef48250aea9b,True
+Assister la clientèle lors d’un processus de réclamation,skill,,PENSEE,2,False,,0.778,USKL_ce2a7be952dc,True
+Produire différents rapports administratifs,skill,,PERSONNEL,2,False,,0.766,USKL_e897f475a514,True
+Effectuer le support des plateformes informatiques,skill,,PENSEE,2,False,,0.783,USKL_c092d33db71c,True
+afin de mieux répondre aux besoins et attentes du client,skill,,PENSEE,2,False,,0.809,USKL_8a2a5c03b181,True
+Référer la clientèle au bon secteur de l’organisation,skill,,PENSEE,2,False,,0.705,USKL_71577c6269a4,False
+Effectuer toutes autres tâches connexes,skill,,PERSONNEL,5,False,,0.723,USKL_6b5cecd0ff01,False
+Assurer le traitement des activités inhérentes à une saine gestion des dossiers des clients,skill,,PENSEE,1,False,,0.741,USKL_fcaf2be0295a,False
+"Identifier les problèmes, déterminer avec précision les origines, les causes et identifier les solutions pertinentes",skill,,RESULTATS,1,False,,0.806,USKL_133ecd7071a6,True
+"effectuer des transferts, des terminaisons de groupes ou d'adhérents dans le respect du contrat",skill,,PENSEE,1,False,,0.676,USKL_1c312aa2db00,False
+aux comptes santé et autres types de facturation vérifier que les taux de primes aient été appliqués correctement,skill,,PERSONNEL,1,False,,0.608,USKL_5981120531e3,False
+Effectuer la gestion des primes en retard,skill,,RESULTATS,1,False,,0.824,USKL_24bd08380768,True
+"Effectuer les recherches nécessaires pour donner suite au courrier quotidien, aux courriels, et",skill,,PENSEE,1,False,,0.705,USKL_e324e4b8b3d1,False
+"Utiliser l’intranet et l’extranet du service, les logiciels de la suite Microsoft (Excel, Word, Outlook), <anon_misc>, <anon_misc>, <anon_misc>, <anon_misc>, <anon_misc>, logiciels de gestion des tâches et de gestion numérique des dossiers, ainsi que les systèmes de nos partenaires externes",skill,,PENSEE,1,False,,0.686,USKL_975895aaa7db,False
+Participer aux comités d’amélioration continue de la direction,skill,,RELATIONNEL,1,False,,0.774,USKL_ab424eeb8d1c,True
+vous serez principalement responsable de,skill,,PERSONNEL,1,False,,0.57,USKL_af2cbc88dcd2,False
+réaliser les activités inhérentes aux règlements de sinistres automobile et habitation selon la demande,skill,,PENSEE,1,False,,0.662,USKL_d516785e83e6,False
+Traiter toutes les différentes activités inhérentes à la gestion des dossiers de réclamation,skill,,PENSEE,1,False,,0.73,USKL_ce2a7be952dc,False
+Recueillir et étudier les documents pertinents aux dossiers,skill,,PENSEE,1,False,,0.739,USKL_43e1f75bb0bf,False
+Établir la valeur de l’indemnité et la responsabilité de l'événement,skill,,PENSEE,1,False,,0.713,USKL_5739695961f0,False
+Communiquer l'offre de règlement aux assurés,skill,,RELATIONNEL,1,False,,0.737,USKL_ab4c7be0ce3c,False
+Émettre le paiement,skill,,PERSONNEL,1,False,,0.727,USKL_ad353ccd4429,False
+Respecter les standards de qualité de service à la clientèle établis par l’entreprise,skill,,PENSEE,1,False,,0.809,USKL_07e515a7fa38,True
+Contacter les clients ciblés par l’entreprise,skill,,RELATIONNEL,1,False,,0.809,USKL_0c6e6a230427,True
+définir leurs besoins,skill,,PENSEE,4,False,,0.791,USKL_22a9a3cf0a4e,True
+"leur proposer les produits adéquats en assurances automobile, habitation, protection juridique et assurance voyage",skill,,RELATIONNEL,3,False,,0.638,USKL_62bbc1f00893,False
+Répondre aux appels des clients,skill,,RELATIONNEL,2,False,,0.879,USKL_8a2a5c03b181,True
+Conclure les ventes des contrats,skill,,RELATIONNEL,1,False,,0.768,USKL_ad9a2fd63e8e,True
+Modifier les contrats et offrir le service à la clientèle requis,skill,,PENSEE,1,False,,0.8,USKL_8a2a5c03b181,True
+Analyser et évaluer les contrats à renouveler,skill,,PENSEE,1,False,,0.717,USKL_ad9a2fd63e8e,False
+le titulaire travaille en collaboration avec les analystes et les autres techniciens de la direction,skill,,RELATIONNEL,1,False,,0.703,USKL_1960dc67ba8a,False
+Il réalise les tâches reliées à l’étude des soumissions de l’assurance collective et à l’établissement des conditions de renouvellement des contrats,skill,,PENSEE,1,False,,0.606,USKL_12642550fee0,False
+"Valider les renouvellements en tenant compte des négociations, des changements de bénéfices et des ententes particulières qui ont eu lieu lors du renouvellement précédent ou durant l’année d’assurance.",skill,,PENSEE,1,False,,0.607,USKL_75e10b4a4e2c,False
+Valider les données et les paramètres nécessaires pour la détermination des taux théoriques.,skill,,PENSEE,1,False,,0.732,USKL_91b1b78d9a32,False
+Valider les calculs nécessaires à la détermination des taux d’expérience.,skill,,PENSEE,1,False,,0.727,USKL_91b1b78d9a32,False
+Analyser les données du renouvellement et déterminer le taux final selon son niveau d’autonomie.,skill,,PENSEE,1,False,,0.64,USKL_ce14fc223f17,False
+Prévoir la négociation en identifiant les marges incluses dans le renouvellement.,skill,,RESULTATS,1,False,,0.668,USKL_23f8d9a8d372,False
+Finaliser les renouvellements sans supervision.,skill,,PERSONNEL,1,False,,0.697,USKL_ca53fa8435bb,False
+Valider le travail des techniciens ayant un niveau d’autonomie inférieur.,skill,,PERSONNEL,2,False,,0.672,USKL_24b78bdbf70f,False
+Valider que l’information contenue dans les avis des ventes est conforme aux ententes.,skill,,PERSONNEL,1,False,,0.683,USKL_75e10b4a4e2c,False
+Valider que la prise d’effet faite par les ventes est conforme aux ententes.,skill,,PERSONNEL,1,False,,0.691,USKL_75e10b4a4e2c,False
+Valider que les taux de prime codés dans le système par la gestion sont conformes aux ententes,skill,,PERSONNEL,1,False,,0.671,USKL_3d29132e6bf8,False
+Préparer des analyses plus complexes,skill,,RESULTATS,2,False,,0.78,USKL_fa9c74fb4083,True
+des,skill,,PERSONNEL,2,False,,0.641,USKL_6d82f7e2e8ef,False
+Compléter le document de renouvellement à remettre aux ventes avec les données et les taux finaux déterminés par l’analyste,skill,,PERSONNEL,1,False,,0.603,USKL_8d169cf3763b,False
+Préparer les soumissions à l’aide des documents du courtier.,skill,,PERSONNEL,1,False,,0.653,USKL_adea909802f5,False
+"À partir des informations disponibles, déterminer la façon d’étudier l’expérience et d’élaborer la tarification théorique.",skill,,PENSEE,1,False,,0.629,USKL_14a3affb0d0c,False
+Analyser les données de la soumission et déterminer le taux final selon son niveau d’autonomie.,skill,,PENSEE,1,False,,0.659,USKL_182d013af12c,False
+Compléter la proposition et la méthodologie de renouvellement en conformité avec les normes et les procédures établies.,skill,,PERSONNEL,1,False,,0.702,USKL_d3339e6a28ca,False
+Finaliser les soumissions sans supervision.,skill,,PERSONNEL,1,False,,0.708,USKL_ca53fa8435bb,False
+faire une ébauche de la réponse au cahier des charges et préparation de l’ensemble des documents demandés par le consultant.,skill,,PERSONNEL,1,False,,0.651,USKL_2ce59279935d,False
+Compléter le document de soumission à remettre aux ventes avec les données et les taux finaux déterminés par l’analyste,skill,,PERSONNEL,1,False,,0.637,USKL_d7fe4bb9863d,False
+Travailler en collaboration avec l’analyste,skill,,RELATIONNEL,1,False,,0.833,USKL_5108210734e7,True
+répondre aux demandes diverses des intermédiaires,skill,,PENSEE,1,False,,0.773,USKL_8a2a5c03b181,True
+"Travailler en collaboration avec les ventes, l’administration et la gestion.",skill,,RELATIONNEL,1,False,,0.742,USKL_7879b253076a,False
+Responsable,skill,,PERSONNEL,3,False,,0.802,USKL_6e33eaf3b603,True
+de fournir diverses informations,skill,,RELATIONNEL,1,False,,0.907,USKL_2de2e7c7d9f7,True
+Effectuer toute autre tâche connexe à la demande de son supérieur.,skill,,PERSONNEL,1,False,,0.676,USKL_ecfe15b8f860,False
+"Procéder de façon journalière au dépouillement et à l'acheminement du courrier, à la distribution du courrier des experts en sinistres externes, à la vérification et au classement des dossiers.",skill,,PERSONNEL,1,False,,0.632,USKL_0b2d5bd383a3,False
+"Voir à la numérisation des pièces de courrier et autres pièces justificatives destinées aux dossiers d’indemnisation, et ce, à l’aide du logiciel prévu à cette fin.",skill,,PENSEE,1,False,,0.649,USKL_4636f4e1319c,False
+Retourner les documents physiques aux personnes adéquates.,skill,,PERSONNEL,1,False,,0.669,USKL_84bfea053ef1,False
+"Recevoir les appels téléphoniques, fournir les renseignements d'usage",skill,,RELATIONNEL,1,False,,0.765,USKL_912895008262,True
+prendre en note et distribuer les messages,skill,,PERSONNEL,1,False,,0.767,USKL_4884741ead37,True
+par voie de courriel,skill,,PENSEE,1,False,,0.839,USKL_b38f15aab095,True
+Fournir occasionnellement les informations aux clients et aux fournisseurs en ce qui a trait aux couvertures,skill,,PENSEE,1,False,,0.755,USKL_8b1e89fe54a9,True
+Transférer les appels aux experts en sinistres dans le cas des nouvelles réclamations où le client n’a pas eu son premier contact et transférer les nouvelles réclamations dans le <anon_misc>.,skill,,PENSEE,1,False,,0.595,USKL_33039846c087,False
+Vérifier les courriels reçus du télémarketing et du télépéage,skill,,PENSEE,1,False,,0.689,USKL_6e855e0bcfd8,False
+remettre les documents au soutien technique,skill,,PERSONNEL,1,False,,0.794,USKL_9aa912321571,True
+le titulaire exécute divers travaux d’intégration multimédia et de programmation,skill,,PENSEE,1,False,,0.687,USKL_9dca14589ec3,False
+Effectuer la création de page et de sites web dans l’outil de gestion de contenu de site,skill,,PENSEE,1,False,,0.753,USKL_f234d82098ff,True
+Intégrer les différentes composantes livrées par les équipe TI dans l’outil de gestion de contenu.,skill,,PENSEE,1,False,,0.685,USKL_909b75c9f6ad,False
+Effectuer la mise à jour des contenus et images dans les outils de gestion de contenu des différentes propriétés numériques.,skill,,PENSEE,1,False,,0.7,USKL_c0d930c65546,False
+Programmer les envois de courriels de masse,skill,,PENSEE,1,False,,0.723,USKL_6e855e0bcfd8,False
+Effectuer une vigie constante des tendances web et des technologies émergentes,skill,,PENSEE,1,False,,0.844,USKL_b7588ab7cac7,True
+Effectuer à l’occasion des déclinaisons ou ajustements graphiques à partir de concepts existants pour le Web ou les médias sociaux.,skill,,PENSEE,1,False,,0.662,USKL_f370714f655b,False
+"Au besoin, accomplir toutes autres tâches connexes",skill,,PERSONNEL,1,False,,0.718,USKL_1960dc67ba8a,False
+le titulaire effectue diverses tâches de soutien administratif,skill,,PERSONNEL,1,False,,0.67,USKL_16bb31fa5190,False
+Saisir,skill,,PERSONNEL,1,False,,0.529,USKL_28ea5d757568,False
+dans différents systèmes,skill,,PENSEE,1,False,,0.703,USKL_a870c8f0a6d2,False
+"les dossiers, documents reçus et les chèques de médecins.",skill,,PERSONNEL,1,False,,0.759,USKL_ca0ec8b2afc1,True
+Faire les photocopies de dossier,skill,,PERSONNEL,1,False,,0.735,USKL_43e1f75bb0bf,False
+Effectuer les demandes de recherche nécessaires suite à la réception d’une nouvelle demande de prestation ou de courrier.,skill,,PENSEE,1,False,,0.699,USKL_2389cca45236,False
+Préparer les bordereaux pour la numérisation.,skill,,PERSONNEL,1,False,,0.695,USKL_effad228188c,False
+Commander et expédier les chèques chaque mois pour les rentes d’invalidité.,skill,,PERSONNEL,1,False,,0.594,USKL_ad353ccd4429,False
+Commander et expédier les lettres et les formulaires de révision d’invalidité selon la liste de révision produite chaque mois.,skill,,PERSONNEL,1,False,,0.612,USKL_feea28b69eff,False
+Comptabiliser les factures,skill,,PERSONNEL,1,False,,0.714,USKL_bb5577b0173c,False
+Vérifier la liste des primes comptabilisées dans un compte bancaire suspend,skill,,PERSONNEL,1,False,,0.591,USKL_3281b25d901b,False
+"selon l’analyse, effectuer la comptabilité pertinente.",skill,,PENSEE,1,False,,0.715,USKL_f1b358b2f1f6,False
+Vérifier les remboursements de primes à émettre suite au changement de mode de paiement.,skill,,PERSONNEL,1,False,,0.608,USKL_75e10b4a4e2c,False
+Recevoir toutes les demandes de prestations d’invalidité,skill,,RESULTATS,1,False,,0.62,USKL_2389cca45236,False
+"Valider les informations pertinentes à l’ouverture de la demande, au système informatique",skill,,RESULTATS,1,False,,0.758,USKL_5b69605d69a7,True
+Ouvrir et numériser les nouvelles demandes de prestations,skill,,RESULTATS,1,False,,0.732,USKL_2389cca45236,False
+Comptabiliser et expédier les chèques et les dépôts directs des prestations d’invalidité,skill,,RESULTATS,1,False,,0.599,USKL_d7f8ee59dd4a,False
+Effectuer le contrôle des chèques et dépôts émis ou rejetés,skill,,RESULTATS,1,False,,0.703,USKL_5d57fb2f884c,False
+"Effectuer les totaux et balancer le nombre de chèques et de dépôts et ce, à la fin du mois",skill,,RESULTATS,1,False,,0.616,USKL_f1b358b2f1f6,False
+Effectuer le classement et l’archivage des documents.,skill,,RESULTATS,1,False,,0.774,USKL_22f35201d5df,True
+Recevoir les appels,skill,,RELATIONNEL,1,False,,0.854,USKL_912895008262,True
+Exécuter toute autre tâche à la demande de son supérieur,skill,,PERSONNEL,1,False,,0.662,USKL_658badcab5ba,False
+Le travail administratif de type multitâche vous passionne,skill,,PERSONNEL,1,False,,0.656,USKL_3fd742c83eba,False
+Vous aimez la rédaction de correspondance et le suivi de dossiers ?,skill,,PERSONNEL,1,False,,0.644,USKL_43e1f75bb0bf,False
+"Vous faites preuve d’autonomie, de débrouillardise et vous êtes reconnu pour vos capacités à organiser votre travail avec efficacité ?",skill,,RESULTATS,1,False,,0.616,USKL_5e091abe3f4a,False
+joindre l’équipe des Ventes,skill,,RELATIONNEL,1,False,,0.648,USKL_f6c425c8c1f8,False
+fournir le support administratif,skill,,PERSONNEL,1,False,,0.804,USKL_6440c542c590,True
+Répondre aux appels téléphoniques et aux courriels,skill,,RELATIONNEL,1,False,,0.78,USKL_af428de72d6c,True
+répondre à leurs questions et à leurs différents besoins,skill,,PERSONNEL,1,False,,0.82,USKL_8a2a5c03b181,True
+"Préparer des documents, des lettres, vérifier des dossiers et s’assurer que ceux-ci sont complets",skill,,PERSONNEL,1,False,,0.709,USKL_adea909802f5,False
+Participer,skill,,RELATIONNEL,1,False,,0.635,USKL_7a6b252f4a8d,False
+à la planification et la préparation des réunions,skill,,RESULTATS,1,False,,0.766,USKL_d03edbfeaa4d,True
+les demandes de publicités et les participations à des événements de représentation pour la force de vente,skill,,RELATIONNEL,1,False,,0.677,USKL_cc25b2b25372,False
+Effectuer des rapports,skill,,PERSONNEL,1,False,,0.785,USKL_e897f475a514,True
+Valider et préparer les demandes de remboursement pour les comptes de dépenses et faire le suivi des budgets,skill,,PERSONNEL,1,False,,0.745,USKL_12642550fee0,False
+Une opportunité de développement professionnel,skill,,PERSONNEL,1,False,,0.716,USKL_f978c560f829,False
+"maîtrise des logiciels (Word, Excel, Powerpoint)",skill,,PENSEE,1,False,,0.686,USKL_e7426bf86894,False
+capacité à améliorer les façons de faire,skill,,RESULTATS,1,False,,0.746,USKL_439ee94d32b6,False
+votre autonomie,skill,,RESULTATS,1,False,,0.757,USKL_eb1fbecf29c8,True
+votre esprit d'équipe et de collaboration,skill,,RELATIONNEL,1,False,,0.768,USKL_c2bfd1ee6704,True
+Faites-nous parvenir votre candidature,skill,,RESULTATS,1,False,,0.706,USKL_31f00ece6fb0,False
+le titulaire est responsable,skill,,PERSONNEL,1,False,,0.723,USKL_2dcd5118fef6,False
+de répondre aux besoins et aux demandes de services provenant de la force de vente.,skill,,PENSEE,1,False,,0.713,USKL_8a2a5c03b181,False
+Il supporte cette clientèle,skill,,PENSEE,1,False,,0.736,USKL_52a6b35eb4cb,False
+en répondant à leurs appels ou demandes écrites.,skill,,RELATIONNEL,1,False,,0.722,USKL_af428de72d6c,False
+Ces communications,skill,,RELATIONNEL,1,False,,0.666,USKL_17181cb5a3d2,False
+sont de tout ordre,skill,,PERSONNEL,1,False,,0.685,USKL_7e0f6fb40258,False
+"informations sur nos procédures et aspects légaux (contrats, barèmes, code de saines pratiques commerciales, etc.).",skill,,PENSEE,1,False,,0.625,USKL_fe89a6441408,False
+"Il traite les demandes d'informations des représentants, des directeurs d'agences et des agents généraux",skill,,PENSEE,1,False,,0.628,USKL_ce2a7be952dc,False
+procède aux corrections dans le système de rémunération,skill,,PERSONNEL,1,False,,0.688,USKL_d76e2176a6b6,False
+assumera le service pour les différents concours offert par la Compagnie,skill,,PENSEE,1,False,,0.6,USKL_bbf50a567532,False
+"Les analyses des transactions sont nombreuses, très variées et touchent la rémunérations des membres de la force de vente.",skill,,PENSEE,1,False,,0.621,USKL_f86a7aa1417b,False
+Il assume avec ses co-équipiers l’entière responsabilité,skill,,PERSONNEL,1,False,,0.634,USKL_878e652bf674,False
+de la productivité de l’équipe et de sa bonne marche,skill,,RESULTATS,1,False,,0.755,USKL_5f4c2d93f2c9,True
+l'acquisition et le maintien à jour de connaissances,skill,,PERSONNEL,1,False,,0.766,USKL_9d20e94563ee,True
+liées aux produits offerts par la Compagnie et ses filiales,skill,,PENSEE,1,False,,0.623,USKL_ff12e34ea1dc,False
+"Bonne connaissance d'Outook, Excel et Word Loma 280, 290 et ACS 100",skill,,PENSEE,1,False,,0.573,USKL_2b46debc0653,False
+ou s'engage à les suivre,skill,,PERSONNEL,1,False,,0.7,USKL_fbac66d091dc,False
+Le titulaire doit posséder un excellent jugement,skill,,PENSEE,1,False,,0.654,USKL_2c0c9519a350,False
+être autonome,skill,,RESULTATS,1,False,,0.848,USKL_eb1fbecf29c8,True
+et responsable,skill,,PERSONNEL,1,False,,0.817,USKL_2dcd5118fef6,True
+travail de qualité.,skill,,PERSONNEL,1,False,,0.747,USKL_e8ca08c144ff,False
+Il a le sens du service à la clientèle.,skill,,PENSEE,1,False,,0.695,USKL_405416a3d953,False
+Il privilégie le travail en équipe.,skill,,RELATIONNEL,1,False,,0.79,USKL_210bac427a09,True
+Bonne habileté avec les chiffres.,skill,,PERSONNEL,1,False,,0.697,USKL_38616a0f0a51,False
+Bonne résistance au stress.,skill,,PERSONNEL,1,False,,0.686,USKL_c7d3c9fb5513,False
+Dans le secteur des services aux usagers,skill,,PENSEE,1,False,,0.755,USKL_3842fc79b13e,True
+le titulaire de ce poste est responsable,skill,,PERSONNEL,1,False,,0.677,USKL_2dcd5118fef6,False
+des activités de support et d’exploitation des éléments bureautiques.,skill,,PENSEE,1,False,,0.732,USKL_9972c2a7509d,False
+il est responsable de,skill,,PERSONNEL,1,False,,0.649,USKL_2dcd5118fef6,False
+Compléter les demandes de support et des requêtes de service faites par les usagers,skill,,PENSEE,1,False,,0.793,USKL_c092d33db71c,True
+Exécuter les demandes d’installation logicielle.,skill,,PENSEE,1,False,,0.786,USKL_c0d930c65546,True
+Offrir un support de premier niveau sur le site quand une présence physique est requise.,skill,,PENSEE,1,False,,0.688,USKL_0522b7853f08,False
+Participer à la partie bureautique aux demandes d’aménagement,skill,,PENSEE,1,False,,0.706,USKL_b91bf8280347,False
+Assister l’équipe réseautique,skill,,RELATIONNEL,1,False,,0.819,USKL_12bc5dcf00e9,True
+pour l’exécution de demandes à distance.,skill,,PENSEE,1,False,,0.769,USKL_bfef6702b375,True
+Accompagner les fournisseurs externes,skill,,RELATIONNEL,1,False,,0.828,USKL_dbc852e4db6d,True
+sur le site dans leurs activités de support,skill,,PENSEE,1,False,,0.707,USKL_0522b7853f08,False
+Participe au processus d’amélioration,skill,,RESULTATS,2,False,,0.778,USKL_fe7078f2335d,True
+continue du service aux,skill,,PENSEE,2,False,,0.791,USKL_6203701ee5d5,True
+- Prendre en charge les incidents qui lui sont,skill,,PERSONNEL,2,False,,0.714,USKL_77ce31ab6a13,False
+Prendre en charge les demandes de montage de poste qui lui sont attribués.,skill,,PENSEE,1,False,,0.7,USKL_a3215cc44501,False
+Prendre en charge les demandes d’installations logicielles qui lui sont attribués.,skill,,PENSEE,1,False,,0.735,USKL_f03a65aef966,False
+Traiter les besoins et les cas spéciaux,skill,,PENSEE,1,False,,0.731,USKL_2e1c85408d3d,False
+- Prendre en charge les demandes de restauration de fichier et la rotation des cassettes du système de copie de sécurité.,skill,,PENSEE,1,False,,0.677,USKL_d1f07ee2f325,False
+Prendre en charge les demandes provenant du groupe réseautique.,skill,,PENSEE,1,False,,0.717,USKL_752324bc8ebc,False
+Préparer des rapports et des statistiques,skill,,PERSONNEL,1,False,,0.844,USKL_bb8dbd2686fb,True
+Attestation d’étude collégiale en informatique,skill,,PENSEE,1,False,,0.703,USKL_1ee9231dcded,False
+"possède la capacité d’analyser les problèmes de façon plus globale et d’identifier de nouvelles solutions, moins apparentes à première vue.",skill,,PENSEE,1,False,,0.685,USKL_8f534f5e1ad4,False
+Autonomie et volonté d’amélioration continue.,skill,,RESULTATS,1,False,,0.72,USKL_1aae74e7683e,False
+Dynamisme et excellente communication.,skill,,RELATIONNEL,1,False,,0.729,USKL_dbac4d4b1b49,False
+possède un bon esprit de synthèse et une excellente capacité de résolution de problème,skill,,PENSEE,1,False,,0.662,USKL_ef48250aea9b,False
+Joignez l’équipe,skill,,RELATIONNEL,1,False,,0.769,USKL_f6c425c8c1f8,True
+reconnu pour votre sens de l’écoute et vos habiletés de négociation,skill,,RELATIONNEL,1,False,,0.652,USKL_cb94d2fd2692,False
+vous êtes une personne organisée,skill,,RESULTATS,1,False,,0.664,USKL_804f90fe8d6d,False
+qui sait faire preuve de jugement,skill,,PENSEE,1,False,,0.704,USKL_e91477e7fa38,False
+Valider les informations comptables reliées aux différents dossiers de recouvrement hypothécaire,skill,,PERSONNEL,1,False,,0.619,USKL_91b1b78d9a32,False
+Contacter les clients afin de prendre une entente de paiement,skill,,RELATIONNEL,1,False,,0.797,USKL_0c6e6a230427,True
+selon des règles définies,skill,,PERSONNEL,1,False,,0.754,USKL_4af4f3f7f9d1,True
+Procéder à des tâches administratives reliées aux dossiers traités.,skill,,PERSONNEL,1,False,,0.752,USKL_43e1f75bb0bf,True
+capacité de parler et de correspondre par écrit,skill,,RELATIONNEL,1,False,,0.705,USKL_024f38995b91,False
+Ouvre le courrier reçu et prépare la documentation à numériser,skill,,PERSONNEL,1,False,,0.688,USKL_97edbd54767d,False
+Distribue au personnel différents rapports reçus.,skill,,PERSONNEL,1,False,,0.732,USKL_bf33c2cc949f,False
+Crée électroniquement les nouveaux dossiers,skill,,PENSEE,1,False,,0.735,USKL_47b1578dae9c,False
+Procède à des vérifications concernant le chèque de règlement,skill,,PERSONNEL,1,False,,0.729,USKL_75e10b4a4e2c,False
+entre autres avec le système,skill,,PENSEE,1,False,,0.673,USKL_6910d3a9565f,False
+Communique avec divers intervenants,skill,,RELATIONNEL,1,False,,0.873,USKL_bfceff313fbb,True
+Expédie la correspondance et les chèques de règlements.,skill,,PERSONNEL,1,False,,0.649,USKL_ad353ccd4429,False
+Réquisitionne des chèques,skill,,RELATIONNEL,1,False,,0.646,USKL_9131c4620cc3,False
+La connaissance des systèmes d'administration des contrats d'assurance individuelle serait un atout.,skill,,PENSEE,1,False,,0.649,USKL_2bd46c3a6e20,False
+Aptitude à prendre des initiatives,skill,,RESULTATS,1,False,,0.75,USKL_b139935857db,True
+et à travailler avec précision dans un contexte d’échéanciers serrés.,skill,,PERSONNEL,1,False,,0.709,USKL_2c0c9519a350,False
+Gestion des priorités et autonomie,skill,,RESULTATS,1,False,,0.835,USKL_51e974287856,True
+Esprit d’équipe,skill,,RELATIONNEL,2,False,,0.877,USKL_c2bfd1ee6704,True
+Sens de l’organisation,skill,,RESULTATS,3,False,,0.678,USKL_0b750d349104,False
+et du service à la clientèle,skill,,PENSEE,1,False,,0.767,USKL_4726ba8b03c1,True
+Bonne communication écrite et orale,skill,,RELATIONNEL,1,False,,0.785,USKL_42c4dd4d7019,True
+Connaissance des logiciels de la suite Office,skill,,PENSEE,1,False,,0.793,USKL_2b46debc0653,True
+le titulaire effectue toutes les transactions relatives au service à la clientèle,skill,,PENSEE,1,False,,0.596,USKL_3842fc79b13e,False
+Il reçoit les appels de la clientèle et répond à leurs demandes ainsi que les plaintes qu'il analysera et transmettra au superviseur ou à la direction si nécessaire.,skill,,PENSEE,1,False,,0.679,USKL_2e1c85408d3d,False
+Il assure le suivi des dossiers avec le Siège social,skill,,PENSEE,1,False,,0.623,USKL_5dab1cf7afc9,False
+maintient à jour les dossiers en suspens et procure un support en secrétariat nécessaire à ses opérations.,skill,,PERSONNEL,1,False,,0.681,USKL_5dab1cf7afc9,False
+Il fournit aux conseillers l'information nécessaire,skill,,RELATIONNEL,1,False,,0.762,USKL_564037f5c4e5,True
+sur l'administration des contrats et les politiques et procédures s'y rattachant.,skill,,PENSEE,1,False,,0.703,USKL_c7a3ad1eb41b,False
+Bonne communication verbale et écrite,skill,,RELATIONNEL,1,False,,0.786,USKL_42c4dd4d7019,True
+Habileté à bien servir la clientèle,skill,,PENSEE,1,False,,0.72,USKL_b139935857db,False
+Bonne connaissance des logiciels de bureautique,skill,,PENSEE,1,False,,0.813,USKL_24ad5def41da,True
+Méthodes de classement et de gestion des priorités,skill,,RESULTATS,1,False,,0.753,USKL_51e974287856,True
+Autonomie,skill,,RESULTATS,4,False,,0.663,USKL_cfc210d51dfc,False
+Capacité à travailler sous pression.,skill,,PERSONNEL,1,False,,0.791,USKL_b139935857db,True
+La personne titulaire est responsable,skill,,PERSONNEL,1,False,,0.702,USKL_2dcd5118fef6,False
+"de l'analyse, du traitement et du règlement des dossiers",skill,,RESULTATS,1,False,,0.743,USKL_43e1f75bb0bf,False
+Elle réalise des activités techniques spécialisées,skill,,PENSEE,1,False,,0.665,USKL_f8fb3a89c10d,False
+dans le respect des normes et des politiques établies.,skill,,PERSONNEL,1,False,,0.757,USKL_ba967a0f7cea,True
+agir à titre de personne-ressource auprès des employés de son unité,skill,,PENSEE,1,False,,0.788,USKL_f74181e29d21,True
+"elle traite les requêtes d’intégrité de données, compléter la validation mensuelle de rapports et faire un contrôle de qualité.",skill,,PERSONNEL,1,False,,0.698,USKL_1591cdae20a2,False
+Elle assure un soutien spécialisé,skill,,RELATIONNEL,1,False,,0.645,USKL_c3f283bc1262,False
+en lien avec les politiques et les procédures reliées à ses fonctions,skill,,PENSEE,1,False,,0.669,USKL_7cdece317aec,False
+auprès de différents intervenants internes et externes.,skill,,RELATIONNEL,1,False,,0.766,USKL_b5540068528e,True
+"Réaliser des travaux liés au traitement de l'information selon les politiques et les normes établies, en effectuant la conciliation des opérations, la vérification des données ou la production de rapports",skill,,PERSONNEL,1,False,,0.726,USKL_0b2d5bd383a3,False
+"Analyser les demandes d'information reçues, et procéder aux recherches nécessaires pour fournir une réponse adéquate",skill,,PENSEE,1,False,,0.758,USKL_cc28d43ed380,True
+en respectant les normes et politiques établies.,skill,,PERSONNEL,1,False,,0.777,USKL_ba967a0f7cea,True
+Contribuer à l'optimisation de l'efficacité des opérations par la définition des méthodes de travail et s'assurer de leur mise en place,skill,,RESULTATS,1,False,,0.769,USKL_39fe6a3ed3b7,True
+de leur respect et d'une utilisation adéquate.,skill,,PERSONNEL,1,False,,0.73,USKL_7e0f6fb40258,False
+Documenter et maintenir à jour les dossiers traités,skill,,PERSONNEL,1,False,,0.835,USKL_41a5a752a3de,True
+dans les systèmes appropriés,skill,,PENSEE,1,False,,0.713,USKL_b7d990a0a7f8,False
+selon les normes prescrites.,skill,,PERSONNEL,1,False,,0.75,USKL_4af4f3f7f9d1,False
+"Agir à titre de personne-ressource en ce qui a trait aux politiques, aux procédures et aux opérations de son unité.",skill,,PENSEE,1,False,,0.668,USKL_ecfe15b8f860,False
+Effectuer des interventions et des suivis auprès des divers ressources impliquées.,skill,,RELATIONNEL,1,False,,0.751,USKL_5f0167176ad3,True
+Être orienté vers le client,skill,,PENSEE,4,False,,0.784,USKL_8a2a5c03b181,True
+Savoir informer,skill,,RELATIONNEL,3,False,,0.784,USKL_2de2e7c7d9f7,True
+Avoir la capacité de se former aux aspects techniques,skill,,PERSONNEL,3,False,,0.792,USKL_94ba30de636a,True
+"vous contribuez à la prise en charge, la prospection, la sollicitation, le développement et le maintien de la relation d’affaires auprès des membres et clients.",skill,,RELATIONNEL,2,False,,0.672,USKL_28cd2975f8d9,False
+Vous participez à la vente des produits et services d’assurance générale par différents,skill,,RELATIONNEL,1,False,,0.585,USKL_558ad821933a,False
+besoins des membres et clients selon les stratégies,skill,,PENSEE,1,False,,0.745,USKL_b946f716f46e,False
+et les pratiques en vigueur.,skill,,PENSEE,1,False,,0.722,USKL_fd037925e65d,False
+prendre en charge des activités reliées à la promotion et à la vente de protections d ’ assurance de dommages auprès d’une clientèle de particuliers.,skill,,RELATIONNEL,1,False,,0.646,USKL_bb051ca76b32,False
+Vous analysez les besoins des membres et clients et apportez votre soutien dans le choix des protections appropriées et,skill,,PENSEE,1,False,,0.71,USKL_493853ad2f46,False
+mettant à profit votre capacité à convaincre .,skill,,RELATIONNEL,1,False,,0.707,USKL_4aece30cfbee,False
+"Vous assurez la satisfaction des membres et clients et la qualité des services rendus, tout en",skill,,PENSEE,1,False,,0.719,USKL_b0d221cd031d,False
+respectant les normes et procédures de l’entreprise.,skill,,PERSONNEL,1,False,,0.831,USKL_07e515a7fa38,True
+Vous contribuez au développement et au maintien de relations d’affaires,skill,,RELATIONNEL,1,False,,0.741,USKL_fc5492e7111a,False
+collaborez,skill,,RELATIONNEL,1,False,,0.797,USKL_db013ddcbcda,True
+à l’analyse des besoins des membres et clients et à l’élaboration de solutions adaptées.,skill,,PENSEE,1,False,,0.804,USKL_493853ad2f46,True
+Vous participez à l’élaboration de solutions par des analyses et vos connaissances dans votre domaine.,skill,,PENSEE,1,False,,0.684,USKL_b0ac26fcf439,False
+La capacité à apprendre avec agilité,skill,,PERSONNEL,2,False,,0.875,USKL_34e655d4e2d2,True
+la maîtrise de la technologie,skill,,PENSEE,2,False,,0.741,USKL_6d6a8a4423fd,False
+Vous exercez un rôle d’accompagnement auprès des membres et clients actuels ou potentiels.,skill,,PENSEE,1,False,,0.682,USKL_28cd2975f8d9,False
+Vous représentez l’entreprise,skill,,PERSONNEL,1,False,,0.649,USKL_bbf50a567532,False
+apportez votre soutien dans la négociation des ententes avec la clientèle.,skill,,RELATIONNEL,1,False,,0.74,USKL_52a6b35eb4cb,False
+"Prendre en charge le membre et client, évaluer ses besoins",skill,,PENSEE,1,False,,0.833,USKL_2e1c85408d3d,True
+promouvoir les produits d’assurance,skill,,RELATIONNEL,1,False,,0.786,USKL_ff577f4c833a,True
+et l’accompagner dans le choix des protections Préparer les soumissions et émettre les contrats d’assurance Faire le suivi des dossiers et analyser les renouvellements demandant une souscription particulière afin d’apporter les correctifs nécessaires au contrat,skill,,PENSEE,1,False,,0.662,USKL_83aab72829db,False
+"Répondre à des demandes d’informations et procéder à des modifications aux contrats afin d’assurer la satisfaction du client et, par le fait même, sa rétention",skill,,PENSEE,1,False,,0.711,USKL_8a2a5c03b181,False
+Développer un partenariat d’affaires favorisant les références,skill,,RELATIONNEL,1,False,,0.716,USKL_be52e15b7a95,False
+Formation à distance pour une période de 5 semaines (candidat sans certificat) et ensuite à nos bureaux d e <anon_location> pour environ 8 semaines,skill,,PERSONNEL,1,False,,0.616,USKL_615916894043,False
+Coopérer,skill,,RELATIONNEL,2,False,,0.748,USKL_ad08ea7e1c1d,False
+Être orienté client,skill,,PENSEE,2,False,,0.782,USKL_37760134bab4,True
+Être orienté vers l’action,skill,,RESULTATS,3,False,,0.76,USKL_6a6fe0139b3d,True
+Stimuler l’innovation,skill,,PENSEE,2,False,,0.841,USKL_085019453aad,True
+Apprendre avec agilité,skill,,PERSONNEL,2,False,,0.845,USKL_34e655d4e2d2,True
+Convaincre,skill,,RELATIONNEL,2,False,,0.607,USKL_509ebec43d59,False
+Maîtriser la technologie,skill,,PENSEE,2,False,,0.75,USKL_69476f0456f4,True
+Communiquer de manière efficace,skill,,RELATIONNEL,1,False,,0.869,USKL_42c4dd4d7019,True
+effectue le traitement des demandes de prestations de la clientèle,skill,,PENSEE,1,False,,0.766,USKL_2389cca45236,True
+"Elle analyse, entres autres, les demandes de prestation en soins médicaux dentaires et/ou médicales.",skill,,PENSEE,1,False,,0.681,USKL_2e340cbb2f8c,False
+Traiter les demandes de prestations,skill,,PENSEE,1,False,,0.849,USKL_574ea4ad9388,True
+en conformité avec les clauses contractuelles de la police d'assurance.,skill,,PERSONNEL,1,False,,0.655,USKL_bdbaad20a965,False
+"Communiquer, le cas échéant, verbalement ou par écrit, avec divers collaborateurs ou la clientèle pour obtenir ou fournir des renseignements, des justifications ou des explications.",skill,,RELATIONNEL,1,False,,0.712,USKL_d5434e4df81f,False
+Établir le montant de la prestation,skill,,PENSEE,1,False,,0.729,USKL_63f25703fc5b,False
+procéder au paiement.,skill,,RESULTATS,1,False,,0.705,USKL_f1b358b2f1f6,False
+Codifier et saisir les données,skill,,PERSONNEL,1,False,,0.819,USKL_f84b5553506c,True
+dans les systèmes appropriés.,skill,,PENSEE,1,False,,0.737,USKL_b7d990a0a7f8,False
+Participer à l'organisation du travail et à la recherche d'amélioration continue,skill,,RESULTATS,1,False,,0.823,USKL_1aae74e7683e,True
+Signaler à son supérieur immédiat toute situation inhabituelle ou de nature plus complexe.,skill,,PERSONNEL,1,False,,0.731,USKL_658badcab5ba,False
+Faire preuve de rigueur professionnelle et de minutie,skill,,PERSONNEL,2,False,,0.895,USKL_2c0c9519a350,True
+élabore des solutions d'assurance pour les dossiers de souscription de risques de faible à moyenne complexité,skill,,PENSEE,1,False,,0.623,USKL_faf9b93374f5,False
+les normes en vigueur et circonstances particulières à chacun des dossiers soumis.,skill,,PERSONNEL,1,False,,0.654,USKL_cc25b2b25372,False
+Elle accompagne les agents,skill,,RELATIONNEL,1,False,,0.676,USKL_52a6b35eb4cb,False
+dans l'application des règles de souscription,skill,,PERSONNEL,1,False,,0.665,USKL_fde703b94494,False
+de même que dans le développement de leurs compétences techniques.,skill,,RELATIONNEL,1,False,,0.703,USKL_5c295b7ea765,False
+"Déterminer la solution d'assurance applicable à partir des informations recueillies, des risques identifiés et des besoins et attentes du client dans les dossiers de souscription de risques de faible à moyenne complexité.",skill,,PENSEE,1,False,,0.677,USKL_0a995dfd0cdb,False
+Agir à titre de personne-ressource auprès des agents,skill,,PENSEE,1,False,,0.693,USKL_ab4c7be0ce3c,False
+autant pour du coaching que de la formation technique,skill,,RELATIONNEL,1,False,,0.777,USKL_94ba30de636a,True
+Accompagner et conseiller les clients lors d'interactions spécifiques.,skill,,PENSEE,1,False,,0.777,USKL_52a6b35eb4cb,True
+Vérifier et approuver l'application des règles de souscription pour les dossiers soumis.,skill,,PERSONNEL,1,False,,0.709,USKL_5b69605d69a7,False
+"Identifier et soulever les irritants et incompréhensions pour les agents et la clientèle, identifier les problèmes d'application des règles de souscription et suggérer des améliorations.",skill,,PERSONNEL,1,False,,0.666,USKL_feea28b69eff,False
+participer à des comités de travail.,skill,,RELATIONNEL,1,False,,0.759,USKL_210bac427a09,True
+"Vérifier, dans certains cas préalablement identifiés et selon certains critères, la qualité des risques souscrits par les agents en assurance de dommages, identifier les risques hasardeux et effectuer le suivi nécessaire auprès de l'agent concerné.",skill,,PERSONNEL,1,False,,0.658,USKL_0b2d5bd383a3,False
+Posséder des aptitudes techniques,skill,,PENSEE,1,False,,0.785,USKL_b8bd7fc4e1cc,True
+Maîtriser la résolution de problèmes.,skill,,PENSEE,1,False,,0.824,USKL_8771086febcf,True
+Savoir entretenir de bonnes relations interpersonnelles.,skill,,RELATIONNEL,1,False,,0.758,USKL_28cd2975f8d9,True
+Maîtriser la communication écrite.,skill,,RELATIONNEL,1,False,,0.809,USKL_42c4dd4d7019,True
+Faire preuve de rigueur professionnelle et de minutie.,skill,,PERSONNEL,1,False,,0.874,USKL_2c0c9519a350,True
+Être orienté vers l'action et les résultats.,skill,,RESULTATS,1,False,,0.751,USKL_5e091abe3f4a,True
+Effectuer l’analyse de tous les renseignements pertinents à la détermination des obligations de,skill,,PENSEE,2,False,,0.674,USKL_fa9c74fb4083,False
+rassembler tous les renseignements pertinents,skill,,PENSEE,2,False,,0.764,USKL_9d85974e0eb6,True
+transmettre les décisions et les plans d’action relatifs aux demandes de règlements.,skill,,RELATIONNEL,2,False,,0.7,USKL_2389cca45236,False
+faire respecter les objectifs et les budgets qui leur sont donnés et s’assurer d’une bonne évolution des interventions.,skill,,RESULTATS,2,False,,0.747,USKL_5a3d119852e2,False
+en répondant aux appels,skill,,RELATIONNEL,2,False,,0.85,USKL_af428de72d6c,True
+Élaborer et mettre en œuvre les interventions qui réduisent la durée des invalidités.,skill,,RESULTATS,2,False,,0.701,USKL_fffbab36a77c,False
+mettre à jour les données et effectuer les paiements,skill,,PERSONNEL,2,False,,0.772,USKL_f8de61fe58de,True
+en tenant compte des particularités propres aux contrats et aux directives internes.,skill,,PENSEE,2,False,,0.675,USKL_f6e2501a8383,False
+procéder à la revue critique de dossiers,skill,,PERSONNEL,1,False,,0.706,USKL_3b4953436bae,False
+Recommander des mesures destinées à améliorer les réalisations de la direction principale en matière de service et de productivité.,skill,,RESULTATS,2,False,,0.751,USKL_738461cc8d74,True
+Acquérir et maintenir de façon proactive une connaissance,skill,,PERSONNEL,2,False,,0.768,USKL_9d20e94563ee,True
+"des outils, des politiques, des processus, des produits et des services.",skill,,PENSEE,2,False,,0.719,USKL_1d176d0b5b3f,False
+Effectuer certaines tâches techniques et administratives pour appuyer la gestion des dossiers.,skill,,PERSONNEL,2,False,,0.745,USKL_fcaf2be0295a,False
+"Aider, à l’occasion, les employés moins expérimentés et collaborer à des projets spécifiques.",skill,,RELATIONNEL,2,False,,0.748,USKL_658badcab5ba,False
+Exercer d’autres fonctions sur demande.,skill,,PERSONNEL,4,False,,0.696,USKL_ecfe15b8f860,False
+"par téléphone, entrevue ou correspondance.",skill,,RELATIONNEL,1,False,,0.673,USKL_0c6e6a230427,False
+obtenir les renseignements permettant de répondre à la demande de service du client.,skill,,PENSEE,1,False,,0.768,USKL_2e1c85408d3d,True
+fournir les renseignements nécessaires aux assurés.,skill,,PENSEE,1,False,,0.773,USKL_2de2e7c7d9f7,True
+"Effectuer, occasionnellement, différents travaux dans les diverses directions de l'administration des contrats selon les besoins des directions.",skill,,PERSONNEL,1,False,,0.698,USKL_12642550fee0,False
+avec l'outil « ».,skill,,PENSEE,1,False,,0.695,USKL_68a9a9fd5c93,False
+à la suite d'une vérification d'un dossier ou de la liste des déchéances rétroactives.,skill,,PERSONNEL,1,False,,0.645,USKL_75e10b4a4e2c,False
+Annuler ou encaisser des chèques ou d'assurés et demander selon la procédure établie l'émission de chèques par l’administration.,skill,,PERSONNEL,1,False,,0.598,USKL_ad353ccd4429,False
+procéder à la revue critique de dossiers.,skill,,PERSONNEL,1,False,,0.713,USKL_43e1f75bb0bf,False
+"Procéder à l’ouverture des nouvelles réclamations automobile et habitation et/ou lorsque requis, diriger les clients vers le bon intervenant",skill,,PENSEE,1,False,,0.663,USKL_57a7a456305b,False
+Effectuer des tâches administratives,skill,,PERSONNEL,1,False,,0.751,USKL_d6de3bc5aae3,True
+soutenir tous les employés,skill,,RELATIONNEL,1,False,,0.682,USKL_210bac427a09,False
+Traiter les documents entrants,skill,,PENSEE,1,False,,0.75,USKL_9382f8f04bfd,True
+à l’évolution des dossiers de réclamations,skill,,PENSEE,1,False,,0.707,USKL_41d037fb2a7f,False
+Conseiller et fidéliser la clientèle,skill,,PENSEE,1,False,,0.81,USKL_4fd74b854ab3,True
+vendre des produits d’assurance voyage et d’assurance individuelle,skill,,RELATIONNEL,1,False,,0.628,USKL_ff12e34ea1dc,False
+en,skill,,PENSEE,1,False,,0.665,USKL_eb9cc62bd3ca,False
+Remplir les propositions d’assurance avec le client,skill,,PENSEE,1,False,,0.692,USKL_679e29541244,False
+ainsi que tous les documents requis pour finaliser la vente ou la modification d’un dossier,skill,,PERSONNEL,1,False,,0.628,USKL_4bcacba91832,False
+Solliciter des clients de la Société pour de nouveaux produits ou d’assurances,skill,,RELATIONNEL,1,False,,0.737,USKL_b67ebf9664b9,False
+Contacter les clients actuels pour les conseiller et discuter de leur renouvellement à l'échéance.,skill,,PENSEE,1,False,,0.735,USKL_0c6e6a230427,False
+Participer régulièrement aux formations continues pour le perfectionnement des connaissances à maîtriser,skill,,PERSONNEL,1,False,,0.822,USKL_9d20e94563ee,True
+conformément à la règlementation,skill,,PERSONNEL,1,False,,0.818,USKL_4af4f3f7f9d1,True
+Répondre aux normes de satisfaction à la clientèle,skill,,PENSEE,1,False,,0.849,USKL_b0d221cd031d,True
+dans le but d’atteindre des objectifs communs.,skill,,RESULTATS,1,False,,0.804,USKL_518f49bc69db,True
+"Aborder un problème dans son ensemble afin d'en déterminer avec précision son origine, les causes et d'identifier les solutions pertinentes.",skill,,RESULTATS,1,False,,0.721,USKL_8f534f5e1ad4,False
+et aux objectifs à atteindre.,skill,,RESULTATS,1,False,,0.726,USKL_d882f40dd691,False
+"effectuer des transferts, des terminaisons de groupes ou d'adhérents dans le respect du contrat.",skill,,PENSEE,1,False,,0.669,USKL_827db9d26bc3,False
+aux comptes santé et autres types de facturation,skill,,PERSONNEL,1,False,,0.673,USKL_2be403f85d81,False
+vérifier que les taux de primes ont été appliqués correctement,skill,,PERSONNEL,1,False,,0.645,USKL_3ed4503f5f79,False
+préparer des factures d'ajustement ou des demandes de remboursement.,skill,,PERSONNEL,1,False,,0.673,USKL_2389cca45236,False
+Effectuer la gestion des primes en retard.,skill,,RELATIONNEL,1,False,,0.82,USKL_24bd08380768,True
+"Effectuer les recherches nécessaires pour donner suite au courrier quotidien, aux courriels, et <anon_misc>.",skill,,PENSEE,1,False,,0.645,USKL_e324e4b8b3d1,False
+"corriger certains cas rejetés lors des traitements informatiques en référence avec le fichier des assurés, le fichier des groupes et le fichier de revenu de prime.",skill,,PERSONNEL,1,False,,0.618,USKL_d76e2176a6b6,False
+"Utiliser l’intranet et l’extranet du service, les logiciels de la suite Microsoft (Excel, Word, Outlook), <anon_misc>, ACL, <anon_misc>, <anon_misc>, <anon_misc>, les logiciels de gestion des tâches et de gestion numérique des dossiers ainsi que les systèmes de nos partenaires externes.",skill,,PENSEE,1,False,,0.688,USKL_975895aaa7db,False
+Participer aux comités d’amélioration continue de la direction.,skill,,RESULTATS,1,False,,0.775,USKL_ab424eeb8d1c,True
+Contacter les clients,skill,,RELATIONNEL,1,False,,0.883,USKL_0c6e6a230427,True
+"leur proposer les produits adéquats en assurances automobile, habitation, protection juridique et assurance voyage.",skill,,RELATIONNEL,1,False,,0.631,USKL_62bbc1f00893,False
+Conclure les ventes des contrats.,skill,,RELATIONNEL,1,False,,0.721,USKL_ad9a2fd63e8e,False
+Modifier les contrats et offrir le service à la clientèle requis.,skill,,PENSEE,1,False,,0.774,USKL_8a2a5c03b181,True
+Analyser et évaluer les contrats à renouveler.,skill,,PENSEE,1,False,,0.703,USKL_ad9a2fd63e8e,False
+le titulaire effectue différentes tâches reliées au support administratif,skill,,PERSONNEL,1,False,,0.649,USKL_16bb31fa5190,False
+Procéder à la saisie et à la préparation des propositions,skill,,PERSONNEL,1,False,,0.726,USKL_81d76910b2a8,False
+"Communiquer avec les conseillers, le directeur des centres financiers, les agents généraux ou les clients pour toute demande d’information ou de document additionnels.",skill,,RELATIONNEL,1,False,,0.659,USKL_0c6e6a230427,False
+Encaisser les chèques reçus avec les propositions.,skill,,PERSONNEL,1,False,,0.655,USKL_a3215cc44501,False
+Procéder à l’annulation des cas CSC pour lesquels la proposition physique n’a jamais été reçue,skill,,PERSONNEL,1,False,,0.545,USKL_574ea4ad9388,False
+pour certains cas d’annulation demandée par les clients,skill,,PENSEE,1,False,,0.679,USKL_8a2a5c03b181,False
+Traiter les demandes de duplicata de police.,skill,,PERSONNEL,1,False,,0.661,USKL_574ea4ad9388,False
+Participer activement au processus d’amélioration continue des opérations du service.,skill,,RESULTATS,1,False,,0.754,USKL_ab424eeb8d1c,True
+Distribuer les dossiers,skill,,PERSONNEL,1,False,,0.8,USKL_43e1f75bb0bf,True
+"Commander les exigences de sélection, les rapports médicaux auprès des différents fournisseurs et en assurer le suivi pour la sélection des risques et le collectif.",skill,,PERSONNEL,1,False,,0.733,USKL_0b2d5bd383a3,False
+Effectuer les demandes d’opinions aux réassureurs et acheminer les réponses reçues,skill,,PERSONNEL,1,False,,0.666,USKL_4884741ead37,False
+Participer au traitement tri,skill,,PERSONNEL,1,False,,0.626,USKL_1123d2b8540e,False
+des différentes boîtes de courriels communes.,skill,,PENSEE,1,False,,0.696,USKL_b38f15aab095,False
+Effectuer l’ouverture du courrier,skill,,PERSONNEL,1,False,,0.725,USKL_e324e4b8b3d1,False
+Recevoir les propositions d’assurance vie et maladie en provenance de nos différents réseaux de distribution et les acheminer selon les procédures en place.,skill,,PERSONNEL,1,False,,0.596,USKL_a3215cc44501,False
+Procéder aux demandes de renseignements médicaux,skill,,PENSEE,1,False,,0.811,USKL_71a017074915,True
+Procéder à la réception et à la récupération des exigences et rapports médicaux et les acheminer au dossier selon les procédures en place et jumeler les cas rejetés,skill,,PERSONNEL,1,False,,0.662,USKL_2e1c85408d3d,False
+à partir de l’outil de jumelage.,skill,,PENSEE,1,False,,0.674,USKL_6384ca1698f3,False
+Participer à l’efficience et à l’amélioration continue de la productivité de l’équipe,skill,,RESULTATS,1,False,,0.834,USKL_1fe438cd805e,True
+Transmettre certaines exigences à d’autres assureurs,skill,,RELATIONNEL,1,False,,0.673,USKL_aa1e624fd8f2,False
+effectuer la facturation en conséquence.,skill,,PERSONNEL,1,False,,0.705,USKL_f1b358b2f1f6,False
+Procéder au paiement des factures,skill,,PERSONNEL,1,False,,0.694,USKL_f1b358b2f1f6,False
+Effectuer toute autre tâche à la demande de son supérieur.,skill,,PERSONNEL,1,False,,0.683,USKL_ecfe15b8f860,False
+"le titulaire réalise les tâches reliées aux dépôts, à l’émission des chèques, à la préparation et à la saisie d’écritures comptables, et procède à l’exécution de conciliations bancaires.",skill,,PERSONNEL,1,False,,0.611,USKL_0b2d5bd383a3,False
+Préparer les dépôts quotidiens et calculer au besoin les soldes bancaires.,skill,,PERSONNEL,1,False,,0.664,USKL_f1b358b2f1f6,False
+Effectuer divers transferts bancaires.,skill,,PERSONNEL,1,False,,0.706,USKL_cdada6f4312e,False
+"Préparer et saisir quotidiennement les écritures comptables relatives aux transactions bancaires pour certains comptes bancaires, s’assurer du balancement des données et vérifier si les transactions ont été enregistrées correctement.",skill,,PERSONNEL,1,False,,0.695,USKL_0b2d5bd383a3,False
+Effectuer la conciliation des comptes bancaires,skill,,PERSONNEL,1,False,,0.658,USKL_f1b358b2f1f6,False
+Assurer le suivi et le support des opérations bancaires,skill,,PERSONNEL,1,False,,0.755,USKL_fbd0c4b12666,True
+Faire le suivi des chèques encaissés frauduleusement.,skill,,PERSONNEL,1,False,,0.671,USKL_7b86908cf057,False
+Effectuer le classement des pièces comptables et le suivi des archives.,skill,,PERSONNEL,1,False,,0.697,USKL_493bbeba30f3,False
+Procéder à la signature des chèques en s’assurant que l’approbateur du chèque est autorisé selon ses limites et veiller à la garde des estampes de signatures.,skill,,PERSONNEL,1,False,,0.606,USKL_20f6ddab018d,False
+"Au besoin, accomplir, certains travaux de nature comptable.",skill,,PERSONNEL,1,False,,0.717,USKL_f1b358b2f1f6,False
+"Au besoin, accomplir toutes autres tâches connexes.",skill,,PERSONNEL,1,False,,0.726,USKL_ecfe15b8f860,False
+le titulaire agit à titre de coach au niveau technique auprès de son équipe de travail,skill,,RELATIONNEL,1,False,,0.723,USKL_f74181e29d21,False
+Il effectue le lien,skill,,RELATIONNEL,1,False,,0.653,USKL_000b897cd2b7,False
+dans un souci de l’atteinte des cibles opérationnelles de ces secteurs.,skill,,RESULTATS,1,False,,0.658,USKL_0a126434ddfa,False
+Il partage l’information,skill,,RELATIONNEL,1,False,,0.773,USKL_03acbd6ebb9b,True
+contribue,skill,,RELATIONNEL,1,False,,0.697,USKL_93b0347d3d49,False
+à l’évolution des compétences.,skill,,RESULTATS,1,False,,0.769,USKL_f978c560f829,True
+Agir à titre d’agent de liaison,skill,,RELATIONNEL,1,False,,0.682,USKL_9238313828a2,False
+établir un partage des connaissances,skill,,RELATIONNEL,1,False,,0.911,USKL_03acbd6ebb9b,True
+visant à maximiser l’expérience client.,skill,,PENSEE,1,False,,0.776,USKL_cbc263ab67c7,True
+Offrir le soutien opérationnel en mode coaching à son équipe de travail ainsi qu’à l’équipe relations avec la clientèle,skill,,RELATIONNEL,1,False,,0.737,USKL_2879bff22d2b,False
+"afin de développer la connaissance, l’autonomie et la performance",skill,,RESULTATS,1,False,,0.752,USKL_f978c560f829,True
+en étroite collaboration avec les membres de son équipe et la direction.,skill,,RELATIONNEL,1,False,,0.742,USKL_839d337e4473,False
+Travailler en collaboration avec son chef de service à outiller son équipe,skill,,RELATIONNEL,1,False,,0.777,USKL_ad08ea7e1c1d,True
+afin de contribuer à l’atteinte des objectifs opérationnels de son secteur.,skill,,RESULTATS,1,False,,0.681,USKL_71577c6269a4,False
+Répondre aux questions,skill,,RELATIONNEL,1,False,,0.758,USKL_56213d49f7d0,True
+relatives au traitement des réclamations.,skill,,PENSEE,1,False,,0.757,USKL_ce2a7be952dc,True
+Effectuer le traitement des demandes de révision,skill,,PENSEE,1,False,,0.763,USKL_574ea4ad9388,True
+Prendre en charge les cas complexes,skill,,PENSEE,1,False,,0.701,USKL_29293c136a08,False
+Collaborer avec l’équipe fraude et règlement des différends,skill,,RELATIONNEL,1,False,,0.719,USKL_a4622f250150,False
+dans le traitement des demandes de renversements,skill,,PENSEE,1,False,,0.695,USKL_2389cca45236,False
+Alimenter les statistiques en lien avec le contrôle qualité.,skill,,PERSONNEL,1,False,,0.767,USKL_e416bbc7b128,True
+Assurer le suivi du transfert des apprentissages et aviser le technicien en formation et procédures et les chefs de service s’il détecte des besoins de formation ou de suivi lors de ses validations et coaching.,skill,,RELATIONNEL,1,False,,0.686,USKL_0b2d5bd383a3,False
+Rédiger certaines correspondances,skill,,RELATIONNEL,1,False,,0.744,USKL_7fd6b56b8302,False
+"Élaborer, établir et soumettre à son supérieur immédiat de nouvelles méthodes de travail en vue d’accroître l’efficacité.",skill,,RESULTATS,1,False,,0.712,USKL_39fe6a3ed3b7,False
+le titulaire effectue les entrevues téléphoniques,skill,,RELATIONNEL,1,False,,0.673,USKL_f47d474610fc,False
+afin de recueillir des informations médicales,skill,,PENSEE,1,False,,0.809,USKL_71a017074915,True
+Le titulaire s’assure de la préparation du dossier,skill,,PERSONNEL,1,False,,0.625,USKL_adea909802f5,False
+de la création de la fiche dans,skill,,PENSEE,1,False,,0.64,USKL_9abb4ff57ff9,False
+pour avoir en main tous les éléments nécessaires,skill,,PENSEE,1,False,,0.739,USKL_2c7e9718a146,False
+afin d’effectuer l’entrevue téléphonique.,skill,,RELATIONNEL,1,False,,0.675,USKL_f47d474610fc,False
+agent passe 85% de son temps au téléphone,skill,,RELATIONNEL,1,False,,0.579,USKL_4f10068332cc,False
+et 15% de son temps à l’analyse,skill,,PENSEE,1,False,,0.59,USKL_f86a7aa1417b,False
+& la vérification de ses dossiers.,skill,,PERSONNEL,1,False,,0.729,USKL_75e10b4a4e2c,False
+L’agent doit avoir de l’expérience en service à la clientèle,skill,,PENSEE,1,False,,0.642,USKL_493853ad2f46,False
+"afin de recueillir des informations souvent délicates, avec une clientèle de divers milieux.",skill,,RELATIONNEL,1,False,,0.697,USKL_1d176d0b5b3f,False
+Selon les normes établies,skill,,PERSONNEL,1,False,,0.761,USKL_4af4f3f7f9d1,True
+pourrait avoir à commander des exigences médicales,skill,,PENSEE,1,False,,0.642,USKL_bdbaad20a965,False
+télétravail,skill,,PENSEE,2,False,,0.763,USKL_a2eff93a2ef5,True
+Expérience en service à la clientèle,skill,,PENSEE,1,False,,0.763,USKL_7e438184f275,True
+Connaissances médicales,skill,,PENSEE,1,False,,0.652,USKL_66cbf94288a0,False
+Sens de l’analyse,skill,,PENSEE,3,False,,0.672,USKL_2537291f4970,False
+sens de l’écoute,skill,,RELATIONNEL,1,False,,0.727,USKL_d3466420e70d,False
+excellent doigté au clavier,skill,,PENSEE,1,False,,0.701,USKL_dff4f2ff57d5,False
+Professionnalisme,skill,,PERSONNEL,2,True,USKL_7a529d5f982b,0.967,USKL_7a529d5f982b,True
+recueillement d'informations souvent délicates,skill,,RELATIONNEL,1,False,,0.738,USKL_7991a3a5339a,False
+Faciliter à synthétiser l’information,skill,,PENSEE,1,False,,0.869,USKL_62d2a956eaed,True
+esprit d’équipe.,skill,,RELATIONNEL,1,False,,0.862,USKL_c2bfd1ee6704,True
+Service à la clientèle,skill,,PENSEE,3,False,,0.831,USKL_4726ba8b03c1,True
+Recueillement d’informations médicales,skill,,PENSEE,1,False,,0.77,USKL_71a017074915,True
+connaissance dans ce domaine,skill,,PENSEE,1,False,,0.709,USKL_12d312d78f39,False
+écoute,skill,,RELATIONNEL,1,False,,0.722,USKL_d3466420e70d,False
+minutie de transcription des informations,skill,,PERSONNEL,1,False,,0.677,USKL_60cd6bee3526,False
+recueillement d'informations souvent délicates.,skill,,RELATIONNEL,1,False,,0.736,USKL_1d176d0b5b3f,False
+facilité à communiquer avec différentes personnes de différents milieux,skill,,RELATIONNEL,1,False,,0.776,USKL_bfceff313fbb,True
+Bonne organisation,skill,,RESULTATS,1,False,,0.702,USKL_804f90fe8d6d,False
+Vitesse clavier ordinateur,skill,,PENSEE,1,False,,0.736,USKL_4b49082ba92a,False
+travail par téléphone,skill,,RELATIONNEL,1,False,,0.757,USKL_0455adedb06e,True
+vérification des documents et entrées,skill,,PERSONNEL,1,False,,0.766,USKL_fff602dc1677,True
+offrir des solutions adaptées aux besoins de nos clients,skill,,PENSEE,1,False,,0.851,USKL_8a2a5c03b181,True
+stimulé par des défis professionnels,skill,,RESULTATS,1,False,,0.713,USKL_40e936614d75,False
+approche centrée sur le client,skill,,PENSEE,1,False,,0.774,USKL_918e780a43e1,True
+proactivité,skill,,RESULTATS,1,False,,0.73,USKL_6a6fe0139b3d,False
+capacité à gérer les priorités,skill,,RESULTATS,1,False,,0.762,USKL_51e974287856,True
+En partenariat avec vos collègues,skill,,RELATIONNEL,1,False,,0.88,USKL_ad08ea7e1c1d,True
+Contrôle de la qualité : S’assurer de la qualité des transactions,skill,,PERSONNEL,1,False,,0.694,USKL_6b78c3bab6e1,False
+Validation et correction des transactions,skill,,PERSONNEL,1,False,,0.752,USKL_75e10b4a4e2c,True
+Prendre en charge la validation et la correction des transactions électroniques,skill,,PERSONNEL,1,False,,0.714,USKL_73662c9856a8,False
+"Traiter, analyser et gérer les correspondances auprès de la clientèle interne.",skill,,PENSEE,1,False,,0.743,USKL_2e1c85408d3d,False
+Communiquer avec les partenaires afin d’expliquer les ajustements et corrections.,skill,,RELATIONNEL,1,False,,0.769,USKL_322234194905,True
+Travail d’équipe,skill,,RELATIONNEL,1,True,USKL_e8ca08c144ff,0.952,USKL_e8ca08c144ff,True
+Travailler en collaboration avec l’équipe,skill,,RELATIONNEL,1,False,,0.897,USKL_210bac427a09,True
+pour l’amélioration continue des pratiques,skill,,RESULTATS,1,False,,0.859,USKL_1aae74e7683e,True
+Connaissances Excel intermédiaire-avancé,skill,,PENSEE,1,False,,0.632,USKL_7a5e20f3f156,False
+Attitude positive,skill,,PERSONNEL,1,False,,0.904,USKL_a3bc086dab86,True
+aimant travailler en équipe,skill,,RELATIONNEL,1,False,,0.854,USKL_210bac427a09,True
+Minutieux et attentif aux détails,skill,,PERSONNEL,1,False,,0.798,USKL_f78c61d377ef,True
+Excellent service à la clientèle,skill,,PENSEE,1,False,,0.774,USKL_405416a3d953,True
+Vous désirez développer votre potentiel,skill,,PERSONNEL,1,False,,0.685,USKL_08fb6b519ffa,False
+au sein d’une équipe,skill,,RELATIONNEL,1,False,,0.797,USKL_210bac427a09,True
+Vous aimez le travail minutieux,skill,,PERSONNEL,1,False,,0.632,USKL_f78c61d377ef,False
+possédez une rapidité de frappe au clavier,skill,,PENSEE,1,False,,0.647,USKL_dff4f2ff57d5,False
+Ouvrir des dossiers d’invalidité de courte et de longue durée,skill,,PERSONNEL,1,False,,0.642,USKL_5739695961f0,False
+- Numériser les documents reçus au service de l’invalidité,skill,,PERSONNEL,1,False,,0.644,USKL_fcaf2be0295a,False
+- Établir des dépôts directs dans les dossiers d’invalidité,skill,,PERSONNEL,1,False,,0.602,USKL_645e86b38dd2,False
+- Payer des factures,skill,,PERSONNEL,1,False,,0.72,USKL_f1b358b2f1f6,False
+- Encaisser des chèques,skill,,PERSONNEL,1,False,,0.669,USKL_f1b358b2f1f6,False
+En collaboration avec les autres membres de l’équipe,skill,,RELATIONNEL,1,False,,0.814,USKL_210bac427a09,True
+Gérer les boîtes de réception de courriels du service,skill,,PENSEE,1,False,,0.73,USKL_de7bb254a2af,False
+Assurer la réception du courrier de Postes <anon_location> - Assurer l’envoi de courrier par messagerie ou livraison spéciale - Distribuer des copies de chèques - Préparer des chèques - Fermer des dossiers d’invalidité,skill,,PERSONNEL,1,False,,0.638,USKL_e324e4b8b3d1,False
+Toutes autres tâches connexes,skill,,PERSONNEL,1,False,,0.631,USKL_6b5cecd0ff01,False
+apporter un soutien au service,skill,,RELATIONNEL,1,False,,0.765,USKL_52a6b35eb4cb,True
+la promotion de l’esprit d’équipe,skill,,RELATIONNEL,1,False,,0.889,USKL_ec315ac7d913,True
+conserver de bonnes relations de travail avec tous les employés,skill,,RELATIONNEL,1,False,,0.767,USKL_28cd2975f8d9,True
+Connaissance des systèmes d’information et habileté en saisie de données,skill,,PENSEE,1,False,,0.705,USKL_5b1c693d549d,False
+Sens du service à la clientèle,skill,,PENSEE,1,False,,0.709,USKL_4726ba8b03c1,False
+Polyvalence,skill,,PERSONNEL,1,False,,0.663,USKL_236e0d4f69d1,False
+capacité de travailler en équipe,skill,,RELATIONNEL,1,False,,0.96,USKL_b139935857db,True
+sous pression,skill,,PERSONNEL,1,False,,0.708,USKL_bfc96d215aa1,False
+le tituliare assiste le service dans l'élaboration des différentes tâches administratives,skill,,PERSONNEL,1,False,,0.609,USKL_658badcab5ba,False
+Reçoit et distribue la correspondance quotidiennement,skill,,PERSONNEL,1,False,,0.691,USKL_6203701ee5d5,False
+- Vérifier la facturation de nos fournisseurs et faire approuver le versement,skill,,PERSONNEL,1,False,,0.713,USKL_75e10b4a4e2c,False
+Répondre aux appels,skill,,RELATIONNEL,1,False,,0.879,USKL_af428de72d6c,True
+Envoi de rapports divers,skill,,PERSONNEL,1,False,,0.801,USKL_ed59be60a01a,True
+Commande de matériels promotionnels et fournitures de toutes sortes,skill,,PERSONNEL,1,False,,0.676,USKL_7e142a1ab157,False
+"- Transcription, correction et vérification de lettres",skill,,PERSONNEL,1,False,,0.651,USKL_f87a0885dc5a,False
+- Effectue tout travail de bureau requis,skill,,PERSONNEL,1,False,,0.664,USKL_1cba3fcbada3,False
+"Connaissance des logiciels Suite office 2007 (Word, Power point, Excel)",skill,,PENSEE,1,False,,0.711,USKL_2b46debc0653,False
+Connaissance de l’assurance de personne,skill,,PENSEE,1,False,,0.706,USKL_6f860d122036,False
+Connaissance des termes médicaux,skill,,PENSEE,1,False,,0.686,USKL_b7e624c1a9a2,False
+"entregent, tact et diplomatie",skill,,RELATIONNEL,1,False,,0.707,USKL_4aece30cfbee,False
+bonne capacité d’apprentissage,skill,,PERSONNEL,1,False,,0.736,USKL_34e655d4e2d2,False
+ouverture aux changements,skill,,PERSONNEL,1,False,,0.936,USKL_2076dbf949b6,True
+sens du client,skill,,PENSEE,1,False,,0.757,USKL_b5f9922de7fb,True
+bon jugement,skill,,PENSEE,1,False,,0.715,USKL_a891acbb399e,False
+gestion des priorités,skill,,RESULTATS,1,False,,0.841,USKL_51e974287856,True
+sens de la confidentialité.,skill,,PERSONNEL,1,False,,0.764,USKL_96884f81fa43,True
+La personne titulaire reçoit et traite des dossiers en sélection des risques d'assurance,skill,,PENSEE,1,False,,0.607,USKL_3a195ef7c92a,False
+selon les limites d'acceptation établies par l'entreprise et à l'intérieur des délais prescrits.,skill,,PERSONNEL,1,False,,0.693,USKL_92bc26f6ef64,False
+"Elle s'assure de la conformité de ceux-ci en lien avec les règlements, les normes",skill,,PERSONNEL,1,False,,0.782,USKL_73be24204ad6,True
+et les pratiques en vigueur dans l'industrie.,skill,,PENSEE,1,False,,0.686,USKL_fd037925e65d,False
+les décisions requièrent un niveau habituel d'analyse et de recherche,skill,,PENSEE,1,False,,0.706,USKL_37c705e67800,False
+"Analyser les éléments du dossier, évaluer le risque à encourir pour l'entreprise en fonction des normes et pratiques en vigueur et accepter, modifier, annuler ou refuser la demande d'assurance.",skill,,PENSEE,1,False,,0.73,USKL_0b2d5bd383a3,False
+Établir le taux de surmortalité ou de morbidité en consultant les différentes sources de référence en usage dans l'entreprise,skill,,PENSEE,1,False,,0.658,USKL_a02794ea2931,False
+"Examiner les documents qui lui sont transmis, s'assurer que l'information est complète",skill,,PERSONNEL,1,False,,0.726,USKL_45d4005ee797,False
+l'obtenir auprès des personnes concernées.,skill,,PENSEE,1,False,,0.778,USKL_ab4c7be0ce3c,True
+"Compléter la documentation électronique en codifiant, de façon rigoureuse, l'information contenue au dossier",skill,,PERSONNEL,1,False,,0.728,USKL_b7028cf21d85,False
+Rédiger la correspondance expliquant la décision prise dans un dossier ou l'interprétation de nos contrats d'assurance.,skill,,RELATIONNEL,1,False,,0.597,USKL_564037f5c4e5,False
+"Consulter son supérieur, occasionnellement, pour les dossiers plus complexes",skill,,PERSONNEL,1,False,,0.702,USKL_9d20e94563ee,False
+évaluer le risque à encourir pour l'entreprise,skill,,PENSEE,1,False,,0.799,USKL_3a195ef7c92a,True
+Vous participez à la vente des produits et services,skill,,RELATIONNEL,1,False,,0.717,USKL_ff12e34ea1dc,False
+répondant aux besoins des membres et clients,skill,,PENSEE,1,False,,0.821,USKL_8a2a5c03b181,True
+selon les stratégies et les pratiques en vigueur.,skill,,PENSEE,1,False,,0.714,USKL_182a586af2b8,False
+réaliser la promotion et la vente de protections d’assurance de dommages auprès d’une clientèle d’entreprises.,skill,,RELATIONNEL,1,False,,0.658,USKL_3c68c43e2aa5,False
+"Vous assurez la prise en charge des membres et clients, analysez leurs besoins et les accompagnez dans le choix des protections ap propriées",skill,,PENSEE,1,False,,0.659,USKL_493853ad2f46,False
+en mettant à profit votre capacité à convaincre.,skill,,RELATIONNEL,1,False,,0.705,USKL_fd9eb4aed4f9,False
+Vous assurez la cohérence,skill,,PERSONNEL,1,False,,0.696,USKL_2c0c9519a350,False
+entre les objectifs de vente,skill,,RESULTATS,1,False,,0.695,USKL_fe7bd7abeef7,False
+les besoins et attentes des membres et clients et leur satisfaction.,skill,,PENSEE,1,False,,0.765,USKL_2e1c85408d3d,True
+Vous contribuez au développement et au maintien de relations d’affaires personnalisées,skill,,RELATIONNEL,1,False,,0.701,USKL_fc5492e7111a,False
+représentant un potentiel de développement pour votre secteur.,skill,,RESULTATS,1,False,,0.629,USKL_71577c6269a4,False
+Vous participez à l’élaboration de solutions par des analyses et vos connaissances dans votre domaine,skill,,PENSEE,1,False,,0.689,USKL_b0ac26fcf439,False
+Vous exercez un rôle-conseil et d’accompagnement auprès des membres et clients actuels ou potentiels.,skill,,PENSEE,1,False,,0.664,USKL_62bbc1f00893,False
+Vous représentez l’entreprise dans le cadre d’ententes avec la clientèle et vous avez des occasions d’établir et de négocier les modalités relatives aux produits et services,skill,,RELATIONNEL,1,False,,0.647,USKL_679e29541244,False
+conformément aux normes et procédures en vigueur,skill,,PERSONNEL,1,False,,0.829,USKL_ba967a0f7cea,True
+Formation 100% en ligne,skill,,PENSEE,1,False,,0.807,USKL_615916894043,True
+Gérer la complexité,skill,,PENSEE,1,False,,0.804,USKL_7bf4aa51a851,True
+Viser les résultats,skill,,RESULTATS,1,False,,0.746,USKL_d882f40dd691,False
+La personne titulaire conseille et offre des solutions d'assurance adaptées au client et à la nature de son entreprise.,skill,,RELATIONNEL,1,False,,0.676,USKL_62bbc1f00893,False
+Établir un contact téléphonique personnalisé avec le client,skill,,PENSEE,1,False,,0.726,USKL_0c6e6a230427,False
+créer un climat de confiance,skill,,PERSONNEL,1,False,,0.847,USKL_003fbf6f5273,True
+favorisant la vente d'un contrat d'assurance entreprise,skill,,RELATIONNEL,1,False,,0.648,USKL_a50e6dfc451e,False
+tout en respectant les politiques de souscription de l'entreprise.,skill,,PERSONNEL,1,False,,0.736,USKL_bbf50a567532,False
+"Répondre aux demandes d'information, procéder aux modifications, annulations, mises à jour au contrat en veillant à bien répondre aux besoins du client et ce, dans le but d'assurer la satisfaction complète du client.",skill,,PENSEE,1,False,,0.677,USKL_8a2a5c03b181,False
+Développer et maintenir le partenariat avec l'ensemble des agents au secteur des particuliers afin de favoriser l'obtention de références.,skill,,RELATIONNEL,1,False,,0.665,USKL_ca325f270a5c,False
+fournir un appui aux différents secteurs de l'entreprise,skill,,RELATIONNEL,1,False,,0.743,USKL_2879bff22d2b,False
+effectuer des tâches périphériques,skill,,PERSONNEL,1,False,,0.723,USKL_6b5cecd0ff01,False
+du coaching,skill,,RELATIONNEL,1,False,,0.787,USKL_10b25929b5fc,True
+participer à divers comités,skill,,RELATIONNEL,1,False,,0.716,USKL_e0cbadede7fd,False
+Avoir la maîtrise de soi,skill,,PERSONNEL,1,False,,0.937,USKL_6415d1eabb33,True
+Être orienté vers les résultats,skill,,RESULTATS,1,False,,0.749,USKL_736284e0bcb9,False

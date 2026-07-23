@@ -106,10 +106,23 @@ def _write_all(path, fieldnames, rows):
 
 
 def replace_source_rows(path, fieldnames, source, new_rows):
-    """Idempotent per-source write: drop this source's old rows, keep others, append new."""
+    """Idempotent per-source write: drop this source's old rows, keep others, append new.
+
+    Fully-identical duplicate rows within this source's contribution are collapsed (hygiene): a
+    source occasionally emits the same relation/edge twice (e.g. a skill reached via two O*NET
+    elements), and identical rows carry no extra information. Order-preserving; a no-op for entity
+    tables where `entity_id` already makes every row unique.
+    """
     existing = _read_all(path)
     kept = [r for r in existing if r.get("source") != source]
-    _write_all(path, fieldnames, kept + new_rows)
+    seen, deduped = set(), []
+    for r in new_rows:
+        key = tuple(r.get(f) for f in fieldnames)
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(r)
+    _write_all(path, fieldnames, kept + deduped)
 
 
 def write_csv(path, fieldnames, rows):

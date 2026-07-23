@@ -100,6 +100,10 @@ def main():
     ap.add_argument("--translate", nargs="?", const="all", metavar="DIRS",
                     help="fill empty EN/FR labels after merge (Wikidata labels + validated MT); "
                          "optional comma-list of directions (wikidata,en_fr,fr_en); default all")
+    ap.add_argument("--validate", nargs="?", const="all", metavar="TRACKS",
+                    help="validate the built KB (read-only): logical consistency + external gold "
+                         "coverage benchmark + LLM-connection audit; optional comma-list of tracks "
+                         "(consistency,coverage,llm); default all. Writes validation/report.md")
     args = ap.parse_args()
 
     if args.list_stages:
@@ -127,6 +131,13 @@ def main():
     if args.translate:
         from src import translate
         translate.run(directions=args.translate)
+        return
+
+    if args.validate:
+        from src import validation
+        tracks = validation.ALL_TRACKS if args.validate == "all" else tuple(
+            t.strip() for t in args.validate.split(","))
+        validation.run(tracks=tracks)
         return
 
     if args.add:

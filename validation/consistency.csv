@@ -1,0 +1,14 @@
+invariant,status,detail
+hierarchy: no dangling edges,PASS,0 dangling
+hierarchy: no self-loops,PASS,0 self-loops
+hierarchy: acyclic (DAG),PASS,
+skills: exactly one category parent,PASS,"0 multi-parent, 0 unplaced"
+occupations: one backbone + one domain parent,PASS,"0 bad backbone, 0 bad facet"
+"ISCO backbone: single root, all reach it",PASS,"1 roots, 0 unreachable"
+ISCO: no non-IT group leakage,PASS,0 leaked groups
+no skill->skill hierarchy edges,PASS,0 skill->skill edges
+skills: hard_soft matches taxonomy,PASS,"0 mismatched, 0 empty"
+relations: endpoints correctly typed,PASS,"0 bad occ, 0 bad skill endpoints"
+unified: members valid & unshared,PASS,"0 empty, 0 missing, 0 shared"
+ids: entity_id & unified_id unique,PASS,"0 dup entity_id, 0 dup unified_id"
+relations: no identical duplicate rows,PASS,"0 identical dups; 33166 rows / 32353 unique (occ,skill,type)"

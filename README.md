@@ -298,9 +298,11 @@ src/
   wikidata.py      # QID anchoring + authoritative descriptions/aliases (enrichment stage)
   llm.py           # HF LLM descriptions / inferred links / emerging tech, auto-validated (enrichment stage)
   translate.py     # bilingual EN/FR label completion (Wikidata labels + validated MT) (enrichment stage)
+  validation/      # KB validation: consistency invariants + external gold coverage + LLM-link audit
   incremental.py   # add/remove ONE source without a full rebuild
-  pipeline.py      # orchestrator (core + enrichment stages) + QA/integrity report
+  pipeline.py      # orchestrator (core + enrichment stages) + QA/integrity report (self-certifies consistency)
 run_pipeline.py    # CLI entry point
+resources/validation/  # SkillSpan / Sayfullina / FIJO gold corpora (read-only benchmark inputs)
 notebooks/
   inspect.ipynb    # QA & spot-checks over kb/
 ```
@@ -499,6 +501,55 @@ degrades gracefully (TF-IDF candidates, NLI off) and still produces the KB.
 | `unified_occupations.csv` | de-duplicated unified occupations (merged members) |
 | `unified_skills.csv` | de-duplicated unified skills |
 | `provenance.csv` | audit trail: what each stage produced and when |
+
+## Validation (`--validate`) — logical consistency, external coverage, LLM-link audit
+
+The KB ships with a **validation suite** (`src/validation/`, read-only over the graph — adds no
+entities): `python run_pipeline.py --validate` runs three tracks and writes `validation/report.md` +
+per-track CSVs.
+
+**1. Logical-consistency certificate (automatic).** `validation/consistency.py` asserts the graph-logic
+invariants the build is supposed to uphold — **13/13 PASS**: acyclic hierarchy (DAG, no self-loops),
+every skill has exactly one category parent (one path to a Hard/Soft type), every occupation has one
+ISCO-backbone parent + one domain facet, the ISCO backbone has a single root every occupation reaches,
+no non-IT ISCO leakage, **no skill→skill edges** (the locked constraint, now verified), `hard_soft`
+matches the taxonomy for every skill, relation endpoints are correctly typed (occ↔skill), unified-concept
+members are valid and unshared, ids are unique, and relations carry no identical duplicate rows. This
+runs **inside `qa()`**, so every build self-certifies (`consistency: 13/13 invariants PASS`).
+
+**2. External coverage benchmark** against three expert-annotated NER corpora (read-only, pooled across
+splits — nothing is trained): **SkillSpan** (Zhang et al. 2022, English job postings, hard *knowledge* +
+verb-phrase *skill* layers, StackOverflow-IT `tech` vs general `house`), **Sayfullina** (2018, English
+soft skills + a 234-cluster synonym reference list), **FIJO** (Beauchemin et al. 2022, French insurance
+soft skills). Each gold skill-mention is checked against KB skill labels by **exact/alias** match_key and
+by **semantic** bge-m3 cosine (≥0.75), reported separately:
+
+| dataset · slice | gold | exact | +semantic (covered) |
+|---|--:|--:|--:|
+| SkillSpan · knowledge/tech (IT hard) | 1,840 | 27.0% | **73.2%** |
+| SkillSpan · skill/tech (IT verb-phrase) | 1,884 | 3.7% | 58.0% |
+| SkillSpan · knowledge/house (general) | 928 | 7.8% | 39.8% |
+| Sayfullina · soft | 1,140 | 7.1% | 62.5% |
+| FIJO · French soft (insurance) | 692 | 0.3% | 35.0% |
+
+The KB's **IT hard-skill coverage is strong (73% on tech knowledge)**; exact match is low by construction
+(gold mentions are multi-word phrases/verb-clauses vs a noun-labeled taxonomy — semantic recovers them),
+and the residual misses are dominated by items the KB *correctly excludes* (degrees, "Financial
+Services", "Consulting", "PhD") — so the benchmark also confirms the IT-relevance scoping. French/soft
+recall is honestly lower (French **insurance** long-clause spans; general-labour-market soft phrasings).
+The **Sayfullina synonym-normalization** check finds that of 108 clusters with ≥2 phrasings in the KB,
+**20.4%** resolve all phrasings to a single node — an honest signal that general soft-skill synonym
+normalization is partial (the KB is IT-focused, and semantic argmax over a hard-skill-dominated space
+scatters near-synonyms).
+
+**3. LLM-connection accuracy audit.** The only LLM-*created* connections are the **84 `llm_inferred`
+occupation→skill links** (gated at creation by embedding cosine only) and the **24 `llm` descriptions**.
+Re-validated independently: links pass NLI (occupation definition ⊨ "requires {skill}") **45%** and are
+**demand-corroborated** (the occupation really demands that skill or a near one in its real posting
+profile) **19%** (10 links satisfy *both* signals); the 24 descriptions pass NLI re-check **100%**.
+Since the inferred links were designed to fill gaps the demand data missed, low demand-overlap is partly
+by design — but the audit confirms they are the KB's least-corroborated content and validates keeping
+them as a **separate, clearly-labeled `llm_inferred` relation type** (never mixed into `demand`).
 
 ## Not in this build (deliberate follow-ons)
 

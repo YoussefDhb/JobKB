@@ -1,0 +1,1141 @@
+surface,layer,subset,category,count,exact,exact_uid,sem_score,sem_uid,semantic
+able to multitask,skill,,SOFT,11,False,,0.823,USKL_6b5cecd0ff01,True
+team member,skill,,SOFT,10,False,,0.806,USKL_e8ca08c144ff,True
+verbal communication skills,skill,,SOFT,4,False,,0.802,USKL_108329abf03f,True
+dynamic,skill,,SOFT,1547,False,,0.816,USKL_8424f9b82a72,True
+independent,skill,,SOFT,1022,False,,0.751,USKL_98f8236e00bf,True
+lively,skill,,SOFT,121,False,,0.664,USKL_bc22b77de158,False
+team working,skill,,SOFT,282,False,,0.904,USKL_210bac427a09,True
+educational and care skills,skill,,SOFT,1,False,,0.737,USKL_f978c560f829,False
+project management skills,skill,,SOFT,8,False,,0.915,USKL_d57212dda5fe,True
+willing to travel,skill,,SOFT,10,False,,0.723,USKL_65bcdb3012fb,False
+public speaking skills,skill,,SOFT,10,False,,0.881,USKL_108329abf03f,True
+analytical and numerical abilities,skill,,SOFT,1,False,,0.719,USKL_e58645864c73,False
+efficient,skill,,SOFT,11,False,,0.862,USKL_8c265142608d,True
+openminded,skill,,SOFT,11,False,,0.766,USKL_87b7652db51a,True
+able to communicate,skill,,SOFT,9,False,,0.799,USKL_024f38995b91,True
+hard worker,skill,,SOFT,11,False,,0.721,USKL_bf0002b30a6f,False
+work under stress,skill,,SOFT,9,False,,0.772,USKL_90ae91ef536e,True
+personal management skills,skill,,SOFT,5,False,,0.766,USKL_22eafad5c469,True
+work of others in a small team,skill,,SOFT,1,False,,0.844,USKL_210bac427a09,True
+attention to detail contact details,skill,,SOFT,1,False,,0.789,USKL_f78c61d377ef,True
+aggressive,skill,,SOFT,81,False,,0.73,USKL_1440a5e47332,False
+written communication skills,skill,,SOFT,7,False,,0.794,USKL_b8bd7fc4e1cc,True
+team building skills,skill,,SOFT,9,False,,0.9,USKL_f6c425c8c1f8,True
+results driven,skill,,SOFT,11,False,,0.713,USKL_da04b9e2d375,False
+counselling skills,skill,,SOFT,10,False,,0.744,USKL_108329abf03f,False
+personable,skill,,SOFT,11,False,,0.664,USKL_40ef218b11f5,False
+versatility,skill,,SOFT,11,True,USKL_1ecef094afc0,0.776,USKL_1ecef094afc0,True
+project management,skill,,SOFT,11,True,USKL_49dce89a69fe,0.992,USKL_49dce89a69fe,True
+pleasant,skill,,SOFT,8,False,,0.717,USKL_a3bc086dab86,False
+strategic thinking,skill,,SOFT,11,True,USKL_fa2b6a19f724,0.823,USKL_cc3806d6cd0f,True
+creativity in thinking,skill,,SOFT,2,False,,0.887,USKL_af235e7ac704,True
+quick learning,skill,,SOFT,5,False,,0.764,USKL_43917307b5e4,True
+prompt,skill,,SOFT,9,False,,0.696,USKL_689fa46c3873,False
+initiative and results driven,skill,,SOFT,1,False,,0.762,USKL_58f0ac51a809,True
+courteous,skill,,SOFT,11,False,,0.716,USKL_004cb4a6cb00,False
+problemsolving attitude,skill,,SOFT,9,False,,0.79,USKL_a9d4b47334ad,True
+coaching,skill,,SOFT,11,True,USKL_10b25929b5fc,0.958,USKL_10b25929b5fc,True
+accuracy,skill,,SOFT,11,False,,0.785,USKL_2c0c9519a350,True
+interest and desire to learn,skill,,SOFT,1,False,,0.869,USKL_65bcdb3012fb,True
+flexible,skill,,SOFT,10,True,USKL_1ecef094afc0,0.849,USKL_1ecef094afc0,True
+punctual,skill,,SOFT,11,False,,0.666,USKL_19e528cd027d,False
+judgement skills,skill,,SOFT,8,False,,0.756,USKL_8a5156ba9a35,True
+solution oriented,skill,,SOFT,10,False,,0.773,USKL_a9d4b47334ad,True
+enthusiastic students eager to learn,skill,,SOFT,1,False,,0.804,USKL_65bcdb3012fb,True
+effectiveness,skill,,SOFT,10,False,,0.724,USKL_8c265142608d,False
+self directeddirected,skill,,SOFT,1,False,,0.71,USKL_dbcca01d8c6d,False
+ability to learn,skill,,SOFT,9,False,,0.828,USKL_65bcdb3012fb,True
+results orientation,skill,,SOFT,8,True,USKL_9c482c5584f4,0.766,USKL_9c482c5584f4,True
+customer service ethics,skill,,SOFT,2,False,,0.762,USKL_b5f9922de7fb,True
+passion,skill,,SOFT,11,False,,0.678,USKL_89b25331cecb,False
+ability to adapt,skill,,SOFT,9,False,,0.867,USKL_078971e5b0bb,True
+motivation,skill,,SOFT,10,False,,0.836,USKL_89b25331cecb,True
+ability to travel,skill,,SOFT,9,False,,0.684,USKL_6ccd38159445,False
+problem solving skills,skill,,SOFT,9,True,USKL_a9d4b47334ad,0.838,USKL_a9d4b47334ad,True
+systematic,skill,,SOFT,11,False,,0.637,USKL_2a41ee8c36f9,False
+friendly and outgoing personality,skill,,SOFT,2,False,,0.69,USKL_a3bc086dab86,False
+leadership,skill,,SOFT,10,True,USKL_c8a5d0c1c5f2,1.0,USKL_c8a5d0c1c5f2,True
+achieving goals,skill,,SOFT,3,False,,0.776,USKL_95719ce77be8,True
+constructive feedback,skill,,SOFT,8,False,,0.833,USKL_5626007cc8de,True
+consistent,skill,,SOFT,10,False,,0.672,USKL_4af4f3f7f9d1,False
+conceptual thinking skills,skill,,SOFT,1,False,,0.776,USKL_af235e7ac704,True
+planning skills,skill,,SOFT,3,False,,0.825,USKL_c4c84e903bce,True
+ability to foster cooperation,skill,,SOFT,1,False,,0.802,USKL_b2d947c2b805,True
+ambitious,skill,,SOFT,11,False,,0.666,USKL_58f0ac51a809,False
+availability,skill,,SOFT,7,False,,0.758,USKL_c976a6b0a926,True
+analytical abilities,skill,,SOFT,8,False,,0.769,USKL_0c9f9f301ff0,True
+development skills,skill,,SOFT,9,False,,0.772,USKL_d57212dda5fe,True
+delegation skills,skill,,SOFT,10,False,,0.782,USKL_af2cbc88dcd2,True
+curious,skill,,SOFT,10,False,,0.774,USKL_b60e29b3767d,True
+decision making abilities,skill,,SOFT,11,False,,0.818,USKL_a8fa624183dd,True
+detailed,skill,,SOFT,10,False,,0.666,USKL_f78c61d377ef,False
+professional ethics,skill,,SOFT,3,True,USKL_2295227eb3df,0.812,USKL_d59fb6834792,True
+assertiveness,skill,,SOFT,9,False,,0.682,USKL_e91477e7fa38,False
+problemsolving and responsible attitude,skill,,SOFT,1,False,,0.743,USKL_878e652bf674,False
+enthusiastic and determined personality,skill,,SOFT,1,False,,0.708,USKL_e91477e7fa38,False
+ethical standards,skill,,SOFT,8,False,,0.84,USKL_d59fb6834792,True
+analytical and logical thinking,skill,,SOFT,3,False,,0.822,USKL_785c5b6b9daf,True
+enthusiastic,skill,,SOFT,11,True,USKL_a3bc086dab86,0.765,USKL_a3bc086dab86,True
+collaborative,skill,,SOFT,11,False,,0.933,USKL_a70d03d259bf,True
+creative thinking key skills,skill,,SOFT,1,False,,0.808,USKL_af235e7ac704,True
+client learning orientation,skill,,SOFT,1,False,,0.793,USKL_37760134bab4,True
+willing to learn,skill,,SOFT,11,False,,0.921,USKL_65bcdb3012fb,True
+motivating,skill,,SOFT,11,False,,0.866,USKL_9ed57b401017,True
+analytical and critical thinking skills,skill,,SOFT,1,False,,0.762,USKL_0c9f9f301ff0,True
+works collaboratively,skill,,SOFT,8,True,USKL_ad08ea7e1c1d,0.913,USKL_a70d03d259bf,True
+level of self motivation,skill,,SOFT,4,False,,0.805,USKL_89b25331cecb,True
+reliable,skill,,SOFT,11,False,,0.73,USKL_cd80e2bbc2d3,False
+competitive,skill,,SOFT,10,False,,0.711,USKL_27cb7e95105f,False
+flexible with hours,skill,,SOFT,2,False,,0.764,USKL_1ecef094afc0,True
+skills to effectively communicate,skill,,SOFT,3,False,,0.816,USKL_b8bd7fc4e1cc,True
+specificationsense of responsibility,skill,,SOFT,1,False,,0.747,USKL_6e33eaf3b603,False
+self awareness,skill,,SOFT,9,False,,0.825,USKL_baf3ef04e914,True
+autonomy,skill,,SOFT,11,True,USKL_89b25331cecb,0.791,USKL_de8d3184717d,True
+sharp,skill,,SOFT,9,False,,0.701,USKL_e757dfe41d4c,False
+ingenuity,skill,,SOFT,8,False,,0.756,USKL_1298b9ec3d3f,True
+problemsolving and analytical skills,skill,,SOFT,1,False,,0.74,USKL_7b39fc9d97d9,False
+flexibility,skill,,SOFT,11,True,USKL_1ecef094afc0,1.0,USKL_1ecef094afc0,True
+language skills,skill,,SOFT,11,False,,0.787,USKL_22eafad5c469,True
+willingness to travel,skill,,SOFT,9,False,,0.772,USKL_65bcdb3012fb,True
+responsable,skill,,SOFT,3,False,,0.887,USKL_6e33eaf3b603,True
+self starters,skill,,SOFT,11,False,,0.706,USKL_6a245b747803,False
+attentive,skill,,SOFT,11,False,,0.801,USKL_5ace3ee9272d,True
+constructive and proactive feedback,skill,,SOFT,1,False,,0.791,USKL_5626007cc8de,True
+enthusiastic personality,skill,,SOFT,7,False,,0.738,USKL_a3bc086dab86,False
+responsibility,skill,,SOFT,11,True,USKL_6e33eaf3b603,1.0,USKL_6e33eaf3b603,True
+to write,skill,,SOFT,9,False,,0.827,USKL_a1f23a1d30bb,True
+willingness and ability to listen,skill,,SOFT,1,False,,0.791,USKL_65bcdb3012fb,True
+lively personality,skill,,SOFT,8,False,,0.669,USKL_a3bc086dab86,False
+tactful,skill,,SOFT,11,False,,0.736,USKL_2558d2629552,False
+ability to communicate,skill,,SOFT,11,False,,0.827,USKL_024f38995b91,True
+organized,skill,,SOFT,9,True,USKL_804f90fe8d6d,0.806,USKL_804f90fe8d6d,True
+judgment and decisionmaking skills,skill,,SOFT,3,False,,0.765,USKL_a8fa624183dd,True
+organisational skills,skill,,SOFT,8,True,USKL_804f90fe8d6d,0.8,USKL_a162b32db074,True
+driven,skill,,SOFT,10,False,,0.697,USKL_da04b9e2d375,False
+team in providing management,skill,,SOFT,1,False,,0.814,USKL_f3e9f453b9eb,True
+analytical,skill,,SOFT,10,False,,0.81,USKL_0c9f9f301ff0,True
+correct reporting,skill,,SOFT,7,False,,0.766,USKL_e6394db9bb91,True
+responsible delivering person,skill,,SOFT,4,False,,0.698,USKL_6e33eaf3b603,False
+public speaking,skill,,SOFT,11,True,USKL_108329abf03f,0.817,USKL_82f884db3c8c,True
+inspired,skill,,SOFT,9,False,,0.736,USKL_e0bdfa57a1a9,False
+teamworker,skill,,SOFT,10,False,,0.9,USKL_e8ca08c144ff,True
+manage multiple tasks,skill,,SOFT,8,False,,0.886,USKL_6b5cecd0ff01,True
+training key skills,skill,,SOFT,1,False,,0.759,USKL_f978c560f829,True
+dynamic personality,skill,,SOFT,9,False,,0.692,USKL_8424f9b82a72,False
+dedicated,skill,,SOFT,11,False,,0.682,USKL_fbac66d091dc,False
+self confidence and initiative,skill,,SOFT,3,False,,0.734,USKL_89b25331cecb,False
+ability to organize,skill,,SOFT,9,False,,0.796,USKL_b139935857db,True
+creativity,skill,,SOFT,10,True,USKL_3e1db018f7cd,0.915,USKL_3e1db018f7cd,True
+self directed learning,skill,,SOFT,2,False,,0.954,USKL_dbcca01d8c6d,True
+understanding,skill,,SOFT,11,False,,0.756,USKL_538a064b628a,True
+service oriented mentality,skill,,SOFT,1,False,,0.73,USKL_223ffa721f4d,False
+business programme leader,skill,,SOFT,1,False,,0.675,USKL_8e37102ac4e3,False
+self directive learning,skill,,SOFT,1,False,,0.898,USKL_dbcca01d8c6d,True
+easy going,skill,,SOFT,10,False,,0.651,USKL_56378aa3fc5e,False
+flexible with working hours,skill,,SOFT,6,False,,0.756,USKL_1ecef094afc0,True
+team work,skill,,SOFT,6,True,USKL_e8ca08c144ff,0.951,USKL_e8ca08c144ff,True
+team builder,skill,,SOFT,11,False,,0.885,USKL_f6c425c8c1f8,True
+skills ability to communicate,skill,,SOFT,3,False,,0.808,USKL_b8bd7fc4e1cc,True
+meeting weekly payment deadlines,skill,,SOFT,1,False,,0.846,USKL_19e528cd027d,True
+timemanagement and communication skills,skill,,SOFT,2,False,,0.779,USKL_5bd64b654cb3,True
+communicating skills,skill,,SOFT,6,False,,0.845,USKL_b8bd7fc4e1cc,True
+initiative,skill,,SOFT,11,True,USKL_e6bd972e518f,0.904,USKL_e6bd972e518f,True
+friendly personality,skill,,SOFT,6,False,,0.715,USKL_a3bc086dab86,False
+organisational and prioritisation skills,skill,,SOFT,1,False,,0.793,USKL_51e974287856,True
+memory management skills,skill,,SOFT,1,False,,0.816,USKL_b012ef0b667a,True
+listening and communication skills,skill,,SOFT,1,False,,0.746,USKL_22eafad5c469,False
+ability to sell,skill,,SOFT,5,False,,0.786,USKL_6ccd38159445,True
+talented,skill,,SOFT,11,False,,0.776,USKL_9176e5e0d84d,True
+respect for colleagues,skill,,SOFT,4,False,,0.832,USKL_ad08ea7e1c1d,True
+team spirit,skill,,SOFT,11,False,,0.916,USKL_ec315ac7d913,True
+empathy,skill,,SOFT,10,True,USKL_b3ac2ed637de,0.951,USKL_c1d3ec3d1052,True
+hardworking,skill,,SOFT,11,False,,0.716,USKL_8c265142608d,False
+sociable,skill,,SOFT,10,False,,0.661,USKL_6a6fe0139b3d,False
+positive and enthusiastic attitude,skill,,SOFT,1,False,,0.905,USKL_a3bc086dab86,True
+scheduling skills,skill,,SOFT,7,False,,0.763,USKL_80d45ff85d6d,True
+creative and critical thinking skillshighly,skill,,SOFT,1,False,,0.756,USKL_af235e7ac704,True
+analytic problem solving skills,skill,,SOFT,1,False,,0.718,USKL_0c9f9f301ff0,False
+energy,skill,,SOFT,7,False,,0.793,USKL_e39a159b0d16,True
+conceptualization,skill,,SOFT,8,False,,0.741,USKL_ec04fef56323,False
+results driven orientation,skill,,SOFT,1,False,,0.746,USKL_9c482c5584f4,False
+ability to negotiate,skill,,SOFT,9,False,,0.921,USKL_6ccd38159445,True
+initiative person,skill,,SOFT,2,False,,0.767,USKL_e6bd972e518f,True
+work in high pressure,skill,,SOFT,1,False,,0.692,USKL_210bac427a09,False
+object oriented programming skills,skill,,SOFT,4,False,,0.859,USKL_c074dc962a9a,True
+personality effective organisational skills,skill,,SOFT,1,False,,0.739,USKL_a162b32db074,False
+innovation skills,skill,,SOFT,5,False,,0.776,USKL_3742f42d3c00,True
+negotiator,skill,,SOFT,10,False,,0.789,USKL_51ed626a024b,True
+analytical thinking,skill,,SOFT,5,True,USKL_0c9f9f301ff0,0.921,USKL_785c5b6b9daf,True
+communication skills,skill,,SOFT,9,True,USKL_80e1eca8c5b4,0.857,USKL_b8bd7fc4e1cc,True
+work under pressure,skill,,SOFT,9,True,USKL_90ae91ef536e,0.777,USKL_bfc96d215aa1,True
+trouble shooting,skill,,SOFT,9,False,,0.881,USKL_0778bba2fb93,True
+critical thinking,skill,,SOFT,11,True,USKL_5010ed47bcaa,0.905,USKL_9c5159afeae1,True
+independent worker,skill,,SOFT,9,False,,0.842,USKL_98f8236e00bf,True
+self motivation,skill,,SOFT,11,False,,0.913,USKL_89b25331cecb,True
+committed,skill,,SOFT,10,False,,0.782,USKL_fbac66d091dc,True
+goal oriented,skill,,SOFT,10,False,,0.861,USKL_9c482c5584f4,True
+systematic and professional manner,skill,,SOFT,1,False,,0.768,USKL_7a529d5f982b,True
+team building,skill,,SOFT,7,True,USKL_f6c425c8c1f8,1.0,USKL_f6c425c8c1f8,True
+solvingquick learning,skill,,SOFT,5,False,,0.707,USKL_3fd742c83eba,False
+organizer,skill,,SOFT,10,False,,0.786,USKL_804f90fe8d6d,True
+responsible,skill,,SOFT,11,False,,0.913,USKL_6e33eaf3b603,True
+polite,skill,,SOFT,11,False,,0.688,USKL_004cb4a6cb00,False
+championchallenger,skill,,SOFT,3,False,,0.599,USKL_0778bba2fb93,False
+supervisory skills,skill,,SOFT,8,False,,0.794,USKL_7d8c462c468a,True
+professionalism,skill,,SOFT,11,True,USKL_7a529d5f982b,1.0,USKL_7a529d5f982b,True
+open minded,skill,,SOFT,11,False,,0.893,USKL_87b7652db51a,True
+ability to effectively prioritize,skill,,SOFT,2,False,,0.757,USKL_1498fc79024e,True
+productive,skill,,SOFT,8,False,,0.783,USKL_8c265142608d,True
+dedication and drive to provide quality,skill,,SOFT,1,False,,0.747,USKL_51ce2919b743,False
+outgoing personality,skill,,SOFT,9,False,,0.633,USKL_fcd47260e53f,False
+accurate,skill,,SOFT,11,False,,0.667,USKL_2c0c9519a350,False
+presentation skills,skill,,SOFT,7,True,USKL_108329abf03f,1.0,USKL_108329abf03f,True
+judgment,skill,,SOFT,11,False,,0.778,USKL_2295227eb3df,True
+staff management,skill,,SOFT,8,False,,0.911,USKL_c1c8edf3cffb,True
+thorough,skill,,SOFT,10,False,,0.629,USKL_f78c61d377ef,False
+customer service ethic,skill,,SOFT,8,False,,0.803,USKL_b5f9922de7fb,True
+prioritization skills,skill,,SOFT,8,False,,0.774,USKL_51e974287856,True
+energetic,skill,,SOFT,10,False,,0.716,USKL_e39a159b0d16,False
+well organized,skill,,SOFT,11,False,,0.708,USKL_0fe8ecb6701b,False
+hospitable,skill,,SOFT,11,False,,0.668,USKL_f335dbab3108,False
+systematic and structured manner,skill,,SOFT,1,False,,0.683,USKL_2628db69d9f0,False
+customer orientation,skill,,SOFT,4,True,USKL_37760134bab4,1.0,USKL_37760134bab4,True
+problemsolving,skill,,SOFT,10,False,,0.932,USKL_a9d4b47334ad,True
+team leader,skill,,SOFT,11,False,,0.87,USKL_521de1ce2934,True
+action oriented,skill,,SOFT,11,False,,0.744,USKL_07276e4208c6,False
+nice,skill,,SOFT,9,False,,0.709,USKL_a3bc086dab86,False
+personality excellent interpersonal skills,skill,,SOFT,1,False,,0.811,USKL_22eafad5c469,True
+active and outgoing personality,skill,,SOFT,1,False,,0.645,USKL_a3bc086dab86,False
+scheduling and planning skills,skill,,SOFT,2,False,,0.765,USKL_c4c84e903bce,True
+self driven,skill,,SOFT,5,False,,0.713,USKL_f8a305551bc5,False
+problemsolving skills,skill,,SOFT,8,False,,0.822,USKL_a9d4b47334ad,True
+oral communication skills,skill,,SOFT,6,False,,0.805,USKL_108329abf03f,True
+humor,skill,,SOFT,11,False,,0.645,USKL_fcd47260e53f,False
+proactive,skill,,SOFT,11,True,USKL_89b25331cecb,0.698,USKL_82daac757959,False
+initiative and result driven,skill,,SOFT,1,False,,0.732,USKL_4a552f12d17f,False
+ability to listen,skill,,SOFT,9,False,,0.748,USKL_d3466420e70d,False
+enthusiasm,skill,,SOFT,11,True,USKL_a3bc086dab86,0.759,USKL_a3bc086dab86,True
+discipline,skill,,SOFT,4,True,USKL_de0e5dc1a2c3,0.821,USKL_de0e5dc1a2c3,True
+meeting deadlines,skill,,SOFT,7,False,,0.966,USKL_19e528cd027d,True
+tolerant,skill,,SOFT,10,False,,0.745,USKL_004cb4a6cb00,False
+motivated,skill,,SOFT,11,False,,0.811,USKL_89b25331cecb,True
+for multitasking,skill,,SOFT,7,False,,0.812,USKL_6b5cecd0ff01,True
+consulting skills,skill,,SOFT,11,False,,0.752,USKL_8a5156ba9a35,True
+goaloriented,skill,,SOFT,9,False,,0.825,USKL_9c482c5584f4,True
+management and sales skill,skill,,SOFT,1,False,,0.732,USKL_fe7bd7abeef7,False
+self management and organisational skills,skill,,SOFT,5,False,,0.718,USKL_a162b32db074,False
+critical thinking skills,skill,,SOFT,7,False,,0.802,USKL_9c5159afeae1,True
+time management skills,skill,,SOFT,10,False,,0.882,USKL_5bd64b654cb3,True
+work in a high pressure,skill,,SOFT,6,False,,0.713,USKL_bfc96d215aa1,False
+personal expenses management,skill,,SOFT,1,False,,0.804,USKL_dc219ec2ca2c,True
+client relationships,skill,,SOFT,9,False,,0.805,USKL_28cd2975f8d9,True
+skills be able to communicate,skill,,SOFT,1,False,,0.81,USKL_b8bd7fc4e1cc,True
+planning and organizational skills,skill,,SOFT,1,False,,0.73,USKL_c4c84e903bce,False
+outgoing,skill,,SOFT,10,False,,0.622,USKL_51d43418a6c3,False
+conceptual thinking,skill,,SOFT,9,False,,0.831,USKL_af235e7ac704,True
+selflearner,skill,,SOFT,9,False,,0.77,USKL_dbcca01d8c6d,True
+maturity,skill,,SOFT,11,False,,0.718,USKL_b381e7f9d7da,False
+positive attitude,skill,,SOFT,7,True,USKL_a3bc086dab86,1.0,USKL_a3bc086dab86,True
+communication abilities,skill,,SOFT,8,False,,0.809,USKL_b8bd7fc4e1cc,True
+interpersonal skills,skill,,SOFT,9,True,USKL_22eafad5c469,1.0,USKL_22eafad5c469,True
+personal specification line management,skill,,SOFT,1,False,,0.66,USKL_def28bf8c5eb,False
+skills with ability to communicate,skill,,SOFT,1,False,,0.826,USKL_b8bd7fc4e1cc,True
+sound judgment,skill,,SOFT,8,False,,0.718,USKL_1cafc57e1317,False
+ability to plan,skill,,SOFT,9,False,,0.777,USKL_a1dd1e3b3e45,True
+professional personality,skill,,SOFT,6,False,,0.826,USKL_7a529d5f982b,True
+time management,skill,,SOFT,11,True,USKL_a6cd08391e8c,1.0,USKL_5bd64b654cb3,True
+negotiation and closing skills,skill,,SOFT,1,False,,0.753,USKL_6ccd38159445,True
+disciplinedprofessional attitude,skill,,SOFT,1,False,,0.723,USKL_a3bc086dab86,False
+timemanagement skills,skill,,SOFT,7,False,,0.857,USKL_5bd64b654cb3,True
+social and interpersonal skills,skill,,SOFT,1,False,,0.921,USKL_22eafad5c469,True
+learn quickly,skill,,SOFT,10,False,,0.815,USKL_43917307b5e4,True
+diplomacy,skill,,SOFT,2,True,USKL_886932e57a79,1.0,USKL_886932e57a79,True
+personal integrity,skill,,SOFT,7,False,,0.848,USKL_aa9568a4370c,True
+work in a small team,skill,,SOFT,2,False,,0.864,USKL_210bac427a09,True
+team interaction and interpersonal skills,skill,,SOFT,2,False,,0.857,USKL_22eafad5c469,True
+coordinate,skill,,SOFT,11,True,USKL_d59ea182797e,0.68,USKL_2c91b18a776d,False
+social skills,skill,,SOFT,7,False,,0.851,USKL_22eafad5c469,True
+communications skills,skill,,SOFT,10,True,USKL_80e1eca8c5b4,0.863,USKL_b8bd7fc4e1cc,True
+multitask oriented,skill,,SOFT,9,False,,0.811,USKL_3fd742c83eba,True
+quick learner,skill,,SOFT,11,False,,0.719,USKL_582975d456c0,False
+practical,skill,,SOFT,11,False,,0.722,USKL_95f8cc1a62b4,False
+research skills,skill,,SOFT,7,True,USKL_8a5156ba9a35,1.0,USKL_8a5156ba9a35,True
+originality,skill,,SOFT,9,False,,0.705,USKL_1298b9ec3d3f,False
+attention to detail,skill,,SOFT,11,True,USKL_5ace3ee9272d,0.986,USKL_5ace3ee9272d,True
+counseling,skill,,SOFT,9,False,,0.717,USKL_86d3c22de44f,False
+responsible person,skill,,SOFT,7,False,,0.816,USKL_6e33eaf3b603,True
+ability to navigate and manage,skill,,SOFT,1,False,,0.722,USKL_b139935857db,False
+leadership skills,skill,,SOFT,8,True,USKL_c8a5d0c1c5f2,0.848,USKL_c8a5d0c1c5f2,True
+management and communication skills,skill,,SOFT,1,False,,0.773,USKL_22eafad5c469,True
+judgment skills,skill,,SOFT,5,False,,0.733,USKL_2295227eb3df,False
+dynamic and driven person,skill,,SOFT,1,False,,0.661,USKL_c2bfd1ee6704,False
+calm,skill,,SOFT,10,False,,0.717,USKL_7da6137ad48a,False
+team interaction skills,skill,,SOFT,2,False,,0.827,USKL_22eafad5c469,True
+creative,skill,,SOFT,11,True,USKL_3e1db018f7cd,0.844,USKL_af235e7ac704,True
+able to persuade,skill,,SOFT,9,False,,0.807,USKL_4aece30cfbee,True
+verbal written communication skills,skill,,SOFT,1,False,,0.764,USKL_b8bd7fc4e1cc,True
+courteous manner,skill,,SOFT,8,False,,0.7,USKL_004cb4a6cb00,False
+teamwork skills,skill,,SOFT,8,False,,0.912,USKL_e8ca08c144ff,True
+ability to consultatively sell,skill,,SOFT,1,False,,0.755,USKL_6ccd38159445,True
+collaborationcooperation skills,skill,,SOFT,1,False,,0.782,USKL_a70d03d259bf,True
+conflict management,skill,,SOFT,11,True,USKL_47e2d4e58576,0.895,USKL_47e2d4e58576,True
+hard working person,skill,,SOFT,7,False,,0.718,USKL_210bac427a09,False
+object oriented design skills,skill,,SOFT,5,False,,0.817,USKL_1e12cf416a9c,True
+tactful manner,skill,,SOFT,6,False,,0.703,USKL_004cb4a6cb00,False
+diplomatic manner,skill,,SOFT,7,False,,0.817,USKL_886932e57a79,True
+ability to lead and coordinate,skill,,SOFT,1,False,,0.761,USKL_521de1ce2934,True
+ethical,skill,,SOFT,10,False,,0.865,USKL_d59fb6834792,True
+presentation,skill,,SOFT,11,True,USKL_108329abf03f,0.84,USKL_3098903f5ebc,True
+schedule,skill,,SOFT,11,True,USKL_8a8bf9137389,0.794,USKL_bf3905db6dea,True
+self confidence,skill,,SOFT,10,False,,0.876,USKL_4e30f1bff55e,True
+problem solving abilities,skill,,SOFT,10,False,,0.799,USKL_a9d4b47334ad,True
+people and time management,skill,,SOFT,1,False,,0.857,USKL_a6cd08391e8c,True
+open to change,skill,,SOFT,10,False,,0.942,USKL_2076dbf949b6,True
+quality minded,skill,,SOFT,9,False,,0.777,USKL_79b92aec00a5,True
+coordination skills,skill,,SOFT,8,False,,0.804,USKL_84c354039469,True
+people with these skills,skill,,SOFT,1,False,,0.696,USKL_108329abf03f,False
+skilled negotiator,skill,,SOFT,8,False,,0.748,USKL_6ccd38159445,False
+accuracy in your workalways,skill,,SOFT,1,False,,0.689,USKL_8c265142608d,False
+followthrough,skill,,SOFT,11,False,,0.777,USKL_4c9bf87c1fb1,True
+organizational,skill,,SOFT,10,False,,0.869,USKL_804f90fe8d6d,True
+relationship builder,skill,,SOFT,10,False,,0.777,USKL_fc5492e7111a,True
+problem solving,skill,,SOFT,11,True,USKL_a9d4b47334ad,0.977,USKL_a9d4b47334ad,True
+articulate,skill,,SOFT,11,False,,0.609,USKL_fb110f0920ec,False
+learning and thinking skills,skill,,SOFT,1,False,,0.767,USKL_f978c560f829,True
+organizing skills,skill,,SOFT,5,False,,0.769,USKL_a162b32db074,True
+achiever,skill,,SOFT,10,False,,0.634,USKL_92477fc09ff5,False
+manner,skill,,SOFT,9,False,,0.609,USKL_8a8bf9137389,False
+monitoring reporting key skills,skill,,SOFT,1,False,,0.723,USKL_becf31b85916,False
+attentive to details,skill,,SOFT,5,False,,0.926,USKL_5ace3ee9272d,True
+skills and ability to communicate,skill,,SOFT,1,False,,0.79,USKL_b8bd7fc4e1cc,True
+teamwork skills accuracy skills,skill,,SOFT,1,False,,0.81,USKL_e8ca08c144ff,True
+assertive,skill,,SOFT,11,False,,0.668,USKL_e91477e7fa38,False
+sales driven,skill,,SOFT,10,False,,0.724,USKL_fe7bd7abeef7,False
+team leader personality,skill,,SOFT,1,False,,0.696,USKL_29a52d1788f7,False
+diligent,skill,,SOFT,11,False,,0.734,USKL_004cb4a6cb00,False
+forward thinking,skill,,SOFT,10,False,,0.807,USKL_af235e7ac704,True
+ability to interpret,skill,,SOFT,9,False,,0.864,USKL_896f118a0b6d,True
+team work approach,skill,,SOFT,3,False,,0.823,USKL_210bac427a09,True
+decision making skills,skill,,SOFT,10,False,,0.84,USKL_a8fa624183dd,True
+systematic and controlled manner,skill,,SOFT,1,False,,0.677,USKL_2628db69d9f0,False
+mature and outgoing personality,skill,,SOFT,1,False,,0.626,USKL_5626007cc8de,False
+analysis skills,skill,,SOFT,9,False,,0.777,USKL_8a5156ba9a35,True
+personal time management,skill,,SOFT,2,False,,0.905,USKL_5bd64b654cb3,True
+wellorganized,skill,,SOFT,11,False,,0.69,USKL_804f90fe8d6d,False
+creative and innovative approach,skill,,SOFT,2,False,,0.814,USKL_4a552f12d17f,True
+commitment,skill,,SOFT,11,True,USKL_bf0002b30a6f,0.883,USKL_fbac66d091dc,True
+analytical thinking computer skills,skill,,SOFT,1,False,,0.791,USKL_785c5b6b9daf,True
+achieving your goals,skill,,SOFT,1,False,,0.718,USKL_95719ce77be8,False
+interpretation skills,skill,,SOFT,10,False,,0.785,USKL_896f118a0b6d,True
+political awareness,skill,,SOFT,10,True,USKL_886932e57a79,0.76,USKL_c399404a2860,True
+commitment to teamwork,skill,,SOFT,9,False,,0.868,USKL_e8ca08c144ff,True
+team worker,skill,,SOFT,11,False,,0.862,USKL_210bac427a09,True
+professional presentation,skill,,SOFT,4,False,,0.835,USKL_108329abf03f,True
+business travel team leader,skill,,SOFT,1,False,,0.69,USKL_521de1ce2934,False
+selflearning,skill,,SOFT,6,False,,0.833,USKL_615916894043,True
+communicator,skill,,SOFT,11,False,,0.749,USKL_80e1eca8c5b4,False
+deadline oriented,skill,,SOFT,2,False,,0.818,USKL_19e528cd027d,True
+marketing skills,skill,,SOFT,4,False,,0.781,USKL_108329abf03f,True
+sense of responsibility,skill,,SOFT,7,True,USKL_6e33eaf3b603,0.847,USKL_6e33eaf3b603,True
+sympathy,skill,,SOFT,11,False,,0.825,USKL_c1d3ec3d1052,True
+proactive approach,skill,,SOFT,8,False,,0.718,USKL_57a7a456305b,False
+analytical way of thinking,skill,,SOFT,1,False,,0.842,USKL_0c9f9f301ff0,True
+warm,skill,,SOFT,11,False,,0.649,USKL_b75c252816d7,False
+training and motivational skills,skill,,SOFT,1,False,,0.744,USKL_89b25331cecb,False
+cultural sensitivity,skill,,SOFT,5,False,,0.707,USKL_ef29cf2971ed,False
+honest,skill,,SOFT,10,False,,0.687,USKL_aa9568a4370c,False
+conflict management skills,skill,,SOFT,11,False,,0.809,USKL_4ed84df41d0a,True
+team exhibits personal commitment,skill,,SOFT,1,False,,0.767,USKL_fbac66d091dc,True
+manages time effectively,skill,,SOFT,8,False,,0.851,USKL_8a8bf9137389,True
+social media skills,skill,,SOFT,1,False,,0.778,USKL_53fe014cc059,True
+innovation and skills,skill,,SOFT,2,False,,0.775,USKL_1298b9ec3d3f,True
+mature personality,skill,,SOFT,8,False,,0.625,USKL_4e30f1bff55e,False
+encouraging innovation,skill,,SOFT,9,False,,0.893,USKL_085019453aad,True
+ability to conceptualize,skill,,SOFT,6,False,,0.725,USKL_b139935857db,False
+accuracy in all work,skill,,SOFT,3,False,,0.711,USKL_5ace3ee9272d,False
+managing and executing tasks,skill,,SOFT,2,False,,0.786,USKL_80d45ff85d6d,True
+ability to anticipate,skill,,SOFT,11,False,,0.779,USKL_b0a99fe009be,True
+analytic skills,skill,,SOFT,6,False,,0.778,USKL_0c9f9f301ff0,True
+mentoring skills,skill,,SOFT,10,False,,0.815,USKL_609ac4c59d19,True
+diplomacy skills,skill,,SOFT,8,False,,0.864,USKL_886932e57a79,True
+facilitation skills,skill,,SOFT,5,False,,0.852,USKL_e0e1a921ab23,True
+professional,skill,,SOFT,10,False,,0.861,USKL_7a529d5f982b,True
+selfdevelopmentselflearning,skill,,SOFT,2,False,,0.815,USKL_dbcca01d8c6d,True
+client orientation,skill,,SOFT,6,False,,0.934,USKL_37760134bab4,True
+team s customer interaction,skill,,SOFT,1,False,,0.736,USKL_28cd2975f8d9,False
+team working skills,skill,,SOFT,7,False,,0.863,USKL_e8ca08c144ff,True
+results oriented,skill,,SOFT,8,False,,0.724,USKL_736284e0bcb9,False
+punctuality,skill,,SOFT,11,False,,0.71,USKL_5ace3ee9272d,False
+social networking skills,skill,,SOFT,1,False,,0.765,USKL_22eafad5c469,True
+team commitment,skill,,SOFT,1,False,,0.808,USKL_fbac66d091dc,True
+initiative and thinking,skill,,SOFT,1,False,,0.812,USKL_58f0ac51a809,True
+skills experience in training,skill,,SOFT,2,False,,0.731,USKL_1ad7ff38b38b,False
+self starter with initiative,skill,,SOFT,3,False,,0.739,USKL_58f0ac51a809,False
+self directed,skill,,SOFT,9,False,,0.725,USKL_f8a305551bc5,False
+teamwork,skill,,SOFT,10,True,USKL_e8ca08c144ff,1.0,USKL_e8ca08c144ff,True
+ability to read and interpret,skill,,SOFT,2,False,,0.799,USKL_896f118a0b6d,True
+skills and in producing training,skill,,SOFT,1,False,,0.751,USKL_f978c560f829,True
+innovation,skill,,SOFT,10,True,USKL_3e1db018f7cd,0.791,USKL_3742f42d3c00,True
+tact,skill,,SOFT,4,True,USKL_886932e57a79,0.72,USKL_2558d2629552,False
+confident and outgoing personality,skill,,SOFT,1,False,,0.714,USKL_4e30f1bff55e,False
+analytical mind,skill,,SOFT,10,False,,0.821,USKL_0c9f9f301ff0,True
+creative approach,skill,,SOFT,7,False,,0.823,USKL_af235e7ac704,True
+professional attitude,skill,,SOFT,9,True,USKL_7a529d5f982b,0.874,USKL_7a529d5f982b,True
+confident outgoing personality,skill,,SOFT,1,False,,0.734,USKL_4e30f1bff55e,False
+ability to coordinate,skill,,SOFT,7,False,,0.771,USKL_b139935857db,True
+problem solver,skill,,SOFT,10,False,,0.883,USKL_a9d4b47334ad,True
+manages own time effectively,skill,,SOFT,3,False,,0.811,USKL_8a8bf9137389,True
+professional telephone manner,skill,,SOFT,3,False,,0.714,USKL_7a529d5f982b,False
+sociable person personality,skill,,SOFT,1,False,,0.604,USKL_22eafad5c469,False
+self motivation and initiative,skill,,SOFT,1,False,,0.825,USKL_89b25331cecb,True
+methodical,skill,,SOFT,11,False,,0.692,USKL_89f38c04d199,False
+team building and interpersonal skills,skill,,SOFT,1,False,,0.849,USKL_22eafad5c469,True
+coordinating skills,skill,,SOFT,7,False,,0.786,USKL_84c354039469,True
+open to a change,skill,,SOFT,1,False,,0.932,USKL_2076dbf949b6,True
+team to work,skill,,SOFT,5,False,,0.92,USKL_210bac427a09,True
+self motivated,skill,,SOFT,10,False,,0.883,USKL_89b25331cecb,True
+diligence,skill,,SOFT,10,True,USKL_bf0002b30a6f,0.722,USKL_5ace3ee9272d,False
+disciplined,skill,,SOFT,9,False,,0.797,USKL_de0e5dc1a2c3,True
+challenger,skill,,SOFT,6,False,,0.61,USKL_cc793f435755,False
+selfconfident,skill,,SOFT,11,False,,0.825,USKL_4e30f1bff55e,True
+innovative and forward thinking,skill,,SOFT,4,False,,0.824,USKL_48e5ad44137d,True
+competenciesleadership traits ability,skill,,SOFT,1,False,,0.726,USKL_b139935857db,False
+intercultural skills,skill,,SOFT,7,False,,0.89,USKL_22eafad5c469,True
+training skills coaching skills,skill,,SOFT,1,False,,0.793,USKL_10b25929b5fc,True
+organized and positive person,skill,,SOFT,1,False,,0.775,USKL_a3bc086dab86,True
+educational skills,skill,,SOFT,2,False,,0.79,USKL_f978c560f829,True
+communicate easily,skill,,SOFT,9,False,,0.753,USKL_0c6e6a230427,True
+client facing skills,skill,,SOFT,7,False,,0.742,USKL_108329abf03f,False
+writing skills,skill,,SOFT,11,False,,0.793,USKL_a1f23a1d30bb,True
+diplomatic,skill,,SOFT,11,False,,0.912,USKL_886932e57a79,True
+monitoring and reporting skills,skill,,SOFT,1,False,,0.77,USKL_500029625b8a,True
+proposal writing,skill,,SOFT,9,False,,0.855,USKL_b390c00459d2,True
+organising skills,skill,,SOFT,9,False,,0.777,USKL_a162b32db074,True
+skilled sales negotiator,skill,,SOFT,1,False,,0.669,USKL_6ccd38159445,False
+organizational skills,skill,,SOFT,6,True,USKL_804f90fe8d6d,0.781,USKL_a162b32db074,True
+teamwork approach,skill,,SOFT,5,False,,0.873,USKL_e8ca08c144ff,True
+systematic and methodical manner,skill,,SOFT,1,False,,0.732,USKL_2628db69d9f0,False
+patient,skill,,SOFT,8,True,USKL_004cb4a6cb00,0.663,USKL_481d5e598255,False
+ability to continually learn,skill,,SOFT,1,False,,0.79,USKL_65bcdb3012fb,True
+customer service orientation,skill,,SOFT,7,False,,0.937,USKL_37760134bab4,True
+creativity and analytical thinking,skill,,SOFT,1,False,,0.807,USKL_1298b9ec3d3f,True
+coordinating any testing skills,skill,,SOFT,2,False,,0.749,USKL_1960dc67ba8a,False
+to design and write,skill,,SOFT,1,False,,0.763,USKL_b0d805003b54,True
+human relations,skill,,SOFT,6,False,,0.727,USKL_6be990b5ebe3,False
+honesty,skill,,SOFT,10,True,USKL_aa9568a4370c,0.754,USKL_aa9568a4370c,True
+innovative,skill,,SOFT,11,False,,0.834,USKL_48e5ad44137d,True
+negotiation and communication skills,skill,,SOFT,1,False,,0.784,USKL_38f30fd16b6b,True
+verbal skills,skill,,SOFT,2,False,,0.814,USKL_108329abf03f,True
+analytical background and mind,skill,,SOFT,1,False,,0.74,USKL_0c9f9f301ff0,False
+team demonstrate a commitment,skill,,SOFT,1,False,,0.84,USKL_fbac66d091dc,True
+integrity,skill,,SOFT,11,True,USKL_aa9568a4370c,1.0,USKL_aa9568a4370c,True
+strategic vision,skill,,SOFT,8,False,,0.755,USKL_a8d87cd3768b,True
+client billing skills,skill,,SOFT,1,False,,0.715,USKL_bb5577b0173c,False
+analytical skills,skill,,SOFT,10,True,USKL_785c5b6b9daf,0.777,USKL_0c9f9f301ff0,True
+for prioritizing and multitasking,skill,,SOFT,2,False,,0.772,USKL_51e974287856,True
+client key skills,skill,,SOFT,1,False,,0.704,USKL_22a9a3cf0a4e,False
+respect for diversity,skill,,SOFT,2,False,,0.746,USKL_c690073f5231,False
+mentoring and coaching skills,skill,,SOFT,1,False,,0.75,USKL_609ac4c59d19,True
+conceptual skills,skill,,SOFT,7,False,,0.744,USKL_af235e7ac704,False
+self confident,skill,,SOFT,10,False,,0.86,USKL_4e30f1bff55e,True
+team to ensure commitment,skill,,SOFT,1,False,,0.79,USKL_fbac66d091dc,True
+positive,skill,,SOFT,11,True,USKL_a3bc086dab86,0.85,USKL_a3bc086dab86,True
+meeting pre agreed deadlines,skill,,SOFT,1,False,,0.826,USKL_19e528cd027d,True
+communication skill,skill,,SOFT,11,True,USKL_80e1eca8c5b4,0.848,USKL_b8bd7fc4e1cc,True
+managerial skills ability,skill,,SOFT,1,False,,0.694,USKL_b139935857db,False
+logical,skill,,SOFT,9,False,,0.86,USKL_3a16db344fd3,True
+communicative,skill,,SOFT,11,False,,0.775,USKL_80e1eca8c5b4,True
+commitment to our community accountability,skill,,SOFT,1,False,,0.683,USKL_6e33eaf3b603,False
+dynamic and proactive person,skill,,SOFT,1,False,,0.666,USKL_58f0ac51a809,False
+client oriented,skill,,SOFT,4,False,,0.875,USKL_37760134bab4,True
+work ethic,skill,,SOFT,11,True,USKL_bf0002b30a6f,1.0,USKL_bf0002b30a6f,True
+peopleempathy,skill,,SOFT,1,False,,0.713,USKL_777d83f81672,False
+sound business judgment,skill,,SOFT,1,False,,0.685,USKL_4116e916a84e,False
+analysis and problemsolving skills,skill,,SOFT,1,False,,0.775,USKL_7b39fc9d97d9,True
+smart,skill,,SOFT,11,False,,0.792,USKL_14be97350e0e,True
+verbaltelephone communication skills,skill,,SOFT,1,False,,0.781,USKL_b8bd7fc4e1cc,True
+multitasking skills,skill,,SOFT,7,False,,0.826,USKL_3fd742c83eba,True
+sociable personality,skill,,SOFT,4,False,,0.65,USKL_22eafad5c469,False
+achieving challenging goals,skill,,SOFT,1,False,,0.762,USKL_40e936614d75,True
+abstract thinking,skill,,SOFT,1,False,,0.922,USKL_391f87869e94,True
+willingness to listen,skill,,SOFT,6,False,,0.817,USKL_65bcdb3012fb,True
+self motivatedself,skill,,SOFT,1,False,,0.882,USKL_89b25331cecb,True
+team oriented,skill,,SOFT,9,False,,0.826,USKL_210bac427a09,True
+team work and communication skills,skill,,SOFT,2,False,,0.802,USKL_e8ca08c144ff,True
+building,skill,,SOFT,11,False,,0.708,USKL_a34afd0cfde9,False
+ability to manage,skill,,SOFT,8,False,,0.776,USKL_b139935857db,True
+negotiation and diplomacy skills,skill,,SOFT,1,False,,0.773,USKL_886932e57a79,True
+able to influence and persuade,skill,,SOFT,2,False,,0.773,USKL_4aece30cfbee,True
+opportunityaffirmative,skill,,SOFT,1,False,,0.683,USKL_a3bc086dab86,False
+influencing and negotiating skills,skill,,SOFT,3,False,,0.815,USKL_38f30fd16b6b,True
+make decisions,skill,,SOFT,7,True,USKL_37c705e67800,1.0,USKL_37c705e67800,True
+confident and dynamic personality,skill,,SOFT,1,False,,0.707,USKL_4e30f1bff55e,False
+oral skills,skill,,SOFT,4,False,,0.765,USKL_108329abf03f,True
+facilitating meeting skills,skill,,SOFT,1,False,,0.779,USKL_108329abf03f,True
+customer orientation skills,skill,,SOFT,1,False,,0.845,USKL_37760134bab4,True
+people management skills,skill,,SOFT,14,False,,0.777,USKL_29a52d1788f7,True
+marketing and dissemination skills,skill,,SOFT,1,False,,0.726,USKL_108329abf03f,False
+problem solving and analytical abilities,skill,,SOFT,1,False,,0.744,USKL_7b39fc9d97d9,False
+ability and willingness to travel,skill,,SOFT,1,False,,0.715,USKL_65bcdb3012fb,False
+team who genuinely work,skill,,SOFT,1,False,,0.772,USKL_210bac427a09,True
+imagination,skill,,SOFT,10,False,,0.739,USKL_66a25e46b6ae,False
+diplomatic and positive manner,skill,,SOFT,1,False,,0.762,USKL_a3bc086dab86,True
+telephone communication skills,skill,,SOFT,1,False,,0.827,USKL_b8bd7fc4e1cc,True
+influencing skills,skill,,SOFT,7,False,,0.765,USKL_38f1d99ab11d,True
+desire to succeed and learn,skill,,SOFT,1,False,,0.833,USKL_65bcdb3012fb,True
+work well in a team,skill,,SOFT,2,False,,0.903,USKL_210bac427a09,True
+advocacy skills,skill,,SOFT,9,False,,0.781,USKL_108329abf03f,True
+proposal writing skills,skill,,SOFT,8,False,,0.788,USKL_b390c00459d2,True
+loyalty,skill,,SOFT,11,False,,0.83,USKL_fd9eb4aed4f9,True
+friendly professional personality,skill,,SOFT,1,False,,0.776,USKL_7a529d5f982b,True
+managerial and motivational skills,skill,,SOFT,1,False,,0.71,USKL_d57212dda5fe,False
+facilitation and negotiation skills,skill,,SOFT,1,False,,0.766,USKL_38f30fd16b6b,True
+self disciplined safety awareness,skill,,SOFT,1,False,,0.751,USKL_de0e5dc1a2c3,True
+analytical thinking skills,skill,,SOFT,7,False,,0.817,USKL_0c9f9f301ff0,True
+leader,skill,,SOFT,10,False,,0.847,USKL_c8a5d0c1c5f2,True
+achieving company goals,skill,,SOFT,1,False,,0.758,USKL_bbf50a567532,True
+staff management skills,skill,,SOFT,9,False,,0.808,USKL_c1c8edf3cffb,True
+reasoning skills,skill,,SOFT,9,False,,0.809,USKL_3a16db344fd3,True
+ability to buy and sell,skill,,SOFT,2,False,,0.768,USKL_6ccd38159445,True
+active,skill,,SOFT,6,False,,0.761,USKL_6f0506e867b1,True
+ability to report,skill,,SOFT,6,False,,0.759,USKL_0d330b774922,True
+systematic manner,skill,,SOFT,2,False,,0.642,USKL_5883bb62f9de,False
+hardworker,skill,,SOFT,11,False,,0.685,USKL_d8b87184376f,False
+sales and kpi driven,skill,,SOFT,1,False,,0.582,USKL_c6b6bc20d9e9,False
+initiative driven,skill,,SOFT,2,False,,0.813,USKL_58f0ac51a809,True
+confident,skill,,SOFT,11,False,,0.843,USKL_4e30f1bff55e,True
+ability to obtain and analyze,skill,,SOFT,1,False,,0.755,USKL_896f118a0b6d,True
+absenceable to communicate,skill,,SOFT,1,False,,0.657,USKL_ea1fe7c78e2b,False
+managerial skills,skill,,SOFT,8,False,,0.761,USKL_d57212dda5fe,True
+organizational and analytical skills,skill,,SOFT,1,False,,0.707,USKL_a162b32db074,False
+negotiation and influencing skills,skill,,SOFT,2,False,,0.806,USKL_38f30fd16b6b,True
+able to prioritize,skill,,SOFT,8,False,,0.784,USKL_75e047b4190a,True
+managing and assigning tasks,skill,,SOFT,1,False,,0.801,USKL_80d45ff85d6d,True
+people oriented,skill,,SOFT,7,False,,0.729,USKL_07276e4208c6,False
+people with customer oriented,skill,,SOFT,1,False,,0.836,USKL_37760134bab4,True
+management skill,skill,,SOFT,7,False,,0.77,USKL_29a52d1788f7,True
+be creative,skill,,SOFT,5,False,,0.894,USKL_66a25e46b6ae,True
+mature,skill,,SOFT,10,False,,0.632,USKL_f8a305551bc5,False
+flexibilityteamwork,skill,,SOFT,1,False,,0.832,USKL_1ecef094afc0,True
+ability to motivate,skill,,SOFT,9,False,,0.791,USKL_9ed57b401017,True
+vigorous,skill,,SOFT,10,False,,0.642,USKL_e91477e7fa38,False
+ability to analyze,skill,,SOFT,9,False,,0.786,USKL_896f118a0b6d,True
+team work skills,skill,,SOFT,5,False,,0.872,USKL_e8ca08c144ff,True
+correct valuation and reporting,skill,,SOFT,1,False,,0.675,USKL_c89a66839f3c,False
+ability to interact,skill,,SOFT,3,False,,0.776,USKL_b139935857db,True
+creative imagination,skill,,SOFT,1,False,,0.847,USKL_af235e7ac704,True
+initiative and creative thinking,skill,,SOFT,2,False,,0.832,USKL_1298b9ec3d3f,True
+creative thinking and collaborative skills,skill,,SOFT,2,False,,0.834,USKL_af235e7ac704,True
+leadership and delegation skills,skill,,SOFT,1,False,,0.731,USKL_108329abf03f,False
+discretion,skill,,SOFT,11,False,,0.673,USKL_a8fa624183dd,False
+international outlook,skill,,SOFT,11,False,,0.629,USKL_a8d87cd3768b,False
+quick to learn,skill,,SOFT,11,True,USKL_34e655d4e2d2,0.784,USKL_43917307b5e4,True
+customer relationship development skills,skill,,SOFT,5,False,,0.739,USKL_22eafad5c469,False
+team work custom interaction skills,skill,,SOFT,2,False,,0.783,USKL_22eafad5c469,True
+hard working,skill,,SOFT,11,False,,0.75,USKL_210bac427a09,True
+character,skill,,SOFT,11,False,,0.649,USKL_612446915e5f,False
+object oriented c development skills,skill,,SOFT,1,False,,0.781,USKL_c074dc962a9a,True
+analytic and numeric skills,skill,,SOFT,1,False,,0.725,USKL_e58645864c73,False
+personality good communication skills,skill,,SOFT,1,False,,0.751,USKL_22eafad5c469,True
+curiousan,skill,,SOFT,1,False,,0.674,USKL_b60e29b3767d,False
+team management skills,skill,,SOFT,8,False,,0.88,USKL_29a52d1788f7,True
+management skills,skill,,SOFT,9,False,,0.801,USKL_d57212dda5fe,True
+ability to prioritize,skill,,SOFT,7,False,,0.76,USKL_1498fc79024e,True
+staff management and leadership skills,skill,,SOFT,2,False,,0.767,USKL_29a52d1788f7,True
+tactful and discreet manner,skill,,SOFT,1,False,,0.678,USKL_dd127893881b,False
+conceptual organisational skills,skill,,SOFT,1,False,,0.717,USKL_a162b32db074,False
+work calmly in a high pressure,skill,,SOFT,1,False,,0.705,USKL_8b57e830d815,False
+work irregular hours,skill,,SOFT,7,False,,0.721,USKL_2e6f4a708e5f,False
+eager to learn,skill,,SOFT,11,True,USKL_582975d456c0,0.861,USKL_65bcdb3012fb,True
+run the maintenance department,skill,,SOFT,1,False,,0.761,USKL_6d1fc5fd9c9d,True
+reporting strong coordination skills,skill,,SOFT,1,False,,0.726,USKL_84c354039469,False
+people skills,skill,,SOFT,6,True,USKL_22eafad5c469,0.837,USKL_22eafad5c469,True
+problem solving orientation,skill,,SOFT,2,False,,0.761,USKL_9c482c5584f4,True
+solution orientedyou,skill,,SOFT,1,False,,0.631,USKL_8771086febcf,False
+organized and meticulous person,skill,,SOFT,1,False,,0.661,USKL_5ace3ee9272d,False
+initiative target driven,skill,,SOFT,2,False,,0.668,USKL_58f0ac51a809,False
+creative thinking,skill,,SOFT,9,True,USKL_3e1db018f7cd,0.985,USKL_af235e7ac704,True
+team members and work,skill,,SOFT,1,False,,0.857,USKL_210bac427a09,True
+dedication to writing quality,skill,,SOFT,1,False,,0.688,USKL_eff4d7a373f4,False
+analytical and written skills,skill,,SOFT,1,False,,0.716,USKL_e58645864c73,False
+able to multitask and prioritize,skill,,SOFT,1,False,,0.749,USKL_51e974287856,False
+work in a great team,skill,,SOFT,1,False,,0.884,USKL_210bac427a09,True
+leadership with the ability,skill,,SOFT,1,False,,0.819,USKL_c8a5d0c1c5f2,True
+courteous telephone manner,skill,,SOFT,1,False,,0.731,USKL_af428de72d6c,False
+patience,skill,,SOFT,11,True,USKL_004cb4a6cb00,1.0,USKL_004cb4a6cb00,True
+personality and people skills,skill,,SOFT,1,False,,0.771,USKL_22eafad5c469,True
+ability to manageorganise,skill,,SOFT,1,False,,0.729,USKL_f8a305551bc5,False
+team of building,skill,,SOFT,1,False,,0.845,USKL_f6c425c8c1f8,True
+service mentality,skill,,SOFT,5,False,,0.701,USKL_593c06a96996,False
+research and analysis skills,skill,,SOFT,3,False,,0.89,USKL_8a5156ba9a35,True
+courtesy,skill,,SOFT,11,True,USKL_7a529d5f982b,0.648,USKL_59a2188c7f69,False
+easy as going,skill,,SOFT,1,False,,0.621,USKL_a891acbb399e,False
+draftspersonnegotiator,skill,,SOFT,1,False,,0.687,USKL_c65574691a59,False
+team management,skill,,SOFT,8,True,USKL_29a52d1788f7,0.992,USKL_29a52d1788f7,True
+self learning,skill,,SOFT,7,False,,0.843,USKL_dbcca01d8c6d,True
+attention to details,skill,,SOFT,9,True,USKL_5ace3ee9272d,0.975,USKL_5ace3ee9272d,True
+team and a commitment,skill,,SOFT,1,False,,0.818,USKL_c2bfd1ee6704,True
+verbal and communications skills,skill,,SOFT,1,False,,0.791,USKL_22eafad5c469,True
+managing several tasks,skill,,SOFT,3,False,,0.865,USKL_6b5cecd0ff01,True
+decision making skills skills,skill,,SOFT,1,False,,0.783,USKL_a8fa624183dd,True
+take the initiative,skill,,SOFT,5,True,USKL_f6a4fdb26725,0.841,USKL_2dcd5118fef6,True
+work to deadlines in a pressure,skill,,SOFT,2,False,,0.782,USKL_19e528cd027d,True
+professional manner,skill,,SOFT,7,False,,0.86,USKL_7a529d5f982b,True
+ability to up sell,skill,,SOFT,2,False,,0.723,USKL_6ccd38159445,False
+make quick accurate decisions,skill,,SOFT,1,False,,0.829,USKL_37c705e67800,True
+buildingassertiveness,skill,,SOFT,1,False,,0.685,USKL_f6c425c8c1f8,False
+desire to learn,skill,,SOFT,9,False,,0.891,USKL_65bcdb3012fb,True
+flexible with regards to hours,skill,,SOFT,1,False,,0.738,USKL_1ecef094afc0,False
+prioritization and organization skills,skill,,SOFT,1,False,,0.771,USKL_51e974287856,True
+responsible and resultsdriven personality,skill,,SOFT,2,False,,0.637,USKL_6e33eaf3b603,False
+coaching skills,skill,,SOFT,7,False,,0.816,USKL_10b25929b5fc,True
+business analysis team leader,skill,,SOFT,1,False,,0.702,USKL_3935d8d5c92a,False
+creative in your approach,skill,,SOFT,1,False,,0.81,USKL_ca3e210d3db0,True
+quick learning skills,skill,,SOFT,1,False,,0.739,USKL_34e655d4e2d2,False
+public relations skills,skill,,SOFT,1,False,,0.813,USKL_108329abf03f,True
+household tasks the skills,skill,,SOFT,1,False,,0.673,USKL_22eafad5c469,False
+development excellent communication skills,skill,,SOFT,1,False,,0.774,USKL_b8bd7fc4e1cc,True
+commitment to accountability,skill,,SOFT,1,False,,0.774,USKL_fbac66d091dc,True
+customer focus self development and interpersonal skills,skill,,SOFT,1,False,,0.712,USKL_22eafad5c469,False
+enthusiastic and keen to learn,skill,,SOFT,2,False,,0.83,USKL_65bcdb3012fb,True
+sensitivity,skill,,SOFT,7,False,,0.703,USKL_c1d3ec3d1052,False
+administrative skills,skill,,SOFT,6,False,,0.757,USKL_22eafad5c469,True
+people management,skill,,SOFT,10,False,,0.854,USKL_29a52d1788f7,True
+dedication,skill,,SOFT,11,True,USKL_bf0002b30a6f,0.781,USKL_fbac66d091dc,True
+leadership skills ability,skill,,SOFT,2,False,,0.763,USKL_c8a5d0c1c5f2,True
+leadership ability,skill,,SOFT,6,False,,0.849,USKL_c8a5d0c1c5f2,True
+client service oriented,skill,,SOFT,2,False,,0.84,USKL_37760134bab4,True
+personal management,skill,,SOFT,5,False,,0.815,USKL_f8a305551bc5,True
+self discipline initiative,skill,,SOFT,2,False,,0.836,USKL_de0e5dc1a2c3,True
+achievers,skill,,SOFT,1,False,,0.638,USKL_92477fc09ff5,False
+ability to persuade,skill,,SOFT,7,False,,0.782,USKL_4aece30cfbee,True
+diplomacy and interpersonal skills,skill,,SOFT,1,False,,0.83,USKL_22eafad5c469,True
+managing the tasks,skill,,SOFT,1,False,,0.84,USKL_80d45ff85d6d,True
+team with a commitment,skill,,SOFT,2,False,,0.812,USKL_fbac66d091dc,True
+managerial and leadership skills,skill,,SOFT,2,False,,0.713,USKL_d57212dda5fe,False
+tolerance,skill,,SOFT,8,False,,0.749,USKL_706743c1d724,False
+learning disability skills,skill,,SOFT,1,False,,0.756,USKL_f978c560f829,True
+skills in the training,skill,,SOFT,3,False,,0.799,USKL_f978c560f829,True
+detailed oriented,skill,,SOFT,8,False,,0.755,USKL_5ace3ee9272d,True
+progressive and forward thinking,skill,,SOFT,7,False,,0.705,USKL_48e5ad44137d,False
+positive cando attitude,skill,,SOFT,2,False,,0.862,USKL_a3bc086dab86,True
+team and work,skill,,SOFT,1,False,,0.899,USKL_210bac427a09,True
+progressive forward thinking,skill,,SOFT,1,False,,0.724,USKL_af235e7ac704,False
+communicating and writing skills,skill,,SOFT,2,False,,0.766,USKL_b8bd7fc4e1cc,True
+team members work,skill,,SOFT,1,False,,0.846,USKL_210bac427a09,True
+innovativeness,skill,,SOFT,2,False,,0.813,USKL_48e5ad44137d,True
+listening and questioning skills,skill,,SOFT,1,False,,0.763,USKL_8a5156ba9a35,True
+organization skills,skill,,SOFT,7,False,,0.779,USKL_a162b32db074,True
+analysis services skills,skill,,SOFT,1,False,,0.694,USKL_8a5156ba9a35,False
+computer skills,skill,,SOFT,10,False,,0.818,USKL_12d312d78f39,True
+client handling skills,skill,,SOFT,1,False,,0.725,USKL_22eafad5c469,False
+client service orientation,skill,,SOFT,2,False,,0.881,USKL_37760134bab4,True
+hard working sales person,skill,,SOFT,2,False,,0.655,USKL_fe7bd7abeef7,False
+educational and social skills,skill,,SOFT,1,False,,0.742,USKL_22eafad5c469,False
+willingness to learn,skill,,SOFT,10,True,USKL_582975d456c0,0.97,USKL_65bcdb3012fb,True
+strategic planning,skill,,SOFT,8,True,USKL_a1eb6b9e3b45,0.887,USKL_a1eb6b9e3b45,True
+rigorous,skill,,SOFT,10,False,,0.723,USKL_2c0c9519a350,False
+facilitating skills,skill,,SOFT,3,False,,0.856,USKL_e0e1a921ab23,True
+facilitation and coaching skills,skill,,SOFT,1,False,,0.747,USKL_e0e1a921ab23,False
+innovation background and skills,skill,,SOFT,1,False,,0.694,USKL_3742f42d3c00,False
+teamwork and leadership skills,skill,,SOFT,1,False,,0.836,USKL_e8ca08c144ff,True
+self motivated and organized,skill,,SOFT,3,False,,0.762,USKL_89b25331cecb,True
+analytic statistic focused skills,skill,,SOFT,1,False,,0.692,USKL_30692c3cf214,False
+telephone skills,skill,,SOFT,4,False,,0.788,USKL_b8bd7fc4e1cc,True
+take the lead initiative,skill,,SOFT,1,False,,0.775,USKL_2dcd5118fef6,True
+level of motivation,skill,,SOFT,2,False,,0.752,USKL_89b25331cecb,True
+creative thinking and conceptual skills,skill,,SOFT,1,False,,0.822,USKL_af235e7ac704,True
+self starter,skill,,SOFT,11,False,,0.694,USKL_f8a305551bc5,False
+innovationthe,skill,,SOFT,1,False,,0.731,USKL_3742f42d3c00,False
+facilitation and presentation skills,skill,,SOFT,2,False,,0.853,USKL_108329abf03f,True
+run and develop the department,skill,,SOFT,1,False,,0.71,USKL_c01ed5d05d31,False
+managing tasks,skill,,SOFT,2,False,,0.852,USKL_80d45ff85d6d,True
+proactive in approach,skill,,SOFT,1,False,,0.737,USKL_82daac757959,False
+supervisory and training skills,skill,,SOFT,1,False,,0.753,USKL_7d8c462c468a,True
+be innovative and creative,skill,,SOFT,3,False,,0.836,USKL_48e5ad44137d,True
+monitoring and analytical skills,skill,,SOFT,1,False,,0.74,USKL_e58645864c73,False
+communicable,skill,,SOFT,6,False,,0.691,USKL_a63b5a9cd311,False
+organizational capabilities,skill,,SOFT,2,False,,0.801,USKL_eceb84ff7a68,True
+facilitation and influencing skills,skill,,SOFT,1,False,,0.79,USKL_e0e1a921ab23,True
+commitment to work,skill,,SOFT,3,False,,0.824,USKL_fbac66d091dc,True
+team with the management,skill,,SOFT,1,False,,0.859,USKL_f3e9f453b9eb,True
+accuracy in your work,skill,,SOFT,4,False,,0.715,USKL_2c0c9519a350,False
+skills in research training,skill,,SOFT,1,False,,0.847,USKL_8a5156ba9a35,True
+problemsolving and cando attitude,skill,,SOFT,1,False,,0.65,USKL_a9d4b47334ad,False
+communication and organisational skills,skill,,SOFT,1,False,,0.719,USKL_22eafad5c469,False
+interpersonal communication skills,skill,,SOFT,1,False,,0.946,USKL_22eafad5c469,True
+organisational and administrative skills,skill,,SOFT,1,False,,0.72,USKL_a162b32db074,False
+organizational capabilitiesability,skill,,SOFT,2,False,,0.776,USKL_eceb84ff7a68,True
+team player,skill,,SOFT,11,True,USKL_e8ca08c144ff,0.799,USKL_e8ca08c144ff,True
+run the department,skill,,SOFT,2,False,,0.714,USKL_c1c8edf3cffb,False
+result orientation,skill,,SOFT,3,True,USKL_9c482c5584f4,0.766,USKL_9c482c5584f4,True
+confident strong personality,skill,,SOFT,1,False,,0.756,USKL_4e30f1bff55e,True
+managerial ability,skill,,SOFT,4,False,,0.723,USKL_b139935857db,False
+affirmative,skill,,SOFT,5,False,,0.716,USKL_a3bc086dab86,False
+organization and communication skills,skill,,SOFT,2,False,,0.749,USKL_22eafad5c469,False
+professional with strong presentation,skill,,SOFT,1,False,,0.765,USKL_108329abf03f,True
+managerial level with ability,skill,,SOFT,2,False,,0.683,USKL_c5ac09b9aa95,False
+reporting skills,skill,,SOFT,8,False,,0.825,USKL_becf31b85916,True
+level of personal motivation,skill,,SOFT,1,False,,0.764,USKL_89b25331cecb,True
+creative and strategic thinking,skill,,SOFT,1,False,,0.873,USKL_af235e7ac704,True
+productiveefficient,skill,,SOFT,1,False,,0.745,USKL_8c265142608d,False
+team player and work,skill,,SOFT,1,False,,0.815,USKL_210bac427a09,True
+marketing strong communication skills,skill,,SOFT,1,False,,0.762,USKL_b8bd7fc4e1cc,True
+makes timely decisions,skill,,SOFT,4,False,,0.803,USKL_37c705e67800,True
+self motivated and driven,skill,,SOFT,3,False,,0.802,USKL_89b25331cecb,True
+dynamic person,skill,,SOFT,3,False,,0.701,USKL_8424f9b82a72,False
+correct procedures reporting,skill,,SOFT,1,False,,0.735,USKL_c89a66839f3c,False
+coaching and motivational skills,skill,,SOFT,1,False,,0.759,USKL_10b25929b5fc,True
+verbal and writing skills,skill,,SOFT,1,False,,0.74,USKL_108329abf03f,False
+oral english language skills,skill,,SOFT,1,False,,0.751,USKL_108329abf03f,True
+respect for their colleagues,skill,,SOFT,2,False,,0.812,USKL_ad08ea7e1c1d,True
+personal diary management,skill,,SOFT,1,False,,0.732,USKL_a4f55f233e52,False
+planningcoordinating skills,skill,,SOFT,1,False,,0.762,USKL_c4c84e903bce,True
+correct ppe reporting,skill,,SOFT,1,False,,0.62,USKL_bc1c33dc0144,False
+professional and articulate manner,skill,,SOFT,1,False,,0.775,USKL_7a529d5f982b,True
+hard working and driven person,skill,,SOFT,1,False,,0.692,USKL_8c265142608d,False
+team excellent time management and prioritisation skills,skill,,SOFT,1,False,,0.786,USKL_51e974287856,True
+respectful,skill,,SOFT,10,False,,0.783,USKL_c690073f5231,True
+active person,skill,,SOFT,7,False,,0.75,USKL_c741ec86bc75,False
+managerial competences ability,skill,,SOFT,1,False,,0.688,USKL_b381e7f9d7da,False
+self managing confident,skill,,SOFT,1,False,,0.827,USKL_f8a305551bc5,True
+lively and sociable personality,skill,,SOFT,1,False,,0.661,USKL_a3bc086dab86,False
+skills in motivation and training,skill,,SOFT,1,False,,0.72,USKL_e9cf1864da47,False
+team that work,skill,,SOFT,2,False,,0.891,USKL_210bac427a09,True
+personal attributes excellent management and leadership skills,skill,,SOFT,1,False,,0.649,USKL_5b1c693d549d,False
+mature independent personality,skill,,SOFT,1,False,,0.691,USKL_98f8236e00bf,False
+respect for our colleagues,skill,,SOFT,1,False,,0.799,USKL_8b57e830d815,True
+conceptualization skills,skill,,SOFT,1,False,,0.726,USKL_af235e7ac704,False
+personal standards and integrity,skill,,SOFT,1,False,,0.785,USKL_12bddeeceae0,True
+cheerful personality,skill,,SOFT,4,False,,0.751,USKL_a3bc086dab86,True
+friendly,skill,,SOFT,11,False,,0.707,USKL_a3bc086dab86,False
+personal time management skills,skill,,SOFT,3,False,,0.839,USKL_5bd64b654cb3,True
+leadership and management skills,skill,,SOFT,1,False,,0.763,USKL_d57212dda5fe,True
+multitask detail oriented,skill,,SOFT,1,False,,0.736,USKL_3fd742c83eba,False
+systematic and organised manner,skill,,SOFT,2,False,,0.694,USKL_a162b32db074,False
+take initiative,skill,,SOFT,4,True,USKL_e6bd972e518f,0.831,USKL_2dcd5118fef6,True
+tactful but assertive manner,skill,,SOFT,2,False,,0.697,USKL_4aece30cfbee,False
+monitoring skills,skill,,SOFT,3,False,,0.745,USKL_bc3bc5184975,False
+interest to learn,skill,,SOFT,7,False,,0.866,USKL_65bcdb3012fb,True
+learning and skills,skill,,SOFT,3,False,,0.829,USKL_f978c560f829,True
+confident personality,skill,,SOFT,5,False,,0.787,USKL_4e30f1bff55e,True
+encouraging and facilitating innovation,skill,,SOFT,1,False,,0.899,USKL_085019453aad,True
+skills by participating in onthejob training,skill,,SOFT,1,False,,0.636,USKL_e1247ba27800,False
+communication and interpersonal abilities,skill,,SOFT,1,False,,0.841,USKL_22eafad5c469,True
+achieving their own goals,skill,,SOFT,1,False,,0.691,USKL_89b25331cecb,False
+management skills presentation skills,skill,,SOFT,1,False,,0.892,USKL_108329abf03f,True
+progressive thinking,skill,,SOFT,1,False,,0.769,USKL_af235e7ac704,True
+enthusiastic energetic personality,skill,,SOFT,1,False,,0.697,USKL_a3bc086dab86,False
+enthusiastic and willing to learn,skill,,SOFT,2,False,,0.872,USKL_65bcdb3012fb,True
+relationship rapport builder,skill,,SOFT,1,False,,0.707,USKL_fc5492e7111a,False
+facilitation and consultancy skills,skill,,SOFT,1,False,,0.757,USKL_e0e1a921ab23,True
+quotationproposal writing strong sales skills,skill,,SOFT,1,False,,0.683,USKL_fe7bd7abeef7,False
+ability to learn and adapt,skill,,SOFT,1,False,,0.809,USKL_078971e5b0bb,True
+active in person,skill,,SOFT,1,False,,0.734,USKL_c741ec86bc75,False
+staff and management,skill,,SOFT,1,False,,0.853,USKL_c1c8edf3cffb,True
+enthusiastic nature and personality,skill,,SOFT,1,False,,0.698,USKL_a3bc086dab86,False
+selflearningdevelopment,skill,,SOFT,2,False,,0.82,USKL_dbcca01d8c6d,True
+self motivated good organisational skills,skill,,SOFT,2,False,,0.707,USKL_a162b32db074,False
+to read and write,skill,,SOFT,1,False,,0.739,USKL_a1f23a1d30bb,False
+monitoring tools scripting skills,skill,,SOFT,1,False,,0.739,USKL_c050006af1b7,False
+innovative thinking,skill,,SOFT,5,True,USKL_66a25e46b6ae,0.919,USKL_48e5ad44137d,True
+planning and organisational skills,skill,,SOFT,3,False,,0.728,USKL_e9cf1864da47,False
+strategic thinking and planning,skill,,SOFT,1,False,,0.826,USKL_a1eb6b9e3b45,True
+planning and organisation skills,skill,,SOFT,2,False,,0.746,USKL_c4c84e903bce,False
+creativity and forward thinking,skill,,SOFT,1,False,,0.842,USKL_1298b9ec3d3f,True
+team interaction,skill,,SOFT,2,False,,0.872,USKL_e8ca08c144ff,True
+manage multiple projects and tasks,skill,,SOFT,1,False,,0.816,USKL_6b5cecd0ff01,True
+team you will work,skill,,SOFT,1,False,,0.808,USKL_210bac427a09,True
+creative blue sky approach,skill,,SOFT,1,False,,0.681,USKL_66a25e46b6ae,False
+customer service orientation skills,skill,,SOFT,2,False,,0.801,USKL_37760134bab4,True
+creative flair and imagination,skill,,SOFT,1,False,,0.823,USKL_1298b9ec3d3f,True
+timemanagement and negotiation skills,skill,,SOFT,1,False,,0.744,USKL_38f30fd16b6b,False
+monitoring some unix skills,skill,,SOFT,1,False,,0.749,USKL_907b2c0d7f9e,False
+ability to plan and prioritize,skill,,SOFT,1,False,,0.75,USKL_51e974287856,True
+learning programmes essential skills,skill,,SOFT,1,False,,0.674,USKL_d57212dda5fe,False
+team engagement management skills,skill,,SOFT,1,False,,0.798,USKL_29a52d1788f7,True
+work occasional irregular hours,skill,,SOFT,4,False,,0.689,USKL_98f8236e00bf,False
+active sales person,skill,,SOFT,1,False,,0.681,USKL_fe7bd7abeef7,False
+positive can do attitude,skill,,SOFT,1,False,,0.898,USKL_a3bc086dab86,True
+work collaboratively,skill,,SOFT,10,True,USKL_ad08ea7e1c1d,0.96,USKL_a70d03d259bf,True
+problemsolving and organisational skills,skill,,SOFT,1,False,,0.71,USKL_7b39fc9d97d9,False
+diplomacy and coordination skills,skill,,SOFT,1,False,,0.781,USKL_886932e57a79,True
+accuracy in their work,skill,,SOFT,1,False,,0.73,USKL_2c0c9519a350,False
+team worker with commitment,skill,,SOFT,2,False,,0.816,USKL_210bac427a09,True
+ability to elicit cooperation,skill,,SOFT,5,False,,0.787,USKL_b139935857db,True
+personality excellent communication skills,skill,,SOFT,2,False,,0.733,USKL_22eafad5c469,False
+coaching and mentoring skills,skill,,SOFT,2,False,,0.749,USKL_10b25929b5fc,False
+conceptual design skills,skill,,SOFT,1,False,,0.721,USKL_2d030f96f530,False
+dedication to quality,skill,,SOFT,5,False,,0.753,USKL_51ce2919b743,True
+analytical and creative thinking skills,skill,,SOFT,1,False,,0.756,USKL_0c9f9f301ff0,True
+administrative details skills,skill,,SOFT,1,False,,0.686,USKL_108329abf03f,False
+dynamic sales person,skill,,SOFT,3,False,,0.682,USKL_0342bdc69f4b,False
+self initiative,skill,,SOFT,2,False,,0.819,USKL_e6bd972e518f,True
+team working negotiation skills,skill,,SOFT,1,False,,0.77,USKL_210bac427a09,True
+readiness to learn,skill,,SOFT,2,False,,0.898,USKL_65bcdb3012fb,True
+judgment and skills,skill,,SOFT,1,False,,0.712,USKL_2295227eb3df,False
+be a creative,skill,,SOFT,1,False,,0.871,USKL_66a25e46b6ae,True
+team working and communication skills,skill,,SOFT,1,False,,0.8,USKL_b139935857db,True
+skillsability to inform and persuade,skill,,SOFT,1,False,,0.712,USKL_6ccd38159445,False
+sense of business ethics,skill,,SOFT,1,False,,0.688,USKL_d59fb6834792,False
+dedicated person,skill,,SOFT,7,False,,0.69,USKL_5ace3ee9272d,False
+run the busy kitchen department,skill,,SOFT,1,False,,0.664,USKL_8c265142608d,False
+energy sectorenergy brokerageenergy,skill,,SOFT,1,False,,0.598,USKL_e39a159b0d16,False
+creative and forward thinking,skill,,SOFT,1,False,,0.846,USKL_af235e7ac704,True
+listen good motivation skills,skill,,SOFT,1,False,,0.716,USKL_89b25331cecb,False
+team customer service oriented,skill,,SOFT,1,False,,0.781,USKL_37760134bab4,True
+enthusiastic account manager to learn,skill,,SOFT,1,False,,0.693,USKL_65bcdb3012fb,False
+written skills,skill,,SOFT,2,False,,0.763,USKL_108329abf03f,True
+ability to present and report,skill,,SOFT,1,False,,0.789,USKL_108329abf03f,True
+independent living worker,skill,,SOFT,1,False,,0.783,USKL_98f8236e00bf,True
+listening skills,skill,,SOFT,7,False,,0.748,USKL_8a5156ba9a35,False
+telephone sales skills,skill,,SOFT,1,False,,0.749,USKL_b8bd7fc4e1cc,False
+initiative a person,skill,,SOFT,1,False,,0.787,USKL_58f0ac51a809,True
+communication and interpersonal skills,skill,,SOFT,1,False,,0.893,USKL_22eafad5c469,True
+enthusiastic individual keen to learn,skill,,SOFT,1,False,,0.807,USKL_65bcdb3012fb,True
+client and quality orientation,skill,,SOFT,1,False,,0.846,USKL_37760134bab4,True
+work under extreme pressure,skill,,SOFT,1,False,,0.772,USKL_bfc96d215aa1,True
+able to manage and prioritize,skill,,SOFT,1,False,,0.781,USKL_51e974287856,True
+training to update skills,skill,,SOFT,1,False,,0.79,USKL_8b0f82584787,True
+self organisational skills,skill,,SOFT,1,False,,0.8,USKL_a162b32db074,True
+tactful and diplomatic manner,skill,,SOFT,1,False,,0.717,USKL_886932e57a79,False
+training skills,skill,,SOFT,3,False,,0.789,USKL_f978c560f829,True
+ability to compile a report,skill,,SOFT,2,False,,0.774,USKL_86771eeb3482,True
+dynamic customer focused person,skill,,SOFT,1,False,,0.726,USKL_37760134bab4,False
+written english skills,skill,,SOFT,1,False,,0.734,USKL_108329abf03f,False
+team environment and working independently skills,skill,,SOFT,1,False,,0.73,USKL_98f8236e00bf,False
+professional code of ethics,skill,,SOFT,1,False,,0.724,USKL_7a529d5f982b,False
+organising and timemanagement skills,skill,,SOFT,1,False,,0.774,USKL_5bd64b654cb3,True
+ability to plan and coordinate,skill,,SOFT,1,False,,0.781,USKL_b139935857db,True
+monitoring social skills,skill,,SOFT,1,False,,0.775,USKL_713f51f60556,True
+judgement and influencing skills,skill,,SOFT,1,False,,0.719,USKL_22eafad5c469,False
+creative thinking skills,skill,,SOFT,4,False,,0.901,USKL_af235e7ac704,True
+professional and mature attitude,skill,,SOFT,1,False,,0.78,USKL_7a529d5f982b,True
+problemsolving and technical skills,skill,,SOFT,1,False,,0.78,USKL_db0961177815,True
+willingness to travelwork,skill,,SOFT,1,False,,0.734,USKL_65bcdb3012fb,False
+mature and confident personality,skill,,SOFT,1,False,,0.725,USKL_4e30f1bff55e,False
+communications and presentation skills,skill,,SOFT,1,False,,0.869,USKL_108329abf03f,True
+ability and willingness to learn,skill,,SOFT,1,False,,0.89,USKL_65bcdb3012fb,True
+self out going,skill,,SOFT,1,False,,0.677,USKL_f8a305551bc5,False
+run by the department,skill,,SOFT,2,False,,0.701,USKL_e312661401e2,False
+communicationpresentation skills,skill,,SOFT,1,False,,0.893,USKL_108329abf03f,True
+managementcoordination skills,skill,,SOFT,2,False,,0.73,USKL_d57212dda5fe,False
+dedication to offering a quality,skill,,SOFT,1,False,,0.767,USKL_51ce2919b743,True
+reliable and patient personality,skill,,SOFT,1,False,,0.682,USKL_004cb4a6cb00,False
+level of drive and motivation,skill,,SOFT,1,False,,0.725,USKL_89b25331cecb,False
+dynamic and positive person,skill,,SOFT,1,False,,0.777,USKL_a3bc086dab86,True
+scheduling and programming skills,skill,,SOFT,2,False,,0.773,USKL_8ccbbe256fbf,True
+administrative and communication skills,skill,,SOFT,1,False,,0.777,USKL_22eafad5c469,True
+ability to influence and motivate,skill,,SOFT,1,False,,0.744,USKL_9ed57b401017,False
+sound technical judgment,skill,,SOFT,2,False,,0.715,USKL_84fd354ae915,False
+manage and prioritise multiple assignments and tasks,skill,,SOFT,1,False,,0.797,USKL_80d45ff85d6d,True
+manage and prioritise multiple essential tasks,skill,,SOFT,1,False,,0.784,USKL_5e091abe3f4a,True
+dynamic positive personality,skill,,SOFT,1,False,,0.743,USKL_a3bc086dab86,False
+flexible with their working hours,skill,,SOFT,1,False,,0.7,USKL_2e6f4a708e5f,False
+level of organisation and motivation,skill,,SOFT,1,False,,0.677,USKL_8fd461aeb04d,False
+self believe and confidence,skill,,SOFT,1,False,,0.761,USKL_4e30f1bff55e,True
+for advocacy,skill,,SOFT,1,False,,0.735,USKL_b0f0361a59fe,False
+organizational and communication skills,skill,,SOFT,2,False,,0.736,USKL_22eafad5c469,False
+skills and engage in training,skill,,SOFT,1,False,,0.792,USKL_f978c560f829,True
+self harm awareness,skill,,SOFT,1,False,,0.724,USKL_baf3ef04e914,False
+work in a team,skill,,SOFT,3,True,USKL_e8ca08c144ff,0.967,USKL_210bac427a09,True
+leadership and assertiveness skills,skill,,SOFT,1,False,,0.718,USKL_c8a5d0c1c5f2,False
+respect for their diversity,skill,,SOFT,1,False,,0.723,USKL_dd127893881b,False
+problem solving strong system skills,skill,,SOFT,1,False,,0.735,USKL_ee10e9e11913,False
+enthusiastic to learn,skill,,SOFT,1,False,,0.875,USKL_65bcdb3012fb,True
+team work desirable skills,skill,,SOFT,1,False,,0.783,USKL_b139935857db,True
+communicating deviations other skills,skill,,SOFT,1,False,,0.727,USKL_b8bd7fc4e1cc,False
+monitoring staff management skills,skill,,SOFT,1,False,,0.764,USKL_c1c8edf3cffb,True
+public speaking and presentation skills,skill,,SOFT,1,False,,0.887,USKL_108329abf03f,True
+self improve by learning,skill,,SOFT,1,False,,0.739,USKL_1dab219b9371,False
+diplomatic but assertive manner,skill,,SOFT,1,False,,0.703,USKL_4aece30cfbee,False
+team leader and working,skill,,SOFT,1,False,,0.83,USKL_210bac427a09,True
+team network and building,skill,,SOFT,1,False,,0.83,USKL_f6c425c8c1f8,True
+customer service work ethic,skill,,SOFT,1,False,,0.809,USKL_bf0002b30a6f,True
+creativity and brand thinking,skill,,SOFT,1,False,,0.806,USKL_af235e7ac704,True
+communicating and influencing skills,skill,,SOFT,2,False,,0.77,USKL_22eafad5c469,True
+supervisory experience skills,skill,,SOFT,1,False,,0.713,USKL_7d8c462c468a,False
+creative and strategic thinking skills,skill,,SOFT,1,False,,0.807,USKL_af235e7ac704,True
+interpretation and analysis skills,skill,,SOFT,1,False,,0.758,USKL_896f118a0b6d,True
+reliable and consistent personality,skill,,SOFT,1,False,,0.702,USKL_cd80e2bbc2d3,False
+creativity from conceptual thinking,skill,,SOFT,2,False,,0.826,USKL_af235e7ac704,True
+critical thinking and skills,skill,,SOFT,1,False,,0.785,USKL_9c5159afeae1,True
+team building and coaching skills,skill,,SOFT,1,False,,0.823,USKL_f6c425c8c1f8,True
+growth oriented,skill,,SOFT,1,False,,0.705,USKL_be52e15b7a95,False
+meeting tight deadlines,skill,,SOFT,1,False,,0.863,USKL_19e528cd027d,True
+proposal writing and presentation skills,skill,,SOFT,1,False,,0.829,USKL_108329abf03f,True
+managerial experience ability,skill,,SOFT,1,False,,0.63,USKL_b139935857db,False
+communication and influencing abilities,skill,,SOFT,1,False,,0.727,USKL_22eafad5c469,False
+marketing and business skills,skill,,SOFT,3,False,,0.738,USKL_ff12e34ea1dc,False
+judgement and decisionmaking skills,skill,,SOFT,1,False,,0.759,USKL_a8fa624183dd,True
+telephone and computer skills,skill,,SOFT,1,False,,0.74,USKL_b8bd7fc4e1cc,False
+organization and timemanagement skills,skill,,SOFT,1,False,,0.775,USKL_5bd64b654cb3,True
+professional conduct and presentation,skill,,SOFT,1,False,,0.778,USKL_108329abf03f,True
+desirablecomputer networking skills,skill,,SOFT,1,False,,0.691,USKL_877794eb88e8,False
+managerial and technical ability,skill,,SOFT,1,False,,0.71,USKL_946bf36e7854,False
+willingness to adapt and learn,skill,,SOFT,1,False,,0.879,USKL_65bcdb3012fb,True
+quick thinking fast learning,skill,,SOFT,1,False,,0.842,USKL_43917307b5e4,True
+telephone good computer skills,skill,,SOFT,1,False,,0.76,USKL_b8bd7fc4e1cc,True
+negotiation skills,skill,,SOFT,5,False,,0.821,USKL_6ccd38159445,True
+reporting essential skills,skill,,SOFT,1,False,,0.74,USKL_becf31b85916,False
+commitment to their work,skill,,SOFT,1,False,,0.797,USKL_fbac66d091dc,True
+ability to succession plan,skill,,SOFT,1,False,,0.669,USKL_b139935857db,False
+conceptual and analytical thinking,skill,,SOFT,1,False,,0.85,USKL_785c5b6b9daf,True
+learning new skills,skill,,SOFT,5,False,,0.803,USKL_f978c560f829,True
+flexible with your working hours,skill,,SOFT,1,False,,0.749,USKL_2e6f4a708e5f,False
+willingness and ability to travel,skill,,SOFT,1,False,,0.739,USKL_65bcdb3012fb,False
+leadership skills with ability,skill,,SOFT,1,False,,0.755,USKL_b139935857db,True
+project and process management skills,skill,,SOFT,2,False,,0.855,USKL_d57212dda5fe,True
+dynamic and experienced person,skill,,SOFT,1,False,,0.691,USKL_aa83bbefe8ae,False
+cheerful and outgoing personality,skill,,SOFT,1,False,,0.716,USKL_a3bc086dab86,False
+professional conduct and ethics,skill,,SOFT,1,False,,0.707,USKL_d59fb6834792,False
+counselling skills computer skills,skill,,SOFT,1,False,,0.71,USKL_b8bd7fc4e1cc,False
+partnerclient relationships,skill,,SOFT,1,False,,0.739,USKL_28cd2975f8d9,False
+trusted,skill,,SOFT,3,False,,0.822,USKL_17af961a4782,True
+people management and motivational skills,skill,,SOFT,1,False,,0.72,USKL_29a52d1788f7,False
+self starter excellent organisational skills,skill,,SOFT,1,False,,0.688,USKL_a162b32db074,False
+personality good interpersonal skills,skill,,SOFT,1,False,,0.85,USKL_22eafad5c469,True
+ability to communicate and persuade,skill,,SOFT,1,False,,0.776,USKL_6ccd38159445,True
+organized person,skill,,SOFT,2,False,,0.764,USKL_804f90fe8d6d,True
+training on lifestyle skills,skill,,SOFT,1,False,,0.699,USKL_f978c560f829,False
+training and skills,skill,,SOFT,1,False,,0.8,USKL_f978c560f829,True
+supervision excellent organisational skills,skill,,SOFT,1,False,,0.666,USKL_7d8c462c468a,False
+make the right decisions,skill,,SOFT,1,False,,0.915,USKL_37c705e67800,True
+training updates skills,skill,,SOFT,1,False,,0.73,USKL_121cfd0d8674,False
+child friendly,skill,,SOFT,1,False,,0.65,USKL_1736e451af19,False
+goals oriented,skill,,SOFT,1,False,,0.825,USKL_9c482c5584f4,True
+achieving its organisation goals,skill,,SOFT,1,False,,0.732,USKL_13ee341414d6,False
+capabilitiesability to prioritize,skill,,SOFT,1,False,,0.746,USKL_75e047b4190a,False
+personal management communication skills,skill,,SOFT,1,False,,0.773,USKL_22eafad5c469,True
+personality and negotiating skills,skill,,SOFT,1,False,,0.759,USKL_6ccd38159445,True
+business coordinator team leader,skill,,SOFT,1,False,,0.682,USKL_f3e9f453b9eb,False
+judgment strong interpersonal skills,skill,,SOFT,1,False,,0.815,USKL_22eafad5c469,True
+management team skill,skill,,SOFT,1,False,,0.849,USKL_29a52d1788f7,True
+interest and ability to understand and learn,skill,,SOFT,1,False,,0.808,USKL_65bcdb3012fb,True
+able to efficiently prioritize,skill,,SOFT,1,False,,0.765,USKL_8c265142608d,True
+ability to develop and organize,skill,,SOFT,1,False,,0.772,USKL_b139935857db,True
+commitment to team work,skill,,SOFT,1,False,,0.829,USKL_210bac427a09,True
+work unsupervised or in a team,skill,,SOFT,1,False,,0.801,USKL_210bac427a09,True
+cheerful and welcoming personality,skill,,SOFT,2,False,,0.739,USKL_a3bc086dab86,False
+work both collaboratively,skill,,SOFT,1,False,,0.865,USKL_a70d03d259bf,True
+listening skillsadecco,skill,,SOFT,1,False,,0.704,USKL_d3466420e70d,False
+critical thinking and analytical skills,skill,,SOFT,1,False,,0.763,USKL_0c9f9f301ff0,True
+problem solvertrouble,skill,,SOFT,1,False,,0.795,USKL_a9d4b47334ad,True
+ability to empathise and listen,skill,,SOFT,1,False,,0.758,USKL_cb94d2fd2692,True
+professional communication and presentation,skill,,SOFT,2,False,,0.798,USKL_108329abf03f,True
+advocacy and drafting skills,skill,,SOFT,1,False,,0.678,USKL_108329abf03f,False
+make difficult decisions,skill,,SOFT,1,False,,0.865,USKL_37c705e67800,True
+coordinating and organising skills,skill,,SOFT,1,False,,0.751,USKL_0fe8ecb6701b,True
+courteous and helpful manner,skill,,SOFT,1,False,,0.696,USKL_777d83f81672,False
+customer service values and ethics,skill,,SOFT,1,False,,0.712,USKL_b5f9922de7fb,False
+critical thinking skills multitasking skills,skill,,SOFT,2,False,,0.736,USKL_3fd742c83eba,False
+team work custom interaction,skill,,SOFT,1,False,,0.764,USKL_e8ca08c144ff,True
+hard working digital sales person,skill,,SOFT,1,False,,0.636,USKL_63966e52e5b9,False
+confident out going personality,skill,,SOFT,1,False,,0.733,USKL_4e30f1bff55e,False
+initiative and innovative thinking,skill,,SOFT,1,False,,0.831,USKL_48e5ad44137d,True
+training and management skills,skill,,SOFT,1,False,,0.777,USKL_e9cf1864da47,True
+management forward planning skill,skill,,SOFT,1,False,,0.744,USKL_d57212dda5fe,False
+analytical and conceptual thinking skills,skill,,SOFT,1,False,,0.762,USKL_785c5b6b9daf,True
+ability to create and adapt,skill,,SOFT,1,False,,0.771,USKL_1a7961875de0,True
+makes informed and timely decisions,skill,,SOFT,1,False,,0.788,USKL_37c705e67800,True
+ability to gather and analyze,skill,,SOFT,1,False,,0.767,USKL_1d176d0b5b3f,True
+managing complex tasks,skill,,SOFT,1,False,,0.814,USKL_658badcab5ba,True
+enthusiastic and eager to learn,skill,,SOFT,1,False,,0.838,USKL_65bcdb3012fb,True
+management experience and skill,skill,,SOFT,1,False,,0.709,USKL_d57212dda5fe,False
+ability to present and negotiate,skill,,SOFT,2,False,,0.848,USKL_6ccd38159445,True
+self motivation and organisational skills,skill,,SOFT,1,False,,0.718,USKL_89b25331cecb,False
+dedication to high quality,skill,,SOFT,2,False,,0.719,USKL_5ace3ee9272d,False
+creativity and innovative thinking,skill,,SOFT,1,False,,0.887,USKL_1298b9ec3d3f,True
+cross cultural communication,skill,,SOFT,1,False,,0.807,USKL_ef29cf2971ed,True
+accuracy in numeric work,skill,,SOFT,1,False,,0.681,USKL_2c0c9519a350,False
+team and enjoy working,skill,,SOFT,1,False,,0.831,USKL_210bac427a09,True
+dedicated career minded person,skill,,SOFT,1,False,,0.662,USKL_7a529d5f982b,False
+creativity and lateral thinking,skill,,SOFT,2,False,,0.787,USKL_1298b9ec3d3f,True
+ability to identify and report,skill,,SOFT,1,False,,0.774,USKL_693e14190620,True
+initiative thinking,skill,,SOFT,2,False,,0.822,USKL_48e5ad44137d,True
+team with line management,skill,,SOFT,1,False,,0.808,USKL_f3e9f453b9eb,True
+interest and willingness to learn,skill,,SOFT,2,False,,0.893,USKL_65bcdb3012fb,True
+ability to empower and motivate,skill,,SOFT,1,False,,0.731,USKL_9ed57b401017,False
+presentation and documentation skills,skill,,SOFT,1,False,,0.869,USKL_108329abf03f,True
+detailed and process oriented,skill,,SOFT,1,False,,0.728,USKL_5ace3ee9272d,False
+reasoning and numerical skills,skill,,SOFT,1,False,,0.732,USKL_3a16db344fd3,False
+team in the building,skill,,SOFT,1,False,,0.839,USKL_f6c425c8c1f8,True
+team work skills and skills,skill,,SOFT,1,False,,0.813,USKL_e8ca08c144ff,True
+planning organisational skills,skill,,SOFT,1,False,,0.762,USKL_a162b32db074,True
+verbal and written skills,skill,,SOFT,1,False,,0.746,USKL_22eafad5c469,False
+dedicated and enthusiastic person,skill,,SOFT,1,False,,0.674,USKL_58f0ac51a809,False
+adept at networking,skill,,SOFT,2,False,,0.699,USKL_9a385fcd3b47,False
+commitment confident to work,skill,,SOFT,1,False,,0.774,USKL_4e30f1bff55e,True
+professional in your presentation,skill,,SOFT,1,False,,0.78,USKL_108329abf03f,True
+dedicated accounts person,skill,,SOFT,1,False,,0.636,USKL_100e70f9adfe,False
+educational attainment skills,skill,,SOFT,1,False,,0.658,USKL_34e655d4e2d2,False
+provisionworks collaboratively,skill,,SOFT,1,False,,0.76,USKL_a70d03d259bf,True
+ability to supervise and coordinate,skill,,SOFT,1,False,,0.761,USKL_b139935857db,True
+delegation and negotiation skills,skill,,SOFT,1,False,,0.762,USKL_38f30fd16b6b,True
+service focus and mentality,skill,,SOFT,1,False,,0.677,USKL_51ce2919b743,False
+educational and business skills,skill,,SOFT,1,False,,0.717,USKL_f978c560f829,False
+monitoring budgets leadership skills,skill,,SOFT,1,False,,0.742,USKL_c8a5d0c1c5f2,False
+pleasant and helpful disposition,skill,,SOFT,1,False,,0.741,USKL_a3bc086dab86,False
+enthusiastic always eager to learn,skill,,SOFT,1,False,,0.75,USKL_65bcdb3012fb,False
+team customer interaction,skill,,SOFT,2,False,,0.754,USKL_b5f9922de7fb,True
+team s commitment,skill,,SOFT,1,False,,0.813,USKL_fbac66d091dc,True
+diplomacy and negotiation skills,skill,,SOFT,1,False,,0.789,USKL_886932e57a79,True
+telephone customer service skills,skill,,SOFT,1,False,,0.759,USKL_b8bd7fc4e1cc,True
+organizational and problemsolving skills,skill,,SOFT,1,False,,0.713,USKL_eceb84ff7a68,False
+political and contract awareness,skill,,SOFT,1,False,,0.658,USKL_c399404a2860,False
+organization strong technical skills,skill,,SOFT,1,False,,0.748,USKL_b8bd7fc4e1cc,False
+run the humanities department,skill,,SOFT,1,False,,0.721,USKL_6be990b5ebe3,False
+responsible personality,skill,,SOFT,1,False,,0.761,USKL_6e33eaf3b603,True
+desire and ability to learn,skill,,SOFT,1,False,,0.823,USKL_65bcdb3012fb,True
+progressive forwarding thinking,skill,,SOFT,1,False,,0.749,USKL_c9bcf4ce801b,False
+team and their commitment,skill,,SOFT,1,False,,0.775,USKL_fbac66d091dc,True
+ability to promote cooperation,skill,,SOFT,1,False,,0.817,USKL_b2d947c2b805,True
+business development team leader,skill,,SOFT,1,False,,0.768,USKL_238d5aea327c,True
+time management and organisational skills,skill,,SOFT,1,False,,0.782,USKL_51e974287856,True
+telephone manner pc skills,skill,,SOFT,1,False,,0.747,USKL_b8bd7fc4e1cc,False
+friendly and confident personality,skill,,SOFT,1,False,,0.709,USKL_a3bc086dab86,False
+communication organizational people,skill,,SOFT,1,False,,0.684,USKL_80e1eca8c5b4,False
+constructive input and feedback,skill,,SOFT,1,False,,0.827,USKL_4884741ead37,True
+organisational and administration skills,skill,,SOFT,1,False,,0.731,USKL_a162b32db074,False
+team work builds team spirit,skill,,SOFT,1,False,,0.878,USKL_ec315ac7d913,True
+ability to technically manage,skill,,SOFT,1,False,,0.764,USKL_b139935857db,True
+analytic and modelling skills,skill,,SOFT,1,False,,0.728,USKL_e58645864c73,False
+proactive and enthusiastic approach,skill,,SOFT,1,False,,0.733,USKL_40e936614d75,False
+work closely in an operating team,skill,,SOFT,1,False,,0.845,USKL_210bac427a09,True
+team s work,skill,,SOFT,1,False,,0.907,USKL_210bac427a09,True
+ethical standardsselfmotivated,skill,,SOFT,1,False,,0.72,USKL_89b25331cecb,False
+speaking good english ability,skill,,SOFT,1,False,,0.694,USKL_97da71baf839,False
+run the pastry department,skill,,SOFT,1,False,,0.66,USKL_c1c8edf3cffb,False
+supervisory management skills,skill,,SOFT,1,False,,0.727,USKL_7d8c462c468a,False
+ability to inform and persuade,skill,,SOFT,1,False,,0.744,USKL_4aece30cfbee,False
+ability to collate and report,skill,,SOFT,1,False,,0.773,USKL_1d176d0b5b3f,True
+skills are essential to communicate,skill,,SOFT,1,False,,0.788,USKL_b8bd7fc4e1cc,True
+presentation and influencing skills,skill,,SOFT,1,False,,0.879,USKL_108329abf03f,True
+run the metrology department,skill,,SOFT,1,False,,0.674,USKL_f3e9f453b9eb,False
+conceptual and strategic thinking,skill,,SOFT,1,False,,0.744,USKL_785c5b6b9daf,False
+attention to the smallest details,skill,,SOFT,1,False,,0.916,USKL_5ace3ee9272d,True
+coordination and organisational skills,skill,,SOFT,1,False,,0.726,USKL_84c354039469,False
+professional and welcoming personality,skill,,SOFT,3,False,,0.742,USKL_7a529d5f982b,False
+administrative process skills,skill,,SOFT,1,False,,0.715,USKL_33bf34283b66,False
+business and market leader,skill,,SOFT,1,False,,0.612,USKL_c8a5d0c1c5f2,False
+personal account management,skill,,SOFT,1,False,,0.816,USKL_100e70f9adfe,True
+self organized,skill,,SOFT,1,False,,0.764,USKL_804f90fe8d6d,True
+take own initiative,skill,,SOFT,1,False,,0.781,USKL_2dcd5118fef6,True
+client and peer relationships,skill,,SOFT,1,False,,0.71,USKL_984227b6ba14,False
+personal and professional integrity,skill,,SOFT,1,False,,0.765,USKL_aa9568a4370c,True
+innovation and consultancy skills,skill,,SOFT,1,False,,0.699,USKL_8a5156ba9a35,False
+team leadership service oriented,skill,,SOFT,1,False,,0.769,USKL_593c06a96996,True
+negotiation and presentation skills,skill,,SOFT,1,False,,0.833,USKL_108329abf03f,True
+customer development skills,skill,,SOFT,1,False,,0.707,USKL_22eafad5c469,False
+commitment to your work,skill,,SOFT,1,False,,0.808,USKL_fbac66d091dc,True
+ability to promote and persuade,skill,,SOFT,1,False,,0.759,USKL_4aece30cfbee,True
+problem solving and analytical skills,skill,,SOFT,1,False,,0.763,USKL_7b39fc9d97d9,True
+commitment and passion to work,skill,,SOFT,1,False,,0.755,USKL_fbac66d091dc,True
+for embedded multitasking,skill,,SOFT,1,False,,0.779,USKL_bc6172ab48d4,True
+team management development skills,skill,,SOFT,1,False,,0.807,USKL_d57212dda5fe,True
+friendly and engaging personality,skill,,SOFT,1,False,,0.701,USKL_a3bc086dab86,False
+timemanagement and organization skills,skill,,SOFT,1,False,,0.78,USKL_5bd64b654cb3,True
+accuracy in work,skill,,SOFT,1,False,,0.752,USKL_8c265142608d,True
+disciplined attention,skill,,SOFT,1,False,,0.771,USKL_5ace3ee9272d,True
+written and communication skills,skill,,SOFT,1,False,,0.771,USKL_b8bd7fc4e1cc,True
+analytical and problemsolving abilities,skill,,SOFT,1,False,,0.712,USKL_7b39fc9d97d9,False
+skills to communicate,skill,,SOFT,1,False,,0.853,USKL_b8bd7fc4e1cc,True
+commitment to excellence teamwork,skill,,SOFT,2,False,,0.803,USKL_e8ca08c144ff,True
+initiative o process driven,skill,,SOFT,1,False,,0.702,USKL_04fde171377f,False
+courteous and efficient manner,skill,,SOFT,1,False,,0.722,USKL_8c265142608d,False
+team working and interpersonal skills,skill,,SOFT,1,False,,0.831,USKL_22eafad5c469,True
+initiative and lateral thinking,skill,,SOFT,1,False,,0.691,USKL_58f0ac51a809,False
+level of commitment and motivation,skill,,SOFT,1,False,,0.754,USKL_fbac66d091dc,True
+organising excellent analytical skills,skill,,SOFT,1,False,,0.745,USKL_0c9f9f301ff0,False
+planning and analytical skills,skill,,SOFT,1,False,,0.726,USKL_c4c84e903bce,False
+cultural awareness and sensitivity,skill,,SOFT,1,False,,0.686,USKL_ef29cf2971ed,False
+progress rigorous,skill,,SOFT,1,False,,0.756,USKL_c1f57f742a5e,True
+diplomatic and professional manner,skill,,SOFT,1,False,,0.749,USKL_7a529d5f982b,False
+ethical and professional standards,skill,,SOFT,1,False,,0.769,USKL_12bddeeceae0,True
+professional code of ethicsmeridian,skill,,SOFT,1,False,,0.64,USKL_846415a78d31,False
+dynamic and engaging personality,skill,,SOFT,1,False,,0.65,USKL_5626007cc8de,False
+judgment and communication skills,skill,,SOFT,1,False,,0.736,USKL_22eafad5c469,False
+team with close interaction,skill,,SOFT,1,False,,0.803,USKL_210bac427a09,True
+personality and managerial skills,skill,,SOFT,1,False,,0.697,USKL_22eafad5c469,False
+team in beautiful work,skill,,SOFT,1,False,,0.812,USKL_210bac427a09,True
+managing people and tasks,skill,,SOFT,1,False,,0.797,USKL_f3e9f453b9eb,True
+managerial role the ability,skill,,SOFT,1,False,,0.671,USKL_b139935857db,False
+constructive guidance and feedback,skill,,SOFT,1,False,,0.823,USKL_c80eda617b6f,True
+research and analytical skills,skill,,SOFT,1,False,,0.837,USKL_8a5156ba9a35,True
+self and team organisational skills,skill,,SOFT,1,False,,0.743,USKL_a162b32db074,False
+facilitating soft skills,skill,,SOFT,1,False,,0.775,USKL_f978c560f829,True
+reporting writing skills,skill,,SOFT,1,False,,0.783,USKL_c18ca07fef39,True
+work and thrive in high pressure,skill,,SOFT,1,False,,0.694,USKL_bfc96d215aa1,False
+creative evaluation and thinking skills,skill,,SOFT,1,False,,0.776,USKL_af235e7ac704,True
+ability to proactively sell,skill,,SOFT,1,False,,0.744,USKL_6ccd38159445,False
+advocacy and negotiation skills,skill,,SOFT,1,False,,0.807,USKL_38f30fd16b6b,True
+writtenverbal communication skills,skill,,SOFT,1,False,,0.76,USKL_b8bd7fc4e1cc,True
+professional and friendly personality,skill,,SOFT,1,False,,0.756,USKL_7a529d5f982b,True
+problemsolving troubleshooting,skill,,SOFT,1,False,,0.888,USKL_a9d4b47334ad,True
+self reliant and driven,skill,,SOFT,1,False,,0.681,USKL_f8a305551bc5,False
+object oriented engineering skills,skill,,SOFT,1,False,,0.763,USKL_c074dc962a9a,True
+be very creative,skill,,SOFT,1,False,,0.838,USKL_66a25e46b6ae,True
+commitment to the work,skill,,SOFT,1,False,,0.817,USKL_fbac66d091dc,True
+proactive in the approach,skill,,SOFT,1,False,,0.743,USKL_82daac757959,False
+customer service orientation good listening skills,skill,,SOFT,1,False,,0.72,USKL_37760134bab4,False
+correct supportive reporting,skill,,SOFT,1,False,,0.672,USKL_db36b48ed01c,False
+marketing good communication skills,skill,,SOFT,1,False,,0.771,USKL_b8bd7fc4e1cc,True
+professional with excellent presentation,skill,,SOFT,1,False,,0.725,USKL_108329abf03f,False
+ability to effectively plan,skill,,SOFT,1,False,,0.742,USKL_b139935857db,False
+client management oriented,skill,,SOFT,2,False,,0.809,USKL_4fd74b854ab3,True
+coaching and training skills,skill,,SOFT,1,False,,0.795,USKL_10b25929b5fc,True
+achieving their goals,skill,,SOFT,2,False,,0.72,USKL_95719ce77be8,False
+make more informed decisions,skill,,SOFT,1,False,,0.824,USKL_37c705e67800,True
+judgement and analysis skills,skill,,SOFT,1,False,,0.728,USKL_8a5156ba9a35,False
+personal and corporate integrity,skill,,SOFT,1,False,,0.75,USKL_aa9568a4370c,True
+polite manners,skill,,SOFT,1,False,,0.715,USKL_17da1cf17987,False
+people and goal oriented,skill,,SOFT,1,False,,0.787,USKL_9c482c5584f4,True
+administrative duties skills,skill,,SOFT,1,False,,0.722,USKL_22eafad5c469,False
+conceptual and analytical skills,skill,,SOFT,1,False,,0.71,USKL_785c5b6b9daf,False
+administrative and organisational skills,skill,,SOFT,1,False,,0.702,USKL_a162b32db074,False
+commitment needed to achieve the work,skill,,SOFT,1,False,,0.754,USKL_fbac66d091dc,True
+personality and communication skills,skill,,SOFT,1,False,,0.791,USKL_22eafad5c469,True
+business leader,skill,,SOFT,2,False,,0.729,USKL_c8a5d0c1c5f2,False
+communication and leadership abilities,skill,,SOFT,1,False,,0.725,USKL_b8bd7fc4e1cc,False
+diplomatic and approachable manner,skill,,SOFT,1,False,,0.714,USKL_4aece30cfbee,False
+recruiting for the skills,skill,,SOFT,1,False,,0.773,USKL_24290344546a,True
+commitment and appetite to work,skill,,SOFT,1,False,,0.767,USKL_65bcdb3012fb,True
+staff within project management,skill,,SOFT,1,False,,0.828,USKL_e5fe96c015cf,True
+analytical and critical thinking,skill,,SOFT,1,False,,0.842,USKL_785c5b6b9daf,True
+self motivated driven,skill,,SOFT,1,False,,0.819,USKL_89b25331cecb,True
+ability to actively listen,skill,,SOFT,1,False,,0.807,USKL_d3466420e70d,True
+team responsible for building,skill,,SOFT,1,False,,0.807,USKL_f6c425c8c1f8,True
+strategic forward planning,skill,,SOFT,1,False,,0.766,USKL_a1eb6b9e3b45,True
+prioritization and organizational skills,skill,,SOFT,1,False,,0.782,USKL_51e974287856,True
+influencing and interpersonal skills,skill,,SOFT,1,False,,0.875,USKL_22eafad5c469,True
+analytic skills photoshop skills,skill,,SOFT,1,False,,0.707,USKL_e58645864c73,False
+dedicated sales person,skill,,SOFT,1,False,,0.633,USKL_fe7bd7abeef7,False
+reliable personality,skill,,SOFT,1,False,,0.723,USKL_cd80e2bbc2d3,False
+team has close interaction,skill,,SOFT,1,False,,0.787,USKL_7bfa1b8ef02c,True
+professional company with ethics,skill,,SOFT,1,False,,0.733,USKL_7a529d5f982b,False
+confident and upbeat personality,skill,,SOFT,1,False,,0.754,USKL_a3bc086dab86,True
+outgoing and friendly personality,skill,,SOFT,1,False,,0.69,USKL_a3bc086dab86,False
+achieving common goals,skill,,SOFT,1,False,,0.794,USKL_0a126434ddfa,True
+customer orientation strong organisation skills,skill,,SOFT,1,False,,0.77,USKL_37760134bab4,True
+customerclient service orientation,skill,,SOFT,1,False,,0.879,USKL_37760134bab4,True
+ability to effectively organize,skill,,SOFT,1,False,,0.78,USKL_b139935857db,True
+personal time management and organisational skills,skill,,SOFT,1,False,,0.749,USKL_51e974287856,False
+work well under pressure,skill,,SOFT,1,False,,0.778,USKL_8c265142608d,True
+titlemarketing manager key skillsmarketing,skill,,SOFT,1,False,,0.643,USKL_62fe05bee09d,False
+personal qualities of integrity,skill,,SOFT,1,False,,0.77,USKL_aa9568a4370c,True
+memory skills,skill,,SOFT,1,False,,0.764,USKL_f22871126015,True
+meeting reporting deadlines,skill,,SOFT,1,False,,0.801,USKL_19e528cd027d,True
+professional and confident personality,skill,,SOFT,1,False,,0.753,USKL_7a529d5f982b,True
+innovative ways of thinking,skill,,SOFT,1,False,,0.876,USKL_48e5ad44137d,True
+for yourself self advocacy,skill,,SOFT,1,False,,0.696,USKL_89b25331cecb,False
+lively outgoing personality,skill,,SOFT,1,False,,0.651,USKL_a3bc086dab86,False
+personality skills,skill,,SOFT,1,False,,0.823,USKL_22eafad5c469,True
+tactful and professional manner,skill,,SOFT,1,False,,0.774,USKL_7a529d5f982b,True
+enthusiastic individual eager to learn,skill,,SOFT,1,False,,0.81,USKL_65bcdb3012fb,True
+client expectations technical skills,skill,,SOFT,1,False,,0.723,USKL_b8bd7fc4e1cc,False
+for an international advocacy,skill,,SOFT,1,False,,0.662,USKL_b0f0361a59fe,False
+enthusiastic and proactive personality,skill,,SOFT,1,False,,0.703,USKL_a3bc086dab86,False
+teamwork and collaboration skills,skill,,SOFT,1,False,,0.841,USKL_e8ca08c144ff,True
+ability and flexibility to travel,skill,,SOFT,1,False,,0.744,USKL_1ecef094afc0,False
+team behaviour and interaction,skill,,SOFT,1,False,,0.765,USKL_84c354039469,True
