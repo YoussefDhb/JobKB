@@ -320,6 +320,7 @@ src/
   agent/           # LangGraph agentic enrichment: controller + reflective workers (supersedes llm on a full build)
   translate.py     # bilingual EN/FR label completion (Wikidata labels + validated MT) (enrichment stage)
   validation/      # KB validation: consistency invariants + external gold coverage + LLM-link audit
+  export/          # graph export: RDF/OWL Turtle (SKOS) + GraphML + JSON + self-contained interactive HTML
   incremental.py   # add/remove ONE source without a full rebuild
   pipeline.py      # orchestrator (core + enrichment stages) + QA/integrity report (self-certifies consistency)
 run_pipeline.py    # CLI entry point
@@ -574,10 +575,38 @@ Since the inferred links were designed to fill gaps the demand data missed, low 
 by design — but the audit confirms they are the KB's least-corroborated content and validates keeping
 them as a **separate, clearly-labeled `llm_inferred` relation type** (never mixed into `demand`).
 
+## Graph export & visualization (`--export`)
+
+`python run_pipeline.py --export [formats]` materializes the KB as a proper **graph** (read-only over
+`kb/`, writing only to `export/`; `src/export/`). It builds the deduplicated **concept graph** once —
+every hierarchy/relation endpoint is remapped from its per-source entity id to its **unified concept**
+via `member_entity_ids` (the audit verified this is dangle-free: 0 unmapped entities, 0 unresolvable
+edges), and each skill links to its **single** authoritative category (from the concept's `it_subtype`,
+so merged skills don't inherit divergent parents). The graph is **11,424 nodes** (240 occupations +
+11,126 skills + 34 taxonomy nodes + 24 ISCO groups) and **~44k edges** (`skos:broader` taxonomy +
+`jobkb:inDomain` facet + typed `jobkb:requiresSkill` occupation→skill + `skos:exactMatch`/`closeMatch`
+to Wikidata). Four outputs:
+
+- **`jobkb.ttl` — RDF/OWL Turtle (SKOS).** A light **JobKB ontology** (TBox: `Occupation`, `Skill` →
+  `HardSkill`/`SoftSkill`, `SkillType`/`SkillDomain`/`SkillCategory`, `IscoGroup`; `Occupation
+  owl:disjointWith Skill`; object properties with `rdfs:domain`/`range`: `requiresSkill` + typed
+  sub-properties `essentialSkill`/`optionalSkill`/`demandsSkill`/`transversalSkill`/`inferredSkill`,
+  `inDomain`) plus the ABox: every concept as a `skos:Concept` with `skos:prefLabel`/`altLabel` (en+fr),
+  `skos:definition`, `skos:exactMatch` to `wd:` Wikidata entities, and the typed edges (~167k triples).
+  Loads in **Protégé / GraphDB** and is **reasoner-ready**. Rather than bundle a Java reasoner, the export
+  runs a lightweight **rdflib axiom self-check** (class disjointness, property domain/range, 0 dangling
+  IRIs — all PASS), complementing the build's `consistency.py` certificate.
+- **`jobkb.graphml`** — for **Gephi / Cytoscape / yEd** (node attributes + typed/weighted edges).
+- **`jobkb.json`** — nodes/edges for **Neo4j import** or web viz.
+- **`jobkb.html`** — a **self-contained, offline interactive** overview: the navigable backbone (skill
+  types ↔ domains ↔ categories ↔ ISCO tree ↔ occupations, ~300 nodes, categories sized by #skills) with a
+  small inline vanilla-JS canvas force layout (drag / pan / zoom / hover) — **no server, no internet, no
+  external library**. The full 11k-node graph lives in the GraphML/RDF exports for analytical tools.
+
 ## Not in this build (deliberate follow-ons)
 
-RDF/OWL graph export is intentionally out of scope for this reconstruction. (LLM
-content-enrichment — descriptions, inferred links, emerging-tech concepts — is **now
-part of the automatic pipeline**, see the enrichment stages above.) The previous
-French-primary, scraping/Wikidata/manual-translation pipeline and its human `gold`
-alignment review have been fully removed.
+The reasoner side is intentionally lightweight (an rdflib axiom self-check, not a bundled Java
+DL reasoner — see `--export` above). The `SDE-jobhuntai` raw-postings extraction (an `ExtractionSource`
+using HF skill-extraction) remains a future *data* add. The previous French-primary,
+scraping/Wikidata/manual-translation pipeline and its human `gold` alignment review have been fully
+removed.

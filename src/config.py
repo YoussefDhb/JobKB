@@ -851,3 +851,21 @@ WIKIDATA_NONIT_DESC_PATTERNS = (
     r"\bsystem tray\b",
     r"\bnews (website|site|and media website)\b",
 )
+
+# --------------------------------------------------------------------------------------
+# Graph export (`--export`): materialize the unified concept graph as RDF/OWL (Turtle, SKOS),
+# GraphML + nodes/edges JSON, and a self-contained interactive HTML overview. Read-only over kb/;
+# writes only to export/. The graph is the deduplicated CONCEPT layer (entity ids remapped to their
+# unified concept via member_entity_ids; taxonomy + ISCO nodes keep their own ids).
+# --------------------------------------------------------------------------------------
+EXPORT_OUT_DIR = os.path.join(ROOT, "export")
+EXPORT_TTL = os.path.join(EXPORT_OUT_DIR, "jobkb.ttl")        # RDF/OWL Turtle (SKOS + jobkb ontology)
+EXPORT_GRAPHML = os.path.join(EXPORT_OUT_DIR, "jobkb.graphml")  # Gephi / Cytoscape / yEd
+EXPORT_JSON = os.path.join(EXPORT_OUT_DIR, "jobkb.json")     # nodes/edges (Neo4j / web viz)
+EXPORT_HTML = os.path.join(EXPORT_OUT_DIR, "jobkb.html")     # self-contained interactive overview
+EXPORT_FORMATS = ("rdf", "graphml", "json", "viz")
+# Namespaces for the RDF export. JOBKB_NS mints an IRI per concept from its unified_id/entity_id;
+# WD_NS points skos:exactMatch/closeMatch anchors at real Wikidata entities.
+JOBKB_NS = "https://w3id.org/jobkb/"
+JOBKB_ONT = "https://w3id.org/jobkb/ontology#"
+WD_NS = "http://www.wikidata.org/entity/"

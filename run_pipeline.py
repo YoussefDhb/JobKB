@@ -112,6 +112,11 @@ def main():
                          "dispatches reflective workers (propose->verify->reflect->commit); optional "
                          "comma-list of gaps (description,link,emerging,anchor); default all. "
                          "Writes agent/report.md")
+    # graph export (read-only): materialize the unified concept graph as RDF/OWL + GraphML/JSON + viz.
+    ap.add_argument("--export", nargs="?", const="all", metavar="FORMATS",
+                    help="export the built KB as a graph (read-only): RDF/OWL Turtle + GraphML + JSON + "
+                         "self-contained interactive HTML; optional comma-list of formats "
+                         "(rdf,graphml,json,viz); default all. Writes export/*")
     args = ap.parse_args()
 
     if args.list_stages:
@@ -153,6 +158,13 @@ def main():
         gaps = agent.ALL_GAPS if args.agent == "all" else tuple(
             g.strip() for g in args.agent.split(","))
         agent.run(gaps=gaps)
+        return
+
+    if args.export:
+        from src import export
+        formats = export.ALL_FORMATS if args.export == "all" else tuple(
+            f.strip() for f in args.export.split(","))
+        export.run(formats=formats)
         return
 
     if args.add:
