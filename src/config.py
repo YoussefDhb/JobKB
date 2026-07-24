@@ -862,8 +862,9 @@ EXPORT_OUT_DIR = os.path.join(ROOT, "export")
 EXPORT_TTL = os.path.join(EXPORT_OUT_DIR, "jobkb.ttl")        # RDF/OWL Turtle (SKOS + jobkb ontology)
 EXPORT_GRAPHML = os.path.join(EXPORT_OUT_DIR, "jobkb.graphml")  # Gephi / Cytoscape / yEd
 EXPORT_JSON = os.path.join(EXPORT_OUT_DIR, "jobkb.json")     # nodes/edges (Neo4j / web viz)
-EXPORT_HTML = os.path.join(EXPORT_OUT_DIR, "jobkb.html")     # self-contained interactive overview
-EXPORT_FORMATS = ("rdf", "graphml", "json", "viz")
+EXPORT_HTML = os.path.join(EXPORT_OUT_DIR, "jobkb.html")     # self-contained interactive backbone overview
+EXPORT_HTML_FULL = os.path.join(EXPORT_OUT_DIR, "jobkb_full.html")  # self-contained FULL-graph viz (all nodes)
+EXPORT_FORMATS = ("rdf", "graphml", "json", "viz", "fullviz")
 # Namespaces for the RDF export. JOBKB_NS mints an IRI per concept from its unified_id/entity_id;
 # WD_NS points skos:exactMatch/closeMatch anchors at real Wikidata entities.
 JOBKB_NS = "https://w3id.org/jobkb/"

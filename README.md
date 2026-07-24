@@ -598,10 +598,17 @@ to Wikidata). Four outputs:
   IRIs — all PASS), complementing the build's `consistency.py` certificate.
 - **`jobkb.graphml`** — for **Gephi / Cytoscape / yEd** (node attributes + typed/weighted edges).
 - **`jobkb.json`** — nodes/edges for **Neo4j import** or web viz.
-- **`jobkb.html`** — a **self-contained, offline interactive** overview: the navigable backbone (skill
-  types ↔ domains ↔ categories ↔ ISCO tree ↔ occupations, ~300 nodes, categories sized by #skills) with a
-  small inline vanilla-JS canvas force layout (drag / pan / zoom / hover) — **no server, no internet, no
-  external library**. The full 11k-node graph lives in the GraphML/RDF exports for analytical tools.
+- **`jobkb.html` — self-contained, offline interactive *backbone* overview**: the navigable skeleton
+  (skill types ↔ domains ↔ categories ↔ ISCO tree ↔ occupations, ~300 nodes, categories sized by #skills)
+  with a small inline vanilla-JS canvas layout (drag / pan / zoom / hover) — **no server, no internet, no
+  external library**.
+- **`jobkb_full.html` — self-contained interactive *full* graph**: **every** node and edge (11,424 /
+  44,176). The layout is **precomputed in Python** (a deterministic clustered layout — domains fan around
+  the centre, each category is a sub-hub, its skills form a phyllotaxis cloud, occupations ring the
+  outside by domain), so the browser runs **no physics** — it only pans/zooms/redraws a static scene
+  (with viewport edge-culling and toggles for taxonomy vs. occupation→skill edges), which keeps the full
+  graph smooth. Colour = functional domain; hover any node to highlight its links. Also fully offline,
+  no external library (~1.3 MB).
 
 ## Not in this build (deliberate follow-ons)
 

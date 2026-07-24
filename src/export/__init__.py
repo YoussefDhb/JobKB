@@ -50,7 +50,13 @@ def run(formats=ALL_FORMATS) -> dict:
         from . import viz
         v = viz.write_html(nodes, edges, C.EXPORT_HTML)
         stats["viz"] = v
-        print(f"[EXPORT] interactive HTML -> {C.EXPORT_HTML} "
-              f"({v['viz_nodes']} backbone nodes, {v['viz_edges']} edges)", flush=True)
+        print(f"[EXPORT] interactive HTML (backbone) -> {C.EXPORT_HTML} "
+              f"({v['viz_nodes']} nodes, {v['viz_edges']} edges)", flush=True)
+    if "fullviz" in formats:
+        from . import viz
+        v = viz.write_full_html(nodes, edges, C.EXPORT_HTML_FULL)
+        stats["fullviz"] = v
+        print(f"[EXPORT] interactive HTML (FULL graph) -> {C.EXPORT_HTML_FULL} "
+              f"({v['full_nodes']} nodes, {v['full_edges']} edges)", flush=True)
     print("[EXPORT] done.", flush=True)
     return stats

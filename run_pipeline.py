@@ -115,8 +115,8 @@ def main():
     # graph export (read-only): materialize the unified concept graph as RDF/OWL + GraphML/JSON + viz.
     ap.add_argument("--export", nargs="?", const="all", metavar="FORMATS",
                     help="export the built KB as a graph (read-only): RDF/OWL Turtle + GraphML + JSON + "
-                         "self-contained interactive HTML; optional comma-list of formats "
-                         "(rdf,graphml,json,viz); default all. Writes export/*")
+                         "self-contained interactive HTML (backbone + full-graph); optional comma-list "
+                         "of formats (rdf,graphml,json,viz,fullviz); default all. Writes export/*")
     args = ap.parse_args()
 
     if args.list_stages:
