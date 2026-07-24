@@ -1,17 +1,4 @@
 """The agent's toolbox — thin wrappers over the KB's existing, hardened primitives.
-
-The agent invents nothing: its "tools" are the same HuggingFace models and validators the rest of the
-pipeline uses, exposed as callables the LangGraph nodes drive.
-
-  * generate()        -> llm.LLMClient (HF Inference Providers -> local Qwen -> fail-open)
-  * check_description -> llm.Validator (length + mDeBERTa NLI "this text describes {label}")
-  * nli()             -> the same mDeBERTa verifier, for the occupation |= "requires {skill}" gate
-  * shortlist()       -> bge-m3 nearest-skill retrieval (align.candidates)
-  * resolve_wikidata  -> wikidata._resolve_chunk (class-verified QID confirmation)
-
-Everything is lazy: models load on first use, so importing the agent (e.g. for `--list-stages`) is cheap,
-and a run with no generative gaps never constructs the LLM client. Generations persist to the *existing*
-LLM snapshot (`generations.csv`) so agent work is cached and offline-resumable exactly like `llm.run()`.
 """
 
 from __future__ import annotations

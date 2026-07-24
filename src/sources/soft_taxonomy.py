@@ -1,33 +1,8 @@
-"""SOFTTAXO source — a comprehensive, curated IT soft-skills taxonomy.
-
-Soft/transversal skills are the KB's minority (the hard-skill vocabulary dwarfs them). ESCO verb-phrases,
-the `SOFTSKILLS` nouns and the WEF terms cover the basics, but many soft skills that IT hiring and
-performance reviews actually name are still absent or thinly represented — critical thinking, active
-listening, technical communication, stakeholder management, cross-functional / remote collaboration,
-technical leadership, resilience, learning agility, staying current with technology, data-driven decision
-making, product thinking, and so on. This source adds them, curated from established frameworks (WEF
-Global Skills Taxonomy / Future of Jobs 2023 "Attitudes" cluster, O*NET Work Styles & cross-functional
-skills, SFIA behavioural factors) and the software-engineering "power-skills" literature, IT-contextualised
-where relevant (technical mentoring, code-review etiquette, staying current with technology).
-
-Design (mirrors `WEF`/`SOFTSKILLS`):
-  * **Contributes skills only.** Each entry is emitted as a soft skill with an **explicit soft
-    sub-domain** (`it_subtype`), and `SOFTTAXO` is registered in
-    `config.SELF_CLASSIFIED_SUBDOMAIN_SOURCES` so `hierarchy.classify_subdomain` honours that placement
-    (precise, instead of dumping everything into the `soft_transversal` catch-all).
-  * **Self-deduping.** Before emitting, every candidate whose normalized label (`evidence.match_key`)
-    already names an existing skill (any other source) is skipped — the term is already covered; only the
-    genuinely-new soft skills become new nodes. Residual near-duplicates are merged by the normal `align`
-    stage. The existing-skill index EXCLUDES this source's own rows so re-ingest stays idempotent (the
-    lesson from `data_jobs._augmented_skill_index(exclude_source=...)`).
-  * **Universal occupation attach.** A curated `core` subset of genuinely-universal IT soft skills is
-    linked to every real IT occupation as `relation_type="transversal"` (source `SOFTTAXO`, no weight) —
-    distinct from `demand` so the demand signal stays clean/auditable — exactly like `WefSource.ingest`.
-  * `screen_relevance=False`: curated, authoritative, deliberately non-IT-*specific* terms bypass the IT
-    gate (which would wrongly block "active listening"), like `SOFTSKILLS`/`WEF`.
-
-`SOFT_TAXONOMY` below is the single curated table. `alts` include surface variants and, where natural, the
-equivalent ESCO verb-phrase so the demand matcher can attribute posting evidence to these nodes.
+"""SOFTTAXO: a curated IT soft-skills taxonomy filling gaps ESCO/SOFTSKILLS/WEF leave. Skills-only, each
+self-classified into a soft sub-domain (in SELF_CLASSIFIED_SUBDOMAIN_SOURCES). Self-deduping (skips any
+candidate already named by another source, excluding its own rows so re-ingest is idempotent); a curated
+`core` subset attaches to every occupation as transversal edges. screen_relevance=False (curated, bypasses
+the IT gate, like WEF/SOFTSKILLS). SOFT_TAXONOMY below is the curated table.
 """
 from __future__ import annotations
 

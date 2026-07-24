@@ -1,12 +1,10 @@
-"""Graph export — materialize the unified concept graph for external tools and visualization.
-
-`run(formats=ALL_FORMATS)` (CLI: `run_pipeline.py --export [formats]`) builds the shared concept-graph
-model once (`graph.build_graph`) and serializes it to the requested targets, all read-only over `kb/` and
-writing only to `export/`:
-  * rdf     -> jobkb.ttl     (RDF/OWL Turtle: SKOS concepts + a light JobKB ontology; reasoner-ready)
-  * graphml -> jobkb.graphml (Gephi / Cytoscape / yEd)
-  * json    -> jobkb.json    (nodes/edges for Neo4j / web viz)
-  * viz     -> jobkb.html    (self-contained interactive backbone overview)
+"""Graph export: build the concept graph once (graph.build_graph) and serialize to the requested targets,
+read-only over kb/, writing to export/. Formats:
+  rdf     -> jobkb.ttl        (RDF/OWL Turtle, SKOS + a light JobKB ontology)
+  graphml -> jobkb.graphml    (Gephi / Cytoscape / yEd)
+  json    -> jobkb.json       (nodes/edges graph JSON)
+  viz     -> jobkb.html       (interactive backbone overview)
+  fullviz -> jobkb_full.html  (interactive full-graph viz)
 """
 
 from __future__ import annotations

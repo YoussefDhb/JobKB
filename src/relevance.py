@@ -1,22 +1,5 @@
-"""Relevance / noise gate — automatic IT-relevance + noise screening at ingest.
-
-Every pluggable `StructuredSource` (SFIA, CSO, future scraped postings) is screened here
-*before* its rows are written, so noise never enters the KB. Two checks per incoming
-skill/occupation:
-
-1. **Structural noise** — malformed / fragment / math-notation labels (deterministic).
-2. **IT-relevance** — a contrastive embedding test (max cosine to an IT anchor space vs. to a
-   non-IT anchor space, using the shared bge-m3 embedder), with the mDeBERTa NLI verifier as a
-   backstop. *Lenient / precision-first on blocking*: an item is blocked as non-IT only when the
-   embedding says it is far from IT **and** NLI agrees it isn't IT — anything borderline is kept
-   and logged. Fail-open: if the models can't load (or TF-IDF fallback), only structural noise is
-   blocked (never drop valid data on an infrastructure failure).
-
-Blocked (and near-miss borderline) decisions are logged to `kb/blocked_entities.csv`, keyed by
-source (idempotent per re-ingest), so the gate is fully auditable with no human in the loop.
-
-Built-in taxonomies (ESCO/ISCO/ONET/NOC/ROME) bypass this — they are already IT-scoped by
-authoritative code filters and do not go through `StructuredSource.ingest`.
+"""Relevance / noise gate: screens every pluggable StructuredSource at ingest, before rows are written.
+Two checks: (1) structural noise (2) IT-relevance via a contrastive bge-m3 test
 """
 
 from __future__ import annotations
@@ -39,9 +22,7 @@ _ANCHOR_CACHE = {}          # kind -> (it_matrix, nonit_matrix)
 
 
 def is_structural_noise(label: str) -> bool:
-    """Deterministic junk detector (shared with source-specific cleaners). Flags empty labels,
-    labels with no letters (pure numbers/symbols), leading-bracket fragments, and math-list
-    notation — but keeps real tech tokens like ".NET Framework" and "C++"."""
+    """True if `label` is a structural junk / malformed string (not a real skill/occupation label)."""
     label = (label or "").strip()
     if not label or not re.search(r"[A-Za-z]", label):
         return True
@@ -50,7 +31,6 @@ def is_structural_noise(label: str) -> bool:
     return bool(_JUNK.search(label))
 
 
-# --------------------------------------------------------------------------------------
 # Soft-branch IT-relevance filter (curated). O*NET "Abilities" and ESCO's broad transversal
 # collection dragged psychometric / physical / non-IT-life-skill entries into the soft branch
 # (Far Vision, Finger Dexterity, Perceptual Speed, "apply hygiene standards", "maintain physical

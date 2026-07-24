@@ -1,24 +1,5 @@
-"""LLM-powered enrichment (pillar 3) — HuggingFace, auto-validated (pillar 4).
-
-Uses a HuggingFace generative LLM to make the KB more *complete* without sacrificing *reliability*:
-
-  * **T1 descriptions** — concise, factual definitions for occupations and emerging/niche skills that
-    have none (grounded on label + taxonomy context + any Wikidata description).
-  * **T2 fill `hard_soft`** — classify skills missing the hard/soft flag, via the already-loaded
-    mDeBERTa as a **zero-shot** classifier (no API cost).
-  * **T3 inferred links** — occupation→skill relations the demand data missed, chosen from the
-    *existing* KB skill vocabulary (never invented) and NLI-verified.
-  * **T4 emerging tech** — link emerging skills to demanding occupations, and add genuinely-new
-    emerging tech/roles **only when a real Wikidata QID confirms them** (reuses `wikidata`).
-
-Because the KB is built with **no human in the loop**, every LLM output is validated before it touches
-the graph — the IT-relevance gate (`relevance`) + the mDeBERTa NLI verifier (`align.verify`) — marked
-with provenance (`source="LLM"`, `description_source="llm"`, `relation_type="llm_inferred"`), and
-**never overwrites** a source/curated value. Generation is **snapshotted** (`resources/LLM/retrieved/`)
-so re-runs are offline and make zero API calls (important on the HF free tier). The client is
-API-primary (HF Inference Providers) with an optional local fallback, and **fail-open** (offline / no
-credits → the task is skipped, the build still succeeds).
-"""
+"""LLM enrichment (HuggingFace, auto-validated). Four tasks: T1 descriptions, T2 hard_soft (taxonomy-
+derived), T3 inferred occ->skill links, T4 Wikidata-confirmed emerging skills."""
 
 from __future__ import annotations
 
@@ -33,9 +14,7 @@ from . import config as C
 from . import common as K
 
 
-# ==========================================================================================
 # Snapshot cache (offline-first: every generation is cached by task+key, so re-runs cost nothing)
-# ==========================================================================================
 def _load_snapshot() -> dict:
     snap = {}
     if os.path.isfile(C.LLM_SNAPSHOT_CSV):
@@ -59,9 +38,7 @@ def _hash(s: str) -> str:
     return hashlib.sha1(s.encode("utf-8")).hexdigest()[:12]
 
 
-# ==========================================================================================
 # LLM client: HF Inference Providers (primary) -> local transformers (optional) -> None (fail-open)
-# ==========================================================================================
 class LLMClient:
     def __init__(self):
         self.mode = None
@@ -131,9 +108,7 @@ class LLMClient:
             return None
 
 
-# ==========================================================================================
 # JSON parsing (tolerant: models sometimes wrap JSON in prose or code fences)
-# ==========================================================================================
 _JSON_OBJ = re.compile(r"\{.*\}", re.S)
 
 
@@ -162,9 +137,7 @@ def _clean_desc(label: str, desc: str) -> str:
     return d
 
 
-# ==========================================================================================
 # Validation (pillar 4): the mDeBERTa NLI verifier grounds/gates every LLM output.
-# ==========================================================================================
 class Validator:
     def __init__(self):
         from .align.verify import Verifier
@@ -200,9 +173,7 @@ class Validator:
         K.write_csv(C.LLM_REJECTED_CSV, C.LLM_REJECTED_FIELDS, rows)
 
 
-# ==========================================================================================
 # Context builders (ground generation on the existing KB, not the model's memory alone)
-# ==========================================================================================
 def _domain_label(subtype):
     from . import hierarchy as H
     cat = H.CATEGORIES.get(subtype)
@@ -258,9 +229,7 @@ def _first_sentence(text, maxlen):
     return (cut[:dot + 1] if dot > 40 else cut).strip()
 
 
-# ==========================================================================================
 # T1 — generate descriptions for occupations + emerging/niche skills lacking one
-# ==========================================================================================
 def _needs_desc(row):
     return not (row.get("description") or "").strip()
 
@@ -301,20 +270,14 @@ def _task_descriptions(client, snap, validator):
             "rejected": rejected, "failed": failed}
 
 
-# ==========================================================================================
 # T2 — fill missing hard_soft, coherently, from the taxonomy (a skill's category -> domain -> TYPE
 # is the authoritative hard/soft signal). Deterministic, free, and consistent with the hierarchy —
 # more reliable than an LLM guess. Genuinely ambiguous residual categories are cross-checked by NLI.
-# ==========================================================================================
 _AMBIGUOUS_CATS = {"other_hard", "knowledge_general"}
 
 
 def _task_hardsoft(validator, snap):
-    """Fill any empty `hard_soft` deterministically from the taxonomy: a skill's category belongs to a
-    domain, and a domain is hard or soft, so `hard_soft` is a pure function of `it_subtype`
-    (`hierarchy.skill_type`). `merge` now applies this same rule authoritatively, so this task is a
-    safety net; it never guesses. (An earlier NLI zero-shot on the catch-all categories was removed —
-    it mislabeled clearly-technical skills like "Nvidia CUDA"/"JPEG 2000" as soft.)"""
+    """Fill missing hard_soft on unified skills from taxonomy placement, optionally NLI-validated."""
     from . import hierarchy as H
     skl = K.read_all(C.UNIFIED_SKILLS_CSV)
     targets = [r for r in skl if not (r.get("hard_soft") or "").strip()
@@ -338,11 +301,9 @@ _LINK_SYS = (
 )
 
 
-# ==========================================================================================
 # T3 — infer missing occupation->skill links (embedding shortlist -> LLM picks -> NLI-validated).
 # Bounded to emerging roles + occupations with sparse relations. Skills come from the EXISTING KB
 # vocabulary only (never invented). Written as relation_type="llm_inferred" (source LLM), additive.
-# ==========================================================================================
 def _link_targets(occ_raw):
     rels = K.read_all(C.OCC_SKILL_REL_CSV)
     from collections import Counter as _C
@@ -413,11 +374,9 @@ _EMERGE_SYS = (
 )
 
 
-# ==========================================================================================
 # T4 — emerging tech: propose new tech/roles absent from the KB, keep ONLY those a real Wikidata QID
 # confirms (reuses the anchoring), add as source="LLM" nodes (skills classified by the hierarchy;
 # roles ISCO-attached downstream). No skill->skill edges. Reliability via external confirmation.
-# ==========================================================================================
 def _task_emerging(client, snap, validator):
     from . import wikidata as W
     from . import hierarchy as H
@@ -469,13 +428,9 @@ def _task_emerging(client, snap, validator):
     return {"proposed": len(names), "new_candidates": len(new), "added_skills": len(skl_rows)}
 
 
-# ==========================================================================================
 # Apply snapshotted enrichment onto the unified concept layer (called by merge.py — idempotent).
-# ==========================================================================================
 def apply_enrichment(rows, kind):
-    """Fill `description`/`description_source` and (skills) `hard_soft` on unified `rows` from the LLM
-    snapshot, ONLY where still empty — so LLM values never overwrite source/Wikidata data and a
-    standalone re-merge keeps them. No-op if the snapshot is absent."""
+    """Apply cached LLM enrichment (descriptions, hard_soft) to unified occupations or skills."""
     snap = _load_snapshot()
     if not snap:
         return rows
@@ -493,9 +448,7 @@ def apply_enrichment(rows, kind):
     return rows
 
 
-# ==========================================================================================
 # Orchestration
-# ==========================================================================================
 ALL_TASKS = ("descriptions", "hardsoft", "links", "emerging")
 
 
@@ -543,8 +496,7 @@ def run(tasks=ALL_TASKS) -> dict:
 
 
 def _integrate(added_nodes=False):
-    """Weave enrichment back into the KB. Descriptions/hard_soft/links only need a re-merge; new
-    Wikidata-confirmed skill nodes additionally need hierarchy placement + alignment before merge."""
+    """Re-run hierarchy -> align -> merge to integrate any new LLM nodes into the KB."""
     if added_nodes:
         from . import hierarchy
         from .align import run as align_run

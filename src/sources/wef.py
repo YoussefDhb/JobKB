@@ -1,27 +1,8 @@
-"""WEF source — World Economic Forum Global Skills Taxonomy (2021) + Education 4.0.
-
-`resources/OTHERS/en/Soft-skills/` holds three authoritative WEF taxonomies (Reskilling Revolution
-2030): `Global-Skills-Taxonomy.csv`, `Skills-Taxonomy-Competencies.csv`, `Education4.0.csv`. Each is
-hierarchical (Category → Sub-Category → Skill Group → Skill) and heavily oriented to **soft skills**
-("Attitudes": self-management, working-with-others, leadership; plus cognitive problem-solving) — a
-primary objective of JobKB.
-
-We exploit them two ways:
-
-  1. **Structured soft-skill vocabulary**: the in-scope soft/cognitive leaves (physical/technology/
-     management/language/marketing/civic-ethics branches are dropped as out-of-scope or redundant) are
-     ingested as soft skills, each **self-classified** into one of the five WEF-aligned soft
-     sub-domains added to `hierarchy.SUBDOMAINS` (`soft_cognitive`, `soft_self_management`,
-     `soft_collaboration`, `soft_leadership`, `soft_learning`) via `_WEF_GROUP_SUBDOMAIN`. This is what
-     gives the KB's soft branch real internal structure from an authoritative standard.
-  2. **Transversal occupation attach**: the WEF treats a core of these as *universal* future-of-work
-     skills, so `CORE_TRANSVERSAL` leaves are linked to **every real IT occupation** as
-     `relation_type="transversal"` (source=WEF, no weight) — distinct from `demand` so the demand
-     signal stays clean, auditable and removable.
-
-Contributes **skills only** (no occupations). Being a curated authoritative list of deliberately
-non-IT-*specific* terms, it sets `screen_relevance=False` to bypass the semantic IT gate (which would
-wrongly block transversal terms), exactly like SOFTSKILLS and the code-filtered built-in taxonomies.
+"""WEF Global Skills Taxonomy (2021) + Education 4.0. Two uses: (1) a structured soft-skill vocabulary —
+in-scope soft/cognitive leaves are ingested as soft skills, each self-classified into one of five
+WEF-aligned soft sub-domains (giving the soft branch real structure); (2) transversal attach — the core
+universal skills link to every IT occupation as relation_type="transversal" (distinct from demand).
+Skills-only; screen_relevance=False (bypasses the IT gate, like SOFTSKILLS).
 """
 
 from __future__ import annotations

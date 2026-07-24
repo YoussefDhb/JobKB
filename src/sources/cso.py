@@ -1,27 +1,8 @@
-"""CSO source — a curated IT subset of the Computer Science Ontology, version 3.5.
-
-CSO 3.5 is an auto-generated taxonomy of ~14.6k computer-science *research topics* (166k RDF
-triples in `resources/CSO/en/CSO.3.5.csv`). Far broader — and deeper/noisier — than a
-jobs/skills KB needs, so we keep only the IT-relevant, **shallow** part as knowledge-type
-skills:
-
-- **Curation:** breadth-first from `config.CSO_ROOTS` (ordered specific->generic) over
-  `superTopicOf`, down to `CSO_MAX_DEPTH`, capped at `CSO_MAX_TOPICS`. Each kept topic inherits
-  the **sub-domain of the IT root branch it descends from** (`config.CSO_BRANCH_SUBDOMAIN`) —
-  so CSO topics spread across ai_ml / security / data / networks / programming instead of a
-  flat "general knowledge" dump. SFIA/CSO being in `SELF_CLASSIFIED_SUBDOMAIN_SOURCES`, the
-  hierarchy stage keeps that branch placement.
-- **De-noising:** near-duplicates are collapsed (CSO's `preferentialEquivalent` canonical +
-  a normalized key that folds "X" / "X approach" / plurals), over-long phrases (>6 words) are
-  dropped, and `relatedEquivalent` synonyms become alt-labels.
-
-Kept topics align/merge with the existing skill vocabulary and reach occupations transitively.
-The topic hierarchy is used only to *select/classify* the subset, not persisted as skill->skill
-edges (the KB places skills under sub-domains, not under other skills).
-
-CSV quirks handled: topic slugs are URL-encoded (`%2C`, `%28`); label objects carry a Turtle
-`@en` tag and trailing ` .` past the closing quote, so rows are parsed with the lenient stdlib
-`csv` reader.
+"""CSO 3.5: a curated IT subset of the Computer Science Ontology (~14.6k CS research topics). Keeps only
+the shallow IT-relevant part as knowledge skills: BFS from CSO_ROOTS over superTopicOf to CSO_MAX_DEPTH,
+capped, each topic classified by its root branch (CSO_BRANCH_SUBDOMAIN). De-noised (canonical
+preferentialEquivalent + a fold key, drop >6-word phrases; relatedEquivalent -> alt-labels). The topic
+hierarchy is used only to select/classify, never persisted as skill->skill edges.
 """
 
 from __future__ import annotations

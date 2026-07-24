@@ -1,7 +1,5 @@
-"""Shared helpers for the JobKB pipeline (migrated from the old jobkb_common.py).
+"""Shared helpers for the JobKB pipeline """
 
-Deterministic IDs, label normalization, idempotent CSV IO, provenance logging.
-"""
 
 from __future__ import annotations
 import csv
@@ -106,13 +104,7 @@ def _write_all(path, fieldnames, rows):
 
 
 def replace_source_rows(path, fieldnames, source, new_rows):
-    """Idempotent per-source write: drop this source's old rows, keep others, append new.
-
-    Fully-identical duplicate rows within this source's contribution are collapsed (hygiene): a
-    source occasionally emits the same relation/edge twice (e.g. a skill reached via two O*NET
-    elements), and identical rows carry no extra information. Order-preserving; a no-op for entity
-    tables where `entity_id` already makes every row unique.
-    """
+    """Idempotent, source-scoped write: drop all rows for `source` and append `new_rows`."""
     existing = _read_all(path)
     kept = [r for r in existing if r.get("source") != source]
     seen, deduped = set(), []
@@ -130,8 +122,7 @@ def write_csv(path, fieldnames, rows):
 
 
 def upsert_labels(rows):
-    """Additive, idempotent label write. Several stages contribute labels for the
-    same source, so we merge on the full identity key instead of replacing by source."""
+    """Add new label rows to the labels table, de-duplicating against existing rows."""
     existing = _read_all(C.LABELS_CSV)
     seen, out = set(), []
     for r in existing + list(rows):

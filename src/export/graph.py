@@ -1,18 +1,7 @@
-"""Build the unified CONCEPT graph from `kb/` — the single in-memory model every serializer consumes.
-
-The KB stores per-source entities (`occupations.csv`, `skills.csv`) plus a deduplicated concept layer
-(`unified_*.csv`). Hierarchy and occupation→skill edges reference the per-source **entity ids**; this
-module remaps each real endpoint to its **unified concept** via `member_entity_ids`, while the taxonomy
-tiers (type/domain/category) and ISCO group nodes — which are not merged — keep their own entity id. The
-result is the clean, deduplicated graph the audit verified dangle-free (0 unmapped entities, 0
-unresolvable edge endpoints).
-
-Returns `(nodes, edges)`:
-  node = {id, kind, label_en, label_fr, alt_en[list], alt_fr[list], description, hard_soft, it_subtype,
-          isco_code, sources[list], wikidata_qid, wikidata_url, wikidata_relation}
-  edge = {source, target, type, subtype, weight, prov}
-Wikidata anchors ride on the concept nodes (qid/url/relation) rather than as leaf nodes; the RDF
-serializer emits them as `skos:exactMatch`/`closeMatch` triples to real Wikidata IRIs.
+"""Build the deduplicated CONCEPT graph the serializers consume. Hierarchy/relation edges reference
+per-source entity ids; each real endpoint is remapped to its unified concept via member_entity_ids,
+while taxonomy tiers and ISCO nodes (not merged) keep their own id. Returns (nodes, edges); Wikidata
+anchors ride on the concept nodes (qid/url/relation), emitted by the RDF serializer as skos mappings.
 """
 
 from __future__ import annotations

@@ -1,15 +1,7 @@
-"""Graph logical-consistency validator (objective 1).
-
-A read-only, model-free suite of invariants that certifies the knowledge graph is logically sound —
-the guarantees the build is *supposed* to uphold, asserted explicitly rather than assumed. `check()`
-returns an ordered list of `(name, ok, detail)`; `qa()` prints a one-line summary and any failures, so
-**every build self-certifies**. Nothing here modifies `kb/`.
-
-The suite deliberately re-checks a few properties `qa()` already reports (dangling edges, orphans,
-leakage) so it stands alone as the authoritative consistency certificate, and adds the properties that
-were previously only assumed: acyclicity, single-parent, `hard_soft`↔taxonomy, no skill→skill edges,
-ISCO backbone reachability, relation endpoint type-correctness, unified-concept integrity, and
-id-uniqueness. Duplicate relations are reported (total rows vs unique triples).
+"""Graph logical-consistency validator: a read-only, model-free suite of invariants (acyclicity,
+single-parent, hard_soft<->taxonomy, no skill->skill edges, ISCO reachability, relation endpoint types,
+unified-concept integrity, id uniqueness, ...). check() returns ordered (name, ok, detail) rows; it also
+runs inside qa() so every build self-certifies. Nothing here modifies kb/.
 """
 
 from __future__ import annotations

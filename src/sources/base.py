@@ -1,29 +1,14 @@
-"""Source plugin base classes.
+"""Source plugin base classes. A `Source` ingests one dataset into the per-source, idempotent CSV layer;
+because every write goes through `common.replace_source_rows` (keyed by the source tag), a source only
+touches its own rows, so sources can be added/removed without rebuilding the others.
 
-A `Source` knows how to ingest one data source into the KB's per-source, idempotent CSV
-layer (occupations / skills / occupation-skill relations / labels / provenance), already
-standardized to the KB schema. Because every write goes through
-`common.replace_source_rows` (keyed by the `source` tag), a source only ever touches its
-own rows — so a new source can be added or removed without rebuilding the others.
+Subclass `StructuredSource` and implement the `occupations()`/`skills()`/`relations()` generators
+returning normalized dicts; the base mints ids, builds labels, applies English-primary standardization
+and persists. `ExtractionSource` adds a text->records extraction step (stub for an HF extractor).
 
-Subclass `StructuredSource` for a dataset with structured fields: implement the
-`occupations()`, `skills()`, `relations()` generators returning plain normalized dicts;
-the base mints deterministic ids, builds label rows, applies English-primary
-standardization (`label_language_status`), and persists everything. Downstream stages then
-enrich each source uniformly: `hierarchy` classifies skills (hard/soft + IT sub-domain),
-`attach` assigns an ISCO group (NLI-verified) when the source has no native code, and
-`merge` folds duplicates into unified concepts — so a new source ends up structurally
-identical to the built-in taxonomies.
-
-`ExtractionSource` adds a text->records extraction step for unstructured inputs (e.g.
-scraped job postings); the extractor itself is a documented stub to be wired to an HF
-skill-extraction model.
-
-Normalized record shape (all keys optional unless noted):
-  occupation: {source_id (required, unique in source), label_en, label_fr,
-               alt_en:[...], alt_fr:[...], desc_en, desc_fr, isco_code, source_code}
-  skill:      {source_id (required), label_en, label_fr, alt_en:[...], alt_fr:[...],
-               desc_en, desc_fr, hard_soft ("hard"|"soft"|""), method, skill_type, it_subtype}
+Normalized record shape (keys optional unless noted):
+  occupation: {source_id (required), label_en, label_fr, alt_en, alt_fr, desc_en, desc_fr, isco_code, source_code}
+  skill:      {source_id (required), label_en, label_fr, alt_en, alt_fr, desc_en, desc_fr, hard_soft, method, skill_type, it_subtype}
   relation:   {occupation_source_id (required), skill_source_id (required), relation_type}
 """
 

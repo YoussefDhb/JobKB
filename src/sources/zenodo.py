@@ -1,23 +1,8 @@
-"""ZENODO source — Zenodo 3906955 (Montandon et al. 2019): IT-developer job postings.
-
-`resources/OTHERS/en/zenodo/jobs_complete.csv` is ~21k Stack Overflow job postings (we take the
-~17.9k **English** ones) mined by the paper *"What Skills do IT Companies Look for in New
-Developers?"*. Each posting carries a clean normalized `roles` field (14 IT developer types), an
-extracted `hard_skills` list, an extracted `soft_skills` list, and `hl_hard_skills` (each hard skill
-mapped to one of 6 high-level categories, tabulated in the companion `high-level-hard-skills.csv`).
-
-A **hybrid** source, exactly like DATAJOBS (no salaries):
-  1. **Harvest** the few genuinely-absent, frequent IT tools as **new skill nodes** — gate-screened,
-     self-classified via the high-level category -> sub-domain.
-  2. **Demand relations**: aggregate `(role, skill)` co-occurrence into weighted `demand`
-     occupation->skill edges — for BOTH hard skills (resolved via the augmented matcher / harvest)
-     and the curated SOFTSKILLS vocabulary (resolved from the posting's extracted `soft_skills`).
-     This is what links the noun-form soft skills to occupations by real posting evidence.
-
-Endpoints resolve against the CURRENT kb/: the 14 roles map to existing occupations (13 directly;
-the one gap — back-end developer — is added via EMERGING and resolves once that source is ingested),
-and skills via the same augmented matcher DATAJOBS uses (exact/alias key + paren-acronym +
-vendor/suffix strip; never substring). Contributes skills-only (`contributes_occupations=False`).
+"""ZENODO 3906955 (Montandon et al. 2019): ~17.9k English Stack Overflow postings with clean roles +
+extracted hard/soft skills. Hybrid like DATAJOBS: (1) harvests absent frequent tools as new skills
+(gate-screened, self-classified via the high-level category); (2) weighted demand edges for both hard
+skills and the SOFTSKILLS vocabulary (linking noun-form soft skills to occupations). Skills-only; roles
+resolve to existing occupations (the one gap, back-end developer, comes from EMERGING).
 """
 
 from __future__ import annotations

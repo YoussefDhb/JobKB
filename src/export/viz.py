@@ -1,11 +1,6 @@
-"""Self-contained interactive HTML overview of the KB graph.
-
-A full 11k-node render is unreadable, so this materializes the **navigable backbone** —
-skill types ↔ domains ↔ categories, the ISCO occupation tree, and occupations linked to their functional
-domain (~300 nodes) — with category nodes sized by how many skills they carry. Rendering is a small inline
-vanilla-JS canvas force layout (drag / pan / zoom / hover); the page embeds its own data and script, so it
-opens in any browser with **no server, no internet, no external library**. The heavy full graph lives in
-the GraphML/JSON/RDF exports for analytical tools.
+"""Self-contained interactive HTML views of the KB graph (no server, no internet, no external library).
+`write_html` renders the navigable backbone (~300 nodes) with an inline canvas force layout; `write_full_html`
+renders every node + edge with a Python-precomputed static layout so the browser runs no physics.
 """
 
 from __future__ import annotations
@@ -145,12 +140,10 @@ def write_html(nodes, edges, path):
     return {"viz_nodes": len(vnodes), "viz_edges": len(vedges)}
 
 
-# ==========================================================================================
 # FULL-graph HTML — every node + edge. The layout is precomputed in Python (a deterministic
 # clustered layout: domains fan out around the centre, each category is a sub-hub, its skills form a
 # phyllotaxis cloud, occupations sit on an outer ring by domain), so the browser runs NO physics — it
 # only pans/zooms/redraws a static scene, which keeps 11k nodes + 44k edges smooth everywhere.
-# ==========================================================================================
 _KIND_IDX = {"skill_type": 0, "skill_domain": 1, "skill_category": 2, "isco_group": 3,
              "occupation": 4, "skill": 5}
 

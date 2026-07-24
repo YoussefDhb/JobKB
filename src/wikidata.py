@@ -1,32 +1,5 @@
-"""Wikidata enrichment — anchor KB tech-skills and occupations to stable Wikidata QIDs.
-
-Wikidata is the KB's *connective tissue*: a general-purpose, richly-linked graph with stable QIDs
-we can anchor everything else to, giving free entity resolution for technologies, tools and
-companies that no occupation taxonomy provides. This module adds a **side table**
-(`kb/wikidata_links.csv`) mapping our unified concepts to verified QIDs — it creates **no** nodes
-or relations, so the core graph is untouched.
-
-Resolution is a **single batched SPARQL query per ~50 labels** that does label matching *and*
-class verification at once (QIDs are never hardcoded from memory — a guessed QID is often a
-person/film). A candidate item is accepted only when:
-  * our label equals the item's English label (`rdfs:label`, `match_method=exact`) or one of its
-    aliases (`skos:altLabel`, `match_method=alias`), AND
-  * its instance-of (`P31` then `P279*` closure) lands in a class allowlist — software /
-    programming language / library / framework / OS / database / hardware / company for skills;
-    profession / occupation for occupations — AND
-  * it is NOT a denied class (human / film / album / taxon / video game).
-Ties are broken by exact>alias, then by sitelink count (canonical items have more sitelinks).
-
-Batching keeps the whole enrichment to ~110 SPARQL queries (a few minutes) instead of thousands of
-per-label API calls, which the Action API rate-limits. Every resolution — including verified
-*unresolved* — is snapshotted to `resources/WIKIDATA/retrieved/resolutions.csv`, flushed after each
-chunk, so a re-run is fully offline/reproducible and an interruption resumes from the last flush.
-A failed query leaves its labels *inconclusive* (not cached) so a transient error never poisons the
-snapshot with a false 'unresolved'. All HTTP is polite (descriptive User-Agent, paced, backed-off,
-fail-open).
-
-The provided `ESCO_v1.2.1-wikidata.csv` is a noisy export whose QIDs were lost; its one clean
-signal — programming-language synonyms — broadens matching for language skills (e.g. `golang`→Go).
+"""Wikidata enrichment: anchor KB tech-skills and occupations to stable QIDs in a side table
+(`kb/wikidata_links.csv`) — no new nodes/relations. Every resolution is snapshotted so re-runs are offline/resumable.
 """
 
 from __future__ import annotations
@@ -46,9 +19,7 @@ from . import common as K
 _CHUNK = 50
 
 
-# ------------------------------------------------------------------------------------------
 # HTTP (stdlib urllib; polite + resilient + fail-open)
-# ------------------------------------------------------------------------------------------
 def _http_get(url: str, params: dict) -> dict | None:
     """GET a JSON endpoint with retries/backoff. Returns parsed JSON, or None on failure."""
     qs = urllib.parse.urlencode(params)
@@ -90,9 +61,7 @@ def _http_get(url: str, params: dict) -> dict | None:
     return None
 
 
-# ------------------------------------------------------------------------------------------
 # Snapshot (offline-first cache of every resolution, keyed by normalized label + kind)
-# ------------------------------------------------------------------------------------------
 def _load_snapshot() -> dict:
     snap = {}
     if os.path.isfile(C.WIKIDATA_SNAPSHOT_CSV):
@@ -112,9 +81,7 @@ def _save_snapshot(snap: dict) -> None:
             w.writerow({k: r.get(k, "") for k in C.WIKIDATA_SNAPSHOT_FIELDS})
 
 
-# ------------------------------------------------------------------------------------------
 # Provided CSV: programming-language synonyms (the one clean signal in the noisy export)
-# ------------------------------------------------------------------------------------------
 def _language_seed() -> dict:
     """norm(language-or-synonym) -> canonical language name, from the resolved (non-QID) rows."""
     seed = {}
@@ -135,9 +102,7 @@ def _language_seed() -> dict:
     return seed
 
 
-# ------------------------------------------------------------------------------------------
 # Candidate selection (reuse the already-built unified concepts)
-# ------------------------------------------------------------------------------------------
 def _skill_candidates():
     out = []
     for r in K.read_all(C.UNIFIED_SKILLS_CSV):
@@ -160,10 +125,7 @@ def _occupation_candidates():
 
 def _domain_candidates():
     """The 10 faceted-taxonomy functional-domain nodes (hierarchy.DOMAINS). Each domain node stores its
-    domain KEY in `it_subtype` (e.g. dom_software); we resolve it via curated English label PROBES
-    (WIKIDATA_DOMAIN_PROBES) rather than its composite display label. Returns:
-      items  = [(domain_id, probe_label), ...]  (one row per probe; probes share the domain_id)
-      probes = {domain_id: [probe_label, ...]}  (ordered, for best-probe selection in _domain_links)
+    domain KEY in `it_subtype` (e.g. dom_software)
     """
     items, probes = [], {}
     for r in K.read_all(C.SKILLS_CSV):
@@ -180,9 +142,7 @@ def _domain_candidates():
     return items, probes
 
 
-# ------------------------------------------------------------------------------------------
 # Batched SPARQL resolution: label-match + class-verification in one query per ~50 labels
-# ------------------------------------------------------------------------------------------
 def _sparql_escape(s: str) -> str:
     return s.replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ").replace("\r", " ")
 
@@ -191,10 +151,7 @@ def _resolve_chunk(items, allow_classes, seed, field_classes=()):
     """items: list of (norm, label). One SPARQL query resolves all of them. Returns
     (resolved, ok): resolved = {norm: best-resolution-dict}; ok = whether the query succeeded
     (if False, callers keep the labels inconclusive instead of caching a false 'unresolved').
-
-    `allow_classes` are matched by P31/P279* closure (bounded concrete-tech roots only); `field_classes`
-    (abstract IT fields, and profession/occupation) by cheap DIRECT P31 — closing over e.g. 'academic
-    discipline' or 'profession' (huge instance sets) would time the query out."""
+    """
     # Map each query string -> the KB norm it serves (KB label + optional CSV-seed canonical name).
     str2norm = {}
     for norm, label in items:
@@ -289,8 +246,7 @@ _NONIT_DESC = [re.compile(p, re.I) for p in C.WIKIDATA_NONIT_DESC_PATTERNS]
 
 
 def _is_nonit_desc(desc: str) -> bool:
-    """True if a fetched Wikidata description reads as a non-tech same-name homonym (settlement,
-    periodical, creative work, place) — a precision guard applied when building the side table."""
+    """True if a fetched Wikidata description reads as a non-tech same-name homonym """
     d = (desc or "").strip()
     return bool(d) and any(p.search(d) for p in _NONIT_DESC)
 
@@ -301,15 +257,11 @@ def _relation(match_method: str) -> str:
     return "skos:exactMatch" if (match_method or "").startswith("exact") else "skos:closeMatch"
 
 
-# ------------------------------------------------------------------------------------------
 # Metadata pass: fetch description + aliases (en/fr) for the anchored QIDs, keyed BY QID (cheap).
 # Fills the snapshot so the enrichment is resumable and offline-reproducible like the resolution.
-# ------------------------------------------------------------------------------------------
 def _fetch_metadata(snap, checkpoint=None) -> int:
     """For every anchored QID lacking metadata, fetch en/fr `schema:description` + `skos:altLabel`
-    in ~50-QID batches. Updates wd_description / wd_aliases_en / wd_aliases_fr on every snapshot row
-    carrying that QID. Resumable (skips QIDs already carrying a description or aliases). Returns the
-    network-query count."""
+    in ~50-QID batches. """
     # QID -> the snapshot rows that reference it, restricted to anchors without metadata yet.
     need = {}
     for key, r in snap.items():
@@ -449,9 +401,7 @@ def run(refresh: bool = False) -> dict:
             "domains": n_dom, "high": n_high}
 
 
-# ------------------------------------------------------------------------------------------
 # In-graph integration: join the side table onto the unified concept layer (idempotent, offline).
-# ------------------------------------------------------------------------------------------
 def _links_by_uid() -> dict:
     """unified_id -> side-table row (only anchored). Empty dict if the side table is absent."""
     idx = {}
@@ -466,10 +416,7 @@ _PAREN = re.compile(r"\([^)]*\)")
 
 
 def _clean_aliases(existing_norm, raw):
-    """Hygiene-filter Wikidata aliases before merging into a concept's alt_labels: drop duplicates
-    (of the primary/existing labels, case-insensitive), parenthetical near-duplicates
-    (e.g. "Python (software)"/"Python (language)" -> reduce to an existing label), over-long
-    phrases, and structural noise; cap the count. Keeps the alt-label set useful, not flooded."""
+    """Hygiene-filter Wikidata aliases before merging into a concept's alt_labels"""
     from . import relevance  # lazy: keep merge model-free at import
     out, out_norm = [], set()
     for a in (p.strip() for p in (raw or "").split(" | ")):
@@ -492,9 +439,7 @@ def _clean_aliases(existing_norm, raw):
 
 
 def enrich_rows(rows, kind):
-    """Mutate unified `rows` in place: attach wikidata_qid/url/description and merge cleaned Wikidata
-    aliases into alt_labels_en/fr. Idempotent (re-merge safe); a no-op that just blanks the columns
-    when the side table is absent. Called by both `integrate()` and `merge.run()`."""
+    """Mutate unified `rows` in place."""
     idx = _links_by_uid()
     for r in rows:
         link = idx.get(r.get("unified_id", ""))
@@ -520,9 +465,7 @@ def enrich_rows(rows, kind):
 
 
 def integrate():
-    """Weave the Wikidata side table into the concept layer by re-running the merge stage: it rebuilds
-    the unified tables from member rows (so alt_labels are clean, never carrying stale prior-run
-    aliases) and enriches them from the current side table via `enrich_rows`. Idempotent."""
+    """Weave the Wikidata side table into the concept layer by re-running the merge stage."""
     if not os.path.isfile(C.WIKIDATA_LINKS_CSV):
         return (0, 0)
     from . import merge  # lazy: avoid an import cycle (merge imports this module)

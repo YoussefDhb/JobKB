@@ -1,19 +1,7 @@
-"""Neutral skill + occupation taxonomy — a source-equal, faceted, graph-oriented ontology.
-
-Two connected structures share one **functional-domain** vocabulary:
-
-  * **Skills** — every skill from every source is placed in a 4-level tree
-        skill -> category -> domain -> type   (type = Hard / Soft)
-    22 fine **categories** roll up into 10 broad **domains**, which roll up into 2 **types**.
-  * **Occupations** — the authoritative ISCO-08 backbone (occupation -> unit -> minor -> sub-major ->
-    ICT root, built in `ingest/isco.py`) is enriched with a **functional-domain facet**: each real
-    occupation is also linked (`in_domain`) to one of the SAME 10 domain nodes, so the graph is
-    navigable end-to-end: `occupation <-> domain <-> category <-> skill`.
-
-Type/domain/category nodes are stored as `TAXONOMY` skill rows (markers in `esco_skill_type`, see
-`config.TAXONOMY_SKILL_MARKERS`) so the graph is self-contained; skill-ontology edges are tagged
-`SKILL_ONTO`, the occupation facet `DOMAIN_FACET`. The ESCO transversal collection is still added as the
-soft-skill vocabulary.
+"""Faceted skill + occupation taxonomy over a shared functional-domain vocabulary.
+Skills: skill -> category -> domain -> type(2 hard/soft). Occupations: the ISCO-08 backbone
+plus an in_domain facet linking each occupation to one of the SAME 10 domain nodes, so the graph is
+navigable occupation <-> domain <-> category <-> skill.
 """
 
 from __future__ import annotations

@@ -1,7 +1,4 @@
 """Typed state schemas for the LangGraph agent (controller + reflective workers).
-
-Kept deliberately small: the heavy objects (LLM client, NLI verifier, embedder, KB rows) live in a
-`tools.Toolbox` the node closures capture — only the per-run *decision* state flows through the graph.
 """
 
 from __future__ import annotations

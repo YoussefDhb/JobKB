@@ -1,10 +1,6 @@
-"""RDF/OWL (Turtle) serialization of the concept graph — SKOS concepts + a light JobKB ontology.
-
-Emits a TBox (classes, disjointness, object/datatype properties with domain/range) and the ABox
-(every concept with skos:prefLabel/altLabel/definition, jobkb datatype attributes, and the typed edges).
-The ontology is authored so the output is **reasoner-ready** (Occupation ⊓ Skill = ⊥; requiresSkill has
-domain Occupation / range Skill; inDomain range SkillDomain); a lightweight self-check then verifies those
-axioms hold in the emitted data — the substance of a consistency check without a Java reasoner.
+"""RDF/OWL Turtle serialization: SKOS concepts + a light JobKB ontology (TBox with class disjointness and
+property domain/range, then the ABox). Authored reasoner-ready; a lightweight self_check() verifies the
+axioms hold in the emitted data (the substance of a consistency check without a Java reasoner).
 """
 
 from __future__ import annotations

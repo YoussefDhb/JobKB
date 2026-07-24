@@ -1,15 +1,5 @@
-"""Agentic enrichment (pillar 3, LangGraph) — makes the KB's "HF-only agentic" property real.
-
-The existing `src/llm.py` is *LLM-as-a-function*: fixed tasks, one shot each, no reflection. This package
-reframes enrichment as a genuine **agent**: a controller assesses the KB and prioritizes gaps, then
-dispatches reflective workers that **propose -> verify -> reflect/retry -> commit** using the KB's own
-high-precision tools (bge-m3, mDeBERTa NLI, Wikidata). The LLM is one *optional, budget-bounded* tool;
-the deterministic verifiers drive control, so the agent stays useful even when the HF generative backend
-is dead (the anchor worker needs none). Commits go to the *same* `generations.csv` snapshot /
-`llm_inferred` relations the pipeline already integrates, so nothing downstream changes.
-
-Entry point: `run(gaps=ALL_GAPS)` (CLI: `run_pipeline.py --agent [gaps]`). Fail-open and snapshot-
-resumable like the rest of the enrichment. Writes a human-readable report to `agent/report.md`.
+"""Agentic enrichment (LangGraph): a controller assesses the KB and dispatches reflective workers that
+loop propose -> verify -> reflect/retry -> commit over the KB's own tools (bge-m3, NLI, Wikidata).
 """
 
 from __future__ import annotations

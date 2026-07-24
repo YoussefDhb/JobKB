@@ -1,21 +1,8 @@
-"""DATAJOBS source — lukebarousse/data_jobs (785k postings): tool harvest + large-scale demand.
-
-`resources/OTHERS/en/data_jobs.csv` is 785,741 real job postings across 10 data/IT roles, each with a
-pre-extracted, normalized `job_skills` list and a `job_type_skills` category grouping. We exploit it
-two ways (no salary — not needed):
-
-  1. **Harvest** the few genuinely-absent, high-frequency IT tools (e.g. databricks, matplotlib, dax,
-     golang) as **new skill nodes** — gate-screened (non-IT/office noise blocked) and self-classified
-     via `job_type_skills` category -> sub-domain.
-  2. **Demand relations**: aggregate `(role, skill)` co-occurrence over all postings into weighted
-     `demand` occupation->skill edges, keeping robust pairs (>= DATAJOBS_MIN_FREQ postings).
-
-Both endpoints are resolved against the CURRENT kb/: roles -> existing occupations, skills -> existing
-skills via an **augmented matcher** (exact/alias key PLUS parenthetical acronyms and vendor/suffix
-stripping, so short tokens like `gcp`/`power bi`/`kafka` match verbose KB labels — never substring
-matching, which would confuse e.g. `airflow` the tool with computational-fluid-dynamics airflow).
-Tokens that neither resolve nor get harvested simply drop out. Contributes skills-only
-(`contributes_occupations=False`, `needs_attach=False`).
+"""DATAJOBS: lukebarousse/data_jobs (785k postings, 10 data/IT roles, pre-extracted job_skills). Hybrid:
+(1) harvests absent high-frequency tools as new skills (gate-screened, self-classified via
+job_type_skills); (2) weighted demand edges from (role, skill) co-occurrence (>= DATAJOBS_MIN_FREQ).
+Endpoints resolve against the current kb/ via an augmented matcher (exact/alias key + paren-acronyms +
+vendor/suffix strip, never substring). Skills-only.
 """
 
 from __future__ import annotations

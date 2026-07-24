@@ -1,11 +1,4 @@
-"""Incremental source management — add or remove ONE source without a full rebuild.
-
-`add_source(name)` ingests only that source, aligns it against the existing entities,
-attaches its occupations to ISCO and re-derives the unified concepts — reusing the
-embedding cache so existing entities are never re-encoded. `remove_source(name)` deletes
-everything that source owns and repairs the graph, returning the KB to its prior state.
-Both rely on the per-source idempotency of the KB writes (`common.replace_source_rows`).
-"""
+"""Incremental source management — add or remove ONE source without a full rebuild."""
 
 from __future__ import annotations
 
@@ -18,8 +11,7 @@ from .sources import registry
 
 
 def _refresh_global_provenance():
-    """Incremental align/attach log stage provenance for only the focused slice; rewrite the
-    global ALIGNMENT/ATTACH provenance to reflect the whole KB (and drop focus references)."""
+    """Recompute provenance for the whole KB (after a source was added or removed)."""
     n_align = len(K.read_all(C.ALIGNMENTS_CSV))
     hier = K.read_all(C.HIERARCHY_CSV)
     n_attach = sum(1 for h in hier if h.get("source") in ("ATTACH", "ATTACH_LOWCONF"))
@@ -47,8 +39,7 @@ def add_source(name: str):
 
 
 def _prune_missing_refs():
-    """Drop hierarchy edges, alignment rows and occ-skill relations that reference entity
-    ids no longer present (after a source's rows were deleted) — keeps the graph consistent."""
+    """Drop any edges/relations that reference a now-missing occupation or skill."""
     occ_ids = {r["entity_id"] for r in K.read_all(C.OCCUPATIONS_CSV)}
     skl_ids = {r["entity_id"] for r in K.read_all(C.SKILLS_CSV)}
     node_ids = occ_ids | skl_ids

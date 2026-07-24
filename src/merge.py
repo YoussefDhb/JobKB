@@ -1,10 +1,4 @@
-"""Unified concept merge / de-duplication.
-
-Clusters occupations (and separately skills) into unified concepts by taking the
-connected components of the ``exactMatch`` alignment graph. Each unified concept
-carries an English-primary label (French secondary), merged synonyms, the hub ISCO
-code, and back-links to its source members (provenance preserved).
-"""
+"""Unified concept merge / de-duplication."""
 
 from __future__ import annotations
 import hashlib
@@ -69,10 +63,7 @@ def _majority(members, field):
 
 
 def _consensus_label(members, lang):
-    """Source-neutral primary label for a language: the most shared *preferred* label
-    across members (ties: most frequent normalized form, then shortest, then alphabetical).
-    Falls back to alternative labels only when no member has a preferred label in that
-    language (e.g. an all-ROME cluster for English). No source ranking."""
+    """Best source-authored label for a unified concept: the most common non-empty label in `lang`"""
     pref_field, alt_field = f"pref_label_{lang}", f"alt_labels_{lang}"
 
     def _vote(get_forms):
@@ -109,8 +100,7 @@ def _merged_alts(members, primary_en, primary_fr):
 
 
 def _member_description(members):
-    """Best source-authored description for a unified concept: the most common non-empty English
-    description among members (ties: longest). This is the primary, most-trusted description."""
+    """Source-neutral consensus description for a unified concept: the most common non-empty EN desc."""
     vals = [(m.get("description_en") or "").strip() for m in members if (m.get("description_en") or "").strip()]
     if not vals:
         return ""
@@ -120,8 +110,7 @@ def _member_description(members):
 
 
 def _fill_descriptions(rows, kind):
-    """Description precedence: source (member) -> Wikidata -> LLM. `description` is already set to the
-    member description during row build; here fill remaining empties from Wikidata, then LLM."""
+    """Fill empty EN descriptions from Wikidata + LLM enrichment, only where still empty (never overwrites)."""
     for r in rows:
         if not (r.get("description") or "").strip() and (r.get("wikidata_description") or "").strip():
             r["description"] = r["wikidata_description"]

@@ -1,10 +1,4 @@
 """Controller graph (LangGraph) — assess the KB, dispatch reflective workers, re-integrate.
-
-The controller is the "agentic" spine: an **assess** node builds the prioritized gap set, dedicated
-worker nodes run each requested gap's reflective subgraph (skipping gaps not asked for), and a
-**finalize** node weaves the results back into the concept layer (a re-merge, plus hierarchy + a
-focused re-align when the emerging worker added Wikidata-confirmed nodes). Every node closes over the
-single run-scoped `Toolbox`, so the heavy HF models load at most once.
 """
 
 from __future__ import annotations

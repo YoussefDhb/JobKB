@@ -1,23 +1,7 @@
-"""
-src/translate.py — Multilingual label completion (KB completeness pillar).
-
-Fills the empty ``primary_label_en/fr`` and ``alt_labels_en/fr`` cells on the unified tables so the KB
-is a complete bilingual resource, with **no human in the loop**. Quality-first ordering:
-
-  L1  Wikidata (authoritative, free): for rows carrying a QID, take @en/@fr ``rdfs:label`` + aliases.
-  L2  HuggingFace MT (local NLLB-200) with a **tech-term preservation guard** ("Docker"/"Python"/…
-      never Frenchified), each output **validated** — a lenient cross-lingual bge-m3 floor (src vs
-      output) plus structural filters (sentence-for-term, length, lost tech token).
-  L3  leave empty (fail-open) when MT is unavailable or validation rejects — never write bad data.
-
-Everything is snapshotted under ``resources/TRANSLATE/retrieved/`` → resumable, reproducible, zero
-recompute on re-run. Never overwrites a non-empty cell or source/curated data; new labels are
-provenance-tagged ``TRANSLATE``. Mirrors the ``wikidata.enrich_rows`` / ``llm.apply_enrichment``
-post-merge enrichment pattern: ``run()`` generates+validates into the snapshot, then re-runs
-``merge.run()`` so the labels weave into the unified tables idempotently.
-
-Locked constraints respected: never overwrites source labels; all QA invariants stay 0; HuggingFace-only;
-alt_labels are Wikidata-only (no bulk MT, per project decision) to avoid alias noise.
+"""Bilingual label completion: fill empty EN/FR labels on the unified tables. Three layers, quality-first:
+L1 authoritative Wikidata @en/@fr labels + aliases (for rows with a QID); L2 local NLLB MT with a
+tech-term guard, each cross-lingually validated (bge-m3 floor + structural filters); L3 leave empty on
+failure.
 """
 from __future__ import annotations
 
@@ -30,16 +14,13 @@ from . import config as C
 from . import common as K
 
 
-# ==========================================================================================
 # Snapshots (resumable / reproducible)
-# ==========================================================================================
 def _hash(text: str) -> str:
     return hashlib.sha1(text.encode("utf-8")).hexdigest()[:16]
 
 
 def _load_snapshot() -> dict:
-    """(direction, src_hash) -> row. Holds every MT attempt (validated flag included) so a re-run
-    neither recomputes nor retries."""
+    """Load the MT snapshot (direction, src_hash) -> {src,out,guard_ok,validated,score,reason}."""
     snap = {}
     if os.path.isfile(C.TRANSLATE_SNAPSHOT_CSV):
         with open(C.TRANSLATE_SNAPSHOT_CSV, encoding="utf-8", newline="") as f:
@@ -78,9 +59,7 @@ def _save_wd_labels(labels: dict) -> None:
                         "label_fr": labels[qid].get("fr", "")})
 
 
-# ==========================================================================================
 # Tech-term preservation guard
-# ==========================================================================================
 _CAMEL = re.compile(r"[a-z][A-Z]")
 _STRIP = " ,.;:()[]{}\"'/’"
 
@@ -131,9 +110,7 @@ def _lex_phrases():
 
 
 def _protect(text: str):
-    """Mask technology terms with placeholders MT passes through; return (masked, mapping). Masks
-    multi-word lexicon phrases first (e.g. 'Business Intelligence' inside a longer label), then
-    single tech tokens (acronyms, CamelCase, versions)."""
+    """Mask multi-word lexicon phrases and any protected tokens with placeholders, so MT never translates them."""
     mapping = {}
     masked = text
     for phrase in _lex_phrases():
@@ -168,12 +145,9 @@ def _restore(text: str, mapping: dict):
     return text, ok
 
 
-# ==========================================================================================
 # MT engine (local HuggingFace NLLB) — fail-open
-# ==========================================================================================
 class Translator:
-    """Lazy local NLLB-200 seq2seq translator. `ok` is False when transformers / sentencepiece /
-    the model are unavailable, so callers degrade gracefully (labels left empty)."""
+    """Local NLLB MT engine (HuggingFace) with a tech-term guard. Fail-open: if the model is missing or unavailable"""
 
     def __init__(self):
         self.ok = False
@@ -217,9 +191,7 @@ class Translator:
         return outs
 
     def translate_many(self, texts, src, tgt, num_beams=4, protect=True):
-        """Translate `texts` from lang `src` to `tgt` (ISO 'en'/'fr'). With `protect` (default), the
-        tech-term guard masks technology tokens/phrases so MT never Frenchifies them.
-        Returns list of (output, guard_ok) aligned to `texts`."""
+        """Translate a batch of texts from `src` to `tgt`. Returns list of (output, guard_ok) tuples."""
         if not self.ok or not texts:
             return [("", False) for _ in texts]
         src_code, tgt_code = C.TRANSLATE_LANG_CODES[src], C.TRANSLATE_LANG_CODES[tgt]
@@ -236,15 +208,9 @@ class Translator:
         return results
 
 
-# ==========================================================================================
 # Validation (pillar 4): lenient cross-lingual floor + structural filters
-# ==========================================================================================
 class Validator:
-    """Validates MT output with a **lenient cross-lingual semantic floor + targeted structural filters**.
-    NLLB's short-label output is mostly correct, so we default-accept and reject only (a) detectable
-    degeneracies (empty / lost tech token / sentence-for-term / length blow-up) and (b) output whose
-    cross-lingual similarity to the source is grossly low. bge-m3 is multilingual, so src (EN) vs output
-    (FR) is compared directly — a single, clean signal (no noisy second MT pass)."""
+    """Validate MT output with a lenient cross-lingual semantic floor (bge-m3) + structural filters. Rejects are logged."""
 
     def __init__(self, translator: Translator = None):
         self._t = translator
@@ -318,8 +284,7 @@ class Validator:
         return results
 
     def dump_rejects(self):
-        """Write the COMPLETE reject audit, derived from the snapshot (every validated=="0" entry) so
-        it is cumulative and stable regardless of how many partial runs produced it."""
+        """Write the rejected MT outputs to a CSV for inspection."""
         os.makedirs(C.KB_DIR, exist_ok=True)
         snap = _load_snapshot()
         rows = sorted((r for r in snap.values() if r.get("validated") == "0"),
@@ -331,9 +296,7 @@ class Validator:
                 w.writerow({k: r.get(k, "") for k in C.TRANSLATE_REJECTED_FIELDS})
 
 
-# ==========================================================================================
 # L1 — Wikidata authoritative labels + aliases
-# ==========================================================================================
 def _wd_links_by_uid() -> dict:
     """unified_id -> {"qid","aliases_en","aliases_fr"} from the Wikidata side table (if present)."""
     out = {}
@@ -349,8 +312,7 @@ def _wd_links_by_uid() -> dict:
 
 
 def _fetch_wd_labels(qids, cache):
-    """Fetch authoritative @en/@fr rdfs:label for QIDs missing from `cache`, batched + snapshotted.
-    Fail-open (leaves the QID absent so aliases/MT fill instead)."""
+    """Fetch Wikidata @en/@fr labels for `qids` (cached). Returns qid -> {"en","fr"}."""
     todo = [q for q in dict.fromkeys(qids) if q and q not in cache]
     if not todo:
         return cache
@@ -379,9 +341,7 @@ def _fetch_wd_labels(qids, cache):
     return cache
 
 
-# ==========================================================================================
 # Apply — fill empty label cells from Wikidata (L1) then the MT snapshot (L2). Read-only on models.
-# ==========================================================================================
 def _first_alias(pipe_joined: str) -> str:
     for part in (pipe_joined or "").split(" | "):
         part = part.strip()
@@ -391,10 +351,7 @@ def _first_alias(pipe_joined: str) -> str:
 
 
 def apply_enrichment(rows, kind):
-    """Fill empty ``primary_label_en/fr`` (Wikidata → MT snapshot) and empty ``alt_labels_en/fr``
-    (Wikidata aliases only) on unified `rows`, ONLY where still empty — so translated/derived values
-    never overwrite source or Wikidata-primary data and a standalone re-merge keeps them. No model
-    is loaded here (reads snapshots), so re-merges stay cheap. No-op if nothing is cached."""
+    """Fill empty ``primary_label_en/fr`` (Wikidata → MT snapshot) and empty ``alt_labels_en/fr`` """
     snap = _load_snapshot()
     wd_labels = _load_wd_labels()
     wd_links = _wd_links_by_uid()
@@ -438,9 +395,7 @@ def apply_enrichment(rows, kind):
     return rows
 
 
-# ==========================================================================================
 # Generation orchestration
-# ==========================================================================================
 _UNIFIED = {
     "occupation": (C.UNIFIED_OCCUPATIONS_CSV,),
     "skill": (C.UNIFIED_SKILLS_CSV,),
@@ -448,8 +403,7 @@ _UNIFIED = {
 
 
 def _mt_targets(direction, wd_labels, wd_links):
-    """Collect (unified_id, src_text) needing MT for `direction`, i.e. rows whose target-language
-    primary is empty AND Wikidata cannot supply it. Dedups identical source texts."""
+    """Collect (unified_id, src_text) needing MT for `direction`. Dedups identical source texts."""
     src_lang, tgt_lang = direction.split("_")
     src_col, tgt_col = f"primary_label_{src_lang}", f"primary_label_{tgt_lang}"
     seen, targets = set(), []
@@ -477,8 +431,7 @@ def _mt_targets(direction, wd_labels, wd_links):
 
 
 def _translate_direction(direction, translator, validator, snap, wd_labels, wd_links, save=None):
-    """Generate + validate MT for one direction, writing only validated outputs into `snap`. Processes
-    in chunks and checkpoints via `save` (if given) so a long run is resumable and observable."""
+    """Generate + validate MT for one direction, writing only validated outputs into `snap`. """
     targets = _mt_targets(direction, wd_labels, wd_links)
     # Skip anything already attempted (validated or rejected) — deterministic MT, no point retrying.
     pending = [(uid, s) for uid, s in targets if (direction, _hash(s)) not in snap]
@@ -538,8 +491,7 @@ def _parse_directions(directions):
 
 
 def run(directions="all") -> dict:
-    """Fill empty EN/FR labels: L1 Wikidata (authoritative) + L2 validated MT, then re-weave via
-    merge. Snapshot-cached (resumable). `directions` ⊆ {wikidata, en_fr, fr_en} or 'all'."""
+    """Fill empty EN/FR labels: L1 Wikidata (authoritative) + L2 validated MT, then re-weave via merge. """
     dirs = _parse_directions(directions)
     print(f"[TRANSLATE] directions = {dirs}", flush=True)
 

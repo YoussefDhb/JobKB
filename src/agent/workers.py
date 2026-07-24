@@ -1,14 +1,5 @@
-"""Reflective worker subgraphs (LangGraph) — the self-correction the one-shot pipeline lacked.
-
-Each worker is a small StateGraph with the loop **propose -> verify -> (reflect -> propose)* ->
-commit/defer**, bounded by `AGENT_MAX_REFLECT`. The LLM proposes; the deterministic verifiers
-(mDeBERTa NLI, bge-m3, Wikidata) decide. When the generative backend is dead the generative workers
-defer cleanly (snapshot-resumable); the anchor worker needs no LLM at all.
-
-The workers reuse `src/llm.py`'s prompts, context builders, validators and target selection verbatim —
-this module adds *only* the graph control flow (reflection, the new NLI link gate), not new generation
-logic — and commit to the same `generations.csv` snapshot / `llm_inferred` relations the pipeline
-already integrates.
+"""Reflective worker subgraphs (LangGraph): each a small StateGraph looping propose -> verify ->
+(reflect -> propose)* -> commit/defer, bounded by AGENT_MAX_REFLECT.
 """
 
 from __future__ import annotations
@@ -22,9 +13,7 @@ from .. import common as K
 from .state import DescState, LinkState
 
 
-# ==========================================================================================
 # Description worker — reflective definition generation
-# ==========================================================================================
 def _desc_targets(tb):
     """Occupations + eligible hard skills lacking a description, minus those already cached."""
     from .. import llm
@@ -118,9 +107,7 @@ def run_descriptions(tb, stats):
                             "deferred": deferred, "reflected": reflected}
 
 
-# ==========================================================================================
 # Link worker — reflective occupation->skill inference with a NEW cosine+NLI accept gate
-# ==========================================================================================
 _STRICTER = ("Be stricter: pick ONLY skills that are unquestionably core to this occupation. "
              "Ignore any you were offered before.")
 
@@ -250,11 +237,9 @@ def run_links(tb, stats):
                      "occupations_linked": kept_occ, "reflected": reflected}
 
 
-# ==========================================================================================
 # Emerging worker — propose new tech, keep ONLY Wikidata-confirmed (delegates to the hardened
 # llm._task_emerging tool-chain; the controller dispatch is what makes it agentic, and the
 # external Wikidata confirmation IS the verification step).
-# ==========================================================================================
 def run_emerging(tb, stats):
     if not tb.has_llm:
         stats["emerging"] = {"proposed": 0, "added_skills": 0, "note": "no backend (deferred)"}
@@ -266,11 +251,9 @@ def run_emerging(tb, stats):
     return res.get("added_skills", 0) > 0
 
 
-# ==========================================================================================
 # Anchor worker — deterministic (NO LLM): confirm unanchored, anchor-eligible tech skills against
 # Wikidata. Runs even with dead credits. In the normal pipeline the `wikidata` stage runs first, so
 # this typically reports 0 unattempted gaps (honest); standalone/after new data it does real work.
-# ==========================================================================================
 def run_anchor(tb, stats):
     from .. import wikidata as W
     # anchor-eligible unified skills (mirror wikidata._skill_candidates) lacking a QID

@@ -1,10 +1,4 @@
-"""Orchestrator: run the JobKB build, whole or by stage, idempotently.
-
-Stages (canonical order): ingest -> hierarchy -> align -> attach -> merge -> qa.
-Each writes `kb/` per-source and idempotently, so any stage (or contiguous range) can run
-standalone against the persisted KB — see `run_stages` and the `run_pipeline.py` flags
-(`--stages`, `--from`, `--to`, `--source`). A full build is just every stage with a clean.
-"""
+"""Orchestrator: run the JobKB build, whole or by stage, idempotently."""
 
 from __future__ import annotations
 import os
@@ -181,9 +175,7 @@ def qa():
             "rel_dangling": len(rel_dangling)}
 
 
-# --------------------------------------------------------------------------------------
 # Stage registry — every stage runnable standalone against the persisted kb/.
-# --------------------------------------------------------------------------------------
 
 STAGE_ORDER = ["ingest", "hierarchy", "align", "attach", "merge", "qa"]
 
