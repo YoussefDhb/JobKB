@@ -1,8 +1,18 @@
+# Core pipeline
+numpy
 pandas
 scikit-learn
-sentence-transformers
-transformers
+sentence-transformers        # bge-m3 embedder (candidate generation / semantic checks)
+transformers                 # mDeBERTa NLI verifier + local LLM fallback + NLLB MT
 torch
-langgraph
-rdflib
+huggingface_hub              # HF Inference Providers client (LLM enrichment)
+sentencepiece                # tokenizer for facebook/nllb-200 (bilingual label MT)
+
+# Agentic enrichment + graph export
+langgraph                    # LangGraph controller + reflective workers (--agent)
+rdflib                       # RDF/OWL Turtle export (--export rdf)
+
+# Notebook (verification & testing)
+notebook
 ipywidgets
+matplotlib

@@ -597,7 +597,8 @@ to Wikidata). Four outputs:
   runs a lightweight **rdflib axiom self-check** (class disjointness, property domain/range, 0 dangling
   IRIs — all PASS), complementing the build's `consistency.py` certificate.
 - **`jobkb.graphml`** — for **Gephi / Cytoscape / yEd** (node attributes + typed/weighted edges).
-- **`jobkb.json`** — nodes/edges for **Neo4j import** or web viz.
+- **`jobkb.json`** — a generic `{meta, nodes, edges}` graph JSON (node attributes + typed/weighted edges)
+  for web/D3 viz or loading into a graph DB (e.g. Neo4j) via a small custom loader.
 - **`jobkb.html` — self-contained, offline interactive *backbone* overview**: the navigable skeleton
   (skill types ↔ domains ↔ categories ↔ ISCO tree ↔ occupations, ~300 nodes, categories sized by #skills)
   with a small inline vanilla-JS canvas layout (drag / pan / zoom / hover) — **no server, no internet, no
