@@ -12,6 +12,9 @@ sentencepiece                # tokenizer for facebook/nllb-200 (bilingual label 
 langgraph                    # LangGraph controller + reflective workers (--agent)
 rdflib                       # RDF/OWL Turtle export (--export rdf)
 
+# Web-scraping enrichment (--scrape); the crawler itself needs only the stdlib
+beautifulsoup4               # resilient HTML parsing for the job-board adapters
+
 # Notebook (verification & testing)
 notebook
 ipywidgets

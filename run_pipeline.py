@@ -22,6 +22,10 @@ Incremental sources:
     python run_pipeline.py --add NAME      # incrementally add one registered source
     python run_pipeline.py --remove NAME   # incrementally remove one source
     python run_pipeline.py --list-sources  # list registered sources
+
+Web-scraping enrichment (opt-in, network; keeps the KB current with emerging roles/skills/tech):
+    python run_pipeline.py --scrape hellowork   # crawl a board -> RESOURCES/SCRAPED/ snapshot (offline after)
+    python run_pipeline.py --add SCRAPER        # ingest the snapshot (hybrid extraction + relevance gate)
 """
 
 from __future__ import annotations
@@ -89,6 +93,10 @@ def main():
                     help="incrementally remove one source from the existing KB")
     ap.add_argument("--list-sources", action="store_true",
                     help="list the registered sources and exit")
+    # web-scraping enrichment (network; snapshots raw postings, then `--add SCRAPER` ingests offline)
+    ap.add_argument("--scrape", nargs="?", const="all", metavar="SITES",
+                    help="crawl job boards into RESOURCES/SCRAPED/ (comma-list of sites or 'all'); "
+                         "then `--add SCRAPER` ingests the snapshot. Polite, bounded, robots-aware")
     # wikidata enrichment (network read-only; snapshotted for offline reproducibility)
     ap.add_argument("--wikidata", action="store_true",
                     help="anchor tech-skills + occupations to Wikidata QIDs (kb/wikidata_links.csv)")
@@ -128,6 +136,11 @@ def main():
         for n, s in registry.REGISTRY.items():
             print(f"  {n:6}  builtin={s.builtin}  occupations={s.contributes_occupations}  "
                   f"needs_attach={s.needs_attach}")
+        return
+
+    if args.scrape:
+        from src import scrape
+        scrape.run(sites=args.scrape)
         return
 
     if args.wikidata or args.refresh_wikidata:

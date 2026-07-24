@@ -2,11 +2,13 @@
 
 An **English-primary, IT-focused occupation & skill knowledge base**, built fully automatically from
 local public taxonomies. French is a first-class secondary language (labels completed from Wikidata and
-validated NLLB machine translation). There is **no scraping and no human in the loop**: cross-source
-duplicates are resolved and alignments validated with open-source HuggingFace models, and a single build
-runs the whole pipeline — alignment, faceted ontology, ISCO attachment, unified merge, then Wikidata QID
-anchoring, LLM description/link generation and bilingual label completion — every step validated before it
-touches the graph, snapshot-resumable and fail-open (a build with no HF token still succeeds).
+validated NLLB machine translation). The **reproducible core build is datasets-only, with no human in the
+loop**: cross-source duplicates are resolved and alignments validated with open-source HuggingFace models,
+and a single build runs the whole pipeline — alignment, faceted ontology, ISCO attachment, unified merge,
+then Wikidata QID anchoring, LLM description/link generation and bilingual label completion — every step
+validated before it touches the graph, snapshot-resumable and fail-open (a build with no HF token still
+succeeds). An **optional, robots-respecting web-scraper** (`--scrape` → `--add SCRAPER`) adds
+emerging-role / skill enrichment on demand, deliberately kept out of the reproducible core build.
 
 ## Quickstart
 
@@ -82,7 +84,7 @@ src/
   incremental.py   # add/remove ONE source without a full rebuild
   pipeline.py      # orchestrator + QA/integrity report (self-certifies consistency)
 run_pipeline.py    # CLI entry point
-notebooks/inspect.ipynb   # verification & testing notebook over kb/
+notebooks/inspect.ipynb   # verification / project-showcase notebook over kb/
 ```
 
 Core stages are `ingest → hierarchy → align → attach → merge → qa`, each idempotent and runnable
@@ -185,7 +187,8 @@ its single authoritative category.
 
 ## Not in this build
 
-The reasoner side is intentionally an rdflib axiom self-check, not a bundled Java DL reasoner. The
-`SDE-jobhuntai` raw-postings extraction (an `ExtractionSource` using HF skill-extraction) is a future data
-add. The previous French-primary, scraping/manual-translation pipeline and its human `gold` review are
-fully removed.
+The reasoner side is intentionally an rdflib axiom self-check, not a bundled Java DL reasoner. Web scraping
+returns only as an **opt-in enrichment source** (`SCRAPER`, an `ExtractionSource` over scraped job postings
+— robots-respecting, gated by the same relevance filter, kept out of the reproducible core build), never as
+a build dependency. The previous French-primary, uncontrolled-scraping / manual-translation pipeline and its
+human `gold` review are fully removed.

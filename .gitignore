@@ -21,6 +21,8 @@ Thumbs.db
 
 # --- Heavy raw source data: CSVs under resources/ (kept out of the repo) ---
 resources/**/*.csv
+# ...except the tiny web-scraping demo fixture, so `--add SCRAPER` and the notebook work out of the box.
+!resources/SCRAPED/**/*.sample.csv
 
 # --- Embedding cache (regenerated; large binary) ---
 kb/.emb_cache_*.pkl

@@ -28,6 +28,7 @@ from .zenodo import ZenodoSource
 from .djinni import DjinniSource
 from .linkedin_swe import LinkedInSweSource
 from .kaggle_jobs import KaggleJobsSource
+from .scraper import ScraperSource
 
 
 class _WrappedIngest(Source):
@@ -106,6 +107,9 @@ register(LinkedInSweSource())
 register(KaggleJobsSource())
 
 # --- plugin sources --------------------------------------------------------------------
+# SCRAPER: opt-in web-scraping enrichment. Non-builtin (never in a full build) and resolves endpoints
+# against the existing KB at ingest, so it registers last, after every taxonomy/skill/demand source.
+register(ScraperSource())
 register(DemoSource())
 
 

@@ -65,6 +65,11 @@ WIKIDATA_RETRIEVED_DIR = os.path.join(RESOURCES, "WIKIDATA", "retrieved")
 WIKIDATA_SRC_CSV = os.path.join(WIKIDATA_EN_DIR, "ESCO_v1.2.1-wikidata.csv")
 WIKIDATA_SNAPSHOT_CSV = os.path.join(WIKIDATA_RETRIEVED_DIR, "resolutions.csv")
 
+# Web-scraping enrichment (--scrape): a polite crawler snapshots raw postings here as
+# <lang>/<site>.csv; ScraperSource then ingests the snapshot fully offline (like the OTHERS datasets).
+SCRAPED_DIR = os.path.join(RESOURCES, "SCRAPED")
+SCRAPED_FIELDS = ["site", "url", "lang", "title", "location", "text", "retrieved_at"]
+
 LLM_RETRIEVED_DIR = os.path.join(RESOURCES, "LLM", "retrieved")   # LLM generation snapshots (cache)
 TRANSLATE_RETRIEVED_DIR = os.path.join(RESOURCES, "TRANSLATE", "retrieved")  # MT / Wikidata-label cache
 
@@ -263,6 +268,7 @@ SRC_WEF = "WEF"              # WEF Global Skills Taxonomy (2021): structured sof
 SRC_DJINNI = "DJINNI"        # relation-only demand: Djinni IT postings (role tag + free-text JD extraction)
 SRC_LINKEDIN_SWE = "LINKEDIN_SWE"  # hybrid: LinkedIn software-engineering postings (pre-extracted skills)
 SRC_KAGGLE_JOBS = "KAGGLE_JOBS"    # hybrid: kaggle job-skill-set, IT subset (pre-extracted skills)
+SRC_SCRAPER = "SCRAPER"      # opt-in web-scraping enrichment: emerging occupations/skills/tech from job boards
 SRC_LLM = "LLM"              # LLM-powered enrichment: generated descriptions, inferred links, and
                              # new emerging entities (each auto-validated + Wikidata-confirmed)
 SRC_TRANSLATE = "TRANSLATE"  # multilingual label completion: Wikidata @en/@fr labels + validated MT
@@ -273,7 +279,7 @@ REAL_OCC_SOURCES = (SRC_ESCO, SRC_ONET, SRC_NOC, SRC_ROME, SRC_EMERGING)
 # Sources that set their own it_subtype at ingest (the hierarchy keeps it rather than re-deriving
 # from the label regex) — their shipped/derived classification beats a keyword match on a bare label.
 SELF_CLASSIFIED_SUBDOMAIN_SOURCES = {SRC_SFIA, SRC_CSO, SRC_LIGHTCAST, SRC_KAGGLE, SRC_ECF,
-                                     SRC_DATAJOBS, SRC_ZENODO, SRC_WEF, SRC_SOFTTAXO}
+                                     SRC_DATAJOBS, SRC_ZENODO, SRC_WEF, SRC_SOFTTAXO, SRC_SCRAPER}
 
 # CSO 3.5 is ~14.6k CS research topics; keep only the shallow IT-relevant part: descendants of these
 # roots (via superTopicOf) down to CSO_MAX_DEPTH, deduped/capped. Roots ordered specific->generic.
@@ -361,6 +367,54 @@ LINKEDIN_SWE_MIN_FREQ = 15        # keep a (role, skill) demand pair only if see
 
 # KAGGLE_JOBS (kaggle job-skill-set, IT subset = 240 postings). Demand only; harvest off (too few rows).
 KAGGLE_JOBS_MIN_FREQ = 3          # keep a (role, skill) demand pair only if seen in >= this many postings
+
+# SCRAPER (--scrape + --add SCRAPER): opt-in, non-builtin, network-gated. A polite crawler snapshots raw
+# postings; ScraperSource ingests them offline — hybrid extraction (dictionary match against the KB's own
+# skill labels + an HF skill-span extractor for novel spans), strict title->occupation minting, and the
+# same relevance/noise gate as every other source. Snapshots are modest, so the frequency floors are low
+# (still enough that a one-off noise token never becomes a node).
+SCRAPER_MIN_SKILL_FREQ = 3     # harvest a novel span as a new skill only at/above this posting frequency
+SCRAPER_MIN_OCC_FREQ = 2       # mint a cleaned job title as a new occupation only at/above this frequency
+SCRAPER_MIN_DEMAND_FREQ = 2    # keep a (title, skill) demand pair only at/above this frequency
+SCRAPER_TITLE_MAX_WORDS = 6    # a cleaned title longer than this reads as prose, not a job title -> skip
+# Self-classify a harvested novel skill into an it_subtype by keyword (unambiguous tokens only); anything
+# absent stays "" and the hierarchy classifier assigns the sub-domain from the label (like DATAJOBS).
+SCRAPER_SUBDOMAIN = {
+    "docker": "cloud_devops", "kubernetes": "cloud_devops", "terraform": "cloud_devops",
+    "ansible": "cloud_devops", "jenkins": "cloud_devops", "gitlab ci": "cloud_devops",
+    "react": "web", "angular": "web", "vue": "web", "svelte": "web", "next.js": "web",
+    "flutter": "mobile_development", "swiftui": "mobile_development", "jetpack compose": "mobile_development",
+    "pytorch": "ai_ml", "tensorflow": "ai_ml", "hugging face": "ai_ml", "langchain": "ai_ml",
+    "llm": "ai_ml", "rag": "ai_ml", "mlflow": "ai_ml",
+    "snowflake": "data_databases", "dbt": "data_engineering", "airflow": "data_engineering",
+    "kafka": "data_engineering", "databricks": "data_engineering",
+    "kotlin": "programming_languages", "rust": "programming_languages", "golang": "programming_languages",
+    "solidity": "emerging_tech", "web3": "emerging_tech",
+}
+# Title cleaning: strip seniority / contract / gender / marketing tokens so "Senior Python Dev H/F (CDI)"
+# folds to "python developer". EN + FR (hellowork) surface forms.
+SCRAPER_TITLE_STOPWORDS = frozenset({
+    "senior", "junior", "lead", "principal", "staff", "confirme", "confirmee", "expert", "expert(e)",
+    "experimente", "experimentee", "debutant", "debutante", "stagiaire", "apprenti", "apprentie",
+    "alternant", "alternante", "h", "f", "h/f", "f/h", "m/f", "m/w", "w/m", "cdi", "cdd", "stage",
+    "alternance", "apprentissage", "freelance", "interim", "temps", "plein", "partiel", "remote",
+    "teletravail", "hybride", "onsite", "fulltime", "part", "time", "contract", "permanent",
+    "intern", "internship", "trainee", "graduate",
+})
+
+# HF neural skill-span extractor (dictionary matching handles known skills; this catches novel spans).
+# Loaded lazily; fail-open to dictionary-only if the model is unavailable/offline.
+SCRAPER_EXTRACTOR_MODEL = os.environ.get("JOBKB_SCRAPER_EXTRACTOR", "TechWolf/ConTeXT-Skill-Extraction-base")
+SCRAPER_EXTRACTOR_ENABLED = os.environ.get("JOBKB_SCRAPER_NEURAL", "1") == "1"
+
+# Crawl bounds + network etiquette (stdlib urllib; mirrors the wikidata polite/fail-open conventions).
+SCRAPER_USER_AGENT = "JobKB/1.0 (IT knowledge-base research; occupation/skill enrichment) python-urllib"
+SCRAPER_RATE_SLEEP = 1.50      # seconds between requests (gentle pacing; be a good citizen)
+SCRAPER_MAX_RETRIES = 4        # attempts on 5xx/timeout, then fail-open (skip the page)
+SCRAPER_TIMEOUT = 30           # per-request seconds
+SCRAPER_MAX_PAGES = 5          # listing pages crawled per site per run (bounded)
+SCRAPER_MAX_POSTINGS = 60      # detail pages fetched per site per run (bounded)
+SCRAPER_RESPECT_ROBOTS = True  # honour robots.txt (opt out only with explicit operator consent)
 
 # HuggingFace models (open-source, no API keys)
 # Embedder bge-m3: strong EN<->FR similarity, no query/passage prefix. Falls back to MiniLM, then TF-IDF.
