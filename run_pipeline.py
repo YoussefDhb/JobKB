@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 """CLI entry point for the JobKB build.
 
-Full build (enrichment is automatic: ingest..merge -> wikidata -> llm -> translate -> qa):
+Full build (enrichment is automatic: ingest..merge -> wikidata -> agent -> translate -> qa;
+the agentic LangGraph worker supersedes the one-shot llm stage, falling back to it if langgraph is absent):
     python run_pipeline.py                 # full clean build + enrichment (all stages)
     python run_pipeline.py --core-only     # full build WITHOUT enrichment (fast, network-free)
     python run_pipeline.py --no-align      # ingest + hierarchy only (skip HF models)
@@ -104,6 +105,13 @@ def main():
                     help="validate the built KB (read-only): logical consistency + external gold "
                          "coverage benchmark + LLM-connection audit; optional comma-list of tracks "
                          "(consistency,coverage,llm); default all. Writes validation/report.md")
+    # agentic enrichment (pillar 3, LangGraph): controller + reflective workers over the HF tools;
+    # supersedes the one-shot --llm on a full build. Fail-open (no langgraph -> falls back to llm.run).
+    ap.add_argument("--agent", nargs="?", const="all", metavar="GAPS",
+                    help="run agentic enrichment (LangGraph): a controller assesses the KB and "
+                         "dispatches reflective workers (propose->verify->reflect->commit); optional "
+                         "comma-list of gaps (description,link,emerging,anchor); default all. "
+                         "Writes agent/report.md")
     args = ap.parse_args()
 
     if args.list_stages:
@@ -138,6 +146,13 @@ def main():
         tracks = validation.ALL_TRACKS if args.validate == "all" else tuple(
             t.strip() for t in args.validate.split(","))
         validation.run(tracks=tracks)
+        return
+
+    if args.agent:
+        from src import agent
+        gaps = agent.ALL_GAPS if args.agent == "all" else tuple(
+            g.strip() for g in args.agent.split(","))
+        agent.run(gaps=gaps)
         return
 
     if args.add:

@@ -3,4 +3,5 @@ scikit-learn
 sentence-transformers
 transformers
 torch
+langgraph
 ipywidgets

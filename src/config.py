@@ -505,6 +505,25 @@ LLM_SNAPSHOT_FIELDS = ["task", "key", "model", "prompt_hash", "output", "created
 LLM_REJECTED_FIELDS = ["task", "entity_id", "label", "output", "reason", "score"]
 
 # --------------------------------------------------------------------------------------
+# Agentic enrichment (`--agent`, LangGraph): a controller that assesses the KB, prioritizes gaps,
+# and dispatches reflective workers (propose -> verify -> reflect/retry -> commit). It reuses the LLM_*
+# models/thresholds/snapshot above — it is a *smarter producer of the same generations.csv snapshot*
+# the pipeline already consumes (agent rows tagged model="agentic"), so integration is unchanged.
+# The LLM is one optional, budget-bounded tool; the deterministic verifiers (bge-m3 + NLI + Wikidata)
+# drive control, so the agent stays useful even with the LLM backend dead (anchor worker needs none).
+# --------------------------------------------------------------------------------------
+AGENT_GAPS = ("description", "link", "emerging", "anchor")   # workers the controller can dispatch
+AGENT_MAX_REFLECT = int(os.environ.get("JOBKB_AGENT_MAX_REFLECT", "2"))  # bounded retries per target
+# NEW accept gate the one-shot pipeline lacked: an inferred link must clear the embedding cosine floor
+# (LLM_LINK_MIN_SIM) AND be NLI-corroborated (occ definition |= "requires {skill}") — lifting the 45%
+# NLI-pass rate the validation phase measured on the cosine-only llm_inferred links.
+AGENT_LINK_NLI_MIN = VALIDATION_LINK_NLI_MIN
+AGENT_ANCHOR_MAX = int(os.environ.get("JOBKB_AGENT_ANCHOR_MAX", "200"))  # cap unattempted anchors/run
+AGENT_OUT_DIR = os.path.join(ROOT, "agent")                 # written agent report + per-gap metrics
+AGENT_REPORT_MD = os.path.join(AGENT_OUT_DIR, "report.md")
+AGENT_TAG = "agentic"                                        # snapshot `model` marker for agent commits
+
+# --------------------------------------------------------------------------------------
 # Multilingual label completion (`--translate`): fills empty EN/FR primary + alt labels on the
 # unified tables. Quality-first ordering: authoritative Wikidata @en/@fr labels + aliases, then
 # local HuggingFace MT (NLLB) with a tech-term guard, each cross-lingually validated. Fully local

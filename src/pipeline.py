@@ -258,6 +258,19 @@ def _enrich_llm(source=None):
     llm.run()
 
 
+def _enrich_agent(source=None):
+    """Agentic enrichment (LangGraph controller + reflective workers). Supersedes the linear llm.run()
+    on a full build. Fail-open: if langgraph is not installed, fall back to the one-shot llm.run() so
+    the core build never hard-depends on the agent package."""
+    try:
+        from . import agent
+        agent.run()   # langgraph is imported lazily inside; ImportError surfaces here, not above
+    except ImportError as e:
+        print(f"[agent] langgraph unavailable ({e}); falling back to one-shot llm.run().", flush=True)
+        from . import llm
+        llm.run()
+
+
 def _enrich_translate(source=None):
     from . import translate
     translate.run()
@@ -266,11 +279,13 @@ def _enrich_translate(source=None):
 _STAGES = {
     "ingest": _ingest, "hierarchy": _hierarchy, "align": _align,
     "attach": _attach, "merge": _merge, "qa": _qa,
-    "wikidata": _enrich_wikidata, "llm": _enrich_llm, "translate": _enrich_translate,
+    "wikidata": _enrich_wikidata, "llm": _enrich_llm, "agent": _enrich_agent,
+    "translate": _enrich_translate,
 }
 
-# Enrichment stages, in dependency order, inserted between merge and qa on a full build.
-ENRICH_ORDER = ["wikidata", "llm", "translate"]
+# Enrichment stages, in dependency order, inserted between merge and qa on a full build. The agentic
+# worker (LangGraph) supersedes the one-shot `llm` stage; `llm` stays runnable standalone (--llm).
+ENRICH_ORDER = ["wikidata", "agent", "translate"]
 
 
 def run_stages(stages, source=None, clean=False):

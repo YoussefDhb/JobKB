@@ -284,6 +284,26 @@ refresh, so coverage **converges over successive builds** rather than in one sho
 descriptions: **3,319/11,366** (source 2,305 · Wikidata 990 · LLM 24), with the LLM prong ready to fill
 the remainder as credits allow.
 
+**Agentic enrichment (pillar 3, LangGraph).** `python run_pipeline.py --agent [gaps]` makes the KB's
+**"HF-only agentic"** design property *real*: instead of the one-shot `--llm` flow (fixed tasks, a single
+call each, no reflection), a **LangGraph** agent (`src/agent/`) runs a **controller** that assesses the KB
+and prioritizes gaps, then dispatches **reflective workers** that loop **propose → verify → reflect/retry
+→ commit**. The design is deliberate about a hard constraint — a depleted free tier and a small CPU-bound
+local model — so **the LLM is one *optional, budget-bounded* tool; the deterministic verifiers (bge-m3,
+mDeBERTa NLI, Wikidata) drive control**, exactly what LangGraph's explicit state-graph is good at. Four
+workers: **description** — generate a definition, and on a validation reject **re-prompt with the reject
+reason injected** (bounded retries) before deferring; **link** — infer occupation→skill edges from a
+bge-m3 shortlist, now gated by embedding cosine **and** a **new NLI check** (occupation definition ⊨
+"requires {skill}") with a reflect step that drops failed picks and re-shortlists — this lifted the
+committed `llm_inferred` links' NLI-pass rate from **45 % to 100 %** (measured by `--validate llm`);
+**emerging** — propose new tech, keep only those a **real Wikidata QID confirms**; **anchor** —
+*deterministic, no LLM* — resolve unanchored tech skills against Wikidata, so the agent stays useful even
+with **zero credits**. The agent is a *smarter producer of the same artifacts the pipeline already
+consumes*: commits go to the **same** `generations.csv` snapshot (tagged `model="agentic"`) and
+`llm_inferred` relations, so integration, provenance and QA are unchanged. It is **fail-open** — if
+`langgraph` is not installed the enrichment stage transparently falls back to the one-shot `llm.run()`, so
+the core build never hard-depends on it — and snapshot-resumable. A run writes `agent/report.md`.
+
 ## Pipeline (package + orchestrator)
 
 ```
@@ -296,7 +316,8 @@ src/
   align/           # candidates (embeddings) -> verify (batched NLI) + deterministic match_key dedup -> attach (ISCO, curated overrides)
   merge.py         # source-neutral unified concept clustering / de-duplication (+ hard_soft & it_subtype reconciliation)
   wikidata.py      # QID anchoring + authoritative descriptions/aliases (enrichment stage)
-  llm.py           # HF LLM descriptions / inferred links / emerging tech, auto-validated (enrichment stage)
+  llm.py           # HF LLM descriptions / inferred links / emerging tech, auto-validated (one-shot enrichment)
+  agent/           # LangGraph agentic enrichment: controller + reflective workers (supersedes llm on a full build)
   translate.py     # bilingual EN/FR label completion (Wikidata labels + validated MT) (enrichment stage)
   validation/      # KB validation: consistency invariants + external gold coverage + LLM-link audit
   incremental.py   # add/remove ONE source without a full rebuild
@@ -308,15 +329,17 @@ notebooks/
 ```
 
 **Enrichment is part of the build.** The full pipeline is
-`ingest → hierarchy → align → attach → merge → **wikidata → llm → translate** → qa`: the three
-post-merge enrichment stages (Wikidata QID anchoring, LLM descriptions/links, bilingual label
+`ingest → hierarchy → align → attach → merge → **wikidata → agent → translate** → qa`: the three
+post-merge enrichment stages (Wikidata QID anchoring, **agentic** LLM descriptions/links, bilingual label
 completion) run **automatically** after `merge`, in that dependency order (Wikidata first — its QIDs
 and descriptions feed the others), so a plain `python run_pipeline.py` produces a **fully-enriched** KB
-in one command. Each enrichment stage is **fail-open** (no HF token / credits / offline → it logs and
-skips, the build still succeeds) and **snapshot-resumable** (`resources/*/retrieved/`), so a rebuild
-with complete snapshots re-weaves cheaply and `qa` (which runs last) reports the enriched coverage.
-Pass **`--core-only`** for a fast, network-free core build without the enrichment stages; the standalone
-`--wikidata` / `--llm` / `--translate` flags still run any one stage on its own.
+in one command. The **agent** stage is the LangGraph controller + reflective workers described above; if
+`langgraph` is absent it transparently falls back to the one-shot `llm.run()`. Each enrichment stage is
+**fail-open** (no HF token / credits / offline → it logs and skips, the build still succeeds) and
+**snapshot-resumable** (`resources/*/retrieved/`), so a rebuild with complete snapshots re-weaves cheaply
+and `qa` (which runs last) reports the enriched coverage. Pass **`--core-only`** for a fast, network-free
+core build without the enrichment stages; the standalone `--wikidata` / `--agent` (or `--llm`) /
+`--translate` flags still run any one stage on its own.
 
 A full build takes **a few hours** on CPU: the core is **dominated by mDeBERTa NLI verification**
 (~2 s/pair; no human reviews the merges, so the models must — a deliberate accuracy-over-speed
@@ -329,7 +352,7 @@ Run it:
 ```bash
 python -m venv .venv && .venv\Scripts\activate
 pip install -r requirements.txt
-python run_pipeline.py             # full build + enrichment (ingest -> ... -> merge -> wikidata,llm,translate -> qa)
+python run_pipeline.py             # full build + enrichment (ingest -> ... -> merge -> wikidata,agent,translate -> qa)
 python run_pipeline.py --core-only # full build WITHOUT enrichment (fast, network-free)
 python run_pipeline.py --no-align  # ingest + skill ontology only (no HF model downloads)
 ```

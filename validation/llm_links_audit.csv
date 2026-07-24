@@ -1,85 +1,39 @@
 occupation,skill,creation_cosine,nli,nli_pass,demand_exact,demand_semantic,corroborated,verdict
 analytics engineer,data engineering,0.727,0.928,True,False,0.643,False,nli_only
-analytics engineer,business analytics,0.698,0.264,False,False,0.592,False,weak
-analytics engineer,business intelligence,0.686,0.067,False,False,0.628,False,weak
-analytics engineer,manage ICT data architecture,0.683,0.262,False,False,0.562,False,weak
 analytics engineer,create data sets,0.683,0.937,True,False,0.683,False,nli_only
 analytics engineer,Data Science and Analytics,0.678,0.712,True,False,0.611,False,nli_only
 analytics engineer,data analytics,0.614,0.916,True,False,0.701,False,nli_only
 analytics engineer,Database design,0.674,0.613,True,False,0.729,False,nli_only
-analytics engineer,ICT Systems Engineering,0.67,0.173,False,False,0.601,False,weak
-analytics engineer,use analytics for commercial purposes,0.669,0.202,False,False,0.562,False,weak
-analytics engineer,Database administration,0.669,0.068,False,False,0.811,True,corroborated
 analytics engineer,Data modelling and design,0.668,0.898,True,False,0.647,False,nli_only
 analytics engineer,database development tools,0.668,0.936,True,False,0.771,True,strong
-analytics engineer,Data science,0.667,0.13,False,False,0.703,False,weak
 analytics engineer,use databases,0.665,0.864,True,False,0.722,False,nli_only
-MLOps engineer,ICT Systems Engineering,0.687,0.415,False,False,0.601,False,weak
 MLOps engineer,Infrastructure operations,0.675,0.904,True,False,0.481,False,nli_only
 MLOps engineer,manage engineering project,0.672,0.711,True,False,0.567,False,nli_only
 MLOps engineer,Data engineering,0.67,0.512,True,False,0.642,False,nli_only
 MLOps engineer,MLOps (Machine Learning Operations),0.654,0.94,True,False,0.542,False,nli_only
-MLOps engineer,coordinate engineering teams,0.643,0.061,False,False,0.53,False,weak
-MLOps engineer,automotive engineering,0.641,0.001,False,False,0.582,False,weak
-MLOps engineer,business process modelling,0.638,0.1,False,False,0.643,False,weak
 MLOps engineer,model hardware,0.637,0.617,True,False,0.545,False,nli_only
-MLOps engineer,computational mechanics,0.636,0.212,False,False,0.721,False,weak
-MLOps engineer,manage standard enterprise resource planning system,0.635,0.004,False,False,0.598,False,weak
 MLOps engineer,Service level management,0.634,0.6,True,False,0.605,False,nli_only
 MLOps engineer,manage production systems,0.633,0.8,True,False,0.638,False,nli_only
-MLOps engineer,Process Improvement,0.633,0.033,False,False,0.611,False,weak
 MLOps engineer,collaborate with engineers,0.632,0.731,True,False,0.57,False,nli_only
 business intelligence developer,business intelligence,0.736,0.818,True,False,0.628,False,nli_only
-business intelligence developer,Application Design,0.697,0.006,False,False,0.544,False,weak
-business intelligence developer,design enterprise architecture,0.688,0.015,False,False,0.506,False,weak
 business intelligence developer,Database design,0.687,0.703,True,False,0.729,False,nli_only
 business intelligence developer,develop data processing applications,0.686,0.852,True,False,0.613,False,nli_only
-business intelligence developer,develop statistical software,0.683,0.459,False,False,0.648,False,weak
 business intelligence developer,Business intelligence,0.681,0.752,True,False,0.616,False,nli_only
-business intelligence developer,create database diagrams,0.674,0.357,False,False,0.633,False,weak
 business intelligence developer,develop reporting software,0.669,0.758,True,False,0.626,False,nli_only
-business intelligence developer,Database administration,0.656,0.05,False,False,0.811,True,corroborated
-business intelligence developer,oversee development of software,0.652,0.141,False,False,0.654,False,weak
-business intelligence developer,ICT Systems Engineering,0.651,0.045,False,False,0.523,False,weak
 data governance analyst,Data management,0.761,0.604,True,False,0.772,True,strong
-data governance analyst,Information Systems Governance,0.756,0.193,False,False,0.6,False,weak
 data governance analyst,perform data analysis,0.728,0.848,True,False,0.611,False,nli_only
-data governance analyst,manage ICT data classification,0.727,0.066,False,False,0.556,False,weak
-data governance analyst,manage data collection systems,0.726,0.032,False,False,0.705,False,weak
 data governance analyst,data quality assessment,0.726,0.535,True,False,0.551,False,nli_only
-data governance analyst,manage data for legal matters,0.722,0.006,False,False,0.592,False,weak
-data governance analyst,manage quantitative data,0.717,0.004,False,False,0.549,False,weak
-data governance analyst,manage ICT data architecture,0.711,0.036,False,False,0.559,False,weak
-data governance analyst,analyse big data,0.708,0.062,False,False,0.545,False,weak
-data governance analyst,manage research data,0.696,0.041,False,False,0.581,False,weak
-data governance analyst,"manage data, information and digital content",0.696,0.322,False,False,0.616,False,weak
-data governance analyst,inspect data,0.695,0.295,False,False,0.585,False,weak
-data governance analyst,perform online data analysis,0.694,0.004,False,False,0.681,False,weak
-data governance analyst,Data Science and Analytics,0.684,0.064,False,False,0.611,False,weak
 full stack developer,oversee development of software,0.709,0.677,True,False,0.727,False,nli_only
 full stack developer,design component interfaces,0.68,0.738,True,False,0.801,True,strong
-full stack developer,systems development life-cycle,0.676,0.084,False,False,0.707,False,weak
 full stack developer,design application interfaces,0.674,0.817,True,False,0.872,True,strong
-full stack developer,implement front-end website design,0.671,0.522,True,False,0.654,False,nli_only
+full stack developer,implement front-end website design,0.671,0.516,True,False,0.654,False,nli_only
 full stack developer,Application Design,0.67,0.818,True,False,0.875,True,strong
 full stack developer,Application Development,0.666,0.87,True,False,1.0,True,strong
-full stack developer,computer engineering,0.664,0.105,False,True,0.83,True,corroborated
 full stack developer,Programming/software development,0.66,0.925,True,False,0.835,True,strong
 full stack developer,Software design,0.657,0.808,True,False,0.849,True,strong
-full stack developer,coordinate engineering teams,0.653,0.003,False,False,0.668,False,weak
-full stack developer,develop with cloud services,0.651,0.023,False,False,0.703,False,weak
-full stack developer,software frameworks,0.523,0.209,False,False,0.789,True,corroborated
-full stack developer,Deployment,0.649,0.061,False,False,0.728,False,weak
-back-end developer,Back End (Software Engineering),0.691,0.692,True,False,0.7,False,nli_only
-back-end developer,develop with cloud services,0.685,0.03,False,False,0.703,False,weak
-back-end developer,Application Development,0.683,0.87,True,False,0.712,False,nli_only
+back-end developer,Back End (Software Engineering),0.691,0.689,True,False,0.7,False,nli_only
+back-end developer,Application Development,0.683,0.868,True,False,0.712,False,nli_only
 back-end developer,design application interfaces,0.681,0.771,True,False,0.726,False,nli_only
 back-end developer,Programming/software development,0.672,0.886,True,False,0.775,True,strong
-back-end developer,develop design plans,0.67,0.094,False,False,0.72,False,weak
-back-end developer,Database administration,0.666,0.488,False,False,0.811,True,corroborated
-back-end developer,support a designer in the developing process,0.666,0.374,False,False,0.659,False,weak
-back-end developer,write database documentation,0.663,0.002,False,False,0.722,False,weak
-back-end developer,Database design,0.663,0.767,True,False,0.751,True,strong
-back-end developer,Real-time/embedded systems development,0.662,0.037,False,False,0.658,False,weak
+back-end developer,Database design,0.663,0.762,True,False,0.751,True,strong
 back-end developer,develop data processing applications,0.661,0.657,True,False,0.69,False,nli_only
-back-end developer,define software architecture,0.659,0.287,False,False,0.771,True,corroborated
