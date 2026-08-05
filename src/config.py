@@ -518,6 +518,8 @@ AGENT_ANCHOR_MAX = int(os.environ.get("JOBKB_AGENT_ANCHOR_MAX", "200"))  # cap u
 AGENT_OUT_DIR = os.path.join(ROOT, "agent")
 AGENT_REPORT_MD = os.path.join(AGENT_OUT_DIR, "report.md")
 AGENT_TAG = "agentic"                                        # snapshot `model` marker for agent commits
+AGENT_DESC_CHECKPOINT = int(os.environ.get("JOBKB_AGENT_DESC_CHECKPOINT", "25"))  # flush snapshot every N
+#   committed/deferred description targets so a long, slow local run stays resumable (0 = only at the end)
 
 # Multilingual label completion (--translate): fill empty EN/FR labels from Wikidata labels, then local
 # NLLB MT with a tech-term guard, each cross-lingually validated. Never overwrites a non-empty cell.

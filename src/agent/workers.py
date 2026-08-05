@@ -94,7 +94,8 @@ def run_descriptions(tb, stats):
         return
     app = _build_desc_graph(tb)
     committed = deferred = reflected = 0
-    for kind, row, ctx in targets:
+    total = len(targets)
+    for i, (kind, row, ctx) in enumerate(targets, 1):
         final = app.invoke({"kind": kind, "uid": row["unified_id"], "label": row["primary_label_en"],
                             "ctx": ctx, "reflect": 0, "correction": "", "committed": False})
         reflected += final.get("reflect", 0)
@@ -102,6 +103,13 @@ def run_descriptions(tb, stats):
             committed += 1
         else:
             deferred += 1
+        # Periodic checkpoint: local generation is slow (minutes/target at scale), so flush the snapshot
+        # every AGENT_DESC_CHECKPOINT commits. An interrupted run keeps its work; _desc_targets skips
+        # already-cached targets on the next launch, making a long local pass genuinely resumable.
+        if C.AGENT_DESC_CHECKPOINT and i % C.AGENT_DESC_CHECKPOINT == 0:
+            tb.save()
+            print(f"[AGENT] description checkpoint: {i}/{total} processed "
+                  f"(committed={committed}, deferred={deferred}) — snapshot flushed.", flush=True)
     tb.save()
     stats["description"] = {"targets": len(targets), "committed": committed,
                             "deferred": deferred, "reflected": reflected}

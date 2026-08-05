@@ -1,6 +1,69 @@
 task,entity_id,label,output,reason,score
-desc,UOCC_be95fccf06c0,Responsible for the security of information systems (RSSI),"Information systems security specialist ensures the confidentiality, integrity, and availability of an organization's information systems and data.",nli_off_topic,0.347
-desc,UOCC_6ec9a08592ed,Administrator / Administrator of computer security,"They are responsible for ensuring the security and integrity of computer systems, networks, and data by implementing and enforcing security policies and procedures.",nli_off_topic,0.43
-desc,UOCC_0f23a669f1f0,Engineer / Computer science engineer,"Designs, develops, and implements computer systems, software, and hardware, applying mathematical and scientific principles to solve complex technical problems.",nli_off_topic,0.421
-desc,UOCC_0f23a669f1f0,Engineer / Computer science engineer,"Designs, develops, and tests software, hardware, and systems that use computer science principles, algorithms, and programming languages to solve complex technical problems.",nli_off_topic,0.366
-desc,UOCC_0f23a669f1f0,Engineer / Computer science engineer,"Designs, develops, and tests software, hardware, and systems that use computer science principles, algorithms, and programming languages to solve problems and meet business needs.",nli_off_topic,0.354
+desc,UOCC_38d89aa3c2fa,Consultant / pre-sales consultant,professional providing technical expertise to clients or prospects.,nli_off_topic,0.083
+desc,UOCC_016c22d6c92d,Head of IT studies and applications,ISCO 2514 IT Manager,nli_off_topic,0.112
+desc,UOCC_9b7a5a0a7869,Engineer / Engineer Cybersecurity Datacenter,"Applies engineering principles to design, develop, and maintain secure datacenter infrastructure systems.",nli_off_topic,0.142
+desc,UOCC_a7a228eff141,Analyst Designer / Computer Designer,ISCO 2511 occupation encompasses computer systems design and analysis roles.,nli_off_topic,0.431
+desc,UOCC_dfe6f7cd4960,Head / Project Manager TMA - Third Maintenance Application,Head/Project Manager TMA is responsible for overseeing maintenance applications in Information Systems.,nli_off_topic,0.019
+desc,UOCC_1dae8072961e,Head of IT production,ISCO 2522 oversees IT operations and production teams in an organization.,nli_off_topic,0.102
+desc,USKL_da44ccc8d01c,Apple iWork Keynote,Skill involves creating presentations using Apple's Keynote software.,nli_off_topic,0.029
+desc,USKL_98140f132cf1,Apple iWork Numbers,Skill involves using Apple's spreadsheet application Numbers for data analysis and presentation.,nli_off_topic,0.023
+desc,USKL_a03ebc6d68ec,Apple iWork Pages,Skill: Using Apple's word processing software Pages,nli_off_topic,0.141
+desc,USKL_7d057f974697,Canu,Canu is a software tool for analyzing metagenomic sequencing data,nli_off_topic,0.372
+desc,USKL_1b52e32aedf7,Customer Information Control System (CICS),IBM mainframe transaction processing software system.,nli_off_topic,0.334
+desc,USKL_76e0c76bc437,Extensible markup language XML,XML is a markup language for creating standardized human-readable data formats.,nli_off_topic,0.283
+desc,USKL_76e0c76bc437,Extensible markup language XML,XML is a markup language for creating standardized human-readable data formats.,nli_off_topic,0.283
+desc,USKL_76e0c76bc437,Extensible markup language XML,XML is a markup language for creating standardized human-readable data formats.,nli_off_topic,0.283
+desc,USKL_76ecbbdba046,Hewlett Packard HP-UX,skill: administering and developing software for HP-UX operating system,nli_off_topic,0.234
+desc,USKL_490b179af86a,Langlais Computer Consultants CalMan,Skill involves using CalMan for managing IT service requests and tickets,nli_off_topic,0.388
+desc,USKL_a7b1a53306ca,Performance Solutions Technology ManagePro,Skill involves managing performance solutions technology within broader IT domains.,nli_off_topic,0.035
+desc,USKL_a7b1a53306ca,Performance Solutions Technology ManagePro,Skill involves managing performance solutions technology within IT domains.,nli_off_topic,0.031
+desc,USKL_a7b1a53306ca,Performance Solutions Technology ManagePro,Skill involves managing performance solutions technology within IT domains.,nli_off_topic,0.031
+desc,USKL_bd4d7bbb306b,Progress OpenEdge Fathom Replication software,Skill involves configuring and maintaining OpenEdge ABL replication software using Fathom Replication in a development environment.,nli_off_topic,0.264
+desc,USKL_8473222962d8,Progress WebSpeed Workshop,Skill related to organizing and facilitating workshops on improving web page loading speeds for developers and designers.,nli_off_topic,0.033
+desc,USKL_8473222962d8,Progress WebSpeed Workshop,Skill for training in optimizing web applications using Progress WebSpeed technology.,nli_off_topic,0.186
+desc,USKL_8473222962d8,Progress WebSpeed Workshop,Skill for training in optimizing web applications using Progress WebSpeed technology.,nli_off_topic,0.186
+desc,USKL_3ebd15ab8dfa,Shell Script,scripting language executed by Unix-like operating systems' shells,nli_off_topic,0.415
+desc,USKL_ef5bac0d7520,StataCorp Stata,Statistical software package used in research and data analysis,nli_off_topic,0.059
+desc,USKL_924b61d17b16,The MathWorks MATLAB,Skill: Proficiency in using MATLAB for programming and software development tasks.,nli_off_topic,0.165
+desc,USKL_c390e4591971,Access management software,Skill involves configuring and managing access controls using specialized software tools in programming and software development domains.,nli_off_topic,0.24
+desc,USKL_eaa45421b85d,Blink,Blink is a term often used in cybersecurity to describe rapid successive attacks on multiple systems.,nli_off_topic,0.097
+desc,USKL_eaa45421b85d,Blink,Blink is a term often used colloquially to describe a brief interruption in network connectivity or service.,nli_off_topic,0.057
+desc,USKL_eaa45421b85d,Blink,Blink is a term often used colloquially to describe a brief interruption in network connectivity or service.,nli_off_topic,0.057
+desc,USKL_7e64de04c960,Cascading style sheets CSS,CSS is a stylesheet language used in web development to describe the presentation of a web page.,nli_off_topic,0.016
+desc,USKL_7e64de04c960,Cascading style sheets CSS,CSS is a stylesheet language used for describing the presentation of a web document.,nli_off_topic,0.018
+desc,USKL_7e64de04c960,Cascading style sheets CSS,CSS is a stylesheet language used for describing the presentation of a web document.,nli_off_topic,0.018
+desc,USKL_4f1c599f7f2a,Distributed component object model DCOM software,DCOM software development involves creating distributed applications using COM objects across a network.,nli_off_topic,0.28
+desc,USKL_4f1c599f7f2a,Distributed component object model DCOM software,DCOM software enables distributed object computing using COM technology in Windows environments.,nli_off_topic,0.414
+desc,USKL_4f1c599f7f2a,Distributed component object model DCOM software,DCOM software enables distributed object computing using COM technology in Windows environments.,nli_off_topic,0.414
+desc,USKL_c43c5d295d10,Healthcare common procedure coding system HCPCS,Healthcare common procedure coding system HCPCS is unrelated to programming and software development.,nli_off_topic,0.251
+desc,USKL_c4c275443042,Job Control Language (JCL),A programming language for submitting jobs to mainframe systems.,nli_off_topic,0.297
+desc,USKL_da84fdd61432,OpenAI ChatGPT,Skill: Generating conversational text using AI models like ChatGPT,nli_off_topic,0.008
+desc,USKL_345fadbf9f29,Oracle Java 2 Platform Enterprise Edition J2EE,Skill involves developing enterprise applications using Oracle's Java platform and related technologies for databases and data management.,nli_off_topic,0.144
+desc,USKL_b2a9033bede4,Oracle JavaServer Pages JSP,Skill involves writing server-side Java code for dynamic web pages using JSP technology in database and data management domains.,nli_off_topic,0.003
+desc,USKL_239bcfb7d5f4,Oracle PeopleSoft Financials,Skill involves managing and analyzing financial data using Oracle PeopleSoft applications within databases and data management domains.,nli_off_topic,0.406
+desc,USKL_c76a9e184e1d,Oracle Primavera Enterprise Project Portfolio Management,It is a project portfolio management tool using Oracle's database technology.,nli_off_topic,0.036
+desc,USKL_72b057f910a7,Personal computer diagnostic software,Skill involves using diagnostic tools to troubleshoot personal computers programmatically.,nli_off_topic,0.157
+desc,USKL_fa62ae250c6d,SAP Master Data Management MDM,Skill involves managing and integrating master data across SAP systems for consistency and accuracy.,nli_off_topic,0.078
+desc,USKL_d6ed1cb953e3,Systems and application deployment and migration software,Skill involves deploying and migrating software systems using specialized deployment and migration software tools.,nli_off_topic,0.462
+desc,USKL_96eb6f46f10d,UNIX Shell,command-line interface scripting in Unix-like systems software development skill.,nli_off_topic,0.028
+desc,USKL_477804e11345,Voice over internet protocol VoIP system software,Skill involves configuring and maintaining VoIP systems within network infrastructure.,nli_off_topic,0.028
+desc,USKL_de94aa247b7c,Allscripts Professional EHR,Skill involves using Allscripts software for Electronic Health Records in healthcare settings.,nli_off_topic,0.013
+desc,USKL_654a82c71ba4,Bizmatics PrognoCIS EMR,Skill involves using a specific healthcare software for managing patient records and clinical decision support,nli_off_topic,0.003
+desc,USKL_441aea99a716,Computerized physician order entry CPOE software,Skill involves developing and maintaining CPOE software systems for healthcare.,nli_off_topic,0.034
+desc,USKL_3f35f41c03d8,GE Healthcare Centricity EMR,Skill required for managing and implementing healthcare electronic medical records systems like Centricity EMR,nli_off_topic,0.034
+desc,USKL_ca1b7973e2fe,MEDITECH Healthcare Information System HCIS,Skill involves using MEDITECH healthcare information systems to manage patient records and clinical workflows in hospitals.,nli_off_topic,0.094
+desc,USKL_bdf5b958c790,MicroFour PracticeStudio.NET EMR,Skill involves using PracticeStudio.NET for Electronic Medical Records in programming and software development domains.,nli_off_topic,0.331
+desc,USKL_4137507082ad,NextGen Healthcare Information Systems EMR,Skill involves managing electronic medical records systems in healthcare settings,nli_off_topic,0.007
+desc,USKL_bc5140551ce5,StatCom Patient Flow Logistics Enterprise Suite,Skill involves managing patient flow using StatCom Enterprise Suite in healthcare IT systems,nli_off_topic,0.134
+desc,USKL_a998e671ba2e,SynaMed EMR,Skill involves managing Electronic Medical Records systems in healthcare IT domains.,nli_off_topic,0.028
+desc,USKL_45c1d18218c2,Texas Medical Software SpringCharts EMR,Skill involves developing and using EMR software specifically named SpringCharts in healthcare IT development,nli_off_topic,0.009
+desc,USKL_d18ef90dc927,Anti-spyware software,Skill involves identifying and removing malicious software from systems by programmers and developers.,nli_off_topic,0.016
+desc,USKL_644fc8869b0c,Berkeley Internet Domain Name BIND,BIND is a software used for managing domain name system services in networks.,nli_off_topic,0.13
+desc,USKL_fd459d3d3c49,Check Point Next Generation Secure Web Gateway,Skill involves configuring and maintaining advanced web security gateways by Check Point for enterprise networks.,nli_off_topic,0.011
+desc,USKL_9447eb041768,Computer forensic software,Skill involves using specialized software to investigate and analyze cyber incidents for evidence.,nli_off_topic,0.113
+desc,USKL_4f121a9f42c0,Conformance and validation testing software,Skill involves using tools to ensure software meets specified standards and requirements.,nli_off_topic,0.019
+desc,USKL_7e6c2913958a,End-to-end encryption software,Skill involves designing implementing and securing end-to-end encrypted communication systems against various cyber threats.,nli_off_topic,0.138
+desc,USKL_6f2465b1c8b6,Juniper Networks NetScreen-Security Manager,Skill involves configuring managing and troubleshooting NetScreen firewalls and security devices in network environments.,nli_off_topic,0.003
+desc,USKL_f0037093dd5e,Network security auditing software,Skill involves using specialized software to audit and assess network security measures for vulnerabilities.,nli_off_topic,0.473
+desc,USKL_62264675529f,Palo Alto Networks Next-Generation Security Platform,Skill involves configuring and managing Palo Alto Networks security appliances for network protection.,nli_off_topic,0.02
+desc,USKL_080866863819,Portswigger BurP Suite,skill: automated web application security testing using Burp Suite,nli_off_topic,0.254

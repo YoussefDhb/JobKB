@@ -1932,415 +1932,415 @@ USKL_881187a20195,Inductive Reasoning,Réflexion inductrice,,,soft,soft_cognitiv
 USKL_7e142a1ab157,Information Ordering,Commande d'informations,,,hard,data_databases,LIGHTCAST | ONET,SKL_036f3d113bbc | SKL_5f941f323e7c,,,,"The ability to arrange things or actions in a certain order or pattern according to a specific rule or set of rules (e.g., patterns of numbers, letters, words, pictures, mathematical operations).",source
 USKL_0a8a7f36db2d,Mathematical Reasoning,Le raisonnement mathématique,,,soft,soft_cognitive,ONET,SKL_1fa4715aee9a,,,,The ability to choose the right mathematical methods or formulas to solve a problem.,source
 USKL_ec04fef56323,Visualization,La visualisation,visualization,,hard,web,CSO | ONET,SKL_469a005ccae3 | SKL_d207032bb640,,,,The ability to imagine how something will look after it is moved around or when its parts are moved or rearranged.,source
-USKL_161e105aabb6,ACT! Premium,ACT! Premium,,,hard,other_hard,ONET,SKL_97824ec06fcf,,,,,
-USKL_91a4dee23d37,Adobe Distiller,Distilleurs d'Adobe,,,hard,other_hard,ONET,SKL_65e4edff1665,,,,,
-USKL_840882e0cd0c,Adobe Flex,Adobe Flex,,,hard,other_hard,ONET,SKL_d48392438ce7,,,,,
-USKL_9cc913b00116,Advanced business application programming ABAP,La programmation avancée d'applications commerciales ABAP,,,hard,programming_languages,ONET,SKL_58d629217129,,,,,
-USKL_4e57856c6119,Alpha Four,Alpha quatre,,,hard,other_hard,ONET,SKL_f6200de0e94d,,,,,
-USKL_4d9778337e9e,Amazon Web Services AWS software,Le logiciel Amazon Web Services AWS,,,hard,cloud_devops,ONET,SKL_0be3e12d792c,,,,,
-USKL_0a765f8b547c,Apache Cassandra,Apache Cassandra,,,hard,other_hard,LIGHTCAST | ONET,SKL_27dc1ea97bc9 | SKL_b47672aa9e83,,,,,
+USKL_161e105aabb6,ACT! Premium,ACT! Premium,,,hard,other_hard,ONET,SKL_97824ec06fcf,,,,ACT! Premium is a business application for managing customer relationships.,llm
+USKL_91a4dee23d37,Adobe Distiller,Distilleurs d'Adobe,,,hard,other_hard,ONET,SKL_65e4edff1665,,,,Adobe Distiller is a software tool for converting files to PDF format.,llm
+USKL_840882e0cd0c,Adobe Flex,Adobe Flex,,,hard,other_hard,ONET,SKL_d48392438ce7,,,,skill Adobe Flex for developing rich internet applications,llm
+USKL_9cc913b00116,Advanced business application programming ABAP,La programmation avancée d'applications commerciales ABAP,,,hard,programming_languages,ONET,SKL_58d629217129,,,,Advanced business application programming ABAP is a specialized programming skill for developing enterprise applications in SAP systems.,llm
+USKL_4e57856c6119,Alpha Four,Alpha quatre,,,hard,other_hard,ONET,SKL_f6200de0e94d,,,,Alpha Four is a software application used in specific business processes outside mainstream IT systems,llm
+USKL_4d9778337e9e,Amazon Web Services AWS software,Le logiciel Amazon Web Services AWS,,,hard,cloud_devops,ONET,SKL_0be3e12d792c,,,,Skill: Managing and deploying applications using AWS services in cloud environments.,llm
+USKL_0a765f8b547c,Apache Cassandra,Apache Cassandra,,,hard,other_hard,LIGHTCAST | ONET,SKL_27dc1ea97bc9 | SKL_b47672aa9e83,,,,Apache Cassandra is a distributed database management system designed for large-scale data storage and retrieval.,llm
 USKL_85a5abe424ef,Apache Hadoop,Hadoop,Hadoop,Apache Hadoop,hard,data_engineering,ONET,SKL_4f055184510b,Q29120,https://www.wikidata.org/wiki/Q29120,distributed data processing framework,distributed data processing framework,wikidata
 USKL_fab607ccbaf9,Apache HTTP Server,Apache HTTP Server,httpd | Apache webserver | Apache web server | Apache,httpd | Apache httpd,hard,systems_infrastructure,LIGHTCAST | ONET,SKL_2c9dfa2877db | SKL_e791b641ed43,Q11354,https://www.wikidata.org/wiki/Q11354,open-source web server software,open-source web server software,wikidata
-USKL_66fe80814622,Apache Pig,Apache Porc,,,hard,other_hard,ONET,SKL_dffdd77074d1,,,,,
-USKL_2196f09f5e76,Apache Solr,Apache Solr,,,hard,other_hard,LIGHTCAST | ONET,SKL_22bf2888f73f | SKL_492a7981a7c6,,,,,
-USKL_bf763891f725,Apple Final Cut Pro,Apple Final Cut Pro,,,hard,other_hard,ONET,SKL_a32e0f546f18,,,,,
-USKL_6632dd9ab1ff,Apple iMovie,Appel iMovie,,,hard,other_hard,ONET,SKL_33bf76912d32,,,,,
-USKL_da44ccc8d01c,Apple iWork Keynote,Apple iWork Keynote,,,hard,other_hard,ONET,SKL_adaa297a2eb7,,,,,
-USKL_98140f132cf1,Apple iWork Numbers,Numéros d'Apple iWork,,,hard,other_hard,ONET,SKL_3cd0c8281529,,,,,
-USKL_a03ebc6d68ec,Apple iWork Pages,Pages Apple iWork,,,hard,other_hard,ONET,SKL_981741ac4f48,,,,,
+USKL_66fe80814622,Apache Pig,Apache Porc,,,hard,other_hard,ONET,SKL_dffdd77074d1,,,,Apache Pig is a software tool for creating maps and reduces in Hadoop using a high-level language called Pig Latin.,llm
+USKL_2196f09f5e76,Apache Solr,Apache Solr,,,hard,other_hard,LIGHTCAST | ONET,SKL_22bf2888f73f | SKL_492a7981a7c6,,,,Apache Solr is an open-source search platform built on top of Lucene.,llm
+USKL_bf763891f725,Apple Final Cut Pro,Apple Final Cut Pro,,,hard,other_hard,ONET,SKL_a32e0f546f18,,,,Apple Final Cut Pro is a video editing software application.,llm
+USKL_6632dd9ab1ff,Apple iMovie,Appel iMovie,,,hard,other_hard,ONET,SKL_33bf76912d32,,,,Skill in using Apple iMovie for video editing and production,llm
+USKL_da44ccc8d01c,Apple iWork Keynote,Apple iWork Keynote,,,hard,other_hard,ONET,SKL_adaa297a2eb7,,,,Apple iWork Keynote is a presentation software for macOS and iOS.,llm
+USKL_98140f132cf1,Apple iWork Numbers,Numéros d'Apple iWork,,,hard,other_hard,ONET,SKL_3cd0c8281529,,,,Apple iWork Numbers is a spreadsheet application within the iWork suite for macOS and iOS.,llm
+USKL_a03ebc6d68ec,Apple iWork Pages,Pages Apple iWork,,,hard,other_hard,ONET,SKL_981741ac4f48,,,,Apple iWork Pages is a word processing application within the iWork suite for macOS and iOS.,llm
 USKL_b8c9dab797d1,macOS,macOS,Apple macOS | Mac OS | macos | Modern Mac OS | Macintosh Operating System X | Mac OS 10 | OSX,,hard,systems_infrastructure,DATAJOBS | KAGGLE | LIGHTCAST | ONET | ZENODO,SKL_04f11403178c | SKL_1eb0f0bb44d8 | SKL_245ca5d9afdd | SKL_9eaadad8e9a2 | SKL_ea0f7dfdd533,Q14116,https://www.wikidata.org/wiki/Q14116,operating system for Apple computers,operating system for Apple computers,wikidata
-USKL_bd590099e5e4,Atlassian JIRA,Atlassian JIRA,,,hard,other_hard,ONET,SKL_8a54c888c8de,,,,,
+USKL_bd590099e5e4,Atlassian JIRA,Atlassian JIRA,,,hard,other_hard,ONET,SKL_8a54c888c8de,,,,Skill: Using Atlassian JIRA for project and issue tracking.,llm
 USKL_6822d99b2c7f,Backbone.js,Backbone.js,,,hard,web,KAGGLE | LIGHTCAST | ONET,SKL_06e29ee21632 | SKL_2147a0febd80 | SKL_2ff52ce7a705,Q3736988,https://www.wikidata.org/wiki/Q3736988,JavaScript library,JavaScript library,wikidata
-USKL_bb5577b0173c,Billing software,Logiciel de facturation,,,hard,programming_languages,ONET,SKL_8deab908eba1,,,,,
-USKL_12ca40178aa7,Blackbaud The Raiser's Edge,Blackbaud Le bord de l'éleveur,,,hard,other_hard,ONET,SKL_1e0d617faa62,,,,,
-USKL_765ba752f80d,Blackboard software,Logiciel de tableau noir,,,hard,programming_languages,ONET,SKL_7eec40d3dd57,,,,,
-USKL_92aba4c98c16,Borland Paradox,Paradoxe de Borland,,,hard,other_hard,ONET,SKL_543cabc64b01,,,,,
-USKL_e272bb7130b2,C,C,C (Programming Language),,hard,other_hard,LIGHTCAST | ONET,SKL_93191183ad6b | SKL_c8eac5971439,,,,,
-USKL_7d057f974697,Canu,Canu,,,hard,other_hard,ONET,SKL_a823c5e4f8f0,,,,,
-USKL_4720070e46d0,Cisco Systems WAN Manager,Gestionnaire de systèmes Cisco WAN,,,hard,networks,ONET,SKL_745c17f823c7,,,,,
-USKL_b19bc333d5e7,Citrix cloud computing software,Le logiciel Citrix cloud computing,,,hard,cloud_devops,ONET,SKL_260517f66f1c,,,,,
-USKL_0a9d05d4c23a,Common business oriented language COBOL,Langue commune axée sur les affaires COBOL,,,hard,other_hard,ONET,SKL_11ab0b15b79c,,,,,
-USKL_537aa0a427a7,Corel WordPerfect Office Suite,Suite de bureau Corel WordPerfect,,,hard,other_hard,ONET,SKL_437382f404aa,,,,,
-USKL_1b52e32aedf7,Customer Information Control System (CICS),Système de contrôle de l'information client (CICS),Customer information control system CICS,,hard,other_hard,LIGHTCAST | ONET,SKL_b773074bbdf9 | SKL_da5dbd83423c,,,,,
-USKL_51deccee8fe1,Dartware InterMapper,Dartware InterMapper,,,hard,other_hard,ONET,SKL_43cb4e99989e,,,,,
-USKL_05adcf8b616a,Dynamic hypertext markup language DHTML,Langage de marquage hypertexte dynamique DHTML,,,hard,web,ONET,SKL_903251012df1,,,,,
+USKL_bb5577b0173c,Billing software,Logiciel de facturation,,,hard,programming_languages,ONET,SKL_8deab908eba1,,,,Billing software skills involve using and developing software for managing customer billing processes in a programming and software development context.,llm
+USKL_12ca40178aa7,Blackbaud The Raiser's Edge,Blackbaud Le bord de l'éleveur,,,hard,other_hard,ONET,SKL_1e0d617faa62,,,,Skill involves managing fundraising databases using Blackbaud's Raiser's Edge software.,llm
+USKL_765ba752f80d,Blackboard software,Logiciel de tableau noir,,,hard,programming_languages,ONET,SKL_7eec40d3dd57,,,,Blackboard software is used in educational management systems alongside programming for backend integration.,llm
+USKL_92aba4c98c16,Borland Paradox,Paradoxe de Borland,,,hard,other_hard,ONET,SKL_543cabc64b01,,,,Borland Paradox refers to the dilemma of choosing between Delphi and C++Builder for object-oriented programming.,llm
+USKL_e272bb7130b2,C,C,C (Programming Language),,hard,other_hard,LIGHTCAST | ONET,SKL_93191183ad6b | SKL_c8eac5971439,,,,C is a low-level programming language used for system software and high-performance applications.,llm
+USKL_7d057f974697,Canu,Canu,,,hard,other_hard,ONET,SKL_a823c5e4f8f0,,,,Canu refers to a tool for automated configuration management in Unix-like systems.,llm
+USKL_4720070e46d0,Cisco Systems WAN Manager,Gestionnaire de systèmes Cisco WAN,,,hard,networks,ONET,SKL_745c17f823c7,,,,Cisco Systems WAN Manager designs and manages wide area network infrastructure for organizations.,llm
+USKL_b19bc333d5e7,Citrix cloud computing software,Le logiciel Citrix cloud computing,,,hard,cloud_devops,ONET,SKL_260517f66f1c,,,,Skill involves managing and supporting Citrix cloud computing software for infrastructure and systems administration tasks.,llm
+USKL_0a9d05d4c23a,Common business oriented language COBOL,Langue commune axée sur les affaires COBOL,,,hard,other_hard,ONET,SKL_11ab0b15b79c,,,,COBOL is a programming language primarily used in business-oriented applications.,llm
+USKL_537aa0a427a7,Corel WordPerfect Office Suite,Suite de bureau Corel WordPerfect,,,hard,other_hard,ONET,SKL_437382f404aa,,,,Skill involves using an older word processing and office productivity suite like Corel WordPerfect Office Suite.,llm
+USKL_1b52e32aedf7,Customer Information Control System (CICS),Système de contrôle de l'information client (CICS),Customer information control system CICS,,hard,other_hard,LIGHTCAST | ONET,SKL_b773074bbdf9 | SKL_da5dbd83423c,,,,CICS is a mainframe software system for managing transaction processing in enterprise environments.,llm
+USKL_51deccee8fe1,Dartware InterMapper,Dartware InterMapper,,,hard,other_hard,ONET,SKL_43cb4e99989e,,,,Dartware InterMapper is a network mapping software tool.,llm
+USKL_05adcf8b616a,Dynamic hypertext markup language DHTML,Langage de marquage hypertexte dynamique DHTML,,,hard,web,ONET,SKL_903251012df1,,,,DHTML refers to HTML enhanced with JavaScript for dynamic web page effects.,llm
 USKL_d26d451225be,Eclipse IDE,Communauté Open Source Eclipse,Visual Age for Java,Communauté Open Source Eclipse,hard,programming_languages,ONET,SKL_9ecc8dc68c66,Q82268,https://www.wikidata.org/wiki/Q82268,software development environment,software development environment,wikidata
-USKL_47d77305dc34,Embarcadero Delphi,Embarcadero Delphi,,,hard,other_hard,ONET,SKL_a4e93b2f94d0,,,,,
-USKL_c897f63664f4,Enterprise application integration EAI software,Logiciel EAI d'intégration des applications d'entreprise,,,hard,programming_languages,ONET,SKL_fd39f59a236b,,,,,
-USKL_8f6a56704afe,Enterprise JavaBeans,Entreprise JavaBeans,,,hard,programming_languages,LIGHTCAST | ONET,SKL_22c27e58ce46 | SKL_83bd8c31edfc,,,,,
-USKL_e349fbb718f5,Extensible hypertext markup language XHTML,Langage de marquage hypertexte étendu XHTML,,,hard,web,ONET,SKL_c7abc473444c,,,,,
+USKL_47d77305dc34,Embarcadero Delphi,Embarcadero Delphi,,,hard,other_hard,ONET,SKL_a4e93b2f94d0,,,,Embarcadero Delphi is a proprietary object-oriented programming environment for Windows macOS iOS and Linux.,llm
+USKL_c897f63664f4,Enterprise application integration EAI software,Logiciel EAI d'intégration des applications d'entreprise,,,hard,programming_languages,ONET,SKL_fd39f59a236b,,,,Enterprise application integration EAI software is software for integrating functions across different enterprise applications.,llm
+USKL_8f6a56704afe,Enterprise JavaBeans,Entreprise JavaBeans,,,hard,programming_languages,LIGHTCAST | ONET,SKL_22c27e58ce46 | SKL_83bd8c31edfc,,,,Enterprise JavaBeans are Java components for building enterprise-level applications.,llm
+USKL_e349fbb718f5,Extensible hypertext markup language XHTML,Langage de marquage hypertexte étendu XHTML,,,hard,web,ONET,SKL_c7abc473444c,,,,XHTML is a subset of HTML designed to be both valid and standards-compliant.,llm
 USKL_76e0c76bc437,Extensible markup language XML,Langage de marquage extensible XML,,,hard,other_hard,ONET,SKL_a5c10d300f8b,,,,,
-USKL_6a87353a7503,File transfer protocol FTP software,Protocole de transfert de fichiers logiciel FTP,,,hard,networks,ONET,SKL_8b0105c801dd,,,,,
-USKL_4101eebf0a63,FileMaker Pro,FileMaker Pro,,,hard,other_hard,ONET,SKL_9b6800b41af3,,,,,
-USKL_542aa10c145f,Firewall software,Logiciel de pare-feu,,,hard,security,ONET,SKL_1e0b5e95a514,,,,,
+USKL_6a87353a7503,File transfer protocol FTP software,Protocole de transfert de fichiers logiciel FTP,,,hard,networks,ONET,SKL_8b0105c801dd,,,,FTP software refers to client-server applications for file transfer over the internet following the FTP protocol.,llm
+USKL_4101eebf0a63,FileMaker Pro,FileMaker Pro,,,hard,other_hard,ONET,SKL_9b6800b41af3,,,,FileMaker Pro is a database management software used for creating custom applications.,llm
+USKL_542aa10c145f,Firewall software,Logiciel de pare-feu,,,hard,security,ONET,SKL_1e0b5e95a514,,,,Firewall software is security software that monitors and controls incoming and outgoing network traffic based on predetermined security rules.,llm
 USKL_cc6c0e0ce9d5,Google Analytics,Google Analytics,Universal Analytics | Google Analytics 4 | GA4 | UA,,hard,data_databases,ONET,SKL_8679a9a45839,Q220577,https://www.wikidata.org/wiki/Q220577,web analytics service offered by Google,web analytics service offered by Google,wikidata
-USKL_e7898b475c8b,Help desk software,Logiciel de bureau d'aide,,,hard,programming_languages,ONET,SKL_f49429c35d87,,,,,
-USKL_76ecbbdba046,Hewlett Packard HP-UX,Hewlett Packard HP-UX,,,hard,other_hard,ONET,SKL_1217a33a9b68,,,,,
-USKL_824c78c582da,Human resource management software HRMS,Logiciel de gestion des ressources humaines HRMS,,,hard,programming_languages,ONET,SKL_7c7c498d9448,,,,,
-USKL_2850f80ec0dc,Hypertext markup language HTML,Langage de marquage hypertexte HTML,,,hard,web,ONET,SKL_46a08f61b8f8,,,,,
-USKL_16ffd881733d,IBM Cognos Impromptu,IBM Cognos Impromptu,,,hard,other_hard,ONET,SKL_d387150e9b41,,,,,
-USKL_1a35de2c3f53,IBM Domino,IBM Domino,,,hard,other_hard,ONET,SKL_bdda1e908f93,,,,,
-USKL_eae246e389bf,IBM iSeries Access,IBM iSeries Accès,,,hard,other_hard,ONET,SKL_1b03fd2285c8,,,,,
-USKL_a41a74e8bced,IBM Power Systems software,Le logiciel IBM Power Systems,,,hard,programming_languages,ONET,SKL_4e250bbdec82,,,,,
-USKL_d35d313a42ca,IBM SPSS Statistics,IBM SPSS Statistiques,,,hard,other_hard,ONET,SKL_11f5e88db680,,,,,
-USKL_0349c5a67512,Infor ERP Baan,Pour ERP Baan,,,hard,other_hard,ONET,SKL_56916367db06,,,,,
-USKL_a14f422540eb,Integrated development environment IDE software,Environnement de développement intégré logiciel IDE,,,hard,programming_languages,ONET,SKL_051021ed6593,,,,,
-USKL_0e8c4cef03ac,K2 Business Process Automation,K2 Automatisation des processus commerciaux,,,hard,other_hard,ONET,SKL_5f6fe63d3785,,,,,
-USKL_278f18d08611,KornShell,KornShell,,,hard,other_hard,ONET,SKL_7a564b3c6110,,,,,
-USKL_9716a9c22431,LAMP Stack,LAMP Stack,,,hard,other_hard,ONET,SKL_e2d6c7064d86,,,,,
-USKL_490b179af86a,Langlais Computer Consultants CalMan,Langlais consultants en informatique CalMan,,,hard,other_hard,ONET,SKL_c3c0659bb39c,,,,,
+USKL_e7898b475c8b,Help desk software,Logiciel de bureau d'aide,,,hard,programming_languages,ONET,SKL_f49429c35d87,,,,Help desk software skills involve managing and using help desk tools for customer support.,llm
+USKL_76ecbbdba046,Hewlett Packard HP-UX,Hewlett Packard HP-UX,,,hard,other_hard,ONET,SKL_1217a33a9b68,,,,Hewlett Packard HP-UX is a Unix operating system developed by Hewlett Packard.,llm
+USKL_824c78c582da,Human resource management software HRMS,Logiciel de gestion des ressources humaines HRMS,,,hard,programming_languages,ONET,SKL_7c7c498d9448,,,,Human resource management software HRMS is specialized software for managing human resources within organizations.,llm
+USKL_2850f80ec0dc,Hypertext markup language HTML,Langage de marquage hypertexte HTML,,,hard,web,ONET,SKL_46a08f61b8f8,,,,HTML is the standard markup language for creating web pages.,llm
+USKL_16ffd881733d,IBM Cognos Impromptu,IBM Cognos Impromptu,,,hard,other_hard,ONET,SKL_d387150e9b41,,,,IBM Cognos Impromptu is a tool for creating interactive data visualizations and reports.,llm
+USKL_1a35de2c3f53,IBM Domino,IBM Domino,,,hard,other_hard,ONET,SKL_bdda1e908f93,,,,IBM Domino is a server-based software for email and collaboration used in enterprise environments.,llm
+USKL_eae246e389bf,IBM iSeries Access,IBM iSeries Accès,,,hard,other_hard,ONET,SKL_1b03fd2285c8,,,,IBM iSeries Access is the ability to interact with IBM iSeries systems.,llm
+USKL_a41a74e8bced,IBM Power Systems software,Le logiciel IBM Power Systems,,,hard,programming_languages,ONET,SKL_4e250bbdec82,,,,IBM Power Systems software refers to programming and developing applications for IBM Power Systems servers.,llm
+USKL_d35d313a42ca,IBM SPSS Statistics,IBM SPSS Statistiques,,,hard,other_hard,ONET,SKL_11f5e88db680,,,,IBM SPSS Statistics is a software for statistical analysis in social sciences and other fields.,llm
+USKL_0349c5a67512,Infor ERP Baan,Pour ERP Baan,,,hard,other_hard,ONET,SKL_56916367db06,,,,Skill in Infor ERP Baan systems for managing business processes across various industries,llm
+USKL_a14f422540eb,Integrated development environment IDE software,Environnement de développement intégré logiciel IDE,,,hard,programming_languages,ONET,SKL_051021ed6593,,,,IDE software is a tool for writing programming code integrating development activities.,llm
+USKL_0e8c4cef03ac,K2 Business Process Automation,K2 Automatisation des processus commerciaux,,,hard,other_hard,ONET,SKL_5f6fe63d3785,,,,K2 Business Process Automation is a tool for automating business processes using visual workflow modeling.,llm
+USKL_278f18d08611,KornShell,KornShell,,,hard,other_hard,ONET,SKL_7a564b3c6110,,,,KornShell is a command language shell derived from Bourne Shell with additional features.,llm
+USKL_9716a9c22431,LAMP Stack,LAMP Stack,,,hard,other_hard,ONET,SKL_e2d6c7064d86,,,,"LAMP Stack refers to a software stack consisting of Linux, Apache, MySQL, and PHP or Perl or Python.",llm
+USKL_490b179af86a,Langlais Computer Consultants CalMan,Langlais consultants en informatique CalMan,,,hard,other_hard,ONET,SKL_c3c0659bb39c,,,,CalMan is a project management software used by Langlais Computer Consultants.,llm
 USKL_97eefbe93ae6,Linux,noyau Linux,linux | linux kernel | linux systems | linux- operating system,Linux,hard,systems_infrastructure,CSO | KAGGLE | LIGHTCAST | ONET,SKL_2485f0c3783a | SKL_397f37988b7f | SKL_5b1d52eae941 | SKL_9768767c8936,Q14579,https://www.wikidata.org/wiki/Q14579,"Unix-like operating system kernel, basis for all Linux operating systems","Unix-like operating system kernel, basis for all Linux operating systems",wikidata
-USKL_19cf647e0de3,Local area network LAN software,Logiciel réseau local LAN,,,hard,networks,ONET,SKL_5f3775b9ca19,,,,,
-USKL_a8dc02d31651,Mac HelpMate,Mac HelpMate,,,hard,other_hard,ONET,SKL_0e6b1a9e9066,,,,,
-USKL_15c692921c1d,Management information systems MIS,Systèmes d'information de gestion MIS,,,hard,other_hard,ONET,SKL_77492de3d779,,,,,
-USKL_dac4bf27d1b2,McAfee,McAfee,,,hard,other_hard,ONET,SKL_18f83025cf56,,,,,
-USKL_9ce4845004c4,Microservices Architecture,Microservices Architecture,,,hard,cloud_devops,ONET,SKL_d61bf5f9cb27,,,,,
-USKL_3f4715b3ec5b,.NET Framework,Cadre .NET,Microsoft .NET Framework,,hard,programming_languages,LIGHTCAST | ONET,SKL_4a38877057ec | SKL_a5fddda9f8d9,,,,,
-USKL_ed8bfafc3863,Microsoft Active Server Pages ASP,Pages du serveur actif de Microsoft ASP,,,hard,systems_infrastructure,ONET,SKL_4bb7b9bb7201,,,,,
-USKL_3a5894965d4a,Microsoft Azure software,Le logiciel Microsoft Azure,,,hard,cloud_devops,ONET,SKL_1ef3f033c9c5,,,,,
-USKL_f981f9964c1a,Microsoft Business Contact Manager,Gestionnaire de contacts professionnels de Microsoft,,,hard,other_hard,ONET,SKL_02c4f41006b0,,,,,
-USKL_96b10c5c70dd,Microsoft Dynamics,Microsoft Dynamics,,,hard,other_hard,ONET,SKL_500317a8580b,,,,,
-USKL_6bb92f775fa9,Microsoft Dynamics AX,Microsoft Dynamics AX,,,hard,other_hard,ONET,SKL_04eb86a4fcc5,,,,,
-USKL_d97abd455eb5,Microsoft Dynamics CRM,Microsoft Dynamics CRM,,,hard,other_hard,ONET,SKL_8f7460cb4384,,,,,
-USKL_de463546b41e,Microsoft Dynamics GP,Microsoft Dynamics GP,,,hard,other_hard,ONET,SKL_8818ce63ce18,,,,,
-USKL_5f39fc016e33,Microsoft Dynamics NAV,Microsoft Dynamics NAV,,,hard,other_hard,ONET,SKL_be548d79badc,,,,,
-USKL_147a54d3c32b,Microsoft Entourage,Microsoft Entourage,,,hard,other_hard,ONET,SKL_c4e6892acd8e,,,,,
-USKL_6bb951228231,Microsoft Excel,Microsoft Excel,,,hard,other_hard,ONET,SKL_5fb1eceabaf5,,,,,
-USKL_fac98fee1ec4,Microsoft Exchange,Microsoft Exchange,,,hard,other_hard,ONET,SKL_77015b0e4662,,,,,
-USKL_1bc8620d3b05,Microsoft FrontPage,Microsoft FrontPage,Microsoft Frontpage,,hard,other_hard,LIGHTCAST | ONET,SKL_b6d4e5742ebc | SKL_c22202b063e4,,,,,
-USKL_010b089aefdc,Microsoft Internet Explorer,Microsoft Internet Explorer,,,hard,other_hard,LIGHTCAST | ONET,SKL_c246a6759f81 | SKL_ea063a9c4753,,,,,
-USKL_c0d547221f4c,Microsoft Office software,Logiciel Microsoft Office,,,hard,programming_languages,ONET,SKL_9f72e268cdce,,,,,
-USKL_565b3dad4d86,Microsoft Outlook,Microsoft Outlook,,,hard,other_hard,ONET,SKL_ece28dd0c595,,,,,
-USKL_231aa7e440bf,Microsoft PowerPoint,Microsoft PowerPoint,,,hard,other_hard,ONET,SKL_28e174eeeb52,,,,,
-USKL_1cc1c49ad843,Microsoft Project,Projet Microsoft,,,hard,other_hard,ONET,SKL_fe7cc6ac1e70,,,,,
-USKL_c0fe73609be3,Microsoft SharePoint,Microsoft SharePoint,Microsoft SharePoint Server | Microsoft Office SharePoint Server,,hard,it_management,LIGHTCAST | ONET,SKL_04c4332751cd | SKL_61bfaa7e8b01 | SKL_824d8ac62d96 | SKL_e2c188a41d07,,,,,
+USKL_19cf647e0de3,Local area network LAN software,Logiciel réseau local LAN,,,hard,networks,ONET,SKL_5f3775b9ca19,,,,LAN software refers to applications designed for managing and optimizing local area networks.,llm
+USKL_a8dc02d31651,Mac HelpMate,Mac HelpMate,,,hard,other_hard,ONET,SKL_0e6b1a9e9066,,,,Mac HelpMate is a role providing technical support for Apple Macintosh computers.,llm
+USKL_15c692921c1d,Management information systems MIS,Systèmes d'information de gestion MIS,,,hard,other_hard,ONET,SKL_77492de3d779,,,,Management information systems MIS involves designing developing and managing enterprise information systems.,llm
+USKL_dac4bf27d1b2,McAfee,McAfee,,,hard,other_hard,ONET,SKL_18f83025cf56,,,,McAfee refers to cybersecurity expertise focusing on antivirus software and threat detection systems.,llm
+USKL_9ce4845004c4,Microservices Architecture,Microservices Architecture,,,hard,cloud_devops,ONET,SKL_d61bf5f9cb27,,,,Microservices Architecture is a design approach for developing software systems using small independent services that communicate via application programming interfaces.,llm
+USKL_3f4715b3ec5b,.NET Framework,Cadre .NET,Microsoft .NET Framework,,hard,programming_languages,LIGHTCAST | ONET,SKL_4a38877057ec | SKL_a5fddda9f8d9,,,,.NET Framework is a software framework developed by Microsoft that supports multiple programming languages.,llm
+USKL_ed8bfafc3863,Microsoft Active Server Pages ASP,Pages du serveur actif de Microsoft ASP,,,hard,systems_infrastructure,ONET,SKL_4bb7b9bb7201,,,,Microsoft Active Server Pages ASP is a server-side scripting technology for web development.,llm
+USKL_3a5894965d4a,Microsoft Azure software,Le logiciel Microsoft Azure,,,hard,cloud_devops,ONET,SKL_1ef3f033c9c5,,,,Microsoft Azure software encompasses cloud services and DevOps tools for infrastructure and systems management.,llm
+USKL_f981f9964c1a,Microsoft Business Contact Manager,Gestionnaire de contacts professionnels de Microsoft,,,hard,other_hard,ONET,SKL_02c4f41006b0,,,,Microsoft Business Contact Manager is a CRM tool for managing business contacts and relationships.,llm
+USKL_96b10c5c70dd,Microsoft Dynamics,Microsoft Dynamics,,,hard,other_hard,ONET,SKL_500317a8580b,,,,Microsoft Dynamics is a suite of business management software solutions developed by Microsoft.,llm
+USKL_6bb92f775fa9,Microsoft Dynamics AX,Microsoft Dynamics AX,,,hard,other_hard,ONET,SKL_04eb86a4fcc5,,,,Skill in Microsoft Dynamics AX involves managing enterprise resource planning systems.,llm
+USKL_d97abd455eb5,Microsoft Dynamics CRM,Microsoft Dynamics CRM,,,hard,other_hard,ONET,SKL_8f7460cb4384,,,,Skill in Microsoft Dynamics CRM for managing customer relationships and business processes.,llm
+USKL_de463546b41e,Microsoft Dynamics GP,Microsoft Dynamics GP,,,hard,other_hard,ONET,SKL_8818ce63ce18,,,,Skill in Microsoft Dynamics GP involves managing financial and operational data using enterprise resource planning software.,llm
+USKL_5f39fc016e33,Microsoft Dynamics NAV,Microsoft Dynamics NAV,,,hard,other_hard,ONET,SKL_be548d79badc,,,,Microsoft Dynamics NAV is a business management software solution developed by Microsoft.,llm
+USKL_147a54d3c32b,Microsoft Entourage,Microsoft Entourage,,,hard,other_hard,ONET,SKL_c4e6892acd8e,,,,skill Microsoft Entourage is for email and calendaring in macOS pre-iOS 10,llm
+USKL_6bb951228231,Microsoft Excel,Microsoft Excel,,,hard,other_hard,ONET,SKL_5fb1eceabaf5,,,,Skill in using Microsoft Excel for data analysis and spreadsheet management.,llm
+USKL_fac98fee1ec4,Microsoft Exchange,Microsoft Exchange,,,hard,other_hard,ONET,SKL_77015b0e4662,,,,skill Microsoft Exchange: managing email infrastructure and services in enterprise environments,llm
+USKL_1bc8620d3b05,Microsoft FrontPage,Microsoft FrontPage,Microsoft Frontpage,,hard,other_hard,LIGHTCAST | ONET,SKL_b6d4e5742ebc | SKL_c22202b063e4,,,,skill: editing and designing websites using Microsoft FrontPage,llm
+USKL_010b089aefdc,Microsoft Internet Explorer,Microsoft Internet Explorer,,,hard,other_hard,LIGHTCAST | ONET,SKL_c246a6759f81 | SKL_ea063a9c4753,,,,skill: browsing and web development using Microsoft Internet Explorer,llm
+USKL_c0d547221f4c,Microsoft Office software,Logiciel Microsoft Office,,,hard,programming_languages,ONET,SKL_9f72e268cdce,,,,Skill: Using Microsoft Office for non-programming tasks in software development.,llm
+USKL_565b3dad4d86,Microsoft Outlook,Microsoft Outlook,,,hard,other_hard,ONET,SKL_ece28dd0c595,,,,Skill: Using Microsoft Outlook for email management calendaring and communication.,llm
+USKL_231aa7e440bf,Microsoft PowerPoint,Microsoft PowerPoint,,,hard,other_hard,ONET,SKL_28e174eeeb52,,,,Skill to create and edit presentations using Microsoft PowerPoint,llm
+USKL_1cc1c49ad843,Microsoft Project,Projet Microsoft,,,hard,other_hard,ONET,SKL_fe7cc6ac1e70,,,,Skill in Microsoft Project for project management and scheduling tasks.,llm
+USKL_c0fe73609be3,Microsoft SharePoint,Microsoft SharePoint,Microsoft SharePoint Server | Microsoft Office SharePoint Server,,hard,it_management,LIGHTCAST | ONET,SKL_04c4332751cd | SKL_61bfaa7e8b01 | SKL_824d8ac62d96 | SKL_e2c188a41d07,,,,Microsoft SharePoint is a collaborative platform for document management and workflow automation in IT management and governance.,llm
 USKL_bf10b1111320,Microsoft SQL Server,Microsoft SQL Server,Microsoft SQL Servers | Windows SQL | SQL Server | MSSQL | MS-SQL Server | MS-SQL | MS SQLServer | MS SQL-Server | MS SQL Server,MS SQL | MsSQL | SQL Server | SQL Server 2000 | Sqlserver | SSRS,hard,data_databases,LIGHTCAST | ONET,SKL_345a883e3337 | SKL_82628d8a9ec1,Q215819,https://www.wikidata.org/wiki/Q215819,family of database software by Microsoft,family of database software by Microsoft,wikidata
-USKL_9a3a93606da7,Microsoft SQL Server Reporting Services SSRS,Microsoft SQL Server Services de déclaration SSRS,,,hard,data_databases,ONET,SKL_03a4e8247b0a,,,,,
-USKL_7e984185190c,Microsoft Visual FoxPro,Microsoft Visual FoxPro,Visual FoxPro,,hard,other_hard,LIGHTCAST | ONET,SKL_32095c5eaba5 | SKL_8e485eabe75a,,,,,
-USKL_844dda998810,Microsoft Visual Studio,Microsoft Visual Studio,,,hard,other_hard,LIGHTCAST | ONET,SKL_999401e04ed5 | SKL_c0b84dffdc57,,,,,
+USKL_9a3a93606da7,Microsoft SQL Server Reporting Services SSRS,Microsoft SQL Server Services de déclaration SSRS,,,hard,data_databases,ONET,SKL_03a4e8247b0a,,,,Skill involves designing and implementing reports using Microsoft SQL Server Reporting Services SSRS for databases and data analysis.,llm
+USKL_7e984185190c,Microsoft Visual FoxPro,Microsoft Visual FoxPro,Visual FoxPro,,hard,other_hard,LIGHTCAST | ONET,SKL_32095c5eaba5 | SKL_8e485eabe75a,,,,Microsoft Visual FoxPro is a database management system programming language now largely superseded.,llm
+USKL_844dda998810,Microsoft Visual Studio,Microsoft Visual Studio,,,hard,other_hard,LIGHTCAST | ONET,SKL_999401e04ed5 | SKL_c0b84dffdc57,,,,Microsoft Visual Studio is a software development environment for creating applications that run anywhere in the Microsoft Windows ecosystem.,llm
 USKL_848d6859e97d,Microsoft Windows Server,Le serveur Microsoft Windows,Microsoft Windows Server,,hard,systems_infrastructure,ONET,SKL_145b8cdbbf7f,Q11219,https://www.wikidata.org/wiki/Q11219,brand name for a group of server operating systems by Microsoft,brand name for a group of server operating systems by Microsoft,wikidata
-USKL_baeac7f4d958,Microsoft Word,Microsoft Word,,,hard,other_hard,ONET,SKL_a3ee6a40305c,,,,,
-USKL_1f7574ae1665,MicroStrategy,MicroStrategy,,,hard,it_management,ONET,SKL_18f39d854907,,,,,
-USKL_2ed053e22b79,Mobile wireless network infrastructure software,Logiciel d'infrastructure de réseau sans fil mobile,,,hard,networks,ONET,SKL_4525a5da6e41,,,,,
+USKL_baeac7f4d958,Microsoft Word,Microsoft Word,,,hard,other_hard,ONET,SKL_a3ee6a40305c,,,,Skill to manipulate and create documents using Microsoft Word software,llm
+USKL_1f7574ae1665,MicroStrategy,MicroStrategy,,,hard,it_management,ONET,SKL_18f39d854907,,,,MicroStrategy is a business intelligence and analytics platform used in IT management and governance roles.,llm
+USKL_2ed053e22b79,Mobile wireless network infrastructure software,Logiciel d'infrastructure de réseau sans fil mobile,,,hard,networks,ONET,SKL_4525a5da6e41,,,,Mobile wireless network infrastructure software refers to specialized tools for designing and managing cellular networks.,llm
 USKL_af742ff4a462,MongoDB,MongoDB,,Mongo,hard,data_databases,KAGGLE | LIGHTCAST | ONET,SKL_606765cdf303 | SKL_e584b0032877 | SKL_f2c3df3b2f95,Q1165204,https://www.wikidata.org/wiki/Q1165204,cross-platform document-oriented database management system,cross-platform document-oriented database management system,wikidata
-USKL_c289f89697ee,Nagios,Nagios,,,hard,other_hard,LIGHTCAST | ONET,SKL_597a898a291d | SKL_aebaa430f86c,,,,,
-USKL_f11f287134d4,Netscape Navigator,Navigateur Netscape,,,hard,other_hard,ONET,SKL_15935f8cda49,,,,,
-USKL_258f2945b53c,NetSuite ERP,NetSuite ERP,,,hard,other_hard,ONET,SKL_8807e10ea504,,,,,
+USKL_c289f89697ee,Nagios,Nagios,,,hard,other_hard,LIGHTCAST | ONET,SKL_597a898a291d | SKL_aebaa430f86c,,,,Nagios is a monitoring software used to check the health status of servers and networks.,llm
+USKL_f11f287134d4,Netscape Navigator,Navigateur Netscape,,,hard,other_hard,ONET,SKL_15935f8cda49,,,,skill: browsing and navigating the web using Netscape Navigator,llm
+USKL_258f2945b53c,NetSuite ERP,NetSuite ERP,,,hard,other_hard,ONET,SKL_8807e10ea504,,,,NetSuite ERP is a business management software offering comprehensive enterprise resource planning capabilities.,llm
 USKL_7b28d8af6121,Node.js,Node.js,node.js | NodeJS | Node,Node | Node js | Nodejs,hard,web,DATAJOBS | KAGGLE | LIGHTCAST | ONET | ZENODO,SKL_19c09cb00b2d | SKL_863bdffc9483 | SKL_9a86b53be913 | SKL_c60de007a2c0 | SKL_d55e424443ad,Q756100,https://www.wikidata.org/wiki/Q756100,JavaScript runtime environment,JavaScript runtime environment,wikidata
-USKL_aa2924fc684a,NortonLifeLock cybersecurity software,Le logiciel NortonLifeLock cybersecurity,,,hard,security,ONET,SKL_37655ce770f3,,,,,
-USKL_7e74568d28dd,Objective C,Objectif C,,,hard,other_hard,ONET,SKL_85b1f6363c26,,,,,
-USKL_3983eadb8eee,Oracle Business Intelligence Enterprise Edition,Oracle Business Intelligence Enterprise Edition,,,hard,data_databases,ONET,SKL_46e88be339d1,,,,,
+USKL_aa2924fc684a,NortonLifeLock cybersecurity software,Le logiciel NortonLifeLock cybersecurity,,,hard,security,ONET,SKL_37655ce770f3,,,,Skill involves using and defending against threats with NortonLifeLock cybersecurity software.,llm
+USKL_7e74568d28dd,Objective C,Objectif C,,,hard,other_hard,ONET,SKL_85b1f6363c26,,,,Objective C is a object-oriented programming language derived from C used in iOS and macOS app development.,llm
+USKL_3983eadb8eee,Oracle Business Intelligence Enterprise Edition,Oracle Business Intelligence Enterprise Edition,,,hard,data_databases,ONET,SKL_46e88be339d1,,,,Oracle Business Intelligence Enterprise Edition is a tool for databases and data management focused on analytics and artificial intelligence.,llm
 USKL_f2acd243ebe7,Oracle Database,Oracle Database,Oracle Databases | Oracle RDBMS | Oracle DBMS | Oracle,Oracle,hard,data_databases,LIGHTCAST | ONET,SKL_5f41153fbbec | SKL_fc961e37a5f2,Q185524,https://www.wikidata.org/wiki/Q185524,proprietary database management system,proprietary database management system,wikidata
 USKL_3bf36318f640,Oracle E-Business Suite,Oracle E-Business Suite,Oracle EBS | EBS,,hard,data_databases,ONET,SKL_4e0f845128d4,Q2426725,https://www.wikidata.org/wiki/Q2426725,"collection of enterprise resource planning (ERP), customer relationship management (CRM), and supply-chain management (SCM) computer applications either developed or acquired by Oracle","collection of enterprise resource planning (ERP), customer relationship management (CRM), and supply-chain management (SCM) computer applications either developed or acquired by Oracle",wikidata
-USKL_56b8b8511649,Oracle E-Business Suite Financials,Oracle E-Business Suite Finances,,,hard,data_databases,ONET,SKL_fd165b71007f,,,,,
-USKL_e0beb186d7a6,Oracle Eloqua,Oracle Eloqua,,,hard,data_databases,ONET,SKL_a89c0287e2ad,,,,,
-USKL_e2e074ac0fa3,Oracle Fusion Applications,Applications de fusion Oracle,,,hard,data_databases,ONET,SKL_f68fb4d9e80b,,,,,
-USKL_a9ac0b1c486d,Oracle Fusion Middleware,Oracle Fusion Middleware,,,hard,data_databases,LIGHTCAST | ONET,SKL_395e66135703 | SKL_e252b4be73fc,,,,,
+USKL_56b8b8511649,Oracle E-Business Suite Financials,Oracle E-Business Suite Finances,,,hard,data_databases,ONET,SKL_fd165b71007f,,,,Skill involves managing and analyzing financial data using Oracle's E-Business Suite in databases and data management contexts.,llm
+USKL_e0beb186d7a6,Oracle Eloqua,Oracle Eloqua,,,hard,data_databases,ONET,SKL_a89c0287e2ad,,,,Oracle Eloqua is a marketing automation tool for databases and data management.,llm
+USKL_e2e074ac0fa3,Oracle Fusion Applications,Applications de fusion Oracle,,,hard,data_databases,ONET,SKL_f68fb4d9e80b,,,,Oracle Fusion Applications is a suite for enterprise resource planning and business applications managed by databases and data management systems.,llm
+USKL_a9ac0b1c486d,Oracle Fusion Middleware,Oracle Fusion Middleware,,,hard,data_databases,LIGHTCAST | ONET,SKL_395e66135703 | SKL_e252b4be73fc,,,,Oracle Fusion Middleware is middleware for enterprise application integration and services in the Oracle Fusion Applications suite.,llm
 USKL_f749ab962f2c,Oracle Hyperion,Hyperion Solutions,Hyperion Solutions,Arbor Software | Hyperion Solutions Corporation,hard,data_databases,ONET,SKL_728cdd344658,Q1431991,https://www.wikidata.org/wiki/Q1431991,company,company,wikidata
-USKL_b8b8b6768a13,Oracle iPlanet Web Server,Le serveur Web Oracle iPlanet,,,hard,data_databases,LIGHTCAST | ONET,SKL_047e853306d6 | SKL_9f37dbd504a4,,,,,
-USKL_407f05d4886c,Oracle Java,Oracle Java,,,hard,data_databases,ONET,SKL_5830f01a1241,,,,,
-USKL_deca0a431bd2,Oracle JD Edwards EnterpriseOne,Oracle JD Edwards EnterpriseOne,,,hard,data_databases,ONET,SKL_8778af5345f5,,,,,
+USKL_b8b8b6768a13,Oracle iPlanet Web Server,Le serveur Web Oracle iPlanet,,,hard,data_databases,LIGHTCAST | ONET,SKL_047e853306d6 | SKL_9f37dbd504a4,,,,Oracle iPlanet Web Server is a discontinued web server software for databases and data management.,llm
+USKL_407f05d4886c,Oracle Java,Oracle Java,,,hard,data_databases,ONET,SKL_5830f01a1241,,,,Oracle Java is a programming skill for database and data management domains.,llm
+USKL_deca0a431bd2,Oracle JD Edwards EnterpriseOne,Oracle JD Edwards EnterpriseOne,,,hard,data_databases,ONET,SKL_8778af5345f5,,,,Oracle JD Edwards EnterpriseOne is a business application software for databases and data management.,llm
 USKL_a20864eebe9f,Oracle PeopleSoft,PeopleSoft,PSFT,,hard,data_databases,ONET,SKL_e3e43b718de9,Q1928814,https://www.wikidata.org/wiki/Q1928814,Oracle on-premises suite of enterprise applications software,Oracle on-premises suite of enterprise applications software,wikidata
 USKL_be249c47fdd2,PL/SQL,PL/SQL,Oracle PL/SQL | PL-SQL | PL SQL,PL-SQL,hard,data_databases,KAGGLE | LIGHTCAST | ONET,SKL_96dd769e5054 | SKL_d03ed9aa16ca | SKL_ed6faa66310a,Q41574,https://www.wikidata.org/wiki/Q41574,"One of the technologies in Oracle Database, a programming language that combines SQL syntax","One of the technologies in Oracle Database, a programming language that combines SQL syntax",wikidata
-USKL_7861755d1ef6,Oracle Primavera Systems,Systèmes Oracle Primavera,,,hard,data_databases,ONET,SKL_ec16f6df1ee3,,,,,
-USKL_edb40292b130,Oracle Siebel Server Sync,Synchronisation du serveur Oracle Siebel,,,hard,data_databases,ONET,SKL_7af231e8b31d,,,,,
+USKL_7861755d1ef6,Oracle Primavera Systems,Systèmes Oracle Primavera,,,hard,data_databases,ONET,SKL_ec16f6df1ee3,,,,Oracle Primavera Systems is a project management software used in databases and data management domains.,llm
+USKL_edb40292b130,Oracle Siebel Server Sync,Synchronisation du serveur Oracle Siebel,,,hard,data_databases,ONET,SKL_7af231e8b31d,,,,Oracle Siebel Server Sync is a database synchronization service managed by Oracle for Siebel systems.,llm
 USKL_745bd3d27837,Oracle Solaris,Solaris,Sun Solaris | Solaris OS | Solaris Operating System,Oracle Solaris | Solaris OS | Sun Solaris,hard,data_databases,ONET,SKL_14c56def5e6d,Q14646,https://www.wikidata.org/wiki/Q14646,Unix operating system originally developed by Sun Microsystems,Unix operating system originally developed by Sun Microsystems,wikidata
 USKL_85b54c8aa7d6,Oracle WebLogic Server,Oracle WebLogic Server,,BEA WebLogic | Weblogic,hard,data_databases,LIGHTCAST | ONET,SKL_28abb8b5a1d1 | SKL_810b7a9b3904,Q83589,https://www.wikidata.org/wiki/Q83589,Java application server,Java application server,wikidata
-USKL_e9503e737315,Pegasus software,Logiciel Pegasus,,,hard,programming_languages,ONET,SKL_693ff15ef1a4,,,,,
-USKL_8ca9e24f6327,Perforce Helix software,Appliquez le logiciel Helix,,,hard,programming_languages,ONET,SKL_50c4b4ad347c,,,,,
+USKL_e9503e737315,Pegasus software,Logiciel Pegasus,,,hard,programming_languages,ONET,SKL_693ff15ef1a4,,,,Pegasus software refers to a specific piece of software in the programming and software development domain.,llm
+USKL_8ca9e24f6327,Perforce Helix software,Appliquez le logiciel Helix,,,hard,programming_languages,ONET,SKL_50c4b4ad347c,,,,Perforce Helix software is used for version control in software development.,llm
 USKL_a7b1a53306ca,Performance Solutions Technology ManagePro,Technologie des solutions de performance ManagePro,,,hard,other_hard,ONET,SKL_86643ac4c55b,,,,,
-USKL_3e75bb20d1d4,Pilgrim Quality Solutions SmartSolve,Pilgrim Solutions de qualité SmartSolve,,,hard,other_hard,ONET,SKL_0fa1ab933090,,,,,
-USKL_903c1868ca7c,Progress OpenEdge ABL,Progression OpenEdge ABL,,,hard,other_hard,ONET,SKL_3c4655b50a5a,,,,,
-USKL_9473c85b2e1a,Progress OpenEdge Application Server,Progress OpenEdge serveur d'applications,,,hard,programming_languages,ONET,SKL_f4a2009ff376,,,,,
-USKL_bd4d7bbb306b,Progress OpenEdge Fathom Replication software,Progress OpenEdge logiciel de réplique Fathom,,,hard,programming_languages,ONET,SKL_243d8b861bb3,,,,,
-USKL_4cf733251509,Progress Sonic ESB,Progress Sonic ESB,,,hard,other_hard,ONET,SKL_009ab778801b,,,,,
+USKL_3e75bb20d1d4,Pilgrim Quality Solutions SmartSolve,Pilgrim Solutions de qualité SmartSolve,,,hard,other_hard,ONET,SKL_0fa1ab933090,,,,Skill related to using Pilgrim Quality Solutions SmartSolve for software quality assurance solutions,llm
+USKL_903c1868ca7c,Progress OpenEdge ABL,Progression OpenEdge ABL,,,hard,other_hard,ONET,SKL_3c4655b50a5a,,,,Progress OpenEdge ABL programming expertise in other technical domains,llm
+USKL_9473c85b2e1a,Progress OpenEdge Application Server,Progress OpenEdge serveur d'applications,,,hard,programming_languages,ONET,SKL_f4a2009ff376,,,,Progress OpenEdge Application Server programming expertise in software development,llm
+USKL_bd4d7bbb306b,Progress OpenEdge Fathom Replication software,Progress OpenEdge logiciel de réplique Fathom,,,hard,programming_languages,ONET,SKL_243d8b861bb3,,,,Progress OpenEdge Fathom Replication software is used for data replication in enterprise applications developed with OpenEdge ABL.,llm
+USKL_4cf733251509,Progress Sonic ESB,Progress Sonic ESB,,,hard,other_hard,ONET,SKL_009ab778801b,,,,Progress Sonic ESB is an enterprise service bus software skill.,llm
 USKL_8473222962d8,Progress WebSpeed Workshop,L'atelier Progress WebSpeed,,,hard,other_hard,ONET,SKL_4fac0bb0056c,,,,,
-USKL_d6bfe5c5433c,Qlik Tech QlikView,Qlik Tech QlikView,,,hard,other_hard,ONET,SKL_e397367a5a80,,,,,
-USKL_f5eda7bc780e,QUALCOMM Eudora,QUALCOMM Eudora,,,hard,other_hard,ONET,SKL_d9eeaa025299,,,,,
-USKL_38e9f46f11e7,Quest Erwin Data Modeler,Le modéliseur de données Quest Erwin,,,hard,data_databases,ONET,SKL_560781df386a,,,,,
-USKL_e4888b3c1b50,Red Hat Enterprise Linux,Red Hat Enterprise Linux,Red Hat Linux,,hard,systems_infrastructure,LIGHTCAST | ONET,SKL_2b011985311b | SKL_40c94a701990 | SKL_8ab2721182a1,,,,,
-USKL_640a229c3fd2,Red Hat WildFly,Chapeau rouge WildFly,,,hard,other_hard,ONET,SKL_eff76123aadf,,,,,
-USKL_94255b72d308,Relational database management software,Logiciel de gestion de base de données relationnelle,,,hard,data_databases,ONET,SKL_f3bfb31e3e81,,,,,
-USKL_f86df01a5ba1,Ruby On Rails,Ruby sur les rails,Ruby on Rails | ruby on rails | ruby-on-rails,,hard,programming_languages,DATAJOBS | KAGGLE | LIGHTCAST | ONET | ZENODO,SKL_032caca388b6 | SKL_7982194e9fa0 | SKL_7a6ee243453e | SKL_941998b1a15f | SKL_e71887d311cd,,,,,
+USKL_d6bfe5c5433c,Qlik Tech QlikView,Qlik Tech QlikView,,,hard,other_hard,ONET,SKL_e397367a5a80,,,,Skill in QlikTech QlikView for data visualization and business intelligence solutions development,llm
+USKL_f5eda7bc780e,QUALCOMM Eudora,QUALCOMM Eudora,,,hard,other_hard,ONET,SKL_d9eeaa025299,,,,QUALCOMM Eudora was an email client software now largely replaced by modern alternatives.,llm
+USKL_38e9f46f11e7,Quest Erwin Data Modeler,Le modéliseur de données Quest Erwin,,,hard,data_databases,ONET,SKL_560781df386a,,,,Quest Erwin Data Modeler is a tool for database modeling in data management and data integration domains.,llm
+USKL_e4888b3c1b50,Red Hat Enterprise Linux,Red Hat Enterprise Linux,Red Hat Linux,,hard,systems_infrastructure,LIGHTCAST | ONET,SKL_2b011985311b | SKL_40c94a701990 | SKL_8ab2721182a1,,,,Skill involves configuring and maintaining Red Hat Enterprise Linux in systems and infrastructure roles.,llm
+USKL_640a229c3fd2,Red Hat WildFly,Chapeau rouge WildFly,,,hard,other_hard,ONET,SKL_eff76123aadf,,,,Red Hat WildFly is an enterprise Java Platform for building and managing scalable applications.,llm
+USKL_94255b72d308,Relational database management software,Logiciel de gestion de base de données relationnelle,,,hard,data_databases,ONET,SKL_f3bfb31e3e81,,,,Skill involves managing relational databases using specific software tools and techniques.,llm
+USKL_f86df01a5ba1,Ruby On Rails,Ruby sur les rails,Ruby on Rails | ruby on rails | ruby-on-rails,,hard,programming_languages,DATAJOBS | KAGGLE | LIGHTCAST | ONET | ZENODO,SKL_032caca388b6 | SKL_7982194e9fa0 | SKL_7a6ee243453e | SKL_941998b1a15f | SKL_e71887d311cd,,,,Ruby on Rails is a web application framework written in Ruby for the Ruby programming language.,llm
 USKL_d5fba0ab5f5d,Samba,Samba,Samba (Software),,hard,networks,LIGHTCAST | ONET,SKL_17ea20e7e685 | SKL_920733bc425a,Q1830735,https://www.wikidata.org/wiki/Q1830735,free software re-implementation of the SMB networking protocol,free software re-implementation of the SMB networking protocol,wikidata
-USKL_c13d25fdaf4c,SAP Business Objects,SAP Business Objects,,,hard,other_hard,ONET,SKL_407d4aafc2a6,,,,,
-USKL_493b3946622a,SAP Crystal Reports,Rapports de cristal SAP,,,hard,other_hard,ONET,SKL_986a0e3a9f7a,,,,,
-USKL_15160ffbe372,SAP software,Logiciel SAP,,,hard,programming_languages,ONET,SKL_62d30606fab3,,,,,
-USKL_6c2412eff340,SAS,SAS,,,hard,other_hard,ONET,SKL_0e44ae3da567,,,,,
-USKL_3ebd15ab8dfa,Shell Script,Écriture en shell,Shell script,,hard,programming_languages,LIGHTCAST | ONET,SKL_4e0b64d0c084 | SKL_de7584ba80c1,,,,,
-USKL_364d844dba85,Software As A Service (SaaS),Logiciel en tant que service (SaaS),Software as a service SaaS,,hard,cloud_devops,LIGHTCAST | ONET,SKL_a58b75ba8a8a | SKL_ee346e9e4c36,,,,,
-USKL_3a20bd211434,SolarWinds,SolarWinds,,,hard,other_hard,LIGHTCAST | ONET,SKL_b187d0fd8468 | SKL_dcb84f577070,,,,,
-USKL_f75fd204cc47,Splunk Enterprise,Splunk Enterprise,Splunk Enterprise Security,,hard,security,LIGHTCAST | ONET,SKL_139d5e5698ef | SKL_95581403f99f,,,,,
+USKL_c13d25fdaf4c,SAP Business Objects,SAP Business Objects,,,hard,other_hard,ONET,SKL_407d4aafc2a6,,,,Skill in SAP Business Objects for data analysis and reporting in other technical domains,llm
+USKL_493b3946622a,SAP Crystal Reports,Rapports de cristal SAP,,,hard,other_hard,ONET,SKL_986a0e3a9f7a,,,,Skill in SAP Crystal Reports for data analysis and report generation using SAP applications,llm
+USKL_15160ffbe372,SAP software,Logiciel SAP,,,hard,programming_languages,ONET,SKL_62d30606fab3,,,,SAP software is used in programming and software development for enterprise resource planning systems.,llm
+USKL_6c2412eff340,SAS,SAS,,,hard,other_hard,ONET,SKL_0e44ae3da567,,,,"SAS refers to the software application for advanced analytics, statistics, and data visualization in various technical domains.",llm
+USKL_3ebd15ab8dfa,Shell Script,Écriture en shell,Shell script,,hard,programming_languages,LIGHTCAST | ONET,SKL_4e0b64d0c084 | SKL_de7584ba80c1,,,,A scripting language executed by Unix-like operating systems' shells for automation and customization.,llm
+USKL_364d844dba85,Software As A Service (SaaS),Logiciel en tant que service (SaaS),Software as a service SaaS,,hard,cloud_devops,LIGHTCAST | ONET,SKL_a58b75ba8a8a | SKL_ee346e9e4c36,,,,Software As A Service (SaaS) is a model where applications are delivered over a network typically the internet.,llm
+USKL_3a20bd211434,SolarWinds,SolarWinds,,,hard,other_hard,LIGHTCAST | ONET,SKL_b187d0fd8468 | SKL_dcb84f577070,,,,SolarWinds is a network monitoring software suite developed by SolarWinds Corporation,llm
+USKL_f75fd204cc47,Splunk Enterprise,Splunk Enterprise,Splunk Enterprise Security,,hard,security,LIGHTCAST | ONET,SKL_139d5e5698ef | SKL_95581403f99f,,,,Skill involving the use of Splunk Enterprise for security and cybersecurity analysis and incident detection.,llm
 USKL_6e34f8faa349,Spring Framework,Spring Framework,springframework | ApplicationContext | ac | Spring,Spring,hard,programming_languages,LIGHTCAST | ONET,SKL_7cdf6e30ac20 | SKL_927ffd91068e,Q720314,https://www.wikidata.org/wiki/Q720314,application framework for Java platform,application framework for Java platform,wikidata
-USKL_ef5bac0d7520,StataCorp Stata,StataCorp Stata,,,hard,other_hard,ONET,SKL_a029fbfa2ba7,,,,,
-USKL_35532196214f,Structured query language SQL,Langue de requête structurée SQL,,,hard,data_databases,ONET,SKL_1f7c154ad669,,,,,
-USKL_bd22aa5765fa,Symantec Veritas File System,Système de fichiers Symantec Veritas,,,hard,other_hard,ONET,SKL_f6c5c1b3b780,,,,,
-USKL_2224628d5127,Symantec Veritas Volume Manager,Gestionnaire de volume de Symantec Veritas,Veritas Volume Manager,,hard,other_hard,LIGHTCAST | ONET,SKL_9c0a306eaa5c | SKL_9c0f3ff31cd4,,,,,
-USKL_ff94537fada5,Tableau,Tableau,,,hard,data_databases,ONET,SKL_f6709e2bf0c9,,,,,
-USKL_fdf4c0144a39,Tax software,Logiciel fiscal,,,hard,programming_languages,ONET,SKL_4f2d61b26d8b,,,,,
-USKL_cb42ab934566,Telnet programs software,Logiciel de programmes Telnet,,,hard,programming_languages,ONET,SKL_fa8cf6c3de35,,,,,
-USKL_924b61d17b16,The MathWorks MATLAB,Le MathWorks MATLAB,,,hard,programming_languages,ONET,SKL_d0090124cfd9,,,,,
-USKL_61fc33d31b32,TKSoftware RCM software,TKSoftware logiciel RCM,,,hard,programming_languages,ONET,SKL_f0900f143524,,,,,
-USKL_289363c16b6d,Unified modeling language UML,Langage de modélisation unifié UML,,,hard,methodology,ONET,SKL_966976d5622b,,,,,
+USKL_ef5bac0d7520,StataCorp Stata,StataCorp Stata,,,hard,other_hard,ONET,SKL_a029fbfa2ba7,,,,StataCorp Stata is a statistical software package used for data analysis and econometrics.,llm
+USKL_35532196214f,Structured query language SQL,Langue de requête structurée SQL,,,hard,data_databases,ONET,SKL_1f7c154ad669,,,,SQL is a standard language for managing and manipulating databases.,llm
+USKL_bd22aa5765fa,Symantec Veritas File System,Système de fichiers Symantec Veritas,,,hard,other_hard,ONET,SKL_f6c5c1b3b780,,,,Skill involves managing and maintaining file systems using Symantec Veritas File System technology,llm
+USKL_2224628d5127,Symantec Veritas Volume Manager,Gestionnaire de volume de Symantec Veritas,Veritas Volume Manager,,hard,other_hard,LIGHTCAST | ONET,SKL_9c0a306eaa5c | SKL_9c0f3ff31cd4,,,,Symantec Veritas Volume Manager is a storage management software for volume and file system administration.,llm
+USKL_ff94537fada5,Tableau,Tableau,,,hard,data_databases,ONET,SKL_f6709e2bf0c9,,,,Skill: Using Tableau for data visualization in databases and analytics domains.,llm
+USKL_fdf4c0144a39,Tax software,Logiciel fiscal,,,hard,programming_languages,ONET,SKL_4f2d61b26d8b,,,,Skill: Using tax software for programming and software development tasks.,llm
+USKL_cb42ab934566,Telnet programs software,Logiciel de programmes Telnet,,,hard,programming_languages,ONET,SKL_fa8cf6c3de35,,,,Telnet programs software enables network access via terminal emulation in programming and software development domains.,llm
+USKL_924b61d17b16,The MathWorks MATLAB,Le MathWorks MATLAB,,,hard,programming_languages,ONET,SKL_d0090124cfd9,,,,MATLAB is a numerical computing environment and programming language developed by MathWorks for scientific computing and engineering applications.,llm
+USKL_61fc33d31b32,TKSoftware RCM software,TKSoftware logiciel RCM,,,hard,programming_languages,ONET,SKL_f0900f143524,,,,TKSoftware RCM software is a type of specialized RCM (Repetitive Construction Management) software used in programming and software development.,llm
+USKL_289363c16b6d,Unified modeling language UML,Langage de modélisation unifié UML,,,hard,methodology,ONET,SKL_966976d5622b,,,,Unified Modeling Language UML is a standardized visual modeling language for software development methodologies.,llm
 USKL_7531d8057cdf,UNIX,UNIX,Unix,,hard,systems_infrastructure,KAGGLE | LIGHTCAST | ONET,SKL_41f73f453dc7 | SKL_9c575ee5aaef | SKL_b9f39a8b45f7,Q105994387,https://www.wikidata.org/wiki/Q105994387,The original commercial Unix operating system by AT&T,The original commercial Unix operating system by AT&T,wikidata
 USKL_3115d62a26cc,Veritas NetBackup,NetBackup,Symantec NetBackup,,hard,systems_infrastructure,ONET,SKL_ebf310bf8cd7,Q2063698,https://www.wikidata.org/wiki/Q2063698,enterprise level backup and recovery suite,enterprise level backup and recovery suite,wikidata
-USKL_e5b948a97613,Virtual private networking VPN software,Logiciel de réseautage privé virtuel VPN,,,hard,networks,ONET,SKL_728c9444aed6,,,,,
-USKL_191b6d368aa4,VMware,VMware,VMware Virtualization,,hard,cloud_devops,LIGHTCAST | ONET,SKL_1406110ba0b2 | SKL_1e0bdcbc7258,,,,,
-USKL_f3c9a70e924d,Zephyr EXTRA! Terminal Emulation,Émulation du terminal Zephyr EXTRA!,,,hard,other_hard,ONET,SKL_528915f93bee,,,,,
-USKL_03a1992d0f62,3M Post-it App,3M Application post-it,,,hard,other_hard,ONET,SKL_76fbd16f0fcd,,,,,
-USKL_c390e4591971,Access management software,Logiciel de gestion des accès,,,hard,programming_languages,ONET,SKL_7ae37f1792ba,,,,,
-USKL_060c6eb1b115,AcmeStudio,AcmeStudio,,,hard,other_hard,ONET,SKL_53bc05476343,,,,,
-USKL_4d26953e5ed3,Active directory software,Logiciel Active directory,,,hard,programming_languages,ONET,SKL_4fed44fd9e95,,,,,
-USKL_b6cf475dc742,Ada,,Ada (Programming Language),,hard,other_hard,LIGHTCAST | ONET,SKL_b85be953bc5a | SKL_c29bc3576779,,,,,
-USKL_537119b63fc2,Adobe Acrobat,Adobe Acrobat,,,hard,other_hard,ONET,SKL_13be555f095e,,,,,
-USKL_84e7f1eb38dc,ActionScript,ActionScript,Adobe ActionScript,,hard,other_hard,LIGHTCAST | ONET,SKL_ce456209c2f2 | SKL_f0e743d61767,,,,,
+USKL_e5b948a97613,Virtual private networking VPN software,Logiciel de réseautage privé virtuel VPN,,,hard,networks,ONET,SKL_728c9444aed6,,,,Virtual private networking software for secure encrypted connections over public networks.,llm
+USKL_191b6d368aa4,VMware,VMware,VMware Virtualization,,hard,cloud_devops,LIGHTCAST | ONET,SKL_1406110ba0b2 | SKL_1e0bdcbc7258,,,,VMware is a virtualization technology skill relevant to cloud and DevOps as well as systems and infrastructure roles.,llm
+USKL_f3c9a70e924d,Zephyr EXTRA! Terminal Emulation,Émulation du terminal Zephyr EXTRA!,,,hard,other_hard,ONET,SKL_528915f93bee,,,,Zephyr EXTRA! is a terminal emulation software skill in other technical domains.,llm
+USKL_03a1992d0f62,3M Post-it App,3M Application post-it,,,hard,other_hard,ONET,SKL_76fbd16f0fcd,,,,Skill involves using and developing applications for the 3M Post-it brand.,llm
+USKL_c390e4591971,Access management software,Logiciel de gestion des accès,,,hard,programming_languages,ONET,SKL_7ae37f1792ba,,,,Access management software is a tool for controlling user access to resources in computing environments.,llm
+USKL_060c6eb1b115,AcmeStudio,AcmeStudio,,,hard,other_hard,ONET,SKL_53bc05476343,,,,AcmeStudio is a specialized role in other technical domains focusing on cross-cutting IT skills.,llm
+USKL_4d26953e5ed3,Active directory software,Logiciel Active directory,,,hard,programming_languages,ONET,SKL_4fed44fd9e95,,,,Skill in Active Directory software for managing user accounts and resources in a Windows domain environment.,llm
+USKL_b6cf475dc742,Ada,,Ada (Programming Language),,hard,other_hard,LIGHTCAST | ONET,SKL_b85be953bc5a | SKL_c29bc3576779,,,,Ada is a programming language used for software development in various domains including aerospace and defense.,llm
+USKL_537119b63fc2,Adobe Acrobat,Adobe Acrobat,,,hard,other_hard,ONET,SKL_13be555f095e,,,,Skill in Adobe Acrobat for document editing and creation,llm
+USKL_84e7f1eb38dc,ActionScript,ActionScript,Adobe ActionScript,,hard,other_hard,LIGHTCAST | ONET,SKL_ce456209c2f2 | SKL_f0e743d61767,,,,ActionScript is a programming language for web and mobile applications developed by Adobe.,llm
 USKL_82365271a773,Adobe ColdFusion,ColdFusion,Macromedia ColdFusion | ColdFusion | Cold Fusion,.cfm | Aspect Software | ColdFusion Markup Language,hard,web,LIGHTCAST | ONET,SKL_3b5fc9ad1985 | SKL_6e35bcbd7243,Q468446,https://www.wikidata.org/wiki/Q468446,rapid web app development platform,rapid web app development platform,wikidata
 USKL_8ce010afc780,Adobe Dreamweaver,Adobe Dreamweaver,Macromedia Dreamweaver | Dreamweaver | DW,Dreamweaver | Macromedia Dreamweaver,hard,web,LIGHTCAST | ONET,SKL_31626fe4e181 | SKL_9184a5359352,Q192324,https://www.wikidata.org/wiki/Q192324,proprietary web development application,proprietary web development application,wikidata
-USKL_cb41c23e5f68,ADP Workforce Now,La main-d'œuvre ADP maintenant,,,hard,other_hard,ONET,SKL_e160600cd12b,,,,,
-USKL_ae47875a0abd,Amazon DynamoDB,Amazon DynamoDB,,,hard,other_hard,LIGHTCAST | ONET,SKL_8b7877f50bc8 | SKL_e227b5b5baa9,,,,,
-USKL_8f5ef213bfe9,Amazon Elastic Compute Cloud EC2,Compteur élastique Amazon Cloud EC2,,,hard,cloud_devops,ONET,SKL_c70072257897,,,,,
+USKL_cb41c23e5f68,ADP Workforce Now,La main-d'œuvre ADP maintenant,,,hard,other_hard,ONET,SKL_e160600cd12b,,,,ADP Workforce Now is a human resources management software system by ADP,llm
+USKL_ae47875a0abd,Amazon DynamoDB,Amazon DynamoDB,,,hard,other_hard,LIGHTCAST | ONET,SKL_8b7877f50bc8 | SKL_e227b5b5baa9,,,,skill: managing NoSQL database services like Amazon DynamoDB,llm
+USKL_8f5ef213bfe9,Amazon Elastic Compute Cloud EC2,Compteur élastique Amazon Cloud EC2,,,hard,cloud_devops,ONET,SKL_c70072257897,,,,skill: managing AWS EC2 instances for cloud infrastructure deployment and management,llm
 USKL_6276198c8ecf,Amazon Redshift,Amazon Redshift,,,hard,data_engineering,LIGHTCAST | ONET,SKL_4267b1916251 | SKL_54022261c989,Q17012109,https://www.wikidata.org/wiki/Q17012109,cloud-based service,cloud-based service,wikidata
-USKL_20f76d54832f,Amazon Simple Storage Service S3,Service de stockage simple d'Amazon S3,,,hard,systems_infrastructure,ONET,SKL_60795e8fae7e,,,,,
-USKL_0bc1bb7e5f75,Amazon Web Services AWS CloudFormation,Amazon Web Services AWS CloudFormation,,,hard,cloud_devops,ONET,SKL_f94d863d8b4e,,,,,
-USKL_6dbe7bacb93c,Ansible software,Logiciel Ansible,,,hard,cloud_devops,ONET,SKL_6c8fd707b55a,,,,,
-USKL_5ffdfc6dfd96,Apache Ant,,,,hard,other_hard,LIGHTCAST | ONET,SKL_3810d356c3b8 | SKL_45a6952ad914,,,,,
-USKL_c040c3b85fae,Apache Groovy,Apache Groovy,,,hard,other_hard,ONET,SKL_81eb3525fd79,,,,,
+USKL_20f76d54832f,Amazon Simple Storage Service S3,Service de stockage simple d'Amazon S3,,,hard,systems_infrastructure,ONET,SKL_60795e8fae7e,,,,Skill: Managing and securing data storage in Amazon S3 cloud service.,llm
+USKL_0bc1bb7e5f75,Amazon Web Services AWS CloudFormation,Amazon Web Services AWS CloudFormation,,,hard,cloud_devops,ONET,SKL_f94d863d8b4e,,,,Skill: Using AWS CloudFormation for infrastructure as code deployment and management.,llm
+USKL_6dbe7bacb93c,Ansible software,Logiciel Ansible,,,hard,cloud_devops,ONET,SKL_6c8fd707b55a,,,,Ansible software is a configuration management tool for cloud automation in the DevOps and IT infrastructure domains.,llm
+USKL_5ffdfc6dfd96,Apache Ant,,,,hard,other_hard,LIGHTCAST | ONET,SKL_3810d356c3b8 | SKL_45a6952ad914,,,,Apache Ant is a software tool for building software projects using XML-based build definitions.,llm
+USKL_c040c3b85fae,Apache Groovy,Apache Groovy,,,hard,other_hard,ONET,SKL_81eb3525fd79,,,,Apache Groovy is a programming language and runtime environment executed in Java Virtual Machine supporting dynamic features.,llm
 USKL_758fd9a48efa,Apache Hive,Apache Hive,Hive,,hard,data_engineering,ONET,SKL_cb74c6c65540,Q4778914,https://www.wikidata.org/wiki/Q4778914,database engine,database engine,wikidata
 USKL_877c1fb2747a,Apache Kafka,Apache Kafka,Kafka,,hard,data_engineering,LIGHTCAST | ONET,SKL_19bf5f109d38 | SKL_1e0e28b7faca,Q16235208,https://www.wikidata.org/wiki/Q16235208,open source data stream processing platform,open source data stream processing platform,wikidata
 USKL_457814fa0c07,Apache Spark,Apache Spark,Spark,,hard,data_engineering,ONET,SKL_855e9579fe36,Q7573619,https://www.wikidata.org/wiki/Q7573619,open-source data analytics cluster computing framework,open-source data analytics cluster computing framework,wikidata
 USKL_6d9dca5ee86b,Apache Struts,Apache Struts,Jakarta Struts | WebWork | Struts,Struts | Struts framework,hard,web,LIGHTCAST | ONET,SKL_bc7c662195d3 | SKL_d723b8a213b1,Q900957,https://www.wikidata.org/wiki/Q900957,open-source web application framework,open-source web application framework,wikidata
-USKL_9bb4a3a992e3,Apache Subversion SVN,Apache Subversion SVN,,,hard,other_hard,ONET,SKL_0bd8f9b2d071,,,,,
-USKL_61a0e1c914b9,Application management software,Logiciel de gestion des applications,,,hard,programming_languages,ONET,SKL_f6098142e869,,,,,
-USKL_802181223b80,Architecture description language ADL,Langage de description de l'architecture ADL,,,hard,other_hard,ONET,SKL_866a5f25c4a3,,,,,
-USKL_e0eaddc56022,Atlassian Bamboo,Le bambou atlasien,,,hard,other_hard,LIGHTCAST | ONET,SKL_d7594dce70e7 | SKL_fea0f1291e0e,,,,,
-USKL_635722d1d824,Atlassian Confluence,Confluence atlasienne,,,hard,other_hard,LIGHTCAST | ONET,SKL_4d8a23be65c4 | SKL_df914adb3242,,,,,
-USKL_19d062223a7a,Automated installation software,Logiciel d'installation automatisé,,,hard,programming_languages,ONET,SKL_533b6fdd3eda,,,,,
+USKL_9bb4a3a992e3,Apache Subversion SVN,Apache Subversion SVN,,,hard,other_hard,ONET,SKL_0bd8f9b2d071,,,,Skill in Apache Subversion (SVN) for version control systems,llm
+USKL_61a0e1c914b9,Application management software,Logiciel de gestion des applications,,,hard,programming_languages,ONET,SKL_f6098142e869,,,,"Application management software refers to tools for deploying, monitoring, and maintaining software applications.",llm
+USKL_802181223b80,Architecture description language ADL,Langage de description de l'architecture ADL,,,hard,other_hard,ONET,SKL_866a5f25c4a3,,,,Architecture description language ADL is a formal language for specifying system architecture.,llm
+USKL_e0eaddc56022,Atlassian Bamboo,Le bambou atlasien,,,hard,other_hard,LIGHTCAST | ONET,SKL_d7594dce70e7 | SKL_fea0f1291e0e,,,,skill Atlassian Bamboo: CI/CD pipeline automation in software development,llm
+USKL_635722d1d824,Atlassian Confluence,Confluence atlasienne,,,hard,other_hard,LIGHTCAST | ONET,SKL_4d8a23be65c4 | SKL_df914adb3242,,,,skill Atlassian Confluence: collaborative document management and team collaboration tool in IT infrastructure and operations,llm
+USKL_19d062223a7a,Automated installation software,Logiciel d'installation automatisé,,,hard,programming_languages,ONET,SKL_533b6fdd3eda,,,,Automated installation software is a tool for automating the process of software deployment on multiple systems.,llm
 USKL_00c26f29f272,Bash,Bash,Bash (Scripting Language) | Bourne-Again shell | Bourne Again shell | Bash shell | shell,Bourne-Again shell,hard,programming_languages,KAGGLE | LIGHTCAST | ONET | ROME,SKL_0dce53c26205 | SKL_5335d3e1222d | SKL_6ae80759dbe0 | SKL_8dbb21d1910c | SKL_cb4a924505d3,Q189248,https://www.wikidata.org/wiki/Q189248,GNU Project implementation of the standard Unix shell,GNU Project implementation of the standard Unix shell,wikidata
 USKL_eaa45421b85d,Blink,,,,hard,other_hard,ONET,SKL_8eccc3dbfa11,,,,,
-USKL_e42a3de74647,Business intelligence system software,Logiciel système Business intelligence,,,hard,data_databases,ONET,SKL_545ea1a54388,,,,,
+USKL_e42a3de74647,Business intelligence system software,Logiciel système Business intelligence,,,hard,data_databases,ONET,SKL_545ea1a54388,,,,Business intelligence system software facilitates analysis and reporting from various databases and data sources for business insights.,llm
 USKL_7e64de04c960,Cascading style sheets CSS,Des feuilles de style en cascade CSS,,,hard,web,ONET,SKL_d1d6a6bcd281,,,,,
-USKL_6481f43b6a69,Cisco Systems CiscoWorks,Systèmes Cisco CiscoWorks,,,hard,networks,ONET,SKL_3bd8fa44151b,,,,,
-USKL_485bca8694de,Cisco Webex,Cisco Webex,,,hard,networks,ONET,SKL_47db1c585d8b,,,,,
-USKL_d3213c34df8e,Compatibility testing software,Logiciel de test de compatibilité,,,hard,programming_languages,ONET,SKL_6667f5526e07,,,,,
-USKL_2d64f16bd1d0,Component object model COM software,Logiciel de modèle d'objet composant COM,,,hard,programming_languages,ONET,SKL_b89898def7a3,,,,,
-USKL_04b610035deb,Computer aided design and drafting CADD software,Conception et rédaction de logiciels CADD assistés par ordinateur,,,hard,programming_languages,ONET,SKL_b06bb6b6fec8,,,,,
-USKL_0f197f739c3e,Cost estimating software,Logiciel d'estimation des coûts,,,hard,programming_languages,ONET,SKL_e5b9e0929cf9,,,,,
-USKL_be15ee6b544d,CrossTec NetOp Remote Control,CrossTec NetOp Contrôle à distance,,,hard,other_hard,ONET,SKL_8c69b4a5d982,,,,,
-USKL_2eb5245acb50,Dassault Systemes CATIA,Systèmes Dassault CATIA,,,hard,other_hard,ONET,SKL_8d215e8c1a09,,,,,
-USKL_de5c19686392,Database Software,Logiciels de gestion de base de données,Database software | Database management software,,hard,data_databases,LIGHTCAST | ONET | ROME,SKL_572823168453 | SKL_c2f040080c7e | SKL_ca8fc2caa7db | SKL_e0a61de86781,,,,,
-USKL_f7d3db710f18,Defect tracking software,Logiciel de suivi des défauts,,,hard,programming_languages,ONET,SKL_da472762fce8,,,,,
-USKL_62a3bab91cbc,Delphi Technology,Technologie de Delphi,,,hard,other_hard,ONET,SKL_0eb37cb04aa1,,,,,
-USKL_26ab98dc4cc2,Diagramming software,Logiciel de cartographie,,,hard,programming_languages,ONET,SKL_5459a4275a14,,,,,
+USKL_6481f43b6a69,Cisco Systems CiscoWorks,Systèmes Cisco CiscoWorks,,,hard,networks,ONET,SKL_3bd8fa44151b,,,,CiscoWorks is a network management software developed by Cisco Systems.,llm
+USKL_485bca8694de,Cisco Webex,Cisco Webex,,,hard,networks,ONET,SKL_47db1c585d8b,,,,Cisco Webex is a video conferencing and collaboration tool in the networks and telecommunications domain.,llm
+USKL_d3213c34df8e,Compatibility testing software,Logiciel de test de compatibilité,,,hard,programming_languages,ONET,SKL_6667f5526e07,,,,Compatibility testing software is used to ensure software works across different systems and environments.,llm
+USKL_2d64f16bd1d0,Component object model COM software,Logiciel de modèle d'objet composant COM,,,hard,programming_languages,ONET,SKL_b89898def7a3,,,,Component object model COM software involves developing and using components that can interact across different programming languages and platforms.,llm
+USKL_04b610035deb,Computer aided design and drafting CADD software,Conception et rédaction de logiciels CADD assistés par ordinateur,,,hard,programming_languages,ONET,SKL_b06bb6b6fec8,,,,Skill involves using specialized CADD software for designing and drafting in programming and software development domains.,llm
+USKL_0f197f739c3e,Cost estimating software,Logiciel d'estimation des coûts,,,hard,programming_languages,ONET,SKL_e5b9e0929cf9,,,,Cost estimating software is used in programming and software development for budgeting project costs.,llm
+USKL_be15ee6b544d,CrossTec NetOp Remote Control,CrossTec NetOp Contrôle à distance,,,hard,other_hard,ONET,SKL_8c69b4a5d982,,,,CrossTec NetOp Remote Control is a tool for network operations management and control.,llm
+USKL_2eb5245acb50,Dassault Systemes CATIA,Systèmes Dassault CATIA,,,hard,other_hard,ONET,SKL_8d215e8c1a09,,,,skill Dassault Systemes CATIA is for 3D modeling and simulation in engineering design,llm
+USKL_de5c19686392,Database Software,Logiciels de gestion de base de données,Database software | Database management software,,hard,data_databases,LIGHTCAST | ONET | ROME,SKL_572823168453 | SKL_c2f040080c7e | SKL_ca8fc2caa7db | SKL_e0a61de86781,,,,Database software refers to applications for creating managing and manipulating databases.,llm
+USKL_f7d3db710f18,Defect tracking software,Logiciel de suivi des défauts,,,hard,programming_languages,ONET,SKL_da472762fce8,,,,Defect tracking software is used by programmers to manage and monitor software bugs and issues.,llm
+USKL_62a3bab91cbc,Delphi Technology,Technologie de Delphi,,,hard,other_hard,ONET,SKL_0eb37cb04aa1,,,,Delphi Technology is a programming language used for developing automotive software systems.,llm
+USKL_26ab98dc4cc2,Diagramming software,Logiciel de cartographie,,,hard,programming_languages,ONET,SKL_5459a4275a14,,,,Skill: Using diagramming software for software architecture and process visualization in programming and software development.,llm
 USKL_4f1c599f7f2a,Distributed component object model DCOM software,Logiciel DCOM modèle d'objet composant distribué,,,hard,programming_languages,ONET,SKL_c948f8d7fd58,,,,,
 USKL_2818ab675ac2,Django,Django,Django (Web Framework) | Django Project,,hard,web,KAGGLE | LIGHTCAST | ONET,SKL_71a8aabf691c | SKL_77270fb4f461 | SKL_823c56ff36d8,Q842014,https://www.wikidata.org/wiki/Q842014,Python web framework,Python web framework,wikidata
-USKL_37037c699375,Docker,Docker,Docker (Software) | Docker Machine,,hard,cloud_devops,KAGGLE | LIGHTCAST | ONET,SKL_37911c1d7f65 | SKL_426c3cc28ab2 | SKL_4d64a642f815 | SKL_b6e6215e0cbd,,,,,
-USKL_10c344f18d34,Dynamic analysis software,Logiciel d'analyse dynamique,,,hard,programming_languages,ONET,SKL_29a72ab9c816,,,,,
-USKL_503c16a89425,Eiffel,,,,hard,other_hard,ONET,SKL_52ea214c7c35,,,,,
+USKL_37037c699375,Docker,Docker,Docker (Software) | Docker Machine,,hard,cloud_devops,KAGGLE | LIGHTCAST | ONET,SKL_37911c1d7f65 | SKL_426c3cc28ab2 | SKL_4d64a642f815 | SKL_b6e6215e0cbd,,,,"Docker is a software that allows creation and management of portable, self-contained applications called containers.",llm
+USKL_10c344f18d34,Dynamic analysis software,Logiciel d'analyse dynamique,,,hard,programming_languages,ONET,SKL_29a72ab9c816,,,,Dynamic analysis software is used for automated testing and security assessment during software development.,llm
+USKL_503c16a89425,Eiffel,,,,hard,other_hard,ONET,SKL_52ea214c7c35,,,,Eiffel is a programming language and associated software framework developed by NeXT and later acquired by Oracle.,llm
 USKL_90a3e73c4e36,Elasticsearch,Elasticsearch,es,,hard,web,KAGGLE | LIGHTCAST | ONET,SKL_604bdf41b83b | SKL_8f0dbc2093c5 | SKL_94b0aa4759fb,Q3050461,https://www.wikidata.org/wiki/Q3050461,"distributed, scalable, and highly available real-time search platform with a RESTful API","distributed, scalable, and highly available real-time search platform with a RESTful API",wikidata
-USKL_e1f8a01c0c85,Electronic design automation EDA software,Logiciel EDA pour l'automatisation électronique de la conception,,,hard,programming_languages,ONET,SKL_05920917d508,,,,,
-USKL_2de6289c2e5c,Element management software,Logiciel de gestion d'éléments,,,hard,programming_languages,ONET,SKL_3be96b8faf17,,,,,
-USKL_cc4a7db2e414,Embarcadero JBuilder,Embarcadero JBuilder,,,hard,other_hard,ONET,SKL_df55ec284e7c,,,,,
-USKL_57cce1179ad5,Epic Systems,,,,hard,other_hard,ONET,SKL_f5447369d7c9,,,,,
-USKL_0777714e42ed,ESRI ArcGIS software,Le logiciel ESRI ArcGIS,,,hard,programming_languages,ONET,SKL_412794161a92,,,,,
-USKL_28f09372fb4f,Ext JS,Ext JS,,,hard,web,LIGHTCAST | ONET,SKL_03c4eacb3690 | SKL_e795daad4b81,,,,,
-USKL_6dd3cad1d2bc,Flow chart software,Logiciel de diagramme de flux,,,hard,programming_languages,ONET,SKL_851c8bf6ea7a,,,,,
-USKL_ae5f57b08e52,Formula translation/translator FORTRAN,Traduction/traducteur de formule FORTRAN,,,hard,other_hard,ONET,SKL_2d97e892207a,,,,,
-USKL_782f6d86fb35,Functional testing software,Logiciel de test fonctionnel,,,hard,programming_languages,ONET,SKL_bf2ac44480e1,,,,,
-USKL_aa3defad4558,Fund accounting software,Logiciel de comptabilité des fonds,,,hard,programming_languages,ONET,SKL_d6b4f099a254,,,,,
-USKL_76f8b42c0aa8,Geographic information system GIS software,Système d'information géographique logiciel GIS,,,hard,programming_languages,ONET,SKL_17cf26a5c3d2,,,,,
-USKL_3928d132146a,Git,Git,Git (Version Control System),,hard,programming_languages,KAGGLE | LIGHTCAST | ONET,SKL_83122f52ee89 | SKL_a3a6e887fcbb | SKL_f5622829df60,,,,,
-USKL_e333afdbfa02,GitHub,GitHub,Github,,hard,other_hard,KAGGLE | LIGHTCAST | ONET,SKL_0edb01736346 | SKL_174fb24409f7 | SKL_5e01f48fad9f,,,,,
+USKL_e1f8a01c0c85,Electronic design automation EDA software,Logiciel EDA pour l'automatisation électronique de la conception,,,hard,programming_languages,ONET,SKL_05920917d508,,,,Electronic design automation software for circuit board and semiconductor design in programming and software development.,llm
+USKL_2de6289c2e5c,Element management software,Logiciel de gestion d'éléments,,,hard,programming_languages,ONET,SKL_3be96b8faf17,,,,Element management software is used for managing network elements in telecommunications infrastructure.,llm
+USKL_cc4a7db2e414,Embarcadero JBuilder,Embarcadero JBuilder,,,hard,other_hard,ONET,SKL_df55ec284e7c,,,,Embarcadero JBuilder is a Java integrated development environment (IDE).,llm
+USKL_57cce1179ad5,Epic Systems,,,,hard,other_hard,ONET,SKL_f5447369d7c9,,,,Epic Systems is a healthcare software company specializing in electronic health records systems,llm
+USKL_0777714e42ed,ESRI ArcGIS software,Le logiciel ESRI ArcGIS,,,hard,programming_languages,ONET,SKL_412794161a92,,,,Skill involves using ESRI ArcGIS software for geographic information system development and analysis.,llm
+USKL_28f09372fb4f,Ext JS,Ext JS,,,hard,web,LIGHTCAST | ONET,SKL_03c4eacb3690 | SKL_e795daad4b81,,,,Ext JS is a JavaScript library for building dynamic web applications and mobile interfaces.,llm
+USKL_6dd3cad1d2bc,Flow chart software,Logiciel de diagramme de flux,,,hard,programming_languages,ONET,SKL_851c8bf6ea7a,,,,Flow chart software tools aid in visualizing program logic for software developers.,llm
+USKL_ae5f57b08e52,Formula translation/translator FORTRAN,Traduction/traducteur de formule FORTRAN,,,hard,other_hard,ONET,SKL_2d97e892207a,,,,Formula translation skill for converting Fortran code to other languages,llm
+USKL_782f6d86fb35,Functional testing software,Logiciel de test fonctionnel,,,hard,programming_languages,ONET,SKL_bf2ac44480e1,,,,Functional testing software refers to tools used in software development for verifying application functionality meets requirements.,llm
+USKL_aa3defad4558,Fund accounting software,Logiciel de comptabilité des fonds,,,hard,programming_languages,ONET,SKL_d6b4f099a254,,,,Skill involves using programming languages and software development methodologies to create and maintain fund accounting software systems.,llm
+USKL_76f8b42c0aa8,Geographic information system GIS software,Système d'information géographique logiciel GIS,,,hard,programming_languages,ONET,SKL_17cf26a5c3d2,,,,GIS software is specialized programming for mapping and analyzing spatial data in geographic information systems.,llm
+USKL_3928d132146a,Git,Git,Git (Version Control System),,hard,programming_languages,KAGGLE | LIGHTCAST | ONET,SKL_83122f52ee89 | SKL_a3a6e887fcbb | SKL_f5622829df60,,,,Git is a version control system used for software development.,llm
+USKL_e333afdbfa02,GitHub,GitHub,Github,,hard,other_hard,KAGGLE | LIGHTCAST | ONET,SKL_0edb01736346 | SKL_174fb24409f7 | SKL_5e01f48fad9f,,,,GitHub is a web-based platform for version control and collaboration used in software development.,llm
 USKL_9598440044a2,Go,Go,Go (Programming Language) | Go programming language,,hard,programming_languages,KAGGLE | LIGHTCAST | ONET,SKL_7024c3606240 | SKL_92eeac9e2922 | SKL_dd2462d50871,Q37227,https://www.wikidata.org/wiki/Q37227,programming language developed by Google and the open-source community,programming language developed by Google and the open-source community,wikidata
-USKL_a465e3f9bdf6,Google Angular,Google Angular,,,hard,web,ONET,SKL_b465acf4e1bd,,,,,
-USKL_3de9133b9da8,Google Docs,Google Docs,,,hard,other_hard,ONET,SKL_d61210016a99,,,,,
-USKL_c43c5d295d10,Healthcare common procedure coding system HCPCS,Système de codage des procédures communes en santé HCPCS,,,hard,programming_languages,ONET,SKL_3f16933b10e8,,,,,
-USKL_9abcfa278204,Hewlett Packard LoadRunner,Hewlett Packard LoadRunner,,,hard,other_hard,ONET,SKL_ee1f55662c4a,,,,,
-USKL_54e6da2837f4,Hibernate ORM,ORM en hiver,,,hard,other_hard,ONET,SKL_0f33de8e8a6c,,,,,
+USKL_a465e3f9bdf6,Google Angular,Google Angular,,,hard,web,ONET,SKL_b465acf4e1bd,,,,Google Angular is a JavaScript framework for building client-side web applications.,llm
+USKL_3de9133b9da8,Google Docs,Google Docs,,,hard,other_hard,ONET,SKL_d61210016a99,,,,Skill: Using Google Docs for document collaboration and creation in a technical context.,llm
+USKL_c43c5d295d10,Healthcare common procedure coding system HCPCS,Système de codage des procédures communes en santé HCPCS,,,hard,programming_languages,ONET,SKL_3f16933b10e8,,,,HCPCS is a healthcare common procedure coding system used for medical services and supplies not covered by Medicare.,llm
+USKL_9abcfa278204,Hewlett Packard LoadRunner,Hewlett Packard LoadRunner,,,hard,other_hard,ONET,SKL_ee1f55662c4a,,,,Skill: Performance testing using HP LoadRunner,llm
+USKL_54e6da2837f4,Hibernate ORM,ORM en hiver,,,hard,other_hard,ONET,SKL_0f33de8e8a6c,,,,Hibernate ORM is an object-relational mapping library for Java applications.,llm
 USKL_7a7a25e6ec17,Hierarchical simulation program with integrated circuit emphasis HSPICE,Programme de simulation hiérarchique avec accent sur le circuit intégré HSPICE,,,hard,hardware_embedded,ONET,SKL_50d1e1915729,,,,HSPICE is a specialized simulation tool for analog and digital circuits in hardware and embedded systems.,llm
-USKL_7e6812d334fa,HyperSpace,HyperSpace,,,hard,other_hard,ONET,SKL_7e6f9d220d52,,,,,
-USKL_3f4448325810,IBM DB2,IBM DB2,,,hard,data_databases,LIGHTCAST | ONET,SKL_adfc72ede7d6 | SKL_d14001786ac7,,,,,
-USKL_4d99bf64226d,IBM Notes,IBM Notes,,,hard,other_hard,ONET,SKL_f36d0482ac12,,,,,
-USKL_596a5afd3863,IBM Rational ClearCase,IBM Rational ClearCase,IBM Rational ClearQuest | IBM Rational Clearquest,,hard,other_hard,LIGHTCAST | ONET,SKL_0e9ef334975d | SKL_2dce27f6f2a8 | SKL_fef0d0b264c6 | SKL_ff2dd9b5014d,,,,,
-USKL_c67a22a3fe66,IBM Rational PurifyPlus,IBM Rational PurifyPlus,,,hard,other_hard,ONET,SKL_b87e8e59b6f7,,,,,
-USKL_ad7763e73bbd,IBM Rational Rose XDE,IBM Rose rationnelle XDE,Rational Rose XDE,,hard,other_hard,LIGHTCAST | ONET,SKL_7bb416ec5aaf | SKL_e4e2ad843688,,,,,
-USKL_e26696966199,InstallShield,InstallShield,,,hard,other_hard,LIGHTCAST | ONET,SKL_844ce33b162f | SKL_a0335e629a30,,,,,
-USKL_7504f69b20ff,Integration testing software,Logiciel de test d'intégration,,,hard,programming_languages,ONET,SKL_6cfe235a16e1,,,,,
-USKL_4a37e74e755a,Interoperability testing software,Logiciel de test d'interopérabilité,,,hard,programming_languages,ONET,SKL_acc03f70b2f2,,,,,
-USKL_d92beb13e125,J,J,,,hard,other_hard,ONET,SKL_1b19cd1bc972,,,,,
-USKL_e1c2e0a5817c,JavaScript Object Notation JSON,JavaScript Notation de l'objet JSON,,,hard,web,ONET,SKL_28107f5aa969,,,,,
-USKL_c4c275443042,Job Control Language (JCL),Langue de contrôle de l'emploi (JCL),Job control language JCL,,hard,other_hard,LIGHTCAST | ONET,SKL_1d0674511a63 | SKL_a7d06b971e4a,,,,,
-USKL_aaef3f084d51,JQuery,JQuery,jQuery,,hard,web,KAGGLE | LIGHTCAST | ONET,SKL_607688202ccd | SKL_b170a800e7ee | SKL_f420e1ebe8c3,,,,,
-USKL_9101dd5f6660,JUnit,JUnit,Junit,,hard,other_hard,LIGHTCAST | ONET,SKL_17d74297445b | SKL_ed2afc961ae7,,,,,
+USKL_7e6812d334fa,HyperSpace,HyperSpace,,,hard,other_hard,ONET,SKL_7e6f9d220d52,,,,HyperSpace refers to advanced virtual reality or parallel universe computing concepts in other technical domains.,llm
+USKL_3f4448325810,IBM DB2,IBM DB2,,,hard,data_databases,LIGHTCAST | ONET,SKL_adfc72ede7d6 | SKL_d14001786ac7,,,,IBM DB2 is a relational database management system used in databases and data management domains.,llm
+USKL_4d99bf64226d,IBM Notes,IBM Notes,,,hard,other_hard,ONET,SKL_f36d0482ac12,,,,IBM Notes is a client-server application for creating and managing electronic documents and databases.,llm
+USKL_596a5afd3863,IBM Rational ClearCase,IBM Rational ClearCase,IBM Rational ClearQuest | IBM Rational Clearquest,,hard,other_hard,LIGHTCAST | ONET,SKL_0e9ef334975d | SKL_2dce27f6f2a8 | SKL_fef0d0b264c6 | SKL_ff2dd9b5014d,,,,IBM Rational ClearCase is now known as IBM Rational ClearQuest or IBM Rational Clearquest,llm
+USKL_c67a22a3fe66,IBM Rational PurifyPlus,IBM Rational PurifyPlus,,,hard,other_hard,ONET,SKL_b87e8e59b6f7,,,,IBM Rational PurifyPlus is a software tool for detecting memory errors in software applications.,llm
+USKL_ad7763e73bbd,IBM Rational Rose XDE,IBM Rose rationnelle XDE,Rational Rose XDE,,hard,other_hard,LIGHTCAST | ONET,SKL_7bb416ec5aaf | SKL_e4e2ad843688,,,,IBM Rational Rose XDE is a modeling tool for software development.,llm
+USKL_e26696966199,InstallShield,InstallShield,,,hard,other_hard,LIGHTCAST | ONET,SKL_844ce33b162f | SKL_a0335e629a30,,,,InstallShield is a software installation package creator tool.,llm
+USKL_7504f69b20ff,Integration testing software,Logiciel de test d'intégration,,,hard,programming_languages,ONET,SKL_6cfe235a16e1,,,,Integration testing software is used in programming and software development to test how components interact.,llm
+USKL_4a37e74e755a,Interoperability testing software,Logiciel de test d'interopérabilité,,,hard,programming_languages,ONET,SKL_acc03f70b2f2,,,,Interoperability testing software facilitates assessing system compatibility during development.,llm
+USKL_d92beb13e125,J,J,,,hard,other_hard,ONET,SKL_1b19cd1bc972,,,,J likely refers to a skill in Java programming or another technology abbreviation in other technical domains.,llm
+USKL_e1c2e0a5817c,JavaScript Object Notation JSON,JavaScript Notation de l'objet JSON,,,hard,web,ONET,SKL_28107f5aa969,,,,JavaScript Object Notation JSON is a lightweight data-interchange format used in web development and mobile applications.,llm
+USKL_c4c275443042,Job Control Language (JCL),Langue de contrôle de l'emploi (JCL),Job control language JCL,,hard,other_hard,LIGHTCAST | ONET,SKL_1d0674511a63 | SKL_a7d06b971e4a,,,,Job Control Language (JCL) is a programming language used to submit jobs and manage resources in IBM mainframe systems.,llm
+USKL_aaef3f084d51,JQuery,JQuery,jQuery,,hard,web,KAGGLE | LIGHTCAST | ONET,SKL_607688202ccd | SKL_b170a800e7ee | SKL_f420e1ebe8c3,,,,"JQuery is a JavaScript library simplifying HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.",llm
+USKL_9101dd5f6660,JUnit,JUnit,Junit,,hard,other_hard,LIGHTCAST | ONET,SKL_17d74297445b | SKL_ed2afc961ae7,,,,JUnit is a testing framework for Java used to write and run automated tests.,llm
 USKL_c12ce6f709f6,Jupyter Notebook,Jupyter Notebook,Jupyter Notebooks | IPython Notebook,IPython Notebook,hard,networks,KAGGLE | ONET,SKL_0f10bd339a89 | SKL_aae2b9e4f56a,Q105099901,https://www.wikidata.org/wiki/Q105099901,web-based interactive computational environment for creating Jupyter notebook documents,web-based interactive computational environment for creating Jupyter notebook documents,wikidata
-USKL_955d0b18e895,LexisNexis,LexisNexis,,,hard,other_hard,ONET,SKL_e79aa6ddcaee,,,,,
-USKL_0a72ba05a48a,Load testing software,Logiciel de test de charge,,,hard,programming_languages,ONET,SKL_f0955d322cfb,,,,,
-USKL_e662a13546e7,Marketo Marketing Automation,Automatisation du marketing de Marketo,,,hard,other_hard,ONET,SKL_08d155ec8a44,,,,,
-USKL_a0db1d5f0da1,Medical condition coding software,Logiciel de codage de l'état médical,,,hard,programming_languages,ONET,SKL_5a5ed6419ed5,,,,,
-USKL_e683a9d23fc1,Medical procedure coding software,Logiciel de codage des procédures médicales,,,hard,programming_languages,ONET,SKL_f3504d4fcb86,,,,,
-USKL_bbf1ec55e8b9,MEDITECH software,Logiciel MEDITECH,,,hard,programming_languages,ONET,SKL_1a9801a1547a,,,,,
-USKL_8615b79abe1f,ActiveX,ActiveX,Microsoft ActiveX,,hard,other_hard,LIGHTCAST | ONET,SKL_431f8fa09d0a | SKL_9bce4a3cbeaa,,,,,
+USKL_955d0b18e895,LexisNexis,LexisNexis,,,hard,other_hard,ONET,SKL_e79aa6ddcaee,,,,LexisNexis is a legal research and information analytics platform used in various IT domains.,llm
+USKL_0a72ba05a48a,Load testing software,Logiciel de test de charge,,,hard,programming_languages,ONET,SKL_f0955d322cfb,,,,Load testing software is used to simulate system behavior under heavy workload conditions in software development.,llm
+USKL_e662a13546e7,Marketo Marketing Automation,Automatisation du marketing de Marketo,,,hard,other_hard,ONET,SKL_08d155ec8a44,,,,Marketo Marketing Automation is a tool for managing marketing campaigns and lead generation.,llm
+USKL_a0db1d5f0da1,Medical condition coding software,Logiciel de codage de l'état médical,,,hard,programming_languages,ONET,SKL_5a5ed6419ed5,,,,Skill involves using specialized software to code medical conditions according to standardized formats for billing and record-keeping purposes.,llm
+USKL_e683a9d23fc1,Medical procedure coding software,Logiciel de codage des procédures médicales,,,hard,programming_languages,ONET,SKL_f3504d4fcb86,,,,Medical procedure coding software is a programming tool for medical billing and insurance claims processing.,llm
+USKL_bbf1ec55e8b9,MEDITECH software,Logiciel MEDITECH,,,hard,programming_languages,ONET,SKL_1a9801a1547a,,,,Skill involves using MEDITECH software for healthcare information systems development and maintenance.,llm
+USKL_8615b79abe1f,ActiveX,ActiveX,Microsoft ActiveX,,hard,other_hard,LIGHTCAST | ONET,SKL_431f8fa09d0a | SKL_9bce4a3cbeaa,,,,ActiveX is a technology for client-side browser application components developed by Microsoft.,llm
 USKL_b5432b43962d,ASP.NET Core MVC,ASP.NET Core MVC,Microsoft ASP.NET Core MVC,,hard,programming_languages,LIGHTCAST | ONET,SKL_5d18b9f97eda | SKL_79e0dbaa7e57,Q24833297,https://www.wikidata.org/wiki/Q24833297,web application framework,web application framework,wikidata
-USKL_cbba7222ce50,Microsoft Internet Information Services (IIS),Services d'information Internet de Microsoft (IIS),,,hard,other_hard,ONET,SKL_458533b285f9,,,,,
+USKL_cbba7222ce50,Microsoft Internet Information Services (IIS),Services d'information Internet de Microsoft (IIS),,,hard,other_hard,ONET,SKL_458533b285f9,,,,skill: configuring and managing Microsoft IIS for web server tasks,llm
 USKL_be1e38ccc9be,Microsoft Power BI,Microsoft Power BI,PowerBI | Power BI,,hard,data_databases,ONET,SKL_9186d4e6c3e1,Q23542287,https://www.wikidata.org/wiki/Q23542287,business analytics service by Microsoft,business analytics service by Microsoft,wikidata
-USKL_961987c87ff4,PowerShell,PowerShell,Microsoft PowerShell | Microsoft Windows PowerShell | Windows PowerShell,,hard,programming_languages,KAGGLE | LIGHTCAST | ONET,SKL_3323980910d3 | SKL_47e153a43f16 | SKL_4f23d5776af1 | SKL_bab796767b98 | SKL_f0ca695ecf13,,,,,
-USKL_63c20bb71519,Microsoft Publisher,Éditeur Microsoft,,,hard,other_hard,ONET,SKL_d86bf9f08651,,,,,
-USKL_585fdd0399ec,Microsoft Team Foundation Server,Serveur de fondation d' équipe de Microsoft,Team Foundation Server,,hard,programming_languages,LIGHTCAST | ONET,SKL_07c8d45ed285 | SKL_a050e8d858eb,,,,,
-USKL_4749fc556d84,Microsoft Teams,Microsoft Teams,microsoft teams,,hard,other_hard,DATAJOBS | KAGGLE | ONET,SKL_0863ac3ef467 | SKL_7f518c92dcfe | SKL_b5de89795015,,,,,
-USKL_199774b85a03,Microsoft Visual Basic for Applications VBA,Microsoft Visual Basic pour les applications VBA,,,hard,programming_languages,ONET,SKL_16e721ee0783,,,,,
-USKL_0f83454ab2e3,Microsoft Visual Basic.NET,Microsoft Visual Basic.NET,,,hard,programming_languages,ONET,SKL_b16918fc75e4,,,,,
-USKL_b0aec3fee8d5,Microsoft Visual C# .NET,Microsoft Visual C# .NET,,,hard,programming_languages,ONET,SKL_294be644b939,,,,,
+USKL_961987c87ff4,PowerShell,PowerShell,Microsoft PowerShell | Microsoft Windows PowerShell | Windows PowerShell,,hard,programming_languages,KAGGLE | LIGHTCAST | ONET,SKL_3323980910d3 | SKL_47e153a43f16 | SKL_4f23d5776af1 | SKL_bab796767b98 | SKL_f0ca695ecf13,,,,PowerShell is a Microsoft scripting language for system automation and configuration management in Windows environments.,llm
+USKL_63c20bb71519,Microsoft Publisher,Éditeur Microsoft,,,hard,other_hard,ONET,SKL_d86bf9f08651,,,,Skill in Microsoft Publisher for creating professional documents and publications,llm
+USKL_585fdd0399ec,Microsoft Team Foundation Server,Serveur de fondation d' équipe de Microsoft,Team Foundation Server,,hard,programming_languages,LIGHTCAST | ONET,SKL_07c8d45ed285 | SKL_a050e8d858eb,,,,"Microsoft Team Foundation Server is a software development platform for source control, project planning, and build automation.",llm
+USKL_4749fc556d84,Microsoft Teams,Microsoft Teams,microsoft teams,,hard,other_hard,DATAJOBS | KAGGLE | ONET,SKL_0863ac3ef467 | SKL_7f518c92dcfe | SKL_b5de89795015,,,,skill to use Microsoft Teams for communication and collaboration in various IT domains,llm
+USKL_199774b85a03,Microsoft Visual Basic for Applications VBA,Microsoft Visual Basic pour les applications VBA,,,hard,programming_languages,ONET,SKL_16e721ee0783,,,,VBA is a scripting language for automating tasks in Microsoft Office applications.,llm
+USKL_0f83454ab2e3,Microsoft Visual Basic.NET,Microsoft Visual Basic.NET,,,hard,programming_languages,ONET,SKL_b16918fc75e4,,,,Microsoft Visual Basic.NET is a programming language for developing Windows applications.,llm
+USKL_b0aec3fee8d5,Microsoft Visual C# .NET,Microsoft Visual C# .NET,,,hard,programming_languages,ONET,SKL_294be644b939,,,,Microsoft Visual C# .NET is a programming language and integrated development environment for developing Windows applications.,llm
 USKL_e734029990ca,Microsoft Windows,Microsoft Windows,microsoft windows | Windows | windows | MSFT Win,MS Win | Windows PC,hard,systems_infrastructure,CSO | DATAJOBS | KAGGLE | LIGHTCAST | ONET | ZENODO,SKL_1ed5f5c0db37 | SKL_6d6c7fcc1579 | SKL_994d4ddb884b | SKL_b814d8064b38 | SKL_c525c50c43fb | SKL_c8061bfbbcb0,Q1406,https://www.wikidata.org/wiki/Q1406,family of computer operating systems developed by Microsoft,family of computer operating systems developed by Microsoft,wikidata
-USKL_74cc38b4e419,Migration testing software,Logiciel de test de migration,,,hard,programming_languages,ONET,SKL_f5376f6af2db,,,,,
-USKL_3a98f75c4b8e,Minitab,Minitab,,,hard,other_hard,ONET,SKL_8cffefdf40ee,,,,,
-USKL_934a59a58e19,Mutation testing software,Logiciel de test de mutation,,,hard,programming_languages,ONET,SKL_e439c8b3fad8,,,,,
-USKL_f5537b8db11f,National Instruments LabVIEW,Instruments nationaux LabVIEW,,,hard,other_hard,ONET,SKL_6cc74f52b13b,,,,,
-USKL_bcec02447ad8,Network intrusion prevention systems NIPS,Systèmes de prévention de l'intrusion dans le réseau NIPS,,,hard,networks,ONET,SKL_c898af9c2046,,,,,
-USKL_554e0cc6d499,Omni Group OmniGraffle,Groupe Omni OmniGraffle,,,hard,other_hard,ONET,SKL_6014fe84d4b3,,,,,
-USKL_da84fdd61432,OpenAI ChatGPT,OpenAI ChatGPT,,,hard,other_hard,ONET,SKL_c5479ae8f5d0,,,,,
+USKL_74cc38b4e419,Migration testing software,Logiciel de test de migration,,,hard,programming_languages,ONET,SKL_f5376f6af2db,,,,Migration testing software is used to validate applications during system migration processes in software development.,llm
+USKL_3a98f75c4b8e,Minitab,Minitab,,,hard,other_hard,ONET,SKL_8cffefdf40ee,,,,Minitab is a software used for statistical analysis in technical domains.,llm
+USKL_934a59a58e19,Mutation testing software,Logiciel de test de mutation,,,hard,programming_languages,ONET,SKL_e439c8b3fad8,,,,Mutation testing software is used to evaluate the effectiveness of static code analysis tools by introducing changes to source code.,llm
+USKL_f5537b8db11f,National Instruments LabVIEW,Instruments nationaux LabVIEW,,,hard,other_hard,ONET,SKL_6cc74f52b13b,,,,National Instruments LabVIEW is a graphical programming software for instrumentation and embedded systems development.,llm
+USKL_bcec02447ad8,Network intrusion prevention systems NIPS,Systèmes de prévention de l'intrusion dans le réseau NIPS,,,hard,networks,ONET,SKL_c898af9c2046,,,,Network intrusion prevention systems NIPS are technologies designed to detect and block network attacks in real time.,llm
+USKL_554e0cc6d499,Omni Group OmniGraffle,Groupe Omni OmniGraffle,,,hard,other_hard,ONET,SKL_6014fe84d4b3,,,,Skill: Diagramming and visual design software proficiency using OmniGraffle,llm
+USKL_da84fdd61432,OpenAI ChatGPT,OpenAI ChatGPT,,,hard,other_hard,ONET,SKL_c5479ae8f5d0,,,,OpenAI ChatGPT is an AI language model developed by OpenAI for conversational text interactions.,llm
 USKL_e71444f4108e,Oracle Application Server,Oracle Application Server,,,hard,data_databases,LIGHTCAST | ONET,SKL_90c2b42c78d0 | SKL_a7402c74fa44,Q2027912,https://www.wikidata.org/wiki/Q2027912,"integrated, standards-based software platform","integrated, standards-based software platform",wikidata
-USKL_eb35ea48a816,Oracle Business Intelligence Suite,Suite Oracle Business Intelligence,,,hard,data_databases,ONET,SKL_e04540fdfd7a,,,,,
-USKL_d36c0ab93759,Oracle Cloud software,Logiciel Oracle Cloud,,,hard,data_databases,ONET,SKL_d32d9e99ff09,,,,,
-USKL_345fadbf9f29,Oracle Java 2 Platform Enterprise Edition J2EE,Oracle Java 2 Platform Enterprise Edition J2EE,,,hard,data_databases,ONET,SKL_3361a20350c2,,,,,
-USKL_b2a9033bede4,Oracle JavaServer Pages JSP,Oracle JavaServer Pages JSP,,,hard,data_databases,ONET,SKL_ad95e246a37e,,,,,
-USKL_0d241e95ae81,Oracle JDBC,Oracle JDBC,,,hard,data_databases,ONET,SKL_504219586e17,,,,,
-USKL_01cf7c34dceb,Oracle Master Data Management MDM Suite,Oracle Master Data Management MDM Suite,,,hard,data_databases,ONET,SKL_7bc31eca0caa,,,,,
-USKL_239bcfb7d5f4,Oracle PeopleSoft Financials,Oracle PeopleSoft Finances,,,hard,data_databases,ONET,SKL_698e4b54f230,,,,,
-USKL_c76a9e184e1d,Oracle Primavera Enterprise Project Portfolio Management,Gestion du portefeuille de projets Oracle Primavera Enterprise,,,hard,data_databases,ONET,SKL_cca5992e72ac,,,,,
+USKL_eb35ea48a816,Oracle Business Intelligence Suite,Suite Oracle Business Intelligence,,,hard,data_databases,ONET,SKL_e04540fdfd7a,,,,Skill involves using Oracle Business Intelligence Suite for databases and analytics management.,llm
+USKL_d36c0ab93759,Oracle Cloud software,Logiciel Oracle Cloud,,,hard,data_databases,ONET,SKL_d32d9e99ff09,,,,Oracle Cloud software enables database and data management services in the cloud.,llm
+USKL_345fadbf9f29,Oracle Java 2 Platform Enterprise Edition J2EE,Oracle Java 2 Platform Enterprise Edition J2EE,,,hard,data_databases,ONET,SKL_3361a20350c2,,,,Oracle Java 2 Platform Enterprise Edition J2EE refers to a discontinued version of Java for enterprise applications.,llm
+USKL_b2a9033bede4,Oracle JavaServer Pages JSP,Oracle JavaServer Pages JSP,,,hard,data_databases,ONET,SKL_ad95e246a37e,,,,Oracle JavaServer Pages JSP is a technology for server-side web page generation using Java.,llm
+USKL_0d241e95ae81,Oracle JDBC,Oracle JDBC,,,hard,data_databases,ONET,SKL_504219586e17,,,,Oracle JDBC is a Java Database Connectivity driver for Oracle databases.,llm
+USKL_01cf7c34dceb,Oracle Master Data Management MDM Suite,Oracle Master Data Management MDM Suite,,,hard,data_databases,ONET,SKL_7bc31eca0caa,,,,Oracle Master Data Management MDM Suite expertise involves managing consistent data across silos in databases and data management domains.,llm
+USKL_239bcfb7d5f4,Oracle PeopleSoft Financials,Oracle PeopleSoft Finances,,,hard,data_databases,ONET,SKL_698e4b54f230,,,,Oracle PeopleSoft Financials is a financial management software system maintained by Oracle Corporation.,llm
+USKL_c76a9e184e1d,Oracle Primavera Enterprise Project Portfolio Management,Gestion du portefeuille de projets Oracle Primavera Enterprise,,,hard,data_databases,ONET,SKL_cca5992e72ac,,,,Oracle Primavera EPPM is a project portfolio management software for database-driven project planning and analysis.,llm
 USKL_c956a2e1b3b2,Oracle SQL Developer,Oracle SQL Developer,sqldeveloper,,hard,data_databases,LIGHTCAST | ONET,SKL_24c07f50c51e | SKL_e83bd68c20c2,Q931351,https://www.wikidata.org/wiki/Q931351,free SQL IDE from Oracle Corporation,free SQL IDE from Oracle Corporation,wikidata
 USKL_167ddc72e5d5,Oracle Taleo,Taleo,Oracle Taleo,,hard,data_databases,ONET,SKL_5489caa5bd00,Q7679213,https://www.wikidata.org/wiki/Q7679213,"Oracle talent acquisition software suite for sourcing, recruiting, and onboarding","Oracle talent acquisition software suite for sourcing, recruiting, and onboarding",wikidata
-USKL_73455d9cc7b8,OrCAD Capture,OrCAD Capture,,,hard,other_hard,ONET,SKL_a4d63ddb6f7f,,,,,
-USKL_96a075f02ca7,Patch and update management software,Logiciel de gestion des correctifs et des mises à jour,,,hard,programming_languages,ONET,SKL_ab08873c0e27,,,,,
-USKL_72b057f910a7,Personal computer diagnostic software,Logiciel de diagnostic de l'ordinateur personnel,,,hard,programming_languages,ONET,SKL_7132a7079db4,,,,,
-USKL_b382ed7c3fc1,Popkin System Architect,Architecte du système Popkin,,,hard,other_hard,ONET,SKL_b1bc607730fe,,,,,
-USKL_1f48ed353cf7,Rapide,Rapidement,,,hard,other_hard,ONET,SKL_9cec5ea92aea,,,,,
+USKL_73455d9cc7b8,OrCAD Capture,OrCAD Capture,,,hard,other_hard,ONET,SKL_a4d63ddb6f7f,,,,OrCAD Capture is a PCB layout software used in electronic design automation.,llm
+USKL_96a075f02ca7,Patch and update management software,Logiciel de gestion des correctifs et des mises à jour,,,hard,programming_languages,ONET,SKL_ab08873c0e27,,,,Skill involves managing software patches and updates to ensure system security and functionality.,llm
+USKL_72b057f910a7,Personal computer diagnostic software,Logiciel de diagnostic de l'ordinateur personnel,,,hard,programming_languages,ONET,SKL_7132a7079db4,,,,Personal computer diagnostic software tools test and repair PC hardware issues.,llm
+USKL_b382ed7c3fc1,Popkin System Architect,Architecte du système Popkin,,,hard,other_hard,ONET,SKL_b1bc607730fe,,,,Popkin System Architect specializes in designing complex IT systems incorporating various technologies and standards.,llm
+USKL_1f48ed353cf7,Rapide,Rapidement,,,hard,other_hard,ONET,SKL_9cec5ea92aea,,,,Rapide likely refers to rapid in technical contexts such as software development or data processing speeds.,llm
 USKL_14f0dfa1ed9e,React,React,ReactJS | React.js | React JavaScript library,React.js | ReactJS,hard,web,KAGGLE | ONET,SKL_c8869cf12026 | SKL_ea21caa3cdb7,Q19399674,https://www.wikidata.org/wiki/Q19399674,JavaScript library for building user interfaces,JavaScript library for building user interfaces,wikidata
-USKL_566e4389160b,Recovery testing software,Logiciel de test de récupération,,,hard,programming_languages,ONET,SKL_15025c029f6a,,,,,
-USKL_82ce358b3f3c,Red Hat OpenShift,Chapeau rouge OpenShift,,,hard,cloud_devops,ONET,SKL_e574fc12f192,,,,,
-USKL_8eb0f62f0b9f,Regression testing software,Logiciel de test de régression,,,hard,programming_languages,ONET,SKL_553e81044390,,,,,
-USKL_7831a78e7323,Remote control software,Logiciel de contrôle à distance,,,hard,programming_languages,ONET,SKL_f4c5151e958c,,,,,
-USKL_d21106f92567,Requirements management software,Logiciel de gestion des exigences,,,hard,programming_languages,ONET,SKL_150824ed65ea,,,,,
-USKL_49e496b08157,Salesforce software,Logiciel Salesforce,,,hard,programming_languages,ONET,SKL_2b06e0fdd37b,,,,,
-USKL_4c5b3057c676,Salesforce Visualforce,Forces de vente Visualforce,,,hard,other_hard,ONET,SKL_fd9c3c8f82fc,,,,,
-USKL_833ace577781,SAP Adaptive Server Enterprise,SAP Entreprise de serveurs adaptatifs,SAP Sybase Adaptive Server Enterprise,,hard,data_databases,LIGHTCAST | ONET,SKL_587db789f855 | SKL_701e8626ee60,,,,,
-USKL_290d8759c6e9,SAP BusinessObjects Desktop Intelligence,SAP BusinessObjects Intelligence de bureau,,,hard,other_hard,ONET,SKL_ba61b47406d5,,,,,
-USKL_871a30f68373,SAP ERP,SAP ERP,,,hard,other_hard,ONET,SKL_78a9af236bca,,,,,
-USKL_fa62ae250c6d,SAP Master Data Management MDM,SAP Maîtrise de la gestion des données MDM,,,hard,other_hard,ONET,SKL_ea109f0066ab,,,,,
-USKL_97fc4db4ab28,SAP NetWeaver,SAP NetWeaver,SAP NetWeaver Data Management | SAP NetWeaver Visual Composer,,hard,web,LIGHTCAST | ONET,SKL_4047a1163a1d | SKL_7544a41453b0 | SKL_8f2e607c8a73 | SKL_a1f7bfe89d8c,,,,,
-USKL_d31ca2deeaa8,SAP NetWeaver BW,SAP NetWeaver BW,,,hard,other_hard,ONET,SKL_7c596b4d8c25,,,,,
-USKL_14aa1c79c92a,Security testing software,Logiciel de test de sécurité,,,hard,security,ONET,SKL_b6007b4eb683,,,,,
+USKL_566e4389160b,Recovery testing software,Logiciel de test de récupération,,,hard,programming_languages,ONET,SKL_15025c029f6a,,,,Recovery testing software is used to simulate system failures for testing data recovery processes in software development.,llm
+USKL_82ce358b3f3c,Red Hat OpenShift,Chapeau rouge OpenShift,,,hard,cloud_devops,ONET,SKL_e574fc12f192,,,,Red Hat OpenShift is an open-source container application platform for developers and operators.,llm
+USKL_8eb0f62f0b9f,Regression testing software,Logiciel de test de régression,,,hard,programming_languages,ONET,SKL_553e81044390,,,,Regression testing software is used to automate the execution of regression tests in software development.,llm
+USKL_7831a78e7323,Remote control software,Logiciel de contrôle à distance,,,hard,programming_languages,ONET,SKL_f4c5151e958c,,,,Remote control software refers to tools used for managing and controlling systems remotely in programming and software development.,llm
+USKL_d21106f92567,Requirements management software,Logiciel de gestion des exigences,,,hard,programming_languages,ONET,SKL_150824ed65ea,,,,Requirements management software tools facilitate project planning and communication in software development teams.,llm
+USKL_49e496b08157,Salesforce software,Logiciel Salesforce,,,hard,programming_languages,ONET,SKL_2b06e0fdd37b,,,,Salesforce software is a customer relationship management (CRM) platform used in software development and programming roles.,llm
+USKL_4c5b3057c676,Salesforce Visualforce,Forces de vente Visualforce,,,hard,other_hard,ONET,SKL_fd9c3c8f82fc,,,,Salesforce Visualforce is a server-side programming language for creating custom business logic in Salesforce applications.,llm
+USKL_833ace577781,SAP Adaptive Server Enterprise,SAP Entreprise de serveurs adaptatifs,SAP Sybase Adaptive Server Enterprise,,hard,data_databases,LIGHTCAST | ONET,SKL_587db789f855 | SKL_701e8626ee60,,,,SAP Adaptive Server Enterprise is a database management system managed by SAP.,llm
+USKL_290d8759c6e9,SAP BusinessObjects Desktop Intelligence,SAP BusinessObjects Intelligence de bureau,,,hard,other_hard,ONET,SKL_ba61b47406d5,,,,Skill involves creating reports and dashboards using SAP BusinessObjects Desktop Intelligence for data analysis and visualization.,llm
+USKL_871a30f68373,SAP ERP,SAP ERP,,,hard,other_hard,ONET,SKL_78a9af236bca,,,,SAP ERP is a software application for managing business processes across various domains.,llm
+USKL_fa62ae250c6d,SAP Master Data Management MDM,SAP Maîtrise de la gestion des données MDM,,,hard,other_hard,ONET,SKL_ea109f0066ab,,,,SAP Master Data Management MDM is the process of managing consistent data across SAP systems for accurate business decisions.,llm
+USKL_97fc4db4ab28,SAP NetWeaver,SAP NetWeaver,SAP NetWeaver Data Management | SAP NetWeaver Visual Composer,,hard,web,LIGHTCAST | ONET,SKL_4047a1163a1d | SKL_7544a41453b0 | SKL_8f2e607c8a73 | SKL_a1f7bfe89d8c,,,,SAP NetWeaver is a platform for web and mobile development including data management and visual composition tools.,llm
+USKL_d31ca2deeaa8,SAP NetWeaver BW,SAP NetWeaver BW,,,hard,other_hard,ONET,SKL_7c596b4d8c25,,,,Skill in SAP NetWeaver BW involves designing and implementing business intelligence solutions using SAP technologies.,llm
+USKL_14aa1c79c92a,Security testing software,Logiciel de test de sécurité,,,hard,security,ONET,SKL_b6007b4eb683,,,,Security testing software tools used to assess and improve system security.,llm
 USKL_d33a0364fa97,Selenium,Selenium,Selenium (Software),,hard,ai_ml,KAGGLE | LIGHTCAST | ONET,SKL_6ee5fe4a930f | SKL_837b554f5e82 | SKL_9319b7f89271 | SKL_f65a32a49881,Q752522,https://www.wikidata.org/wiki/Q752522,testing framework for web applications,testing framework for web applications,wikidata
-USKL_e1a482a198ab,ServiceNow,ServiceNow,,,hard,other_hard,KAGGLE | LIGHTCAST | ONET,SKL_2d86bf6e83f5 | SKL_5968aa14d861 | SKL_827d0e8aa468,,,,,
-USKL_736aa4ba3a1b,Skype,Skype,,,hard,other_hard,LIGHTCAST | ONET,SKL_1ed687978130 | SKL_910690d4f1d0,,,,,
+USKL_e1a482a198ab,ServiceNow,ServiceNow,,,hard,other_hard,KAGGLE | LIGHTCAST | ONET,SKL_2d86bf6e83f5 | SKL_5968aa14d861 | SKL_827d0e8aa468,,,,ServiceNow is a platform for IT service management and business processes.,llm
+USKL_736aa4ba3a1b,Skype,Skype,,,hard,other_hard,LIGHTCAST | ONET,SKL_1ed687978130 | SKL_910690d4f1d0,,,,Skype is a voice and video communication software application.,llm
 USKL_22e49ffc0bb6,Slack,Slack,Slack HQ | chatlyio | chatly.io,,hard,networks,KAGGLE | ONET,SKL_321f14689120 | SKL_b1c771db7e8d,Q17130715,https://www.wikidata.org/wiki/Q17130715,web-based instant messaging service,web-based instant messaging service,wikidata
-USKL_4cc5a0a20200,Slido interaction software,Logiciel d'interaction Slido,,,hard,programming_languages,ONET,SKL_3e4b3acff7a2,,,,,
+USKL_4cc5a0a20200,Slido interaction software,Logiciel d'interaction Slido,,,hard,programming_languages,ONET,SKL_3e4b3acff7a2,,,,Slido interaction software is a tool for facilitating online discussions and surveys in educational and corporate settings.,llm
 USKL_d85c6f4d1360,Snort,Snort,Snort (Intrusion Detection System),,hard,security,LIGHTCAST | ONET,SKL_17db52643be3 | SKL_743208e5fbd5,Q1332255,https://www.wikidata.org/wiki/Q1332255,free software intrusion prevention system,free software intrusion prevention system,wikidata
-USKL_3553a90711ee,Software asset management SAM software,Logiciel de gestion des actifs Logiciel SAM,,,hard,programming_languages,ONET,SKL_5ca66113ea09,,,,,
-USKL_f54dbe8510fa,Software distribution software,Logiciel de distribution de logiciels,,,hard,programming_languages,ONET,SKL_3f7a4ef612c9,,,,,
-USKL_95baa6b2415e,SpectraQuest,SpectraQuest,,,hard,other_hard,ONET,SKL_13d889b0574a,,,,,
+USKL_3553a90711ee,Software asset management SAM software,Logiciel de gestion des actifs Logiciel SAM,,,hard,programming_languages,ONET,SKL_5ca66113ea09,,,,SAM software is specialized software for managing and tracking software assets in programming and software development domains.,llm
+USKL_f54dbe8510fa,Software distribution software,Logiciel de distribution de logiciels,,,hard,programming_languages,ONET,SKL_3f7a4ef612c9,,,,Software distribution software facilitates the deployment and management of software across multiple systems.,llm
+USKL_95baa6b2415e,SpectraQuest,SpectraQuest,,,hard,other_hard,ONET,SKL_13d889b0574a,,,,SpectraQuest is a skill in the domain of Other technical / General & Cross-cutting IT.,llm
 USKL_ebab5d096862,Spring Boot,Spring Boot,,,hard,programming_languages,KAGGLE | LIGHTCAST | ONET,SKL_034e7a285c9e | SKL_6398d680d223 | SKL_c9b60f827872,Q98731994,https://www.wikidata.org/wiki/Q98731994,Java framework to create enterprise grade applications,Java framework to create enterprise grade applications,wikidata
-USKL_f1d790d42319,Stac Software ReachOut,Logiciel Stac ReachOut,,,hard,programming_languages,ONET,SKL_a1006088d967,,,,,
-USKL_bd43a0cf7d52,Static analysis software,Logiciel d'analyse statique,,,hard,programming_languages,ONET,SKL_4dee4fb671f5,,,,,
-USKL_95d4a0c5faa0,Stress testing software,Logiciel de test du stress,,,hard,programming_languages,ONET,SKL_653a9657e74a,,,,,
-USKL_d1ddf740c590,Structure prediction software,Logiciel de prédiction de la structure,,,hard,programming_languages,ONET,SKL_429be3396a50,,,,,
-USKL_2a850fe1a062,Sun Microsystems Sun ONE,Systèmes Sun Microsystems Sun ONE,,,hard,other_hard,ONET,SKL_ec357d399479,,,,,
-USKL_4f9ad2052e16,Supervisory control and data acquisition SCADA software,Logiciel de contrôle de surveillance et d'acquisition de données SCADA,,,hard,programming_languages,ONET,SKL_d2d0785b2854,,,,,
-USKL_468084173e5d,Symantec pcAnywhere,Syntec pcAnywhere,,,hard,other_hard,ONET,SKL_d0000f8a3ecb,,,,,
-USKL_e3ed6e07ac35,Symantec Visual Cafe,Le café visuel Symantec,,,hard,other_hard,ONET,SKL_b732f4c381c2,,,,,
-USKL_2efed337a038,System and data disaster recovery software,Logiciel de récupération de systèmes et de données après catastrophe,Systems and data disaster recovery software,,hard,programming_languages,ONET,SKL_b147a4d8ee8d | SKL_ca251a3f95e7,,,,,
-USKL_85bab8b1582e,System testing software,Logiciel de test du système,,,hard,programming_languages,ONET,SKL_ae6b4dd0a97a,,,,,
-USKL_d6ed1cb953e3,Systems and application deployment and migration software,Systèmes et logiciels de déploiement et de migration d'applications,,,hard,programming_languages,ONET,SKL_a80ed813c602,,,,,
-USKL_82beafa713c2,Test design software,Logiciel de conception des essais,,,hard,programming_languages,ONET,SKL_fda02427a56c,,,,,
-USKL_114860e3b574,Test implementation software,Logiciel de mise en œuvre des essais,,,hard,programming_languages,ONET,SKL_4c75f73ecc33,,,,,
-USKL_1c298ff23886,Time sharing option TSO software,Option de partage du temps logiciel TSO,,,hard,programming_languages,ONET,SKL_1a50c01130ff,,,,,
+USKL_f1d790d42319,Stac Software ReachOut,Logiciel Stac ReachOut,,,hard,programming_languages,ONET,SKL_a1006088d967,,,,Stac Software ReachOut is a software development tool for managing project dependencies and releases in programming projects.,llm
+USKL_bd43a0cf7d52,Static analysis software,Logiciel d'analyse statique,,,hard,programming_languages,ONET,SKL_4dee4fb671f5,,,,Static analysis software tools automate detection of coding errors without executing code.,llm
+USKL_95d4a0c5faa0,Stress testing software,Logiciel de test du stress,,,hard,programming_languages,ONET,SKL_653a9657e74a,,,,Stress testing software is a tool used in programming and software development to evaluate system performance under heavy load.,llm
+USKL_d1ddf740c590,Structure prediction software,Logiciel de prédiction de la structure,,,hard,programming_languages,ONET,SKL_429be3396a50,,,,Structure prediction software is used in bioinformatics to predict protein structures from amino acid sequences.,llm
+USKL_2a850fe1a062,Sun Microsystems Sun ONE,Systèmes Sun Microsystems Sun ONE,,,hard,other_hard,ONET,SKL_ec357d399479,,,,Sun ONE was a suite of web services technologies from Sun Microsystems.,llm
+USKL_4f9ad2052e16,Supervisory control and data acquisition SCADA software,Logiciel de contrôle de surveillance et d'acquisition de données SCADA,,,hard,programming_languages,ONET,SKL_d2d0785b2854,,,,Supervisory control and data acquisition SCADA software is used for monitoring and controlling industrial processes.,llm
+USKL_468084173e5d,Symantec pcAnywhere,Syntec pcAnywhere,,,hard,other_hard,ONET,SKL_d0000f8a3ecb,,,,Skill: Remote access software using Symantec's PCAnywhere,llm
+USKL_e3ed6e07ac35,Symantec Visual Cafe,Le café visuel Symantec,,,hard,other_hard,ONET,SKL_b732f4c381c2,,,,Symantec Visual Café is a Java integrated development environment for web application development.,llm
+USKL_2efed337a038,System and data disaster recovery software,Logiciel de récupération de systèmes et de données après catastrophe,Systems and data disaster recovery software,,hard,programming_languages,ONET,SKL_b147a4d8ee8d | SKL_ca251a3f95e7,,,,Skill involves designing and implementing software for restoring systems and data in case of disasters.,llm
+USKL_85bab8b1582e,System testing software,Logiciel de test du système,,,hard,programming_languages,ONET,SKL_ae6b4dd0a97a,,,,System testing software refers to tools used in software development for executing tests against complete systems or applications.,llm
+USKL_d6ed1cb953e3,Systems and application deployment and migration software,Systèmes et logiciels de déploiement et de migration d'applications,,,hard,programming_languages,ONET,SKL_a80ed813c602,,,,"Systems and application deployment and migration software refers to tools for automating the installation, configuration, and movement of applications across computing environments.",llm
+USKL_82beafa713c2,Test design software,Logiciel de conception des essais,,,hard,programming_languages,ONET,SKL_fda02427a56c,,,,Test design software tools aid in creating test cases and scenarios for software development projects.,llm
+USKL_114860e3b574,Test implementation software,Logiciel de mise en œuvre des essais,,,hard,programming_languages,ONET,SKL_4c75f73ecc33,,,,Test implementation software involves developing tools to automate or manage software testing processes in development projects.,llm
+USKL_1c298ff23886,Time sharing option TSO software,Option de partage du temps logiciel TSO,,,hard,programming_languages,ONET,SKL_1a50c01130ff,,,,TSO software refers to Time-sharing Option software for IBM mainframes supporting multiple users.,llm
 USKL_0eae9fd893a7,Transact-SQL,Transact-SQL,T-SQL,T-SQL,hard,data_databases,LIGHTCAST | ONET,SKL_474d581106a2 | SKL_c71a09f9448d,Q1411245,https://www.wikidata.org/wiki/Q1411245,Microsoft's and Sybase's proprietary extension to SQL (Structured Query Language) used to interact with relational databases,Microsoft's and Sybase's proprietary extension to SQL (Structured Query Language) used to interact with relational databases,wikidata
-USKL_d066e0741027,Ubuntu,,Ubuntu (Operating System),,hard,other_hard,LIGHTCAST | ONET,SKL_33599f153660 | SKL_612d82985974,,,,,
-USKL_ace935d9d1d4,Unit testing software,Logiciel de test unitaire,,,hard,programming_languages,ONET,SKL_b411bd056d99,,,,,
-USKL_96eb6f46f10d,UNIX Shell,UNIX Shell,Unix Shell,,hard,programming_languages,LIGHTCAST | ONET,SKL_3d5551ca28f4 | SKL_61c17a7e2993,,,,,
-USKL_2c574f4a2459,Usability testing software,Logiciel de test d'utilisabilité,,,hard,programming_languages,ONET,SKL_56d41e7dc358,,,,,
+USKL_d066e0741027,Ubuntu,,Ubuntu (Operating System),,hard,other_hard,LIGHTCAST | ONET,SKL_33599f153660 | SKL_612d82985974,,,,Ubuntu is a Linux operating system widely used in servers and desktops.,llm
+USKL_ace935d9d1d4,Unit testing software,Logiciel de test unitaire,,,hard,programming_languages,ONET,SKL_b411bd056d99,,,,Unit testing software is a practice in programming and software development for automating tests of individual units of source code.,llm
+USKL_96eb6f46f10d,UNIX Shell,UNIX Shell,Unix Shell,,hard,programming_languages,LIGHTCAST | ONET,SKL_3d5551ca28f4 | SKL_61c17a7e2993,,,,UNIX Shell refers to command-line interfaces in Unix-like operating systems for executing shell scripts and managing system resources.,llm
+USKL_2c574f4a2459,Usability testing software,Logiciel de test d'utilisabilité,,,hard,programming_languages,ONET,SKL_56d41e7dc358,,,,Skill involves using tools to evaluate and improve software usability through testing methodologies.,llm
 USKL_de47825db1f3,Verilog,Vérilog,,,hard,hardware_embedded,ONET,SKL_e77607274d0f,,,,Verilog is a hardware description language used in the design of electronic systems.,llm
-USKL_ceffb53806ea,Version Control Software,Logiciel de contrôle de version,Version control software,,hard,cloud_devops,LIGHTCAST | ONET,SKL_3cb205950caf | SKL_b30426986f54,,,,,
-USKL_f35ad9d147ef,Virus scanning software,Logiciel de numérisation des virus,,,hard,programming_languages,ONET,SKL_64948572448b,,,,,
-USKL_477804e11345,Voice over internet protocol VoIP system software,Logiciel de système VoIP sur le protocole Internet de voix,,,hard,networks,ONET,SKL_cce5e298fc4f,,,,,
-USKL_57db6bc5070a,Web server software,Logiciel de serveur Web,,,hard,web,ONET,SKL_a109033a33d6,,,,,
-USKL_bc6d8aead429,WebFOCUS,WebFOCUS,,,hard,other_hard,ONET,SKL_51a83e5e9f1a,,,,,
-USKL_e94e4e2e558a,Wise Solutions Wise for Windows Installer,Solution judicieuse Solution judicieuse pour l'installateur de Windows,,,hard,other_hard,ONET,SKL_dbcc826ffdb5,,,,,
-USKL_7ba9a9a80cce,YouTube,YouTube,,,hard,other_hard,ONET,SKL_2b48e03a654d,,,,,
-USKL_de94aa247b7c,Allscripts Professional EHR,Allscripts Professionnel EHR,,,hard,other_hard,ONET,SKL_6675abb47367,,,,,
-USKL_948e0f569842,Allscripts Sunrise,Allscripts Le lever du soleil,,,hard,other_hard,ONET,SKL_ce4f3348da81,,,,,
-USKL_64bc4cbf9243,Amkai AmkaiCharts,Amkai AmkaiCharts,,,hard,other_hard,ONET,SKL_56068b489356,,,,,
-USKL_654a82c71ba4,Bizmatics PrognoCIS EMR,,,,hard,other_hard,ONET,SKL_04c76700ac98,,,,,
-USKL_85a3657be5e0,Cerner Millennium,Cerner Millénaire,,,hard,other_hard,ONET,SKL_84572faed1e3,,,,,
-USKL_91435e52c448,Cerner PowerChart,Cerner PowerChart,,,hard,other_hard,ONET,SKL_feea29525080,,,,,
-USKL_4ed442258b3f,ChartWare EMR,ChartWare EMR,,,hard,other_hard,ONET,SKL_ff0c85f93d29,,,,,
-USKL_7f31cbfdf16b,Computer aided software engineering CASE tools,Ingénierie des logiciels assistés par ordinateur outils CASE,,,hard,programming_languages,ONET,SKL_e994f2472a34,,,,,
-USKL_441aea99a716,Computerized physician order entry CPOE software,Logiciel informatisé de commande médicale CPOE,,,hard,programming_languages,ONET,SKL_20d9675a924a,,,,,
-USKL_18c89c313e26,e-MDs software,logiciel e-MD,,,hard,programming_languages,ONET,SKL_0784ee9761b6,,,,,
-USKL_be8297e72ebe,eClinicalWorks EHR software,Le logiciel eClinicalWorks EHR,,,hard,programming_languages,ONET,SKL_c561de574fec,,,,,
-USKL_476e284dc667,Electronic medical administration record eMAR software,Logiciel eMAR enregistrement de l'administration médicale électronique,,,hard,programming_languages,ONET,SKL_e0f7de51e212,,,,,
-USKL_3f35f41c03d8,GE Healthcare Centricity EMR,GE Centricité des soins de santé EMR,,,hard,other_hard,ONET,SKL_dfb8dd83574d,,,,,
-USKL_2447832b52c5,Healthcare management system,Système de gestion des soins de santé,,,hard,other_hard,ONET,SKL_ec9de06eb496,,,,,
-USKL_3c2f329f6144,Learning management system LMS,Système de gestion de l'apprentissage LMS,,,hard,other_hard,ONET,SKL_2a9f5fd4ebf0,,,,,
-USKL_850276476cea,McKesson ANSOS One-Staff,McKesson ANSOS Une main-d'œuvre,,,hard,other_hard,ONET,SKL_c72b281969ed,,,,,
-USKL_ca1b7973e2fe,MEDITECH Healthcare Information System HCIS,MEDITECH Système d'information sur les soins de santé HCIS,,,hard,other_hard,ONET,SKL_916fda8a3cca,,,,,
-USKL_d6c69ebf1d1e,Mediware ClosedLoop Clinical Systems,Systèmes cliniques Mediware ClosedLoop,,,hard,other_hard,ONET,SKL_392a28df7327,,,,,
-USKL_cfb18412d490,Mediware Information Systems MediCOE,Systèmes d'information médiware MediCOE,,,hard,other_hard,ONET,SKL_61aeb99635be,,,,,
-USKL_a98e9b259ae6,Medscribbler Enterprise,,,,hard,other_hard,ONET,SKL_14de55c1fa5a,,,,,
-USKL_bdf5b958c790,MicroFour PracticeStudio.NET EMR,MicroFour PracticeStudio.NET EMR,,,hard,programming_languages,ONET,SKL_cbafbcb01cf3,,,,,
-USKL_6419d48178f4,Netsmart Technologies CareNet,Netsmart Technologies CareNet,,,hard,other_hard,ONET,SKL_1b986b61db02,,,,,
-USKL_4137507082ad,NextGen Healthcare Information Systems EMR,NextGen Systèmes d'information des soins de santé EMR,,,hard,other_hard,ONET,SKL_3da19748b30a,,,,,
-USKL_b5a43a2ea359,Picis CareSuite,Picis CareSuite,,,hard,other_hard,ONET,SKL_5ac6b029a5c5,,,,,
-USKL_e18e5a376247,Qlik software,Logiciel Qlik,,,hard,programming_languages,ONET,SKL_a8ad73ca7270,,,,,
-USKL_87d2ab53cea3,SAP BusinessObjects Crystal Reports,SAP BusinessObjects Rapports de cristal,,,hard,other_hard,ONET,SKL_6d9227de45a8,,,,,
-USKL_9cd4332b67c2,Seimens Healthineers,Seimens Healthineers,,,hard,other_hard,ONET,SKL_df223bf637c2,,,,,
-USKL_2cf77153d106,SOAPware EMR,L'équipement SOAPware EMR,,,hard,other_hard,ONET,SKL_4fb88e000b00,,,,,
-USKL_5b1e2314243b,Software development tools,Outils de développement de logiciels,,,hard,programming_languages,ONET,SKL_3863c6f51971,,,,,
-USKL_9959dda241fe,Sparta Systems TrackWise,Systèmes Sparta TrackWise,,,hard,other_hard,ONET,SKL_3680d8e4d5d7,,,,,
-USKL_bc5140551ce5,StatCom Patient Flow Logistics Enterprise Suite,StatCom Suite d'entreprise pour la logistique du flux de patients,,,hard,other_hard,ONET,SKL_b820a10929ee,,,,,
-USKL_a998e671ba2e,SynaMed EMR,SynaMed EMR,,,hard,other_hard,ONET,SKL_182d4ad39850,,,,,
-USKL_45c1d18218c2,Texas Medical Software SpringCharts EMR,Le logiciel médical du Texas SpringCharts EMR,,,hard,programming_languages,ONET,SKL_8b8497e901f5,,,,,
-USKL_7e4179407fe8,VISICU eICU Program,Le programme VISICU eICU,,,hard,other_hard,ONET,SKL_d7127b403c01,,,,,
-USKL_e181161446ed,Web browser software,Logiciel de navigateur Web,,,hard,web,ONET,SKL_c3f54892d297,,,,,
-USKL_d3b47c112b9c,AccessData FTK,AccessData FTK,,,hard,other_hard,ONET,SKL_e8fec5389b74,,,,,
-USKL_20460274bece,Anti-phishing software,Logiciel de lutte contre le phishing,,,hard,programming_languages,ONET,SKL_593ea4ce4f85,,,,,
-USKL_d18ef90dc927,Anti-spyware software,Logiciel anti-spyware,,,hard,programming_languages,ONET,SKL_e2f2d7257653,,,,,
-USKL_e96cc5a6ce9d,Anti-Trojan software,Logiciel anti-Trojan,,,hard,programming_languages,ONET,SKL_18acee333e25,,,,,
-USKL_cc080a26d17d,ArcSight Enterprise Threat and Risk Management,ArcSight Gestion des menaces et des risques pour les entreprises,,,hard,it_management,ONET,SKL_cd26be83d432,,,,,
-USKL_904f96b965c4,Automated audit trail analysis software,Logiciel automatisé d'analyse des traces d'audit,,,hard,programming_languages,ONET,SKL_78595cd6e627,,,,,
-USKL_32d0805133d9,Automated media tracking software,Logiciel automatisé de suivi des médias,,,hard,programming_languages,ONET,SKL_b3c0c7feb57b,,,,,
-USKL_a6fa649296d6,Backup and archival software,Logiciel de sauvegarde et d'archivage,,,hard,programming_languages,ONET,SKL_9188a494ee98,,,,,
-USKL_644fc8869b0c,Berkeley Internet Domain Name BIND,Nom de domaine Internet de Berkeley BIND,,,hard,other_hard,ONET,SKL_d94c353cb8ef,,,,,
-USKL_1d996873c353,Border Gateway Protocol BGP,Protocole de passerelle frontalière BGP,,,hard,networks,ONET,SKL_58ea9e8be3bd,,,,,
-USKL_fd459d3d3c49,Check Point Next Generation Secure Web Gateway,Point de vérification de la prochaine génération Gateway Web sécurisé,,,hard,security,ONET,SKL_570cac8ab8df,,,,,
-USKL_9447eb041768,Computer forensic software,Logiciel informatique médico-légale,,,hard,security,ONET,SKL_a26c74c5de75,,,,,
-USKL_4f121a9f42c0,Conformance and validation testing software,Logiciel de test de conformité et de validation,,,hard,programming_languages,ONET,SKL_e566a509b88c,,,,,
-USKL_80d8e5bb0a46,Cryptographic key management software,Logiciel de gestion des clés cryptographiques,,,hard,security,ONET,SKL_a865f0fbf6b3,,,,,
-USKL_7da6046fa759,Diameter,Diamètre,,,hard,other_hard,ONET,SKL_4babe47d5e86,,,,,
-USKL_8cfb78e3975d,Domain name system DNS,Système de nom de domaine DNS,,,hard,networks,ONET,SKL_a628fdd2d407,,,,,
-USKL_26680442dd5f,eMASS,eMASS,,,hard,other_hard,ONET,SKL_224bcbb71616,,,,,
-USKL_7e6c2913958a,End-to-end encryption software,Logiciel de cryptage de bout en bout,,,hard,security,ONET,SKL_38b65e5186cc,,,,,
-USKL_cb3754ecbd43,Ethereal,Éthéraux,,,hard,other_hard,ONET,SKL_e4b55ce71a98,,,,,
+USKL_ceffb53806ea,Version Control Software,Logiciel de contrôle de version,Version control software,,hard,cloud_devops,LIGHTCAST | ONET,SKL_3cb205950caf | SKL_b30426986f54,,,,Version Control Software is used for managing changes to files across branches in collaborative development projects in cloud and DevOps domains.,llm
+USKL_f35ad9d147ef,Virus scanning software,Logiciel de numérisation des virus,,,hard,programming_languages,ONET,SKL_64948572448b,,,,Virus scanning software is programming used to detect and remove malicious software.,llm
+USKL_477804e11345,Voice over internet protocol VoIP system software,Logiciel de système VoIP sur le protocole Internet de voix,,,hard,networks,ONET,SKL_cce5e298fc4f,,,,Software for creating and managing voice communications over IP networks.,llm
+USKL_57db6bc5070a,Web server software,Logiciel de serveur Web,,,hard,web,ONET,SKL_a109033a33d6,,,,Web server software refers to applications that run on web servers to host and deliver websites.,llm
+USKL_bc6d8aead429,WebFOCUS,WebFOCUS,,,hard,other_hard,ONET,SKL_51a83e5e9f1a,,,,WebFOCUS is a business intelligence and reporting tool developed by MicroStrategy.,llm
+USKL_e94e4e2e558a,Wise Solutions Wise for Windows Installer,Solution judicieuse Solution judicieuse pour l'installateur de Windows,,,hard,other_hard,ONET,SKL_dbcc826ffdb5,,,,Skill involves using Wise Solutions Wise for Windows Installer to automate software deployment and uninstallation processes.,llm
+USKL_7ba9a9a80cce,YouTube,YouTube,,,hard,other_hard,ONET,SKL_2b48e03a654d,,,,YouTube moderation and content management skills are required in tech roles dealing with online video content,llm
+USKL_de94aa247b7c,Allscripts Professional EHR,Allscripts Professionnel EHR,,,hard,other_hard,ONET,SKL_6675abb47367,,,,Allscripts Professional EHR is a clinical software system for managing patient records in healthcare settings.,llm
+USKL_948e0f569842,Allscripts Sunrise,Allscripts Le lever du soleil,,,hard,other_hard,ONET,SKL_ce4f3348da81,,,,skill: managing healthcare information systems using Allscripts Sunrise,llm
+USKL_64bc4cbf9243,Amkai AmkaiCharts,Amkai AmkaiCharts,,,hard,other_hard,ONET,SKL_56068b489356,,,,Skill involves using Amkai AmkaiCharts for data visualization and analysis in various technical domains.,llm
+USKL_654a82c71ba4,Bizmatics PrognoCIS EMR,,,,hard,other_hard,ONET,SKL_04c76700ac98,,,,Bizmatics PrognoCIS EMR is an electronic medical records software system.,llm
+USKL_85a3657be5e0,Cerner Millennium,Cerner Millénaire,,,hard,other_hard,ONET,SKL_84572faed1e3,,,,Cerner Millennium is a healthcare information system used for patient records management,llm
+USKL_91435e52c448,Cerner PowerChart,Cerner PowerChart,,,hard,other_hard,ONET,SKL_feea29525080,,,,Cerner PowerChart is a clinical documentation software used in healthcare信息化,llm
+USKL_4ed442258b3f,ChartWare EMR,ChartWare EMR,,,hard,other_hard,ONET,SKL_ff0c85f93d29,,,,ChartWare EMR is a software tool for electronic medical records management in healthcare IT fields.,llm
+USKL_7f31cbfdf16b,Computer aided software engineering CASE tools,Ingénierie des logiciels assistés par ordinateur outils CASE,,,hard,programming_languages,ONET,SKL_e994f2472a34,,,,CASE tools aid in software design and development through computer-aided methods in programming and software development domains.,llm
+USKL_441aea99a716,Computerized physician order entry CPOE software,Logiciel informatisé de commande médicale CPOE,,,hard,programming_languages,ONET,SKL_20d9675a924a,,,,Computerized physician order entry CPOE software is a system for electronically capturing and transmitting healthcare orders from physicians to hospitals.,llm
+USKL_18c89c313e26,e-MDs software,logiciel e-MD,,,hard,programming_languages,ONET,SKL_0784ee9761b6,,,,e-MDs software is a type of specialized programming software used in healthcare information systems development.,llm
+USKL_be8297e72ebe,eClinicalWorks EHR software,Le logiciel eClinicalWorks EHR,,,hard,programming_languages,ONET,SKL_c561de574fec,,,,Skill involves using and implementing EClinicalWorks EHR software in healthcare applications development.,llm
+USKL_476e284dc667,Electronic medical administration record eMAR software,Logiciel eMAR enregistrement de l'administration médicale électronique,,,hard,programming_languages,ONET,SKL_e0f7de51e212,,,,Skill involves using EMA R software for managing electronic medical records in programming and software development domains.,llm
+USKL_3f35f41c03d8,GE Healthcare Centricity EMR,GE Centricité des soins de santé EMR,,,hard,other_hard,ONET,SKL_dfb8dd83574d,,,,GE Healthcare Centricity EMR is an enterprise medical records software system.,llm
+USKL_2447832b52c5,Healthcare management system,Système de gestion des soins de santé,,,hard,other_hard,ONET,SKL_ec9de06eb496,,,,Skill involves managing and maintaining healthcare information systems.,llm
+USKL_3c2f329f6144,Learning management system LMS,Système de gestion de l'apprentissage LMS,,,hard,other_hard,ONET,SKL_2a9f5fd4ebf0,,,,A Learning Management System (LMS) is a software application for developing and delivering educational content online.,llm
+USKL_850276476cea,McKesson ANSOS One-Staff,McKesson ANSOS Une main-d'œuvre,,,hard,other_hard,ONET,SKL_c72b281969ed,,,,Skill involves using McKesson ANSOS One-Staff for healthcare IT systems management,llm
+USKL_ca1b7973e2fe,MEDITECH Healthcare Information System HCIS,MEDITECH Système d'information sur les soins de santé HCIS,,,hard,other_hard,ONET,SKL_916fda8a3cca,,,,MEDITECH Healthcare Information System HCIS is a software system used for managing healthcare information in hospitals.,llm
+USKL_d6c69ebf1d1e,Mediware ClosedLoop Clinical Systems,Systèmes cliniques Mediware ClosedLoop,,,hard,other_hard,ONET,SKL_392a28df7327,,,,Mediware ClosedLoop Clinical Systems expertise involves managing clinical information systems for healthcare workflow optimization,llm
+USKL_cfb18412d490,Mediware Information Systems MediCOE,Systèmes d'information médiware MediCOE,,,hard,other_hard,ONET,SKL_61aeb99635be,,,,Mediware Information Systems MediCOE is a methodology for enterprise architecture design and implementation in healthcare systems.,llm
+USKL_a98e9b259ae6,Medscribbler Enterprise,,,,hard,other_hard,ONET,SKL_14de55c1fa5a,,,,Medscribbler Enterprise is a role focused on enterprise-wide documentation and knowledge management systems.,llm
+USKL_bdf5b958c790,MicroFour PracticeStudio.NET EMR,MicroFour PracticeStudio.NET EMR,,,hard,programming_languages,ONET,SKL_cbafbcb01cf3,,,,MicroFour PracticeStudio.NET EMR is a software application for electronic medical records in healthcare sector.,llm
+USKL_6419d48178f4,Netsmart Technologies CareNet,Netsmart Technologies CareNet,,,hard,other_hard,ONET,SKL_1b986b61db02,,,,Netsmart Technologies CareNet is a healthcare IT platform for managing patient care coordination.,llm
+USKL_4137507082ad,NextGen Healthcare Information Systems EMR,NextGen Systèmes d'information des soins de santé EMR,,,hard,other_hard,ONET,SKL_3da19748b30a,,,,NextGen Healthcare Information Systems EMR refers to electronic medical records software used in healthcare settings.,llm
+USKL_b5a43a2ea359,Picis CareSuite,Picis CareSuite,,,hard,other_hard,ONET,SKL_5ac6b029a5c5,,,,Picis CareSuite is a healthcare IT solution for managing patient records and clinical workflows.,llm
+USKL_e18e5a376247,Qlik software,Logiciel Qlik,,,hard,programming_languages,ONET,SKL_a8ad73ca7270,,,,Skill: Using Qlik software for data analysis and business intelligence in programming and software development.,llm
+USKL_87d2ab53cea3,SAP BusinessObjects Crystal Reports,SAP BusinessObjects Rapports de cristal,,,hard,other_hard,ONET,SKL_6d9227de45a8,,,,Skill in SAP BusinessObjects Crystal Reports for data analysis and report generation.,llm
+USKL_9cd4332b67c2,Seimens Healthineers,Seimens Healthineers,,,hard,other_hard,ONET,SKL_df223bf637c2,,,,Skill related to Siemens Healthineers typically involves medical technology and healthcare IT systems expertise,llm
+USKL_2cf77153d106,SOAPware EMR,L'équipement SOAPware EMR,,,hard,other_hard,ONET,SKL_4fb88e000b00,,,,SOAPware EMR is a software application for electronic medical records in healthcare IT.,llm
+USKL_5b1e2314243b,Software development tools,Outils de développement de logiciels,,,hard,programming_languages,ONET,SKL_3863c6f51971,,,,Software development tools are resources used by programmers to design develop test and maintain software.,llm
+USKL_9959dda241fe,Sparta Systems TrackWise,Systèmes Sparta TrackWise,,,hard,other_hard,ONET,SKL_3680d8e4d5d7,,,,Skill involves managing asset information using Sparta Systems' TrackWise software,llm
+USKL_bc5140551ce5,StatCom Patient Flow Logistics Enterprise Suite,StatCom Suite d'entreprise pour la logistique du flux de patients,,,hard,other_hard,ONET,SKL_b820a10929ee,,,,StatCom Patient Flow Logistics Enterprise Suite is a software suite for healthcare patient flow management logistics.,llm
+USKL_a998e671ba2e,SynaMed EMR,SynaMed EMR,,,hard,other_hard,ONET,SKL_182d4ad39850,,,,SynaMed EMR refers to an electronic medical record system integrating clinical decision support and patient data management.,llm
+USKL_45c1d18218c2,Texas Medical Software SpringCharts EMR,Le logiciel médical du Texas SpringCharts EMR,,,hard,programming_languages,ONET,SKL_8b8497e901f5,,,,Texas Medical Software SpringCharts EMR is an electronic medical records system developed in Spring framework.,llm
+USKL_7e4179407fe8,VISICU eICU Program,Le programme VISICU eICU,,,hard,other_hard,ONET,SKL_d7127b403c01,,,,VISICU eICU Program is a clinical informatics program for intensive care units using electronic health record data analysis.,llm
+USKL_e181161446ed,Web browser software,Logiciel de navigateur Web,,,hard,web,ONET,SKL_c3f54892d297,,,,Web browser software facilitates accessing and navigating websites; essential for web developers.,llm
+USKL_d3b47c112b9c,AccessData FTK,AccessData FTK,,,hard,other_hard,ONET,SKL_e8fec5389b74,,,,AccessData FTK is forensic data extraction software used by investigators.,llm
+USKL_20460274bece,Anti-phishing software,Logiciel de lutte contre le phishing,,,hard,programming_languages,ONET,SKL_593ea4ce4f85,,,,Skill involves recognizing and mitigating phishing attempts using anti-phishing software in software development.,llm
+USKL_d18ef90dc927,Anti-spyware software,Logiciel anti-spyware,,,hard,programming_languages,ONET,SKL_e2f2d7257653,,,,Anti-spyware software detects and removes malicious software that tracks users' online activities without consent.,llm
+USKL_e96cc5a6ce9d,Anti-Trojan software,Logiciel anti-Trojan,,,hard,programming_languages,ONET,SKL_18acee333e25,,,,Anti-Trojan software is programming to detect and remove malicious Trojan horse programs from systems.,llm
+USKL_cc080a26d17d,ArcSight Enterprise Threat and Risk Management,ArcSight Gestion des menaces et des risques pour les entreprises,,,hard,it_management,ONET,SKL_cd26be83d432,,,,Skill involves monitoring and analyzing security events to detect threats using ArcSight Enterprise Threat and Risk Management.,llm
+USKL_904f96b965c4,Automated audit trail analysis software,Logiciel automatisé d'analyse des traces d'audit,,,hard,programming_languages,ONET,SKL_78595cd6e627,,,,Skill involves analyzing automated audit trail data using specialized software tools in programming and software development.,llm
+USKL_32d0805133d9,Automated media tracking software,Logiciel automatisé de suivi des médias,,,hard,programming_languages,ONET,SKL_b3c0c7feb57b,,,,Skill involves using automated media tracking software for analytics in programming and software development.,llm
+USKL_a6fa649296d6,Backup and archival software,Logiciel de sauvegarde et d'archivage,,,hard,programming_languages,ONET,SKL_9188a494ee98,,,,Backup and archival software is a tool used in programming and software development for managing data backup and archiving processes.,llm
+USKL_644fc8869b0c,Berkeley Internet Domain Name BIND,Nom de domaine Internet de Berkeley BIND,,,hard,other_hard,ONET,SKL_d94c353cb8ef,,,,"BIND is a software implementation for Domain Name System server functions developed at the University of California, Berkeley.",llm
+USKL_1d996873c353,Border Gateway Protocol BGP,Protocole de passerelle frontalière BGP,,,hard,networks,ONET,SKL_58ea9e8be3bd,,,,BGP is a routing protocol for IP-based communication networks.,llm
+USKL_fd459d3d3c49,Check Point Next Generation Secure Web Gateway,Point de vérification de la prochaine génération Gateway Web sécurisé,,,hard,security,ONET,SKL_570cac8ab8df,,,,Check Point Next Generation Secure Web Gateway is a security solution for web traffic filtering and protection.,llm
+USKL_9447eb041768,Computer forensic software,Logiciel informatique médico-légale,,,hard,security,ONET,SKL_a26c74c5de75,,,,Computer forensic software tools analyze digital evidence for legal purposes using specialized techniques.,llm
+USKL_4f121a9f42c0,Conformance and validation testing software,Logiciel de test de conformité et de validation,,,hard,programming_languages,ONET,SKL_e566a509b88c,,,,Conformance and validation testing software tools automate checking software against specifications for correctness and expected behavior.,llm
+USKL_80d8e5bb0a46,Cryptographic key management software,Logiciel de gestion des clés cryptographiques,,,hard,security,ONET,SKL_a865f0fbf6b3,,,,Skill involves managing cryptographic keys using specialized software in cybersecurity domains.,llm
+USKL_7da6046fa759,Diameter,Diamètre,,,hard,other_hard,ONET,SKL_4babe47d5e86,,,,Diameter is a protocol used for managing communications in networks such as IP and mobile networks.,llm
+USKL_8cfb78e3975d,Domain name system DNS,Système de nom de domaine DNS,,,hard,networks,ONET,SKL_a628fdd2d407,,,,DNS is the protocol managing resolution between domain names and IP addresses in networks.,llm
+USKL_26680442dd5f,eMASS,eMASS,,,hard,other_hard,ONET,SKL_224bcbb71616,,,,eMASS is an enterprise mission assurance system for managing security and compliance in defense projects,llm
+USKL_7e6c2913958a,End-to-end encryption software,Logiciel de cryptage de bout en bout,,,hard,security,ONET,SKL_38b65e5186cc,,,,"End-to-end encryption software secures communication by encrypting data at sender to receiver only, ensuring confidentiality throughout transmission.",llm
+USKL_cb3754ecbd43,Ethereal,Éthéraux,,,hard,other_hard,ONET,SKL_e4b55ce71a98,,,,Ethereal refers to abstruse or intangible concepts in other technical domains.,llm
 USKL_0b7624ee865f,Google Sites,Google Sites,JotSpot,JotSpot,hard,web,LIGHTCAST | ONET,SKL_e496b911f65d | SKL_f1a36a641026,Q623456,https://www.wikidata.org/wiki/Q623456,structured wiki- and Web page-creation tool,structured wiki- and Web page-creation tool,wikidata
-USKL_7f3aea176937,Guidance Software EnCase Forensic,Logiciel d'orientation EnCase Forensique,,,hard,security,ONET,SKL_c8865154c108,,,,,
-USKL_47d6a139ead7,Honeypot,,honeypots | honeypot | Honeypots (Computing),,hard,security,CSO | LIGHTCAST | ONET,SKL_5cb086a2b022 | SKL_5fb03ec89568 | SKL_8bf8c8bfb136,,,,,
-USKL_9dadbbdfb382,HP Fortify,HP Fortifie,,,hard,other_hard,ONET,SKL_adc4c164351a,,,,,
+USKL_7f3aea176937,Guidance Software EnCase Forensic,Logiciel d'orientation EnCase Forensique,,,hard,security,ONET,SKL_c8865154c108,,,,Guidance Software EnCase Forensic is a tool for digital forensics and incident response in cybersecurity.,llm
+USKL_47d6a139ead7,Honeypot,,honeypots | honeypot | Honeypots (Computing),,hard,security,CSO | LIGHTCAST | ONET,SKL_5cb086a2b022 | SKL_5fb03ec89568 | SKL_8bf8c8bfb136,,,,Honeypot is a security measure designed to lure attackers while gathering information about their tactics.,llm
+USKL_9dadbbdfb382,HP Fortify,HP Fortifie,,,hard,other_hard,ONET,SKL_adc4c164351a,,,,HP Fortify is a software application for static application security testing (SAST) in the domain of other technical and general IT.,llm
 USKL_83ceb3aec2db,HP WebInspect,HP WebInspect,,,hard,security,LIGHTCAST | ONET,SKL_8f6e3f1b4fc2 | SKL_f789f6fb97f6,Q2781532,https://www.wikidata.org/wiki/Q2781532,web application security assessment solution,web application security assessment solution,wikidata
-USKL_3ee3423c2484,IBM QRadar (SIEM Software),IBM QRadar (SIEM Logiciel),IBM QRadar SIEM,,hard,security,LIGHTCAST | ONET,SKL_1c425429091a | SKL_c016ba622c39,,,,,
-USKL_cfd6c520426a,IBM Tivoli Access Management TAM,IBM Gestion de l'accès à Tivoli TAM,,,hard,other_hard,ONET,SKL_55faabba6756,,,,,
-USKL_3dbcde30253e,IBM Tivoli Identity Management TIM,IBM Gestion de l'identité Tivoli TIM,,,hard,security,ONET,SKL_ea282c6e9c3b,,,,,
-USKL_120e180807e8,Imperva SecureSphere,L'impératrice SecureSphere,,,hard,security,ONET,SKL_93c79d63d915,,,,,
-USKL_9a1d13366c10,Integrity verification software,Logiciel de vérification de l'intégrité,,,hard,programming_languages,ONET,SKL_a1e5fdf4b4be,,,,,
-USKL_9d2b34af7131,Intrusion detection system IDS,Système de détection des intrusions IDS,,,hard,security,ONET,SKL_18248b37bae9,,,,,
-USKL_99cff6abe609,Intrusion prevention system IPS,Système de prévention des intrusions IPS,,,hard,security,ONET,SKL_9c21df8cf107,,,,,
-USKL_f8944438c495,IpFilter,IpFilter,,,hard,other_hard,ONET,SKL_196d99c5c782,,,,,
-USKL_3e46661736de,IpTables,IpTables,Iptables,,hard,other_hard,LIGHTCAST | ONET,SKL_8ad6bda9ba69 | SKL_bc54984ed665,,,,,
-USKL_36f0fd918637,ISS RealSecure,ISS RealSecure,,,hard,other_hard,ONET,SKL_da1b16f61a00,,,,,
-USKL_6f2465b1c8b6,Juniper Networks NetScreen-Security Manager,Juniper Networks NetScreen-Security Gestionnaire,,,hard,security,ONET,SKL_76fb9a732a6c,,,,,
-USKL_05429ae67675,Keystroke monitoring software,Logiciel de surveillance des touches clés,,,hard,programming_languages,ONET,SKL_ea98dfb38570,,,,,
-USKL_332a0c59572a,Link encryption software,Logiciel de cryptage de liens,,,hard,security,ONET,SKL_b0d494e2e8c1,,,,,
+USKL_3ee3423c2484,IBM QRadar (SIEM Software),IBM QRadar (SIEM Logiciel),IBM QRadar SIEM,,hard,security,LIGHTCAST | ONET,SKL_1c425429091a | SKL_c016ba622c39,,,,IBM QRadar is SIEM software used for security information and event management in cybersecurity domains.,llm
+USKL_cfd6c520426a,IBM Tivoli Access Management TAM,IBM Gestion de l'accès à Tivoli TAM,,,hard,other_hard,ONET,SKL_55faabba6756,,,,IBM Tivoli Access Management TAM is a role in IT security focusing on managing access controls.,llm
+USKL_3dbcde30253e,IBM Tivoli Identity Management TIM,IBM Gestion de l'identité Tivoli TIM,,,hard,security,ONET,SKL_ea282c6e9c3b,,,,IBM Tivoli Identity Management TIM is a security tool for managing identities and access controls.,llm
+USKL_120e180807e8,Imperva SecureSphere,L'impératrice SecureSphere,,,hard,security,ONET,SKL_93c79d63d915,,,,Imperva SecureSphere is a security platform for web application protection and data loss prevention.,llm
+USKL_9a1d13366c10,Integrity verification software,Logiciel de vérification de l'intégrité,,,hard,programming_languages,ONET,SKL_a1e5fdf4b4be,,,,Integrity verification software ensures data consistency and security in software development.,llm
+USKL_9d2b34af7131,Intrusion detection system IDS,Système de détection des intrusions IDS,,,hard,security,ONET,SKL_18248b37bae9,,,,Intrusion detection system IDS is a cybersecurity tool for monitoring network traffic for malicious activities.,llm
+USKL_99cff6abe609,Intrusion prevention system IPS,Système de prévention des intrusions IPS,,,hard,security,ONET,SKL_9c21df8cf107,,,,Intrusion prevention system IPS is a security technology designed to detect and block network intrusions.,llm
+USKL_f8944438c495,IpFilter,IpFilter,,,hard,other_hard,ONET,SKL_196d99c5c782,,,,IpFilter is a tool for controlling network traffic by filtering IP addresses.,llm
+USKL_3e46661736de,IpTables,IpTables,Iptables,,hard,other_hard,LIGHTCAST | ONET,SKL_8ad6bda9ba69 | SKL_bc54984ed665,,,,IpTables is a Linux utility for packet filtering and NAT in network firewalls.,llm
+USKL_36f0fd918637,ISS RealSecure,ISS RealSecure,,,hard,other_hard,ONET,SKL_da1b16f61a00,,,,ISS RealSecure is a security management software used for network monitoring and threat detection.,llm
+USKL_6f2465b1c8b6,Juniper Networks NetScreen-Security Manager,Juniper Networks NetScreen-Security Gestionnaire,,,hard,security,ONET,SKL_76fb9a732a6c,,,,Juniper Networks NetScreen-Security Manager is a role in cybersecurity responsible for managing NetScreen security devices.,llm
+USKL_05429ae67675,Keystroke monitoring software,Logiciel de surveillance des touches clés,,,hard,programming_languages,ONET,SKL_ea98dfb38570,,,,Keystroke monitoring software tracks user input in programming and software development environments.,llm
+USKL_332a0c59572a,Link encryption software,Logiciel de cryptage de liens,,,hard,security,ONET,SKL_b0d494e2e8c1,,,,Link encryption software is used in security to encrypt data transmissions between systems.,llm
 USKL_cfb5fd688af6,McAfee VirusScan,McAfee VirusScan,,,hard,security,LIGHTCAST | ONET,SKL_7225c1fe2f6b | SKL_b9a6b80ca14e,Q1629915,https://www.wikidata.org/wiki/Q1629915,security software,security software,wikidata
-USKL_637d1eea769a,Micro Focus OpenView,Micro-focus OpenView,,,hard,other_hard,ONET,SKL_82c17d216223,,,,,
+USKL_637d1eea769a,Micro Focus OpenView,Micro-focus OpenView,,,hard,other_hard,ONET,SKL_82c17d216223,,,,Micro Focus OpenView is a monitoring and management software for IT infrastructure.,llm
 USKL_c791d855cde7,Active Directory,Active Directory,Microsoft Active Directory | MS AD | MS Active Directory | AD,,hard,systems_infrastructure,LIGHTCAST | ONET,SKL_6ec2031c2760 | SKL_a2a47c674564,Q55692,https://www.wikidata.org/wiki/Q55692,directory service created by Microsoft for Windows domain networks,directory service created by Microsoft for Windows domain networks,wikidata
-USKL_52aef8c83c75,Microsoft Hyper-V Server,Le serveur Hyper-V de Microsoft,,,hard,systems_infrastructure,ONET,SKL_525028e2cfe1,Q4044226,https://www.wikidata.org/wiki/Q4044226,,,
+USKL_52aef8c83c75,Microsoft Hyper-V Server,Le serveur Hyper-V de Microsoft,,,hard,systems_infrastructure,ONET,SKL_525028e2cfe1,Q4044226,https://www.wikidata.org/wiki/Q4044226,,Microsoft Hyper-V Server is a virtualization technology for running Windows-based virtual machines on physical servers.,llm
 USKL_dc216cb6b654,MITRE ATT&CK software,Le logiciel MITRE ATT&CK,,,hard,programming_languages,ONET,SKL_e026c0afa5c4,,,,,
 USKL_47bfa138a50f,Network and system vulnerability assessment software,Logiciel d'évaluation des vulnérabilités des réseaux et des systèmes,,,hard,security,ONET,SKL_8ed5ab5382e5,,,,,
 USKL_3e77907c61ae,Network directory services software,Logiciel de services de répertoire réseau,,,hard,networks,ONET,SKL_a455581f73e1,,,,,
