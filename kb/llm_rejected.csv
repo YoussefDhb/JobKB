@@ -67,3 +67,4 @@ desc,USKL_6f2465b1c8b6,Juniper Networks NetScreen-Security Manager,Skill involve
 desc,USKL_f0037093dd5e,Network security auditing software,Skill involves using specialized software to audit and assess network security measures for vulnerabilities.,nli_off_topic,0.473
 desc,USKL_62264675529f,Palo Alto Networks Next-Generation Security Platform,Skill involves configuring and managing Palo Alto Networks security appliances for network protection.,nli_off_topic,0.02
 desc,USKL_080866863819,Portswigger BurP Suite,skill: automated web application security testing using Burp Suite,nli_off_topic,0.254
+desc,USKL_36bccb1ad38e,Object oriented development environment software,Skill involves using tools and environments for object-oriented programming and software development.,nli_off_topic,0.195
