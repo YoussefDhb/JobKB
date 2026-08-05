@@ -31,6 +31,8 @@ class LinkState(TypedDict, total=False):
     excluded: list         # labels rejected in earlier passes (never re-proposed)
     verified: list         # [(skill_id, cosine)] that cleared BOTH cosine and NLI
     reflect: int
+    _ovec: object          # occupation embedding vector — a declared channel so it PERSISTS across the
+    _shortlist_ids: dict   # reflect->propose loop (undeclared keys are dropped by LangGraph -> KeyError)
 
 
 class ControllerState(TypedDict, total=False):

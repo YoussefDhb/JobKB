@@ -17,6 +17,7 @@ re-derives from the snapshot with no double counting.
 from __future__ import annotations
 
 import csv
+import datetime as _dt
 import glob
 import os
 import re
@@ -28,10 +29,18 @@ from .base import ExtractionSource
 from . import evidence
 from .emerging_roles import EMERGING_ROLES
 
-_SEP = re.compile(r"\s+[-–—|/]\s+|\s+(?:chez|at|@)\s+", re.I)   # role | company/location boundary
+_SEP = re.compile(r"\s*[,|]\s*|\s+[-–—/]\s+|\s+(?:chez|at|@)\s+", re.I)  # role / company / team boundary
 _PAREN = re.compile(r"\([^)]*\)")
 _GENDER = re.compile(r"\b[hfmw]\s*/\s*[hfmw]\b", re.I)          # H/F, F/H, M/W, …
+# Occupational head nouns: a scraped title is only *minted* as an occupation if it ends in one of these
+# (drops generic "manager"/"lead" and prose), and the title is truncated to the head to collapse the
+# team-suffixed ATS variants ("ML Engineer, Relevance & Personalization" -> "machine learning engineer").
+_ROLE_HEAD = re.compile(r"\b(engineer|developer|scientist|analyst|architect|administrator|programmer|"
+                        r"technician|specialist|designer|researcher|sre|devops|dba|"
+                        r"ing[eé]nieur|d[eé]veloppeur|analyste|architecte|technicien|concepteur)\b", re.I)
 _TOKEN = re.compile(r"[A-Za-z0-9][A-Za-z0-9+.#-]*")
+# A well-formed skill span (starts with a letter) — rejects WordPiece fragments ("##al", "#x") the NER emits.
+_CLEAN_SPAN = re.compile(r"^[A-Za-z][A-Za-z0-9+.#/&' -]*$")
 
 # Single-token skill matches on free prose are unsafe (DJINNI's lesson: "react"/"application"/"go" are
 # ambiguous). A 1-gram is accepted only if it is a concrete-tech skill AND not in this denylist; multi-word
@@ -43,26 +52,68 @@ _TEXT_DENY = frozenset(C.DJINNI_TEXT_DENY) | {
 
 
 def _clean_title(raw: str) -> str:
-    """Fold a raw posting title to a bare role phrase: drop parentheticals, gender/contract markers,
-    and the company/location tail, then strip seniority/marketing stopwords (accents preserved)."""
-    t = _PAREN.sub(" ", raw or "")
-    t = _GENDER.sub(" ", t)
-    # Keep the first segment that still holds a real role after stopword removal (skips a leading
-    # "Alternance - …" / "CDI - …" contract prefix; ignores the trailing company/city segment).
+    """Fold a raw posting title to a bare role phrase: drop parentheticals, gender/contract markers, and
+    the company/team tail (after a comma/pipe/dash), strip seniority stopwords, and truncate to the ≤N
+    words ending at the occupational head noun so team-suffixed ATS variants collapse to the core role."""
+    t = _GENDER.sub(" ", _PAREN.sub(" ", raw or ""))
     for seg in _SEP.split(t):
-        words = []
-        for w in seg.split():
-            w = w.strip(" \t,.;:·•!?\"'()[]{}")
-            if w and K.normalize_label(w) not in C.SCRAPER_TITLE_STOPWORDS:
-                words.append(w)
-        if words:
-            return " ".join(words).strip()
+        words = [w.strip(" \t,.;:·•!?\"'()[]{}") for w in seg.split()]
+        words = [w for w in words if w and K.normalize_label(w) not in C.SCRAPER_TITLE_STOPWORDS]
+        if not words:
+            continue
+        phrase = " ".join(words)
+        m = _ROLE_HEAD.search(phrase)
+        if m:                                   # keep the ≤N words ending at the role head
+            return " ".join(phrase[:m.end()].split()[-C.SCRAPER_TITLE_MAX_WORDS:])
+        return " ".join(words[:C.SCRAPER_TITLE_MAX_WORDS])
     return ""
 
 
 def _ngrams(tokens, n):
     for i in range(len(tokens) - n + 1):
         yield i, " ".join(tokens[i:i + n])
+
+
+# Generic / employment tags that arrive in the `tags[]` arrays but are not skills.
+_TAG_STOP = {K.normalize_label(x) for x in (list(C.SCRAPER_TITLE_STOPWORDS) + [
+    "remote", "hybrid", "onsite", "full time", "part time", "contract", "internship", "entry level",
+    "mid level", "senior level", "freelance", "startup", "english", "worldwide", "anywhere", "usa",
+    "uk", "europe", "b2b", "saas", "fintech", "featured", "visa", "relocation", "equity", "salary",
+    "benefits", "engineering", "design", "marketing", "sales", "finance", "hr", "recruiting",
+    # role words are occupations, not skills; plus generic job-board tag noise
+    "engineer", "developer", "dev", "analyst", "architect", "scientist", "designer", "manager",
+    "chat", "digital nomad", "marketplace", "technical", "research", "documentation", "prototyping",
+    "people management", "engineering management", "business", "product", "commercial", "ops",
+    "non tech", "growth", "operations", "support", "consulting", "education", "medical", "legal",
+])}
+
+
+def _parse_date(s):
+    """Parse an ISO-8601 or RFC-822 (RSS) date string to an aware datetime, or None."""
+    s = (s or "").strip()
+    if not s:
+        return None
+    if "," in s and re.search(r"[A-Za-z]{3}", s):          # RFC-822: "Wed, 22 Jul 2026 07:00:51 +0000"
+        try:
+            from email.utils import parsedate_to_datetime
+            return parsedate_to_datetime(s)
+        except (TypeError, ValueError, IndexError):
+            pass
+    try:
+        return _dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def _recency_weight(posted_at):
+    """Exponential recency decay so `demand` tracks the current market (missing date -> 1.0)."""
+    dt = _parse_date(posted_at)
+    if not dt:
+        return 1.0
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=_dt.timezone.utc)
+    age = max(0.0, (_dt.datetime.now(_dt.timezone.utc) - dt).total_seconds() / 86400.0)
+    return 0.5 ** (age / C.SCRAPER_RECENCY_HALFLIFE_DAYS)
 
 
 class ScraperSource(ExtractionSource):
@@ -114,15 +165,27 @@ class ScraperSource(ExtractionSource):
                     continue            # concrete tech only — generic/soft ESCO verb-phrases are prose noise
                 if n == 1 and (gram in _TEXT_DENY or mk in _TEXT_DENY):
                     continue            # ambiguous bare token (also catches plurals: "makes" -> "make")
-                skills.append({"key": mk, "label": gram, "existing_id": sid})
+                skills.append({"key": mk, "label": gram, "existing_id": sid, "src": "dict"})
                 covered.update(range(i, i + n))
-        for span in self._neural_spans(text):                 # optional novel spans (best-effort)
+        for span in self._neural_spans(text):                 # NER strengthens demand to EXISTING skills
             mk = evidence.match_key(span)
             if not mk:
                 continue
             hit = skill_index.get(mk)
             skills.append({"key": mk, "label": span.strip().lower(),
-                           "existing_id": hit[0] if hit else None})
+                           "existing_id": hit[0] if hit else None, "src": "ner"})
+        # Pre-extracted skill tags (Remotive/RemoteOK/The Muse/GitHub): curated keywords, not prose, so
+        # they bypass the concrete-subtype/denylist prose guards — the highest-precision skill signal.
+        for tag in (doc.get("tags") or "").split("|"):
+            tag = tag.strip()
+            if not tag or K.normalize_label(tag) in _TAG_STOP:
+                continue
+            mk = evidence.match_key(tag)
+            if not mk:
+                continue
+            hit = skill_index.get(mk)
+            skills.append({"key": mk, "label": tag.lower(), "existing_id": hit[0] if hit else None,
+                           "src": "tag"})     # curated -> the only source allowed to MINT a novel skill
         return {"occupation": occ, "skills": skills}
 
     # --- corpus-level ingest (frequency + gate + resolve-to-existing + mint) ------------
@@ -132,12 +195,15 @@ class ScraperSource(ExtractionSource):
         title_freq, title_label, title_existing = Counter(), {}, {}
         title_skilled = set()                                  # titles whose postings mention IT skills
         tok_freq, tok_label, tok_existing = Counter(), {}, {}
-        pair = defaultdict(int)                                # (title_key, skill_key) -> co-occurrence
+        tok_taggable = set()                                   # skills seen from a curated `tags[]` source
+        pair = defaultdict(int)                                # (title_key, skill_key) -> posting count
+        pair_wt = defaultdict(float)                           # ... -> recency-weighted demand
         for doc in docs:
             res = self.extract(doc)
             occ = res.get("occupation")
             okey = occ["key"] if occ else None
             skills_here = res.get("skills", [])
+            w = _recency_weight(doc.get("posted_at"))          # recent postings weigh more
             if occ:
                 title_freq[okey] += 1
                 title_label.setdefault(okey, (occ["label"], occ["lang"]))
@@ -155,22 +221,37 @@ class ScraperSource(ExtractionSource):
                 tok_label.setdefault(skey, s["label"])
                 if s["existing_id"]:
                     tok_existing[skey] = s["existing_id"]
+                if s.get("src") == "tag":
+                    tok_taggable.add(skey)
                 if okey:
                     pair[(okey, skey)] += 1
+                    pair_wt[(okey, skey)] += w
 
         # Mint genuinely-new occupations (recurring, unresolved) and novel skills (recurring, unmatched).
         # Mint a new occupation only if the title recurs, is genuinely new, AND its postings mention IT
         # skills — the strongest noise filter for scraped titles (a non-IT job's postings have no IT tools).
         occ_recs, occ_sid = [], {}
         for key, freq in title_freq.items():
-            if freq >= C.SCRAPER_MIN_OCC_FREQ and key not in title_existing and key in title_skilled:
-                label, lang = title_label[key]
+            label, lang = title_label[key]
+            # Mint only a genuine emerging role: recurs, unresolved, IT-skilled, ends in an occupational
+            # head noun, and >=2 words (a bare "engineer"/"developer" is too generic to be an occupation).
+            if (freq >= C.SCRAPER_MIN_OCC_FREQ and key not in title_existing and key in title_skilled
+                    and _ROLE_HEAD.search(label) and len(label.split()) >= 2):
                 sid = K.normalize_label(label).replace(" ", "_")[:60]
                 occ_sid[key] = sid
-                occ_recs.append({"source_id": sid, "lang": lang, "label": label})
+                # A truthful description from the role's most-demanded skills — gives the ISCO `attach`
+                # NLI real signal (scraped titles otherwise have no definition, forcing low-confidence).
+                top = sorted((sk for (o, sk) in pair if o == key),
+                             key=lambda sk: pair[(key, sk)], reverse=True)[:8]
+                skills_txt = ", ".join(tok_label[sk] for sk in top)
+                desc = (f"An information-technology role ({label}); job postings for it commonly require "
+                        f"{skills_txt}." if skills_txt else "")
+                occ_recs.append({"source_id": sid, "lang": lang, "label": label, "desc": desc})
+        # Mint a novel skill only from a curated `tags[]`/GitHub-topic source (clean emerging-tech signal);
+        # NER/dictionary matches on free prose only strengthen demand to EXISTING skills, never mint.
         skill_recs, skill_sid = [], {}
         for key, freq in tok_freq.items():
-            if freq >= C.SCRAPER_MIN_SKILL_FREQ and key not in tok_existing:
+            if freq >= C.SCRAPER_MIN_SKILL_FREQ and key not in tok_existing and key in tok_taggable:
                 label = tok_label[key]
                 sid = K.normalize_label(label).replace(" ", "_")[:60] or key.replace(" ", "_")
                 skill_sid[key] = sid
@@ -180,7 +261,8 @@ class ScraperSource(ExtractionSource):
         for rec in occ_recs:
             en = rec["label"] if rec["lang"] == "en" else ""
             fr = rec["label"] if rec["lang"] == "fr" else ""
-            row, labels = self._occ_row({"source_id": rec["source_id"], "label_en": en, "label_fr": fr})
+            row, labels = self._occ_row({"source_id": rec["source_id"], "label_en": en, "label_fr": fr,
+                                         "desc_en": rec.get("desc", "")})   # skills-derived def -> better attach
             occ_rows.append(row)
             label_rows.extend(labels)
         for rec in skill_recs:
@@ -220,13 +302,17 @@ class ScraperSource(ExtractionSource):
             eid = K.mint_id("SKL_", self.name, skill_sid[key]) if key in skill_sid else None
             return eid if eid in kept_skill else None
 
-        agg = defaultdict(int)
+        # Keep an edge if the (occ, skill) pair recurs >= the floor (posting count); weight it by the
+        # recency-decayed sum so the graph reflects *current* demand.
+        agg_cnt, agg_wt = defaultdict(int), defaultdict(float)
         for (okey, skey), c in pair.items():
             oid, sid = occ_endpoint(okey), skill_endpoint(skey)
             if oid and sid:
-                agg[(oid, sid)] += c
-        rel_rows = [evidence.relation_row(o, s, self.name, weight=w, relation_type="demand")
-                    for (o, s), w in agg.items() if w >= C.SCRAPER_MIN_DEMAND_FREQ]
+                agg_cnt[(oid, sid)] += c
+                agg_wt[(oid, sid)] += pair_wt[(okey, skey)]
+        rel_rows = [evidence.relation_row(o, s, self.name, weight=round(agg_wt[(o, s)], 1),
+                                          relation_type="demand")
+                    for (o, s), c in agg_cnt.items() if c >= C.SCRAPER_MIN_DEMAND_FREQ]
         evidence.write_relations(self.name, rel_rows)
 
         gate_note = ""
@@ -300,8 +386,15 @@ class ScraperSource(ExtractionSource):
             self._nlp = nlp
         if not nlp:
             return []
-        try:
-            spans = [e.get("word", "").strip() for e in nlp(text[:2000]) if e.get("word")]
-            return [s for s in spans if 2 <= len(s) <= 40]
+        try:                                        # keep typed skill spans; drop O/BUS + WordPiece junk
+            keep = {"TECHNOLOGY", "TECHNICAL", "SOFT", "SKILL", "KNOWLEDGE"}
+            out = []
+            for e in nlp(text[:2000]):
+                if e.get("entity_group") not in keep and e.get("entity_group") != "B":
+                    continue
+                w = (e.get("word") or "").strip()
+                if 2 <= len(w) <= 40 and _CLEAN_SPAN.match(w):   # drops "##al"/"#x" subword fragments
+                    out.append(w)
+            return out
         except Exception:  # noqa: BLE001
             return []

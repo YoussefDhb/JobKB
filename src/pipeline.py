@@ -261,6 +261,9 @@ def _enrich_agent(source=None):
         print(f"[agent] langgraph unavailable ({e}); falling back to one-shot llm.run().", flush=True)
         from . import llm
         llm.run()
+    except Exception as e:  # noqa: BLE001 — a worker error must never abort the build's enrichment
+        print(f"[agent] agentic enrichment error ({type(e).__name__}: {e}); skipping (fail-open).",
+              flush=True)
 
 
 def _enrich_translate(source=None):

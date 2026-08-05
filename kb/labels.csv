@@ -29706,3 +29706,252 @@ SKL_587bf6d883a3,skill,being open minded,being open minded,alt,en,ESCO
 SKL_587bf6d883a3,skill,show acceptance of others,show acceptance of others,alt,en,ESCO
 SKL_587bf6d883a3,skill,demonstrate freedom from prejudice,demonstrate freedom from prejudice,alt,en,ESCO
 SKL_587bf6d883a3,skill,take on new ideas and experiences,take on new ideas and experiences,alt,en,ESCO
+OCC_3353388b0422,occupation,ai engineer,ai engineer,preferred,en,SCRAPER
+OCC_716682c4e8c8,occupation,android engineer,android engineer,preferred,en,SCRAPER
+OCC_82b2f25837b0,occupation,ai/ml researcher,ai/ml researcher,preferred,en,SCRAPER
+OCC_f8050b7c9f33,occupation,frontend engineer,frontend engineer,preferred,en,SCRAPER
+OCC_6aaf14b6ff9b,occupation,ios engineer,ios engineer,preferred,en,SCRAPER
+OCC_505aba760b42,occupation,customer success architect,customer success architect,preferred,en,SCRAPER
+OCC_d9db376656b8,occupation,customer success engineer,customer success engineer,preferred,en,SCRAPER
+OCC_284b749b0d99,occupation,forward deployed engineer,forward deployed engineer,preferred,en,SCRAPER
+OCC_9b92326c26b7,occupation,it automation engineer,it automation engineer,preferred,en,SCRAPER
+OCC_1be7bf8af937,occupation,cloud partner solutions architect,cloud partner solutions architect,preferred,en,SCRAPER
+OCC_c332cf36fd94,occupation,delivery solutions architect,delivery solutions architect,preferred,en,SCRAPER
+OCC_c1afb3de5b9d,occupation,customer engineer,customer engineer,preferred,en,SCRAPER
+OCC_f7bda27da371,occupation,distributed systems engineer,distributed systems engineer,preferred,en,SCRAPER
+OCC_136257b3349d,occupation,enterprise customer engineer,enterprise customer engineer,preferred,en,SCRAPER
+OCC_0f8a7c726587,occupation,network reliability engineer,network reliability engineer,preferred,en,SCRAPER
+OCC_506c600c6f0d,occupation,partner solutions architect,partner solutions architect,preferred,en,SCRAPER
+OCC_46d111fa047c,occupation,pre-sales customer engineer,pre-sales customer engineer,preferred,en,SCRAPER
+OCC_a065810f5831,occupation,presales customer engineer,presales customer engineer,preferred,en,SCRAPER
+OCC_3e8326b62890,occupation,quality engineer,quality engineer,preferred,en,SCRAPER
+OCC_86b0dffd8550,occupation,security engineer,security engineer,preferred,en,SCRAPER
+OCC_95d6d7cbaf1f,occupation,ai research engineer,ai research engineer,preferred,en,SCRAPER
+OCC_7d1afea0dea2,occupation,ai research scientist,ai research scientist,preferred,en,SCRAPER
+OCC_96ef3565dbd8,occupation,commercial sales engineer,commercial sales engineer,preferred,en,SCRAPER
+OCC_6893ea83766b,occupation,enterprise sales engineer,enterprise sales engineer,preferred,en,SCRAPER
+OCC_bb554dd76242,occupation,machine learning systems engineer,machine learning systems engineer,preferred,en,SCRAPER
+OCC_129f18c28fa0,occupation,business engineer,business engineer,preferred,en,SCRAPER
+OCC_b6328d58eb18,occupation,frontend software engineer,frontend software engineer,preferred,en,SCRAPER
+OCC_29b48c1fdd23,occupation,enterprise context architect,enterprise context architect,preferred,en,SCRAPER
+OCC_4a39e7e17617,occupation,infrastructure software engineer,infrastructure software engineer,preferred,en,SCRAPER
+OCC_4944bcf3d613,occupation,platform engineer,platform engineer,preferred,en,SCRAPER
+OCC_2b0d42e0df1f,occupation,mobile engineer,mobile engineer,preferred,en,SCRAPER
+OCC_37c43503eb66,occupation,research engineer,research engineer,preferred,en,SCRAPER
+OCC_c36ceadcf302,occupation,founding software engineer,founding software engineer,preferred,en,SCRAPER
+OCC_c9c168e70d63,occupation,customer solutions engineer,customer solutions engineer,preferred,en,SCRAPER
+OCC_5ef21a00a920,occupation,ml engineer,ml engineer,preferred,en,SCRAPER
+OCC_83b8b310db30,occupation,electrical engineer,electrical engineer,preferred,en,SCRAPER
+OCC_fd8d92a9cc16,occupation,partner solutions engineer,partner solutions engineer,preferred,en,SCRAPER
+OCC_bed12481894b,occupation,online data analyst,online data analyst,preferred,en,SCRAPER
+OCC_e1832db9c944,occupation,security software engineer,security software engineer,preferred,en,SCRAPER
+OCC_c7ae924e4e2e,occupation,security operations engineer,security operations engineer,preferred,en,SCRAPER
+OCC_4167f37e1807,occupation,cyber defense analyst,cyber defense analyst,preferred,en,SCRAPER
+OCC_10feaa508f6d,occupation,qa engineer,qa engineer,preferred,en,SCRAPER
+OCC_45a43435bd14,occupation,technical support specialist,technical support specialist,preferred,en,SCRAPER
+OCC_1de45fc27753,occupation,customer support engineer,customer support engineer,preferred,en,SCRAPER
+OCC_18a4f9a64f7f,occupation,sales engineer,sales engineer,preferred,en,SCRAPER
+OCC_64ba2a6658c7,occupation,independent software developer,independent software developer,preferred,en,SCRAPER
+OCC_0166aca1d76e,occupation,independent ai engineer,independent ai engineer,preferred,en,SCRAPER
+OCC_7f2046840595,occupation,asic design verification engineer,asic design verification engineer,preferred,en,SCRAPER
+OCC_e4ff5b7e9e1a,occupation,sr software engineer,sr software engineer,preferred,en,SCRAPER
+OCC_a275cd33063e,occupation,design verification engineer,design verification engineer,preferred,en,SCRAPER
+OCC_1f7025aa6d72,occupation,sr it systems administrator,sr it systems administrator,preferred,en,SCRAPER
+OCC_3f0481d87107,occupation,ai product engineer,ai product engineer,preferred,en,SCRAPER
+SKL_0150a742f2dc,skill,financial infrastructure,financial infrastructure,preferred,en,SCRAPER
+SKL_f42593e5fc8c,skill,gdp,gdp,preferred,en,SCRAPER
+SKL_43feafa9043b,skill,financial reporting,financial reporting,preferred,en,SCRAPER
+SKL_9ea8f7e33327,skill,ai,ai,preferred,en,SCRAPER
+SKL_35be1732e9bf,skill,data products,data products,preferred,en,SCRAPER
+SKL_c34c4cfebb0b,skill,methodology,methodology,preferred,en,SCRAPER
+SKL_0a4c2001fa99,skill,strategy,strategy,preferred,en,SCRAPER
+SKL_470f0b2fe745,skill,ops,ops,preferred,en,SCRAPER
+SKL_3f92174abdde,skill,forecasting,forecasting,preferred,en,SCRAPER
+SKL_d841a4553898,skill,use cases,use cases,preferred,en,SCRAPER
+SKL_a30322636995,skill,reporting,reporting,preferred,en,SCRAPER
+SKL_4be4a0477f1f,skill,kernel,kernel,preferred,en,SCRAPER
+SKL_bf9c6584e21a,skill,hardware,hardware,preferred,en,SCRAPER
+SKL_c081277130de,skill,security,security,preferred,en,SCRAPER
+SKL_6c201365421c,skill,streams,streams,preferred,en,SCRAPER
+SKL_bb07d0ebd449,skill,performance management,performance management,preferred,en,SCRAPER
+SKL_08e99efffed2,skill,ci,ci,preferred,en,SCRAPER
+SKL_b497486266fd,skill,cd,cd,preferred,en,SCRAPER
+SKL_ea80bebe1bcf,skill,sdks,sdks,preferred,en,SCRAPER
+SKL_b2fa22f7d3ee,skill,management,management,preferred,en,SCRAPER
+SKL_f255326e191c,skill,risk engineering,risk engineering,preferred,en,SCRAPER
+SKL_c9349d5389be,skill,analytics,analytics,preferred,en,SCRAPER
+SKL_7ffbd3860e1f,skill,critical systems,critical systems,preferred,en,SCRAPER
+SKL_0287555e8d22,skill,programming languages,programming languages,preferred,en,SCRAPER
+SKL_ceb56294fd8d,skill,documentation,documentation,preferred,en,SCRAPER
+SKL_6dad5a69e819,skill,cli,cli,preferred,en,SCRAPER
+SKL_b39d81e6edcd,skill,distributed systems,distributed systems,preferred,en,SCRAPER
+SKL_52cbfb44f88a,skill,telemetry,telemetry,preferred,en,SCRAPER
+SKL_a20fea8074cb,skill,learning,learning,preferred,en,SCRAPER
+SKL_6f018c2be13d,skill,forefront,forefront,preferred,en,SCRAPER
+SKL_d6e050320342,skill,business requirements,business requirements,preferred,en,SCRAPER
+SKL_b3c70b32fbd2,skill,data ingestion,data ingestion,preferred,en,SCRAPER
+SKL_26fee4a0ef7a,skill,dashboards,dashboards,preferred,en,SCRAPER
+SKL_6b4b0d21ab00,skill,data,data,preferred,en,SCRAPER
+SKL_fc12818a12b5,skill,specifications,specifications,preferred,en,SCRAPER
+SKL_3bd366b4a870,skill,strategic,strategic,preferred,en,SCRAPER
+SKL_699849942f76,skill,provisioning,provisioning,preferred,en,SCRAPER
+SKL_0b83d5e5ec94,skill,engineering,engineering,preferred,en,SCRAPER
+SKL_24ec44ef1542,skill,statistical,statistical,preferred,en,SCRAPER
+SKL_842140c14f1d,skill,modeling,modeling,preferred,en,SCRAPER
+SKL_3429ac310237,skill,optimization,optimization,preferred,en,SCRAPER
+SKL_2056d89349c8,skill,bespoke,bespoke,preferred,en,SCRAPER
+SKL_b98cdae9a98e,skill,pipelines,pipelines,preferred,en,SCRAPER
+SKL_bd984f694205,skill,integration,integration,preferred,en,SCRAPER
+SKL_bb37483a71dd,skill,solutions,solutions,preferred,en,SCRAPER
+SKL_1614cd578bbf,skill,work effectively,work effectively,preferred,en,SCRAPER
+SKL_573f102cbe47,skill,san,san,preferred,en,SCRAPER
+SKL_11979c43aa25,skill,economics,economics,preferred,en,SCRAPER
+SKL_564ba98bd12c,skill,clarity,clarity,preferred,en,SCRAPER
+SKL_945e8be3b950,skill,information,information,preferred,en,SCRAPER
+SKL_52a77f58471e,skill,quality,quality,preferred,en,SCRAPER
+SKL_04b57cf33c9a,skill,systems,systems,preferred,en,SCRAPER
+SKL_ce749c12dd7a,skill,routing,routing,preferred,en,SCRAPER
+SKL_59b24568fbbb,skill,high availability,high availability,preferred,en,SCRAPER
+SKL_458a3d34e978,skill,technical understanding,technical understanding,preferred,en,SCRAPER
+SKL_9900e9438bde,skill,data solutions,data solutions,preferred,en,SCRAPER
+SKL_1735a735bb2f,skill,social,social,preferred,en,SCRAPER
+SKL_c5afe0835f73,skill,generative,generative,preferred,en,SCRAPER
+SKL_c0e1c95ed802,skill,reinforcement,reinforcement,preferred,en,SCRAPER
+SKL_6310ca11f47f,skill,personalization,personalization,preferred,en,SCRAPER
+SKL_e8f99dc612ee,skill,uncertainty,uncertainty,preferred,en,SCRAPER
+SKL_3b86b0870223,skill,business systems,business systems,preferred,en,SCRAPER
+SKL_830f956f4593,skill,modernization,modernization,preferred,en,SCRAPER
+SKL_a7d568ce115f,skill,quality engineering,quality engineering,preferred,en,SCRAPER
+SKL_14753fe10033,skill,interfaces,interfaces,preferred,en,SCRAPER
+SKL_e4e8a202a7ba,skill,##ic,##ic,preferred,en,SCRAPER
+SKL_2c56a60e6d05,skill,product engineering,product engineering,preferred,en,SCRAPER
+SKL_23929ad16f52,skill,complex systems,complex systems,preferred,en,SCRAPER
+SKL_5255f8c884d2,skill,chat,chat,preferred,en,SCRAPER
+SKL_3a198d2801d1,skill,feature,feature,preferred,en,SCRAPER
+SKL_61bcae0cefd5,skill,infrastructure,infrastructure,preferred,en,SCRAPER
+SKL_228697d6ff9a,skill,instrumentation,instrumentation,preferred,en,SCRAPER
+SKL_f41c4dd41839,skill,operational efficiency,operational efficiency,preferred,en,SCRAPER
+SKL_269ecb479017,skill,development,development,preferred,en,SCRAPER
+SKL_bdd6715f85de,skill,core,core,preferred,en,SCRAPER
+SKL_3cb7960e6d18,skill,prototyping,prototyping,preferred,en,SCRAPER
+SKL_c5575fc1812f,skill,feed,feed,preferred,en,SCRAPER
+SKL_0dfb7758c0a1,skill,ip,ip,preferred,en,SCRAPER
+SKL_f8b301f34e15,skill,enablement,enablement,preferred,en,SCRAPER
+SKL_522278b51240,skill,enterprise,enterprise,preferred,en,SCRAPER
+SKL_f1b27da9a50d,skill,strategic vision,strategic vision,preferred,en,SCRAPER
+SKL_b0019a6aa05b,skill,remediation,remediation,preferred,en,SCRAPER
+SKL_1209433e7541,skill,cost efficiency,cost efficiency,preferred,en,SCRAPER
+SKL_82613609d586,skill,replication,replication,preferred,en,SCRAPER
+SKL_a9ec83750ea4,skill,technical standards,technical standards,preferred,en,SCRAPER
+SKL_b973ed08e96c,skill,enterprise applications,enterprise applications,preferred,en,SCRAPER
+SKL_3e4baa4677b9,skill,programming,programming,preferred,en,SCRAPER
+SKL_6f578f035460,skill,readiness,readiness,preferred,en,SCRAPER
+SKL_ae76c0ee5b44,skill,continuous,continuous,preferred,en,SCRAPER
+SKL_955f6f063c86,skill,technical,technical,preferred,en,SCRAPER
+SKL_cec23a44d378,skill,production systems,production systems,preferred,en,SCRAPER
+SKL_6076edaa86f5,skill,process,process,preferred,en,SCRAPER
+SKL_7c1a0d829731,skill,it operations,it operations,preferred,en,SCRAPER
+SKL_e4f2fc62f301,skill,##m,##m,preferred,en,SCRAPER
+SKL_d118b5b8a164,skill,##al,##al,preferred,en,SCRAPER
+SKL_0ab1aa66fb28,skill,##es,##es,preferred,en,SCRAPER
+SKL_f4dad4709b48,skill,and,and,preferred,en,SCRAPER
+SKL_366f9f2993f3,skill,commercial,commercial,preferred,en,SCRAPER
+SKL_fcf2ba717632,skill,schemas,schemas,preferred,en,SCRAPER
+SKL_669f370bcc02,skill,attribution,attribution,preferred,en,SCRAPER
+SKL_e8b2beb46132,skill,web,web,preferred,en,SCRAPER
+SKL_e64b68d4c642,skill,technical design,technical design,preferred,en,SCRAPER
+SKL_70413be43def,skill,coding standards,coding standards,preferred,en,SCRAPER
+SKL_9d84cf85e3c9,skill,escalation,escalation,preferred,en,SCRAPER
+SKL_cbd20dc49570,skill,technical vision,technical vision,preferred,en,SCRAPER
+SKL_aeb3abeb7db7,skill,prediction,prediction,preferred,en,SCRAPER
+SKL_8dac3f81cc25,skill,market data,market data,preferred,en,SCRAPER
+SKL_7655a4d7a0ab,skill,fraud detection,fraud detection,preferred,en,SCRAPER
+SKL_98f9a8690874,skill,model,model,preferred,en,SCRAPER
+SKL_1ead1fe8a7e6,skill,critical infrastructure,critical infrastructure,preferred,en,SCRAPER
+SKL_2eac3e5192d3,skill,cluster management,cluster management,preferred,en,SCRAPER
+SKL_406a4aa99c46,skill,product,product,preferred,en,SCRAPER
+SKL_218005c08ab0,skill,gcp,gcp,preferred,en,SCRAPER
+SKL_bd8ed3aa574e,skill,resiliency,resiliency,preferred,en,SCRAPER
+SKL_42f8748c17d5,skill,services,services,preferred,en,SCRAPER
+SKL_257b163c22f5,skill,responsiveness,responsiveness,preferred,en,SCRAPER
+SKL_d0acf0288d3c,skill,management systems,management systems,preferred,en,SCRAPER
+SKL_3ef709aa5114,skill,research,research,preferred,en,SCRAPER
+SKL_44e61cedfaa3,skill,specs,specs,preferred,en,SCRAPER
+SKL_546d6b2e8355,skill,data intelligence,data intelligence,preferred,en,SCRAPER
+SKL_be3d5535c62b,skill,automotive,automotive,preferred,en,SCRAPER
+SKL_8e28d50fadd0,skill,cluster,cluster,preferred,en,SCRAPER
+SKL_bfb1bcefd36d,skill,web traffic,web traffic,preferred,en,SCRAPER
+SKL_51d23216dc01,skill,network,network,preferred,en,SCRAPER
+SKL_796e031537e5,skill,software solutions,software solutions,preferred,en,SCRAPER
+SKL_adc4c1b175e1,skill,financial technology,financial technology,preferred,en,SCRAPER
+SKL_0888de905727,skill,hit,hit,preferred,en,SCRAPER
+SKL_c26daaa56631,skill,deep,deep,preferred,en,SCRAPER
+SKL_962b514f5263,skill,##s,##s,preferred,en,SCRAPER
+SKL_124df2d91141,skill,usability,usability,preferred,en,SCRAPER
+SKL_3659eace5e57,skill,incident,incident,preferred,en,SCRAPER
+SKL_5df0f4c54a28,skill,customer data,customer data,preferred,en,SCRAPER
+SKL_d898983ba469,skill,access management,access management,preferred,en,SCRAPER
+SKL_f7779502556c,skill,investigation,investigation,preferred,en,SCRAPER
+SKL_96801da6d339,skill,dynamics,dynamics,preferred,en,SCRAPER
+SKL_322ba0137bb2,skill,proposition,proposition,preferred,en,SCRAPER
+SKL_dc9407009ec4,skill,technical presentations,technical presentations,preferred,en,SCRAPER
+SKL_3203e0a53ac6,skill,map,map,preferred,en,SCRAPER
+SKL_dfcd24e85d13,skill,demos,demos,preferred,en,SCRAPER
+SKL_4ae80226aaed,skill,english,english,preferred,en,SCRAPER
+SKL_f404e665b058,skill,thought,thought,preferred,en,SCRAPER
+SKL_73a8e6651ff1,skill,administration,administration,preferred,en,SCRAPER
+SKL_3f2f8426ffa7,skill,helping people,helping people,preferred,en,SCRAPER
+SKL_1073f92a21d9,skill,oral communication,oral communication,preferred,en,SCRAPER
+SKL_e4f8aad606b2,skill,##dit,##dit,preferred,en,SCRAPER
+SKL_f6719ab1baa9,skill,career development,career development,preferred,en,SCRAPER
+SKL_9162091fb8bf,skill,quality control,quality control,preferred,en,SCRAPER
+SKL_465bdd8b0085,skill,computing,computing,preferred,en,SCRAPER
+SKL_dea0dda48446,skill,team,team,preferred,en,SCRAPER
+SKL_f94bd5326b17,skill,critical,critical,preferred,en,SCRAPER
+SKL_9898acce51c5,skill,gaming,gaming,preferred,en,SCRAPER
+SKL_82e238e11335,skill,identity and,identity and,preferred,en,SCRAPER
+SKL_b4a49b91234d,skill,erp,erp,preferred,en,SCRAPER
+SKL_9dffa6c6db60,skill,test coverage,test coverage,preferred,en,SCRAPER
+SKL_5b7c7bff7568,skill,portals,portals,preferred,en,SCRAPER
+SKL_0e7ef32d67d5,skill,iac,iac,preferred,en,SCRAPER
+SKL_66915b53583e,skill,sustainability,sustainability,preferred,en,SCRAPER
+SKL_bb53fcd1795b,skill,transparency,transparency,preferred,en,SCRAPER
+SKL_2ebf8e7c1188,skill,physics,physics,preferred,en,SCRAPER
+SKL_fcf51132f817,skill,french,french,preferred,en,SCRAPER
+SKL_02a0599fe858,skill,simulations,simulations,preferred,en,SCRAPER
+SKL_4c484df29cf9,skill,threat,threat,preferred,en,SCRAPER
+SKL_2a9824d623bf,skill,collaborative,collaborative,preferred,en,SCRAPER
+SKL_a39c504249f6,skill,platform development,platform development,preferred,en,SCRAPER
+SKL_dd17313fcd10,skill,shopify,shopify,preferred,en,SCRAPER
+SKL_c8b36e781195,skill,embedded,embedded,preferred,en,SCRAPER
+SKL_29d2fcfb7f65,skill,conversational,conversational,preferred,en,SCRAPER
+SKL_f203c2ec1023,skill,technical requirements,technical requirements,preferred,en,SCRAPER
+SKL_d40695aa9c19,skill,data warehousing,data warehousing,preferred,en,SCRAPER
+SKL_e7138a2a597f,skill,development tools,development tools,preferred,en,SCRAPER
+SKL_fe6a2cf16991,skill,platform,platform,preferred,en,SCRAPER
+SKL_ba6d4201764e,skill,high throughput,high throughput,preferred,en,SCRAPER
+SKL_8991b988ec58,skill,managed services,managed services,preferred,en,SCRAPER
+SKL_018703c040ac,skill,business,business,preferred,en,SCRAPER
+SKL_c291258c4ea5,skill,system performance,system performance,preferred,en,SCRAPER
+SKL_ded75e1196a7,skill,root cause,root cause,preferred,en,SCRAPER
+SKL_b73df3cd5417,skill,sys admin,sys admin,preferred,en,SCRAPER
+SKL_09e1a308c4db,skill,dev,dev,preferred,en,SCRAPER
+SKL_c02dbeb32a76,skill,engineer,engineer,preferred,en,SCRAPER
+SKL_0fdc5d033cee,skill,digital nomad,digital nomad,preferred,en,SCRAPER
+SKL_e35823c08b3f,skill,ui/ux,ui/ux,preferred,en,SCRAPER
+SKL_aa35faccb5b1,skill,ai/ml,ai/ml,preferred,en,SCRAPER
+SKL_4f9519e11b7a,skill,marketplace,marketplace,preferred,en,SCRAPER
+SKL_b9d4cdb7f641,skill,backend,backend,preferred,en,SCRAPER
+SKL_bf75556519b5,skill,frontend,frontend,preferred,en,SCRAPER
+SKL_9d2a8ffa98ea,skill,people management,people management,preferred,en,SCRAPER
+SKL_ddd37205975e,skill,engineering management,engineering management,preferred,en,SCRAPER
+SKL_a0322d265a5f,skill,it services,it services,preferred,en,SCRAPER
+SKL_655ed588c4f8,skill,spacecraft,spacecraft,preferred,en,SCRAPER
+SKL_679a861b169d,skill,##x,##x,preferred,en,SCRAPER
+SKL_a4cc8ae0f2d5,skill,space,space,preferred,en,SCRAPER
+SKL_82bb9b8ae597,skill,spacex,spacex,preferred,en,SCRAPER
+SKL_55196463b75c,skill,wellness,wellness,preferred,en,SCRAPER
+SKL_9d0d170f417a,skill,asic,asic,preferred,en,SCRAPER
+SKL_3e1c952b8a9d,skill,computer infrastructure,computer infrastructure,preferred,en,SCRAPER
+SKL_65d05467d3a8,skill,vlan,vlan,preferred,en,SCRAPER
+SKL_a074c5c2c667,skill,test machines,test machines,preferred,en,SCRAPER

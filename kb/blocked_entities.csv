@@ -7,3 +7,4 @@ skill,CSO,virtual_classroom,virtual classroom,block,non_it,0.533,0.664,0.136
 skill,LIGHTCAST,BGS1C79190E69E09F979,Build Management,keep,borderline,0.582,0.674,0.155
 skill,LIGHTCAST,BGS536BA8FEBF2B770BA,Hardware Asset Management,keep,borderline,0.605,0.657,0.163
 skill,LIGHTCAST,KS44018725W7WRZPF5CD,Resource Access Control Facility,block,non_it,0.521,0.662,0.095
+skill,SCRAPER,"{'name':_'fortune_1000',_'short_name':_'fortune-1000-compani","{'name': 'fortune 1000', 'short_name': 'fortune-1000-companies'}",block,malformed,0.394,0.418,

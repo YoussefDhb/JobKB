@@ -367,6 +367,7 @@ en_fr,complete lattices,les réseaux complets,xling=0.60,0.603
 en_fr,concept lattices,récifs conceptuels,xling=0.57,0.565
 en_fr,dijkstra,à l'extérieur,xling=0.44,0.438
 en_fr,flow,débit,xling=0.56,0.563
+en_fr,frontend,l'extrémité avant,xling=0.49,0.495
 en_fr,fuzzy clustering,agglomération floue,xling=0.55,0.546
 en_fr,iphone,l'appareil électronique,len_ratio=3.83,0.000
 en_fr,mmorpg,à l'heure actuelle,xling=0.50,0.496

@@ -24,8 +24,10 @@ Incremental sources:
     python run_pipeline.py --list-sources  # list registered sources
 
 Web-scraping enrichment (opt-in, network; keeps the KB current with emerging roles/skills/tech):
-    python run_pipeline.py --scrape hellowork   # crawl a board -> RESOURCES/SCRAPED/ snapshot (offline after)
-    python run_pipeline.py --add SCRAPER        # ingest the snapshot (hybrid extraction + relevance gate)
+    python run_pipeline.py --scrape all         # crawl every source -> RESOURCES/SCRAPED/ snapshots
+    python run_pipeline.py --scrape apis        # or a tier: apis | ats | trends
+    python run_pipeline.py --add SCRAPER        # ingest the snapshots (tags + NER + relevance gate)
+    python run_pipeline.py --refresh-scraper    # real-time: crawl all + re-ingest in one step (schedule it)
 """
 
 from __future__ import annotations
@@ -94,9 +96,13 @@ def main():
     ap.add_argument("--list-sources", action="store_true",
                     help="list the registered sources and exit")
     # web-scraping enrichment (network; snapshots raw postings, then `--add SCRAPER` ingests offline)
-    ap.add_argument("--scrape", nargs="?", const="all", metavar="SITES",
-                    help="crawl job boards into RESOURCES/SCRAPED/ (comma-list of sites or 'all'); "
-                         "then `--add SCRAPER` ingests the snapshot. Polite, bounded, robots-aware")
+    ap.add_argument("--scrape", nargs="?", const="all", metavar="TARGETS",
+                    help="crawl job sources into RESOURCES/SCRAPED/ then `--add SCRAPER` ingests them. "
+                         "TARGETS = 'all', a tier (apis|ats|trends), or a comma-list of adapters "
+                         "(jobicy,remotive,remoteok,themuse,wwr,ats,hn,github,stackoverflow). Bounded, fail-open")
+    ap.add_argument("--refresh-scraper", nargs="?", const="all", metavar="TARGETS",
+                    help="real-time refresh: crawl the sources (default all) AND incrementally re-ingest "
+                         "SCRAPER in one step (idempotent). Schedule via cron / Task Scheduler")
     # wikidata enrichment (network read-only; snapshotted for offline reproducibility)
     ap.add_argument("--wikidata", action="store_true",
                     help="anchor tech-skills + occupations to Wikidata QIDs (kb/wikidata_links.csv)")
@@ -143,6 +149,11 @@ def main():
         scrape.run(sites=args.scrape)
         return
 
+    if args.refresh_scraper:
+        from src import scrape
+        scrape.refresh(sites=args.refresh_scraper)
+        return
+
     if args.wikidata or args.refresh_wikidata:
         from src import wikidata
         wikidata.run(refresh=args.refresh_wikidata)
@@ -182,7 +193,9 @@ def main():
 
     if args.add:
         from src import incremental
-        incremental.add_source(args.add)
+        # SCRAPER's new market entities get the full enrichment layer (Wikidata/agent/translate), like a
+        # full build; the curated datasets ship their own descriptions and don't need it.
+        incremental.add_source(args.add, enrich=(args.add == "SCRAPER"))
         return
     if args.remove:
         from src import incremental

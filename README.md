@@ -7,8 +7,10 @@ loop**: cross-source duplicates are resolved and alignments validated with open-
 and a single build runs the whole pipeline — alignment, faceted ontology, ISCO attachment, unified merge,
 then Wikidata QID anchoring, LLM description/link generation and bilingual label completion — every step
 validated before it touches the graph, snapshot-resumable and fail-open (a build with no HF token still
-succeeds). An **optional, robots-respecting web-scraper** (`--scrape` → `--add SCRAPER`) adds
-emerging-role / skill enrichment on demand, deliberately kept out of the reproducible core build.
+succeeds). An **optional, multi-source web-scraper** (`--scrape` / `--refresh-scraper` → `--add SCRAPER`)
+enriches the KB in near-real-time from keyless job APIs, public ATS boards (Greenhouse/Ashby/Lever) and
+emerging-tech trend signals — robots-respecting, recency-weighted and gate-screened, deliberately kept out
+of the reproducible core build.
 
 ## Quickstart
 

@@ -68,7 +68,8 @@ WIKIDATA_SNAPSHOT_CSV = os.path.join(WIKIDATA_RETRIEVED_DIR, "resolutions.csv")
 # Web-scraping enrichment (--scrape): a polite crawler snapshots raw postings here as
 # <lang>/<site>.csv; ScraperSource then ingests the snapshot fully offline (like the OTHERS datasets).
 SCRAPED_DIR = os.path.join(RESOURCES, "SCRAPED")
-SCRAPED_FIELDS = ["site", "url", "lang", "title", "location", "text", "retrieved_at"]
+SCRAPED_FIELDS = ["site", "url", "lang", "title", "company", "location", "text",
+                  "tags", "posted_at", "retrieved_at"]
 
 LLM_RETRIEVED_DIR = os.path.join(RESOURCES, "LLM", "retrieved")   # LLM generation snapshots (cache)
 TRANSLATE_RETRIEVED_DIR = os.path.join(RESOURCES, "TRANSLATE", "retrieved")  # MT / Wikidata-label cache
@@ -373,10 +374,10 @@ KAGGLE_JOBS_MIN_FREQ = 3          # keep a (role, skill) demand pair only if see
 # skill labels + an HF skill-span extractor for novel spans), strict title->occupation minting, and the
 # same relevance/noise gate as every other source. Snapshots are modest, so the frequency floors are low
 # (still enough that a one-off noise token never becomes a node).
-SCRAPER_MIN_SKILL_FREQ = 3     # harvest a novel span as a new skill only at/above this posting frequency
-SCRAPER_MIN_OCC_FREQ = 2       # mint a cleaned job title as a new occupation only at/above this frequency
+SCRAPER_MIN_SKILL_FREQ = 4     # harvest a novel span as a new skill only at/above this posting frequency
+SCRAPER_MIN_OCC_FREQ = 2       # mint a cleaned role only at/above this (+ it must end in an occupational head)
 SCRAPER_MIN_DEMAND_FREQ = 2    # keep a (title, skill) demand pair only at/above this frequency
-SCRAPER_TITLE_MAX_WORDS = 6    # a cleaned title longer than this reads as prose, not a job title -> skip
+SCRAPER_TITLE_MAX_WORDS = 4    # a cleaned role longer than this reads as an over-specific title -> skip
 # Self-classify a harvested novel skill into an it_subtype by keyword (unambiguous tokens only); anything
 # absent stays "" and the hierarchy classifier assigns the sub-domain from the label (like DATAJOBS).
 SCRAPER_SUBDOMAIN = {
@@ -404,17 +405,62 @@ SCRAPER_TITLE_STOPWORDS = frozenset({
 
 # HF neural skill-span extractor (dictionary matching handles known skills; this catches novel spans).
 # Loaded lazily; fail-open to dictionary-only if the model is unavailable/offline.
-SCRAPER_EXTRACTOR_MODEL = os.environ.get("JOBKB_SCRAPER_EXTRACTOR", "TechWolf/ConTeXT-Skill-Extraction-base")
+# HF skill-span NER (token-classification, typed TECHNOLOGY/TECHNICAL/SOFT labels) — extracts novel skills
+# from prose sources (The Muse / ATS descriptions / HN). Loaded lazily; fail-open to dictionary-only.
+SCRAPER_EXTRACTOR_MODEL = os.environ.get("JOBKB_SCRAPER_EXTRACTOR",
+                                         "algiraldohe/lm-ner-linkedin-skills-recognition")
 SCRAPER_EXTRACTOR_ENABLED = os.environ.get("JOBKB_SCRAPER_NEURAL", "1") == "1"
 
 # Crawl bounds + network etiquette (stdlib urllib; mirrors the wikidata polite/fail-open conventions).
-SCRAPER_USER_AGENT = "JobKB/1.0 (IT knowledge-base research; occupation/skill enrichment) python-urllib"
-SCRAPER_RATE_SLEEP = 1.50      # seconds between requests (gentle pacing; be a good citizen)
-SCRAPER_MAX_RETRIES = 4        # attempts on 5xx/timeout, then fail-open (skip the page)
-SCRAPER_TIMEOUT = 30           # per-request seconds
-SCRAPER_MAX_PAGES = 5          # listing pages crawled per site per run (bounded)
-SCRAPER_MAX_POSTINGS = 60      # detail pages fetched per site per run (bounded)
-SCRAPER_RESPECT_ROBOTS = True  # honour robots.txt (opt out only with explicit operator consent)
+# A Mozilla-prefixed UA is required by some feeds (RemoteOK 403s bare bots); still identifies JobKB.
+SCRAPER_USER_AGENT = "Mozilla/5.0 (compatible; JobKB/1.0; +IT knowledge-base research)"
+SCRAPER_RATE_SLEEP = 1.50        # seconds between requests (gentle pacing; be a good citizen)
+SCRAPER_MAX_RETRIES = 4          # attempts on 5xx/timeout, then fail-open (skip the page)
+SCRAPER_TIMEOUT = 30             # per-request seconds
+SCRAPER_MAX_PAGES = 5            # listing pages crawled per HTML board per run (bounded)
+SCRAPER_MAX_POSTINGS = 400       # total postings kept per adapter per run (bounded)
+SCRAPER_MAX_PER_QUERY = 100      # cap per API category/industry sweep call
+SCRAPER_ATS_MAX_PER_TOKEN = 40   # cap IT postings kept per ATS company token
+SCRAPER_RESPECT_ROBOTS = True    # honour robots.txt (opt out only with explicit operator consent)
+
+# --- Multi-source acquisition (Tier A keyless APIs / Tier B ATS boards / Tier C trend signals) ---------
+# All feeds normalize to the SCRAPED_FIELDS row and pass the same IT-title filter + relevance gate.
+# Attribution: each source's `url` (link-back) is kept — several APIs' ToS require crediting the source.
+SCRAPER_TIERS = {
+    "apis":   ["jobicy", "remotive", "remoteok", "themuse", "wwr"],
+    "ats":    ["ats"],
+    "trends": ["hn", "github", "stackoverflow"],
+}
+# Tier A — server-side category/industry filters (still IT-title-filtered client-side: they leak non-IT).
+JOBICY_INDUSTRIES = ("dev", "data-science", "engineering", "devops-sysadmin",
+                     "cybersecurity", "qa-testing", "technical-support")
+REMOTIVE_CATEGORIES = ("software-development", "data", "devops", "qa",
+                       "information-technology", "artificial-intelligence")
+THEMUSE_CATEGORIES = ("Software Engineering", "Data Science", "Computer and IT")
+WWR_FEEDS = ("remote-programming-jobs", "remote-devops-sysadmin-jobs",
+             "remote-back-end-programming-jobs", "remote-front-end-programming-jobs",
+             "remote-full-stack-programming-jobs")
+# Tier B — curated, live-verified public ATS board tokens (no discovery endpoint exists; self-healing:
+# a dead/empty token is skipped silently). (provider, token). Verify/extend with --scrape ats.
+SCRAPER_ATS_BOARDS = (
+    [("greenhouse", t) for t in (
+        "stripe", "airbnb", "gitlab", "coinbase", "databricks", "cloudflare", "robinhood", "datadog",
+        "reddit", "dropbox", "discord", "mongodb", "pinterest", "instacart", "twilio", "asana", "lyft",
+        "elastic")]
+    + [("ashby", t) for t in ("openai", "notion", "ramp", "linear", "replit", "clickhouse", "posthog")]
+    + [("lever", t) for t in ("palantir", "gopuff", "unlimit")]
+)
+# Tier C — emerging-tech trend signals. GitHub search is keyless (tight limits); a `.env` GITHUB_TOKEN
+# raises them (fail-open without it). These emit tag-only candidate skills (no occupation/demand).
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
+GITHUB_TREND_TOPICS = ("llm", "rag", "ai-agents", "vector-database", "webassembly", "rust",
+                       "kubernetes", "observability", "mlops", "data-engineering")
+SCRAPER_TREND_MIN_STARS = 200    # only established-enough repos count as a real emerging-tech signal
+
+# Recency-weighted demand: recent postings weigh more, so `demand` tracks the current market. A posting
+# `posted_at` older than the half-life counts progressively less; missing date -> weight 1.0.
+SCRAPER_RECENCY_HALFLIFE_DAYS = 45.0
+SCRAPER_RETENTION_DAYS = int(os.environ.get("JOBKB_SCRAPER_RETENTION", "120"))  # prune snapshot rows older
 
 # HuggingFace models (open-source, no API keys)
 # Embedder bge-m3: strong EN<->FR similarity, no query/passage prefix. Falls back to MiniLM, then TF-IDF.

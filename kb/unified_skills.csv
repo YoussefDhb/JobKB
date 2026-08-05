@@ -11092,7 +11092,7 @@ USKL_7d8e8db70e45,angularjs,,,,hard,web,ZENODO,SKL_8062f41c8fc4,,,,,
 USKL_d4afcc158e09,spring-boot,chaussures de printemps,,,hard,other_hard,ZENODO,SKL_abed5c5e032e,,,,,
 USKL_35aaccf7133a,apache-kafka,l' apache-kafka,,,hard,data_engineering,ZENODO,SKL_8c54f6c262d8,,,,,
 USKL_936ffb9f6ab7,spring-mvc,à ressort-mvc,,,hard,other_hard,ZENODO,SKL_0bdf22018108,,,,,
-USKL_3e2b3fe7589c,distributed-system,système distribué,,,hard,systems_infrastructure,ZENODO,SKL_2cde56c8dbcb,,,,,
+USKL_858464c59458,distributed systems,systèmes distribués,distributed-system,,hard,other_hard,SCRAPER | ZENODO,SKL_2cde56c8dbcb | SKL_b39d81e6edcd,,,,,
 USKL_012197ae8833,reactjs,React,React.js | React JavaScript library,React.js | ReactJS,hard,web,ZENODO,SKL_02baf16953ce,Q19399674,https://www.wikidata.org/wiki/Q19399674,JavaScript library for building user interfaces,JavaScript library for building user interfaces,wikidata
 USKL_0ed78285d50a,soa,,,,hard,methodology,ZENODO,SKL_ef102c6a628e,,,,,
 USKL_db725fb8a145,apache-spark,,,,hard,data_engineering,ZENODO,SKL_1cfb819fe347,,,,,
@@ -11126,3 +11126,13 @@ USKL_992c317b4bf0,react-redux,react-redux,,,hard,web,ZENODO,SKL_5511bf9abb23,Q95
 USKL_c384f9ec796b,iphone,,,,hard,systems_infrastructure,ZENODO,SKL_f946136934cc,,,,,
 USKL_00d90fbde1d7,ecmascript-6,ecmascript-6,,,hard,programming_languages,ZENODO,SKL_dc25e8f94fc6,,,,,
 USKL_9b3dcbfef626,css3,CSS 3,.css | CSS,.css | format CSS 3,hard,programming_languages,ZENODO,SKL_84a98d41bbad,Q27826469,https://www.wikidata.org/wiki/Q27826469,file format,file format,wikidata
+USKL_e86b40fe49a6,security,sécurité,,,hard,security,SCRAPER,SKL_c081277130de,Q29879246,https://www.wikidata.org/wiki/Q29879246,system call of the Linux kernel,system call of the Linux kernel,wikidata
+USKL_31fed3529ff6,infrastructure,l'infrastructure,,,hard,systems_infrastructure,SCRAPER,SKL_61bcae0cefd5,,,,,
+USKL_31ff8c3eb0ed,gcp,Gcp,,,hard,cloud_devops,SCRAPER,SKL_218005c08ab0,,,,,
+USKL_ea3cfc670cd6,shopify,faire du shopping,,,hard,other_hard,SCRAPER,SKL_dd17313fcd10,,,,,
+USKL_72149c854ae3,embedded,intégré,,,hard,other_hard,SCRAPER,SKL_c8b36e781195,,,,,
+USKL_21a21aab16d0,sys admin,administrateur du système,,,hard,other_hard,SCRAPER,SKL_b73df3cd5417,,,,,
+USKL_e373b8579a38,ui/ux,ui/ux,,,hard,other_hard,SCRAPER,SKL_e35823c08b3f,,,,,
+USKL_0fe891c152f2,ai/ml,ai/ml,,,hard,other_hard,SCRAPER,SKL_aa35faccb5b1,,,,,
+USKL_a9b9ef55f454,backend,l'arrière-plan,,,hard,web,SCRAPER,SKL_b9d4cdb7f641,,,,,
+USKL_658bf6080353,frontend,,,,hard,web,SCRAPER,SKL_bf75556519b5,,,,,

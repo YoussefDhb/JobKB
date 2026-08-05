@@ -1,17 +1,26 @@
-"""Web-scraping crawler (--scrape): a polite, bounded, fail-open crawler that snapshots raw job
-postings to RESOURCES/SCRAPED/<lang>/<site>.csv. It never touches kb/ — ScraperSource ingests the
-snapshot offline afterwards (see src/sources/scraper.py), so a crawl and a build are fully decoupled
-and every build stays reproducible from the committed snapshot.
+"""Web-scraping acquisition layer (--scrape): a polite, bounded, fail-open crawler that snapshots raw IT
+job postings + emerging-tech signals to RESOURCES/SCRAPED/<lang>/<adapter>.csv. It never touches kb/ —
+ScraperSource ingests the snapshot offline afterwards (src/sources/scraper.py), so acquisition and build
+are decoupled and every build stays reproducible from the committed snapshot.
 
-Per-site adapters are small dicts (listing URLs + a job-URL test); posting detail is read from the
-page's schema.org JobPosting JSON-LD when present (robust across boards) with an HTML fallback. HTTP
-is stdlib urllib with the same etiquette as the Wikidata client (descriptive UA, backoff, rate-limit,
-broad fail-open) and robots.txt is honoured by default.
+Three tiers, all normalising to the same SCRAPED_FIELDS row and passing the IT-title filter:
+  * apis   — keyless job APIs (Jobicy, Remotive, RemoteOK, The Muse, We Work Remotely RSS); several give a
+             pre-extracted `tags[]` skill array (a high-precision signal, like data_jobs' job_skills).
+  * ats    — public Applicant-Tracking-System job boards (Greenhouse / Ashby / Lever) over a curated,
+             self-healing company-token list; full job-description HTML, reliable structured JSON.
+  * trends — emerging-tech signals (HN "Who is hiring", GitHub topics, Stack Overflow popular tags).
+
+HTTP is stdlib urllib with the wikidata client's etiquette (descriptive UA, backoff, rate-limit, broad
+fail-open). robots.txt is honoured for the RSS feed. Attribution: each row keeps its source `url` (link
+back) — several sources' ToS require crediting them.
 """
 
 from __future__ import annotations
 
 import csv
+import datetime as _dt
+import gzip
+import html
 import json
 import os
 import re
@@ -23,30 +32,32 @@ import urllib.robotparser
 from . import config as C
 from . import common as K
 
-_CHUNK = 20   # postings between snapshot checkpoints (resume granularity)
+_CHUNK = 40   # postings between snapshot checkpoints (resume granularity)
 
 
 # --- HTTP (stdlib urllib; polite + resilient + fail-open) ------------------------------
-def _http_get(url: str, encoding: str | None = None) -> str | None:
-    """GET a page with retries/backoff. Returns the decoded body, or None on failure. `encoding` forces
-    a charset (JSON APIs are UTF-8 per RFC 8259 but sometimes send a wrong header)."""
+def _http_get(url: str, encoding: str | None = None, headers: dict | None = None) -> str | None:
+    """GET a page with retries/backoff. Returns the decoded body (gzip-aware), or None on failure."""
     delay = 1.0
+    hdrs = {"User-Agent": C.SCRAPER_USER_AGENT,
+            "Accept": "application/json, text/html;q=0.9, */*;q=0.8",
+            "Accept-Language": "en,fr;q=0.8"}
+    if headers:
+        hdrs.update(headers)
     for attempt in range(C.SCRAPER_MAX_RETRIES):
         try:
-            req = urllib.request.Request(url, headers={
-                "User-Agent": C.SCRAPER_USER_AGENT,
-                "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
-                "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
-            })
-            with urllib.request.urlopen(req, timeout=C.SCRAPER_TIMEOUT) as resp:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=hdrs),
+                                        timeout=C.SCRAPER_TIMEOUT) as resp:
+                raw = resp.read()
+                if raw[:2] == b"\x1f\x8b":
+                    raw = gzip.decompress(raw)
                 charset = encoding or resp.headers.get_content_charset() or "utf-8"
-                body = resp.read().decode(charset, "replace")
             time.sleep(C.SCRAPER_RATE_SLEEP)
-            return body
+            return raw.decode(charset, "replace")
         except Exception as e:  # noqa: BLE001 — HTTP/timeout/decode all fail-open (skip the page)
             code = getattr(e, "code", None)
             if code and 400 <= code < 500 and code != 429:
-                return None  # a real 4xx won't improve on retry
+                return None  # a real 4xx (incl. 403 rate-limit / 404 dead token) won't improve on retry
             if attempt == C.SCRAPER_MAX_RETRIES - 1:
                 return None
             time.sleep(delay)
@@ -54,22 +65,37 @@ def _http_get(url: str, encoding: str | None = None) -> str | None:
     return None
 
 
+def _get_json(url: str, headers: dict | None = None):
+    """GET + parse JSON (UTF-8). Returns the object, or None on any failure (fail-open)."""
+    raw = _http_get(url, encoding="utf-8", headers=headers)
+    if not raw:
+        return None
+    try:
+        return json.loads(raw)
+    except (ValueError, TypeError):
+        return None
+
+
 _ROBOTS: dict[str, urllib.robotparser.RobotFileParser | None] = {}
 
 
 def _robot_ok(url: str) -> bool:
-    """Honour robots.txt per host (fail-open: if robots can't be read, allow but stay polite)."""
+    """Honour robots.txt per host (fail-open: unreadable robots -> allow but stay polite)."""
     if not C.SCRAPER_RESPECT_ROBOTS:
         return True
     parts = urllib.parse.urlsplit(url)
     host = f"{parts.scheme}://{parts.netloc}"
     if host not in _ROBOTS:
-        rp = urllib.robotparser.RobotFileParser()
-        rp.set_url(host + "/robots.txt")
-        try:
-            rp.read()
-        except Exception:  # noqa: BLE001 — unreadable robots -> treat as unrestricted
-            rp = None
+        # Fetch robots.txt with OUR real UA (RobotFileParser.read() uses a bare Python UA that some CDNs
+        # 403 -> it would then set disallow_all and falsely block a permitted path). Unreadable -> allow.
+        body = _http_get(host + "/robots.txt")
+        rp = None
+        if body is not None:
+            rp = urllib.robotparser.RobotFileParser()
+            try:
+                rp.parse(body.splitlines())
+            except Exception:  # noqa: BLE001
+                rp = None
         _ROBOTS[host] = rp
     rp = _ROBOTS[host]
     if rp is None:
@@ -80,90 +106,20 @@ def _robot_ok(url: str) -> bool:
         return True
 
 
-# --- HTML parsing (JSON-LD JobPosting first, then a plain-text fallback) ----------------
+# --- text normalisation ----------------------------------------------------------------
 _TAG = re.compile(r"<[^>]+>")
 _WS = re.compile(r"[ \t\r\f\v]+")
 _NL = re.compile(r"\n{3,}")
 
-
-def _text_of(html: str) -> str:
-    """Strip scripts/styles/tags to readable text (fallback when there is no JSON-LD)."""
-    html = re.sub(r"(?is)<(script|style|noscript)[^>]*>.*?</\1>", " ", html)
-    html = re.sub(r"(?i)<br\s*/?>", "\n", html)
-    html = re.sub(r"(?i)</(p|div|li|h[1-6]|tr)>", "\n", html)
-    txt = _TAG.sub(" ", html)
-    txt = (txt.replace("&nbsp;", " ").replace("&amp;", "&").replace("&#39;", "'")
-              .replace("&quot;", '"').replace("&lt;", "<").replace("&gt;", ">").replace("&eacute;", "é"))
-    txt = _WS.sub(" ", txt)
-    return _NL.sub("\n\n", "\n".join(l.strip() for l in txt.splitlines())).strip()
-
-
-def _jsonld_objects(html: str):
-    """Yield every parsed application/ld+json object (flattening @graph and lists)."""
-    for m in re.finditer(r'(?is)<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', html):
-        raw = m.group(1).strip()
-        try:
-            data = json.loads(raw)
-        except (ValueError, TypeError):
-            continue
-        stack = [data]
-        while stack:
-            obj = stack.pop()
-            if isinstance(obj, list):
-                stack.extend(obj)
-            elif isinstance(obj, dict):
-                if "@graph" in obj:
-                    stack.extend(obj["@graph"] if isinstance(obj["@graph"], list) else [obj["@graph"]])
-                yield obj
-
-
-def _parse_detail(html: str, url: str) -> dict | None:
-    """Return {title, location, text} for a posting page — JSON-LD JobPosting if present, else HTML."""
-    for obj in _jsonld_objects(html):
-        t = obj.get("@type")
-        types = t if isinstance(t, list) else [t]
-        if "JobPosting" in types:
-            title = (obj.get("title") or "").strip()
-            desc = _text_of(str(obj.get("description") or ""))
-            loc = ""
-            jl = obj.get("jobLocation")
-            jl = jl[0] if isinstance(jl, list) and jl else jl
-            if isinstance(jl, dict):
-                addr = jl.get("address") or {}
-                if isinstance(addr, dict):
-                    loc = (addr.get("addressLocality") or addr.get("addressRegion") or "").strip()
-            if title and desc:
-                return {"title": title, "location": loc, "text": desc}
-    # HTML fallback: <h1> as the title + the page text (best-effort).
-    m = re.search(r"(?is)<h1[^>]*>(.*?)</h1>", html)
-    title = _TAG.sub(" ", m.group(1)).strip() if m else ""
-    text = _text_of(html)
-    if title and len(text) > 200:
-        return {"title": title, "location": "", "text": text[:8000]}
-    return None
-
-
-def _links(html: str, base: str):
-    """Absolute hrefs found on a listing page (deduped, order-preserving)."""
-    out, seen = [], set()
-    for m in re.finditer(r'(?i)href=["\']([^"\'#]+)["\']', html):
-        href = urllib.parse.urljoin(base, m.group(1).strip())
-        if href not in seen:
-            seen.add(href)
-            out.append(href)
-    return out
-
-
-# --- API-mode adapter: RemoteOK ---------------------------------------------------------
-# RemoteOK exposes a public JSON endpoint (its ToS explicitly permits API use, asking for a link back —
-# we keep each posting's `url`). Robots-permitted, unlike the HTML boards. Used for the live test.
-# Filter on the POSITION title (the feed's tag list is an unreliable soup on featured listings).
+# A posting is kept only if its (cleaned) title reads as an IT role — every API's server-side category
+# filter leaks non-IT jobs, so this client-side gate is essential.
 _IT_TITLE_HINTS = (
-    "developer", "engineer", "programmer", "software", "devops", "sysadmin", "sre",
-    "backend", "back-end", "back end", "frontend", "front-end", "front end", "full stack", "fullstack",
-    "data scientist", "data engineer", "data analyst", "machine learning", " ml ", " ai ",
-    "web develop", "mobile develop", "cloud", "cyber", "security engineer", "qa engineer",
-    "platform engineer", "site reliability", "architect", "it support", "technical support",
+    "developer", "engineer", "programmer", "software", "devops", "sysadmin", "sre", "data scientist",
+    "data engineer", "data analyst", "machine learning", "backend", "back-end", "back end", "frontend",
+    "front-end", "front end", "full stack", "fullstack", " ml ", " ai ", "web develop", "mobile develop",
+    "cloud", "cyber", "security engineer", "qa engineer", "qa tester", "test engineer", "platform engineer",
+    "site reliability", "architect", "it support", "technical support", "database admin", "network engineer",
+    "system administrator", "systems administrator", "analytics", "blockchain", "ux engineer",
 )
 
 
@@ -177,109 +133,334 @@ def _demojibake(s: str) -> str:
     return s
 
 
-def _remoteok(budget: int) -> list[dict]:
-    """Fetch RemoteOK's public JSON feed, keep IT postings (by title), return snapshot rows (fail-open)."""
-    url = "https://remoteok.com/api"
-    if not _robot_ok(url):
-        print(f"  [remoteok] robots.txt disallows {url} — skipping")
-        return []
-    raw = _http_get(url, encoding="utf-8")   # JSON is UTF-8 (RFC 8259); RemoteOK mislabels the charset
-    if not raw:
-        return []
-    try:
-        data = json.loads(raw)
-    except (ValueError, TypeError):
-        return []
+def _clean(s: str) -> str:
+    """Collapse whitespace + repair double-encoding on a short field (title/company/location)."""
+    return " ".join(_demojibake(s or "").split())
+
+
+def _text_of(fragment: str) -> str:
+    """Strip HTML tags/entities to readable text (job descriptions arrive as HTML)."""
+    t = html.unescape(fragment or "")
+    t = re.sub(r"(?is)<(script|style|noscript)[^>]*>.*?</\1>", " ", t)
+    t = re.sub(r"(?i)<br\s*/?>", "\n", t)
+    t = re.sub(r"(?i)</(p|div|li|h[1-6]|tr)>", "\n", t)
+    t = _TAG.sub(" ", t)
+    t = _WS.sub(" ", _demojibake(t))
+    return _NL.sub("\n\n", "\n".join(l.strip() for l in t.splitlines())).strip()
+
+
+def _is_it_title(title: str) -> bool:
+    return any(h in f" {title.lower()} " for h in _IT_TITLE_HINTS)
+
+
+def _row(site, url, lang, title, company, location, text, tags, posted_at) -> dict:
+    return {"site": site, "url": (url or "").strip(), "lang": lang,
+            "title": _clean(title), "company": _clean(company), "location": _clean(location),
+            "text": text, "tags": (tags or "").strip(), "posted_at": (posted_at or "").strip(),
+            "retrieved_at": K.now_iso()}
+
+
+def _dedup_url(rows: list[dict]) -> list[dict]:
+    seen, out = set(), []
+    for r in rows:
+        u = r.get("url")
+        if u and u not in seen:
+            seen.add(u)
+            out.append(r)
+    return out
+
+
+def _tags(seq) -> str:
+    return "|".join(str(t).strip() for t in (seq or []) if str(t).strip())
+
+
+# ========================= Tier A — keyless job APIs ===================================
+def _jobicy(budget):
     rows = []
-    for j in data:
-        if not isinstance(j, dict) or "position" not in j:   # skip the legal/meta header entry
+    for ind in C.JOBICY_INDUSTRIES:
+        if len(rows) >= budget:
+            break
+        d = _get_json(f"https://jobicy.com/api/v2/remote-jobs?count={C.SCRAPER_MAX_PER_QUERY}&industry={ind}")
+        for j in (d or {}).get("jobs", []):
+            title = _clean(j.get("jobTitle", ""))
+            text = _text_of(str(j.get("jobDescription") or ""))
+            if not _is_it_title(title) or len(text) < 120:
+                continue
+            rows.append(_row("jobicy", j.get("url"), "en", title, j.get("companyName"),
+                             j.get("jobGeo"), text, "", j.get("pubDate")))
+    return _dedup_url(rows)[:budget]
+
+
+def _remotive(budget):
+    # One call (its ToS caps to ~2/min); filter to IT client-side. `tags[]` is a clean skill array.
+    d = _get_json("https://remotive.com/api/remote-jobs?limit=200")
+    rows = []
+    for j in (d or {}).get("jobs", []):
+        title = _clean(j.get("title", ""))
+        text = _text_of(str(j.get("description") or ""))
+        if not _is_it_title(title) or len(text) < 120:
             continue
-        pos = " ".join(_demojibake(j.get("position") or "").split())   # collapse stray newlines/spaces
-        if not any(h in f" {pos.lower()} " for h in _IT_TITLE_HINTS):
+        rows.append(_row("remotive", j.get("url"), "en", title, j.get("company_name"),
+                         j.get("candidate_required_location"), text, _tags(j.get("tags")),
+                         j.get("publication_date")))
+        if len(rows) >= budget:
+            break
+    return _dedup_url(rows)
+
+
+def _remoteok(budget):
+    d = _get_json("https://remoteok.com/api")   # tech-first feed; UA must be browser-like (set in config)
+    rows = []
+    for j in d or []:
+        if not isinstance(j, dict) or "position" not in j:      # skip the legal/meta header entry
             continue
-        text = _demojibake(_text_of(str(j.get("description") or "")))
-        if not pos or len(text) < 120:
+        title = _clean(j.get("position", ""))
+        text = _text_of(str(j.get("description") or ""))
+        if not _is_it_title(title) or len(text) < 120:
             continue
-        rows.append({"site": "remoteok", "url": (j.get("url") or "").strip(), "lang": "en",
-                     "title": pos, "location": _demojibake((j.get("location") or "").strip()),
-                     "text": text, "retrieved_at": K.now_iso()})
+        rows.append(_row("remoteok", j.get("url"), "en", title, j.get("company"),
+                         j.get("location"), text, _tags(j.get("tags")), j.get("date")))
+        if len(rows) >= budget:
+            break
+    return _dedup_url(rows)
+
+
+def _themuse(budget):
+    rows = []
+    for cat in C.THEMUSE_CATEGORIES:
+        for page in range(1, C.SCRAPER_MAX_PAGES + 1):
+            if len(rows) >= budget:
+                break
+            d = _get_json("https://www.themuse.com/api/public/jobs?"
+                          f"category={urllib.parse.quote(cat)}&page={page}")
+            results = (d or {}).get("results", [])
+            if not results:
+                break
+            for j in results:
+                title = _clean(j.get("name", ""))
+                text = _text_of(str(j.get("contents") or ""))
+                if not _is_it_title(title) or len(text) < 120:
+                    continue
+                loc = ", ".join(l.get("name", "") for l in (j.get("locations") or []))
+                url = (j.get("refs") or {}).get("landing_page", "")
+                rows.append(_row("themuse", url, "en", title, (j.get("company") or {}).get("name"),
+                                 loc, text, _tags(j.get("tags")), j.get("publication_date")))
+    return _dedup_url(rows)[:budget]
+
+
+def _rss_field(item, tag):
+    m = re.search(rf"(?is)<{tag}[^>]*>(.*?)</{tag}>", item)
+    if not m:
+        return ""
+    v = m.group(1).strip()
+    return re.sub(r"(?is)^<!\[CDATA\[(.*?)\]\]>\s*$", r"\1", v).strip()
+
+
+def _wwr(budget):
+    rows = []
+    for feed in C.WWR_FEEDS:
+        if len(rows) >= budget:
+            break
+        url = f"https://weworkremotely.com/categories/{feed}.rss"
+        if not _robot_ok(url):
+            print(f"  [wwr] robots.txt disallows {url} — skipping")
+            continue
+        raw = _http_get(url)
+        if not raw:
+            continue
+        for item in re.findall(r"(?is)<item>(.*?)</item>", raw):
+            title_raw = html.unescape(_rss_field(item, "title"))
+            company, sep, role = title_raw.partition(":")     # WWR titles are "Company: Role"
+            title = _clean(role if sep else title_raw)
+            text = _text_of(_rss_field(item, "description"))
+            if not _is_it_title(title) or len(text) < 120:
+                continue
+            rows.append(_row("wwr", _rss_field(item, "link"), "en", title,
+                             _clean(company) if sep else "", _rss_field(item, "region"),
+                             text, "", _rss_field(item, "pubDate")))
+            if len(rows) >= budget:
+                break
+    return _dedup_url(rows)
+
+
+# ========================= Tier B — public ATS job boards ==============================
+def _ms_to_iso(ms):
+    try:
+        return _dt.datetime.fromtimestamp(int(ms) / 1000, _dt.timezone.utc).isoformat(timespec="seconds")
+    except (TypeError, ValueError):
+        return ""
+
+
+def _ats_board(provider, token, cap):
+    """Fetch one company's public ATS board. Self-healing: a dead/empty token returns []."""
+    rows = []
+    if provider == "greenhouse":
+        d = _get_json(f"https://boards-api.greenhouse.io/v1/boards/{token}/jobs?content=true")
+        for j in (d or {}).get("jobs", []):
+            title = _clean(j.get("title", ""))
+            text = _text_of(str(j.get("content") or ""))
+            if not _is_it_title(title) or len(text) < 120:
+                continue
+            rows.append(_row("ats:greenhouse", j.get("absolute_url"), "en", title, j.get("company_name") or token,
+                             (j.get("location") or {}).get("name"), text, "",
+                             j.get("updated_at") or j.get("first_published")))
+            if len(rows) >= cap:
+                break
+    elif provider == "ashby":
+        d = _get_json(f"https://api.ashbyhq.com/posting-api/job-board/{token}")
+        for j in (d or {}).get("jobs", []):
+            title = _clean(j.get("title", ""))
+            text = _text_of(str(j.get("descriptionHtml") or j.get("descriptionPlain") or ""))
+            if not _is_it_title(title) or len(text) < 120:
+                continue
+            rows.append(_row("ats:ashby", j.get("jobUrl") or j.get("applyUrl"), "en", title,
+                             token.capitalize(), j.get("location"), text, "", j.get("publishedAt")))
+            if len(rows) >= cap:
+                break
+    elif provider == "lever":
+        d = _get_json(f"https://api.lever.co/v0/postings/{token}?mode=json")
+        for j in d or []:
+            title = _clean(j.get("text", ""))
+            text = _text_of(str(j.get("descriptionPlain") or j.get("description") or ""))
+            if not _is_it_title(title) or len(text) < 120:
+                continue
+            loc = (j.get("categories") or {}).get("location", "")
+            rows.append(_row("ats:lever", j.get("hostedUrl"), "en", title, token.capitalize(),
+                             loc, text, "", _ms_to_iso(j.get("createdAt"))))
+            if len(rows) >= cap:
+                break
+    return rows
+
+
+def _ats(budget):
+    rows = []
+    for provider, token in C.SCRAPER_ATS_BOARDS:
+        if len(rows) >= budget:
+            break
+        try:
+            got = _ats_board(provider, token, C.SCRAPER_ATS_MAX_PER_TOKEN)
+        except Exception:  # noqa: BLE001 — one bad board never breaks the rest
+            got = []
+        if got:
+            print(f"  [ats] {provider}:{token} -> {len(got)} IT postings")
+        rows.extend(got)
+    return _dedup_url(rows)[:budget]
+
+
+# ========================= Tier C — emerging-tech trend signals ========================
+def _hn_role(header):
+    """Best-effort IT role from an HN 'Company | Role | Location | …' header line ("" if none)."""
+    for seg in re.split(r"\s*[|•·—–]\s*|\s{2,}", header):
+        seg = _clean(seg)
+        if seg and _is_it_title(seg) and len(seg.split()) <= C.SCRAPER_TITLE_MAX_WORDS:
+            return seg
+    return ""
+
+
+def _hn(budget):
+    s = _get_json("https://hn.algolia.com/api/v1/search_by_date?"
+                  "tags=story,author_whoishiring&query=who%20is%20hiring&hitsPerPage=15")
+    story = None
+    for h in (s or {}).get("hits", []):
+        t = (h.get("title") or "").lower()
+        if "who is hiring" in t and "freelanc" not in t and "wants to be hired" not in t:
+            story = h.get("objectID")
+            break
+    if not story:
+        return []
+    item = _get_json(f"https://hn.algolia.com/api/v1/items/{story}")
+    rows = []
+    for ch in (item or {}).get("children", []) or []:
+        if not ch.get("text"):
+            continue
+        text = _text_of(ch["text"])
+        if len(text) < 120:
+            continue
+        title = _hn_role(text.split("\n", 1)[0])   # role if the header is a clear IT role, else skills-only
+        rows.append(_row("hn", f"https://news.ycombinator.com/item?id={ch.get('id')}", "en",
+                         title, "", "", text, "", ch.get("created_at")))
         if len(rows) >= budget:
             break
     return rows
 
 
-# --- per-site adapters -----------------------------------------------------------------
-# HTML boards: lang, default IT `queries`, a `listing(query, page)` URL builder, and `is_job(url)` to
-# pick posting-detail links (detail parsing is shared: JSON-LD + fallback). An API board instead sets
-# `api(budget) -> rows`. Adding a board is usually just these few lines.
+_GH_STOP = {"awesome", "hacktoberfest", "productivity", "developer-tools", "open-source", "tutorial",
+            "example", "boilerplate", "template", "list", "framework", "library", "cli", "api", "app"}
+
+
+def _github(budget):
+    """Emerging-tech topic tokens from fast-rising repos → tag-only candidate skills (gate-screened)."""
+    headers = {"Authorization": f"Bearer {C.GITHUB_TOKEN}"} if C.GITHUB_TOKEN else None
+    rows = []
+    for topic in C.GITHUB_TREND_TOPICS:
+        if len(rows) >= budget:
+            break
+        q = urllib.parse.quote(f"topic:{topic} stars:>{C.SCRAPER_TREND_MIN_STARS}")
+        d = _get_json(f"https://api.github.com/search/repositories?q={q}&sort=stars&order=desc&per_page=10",
+                      headers=headers)
+        for it in (d or {}).get("items", []):
+            cand = {t for t in (it.get("topics") or []) if t not in _GH_STOP and len(t) > 1}
+            if it.get("language"):
+                cand.add(it["language"])
+            if not cand:
+                continue
+            rows.append(_row("github", it.get("html_url"), "en", "", it.get("full_name"), "",
+                             (it.get("description") or "")[:400], _tags(sorted(cand)), it.get("created_at")))
+    return _dedup_url(rows)[:budget]
+
+
+def _stackoverflow(budget):
+    """Popular Stack Overflow technology tags → tag candidates (coverage / corroboration signal)."""
+    d = _get_json("https://api.stackexchange.com/2.3/tags?site=stackoverflow&order=desc&sort=popular&pagesize=100")
+    tags = [t.get("name") for t in (d or {}).get("items", []) if t.get("name")]
+    if not tags:
+        return []
+    return [_row("stackoverflow", "https://stackoverflow.com/tags", "en", "", "Stack Overflow", "",
+                 "Popular Stack Overflow technology tags (emerging-tech coverage signal).",
+                 _tags(tags), "")]
+
+
+# --- adapter registry ------------------------------------------------------------------
 ADAPTERS = {
-    "remoteok": {
-        "lang": "en",
-        "api": _remoteok,   # robots-permitted public JSON feed (the live-test source)
-    },
-    "hellowork": {
-        "lang": "fr",
-        "queries": ["developpeur", "data engineer", "devops", "cybersecurite"],
-        "listing": lambda q, p: ("https://www.hellowork.com/fr-fr/emploi/recherche.html?k="
-                                  f"{urllib.parse.quote(q)}&p={p}"),
-        "is_job": lambda u: "/emplois/" in u and u.endswith(".html"),
-    },
-    "weworkremotely": {
-        "lang": "en",
-        "queries": [""],  # a category page (the query is unused); detail links carry a company-role slug
-        "listing": lambda q, p: "https://weworkremotely.com/categories/remote-programming-jobs",
-        "is_job": lambda u: ("/remote-jobs/" in u and u.count("-") >= 2
-                             and not any(x in u for x in ("find-your-plan", "/search", "?", "#"))),
-    },
+    "jobicy": _jobicy, "remotive": _remotive, "remoteok": _remoteok, "themuse": _themuse, "wwr": _wwr,
+    "ats": _ats,
+    "hn": _hn, "github": _github, "stackoverflow": _stackoverflow,
 }
 
 
-def _crawl_site(site: str, budget: int) -> list[dict]:
-    """Crawl one board up to `budget` postings; return snapshot rows (best-effort, fail-open)."""
-    ad = ADAPTERS[site]
-    if "api" in ad:                       # API board (RemoteOK): one JSON fetch, no listing/detail flow
-        return ad["api"](budget)
-    lang = ad["lang"]
-    detail_urls, seen = [], set()
-    for q in ad["queries"]:
-        for p in range(1, C.SCRAPER_MAX_PAGES + 1):
-            if len(detail_urls) >= budget:
-                break
-            url = ad["listing"](q, p)
-            if not _robot_ok(url):
-                print(f"  [{site}] robots.txt disallows {url} — skipping")
-                continue
-            html = _http_get(url)
-            if not html:
-                continue
-            for href in _links(html, url):
-                if ad["is_job"](href) and href not in seen:
-                    seen.add(href)
-                    detail_urls.append(href)
-        if len(detail_urls) >= budget:
-            break
-
-    rows = []
-    for url in detail_urls[:budget]:
-        if not _robot_ok(url):
-            continue
-        html = _http_get(url)
-        if not html:
-            continue
-        rec = _parse_detail(html, url)
-        if not rec:
-            continue
-        rows.append({
-            "site": site, "url": url, "lang": lang,
-            "title": rec["title"], "location": rec["location"],
-            "text": rec["text"], "retrieved_at": K.now_iso(),
-        })
-    return rows
+def _resolve_sites(sites: str) -> list[str]:
+    """Expand 'all' / a tier name / a comma-list of tiers-or-adapters into adapter names."""
+    if sites in ("all", "", None):
+        return list(ADAPTERS)
+    out = []
+    for tok in (s.strip() for s in sites.split(",") if s.strip()):
+        if tok in C.SCRAPER_TIERS:
+            out.extend(C.SCRAPER_TIERS[tok])
+        elif tok in ADAPTERS:
+            out.append(tok)
+        else:
+            raise SystemExit(f"unknown scrape target '{tok}'. Tiers: {', '.join(C.SCRAPER_TIERS)}; "
+                             f"adapters: {', '.join(ADAPTERS)}")
+    seen, uniq = set(), []
+    for a in out:
+        if a not in seen:
+            seen.add(a)
+            uniq.append(a)
+    return uniq
 
 
-# --- snapshot I/O (append + dedup by url, checkpointed) --------------------------------
-def _snapshot_path(site: str, lang: str) -> str:
-    return os.path.join(C.SCRAPED_DIR, lang, f"{site}.csv")
+def _crawl(name: str, budget: int) -> list[dict]:
+    """Run one adapter, fail-open (a single source down never breaks the run)."""
+    try:
+        return ADAPTERS[name](budget) or []
+    except Exception as e:  # noqa: BLE001
+        print(f"  [{name}] error: {type(e).__name__}: {e} — skipped")
+        return []
+
+
+# --- snapshot I/O (append + dedup by url, retention prune, checkpointed) ----------------
+def _snapshot_path(name: str) -> str:
+    return os.path.join(C.SCRAPED_DIR, "en", f"{name.replace(':', '_')}.csv")
 
 
 def _load(path: str) -> dict:
@@ -287,8 +468,18 @@ def _load(path: str) -> dict:
     if os.path.isfile(path):
         with open(path, encoding="utf-8", newline="") as f:
             for r in csv.DictReader(f):
-                rows[r["url"]] = r
+                if r.get("url"):
+                    rows[r["url"]] = r
     return rows
+
+
+def _prune_old(rows: dict) -> dict:
+    """Drop snapshot rows whose retrieved_at is older than the retention window (keeps demand current)."""
+    if C.SCRAPER_RETENTION_DAYS <= 0:
+        return rows
+    cutoff = (_dt.datetime.now(_dt.timezone.utc)
+              - _dt.timedelta(days=C.SCRAPER_RETENTION_DAYS)).isoformat()
+    return {u: r for u, r in rows.items() if (r.get("retrieved_at") or "") >= cutoff}
 
 
 def _save(path: str, rows: dict) -> None:
@@ -302,43 +493,42 @@ def _save(path: str, rows: dict) -> None:
 
 
 def fetch_live(site: str, limit: int | None = None) -> list[dict]:
-    """Crawl one board over the network and RETURN the posting rows WITHOUT writing a snapshot — for a
-    live, read-only test (e.g. the notebook). Robots-checked and fail-open like the full crawl."""
+    """Crawl one adapter over the network and RETURN the rows WITHOUT writing a snapshot — for a live,
+    read-only test (e.g. the notebook). Fail-open like the full crawl."""
     if site not in ADAPTERS:
-        raise ValueError(f"unknown scrape site '{site}'. Known: {', '.join(ADAPTERS)}")
-    return _crawl_site(site, limit or C.SCRAPER_MAX_POSTINGS)
+        raise ValueError(f"unknown scrape adapter '{site}'. Known: {', '.join(ADAPTERS)}")
+    return _crawl(site, limit or C.SCRAPER_MAX_POSTINGS)
 
 
-def run(sites: str = "all") -> None:
-    """Crawl the requested boards (comma-list or 'all') and update their snapshots. Network, opt-in."""
-    try:
-        import bs4  # noqa: F401 — availability check; parsing itself is regex/JSON-LD based
-    except ImportError:
-        pass  # bs4 is listed in requirements for robustness but this crawler needs only the stdlib
-
-    names = list(ADAPTERS) if sites in ("all", "", None) else [s.strip() for s in sites.split(",") if s.strip()]
-    unknown = [s for s in names if s not in ADAPTERS]
-    if unknown:
-        raise SystemExit(f"unknown scrape site(s): {', '.join(unknown)}. Known: {', '.join(ADAPTERS)}")
-
-    per_site = max(1, C.SCRAPER_MAX_POSTINGS // len(names))
+def run(sites: str = "all") -> int:
+    """Crawl the requested tiers/adapters and update their snapshots (append + dedup + retention prune).
+    Network, opt-in. Returns the number of new postings added across all adapters."""
+    names = _resolve_sites(sites)
     total_new = 0
-    for site in names:
-        lang = ADAPTERS[site]["lang"]
-        path = _snapshot_path(site, lang)
-        existing = _load(path)
-        print(f"[scrape] {site}: {len(existing)} cached postings; crawling up to {per_site} more…")
-        got = _crawl_site(site, per_site)
+    for name in names:
+        path = _snapshot_path(name)
+        existing = _prune_old(_load(path))
+        print(f"[scrape] {name}: {len(existing)} cached; crawling up to {C.SCRAPER_MAX_POSTINGS}…")
+        got = _crawl(name, C.SCRAPER_MAX_POSTINGS)
         added = 0
         for i, row in enumerate(got, 1):
-            if row["url"] not in existing:
+            if row["url"] and row["url"] not in existing:
                 added += 1
-            existing[row["url"]] = row
+            if row["url"]:
+                existing[row["url"]] = row
             if i % _CHUNK == 0:
-                _save(path, existing)   # checkpoint (resumable)
+                _save(path, existing)
         _save(path, existing)
         total_new += added
-        print(f"[scrape] {site}: +{added} new (snapshot now {len(existing)}) -> {path}")
-
-    print(f"[scrape] done: {total_new} new postings across {len(names)} site(s). "
+        print(f"[scrape] {name}: +{added} new (snapshot now {len(existing)}) -> {path}")
+    print(f"[scrape] done: {total_new} new postings across {len(names)} adapter(s). "
           f"Run `python run_pipeline.py --add SCRAPER` to ingest them.")
+    return total_new
+
+
+def refresh(sites: str = "all") -> None:
+    """Real-time refresh: crawl all sources, re-ingest SCRAPER, then run the enrichment layer (Wikidata
+    QIDs + agent/LLM descriptions/links + bilingual labels) over the new entities — as a full build does."""
+    run(sites)
+    from . import incremental          # lazy import (incremental pulls in the heavy pipeline)
+    incremental.add_source(C.SRC_SCRAPER, enrich=True)

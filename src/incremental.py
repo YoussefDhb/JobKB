@@ -25,7 +25,7 @@ def _refresh_global_provenance():
         "notes": f"{n_attach} ISCO attach edges total"}])
 
 
-def add_source(name: str):
+def add_source(name: str, enrich: bool = False):
     src = registry.get(name)
     print(f"=== add source: {name} ===")
     src.ingest()                        # per-source idempotent write of the new rows
@@ -35,6 +35,8 @@ def add_source(name: str):
         attach.run(focus_source=name)   # attach only this source's occupations to ISCO
     merge.run()                         # cheap recompute of unified concepts over full graph
     _refresh_global_provenance()
+    if enrich:                          # weave the new entities into the enrichment layer, like a full
+        pipeline._run_enrichment()      # build: Wikidata QIDs -> agent/LLM desc+links -> bilingual labels
     return pipeline.qa()
 
 
