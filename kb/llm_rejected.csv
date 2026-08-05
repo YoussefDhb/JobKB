@@ -68,3 +68,56 @@ desc,USKL_f0037093dd5e,Network security auditing software,Skill involves using s
 desc,USKL_62264675529f,Palo Alto Networks Next-Generation Security Platform,Skill involves configuring and managing Palo Alto Networks security appliances for network protection.,nli_off_topic,0.02
 desc,USKL_080866863819,Portswigger BurP Suite,skill: automated web application security testing using Burp Suite,nli_off_topic,0.254
 desc,USKL_36bccb1ad38e,Object oriented development environment software,Skill involves using tools and environments for object-oriented programming and software development.,nli_off_topic,0.195
+desc,USKL_3697c80215af,VME PowerPC VxWorks,"Skill involves configuring and maintaining systems using VME bus, PowerPC processors, and VxWorks operating system.",nli_off_topic,0.086
+desc,USKL_0b47ccac2ce4,Arping,Arping is a command-line utility for pinging hosts by their IP address using ARP protocol.,nli_off_topic,0.424
+desc,USKL_0b47ccac2ce4,Arping,Arping is a command-line utility for pinging hosts by their IP address using ARP protocol.,nli_off_topic,0.424
+desc,USKL_0b47ccac2ce4,Arping,Arping is a command-line utility for pinging hosts by their IP address using ARP protocol.,nli_off_topic,0.424
+desc,USKL_61c4ed23c68b,BitWizard B.V. mtr,Manufacturer of electronic components and systems,nli_off_topic,0.027
+desc,USKL_61c4ed23c68b,BitWizard B.V. mtr,Manufacturer of technical measurement equipment by BitWizard B.V.,nli_off_topic,0.145
+desc,USKL_61c4ed23c68b,BitWizard B.V. mtr,Manufacturer of technical measurement equipment by BitWizard B.V.,nli_off_topic,0.145
+desc,USKL_3083c7143ceb,Cisco Systems CiscoWorks LAN Management Solution,Skill involves managing local area networks using Cisco's LAN Management solution.,nli_off_topic,0.227
+desc,USKL_6883bde6e999,Ifconfig,skill to configure network interfaces on Unix-like systems,nli_off_topic,0.106
+desc,USKL_81e97025e2df,NetScout Sniffer Global Analyzer,Network traffic analysis tool for monitoring and troubleshooting network performance,nli_off_topic,0.024
+desc,USKL_e92abe326d51,NetScout Sniffer Portable Professional Analyzer,Skill involves using NetScout Sniffer for network analysis and troubleshooting in various professional settings.,nli_off_topic,0.045
+desc,USKL_883c2d545f0a,Netstat,"Netstat is a command-line utility for displaying network connections, routing tables, and other network statistics",nli_off_topic,0.102
+desc,USKL_bd78a8fc4dcb,Network intrusion detection software,Skill involves analyzing network traffic to detect unauthorized access attempts using specialized software tools.,nli_off_topic,0.431
+desc,USKL_9da83c947b0d,Dassault Systemes SolidWorks,skill: designing and drafting mechanical parts using SolidWorks software,nli_off_topic,0.071
+desc,USKL_0284cdf7c738,Flipgrid,Flipgrid is a video discussion platform for education and professional development.,nli_off_topic,0.027
+desc,USKL_0284cdf7c738,Flipgrid,Flipgrid is a video discussion platform for students and educators to share and respond to short videos.,nli_off_topic,0.095
+desc,USKL_0284cdf7c738,Flipgrid,Flipgrid is a video discussion platform for students and educators to share and respond to short videos.,nli_off_topic,0.095
+desc,USKL_a0dcb08f0e2d,LogMeIn GoToMeeting,Skill for remote support and meeting services using platforms like LogMeIn GoToMeeting,nli_off_topic,0.463
+desc,USKL_7b078f5ab0d5,Poll Everywhere,Skill: Using real-time interactive polling software in meetings and classes,nli_off_topic,0.243
+desc,USKL_8df9bd1ea8cb,Multi-router traffic grapher MRTG software,Skill involves using MRTG software to monitor network traffic across multiple routers.,nli_off_topic,0.225
+desc,USKL_996965c85060,Network availability monitoring software,Skill involves using software to monitor and ensure network uptime and performance.,nli_off_topic,0.129
+desc,USKL_996965c85060,Network availability monitoring software,Software for tracking and ensuring consistent network service reliability and performance.,nli_off_topic,0.251
+desc,USKL_996965c85060,Network availability monitoring software,Software for tracking and ensuring consistent network service reliability and performance.,nli_off_topic,0.251
+desc,USKL_eacf26e5bba4,Online traffic calculator software,Skill involves using specialized software to measure online traffic and analyze website performance in programming and software development domains.,nli_off_topic,0.035
+desc,USKL_983a5075a775,Open Shortest Path First (OSPF),OSPF is a routing protocol for internetworking in computer networks that uses link state routing.,nli_off_topic,0.476
+desc,USKL_33e3d3fc483d,Root cause analysis software,Skill involves using root cause analysis tools to diagnose and resolve software issues.,nli_off_topic,0.291
+desc,USKL_33e3d3fc483d,Root cause analysis software,Software tools used for identifying and analyzing the root causes of software defects or failures.,nli_off_topic,0.486
+desc,USKL_33e3d3fc483d,Root cause analysis software,Software tools used for identifying and analyzing the root causes of software defects or failures.,nli_off_topic,0.486
+desc,USKL_f2d6d1e62cb6,Simple mail transfer protocol SMTP,SMTP is a protocol for sending email messages over a network.,nli_off_topic,0.397
+desc,USKL_f2d6d1e62cb6,Simple mail transfer protocol SMTP,SMTP is a protocol for sending email messages over a network.,nli_off_topic,0.397
+desc,USKL_f2d6d1e62cb6,Simple mail transfer protocol SMTP,SMTP is a protocol for sending email messages over a network.,nli_off_topic,0.397
+desc,USKL_e8b3c19dfae3,NavisWorks Jetstream,Skill: Using NavisWorks for detailed BIM model coordination and simulation,nli_off_topic,0.012
+desc,USKL_30b08423b481,SiteMaster SiteSmart,Skill related to network testing and analysis tools in other technical domains,nli_off_topic,0.072
+desc,USKL_30b08423b481,SiteMaster SiteSmart,Skill in managing and deploying network infrastructure sites efficiently.,nli_off_topic,0.067
+desc,USKL_30b08423b481,SiteMaster SiteSmart,Skill in managing and deploying network infrastructure sites efficiently.,nli_off_topic,0.067
+desc,USKL_66c0eb6241e2,Restructured extended executor REXX,REXX programming language used for scripting and small applications in various domains including IT,nli_off_topic,0.066
+desc,USKL_58c1484a321d,Visual Paradigm DB Visual ARCHITECT,Skill involves designing database architectures using Visual Paradigm software,nli_off_topic,0.15
+desc,USKL_58c1484a321d,Visual Paradigm DB Visual ARCHITECT,Skill involves using Visual Paradigm to design and visualize database architectures professionally.,nli_off_topic,0.137
+desc,USKL_58c1484a321d,Visual Paradigm DB Visual ARCHITECT,Skill involves using Visual Paradigm to design and visualize database architectures professionally.,nli_off_topic,0.137
+desc,USKL_11774f6c900e,C Shell,Unix shell scripting language and command interpreter,nli_off_topic,0.002
+desc,USKL_c1966494097e,CA Technologies ERWin Data Modeler,Skill involves creating and managing database models using ERWin tools in databases and data management domains.,nli_off_topic,0.01
+desc,USKL_aba538900796,Coglin Mill RODIN,Coglin Mill RODIN not found in standard IT taxonomy,nli_off_topic,0.031
+desc,USKL_aba538900796,Coglin Mill RODIN,Coglin Mill RODIN is an obsolete term likely referring to a specific process or method in technical documentation or project management.,nli_off_topic,0.142
+desc,USKL_aba538900796,Coglin Mill RODIN,Coglin Mill RODIN is an obsolete term likely referring to a specific process or method in technical documentation or project management.,nli_off_topic,0.142
+desc,USKL_c41c3bf8fd4d,Data Recovery Software SQL Server Data Recovery,Skill involves using software to recover data from SQL Server databases in databases and data management domains.,nli_off_topic,0.082
+desc,USKL_33c63523f474,Interface Computers Data Loader,role responsible for transferring data between computer systems.,nli_off_topic,0.027
+desc,USKL_896844057694,Quest SQL Optimizer for Oracle,Skill involves optimizing SQL queries in Oracle databases managed within databases and data management domains.,nli_off_topic,0.056
+desc,USKL_4bebe9f05416,Rapid-I RapidMiner,Skill involves using RapidMiner for data analysis and modeling in various technical domains.,nli_off_topic,0.144
+desc,USKL_e59c5cbe7d20,WisdomForce DatabaseSync System,Skill involves configuring and maintaining database synchronization systems in databases and data management fields,nli_off_topic,0.004
+desc,USKL_18108786965b,CodeFutures dbShards,Skill related to managing database shards using code frameworks like CodeFutures,nli_off_topic,0.432
+desc,USKL_18108786965b,CodeFutures dbShards,Skill involving distributed database management using CodeFutures technology.,nli_off_topic,0.05
+desc,USKL_18108786965b,CodeFutures dbShards,Skill involving distributed database management using CodeFutures technology.,nli_off_topic,0.05
+desc,USKL_5794e608b873,IBM Clarity Systems Clarity,Skill involves using IBM's Clarity Systems for application lifecycle management and software quality assurance.,nli_off_topic,0.431

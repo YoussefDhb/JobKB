@@ -19,3 +19,4 @@ beautifulsoup4               # resilient HTML parsing for the job-board adapters
 notebook
 ipywidgets
 matplotlib
+networkx                     # graph analytics use case (centrality / structural bridges) in inspect.ipynb
