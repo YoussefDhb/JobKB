@@ -26,6 +26,6 @@ SKILL_ONTO,SKILL_ONTO,-,2026-08-05T11:31:41+00:00,neutral_faceted_ontology,"1209
 ALIGNMENT,ALIGNMENT,-,2026-08-05T12:01:24+00:00,incremental,414255 alignments total
 ATTACH,ATTACH,-,2026-08-05T12:01:24+00:00,incremental,198 ISCO attach edges total
 WIKIDATA,WIKIDATA,live query.wikidata.org,2026-08-05T12:51:58+00:00,sparql label-match + class verify + metadata,"1209 QID anchors (1164 skills, 37 occ, 8 domains, 1044 high-conf); 2 SPARQL queries this run"
-AGENT,AGENT,langgraph; api=meta-llama/Llama-3.1-8B-Instruct,2026-08-05T14:12:19+00:00,langgraph controller + reflective workers (propose/verify/reflect),"description={'targets': 8015, 'committed': 8, 'deferred': 8007, 'reflected': 4}; link={'targets': 24, 'links': 38, 'occupations_linked': 6, 'reflected': 36}; emerging={'proposed': 39, 'new_candidates': 35, 'added_skills': 0}; anchor={'eligible': 5998, 'unanchored': 4834, 'unattempted': 0}"
 TRANSLATE,TRANSLATE,wd+mt=facebook/nllb-200-distilled-600M,2026-08-05T14:14:59+00:00,wikidata-labels + nllb-mt + backtranslation-validation,"en_fr={'targets': 444, 'attempted': 58, 'verbatim': 0, 'validated': 57, 'rejected': 1}; fr_en={'targets': 20, 'attempted': 0, 'verbatim': 0, 'validated': 0, 'rejected': 0}"
-MERGE,MERGE,-,2026-08-06T08:47:46+00:00,connected_components(exactMatch),"292 unified occ (13 merged), 11136 unified skills (710 merged)"
+MERGE,MERGE,-,2026-08-06T20:32:38+00:00,connected_components(exactMatch),"292 unified occ (13 merged), 11136 unified skills (710 merged)"
+AGENT,AGENT,langgraph; api=meta-llama/Llama-3.1-8B-Instruct,2026-08-06T20:32:38+00:00,langgraph controller + reflective workers (propose/verify/reflect),"description={'targets': 8007, 'committed': 7915, 'deferred': 92, 'reflected': 567}"

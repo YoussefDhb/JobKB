@@ -549,3 +549,112 @@ desc,USKL_d6bcae24ea4f,Azure Cloud Services,Skill in managing and deploying serv
 desc,USKL_fa6b8711ba51,Bit.ly,Shortened URL service used in Cloud and DevOps for efficient link management,nli_off_topic,0.013
 desc,USKL_22336839ab62,Blogger (Service),Skill involves creating content for blogs and websites in web development and mobile development domains.,nli_off_topic,0.043
 desc,USKL_74b94bfa5101,Brute Force Attacks,Skill involves attempting to gain unauthorized access by systematically trying many passwords or keys until successful.,nli_off_topic,0.005
+desc,USKL_7644662c9841,CA Test Data Manager,Skill involves managing test data for software development projects using specific methodologies and practices.,nli_off_topic,0.005
+desc,USKL_52c0e48217d8,CA Wily Introscope,Skill involves monitoring and troubleshooting applications using Wily Introscope in software development methodologies.,nli_off_topic,0.332
+desc,USKL_ae57172b7537,Call Admission Control (VoIP Protocols),Skill involves managing network call traffic to ensure quality and availability in VoIP networks.,nli_off_topic,0.055
+desc,USKL_912895008262,Call Recording,Skill involves capturing and storing audio of phone calls in telecommunications networks.,nli_off_topic,0.476
+desc,USKL_e1fa45465f3f,Cascading Style Sheets (CSS),CSS is a stylesheet language used in web development to describe the presentation of a web page.,nli_off_topic,0.22
+desc,USKL_e1fa45465f3f,Cascading Style Sheets (CSS),CSS is a stylesheet language used for describing the presentation of a web document.,nli_off_topic,0.2
+desc,USKL_e1fa45465f3f,Cascading Style Sheets (CSS),CSS is a stylesheet language used for describing the presentation of a web document.,nli_off_topic,0.2
+desc,USKL_e76561485446,Cisco Unified Communications Manager,Skill involves managing and maintaining voice and video communication systems in networks.,nli_off_topic,0.002
+desc,USKL_ff7d7b318aa0,Data Feed,structured data transmitted between systems or applications in a standardized format.,nli_off_topic,0.037
+desc,USKL_871cd88072e3,Day Cq,Data collection and quality assurance in web development,nli_off_topic,0.037
+desc,USKL_871cd88072e3,Day Cq,Data quality assurance performed daily in web development projects.,nli_off_topic,0.241
+desc,USKL_871cd88072e3,Day Cq,Data quality assurance performed daily in web development projects.,nli_off_topic,0.241
+desc,USKL_d4e5ab9ce766,Digital Signal 0,Skill in digital signal processing for networks and telecommunications systems.,nli_off_topic,0.04
+desc,USKL_c7c165780cb0,Digital Signal 1,Digital Signal Processing fundamental skill in telecommunications networks domain.,nli_off_topic,0.111
+desc,USKL_c18fc6d3a72d,Drive Mapping,Skill involves configuring network drives for file access in IT environments.,nli_off_topic,0.093
+desc,USKL_5ab964f9346d,Dynamic Object-Oriented Requirements System (DOORS),Skill involves using DOORS for managing software requirements in systems and infrastructure domains.,nli_off_topic,0.073
+desc,USKL_a58e5680c071,Evolutionary Acquisition Of Neural Topologies,Skill involves adapting neural network architectures over time to improve performance on specific tasks.,nli_off_topic,0.074
+desc,USKL_08c0f47aa1fa,Extract Transform Load (ETL),"Skill involves extracting data from various sources, transforming it for analysis, and loading it into a destination system.",nli_off_topic,0.035
+desc,USKL_a0ee3771adae,Fbx,Fbx is a file format and software tool used in 3D modeling and animation for importing exporting assets and managing content.,nli_off_topic,0.412
+desc,USKL_3b4c3f8e3d04,Gitkraken,GitKraken is a graphical user interface for Git version control systems used in cloud and DevOps environments.,nli_off_topic,0.027
+desc,USKL_3b4c3f8e3d04,Gitkraken,Gitkraken is a graphical user interface for version control systems including Git.,nli_off_topic,0.131
+desc,USKL_3b4c3f8e3d04,Gitkraken,Gitkraken is a graphical user interface for version control systems including Git.,nli_off_topic,0.131
+desc,USKL_117173e860f2,Global Data Synchronization Networks,Skill involves coordinating data across distributed networks globally for seamless database operations and analytics.,nli_off_topic,0.028
+desc,USKL_1fbcbeffec1d,Google Cloud Composer,Skill: Managing Apache Airflow workflows on Google Cloud Platform for cloud infrastructure automation and orchestration.,nli_off_topic,0.003
+desc,USKL_5bce5929dd48,Google Compute Engine,cloud computing service for infrastructure management and deployment.,nli_off_topic,0.005
+desc,USKL_28bbcd43ecde,High Assurance Internet Protocols Encryptor,Skill involves designing and implementing high assurance encryption protocols for secure internet communications.,nli_off_topic,0.255
+desc,USKL_2aca8fc0be0a,IBM Aggregate Backup And Recovery Systems,Skill involves configuring and managing IBM backup and recovery systems for data protection in IT infrastructure.,nli_off_topic,0.052
+desc,USKL_7268ab762f27,IBM Mainframe,specialized skill in maintaining legacy mainframe computing systems infrastructure.,nli_off_topic,0.019
+desc,USKL_20a6a1b43f29,IBM OS/2 (Software),IBM OS/2 is a discontinued operating system for IBM PC compatibles.,nli_off_topic,0.363
+desc,USKL_b82f31a5dd63,IBM Spufi,IBM SPSS is a statistical software for data analysis in databases and analytics fields.,nli_off_topic,0.447
+desc,USKL_a52d2c28f6da,IBM WAS,IBM WebSphere Application Server development and administration skills,nli_off_topic,0.051
+desc,USKL_a52d2c28f6da,IBM WAS,IBM WebSphere Application Server is a middleware platform for deploying and managing enterprise applications.,nli_off_topic,0.256
+desc,USKL_a52d2c28f6da,IBM WAS,IBM WebSphere Application Server is a middleware platform for deploying and managing enterprise applications.,nli_off_topic,0.256
+desc,USKL_113c2c1247d8,IMac,IMac not recognized as valid skill in Systems & infrastructure contexts,nli_off_topic,0.004
+desc,USKL_e11571884d02,IPod Touch,Skill: Using iOS applications and basic mobile app development concepts,nli_off_topic,0.014
+desc,USKL_95c64a2c548c,Information Governance And Management,Skill involves overseeing policies for managing and protecting information within databases and data environments.,nli_off_topic,0.233
+desc,USKL_d6d79719a4b8,Integrated Maintenance Data System,Skill involves managing and maintaining databases using integrated maintenance systems in data management fields.,nli_off_topic,0.391
+desc,USKL_c5353b2b9f37,Job Entry Subsystem 2/3,Skill involves configuring and managing subsystems in system infrastructure 2 out of 3 levels typically.,nli_off_topic,0.007
+desc,USKL_9f95b4d529eb,Legacy System Migration Workbench,Skill involves using specialized tools for migrating legacy database systems efficiently,nli_off_topic,0.004
+desc,USKL_d5584125bcd5,LigHTTPD,LigHTTPD is a less common term likely referring to a custom HTTP daemon or service in a specific system or infrastructure context.,nli_off_topic,0.337
+desc,USKL_4aea3734c008,Long Short-Term Memory (LSTM),LSTM is a type of recurrent neural network designed to address vanishing gradient problems in training deep networks.,nli_off_topic,0.029
+desc,USKL_9202aacc00f6,Loop Facility Assignment Control Systems,Skill involves managing network facilities assignments in telecommunications networks.,nli_off_topic,0.007
+desc,USKL_9202aacc00f6,Loop Facility Assignment Control Systems,Skill involves managing network loops for efficient data transmission control in telecommunications networks.,nli_off_topic,0.016
+desc,USKL_9202aacc00f6,Loop Facility Assignment Control Systems,Skill involves managing network loops for efficient data transmission control in telecommunications networks.,nli_off_topic,0.016
+desc,USKL_aca584af3400,Low Level Virtual Machine (Free Compilers And Interpreters),Skill involves understanding and using low level virtual machine technologies such as compilers and interpreters for programming languages.,nli_off_topic,0.027
+desc,USKL_984423c1b88e,MIMIX Availability (Software),Skill involves managing and ensuring availability of software systems in cloud environments.,nli_off_topic,0.006
+desc,USKL_b007e362172a,MSDN-The Microsoft Developer Networks,MSDN is Microsoft's online technical library for developers.,nli_off_topic,0.273
+desc,USKL_4470f6bbbf05,Macromedia Flex Markup Language (MXML),MXML is a markup language used for defining user interfaces in Adobe Flex applications.,nli_off_topic,0.144
+desc,USKL_4470f6bbbf05,Macromedia Flex Markup Language (MXML),MXML is a markup language used for defining user interfaces in Adobe Flex applications.,nli_off_topic,0.144
+desc,USKL_4470f6bbbf05,Macromedia Flex Markup Language (MXML),MXML is a markup language used for defining user interfaces in Adobe Flex applications.,nli_off_topic,0.144
+desc,USKL_84e1ed360ffb,ManageEngine AssetExplorer,Skill involves using software to manage and track IT assets efficiently.,nli_off_topic,0.001
+desc,USKL_3f462def2a7d,Micro Focus Application Lifecycle Management (ALM),Skill involves managing software development processes using tools provided by Micro Focus ALM.,nli_off_topic,0.281
+desc,USKL_ec3925e82053,Microsoft Backoffice Servers,Skill involves managing and maintaining Microsoft server technologies for enterprise infrastructure.,nli_off_topic,0.007
+desc,USKL_0c50fae299bd,Microsoft Family Safety,Skill involves configuring parental controls and monitoring tools in Microsoft products for organizational use.,nli_off_topic,0.114
+desc,USKL_192a7f3df40f,Microsoft Platform Builder,Skill in developing applications using Microsoft platforms and technologies,nli_off_topic,0.097
+desc,USKL_4fbb56d78d41,Microsoft Sharepoint Migrations,Skill involves planning executing and maintaining data migrations from old SharePoint environments to new versions or cloud services.,nli_off_topic,0.227
+desc,USKL_5d7141b19306,Microsoft Terminal Server,Skill involves managing Terminal Server environments for IT support and administration.,nli_off_topic,0.093
+desc,USKL_e757dfe41d4c,Microsoft Visual C Sharp,Microsoft Visual C# is a programming language for developing Windows software applications.,nli_off_topic,0.006
+desc,USKL_e757dfe41d4c,Microsoft Visual C Sharp,Microsoft Visual C# is a programming language and integrated development environment for object-oriented Windows application development.,nli_off_topic,0.008
+desc,USKL_e757dfe41d4c,Microsoft Visual C Sharp,Microsoft Visual C# is a programming language and integrated development environment for object-oriented Windows application development.,nli_off_topic,0.008
+desc,USKL_1d90d91d830c,Microsoft Visual Studio Debuggers,Skill involves using debugging tools in Visual Studio to identify and fix software errors.,nli_off_topic,0.205
+desc,USKL_488043b90686,Network Model,conceptual framework describing network architecture and data flow.,nli_off_topic,0.45
+desc,USKL_56cdfd5403e3,Network Processor,specialized hardware or software component managing network traffic.,nli_off_topic,0.005
+desc,USKL_b4ef81fe5e67,Next Unit Of Computing (NUC),NUC skill refers to a unit of computing resource in cloud architecture.,nli_off_topic,0.331
+desc,USKL_7ef19a1eb39e,OSI Models,networking framework defining 7 layers from physical to application.,nli_off_topic,0.043
+desc,USKL_3dc95be8530e,Object Linking And Embedding - Database (OLE DB),OLE DB is a Microsoft technology for accessing data from various sources in a database-independent manner.,nli_off_topic,0.052
+desc,USKL_1b768c5bc2c4,Online Service Provider,Skill related to managing and providing online services through web platforms and applications.,nli_off_topic,0.434
+desc,USKL_f22487426c24,Open Source Security Testing Methodology,Skill involves testing security measures using open source tools and methodologies in cybersecurity domains.,nli_off_topic,0.062
+desc,USKL_50e3067449b7,Peoplesoft Application Designer,Skill involves designing and developing applications using Oracle PeopleSoft technology in software development roles.,nli_off_topic,0.281
+desc,USKL_6ba205b482e6,Pick Basic (Software),Basic programming language skill for software development tasks,nli_off_topic,0.326
+desc,USKL_8881a34ef7dc,Read Code,Skill to comprehend and interpret programming code in various languages and formats,nli_off_topic,0.175
+desc,USKL_8881a34ef7dc,Read Code,Skill to comprehend and understand written programming code.,nli_off_topic,0.117
+desc,USKL_8881a34ef7dc,Read Code,Skill to comprehend and understand written programming code.,nli_off_topic,0.117
+desc,USKL_429aa098e470,Reference Implementation,A working version of a specification used for testing or evaluation purposes in software development.,nli_off_topic,0.067
+desc,USKL_429aa098e470,Reference Implementation,A working version of software used as a reference for implementation details and design.,nli_off_topic,0.463
+desc,USKL_429aa098e470,Reference Implementation,A working version of software used as a reference for implementation details and design.,nli_off_topic,0.463
+desc,USKL_d4abb020bdbd,Rhel6,Skill: Managing and developing applications on Red Hat Enterprise Linux version 6,nli_off_topic,0.375
+desc,USKL_38c193d508c0,Rhel7,Skill: Managing and troubleshooting systems using Red Hat Enterprise Linux version 7,nli_off_topic,0.391
+desc,USKL_ad044f1622b9,Rich Site Summary (RSS),RSS is a web feed format for regularly updating information like blog entries or news headlines.,nli_off_topic,0.109
+desc,USKL_b935c752fbdf,Rooting (Android OS),Skill involves accessing and modifying Android OS to enable custom software installations outside manufacturer's intent.,nli_off_topic,0.072
+desc,USKL_35ef20948abc,Scalability,Skill: The ability to design systems that can handle increased loads without degradation.,nli_off_topic,0.053
+desc,USKL_eff960900491,Scrapy (Web Crawler),Scrapy is a Python library for web scraping and data extraction.,nli_off_topic,0.432
+desc,USKL_eff960900491,Scrapy (Web Crawler),Scrapy is an open-source web scraping library for Python used to extract data from websites.,nli_off_topic,0.343
+desc,USKL_eff960900491,Scrapy (Web Crawler),Scrapy is an open-source web scraping library for Python used to extract data from websites.,nli_off_topic,0.343
+desc,USKL_b68da6f4b1f8,Simple Object Access Protocol (SOAP),SOAP is a protocol for exchanging structured information in the implementation of web services in computer networks.,nli_off_topic,0.5
+desc,USKL_bc29fa24b92b,Slurm (Batch Scheduling Software),Slurm is a workload manager for high-performance computing clusters used in cloud and DevOps environments.,nli_off_topic,0.422
+desc,USKL_64569184c0da,Standard Template Library (STL),C++ pre-implemented template containers and algorithms library.,nli_off_topic,0.16
+desc,USKL_47bda40653d6,Surrogate Key,"Surrogate Key is a unique identifier assigned to database rows, often non-descriptive, used for foreign key relationships.",nli_off_topic,0.241
+desc,USKL_9633427fa789,Symantec Altiris,Skill: Managing and implementing Altiris software for IT asset management and system administration.,nli_off_topic,0.143
+desc,USKL_8126f66a8cc4,System Recovery,Skill involves diagnosing and restoring compromised computer systems.,nli_off_topic,0.448
+desc,USKL_31f2fbfc1b30,Technological Transitions,Skill: Understanding and managing organizational changes in technology systems.,nli_off_topic,0.338
+desc,USKL_fdacff564be8,Temporary File,"In databases and data management, a file stored for short-term use during processing.",nli_off_topic,0.224
+desc,USKL_aba433769586,Test Script,A document detailing test cases and procedures in software development methodologies.,nli_off_topic,0.054
+desc,USKL_aba433769586,Test Script,A document detailing test cases and procedures for software validation.,nli_off_topic,0.084
+desc,USKL_aba433769586,Test Script,A document detailing test cases and procedures for software validation.,nli_off_topic,0.084
+desc,USKL_a4eb2f7e46b5,VMWare Workspace ONE,Skill involves managing Workspace ONE for cloud infrastructure and system administration tasks.,nli_off_topic,0.075
+desc,USKL_bc69bd8af0eb,Video Conferencing Facilities,Skill involves managing and supporting video conferencing systems within IT management and governance domains.,nli_off_topic,0.412
+desc,USKL_f0569368815f,Virtual Private Networks (VPN),Skill involves configuring and managing secure encrypted connections over public networks.,nli_off_topic,0.085
+desc,USKL_d91bd8fff477,Virtual Private Servers,Skill involves managing virtual servers hosted on remote infrastructure for secure networked computing environments.,nli_off_topic,0.26
+desc,USKL_5a27be7d070a,Vulnerability Discovery,Skill involves identifying software or system weaknesses that could be exploited by attackers.,nli_off_topic,0.497
+desc,USKL_7850e20b968c,Windows Fundamentals For Legacy PCs,Skill involves understanding and managing legacy PCs on Windows platforms for IT infrastructure management.,nli_off_topic,0.007
+desc,USKL_29aec8320722,Windows Interface Source Environment,Skill involves working with Windows interface source code for software development tasks.,nli_off_topic,0.326
+desc,USKL_29aec8320722,Windows Interface Source Environment,Skill involving tools and APIs for modifying Windows interface code.,nli_off_topic,0.052
+desc,USKL_29aec8320722,Windows Interface Source Environment,Skill involving tools and APIs for modifying Windows interface code.,nli_off_topic,0.052
+desc,USKL_aa768eb8f624,XML Configuration Access Protocols,Skill involves configuring and accessing protocols for XML-based data exchange in cloud and infrastructure systems.,nli_off_topic,0.136
+desc,USKL_76f5acf1c889,Zip Drive,Zip Drive is obsolete for database and data management tasks now replaced by modern file systems and compression software.,nli_off_topic,0.179
+desc,USKL_24d02340ae36,App Store Connect,Skill: Managing Apple's app distribution platform for iOS apps.,nli_off_topic,0.009
+desc,USKL_1b2c28cab7c0,Insomnia,Insomnia is not relevant to networks and telecommunications.,nli_off_topic,0.127
+desc,USKL_0ed78285d50a,soa,Service-oriented architecture design and implementation expertise,nli_off_topic,0.401
