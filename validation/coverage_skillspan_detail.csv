@@ -52,7 +52,7 @@ business analysis,knowledge,tech,,7,True,USKL_33bf34283b66,0.889,USKL_0dbcf98ff1
 development,knowledge,tech,,17,False,,0.765,USKL_5a9cdf255e0a,True
 maintenance,knowledge,tech,,12,False,,0.851,USKL_c37efee496fb,True
 software improvement,knowledge,tech,,7,False,,0.805,USKL_38e78d24b7cb,True
-front-end,knowledge,tech,,5,False,,0.836,USKL_44e9eeec09b4,True
+front-end,knowledge,tech,,5,False,,0.899,USKL_658bf6080353,True
 css,knowledge,tech,,13,True,USKL_7d527983af21,0.89,USKL_ea958e3f8ddb,True
 passion,skill,tech,,4,False,,0.678,USKL_89b25331cecb,False
 energy,skill,tech,,1,False,,0.793,USKL_e39a159b0d16,True
@@ -101,7 +101,7 @@ functional programming,knowledge,tech,,4,True,USKL_966972a2a57d,0.9,USKL_a2b1d4a
 Jira,knowledge,tech,,7,True,USKL_18bffe97f12a,0.748,USKL_44314408bddb,False
 developing reliable code,skill,tech,,1,False,,0.755,USKL_8f7b4b31a077,True
 PHP,knowledge,tech,,9,True,USKL_a5dbd0ae2462,1.0,USKL_a5dbd0ae2462,True
-back-end,knowledge,tech,,3,False,,0.839,USKL_f51fcfc7a6be,True
+back-end,knowledge,tech,,3,False,,0.964,USKL_a9b9ef55f454,True
 Vue,knowledge,tech,,9,True,USKL_6ab192c7d5a1,0.843,USKL_6ab192c7d5a1,True
 SCSS,knowledge,tech,,3,False,,0.703,USKL_ea958e3f8ddb,False
 end-to-end lifecycle,knowledge,tech,,1,False,,0.749,USKL_1793e303c997,False
@@ -243,14 +243,14 @@ mobile development space,knowledge,tech,,1,False,,0.737,USKL_6aa525afa226,False
 responsive web apps .,knowledge,tech,,1,False,,0.803,USKL_667694889f8b,True
 IT Security,knowledge,tech,,4,True,USKL_693c61246e06,0.875,USKL_2a69f95d1f1e,True
 Software Development,knowledge,tech,,23,True,USKL_476b42c60b30,1.0,USKL_476b42c60b30,True
-security,knowledge,tech,,13,False,,0.868,USKL_a3c3bae0853c,True
-infrastructure,knowledge,tech,,3,False,,0.816,USKL_c7565d8c54d6,True
+security,knowledge,tech,,13,True,USKL_e86b40fe49a6,1.0,USKL_e86b40fe49a6,True
+infrastructure,knowledge,tech,,3,True,USKL_31fed3529ff6,1.0,USKL_31fed3529ff6,True
 iam,knowledge,tech,,2,True,USKL_6d20fa14c76d,0.669,USKL_f8705c224edd,False
 pki,knowledge,tech,,2,True,USKL_37b280c31faa,0.859,USKL_37b280c31faa,True
 configurationmanager,knowledge,tech,,1,False,,0.787,USKL_ca4a33c943b8,True
-sysadmin,knowledge,tech,,4,False,,0.742,USKL_09c667452eee,False
+sysadmin,knowledge,tech,,4,False,,0.866,USKL_21a21aab16d0,True
 build secure and maintain an environment in which modern technology and tools foster frictionless operations within the company?,skill,tech,,1,False,,0.653,USKL_776aefe11d04,False
-building your own infrastructure,skill,tech,,1,False,,0.724,USKL_6a245b747803,False
+building your own infrastructure,skill,tech,,1,False,,0.745,USKL_31fed3529ff6,False
 using the Cloud,skill,tech,,1,False,,0.837,USKL_93910802be74,True
 translates people’s needs and expectations into actionable technical tasks,skill,tech,,1,False,,0.789,USKL_6456ca625a08,True
 lead,skill,tech,,1,True,USKL_5b71f76ce29b,0.719,USKL_5b71f76ce29b,False
@@ -492,7 +492,7 @@ Design and facilitate workshops,skill,tech,,1,False,,0.825,USKL_09b4980ef98b,Tru
 Lead small to midsize projects,skill,tech,,1,False,,0.653,USKL_b6b5a691ee19,False
 work scoping,skill,tech,,1,False,,0.697,USKL_bc3bc5184975,False
 developing strong client relationships,skill,tech,,1,False,,0.871,USKL_984227b6ba14,True
-UX/,knowledge,tech,,1,False,,0.763,USKL_ba89d43589bd,True
+UX/,knowledge,tech,,1,False,,0.831,USKL_e373b8579a38,True
 UI,knowledge,tech,,3,False,,0.811,USKL_c23c76035fd2,True
 UX/ UI design,knowledge,tech,,1,False,,0.801,USKL_ef62ea83170e,True
 human-computer interaction,knowledge,tech,,2,True,USKL_03a5422501df,1.0,USKL_03a5422501df,True
@@ -565,7 +565,7 @@ build a meaningful engineering discipline,skill,tech,,1,False,,0.657,USKL_5c7c4b
 combining software and systems,skill,tech,,1,False,,0.799,USKL_7fa97bc1c911,True
 develop creative engineering solutions to operations problems,skill,tech,,1,False,,0.816,USKL_cdd677632a2b,True
 optimizing existing systems,skill,tech,,1,False,,0.898,USKL_26b6b1fdad2e,True
-building infrastructure,skill,tech,,1,False,,0.752,USKL_6b6fd5a89422,True
+building infrastructure,skill,tech,,1,False,,0.889,USKL_31fed3529ff6,True
 reducing work through automation,skill,tech,,1,False,,0.773,USKL_39fe6a3ed3b7,True
 take the lead on relevant projects,skill,tech,,1,False,,0.755,USKL_e0cbadede7fd,True
 running better production applications and systems,skill,tech,,1,False,,0.829,USKL_26b6b1fdad2e,True
@@ -574,7 +574,7 @@ Troubleshoot minor incidents,skill,tech,,1,False,,0.746,USKL_6de6193a0802,False
 contribute to resolution through post-mortems,skill,tech,,1,False,,0.655,USKL_86c18f71716d,False
 Apps,knowledge,tech,,1,False,,0.907,USKL_458a18e2c22c,True
 Systems,knowledge,tech,,2,False,,0.814,USKL_af9972ec8e28,True
-Infrastructure ),knowledge,tech,,1,False,,0.693,USKL_e770fac6124b,False
+Infrastructure ),knowledge,tech,,1,False,,0.786,USKL_31fed3529ff6,True
 application or service development lifecycle,knowledge,tech,,1,False,,0.824,USKL_92675dcef55c,True
 address failure patterns and incidents,skill,tech,,1,False,,0.676,USKL_27afcc09086c,False
 Conduct performance tests,skill,tech,,1,False,,0.805,USKL_487a415c3434,True
@@ -656,7 +656,7 @@ Articulate technical characteristics of services and technology areas,skill,tech
 Understand and communicate the scale capacity security performance attributes and requirements of the service and technology stack,skill,tech,,1,False,,0.688,USKL_2f42d6719359,False
 automation and orchestration principles,knowledge,tech,,1,False,,0.718,USKL_cd33383e0b98,False
 Act as ultimate escalation point for complex or critical issues,skill,tech,,1,False,,0.669,USKL_44ead20e7bd9,False
-Understand and explain the affect of product architecture decisions on distributed systems,skill,tech,,1,False,,0.663,USKL_d9bd059c896c,False
+Understand and explain the affect of product architecture decisions on distributed systems,skill,tech,,1,False,,0.671,USKL_858464c59458,False
 BS or MS in Computer Science,knowledge,tech,,1,False,,0.775,USKL_f57985cff33e,True
 Identifies and implements complex solutions,skill,tech,,2,False,,0.734,USKL_8f534f5e1ad4,False
 server hardware and software configuration,knowledge,tech,,1,False,,0.831,USKL_909ed490ef58,True
@@ -679,7 +679,7 @@ JSON,knowledge,tech,,6,True,USKL_b5e244d9a34f,1.0,USKL_b5e244d9a34f,True
 Android development,knowledge,tech,,1,True,USKL_9b12154cc483,0.974,USKL_9b12154cc483,True
 content Provider implementation,knowledge,tech,,1,False,,0.683,USKL_3de861976f2a,False
 working with designers,skill,tech,,1,False,,0.855,USKL_35e8bb60a1ff,True
-UI/UX,knowledge,tech,,1,False,,0.768,USKL_1a088b5f953d,True
+UI/UX,knowledge,tech,,1,True,USKL_e373b8579a38,0.825,USKL_e373b8579a38,True
 Butterknife,knowledge,tech,,1,False,,0.795,USKL_a1d5642c27fb,True
 Retrofit,knowledge,tech,,1,False,,0.685,USKL_7935e3fdb77b,False
 Dagger 2,knowledge,tech,,1,True,USKL_7eff9a5e9bd2,1.0,USKL_7eff9a5e9bd2,True
@@ -895,7 +895,7 @@ network vendor interactions,knowledge,tech,,1,False,,0.703,USKL_6d8f75081f6d,Fal
 Cisco CCNP,knowledge,tech,,1,False,,0.769,USKL_653fdb1438fd,True
 CCIE,knowledge,tech,,1,False,,0.632,USKL_487f35f2d58a,False
 Juniper JNCIP¬SP,knowledge,tech,,1,False,,0.684,USKL_534dd7184129,False
-CCISP,knowledge,tech,,1,False,,0.536,USKL_be2f2b91d291,False
+CCISP,knowledge,tech,,1,False,,0.536,USKL_31ff8c3eb0ed,False
 data communication,knowledge,tech,,1,False,,0.8,USKL_80e1eca8c5b4,True
 Linux and Windows networking,knowledge,tech,,1,False,,0.678,USKL_000b897cd2b7,False
 development and support of network fabric and systems,skill,tech,,1,False,,0.728,USKL_98b428e0a633,False
@@ -1016,7 +1016,7 @@ continuous integration,knowledge,tech,,9,True,USKL_391196705c0a,0.96,USKL_93204b
 CI tools,knowledge,tech,,1,False,,0.734,USKL_c93e2eb3a958,False
 Concourse,knowledge,tech,,1,False,,0.617,USKL_509ebec43d59,False
 testing frameworks,knowledge,tech,,1,False,,0.908,USKL_467fcee5e612,True
-performance security,knowledge,tech,,1,False,,0.752,USKL_54802d139bd9,True
+performance security,knowledge,tech,,1,False,,0.757,USKL_e86b40fe49a6,True
 resilience,knowledge,tech,,1,True,USKL_90ae91ef536e,0.834,USKL_eceb84ff7a68,True
 Development of data-intensive and high-traffic backend applications,skill,tech,,1,False,,0.738,USKL_102db9fabe76,False
 Developing our ETL track,skill,tech,,1,False,,0.649,USKL_1325d8a858e6,False
@@ -1184,7 +1184,7 @@ continuous learning,skill,tech,,1,True,USKL_582975d456c0,1.0,USKL_582975d456c0,T
 self-development,skill,tech,,1,False,,0.799,USKL_de0e5dc1a2c3,True
 leadership approach,skill,tech,,1,False,,0.861,USKL_c8a5d0c1c5f2,True
 clearly articulate,skill,tech,,1,False,,0.659,USKL_adff83289c1b,False
-back-end development,knowledge,tech,,1,False,,0.889,USKL_102db9fabe76,True
+back-end development,knowledge,tech,,1,False,,0.897,USKL_a9b9ef55f454,True
 django,knowledge,tech,,12,True,USKL_2818ab675ac2,0.953,USKL_2818ab675ac2,True
 get stuff done quickly,skill,tech,,2,False,,0.798,USKL_43917307b5e4,True
 Have the user in mind,skill,tech,,1,False,,0.79,USKL_5ef3c288e51b,True
@@ -1235,7 +1235,7 @@ Kanban We,knowledge,tech,,1,False,,0.857,USKL_c520fc4ccf6c,True
 Retail technology,knowledge,tech,,1,False,,0.68,USKL_0e0fded41882,False
 Kiosks,knowledge,tech,,1,False,,0.798,USKL_884d9c361e5a,True
 EPOS,knowledge,tech,,1,False,,0.664,USKL_26680442dd5f,False
-on-prem infrastructure),knowledge,tech,,1,False,,0.607,USKL_1ee11b173879,False
+on-prem infrastructure),knowledge,tech,,1,False,,0.658,USKL_31fed3529ff6,False
 create the devops vision and strategy,skill,tech,,1,False,,0.638,USKL_82b91accd68a,False
 collaborating with your peers,skill,tech,,1,False,,0.874,USKL_ad08ea7e1c1d,True
 deliver to the strategy planned out,skill,tech,,1,False,,0.761,USKL_b361f4a11552,True
@@ -1351,7 +1351,7 @@ Take operational responsibility for the services,skill,tech,,1,False,,0.788,USKL
 Build and maintain admin interfaces,skill,tech,,1,False,,0.717,USKL_f0202070ef29,False
 make multi-tenancy business logic configuration accessible,skill,tech,,1,False,,0.671,USKL_b19945f17911,False
 multi-tenant distributed and international web API service infrastructure,knowledge,tech,,1,False,,0.663,USKL_1d78ab496a9e,False
-backend,knowledge,tech,,2,False,,0.86,USKL_dc27fb6602f7,True
+backend,knowledge,tech,,2,True,USKL_a9b9ef55f454,1.0,USKL_a9b9ef55f454,True
 modern programming,knowledge,tech,,1,False,,0.758,USKL_fd83320af0d4,True
 building highly available services and APIs that scale and work efficiently,skill,tech,,1,False,,0.699,USKL_0f096791cb13,False
 curious,skill,tech,,11,False,,0.774,USKL_b60e29b3767d,True
@@ -1362,13 +1362,13 @@ maintain simple Admin UIs,skill,tech,,1,False,,0.723,USKL_a4f55f233e52,False
 Web,knowledge,tech,,2,False,,0.857,USKL_040255bb19da,True
 client requests,knowledge,tech,,1,False,,0.756,USKL_22a9a3cf0a4e,True
 server-side handling,knowledge,tech,,1,False,,0.802,USKL_8d34fb0652c1,True
-front-end rendering,knowledge,tech,,1,False,,0.832,USKL_44e9eeec09b4,True
+front-end rendering,knowledge,tech,,1,False,,0.864,USKL_658bf6080353,True
 relational and non-relational databases,knowledge,tech,,2,False,,0.796,USKL_e67cae85b815,True
 Redis,knowledge,tech,,8,True,USKL_653ff55973f5,1.0,USKL_653ff55973f5,True
 service oriented architecture,knowledge,tech,,1,False,,0.948,USKL_4a0e5913ed25,True
 BS/MS degree,knowledge,tech,,2,False,,0.668,USKL_7fb3066ef3c3,False
 DevOps/Network/Cloud Hosting,knowledge,tech,,1,False,,0.787,USKL_197dd810d8c1,True
-Frontend,knowledge,tech,,5,False,,0.854,USKL_44e9eeec09b4,True
+Frontend,knowledge,tech,,5,True,USKL_658bf6080353,0.976,USKL_658bf6080353,True
 Bootstrap,knowledge,tech,,2,True,USKL_d5f2ed1f80a1,1.0,USKL_d5f2ed1f80a1,True
 web frameworks,knowledge,tech,,1,True,USKL_16f783a06479,0.913,USKL_16f783a06479,True
 firebase,knowledge,tech,,1,True,USKL_c7dc39568660,0.928,USKL_c7dc39568660,True
@@ -1787,14 +1787,14 @@ develop the best travel product,skill,tech,,1,False,,0.692,USKL_fee91162ee2c,Fal
 defining and implementing a scalable flexible frontend architecture,skill,tech,,1,False,,0.693,USKL_deae8b1786e5,False
 enables a consistent UX fast delivery across platforms,skill,tech,,1,False,,0.741,USKL_5a83f6b54b7f,False
 create superb end-to-end experiences,skill,tech,,1,False,,0.663,USKL_7e376a2a1234,False
-frontend architecture,knowledge,tech,,2,False,,0.826,USKL_44e9eeec09b4,True
+frontend architecture,knowledge,tech,,2,False,,0.847,USKL_658bf6080353,True
 Create robust frontend solutions,skill,tech,,1,False,,0.736,USKL_27d225d2aea7,False
 Work with your team,skill,tech,,2,False,,0.882,USKL_210bac427a09,True
 rapidly test ideas on users,skill,tech,,1,False,,0.736,USKL_98b40a6e9f44,False
 use results for iterations,skill,tech,,1,False,,0.704,USKL_40d519b66fcc,False
 Test new languages libraries and frameworks,skill,tech,,1,False,,0.76,USKL_467fcee5e612,True
 share best practices with other teams,skill,tech,,1,False,,0.746,USKL_2582bf67df07,False
-Build highly reusable frontend components,skill,tech,,1,False,,0.728,USKL_44e9eeec09b4,False
+Build highly reusable frontend components,skill,tech,,1,False,,0.737,USKL_658bf6080353,False
 building responsive/adaptive web applications,skill,tech,,1,False,,0.791,USKL_667694889f8b,True
 JavaScript/Typescript,knowledge,tech,,3,False,,0.814,USKL_ff4ad01c3bd0,True
 write structured and clean code,skill,tech,,1,False,,0.758,USKL_edaf5a275da2,True
@@ -1804,14 +1804,14 @@ React Native,knowledge,tech,,2,True,USKL_e68304d085df,1.0,USKL_e68304d085df,True
 Javascript testing tools,knowledge,tech,,1,False,,0.766,USKL_4be75ca39cee,True
 Jest Cypress,knowledge,tech,,1,False,,0.785,USKL_aa9f7bdb21f3,True
 modern front-end build pipelines and tools,knowledge,tech,,1,False,,0.67,USKL_140d2d246472,False
-micro frontends,knowledge,tech,,1,False,,0.745,USKL_44e9eeec09b4,False
-supporting backend services,skill,tech,,1,False,,0.758,USKL_dc27fb6602f7,True
+micro frontends,knowledge,tech,,1,False,,0.844,USKL_658bf6080353,True
+supporting backend services,skill,tech,,1,False,,0.85,USKL_a9b9ef55f454,True
 Android and iOS apps,knowledge,tech,,1,False,,0.828,USKL_223b57fad78b,True
-backend services,knowledge,tech,,1,False,,0.789,USKL_dc27fb6602f7,True
+backend services,knowledge,tech,,1,False,,0.896,USKL_a9b9ef55f454,True
 engaged,skill,tech,,1,False,,0.691,USKL_92477fc09ff5,False
 Retail,knowledge,tech,,4,False,,0.662,USKL_9b7ebf91f4bb,False
 work with cutting edge technology,skill,tech,,1,False,,0.746,USKL_3ba59c1b360e,False
-Creating reusable components across micro frontends,skill,tech,,1,False,,0.712,USKL_102db9fabe76,False
+Creating reusable components across micro frontends,skill,tech,,1,False,,0.718,USKL_658bf6080353,False
 Identifying site issues and customer journeys,skill,tech,,1,False,,0.75,USKL_cdf7838ff8b4,False
 building micro services,skill,tech,,1,False,,0.746,USKL_9ce4845004c4,False
 Building automated acceptance tests,skill,tech,,1,False,,0.785,USKL_7e211de4b156,True
@@ -1924,7 +1924,7 @@ Ansible,knowledge,tech,,4,True,USKL_450126b167f3,1.0,USKL_450126b167f3,True
 Groovy Job,knowledge,tech,,1,False,,0.851,USKL_7f3178e6e84a,True
 DSL,knowledge,tech,,1,False,,0.813,USKL_fc121afb1e85,True
 Unix Shell,knowledge,tech,,1,True,USKL_96eb6f46f10d,0.958,USKL_96eb6f46f10d,True
-Spotify,knowledge,tech,,1,False,,0.644,USKL_f3632e7965d5,False
+Spotify,knowledge,tech,,1,False,,0.667,USKL_ea3cfc670cd6,False
 professional development workflows,knowledge,tech,,1,False,,0.766,USKL_65f35ff6eac6,True
 Data & Analytics,knowledge,tech,,5,False,,0.822,USKL_57f04a27bdf3,True
 languages,knowledge,tech,,1,False,,0.756,USKL_0ecb3be869cd,True
@@ -1941,7 +1941,7 @@ Solve UX challenges from specification through implementation,skill,tech,,1,Fals
 Transforming functional requirements into fit to purpose UX approaches,skill,tech,,1,False,,0.729,USKL_13a50d0028aa,False
 Improving and enhancing existing software,skill,tech,,1,False,,0.84,USKL_b34688f829fc,True
 creating entirely new features for the platform -,skill,tech,,1,False,,0.713,USKL_286d122bcb84,False
-tracing Backend issues,skill,tech,,1,False,,0.736,USKL_f51fcfc7a6be,False
+tracing Backend issues,skill,tech,,1,False,,0.776,USKL_a9b9ef55f454,True
 analytic and problem-solving skills An,skill,tech,,1,False,,0.695,USKL_7b39fc9d97d9,False
 dive into complex problems,skill,tech,,1,False,,0.769,USKL_f55d060f15b6,True
 can-do attitude A,skill,tech,,1,False,,0.704,USKL_a3bc086dab86,False
@@ -2010,7 +2010,7 @@ Angular 2+,knowledge,tech,,1,True,USKL_d109730089ff,0.79,USKL_d109730089ff,True
 Ember Web Components,knowledge,tech,,1,False,,0.811,USKL_2fb802536e2c,True
 Swedish,knowledge,tech,,3,False,,0.55,USKL_6c2412eff340,False
 German As,knowledge,tech,,1,False,,0.554,USKL_6bd14695f7ed,False
-embedded,knowledge,tech,,2,False,,0.89,USKL_1e220912d4f1,True
+embedded,knowledge,tech,,2,True,USKL_72149c854ae3,1.0,USKL_72149c854ae3,True
 lead the software and hardware team,skill,tech,,1,False,,0.789,USKL_521de1ce2934,True
 building efficient and scalable solutions,skill,tech,,1,False,,0.802,USKL_626ba002fabe,True
 web mobile and cloud applications,knowledge,tech,,1,False,,0.756,USKL_4bb22e14fce1,True
@@ -2028,7 +2028,7 @@ designing architecture,skill,tech,,1,False,,0.822,USKL_8dce4c2206cd,True
 implementation of technical systems,skill,tech,,1,False,,0.815,USKL_21c363c00292,True
 Technical product design,knowledge,tech,,1,False,,0.827,USKL_a8baba38a271,True
 solution architecture specifications,knowledge,tech,,1,False,,0.801,USKL_9c04a538d08f,True
-embedded environment,knowledge,tech,,1,False,,0.854,USKL_1e220912d4f1,True
+embedded environment,knowledge,tech,,1,False,,0.897,USKL_72149c854ae3,True
 front and back-end,knowledge,tech,,1,False,,0.829,USKL_102db9fabe76,True
 Master in Computer Science,knowledge,tech,,1,False,,0.903,USKL_f57985cff33e,True
 Full Stack,knowledge,tech,,1,False,,0.88,USKL_700b69805a57,True
@@ -2072,7 +2072,7 @@ git flow,knowledge,tech,,1,True,USKL_ac674d1f2e29,0.853,USKL_ac674d1f2e29,True
 Cocoapods;,knowledge,tech,,1,False,,0.758,USKL_c03dd463eb27,True
 algorithms,knowledge,tech,,3,True,USKL_3d52ca537e11,0.841,USKL_3d52ca537e11,True
 blockchain,knowledge,tech,,3,True,USKL_7c1dee8df13e,0.948,USKL_c577d42f5768,True
-decentralized systems,knowledge,tech,,1,False,,0.803,USKL_3e2b3fe7589c,True
+decentralized systems,knowledge,tech,,1,False,,0.836,USKL_858464c59458,True
 developing new financial products and infrastructure,skill,tech,,1,False,,0.713,USKL_21d097652127,False
 Applied AI,knowledge,tech,,2,False,,0.835,USKL_a5f8502666b5,True
 Data Analytics,knowledge,tech,,4,True,USKL_f86a7aa1417b,0.872,USKL_f86a7aa1417b,True
@@ -2257,7 +2257,7 @@ Injection,knowledge,tech,,1,False,,0.78,USKL_bdf31184b77b,True
 Factory,knowledge,tech,,1,False,,0.786,USKL_c300ac0fd603,True
 Builder,knowledge,tech,,1,False,,0.818,USKL_23572ed945c4,True
 Observer,knowledge,tech,,1,False,,0.76,USKL_bf994c19d98a,True
-Facade);,knowledge,tech,,1,False,,0.577,USKL_1bc8620d3b05,False
+Facade);,knowledge,tech,,1,False,,0.591,USKL_658bf6080353,False
 Solution architecture,knowledge,tech,,4,True,USKL_9c04a538d08f,1.0,USKL_9c04a538d08f,True
 Event-Driven);,knowledge,tech,,1,False,,0.751,USKL_faf0a2659b33,True
 Jasmine,knowledge,tech,,1,True,USKL_505f3a01d4e7,1.0,USKL_505f3a01d4e7,True
@@ -2297,7 +2297,7 @@ embedded linux systems,knowledge,tech,,1,False,,0.957,USKL_891e14a8419b,True
 IoT cloud infrastructure,knowledge,tech,,1,False,,0.804,USKL_fbabe0499986,True
 documentation,knowledge,tech,,5,False,,0.868,USKL_7b6cc84301fa,True
 Embedded Systems,knowledge,tech,,3,True,USKL_0499bc9febda,1.0,USKL_0499bc9febda,True
-embedded ecosystem,knowledge,tech,,1,False,,0.832,USKL_1e220912d4f1,True
+embedded ecosystem,knowledge,tech,,1,False,,0.852,USKL_72149c854ae3,True
 Real-time operating systems,knowledge,tech,,1,True,USKL_62592aec5b32,0.964,USKL_62592aec5b32,True
 Firmware development,knowledge,tech,,2,False,,0.811,USKL_95a2cc950be0,True
 C/C++,knowledge,tech,,2,False,,0.878,USKL_c7c4cb04c4ec,True
@@ -2322,7 +2322,7 @@ machine firmware,knowledge,tech,,1,False,,0.84,USKL_af6b51f0405e,True
 C,knowledge,tech,,7,True,USKL_e272bb7130b2,1.0,USKL_e272bb7130b2,True
 C++17/20,knowledge,tech,,1,False,,0.778,USKL_c7c4cb04c4ec,True
 Rust,knowledge,tech,,1,True,USKL_81763881e73c,1.0,USKL_81763881e73c,True
-GCP,knowledge,tech,,6,False,,0.67,USKL_01376b93fa6a,False
+GCP,knowledge,tech,,6,True,USKL_31ff8c3eb0ed,0.801,USKL_31ff8c3eb0ed,True
 Digital Health,knowledge,tech,,2,False,,0.759,USKL_f6d90540a847,True
 Mobile Application,knowledge,tech,,3,False,,0.911,USKL_458a18e2c22c,True
 Music,knowledge,tech,,2,False,,0.832,USKL_664c8bc3eae9,True
@@ -2348,7 +2348,7 @@ mobile testing,knowledge,tech,,1,False,,0.838,USKL_4750b9c222ab,True
 integration testing,knowledge,tech,,2,True,USKL_5ec5ba418246,0.914,USKL_5ec5ba418246,True
 testing methodologies,knowledge,tech,,1,False,,0.806,USKL_1b507834f889,True
 testing tools,knowledge,tech,,1,False,,0.837,USKL_bab86373600b,True
-backend communication protocols,knowledge,tech,,1,False,,0.756,USKL_8c016269314f,True
+backend communication protocols,knowledge,tech,,1,False,,0.777,USKL_a9b9ef55f454,True
 web services,knowledge,tech,,1,True,USKL_68e9e3a95bd4,0.918,USKL_54e1e54ce0c2,True
 software QA metrics operations,knowledge,tech,,1,False,,0.701,USKL_224cf3f7a17a,False
 quality processes,knowledge,tech,,1,False,,0.823,USKL_920cdc92e7b5,True
@@ -2981,7 +2981,7 @@ employee contracts terms,knowledge,house,,1,False,,0.675,USKL_679e29541244,False
 condition updates,knowledge,house,,1,False,,0.721,USKL_d8fefae7f676,False
 HR processes,knowledge,house,,1,False,,0.825,USKL_33bf34283b66,True
 manager training,knowledge,house,,1,False,,0.765,USKL_29a52d1788f7,True
-insurance,knowledge,house,,1,False,,0.614,USKL_836abbfdc0f8,False
+insurance,knowledge,house,,1,False,,0.65,USKL_e86b40fe49a6,False
 outsourced payroll,knowledge,house,,1,False,,0.782,USKL_b57e3961710f,True
 Participating in different kinds of HR projects,skill,house,,1,False,,0.708,USKL_e0cbadede7fd,False
 academic education,knowledge,house,,1,False,,0.721,USKL_8f6fab0eb742,False
@@ -3141,7 +3141,7 @@ fast learner,skill,house,,1,True,USKL_582975d456c0,0.742,USKL_582975d456c0,False
 Problem-solving attitude,skill,house,,2,False,,0.759,USKL_a9d4b47334ad,True
 configuration and build automation tools,knowledge,house,,1,False,,0.771,USKL_dd9f39e08fd5,True
 Bamboo,knowledge,house,,1,True,USKL_1e90f3b8e2e8,1.0,USKL_1e90f3b8e2e8,True
-distributed version control systems,knowledge,house,,1,False,,0.784,USKL_3e2b3fe7589c,True
+distributed version control systems,knowledge,house,,1,False,,0.817,USKL_858464c59458,True
 leading one of more projects,skill,house,,1,False,,0.786,USKL_c01ed5d05d31,True
 project and programme management,knowledge,house,,1,False,,0.858,USKL_8e37102ac4e3,True
 leading strategic projects,skill,house,,1,False,,0.782,USKL_c01ed5d05d31,True
@@ -3188,7 +3188,7 @@ maintaining the overview,skill,house,,1,False,,0.737,USKL_865d55e7adbb,False
 eager,skill,house,,1,False,,0.68,USKL_b60e29b3767d,False
 simplifying and optimising work and processes,skill,house,,1,False,,0.861,USKL_39fe6a3ed3b7,True
 ambition,skill,house,,1,False,,0.663,USKL_89b25331cecb,False
-frontend application,knowledge,house,,1,False,,0.776,USKL_44e9eeec09b4,True
+frontend application,knowledge,house,,1,False,,0.891,USKL_658bf6080353,True
 Windows UI development,knowledge,house,,1,False,,0.822,USKL_0a7fd0d8bca3,True
 smart usability,knowledge,house,,1,False,,0.821,USKL_5fe0f9790672,True
 end-user application,knowledge,house,,1,False,,0.739,USKL_e8f5c7f6e8f3,False
@@ -3550,7 +3550,7 @@ contribute to inter connective team tasks,skill,house,,1,False,,0.761,USKL_7bcaf
 molecular biomedicine,knowledge,house,,1,False,,0.665,USKL_04c6f9444e0e,False
 protein chemistry,knowledge,house,,2,False,,0.731,USKL_894830e833d4,False
 cell biology,knowledge,house,,2,False,,0.701,USKL_04c6f9444e0e,False
-architect design implement and maintain highly scalable distributed systems,skill,house,,1,False,,0.689,USKL_98b428e0a633,False
+architect design implement and maintain highly scalable distributed systems,skill,house,,1,False,,0.696,USKL_858464c59458,False
 infrastructure planning and setup,skill,house,,1,False,,0.771,USKL_ced566e6587f,True
 make sure that our development and support systems are always available,skill,house,,1,False,,0.751,USKL_c092d33db71c,True
 incident follow up,knowledge,house,,1,False,,0.758,USKL_7bfa1b8ef02c,True
@@ -3977,7 +3977,7 @@ be responsible for our customer's core company platform,skill,tech,,1,False,,0.6
 DoD Top Secret Security Clearance,knowledge,tech,,1,False,,0.577,USKL_06120218c944,False
 Mathematics,knowledge,tech,,1,True,USKL_0b3d1b1d372b,1.0,USKL_0b3d1b1d372b,True
 storage systems,knowledge,tech,,1,True,USKL_1936a2f63d82,0.91,USKL_1936a2f63d82,True
-front-end frameworks,knowledge,tech,,1,False,,0.804,USKL_f9de8872fa66,True
+front-end frameworks,knowledge,tech,,1,False,,0.809,USKL_658bf6080353,True
 how technical decisions impact the user of what you’re building,knowledge,tech,,1,False,,0.634,USKL_f5ce767b8a30,False
 work effectively in teams of technical and non-technical individuals,skill,tech,,1,False,,0.814,USKL_035462559be6,True
 working in a rapidly changing environment,skill,tech,,1,False,,0.817,USKL_ca7398ff4e37,True
@@ -3996,8 +3996,8 @@ implement new features in frontend projects,skill,tech,,1,False,,0.78,USKL_27d22
 Work on concepts and architecture,skill,tech,,1,False,,0.718,USKL_b6b5a691ee19,False
 Manage deployment of new releases,skill,tech,,1,False,,0.835,USKL_1fd40b54fb0e,True
 Write and maintain technical documentation,skill,tech,,1,False,,0.896,USKL_363e0fda1acb,True
-backend logic,knowledge,tech,,1,False,,0.751,USKL_dc27fb6602f7,True
-frontend frameworks,knowledge,tech,,1,False,,0.805,USKL_16f783a06479,True
+backend logic,knowledge,tech,,1,False,,0.869,USKL_a9b9ef55f454,True
+frontend frameworks,knowledge,tech,,1,False,,0.829,USKL_658bf6080353,True
 angular/react,knowledge,tech,,1,False,,0.802,USKL_d109730089ff,True
 motivation,skill,tech,,3,False,,0.836,USKL_89b25331cecb,True
 eagerness to learn,skill,tech,,1,False,,0.914,USKL_65bcdb3012fb,True
@@ -4102,14 +4102,14 @@ enforce best practices,skill,tech,,1,False,,0.741,USKL_8fe10e086e35,False
 agile SW-development methodologies,knowledge,tech,,1,False,,0.811,USKL_5ea2456bef73,True
 Developing robust backend and frontend logic,skill,tech,,1,False,,0.786,USKL_102db9fabe76,True
 Developing communication with other internal systems,skill,tech,,1,False,,0.821,USKL_aa8aa023f17d,True
-Introducing reusable frontend components,skill,tech,,1,False,,0.73,USKL_44e9eeec09b4,False
+Introducing reusable frontend components,skill,tech,,1,False,,0.748,USKL_658bf6080353,False
 Developing new frontend features pages and views,skill,tech,,1,False,,0.789,USKL_102db9fabe76,True
-Sharing good frontend practices,skill,tech,,1,False,,0.729,USKL_1c99159447e6,False
+Sharing good frontend practices,skill,tech,,1,False,,0.744,USKL_658bf6080353,False
 Profiling and debugging frontend and backend performance,skill,tech,,1,False,,0.787,USKL_93ce9d02a16a,True
 Developing high quality code,skill,tech,,1,False,,0.814,USKL_ffe86f259e72,True
 ensuring best practices patterns and coding standards,skill,tech,,1,False,,0.723,USKL_6b78c3bab6e1,False
 Blackfire ),knowledge,tech,,1,False,,0.622,USKL_1463477c04cb,False
-backend technologies,knowledge,tech,,1,False,,0.777,USKL_f51fcfc7a6be,True
+backend technologies,knowledge,tech,,1,False,,0.869,USKL_a9b9ef55f454,True
 Memcached/Redis,knowledge,tech,,1,False,,0.795,USKL_ac38df4833fa,True
 RabbitMQ,knowledge,tech,,1,True,USKL_546ff24668d2,1.0,USKL_546ff24668d2,True
 unit & functional testing,knowledge,tech,,1,False,,0.816,USKL_eeeb7a5dc7ff,True
@@ -4149,7 +4149,7 @@ firmware,knowledge,tech,,1,True,USKL_f63537e0c548,0.888,USKL_af6b51f0405e,True
 product architecture,knowledge,tech,,1,False,,0.728,USKL_24831b62ca30,False
 extension and seamless integration of an existing controller portfolio,skill,tech,,1,False,,0.66,USKL_9f74a0b3a788,False
 be part of an agile development team,skill,tech,,1,False,,0.805,USKL_16c6bdadd5a7,True
-embeeded firmware,knowledge,tech,,1,False,,0.821,USKL_891e14a8419b,True
+embeeded firmware,knowledge,tech,,1,False,,0.823,USKL_72149c854ae3,True
 tools,knowledge,tech,,1,False,,0.806,USKL_c93e2eb3a958,True
 cloud technology,knowledge,tech,,1,False,,0.79,USKL_6d6a8a4423fd,True
 system architecture,knowledge,tech,,1,True,USKL_e054a8239f19,0.939,USKL_e054a8239f19,True
@@ -4167,7 +4167,7 @@ electrical engineering,knowledge,tech,,1,True,USKL_ee525a044212,1.0,USKL_ee525a0
 embedded firmware development,knowledge,tech,,1,False,,0.847,USKL_7b57b473a479,True
 communication protocols,knowledge,tech,,1,True,USKL_1e3e357df977,0.883,USKL_8c016269314f,True
 IP protocols,knowledge,tech,,1,False,,0.907,USKL_609d838189b3,True
-embedded MCUs,knowledge,tech,,1,False,,0.828,USKL_1e220912d4f1,True
+embedded MCUs,knowledge,tech,,1,False,,0.846,USKL_72149c854ae3,True
 ARM core,knowledge,tech,,1,False,,0.778,USKL_88f5b7535e84,True
 integration of drivers to Linux in the hardware and upper software layers,skill,tech,,1,False,,0.683,USKL_dedfe256653e,False
 ARM Cortex-A/M ),knowledge,tech,,1,False,,0.681,USKL_e81732a0ec8b,False
@@ -4194,19 +4194,19 @@ cryptography,knowledge,tech,,1,True,USKL_aed462dda9da,0.926,USKL_aed462dda9da,Tr
 TLS,knowledge,tech,,1,True,USKL_1a8c0aa7043e,0.818,USKL_3f2043a8c624,True
 certificates,knowledge,tech,,1,False,,0.827,USKL_451ad29c437f,True
 set the basis for the unique user experience,skill,tech,,1,False,,0.724,USKL_5ef3c288e51b,False
-maintain and build up our backend,skill,tech,,1,False,,0.736,USKL_102db9fabe76,False
-develop backend services,skill,tech,,1,False,,0.755,USKL_dc27fb6602f7,True
+maintain and build up our backend,skill,tech,,1,False,,0.772,USKL_a9b9ef55f454,True
+develop backend services,skill,tech,,1,False,,0.827,USKL_a9b9ef55f454,True
 tackle challenges,skill,tech,,2,False,,0.822,USKL_40e936614d75,True
 manage individual project priorities deadlines and deliverables?,skill,tech,,1,False,,0.777,USKL_45c61d8f3b4e,True
 improving our infrastructure,skill,tech,,1,False,,0.79,USKL_2bd46c3a6e20,True
 shape the full life cycle of our products,skill,tech,,1,False,,0.75,USKL_2a755e7d6e49,True
 bring in your creativity,skill,tech,,1,False,,0.791,USKL_ca3e210d3db0,True
-Make our backend resilient and scalable,skill,tech,,1,False,,0.729,USKL_dc27fb6602f7,False
+Make our backend resilient and scalable,skill,tech,,1,False,,0.763,USKL_a9b9ef55f454,True
 adopting our microservices swarm to an event driven architecture,skill,tech,,1,False,,0.691,USKL_9ce4845004c4,False
 mobile wallets,knowledge,tech,,2,False,,0.688,USKL_1aca11081b1a,False
 coding skills,skill,tech,,1,False,,0.783,USKL_30bbeb74ed77,True
 developing services,skill,tech,,1,False,,0.825,USKL_c0c801f1085c,True
-backend development,knowledge,tech,,3,False,,0.858,USKL_102db9fabe76,True
+backend development,knowledge,tech,,3,False,,0.918,USKL_a9b9ef55f454,True
 AWS ( Amazon Web Services ),knowledge,tech,,1,True,USKL_ae5c526b876a,0.745,USKL_ae5c526b876a,False
 software architecture patterns,knowledge,tech,,1,True,USKL_7401a948ca0b,0.894,USKL_b03e030052bb,True
 CQRS,knowledge,tech,,1,False,,0.596,USKL_ceed98804cb5,False
@@ -4422,7 +4422,7 @@ Questioning and improving existing codes,skill,tech,,1,False,,0.809,USKL_b34688f
 training our new colleagues,skill,tech,,1,False,,0.822,USKL_121cfd0d8674,True
 supporting our experienced developers,skill,tech,,1,False,,0.747,USKL_24b78bdbf70f,False
 set clear expectations,skill,tech,,1,False,,0.73,USKL_4e30f1bff55e,False
-frontend development,knowledge,tech,,1,False,,0.873,USKL_102db9fabe76,True
+frontend development,knowledge,tech,,1,False,,0.902,USKL_658bf6080353,True
 writing easily maintainable JavaScript code,skill,tech,,1,False,,0.688,USKL_9d16a87bbe04,False
 Babel,knowledge,tech,,1,True,USKL_f7f8a6f2fc45,1.0,USKL_f7f8a6f2fc45,True
 Accessibility,knowledge,tech,,2,False,,0.908,USKL_74b3c8752fed,True
@@ -4568,7 +4568,7 @@ Flask,knowledge,tech,,1,True,USKL_251570140135,1.0,USKL_251570140135,True
 Postgres/Snowflake/Redshift),knowledge,tech,,1,False,,0.636,USKL_33d840302d88,False
 running production services in AWS/GCP/Azure .,skill,tech,,1,False,,0.666,USKL_1f6282897b0e,False
 AWS/GCP/Azure .,knowledge,tech,,1,False,,0.752,USKL_2dc6a10abc3d,True
-distributed compute concepts,knowledge,tech,,1,False,,0.742,USKL_3e2b3fe7589c,False
+distributed compute concepts,knowledge,tech,,1,False,,0.748,USKL_858464c59458,False
 eventing,knowledge,tech,,1,False,,0.779,USKL_d80219c00ecd,True
 MPP architectures,knowledge,tech,,1,False,,0.649,USKL_e054a8239f19,False
 sensory system design,knowledge,house,,1,False,,0.872,USKL_230f71cd4179,True
@@ -5292,7 +5292,7 @@ powerbi,knowledge,tech,,2,True,USKL_be1e38ccc9be,1.0,USKL_8d380b34dec7,True
 dax,knowledge,tech,,3,True,USKL_2ada18a17b20,1.0,USKL_2ada18a17b20,True
 data-modeling,knowledge,tech,,2,False,,0.832,USKL_2b836d27d9ce,True
 azure-analysis-services,knowledge,tech,,2,False,,0.648,USKL_d6bcae24ea4f,False
-building front-end layer,skill,tech,,1,False,,0.759,USKL_102db9fabe76,True
+building front-end layer,skill,tech,,1,False,,0.776,USKL_658bf6080353,True
 Design and build front-end / BI layer,skill,tech,,1,False,,0.771,USKL_102db9fabe76,True
 Power BI reports,knowledge,tech,,1,False,,0.835,USKL_be1e38ccc9be,True
 DAX queries,knowledge,tech,,1,False,,0.69,USKL_1168e1286402,False
@@ -5496,7 +5496,7 @@ testing at various levels in an agile environment,skill,tech,,1,False,,0.806,USK
 quality,knowledge,tech,,1,False,,0.864,USKL_51ce2919b743,True
 Clear easy-to-maintain code,skill,tech,,1,False,,0.721,USKL_edaf5a275da2,False
 latest technologies,knowledge,tech,,1,False,,0.778,USKL_3ba59c1b360e,True
-back end development,knowledge,tech,,1,False,,0.86,USKL_102db9fabe76,True
+back end development,knowledge,tech,,1,False,,0.882,USKL_a9b9ef55f454,True
 build implement and operate a system,skill,tech,,1,False,,0.768,USKL_c7abdf039c96,True
 architecture concepts,knowledge,tech,,1,False,,0.713,USKL_d13e83f565dd,False
 Digital Agency,knowledge,tech,,2,False,,0.735,USKL_f6d90540a847,False
@@ -5578,7 +5578,7 @@ write code,skill,tech,,2,False,,0.789,USKL_9595e2778219,True
 development cycle,knowledge,tech,,1,False,,0.754,USKL_92675dcef55c,True
 unit tests,knowledge,tech,,1,False,,0.837,USKL_52295add7185,True
 modify . NET services and APIs,skill,tech,,1,False,,0.698,USKL_8add8e366a89,False
-maintain strong Backend code quality,skill,tech,,1,False,,0.739,USKL_7134b1741914,False
+maintain strong Backend code quality,skill,tech,,1,False,,0.762,USKL_a9b9ef55f454,True
 T-SQL ( MS SQL Server),knowledge,tech,,1,True,USKL_0eae9fd893a7,0.854,USKL_fc9143f1ee2c,True
 Object-Oriented Design,knowledge,tech,,1,True,USKL_1e12cf416a9c,1.0,USKL_1e12cf416a9c,True
 Azure Storage,knowledge,tech,,1,False,,0.864,USKL_16342ffac48f,True
@@ -5636,7 +5636,7 @@ optimising code,skill,tech,,1,False,,0.835,USKL_26b6b1fdad2e,True
 troubleshooting large-scale distributed systems,skill,tech,,1,False,,0.764,USKL_92bccbae5226,True
 sqlalchemy,knowledge,tech,,2,True,USKL_a44f900e3b7c,0.779,USKL_a44f900e3b7c,True
 Lead the design & implementation,skill,tech,,1,False,,0.742,USKL_4a552f12d17f,False
-back-end services,knowledge,tech,,1,False,,0.782,USKL_f51fcfc7a6be,True
+back-end services,knowledge,tech,,1,False,,0.883,USKL_a9b9ef55f454,True
 Drive the implementation of new forecasting algorithms and tooling,skill,tech,,1,False,,0.676,USKL_cfcd1c1232a1,False
 responsibility for live productions systems,skill,tech,,1,False,,0.745,USKL_580851866186,False
 Perform developer tests,skill,tech,,1,False,,0.777,USKL_8f6c8b7bf990,True
@@ -5644,7 +5644,7 @@ peer code reviews,skill,tech,,1,False,,0.743,USKL_846415a78d31,False
 prepare strong documentation,skill,tech,,1,False,,0.765,USKL_adea909802f5,True
 Develop tools,skill,tech,,1,False,,0.823,USKL_d82882db0656,True
 improve and maintain components & systems,skill,tech,,1,False,,0.796,USKL_439ee94d32b6,True
-back-end programming,skill,tech,,1,False,,0.877,USKL_f51fcfc7a6be,True
+back-end programming,skill,tech,,1,False,,0.887,USKL_a9b9ef55f454,True
 database structures,knowledge,tech,,1,False,,0.874,USKL_2eef83dee147,True
 webapp design,knowledge,tech,,1,False,,0.85,USKL_398a5ccbe72c,True
 ORMs,knowledge,tech,,1,False,,0.772,USKL_54e6da2837f4,True
@@ -5661,7 +5661,7 @@ optimization problems,knowledge,tech,,1,False,,0.785,USKL_a08292dcf75f,True
 work with many different stakeholders,skill,tech,,1,False,,0.81,USKL_b74eec58559e,True
 or work permit,knowledge,tech,,1,False,,0.656,USKL_98f8236e00bf,False
 Online Travel,knowledge,tech,,2,False,,0.732,USKL_1d3dd8ab1a4a,False
-distributed-system,knowledge,tech,,2,True,USKL_3e2b3fe7589c,1.0,USKL_3e2b3fe7589c,True
+distributed-system,knowledge,tech,,2,True,USKL_858464c59458,0.953,USKL_858464c59458,True
 Hadoop/Spark,knowledge,tech,,1,False,,0.81,USKL_43fa93dd5462,True
 Jupyter,knowledge,tech,,1,True,USKL_7b35a00252bd,1.0,USKL_7b35a00252bd,True
 Agile/Lean,knowledge,tech,,1,False,,0.796,USKL_ef86ac233724,True
@@ -5797,7 +5797,7 @@ driving license,knowledge,house,,1,False,,0.637,USKL_42a641d6499d,False
 work closely with developers designers and marketers,skill,house,,1,False,,0.757,USKL_dcba88bc26a2,True
 develop beautiful campaigns,skill,house,,1,False,,0.74,USKL_9df813910318,False
 create outstanding experiences,skill,house,,1,False,,0.703,USKL_c31846526293,False
-maintain our frontend stack,skill,house,,1,False,,0.699,USKL_9d16a87bbe04,False
+maintain our frontend stack,skill,house,,1,False,,0.715,USKL_658bf6080353,False
 contribute with beautifully crafted layouts,skill,house,,1,False,,0.669,USKL_47f8113b39f5,False
 scalable and modulable code,knowledge,house,,1,False,,0.751,USKL_35ef20948abc,True
 developing and integrating great frontend experiences,skill,house,,1,False,,0.746,USKL_ffd8c14da7fa,False
@@ -6027,7 +6027,7 @@ demonstrating persistence,skill,house,,1,False,,0.761,USKL_2d3aa828f397,True
 patience,skill,house,,1,True,USKL_004cb4a6cb00,1.0,USKL_004cb4a6cb00,True
 attentiveness,skill,house,,1,False,,0.792,USKL_5ace3ee9272d,True
 enjoy working in a dynamic environment,skill,house,,1,False,,0.733,USKL_a9f3bccc698f,False
-security clearance,knowledge,house,,1,False,,0.693,USKL_dbfc57dbdfcf,False
+security clearance,knowledge,house,,1,False,,0.7,USKL_e86b40fe49a6,False
 drive development of the software product roadmap,skill,house,,1,False,,0.682,USKL_95441a64cab3,False
 find innovative solutions,skill,house,,1,False,,0.85,USKL_cdd677632a2b,True
 stays on top of current trends,skill,house,,1,False,,0.898,USKL_7bd40f478688,True

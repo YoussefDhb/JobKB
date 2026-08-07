@@ -1,9 +1,9 @@
 dataset,layer,subset,gold,exact_n,exact_pct,semantic_n,semantic_pct,covered_pct
-skillspan,ALL,,6423,700,10.9,3668,57.1,57.5
+skillspan,ALL,,6423,707,11.0,3676,57.2,57.7
 skillspan,knowledge,house,928,72,7.8,364,39.2,39.8
-skillspan,knowledge,tech,1840,496,27.0,1332,72.4,73.2
+skillspan,knowledge,tech,1840,503,27.3,1336,72.6,73.4
 skillspan,skill,house,1771,63,3.6,884,49.9,50.1
-skillspan,skill,tech,1884,69,3.7,1088,57.7,58.0
+skillspan,skill,tech,1884,69,3.7,1092,58.0,58.2
 sayfullina,ALL,,1140,81,7.1,707,62.0,62.5
 sayfullina,skill,,1140,81,7.1,707,62.0,62.5
 fijo,ALL,,692,2,0.3,242,35.0,35.0

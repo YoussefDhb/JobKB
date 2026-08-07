@@ -1,10 +1,10 @@
 occupation,skill,creation_cosine,nli,nli_pass,demand_exact,demand_semantic,corroborated,verdict
-analytics engineer,data engineering,0.727,0.928,True,False,0.643,False,nli_only
+analytics engineer,data engineering,0.727,0.928,True,True,0.779,True,strong
 analytics engineer,create data sets,0.683,0.937,True,False,0.683,False,nli_only
-analytics engineer,Data Science and Analytics,0.678,0.712,True,False,0.611,False,nli_only
-analytics engineer,data analytics,0.614,0.916,True,False,0.701,False,nli_only
+analytics engineer,Data Science and Analytics,0.678,0.712,True,False,0.8,True,strong
+analytics engineer,data analytics,0.614,0.916,True,False,0.737,False,nli_only
 analytics engineer,Database design,0.674,0.613,True,False,0.729,False,nli_only
-analytics engineer,Data modelling and design,0.668,0.898,True,False,0.647,False,nli_only
+analytics engineer,Data modelling and design,0.668,0.898,True,False,0.75,True,strong
 analytics engineer,database development tools,0.668,0.936,True,False,0.771,True,strong
 analytics engineer,use databases,0.665,0.864,True,False,0.722,False,nli_only
 MLOps engineer,Infrastructure operations,0.675,0.904,True,False,0.481,False,nli_only
@@ -26,14 +26,14 @@ data governance analyst,data quality assessment,0.726,0.535,True,False,0.551,Fal
 full stack developer,oversee development of software,0.709,0.677,True,False,0.727,False,nli_only
 full stack developer,design component interfaces,0.68,0.738,True,False,0.801,True,strong
 full stack developer,design application interfaces,0.674,0.817,True,False,0.872,True,strong
-full stack developer,implement front-end website design,0.671,0.516,True,False,0.654,False,nli_only
+full stack developer,implement front-end website design,0.671,0.516,True,False,0.76,True,strong
 full stack developer,Application Design,0.67,0.818,True,False,0.875,True,strong
 full stack developer,Application Development,0.666,0.87,True,False,1.0,True,strong
 full stack developer,Programming/software development,0.66,0.925,True,False,0.835,True,strong
 full stack developer,Software design,0.657,0.808,True,False,0.849,True,strong
 back-end developer,Back End (Software Engineering),0.691,0.689,True,False,0.7,False,nli_only
-back-end developer,Application Development,0.683,0.868,True,False,0.712,False,nli_only
-back-end developer,design application interfaces,0.681,0.771,True,False,0.726,False,nli_only
-back-end developer,Programming/software development,0.672,0.886,True,False,0.775,True,strong
+back-end developer,Application Development,0.683,0.868,True,False,0.847,True,strong
+back-end developer,design application interfaces,0.681,0.771,True,False,0.774,True,strong
+back-end developer,Programming/software development,0.672,0.886,True,False,0.835,True,strong
 back-end developer,Database design,0.663,0.762,True,False,0.751,True,strong
 back-end developer,develop data processing applications,0.661,0.657,True,False,0.69,False,nli_only
