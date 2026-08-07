@@ -149,6 +149,10 @@ _KIND_IDX = {"skill_type": 0, "skill_domain": 1, "skill_category": 2, "isco_grou
 
 
 def _full_layout(nodes, edges):
+    """Deterministic, clarity-first layout: every domain owns a separate angular WEDGE sized by its
+    content (skills + occupations), so domains read as distinct islands. Inside a wedge: the domain hub
+    sits inner, its categories fan across the wedge, each category's skills form a compact phyllotaxis
+    cluster, and the domain's occupations spread across an outer arc band (no thin radial spokes)."""
     import math
     from collections import defaultdict
     byid = {n["id"]: n for n in nodes}
@@ -165,73 +169,131 @@ def _full_layout(nodes, edges):
             occ_dom[e["source"]] = e["target"]
 
     domains = [n["id"] for n in nodes if n["kind"] == "skill_domain"]
-    dom_ang = {d: 2 * math.pi * i / max(1, len(domains)) for i, d in enumerate(domains)}
     dom_idx = {d: i for i, d in enumerate(domains)}
-    pos, dom_of = {}, {}
-
-    for i, t in enumerate([n["id"] for n in nodes if n["kind"] == "skill_type"]):
-        pos[t] = ((-1) ** i * 140.0, 0.0)
-    for d, a in dom_ang.items():
-        pos[d] = (900 * math.cos(a), 900 * math.sin(a))
-        dom_of[d] = d
     cats_by_dom = defaultdict(list)
     for c in [n["id"] for n in nodes if n["kind"] == "skill_category"]:
         cats_by_dom[cat_dom.get(c)].append(c)
-    for d, clist in cats_by_dom.items():
-        base = dom_ang.get(d, 0.0)
-        for j, c in enumerate(clist):
-            a = base + (j - (len(clist) - 1) / 2) * (0.55 / max(1, len(clist)))
-            pos[c] = (1650 * math.cos(a), 1650 * math.sin(a))
-            dom_of[c] = d
     skills_by_cat = defaultdict(list)
     for s in [n["id"] for n in nodes if n["kind"] == "skill"]:
         skills_by_cat[skill_cat.get(s)].append(s)
-    GOLD = 2.399963229728653
-    for c, slist in skills_by_cat.items():
-        cx, cy = pos.get(c, (0.0, 0.0))
-        k = len(slist)
-        rad = 70 + 26 * math.sqrt(k)
-        for j, s in enumerate(slist):
-            r = rad * math.sqrt((j + 0.5) / k)
-            a = j * GOLD
-            pos[s] = (cx + r * math.cos(a), cy + r * math.sin(a))
-            dom_of[s] = cat_dom.get(c)
     occ_by_dom = defaultdict(list)
     for o in [n["id"] for n in nodes if n["kind"] == "occupation"]:
         occ_by_dom[occ_dom.get(o)].append(o)
-    for d, olist in occ_by_dom.items():
-        base = dom_ang.get(d, 0.0)
-        for j, o in enumerate(olist):
-            a = base + (j - (len(olist) - 1) / 2) * 0.02
-            rr = 2750 + (j % 8) * 55
-            pos[o] = (rr * math.cos(a), rr * math.sin(a))
-            dom_of[o] = d
+
+    # angular span per domain, proportional to its content (so big domains never crowd small ones)
+    weight = {}
+    for d in domains:
+        nsk = sum(len(skills_by_cat.get(c, [])) for c in cats_by_dom.get(d, []))
+        weight[d] = nsk + 1.5 * len(occ_by_dom.get(d, [])) + 45
+    total = sum(weight.values()) or 1.0
+    GAPF = 0.05                                   # fraction of each wedge kept empty on each side
+    dom_span, ang = {}, -math.pi / 2
+    for d in domains:
+        span = 2 * math.pi * weight[d] / total
+        dom_span[d] = (ang, ang + span, span)
+        ang += span
+
+    R_DOM, R_CAT, R_OCC = 1150.0, 2050.0, 2950.0
+    GOLD = 2.399963229728653
+    pos, dom_of = {}, {}
+
+    for i, t in enumerate([n["id"] for n in nodes if n["kind"] == "skill_type"]):
+        pos[t] = ((-1) ** i * 150.0, 0.0)
     for j, ic in enumerate([n["id"] for n in nodes if n["kind"] == "isco_group"]):
         a = 2 * math.pi * j / max(1, len([n for n in nodes if n["kind"] == "isco_group"]))
-        pos[ic] = (330 * math.cos(a), 330 * math.sin(a))
-    # any leftover (unclustered) node -> far ring, so nothing is dropped
+        pos[ic] = (400 * math.cos(a), 400 * math.sin(a))
+    for d in domains:
+        a0, a1, span = dom_span[d]
+        mid = (a0 + a1) / 2
+        pos[d] = (R_DOM * math.cos(mid), R_DOM * math.sin(mid)); dom_of[d] = d
+    for d in domains:
+        a0, a1, span = dom_span[d]; pad = span * GAPF
+        clist = cats_by_dom.get(d, [])
+        for j, c in enumerate(clist):
+            a = (a0 + a1) / 2 if len(clist) == 1 else a0 + pad + (a1 - a0 - 2 * pad) * (j + 0.5) / len(clist)
+            pos[c] = (R_CAT * math.cos(a), R_CAT * math.sin(a)); dom_of[c] = d
+    for d in domains:
+        a0, a1, span = dom_span[d]; pad = span * GAPF
+        clist = cats_by_dom.get(d, [])
+        share = (span - 2 * pad) / max(1, len(clist))
+        for c in clist:
+            cx, cy = pos.get(c, (0.0, 0.0))
+            slist = skills_by_cat.get(c, [])
+            k = len(slist)
+            rad = min(0.48 * share * R_CAT, 46 + 20 * math.sqrt(k))
+            for j, s in enumerate(slist):
+                rr = rad * math.sqrt((j + 0.5) / max(1, k))
+                aa = j * GOLD
+                pos[s] = (cx + rr * math.cos(aa), cy + rr * math.sin(aa)); dom_of[s] = d
+    for d in domains:
+        a0, a1, span = dom_span[d]; pad = span * GAPF
+        olist = occ_by_dom.get(d, [])
+        m = len(olist)
+        per_row = max(1, int((span - 2 * pad) * R_OCC / 62))
+        for j, o in enumerate(olist):
+            row, col = divmod(j, per_row)
+            ncol = min(per_row, m - row * per_row)
+            a = (a0 + a1) / 2 if ncol == 1 else a0 + pad + (a1 - a0 - 2 * pad) * (col + 0.5) / per_row
+            rr = R_OCC + row * 72
+            pos[o] = (rr * math.cos(a), rr * math.sin(a)); dom_of[o] = d
+    # anything unclustered (no domain path) -> far ring, so nothing is dropped
     leftover = [n["id"] for n in nodes if n["id"] not in pos]
     for j, m in enumerate(leftover):
         a = 2 * math.pi * j / max(1, len(leftover))
-        pos[m] = (4200 * math.cos(a), 4200 * math.sin(a))
+        pos[m] = (4300 * math.cos(a), 4300 * math.sin(a))
     return pos, {nid: dom_idx.get(dom_of.get(nid), -1) for nid in byid}
 
 
 def _full_data(nodes, edges):
+    import math
+    from collections import defaultdict
     pos, dom_of = _full_layout(nodes, edges)
     idx = {n["id"]: i for i, n in enumerate(nodes)}
-    _r = {0: 24.0, 1: 15.0, 2: 9.0, 3: 7.0, 4: 4.5, 5: 2.6}
+    kind_of = {n["id"]: n["kind"] for n in nodes}
+    deg = defaultdict(int)
+    for e in edges:
+        if e["type"] == "requires":
+            deg[e["source"]] += 1
+            deg[e["target"]] += 1
+    base_r = {0: 24.0, 1: 15.0, 2: 9.0, 3: 7.0, 4: 4.5, 5: 2.6}
     narr = []
     for n in nodes:
         x, y = pos[n["id"]]
         k = _KIND_IDX[n["kind"]]
-        narr.append([round(x, 1), round(y, 1), _r[k], k, dom_of.get(n["id"], -1),
-                     n.get("label_en") or n.get("label_fr") or n["id"]])
-    earr = [[idx[e["source"]], idx[e["target"]], 0 if e["type"] in ("broader", "in_domain") else 1]
-            for e in edges]
-    return narr, earr
+        r = base_r[k]
+        d = deg.get(n["id"], 0)
+        if n["kind"] == "skill":
+            r = 2.3 + min(4.6, 0.52 * math.sqrt(d))
+        elif n["kind"] == "occupation":
+            r = 4.0 + min(3.2, 0.30 * math.sqrt(d))
+        desc = (n.get("description") or "").strip()
+        if len(desc) > 260:
+            desc = desc[:257] + "…"
+        narr.append([round(x, 1), round(y, 1), round(r, 1), k, dom_of.get(n["id"], -1),
+                     n.get("label_en") or n.get("label_fr") or n["id"], desc,
+                     n.get("wikidata_qid") or "", n.get("hard_soft") or ""])
+    # edge classes for level-of-detail rendering:
+    #   0 = backbone (type↔domain↔category, occupation→domain, ISCO tree) — always shown
+    #   1 = occupation → skill (requires) — shown when zoomed in (+ toggle)
+    #   2 = skill → category (taxonomy leaf) — shown when zoomed in
+    earr = []
+    for e in edges:
+        s, t = e["source"], e["target"]
+        if e["type"] == "requires":
+            cls = 1
+        elif kind_of[s] == "skill" or kind_of[t] == "skill":
+            cls = 2
+        else:
+            cls = 0
+        earr.append([idx[s], idx[t], cls])
+    dom_names = [n.get("label_en") or n.get("label_fr") or n["id"]
+                 for n in nodes if n["kind"] == "skill_domain"]
+    return narr, earr, dom_names
 
 
+# FULL-graph HTML — every node + edge, Python-precomputed static layout (browser runs no physics).
+# Node payload: [x, y, r, kindIdx, domIdx, label, description, wikidata_qid, hard_soft].
+# Edge payload: [srcIdx, tgtIdx, classIdx]  (0 backbone · 1 occupation→skill · 2 skill→category).
 _FULL_HTML = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -239,106 +301,180 @@ _FULL_HTML = """<!doctype html>
 <style>
   :root{color-scheme:light dark}
   html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
+  body{background:#f6f8fa}
+  @media (prefers-color-scheme:dark){body{background:#0d1117}}
   canvas{display:block;width:100vw;height:100vh;cursor:grab}
-  #panel{position:fixed;top:12px;left:12px;background:rgba(255,255,255,.94);color:#111;border-radius:10px;
-    padding:12px 14px;font-size:13px;box-shadow:0 2px 14px rgba(0,0,0,.2);max-width:290px}
-  @media (prefers-color-scheme:dark){#panel{background:rgba(26,28,32,.94);color:#eee}}
-  #panel h1{font-size:14px;margin:0 0 6px}
+  .card{position:fixed;background:rgba(255,255,255,.96);color:#111;border-radius:11px;
+    box-shadow:0 3px 16px rgba(0,0,0,.24);border:1px solid rgba(0,0,0,.06)}
+  @media (prefers-color-scheme:dark){.card{background:rgba(22,27,34,.96);color:#e6edf3;border-color:rgba(255,255,255,.08)}}
+  #panel{top:14px;left:14px;padding:13px 15px;font-size:13px;max-width:306px}
+  #panel h1{font-size:15px;margin:0 0 2px}
+  #panel .sub{font-size:11.5px;opacity:.72;margin-bottom:8px}
   #panel label{display:block;margin:4px 0;cursor:pointer}
   #panel .k{display:flex;align-items:center;gap:7px;margin:2px 0;font-size:12px}
   #panel .dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto}
-  #panel .muted{opacity:.72;font-size:11.5px;margin-top:8px;line-height:1.4}
-  #panel button{margin-top:8px;font:inherit;padding:3px 9px;border-radius:6px;border:1px solid #8887;
+  #panel .muted{opacity:.72;font-size:11.5px;margin-top:9px;line-height:1.45}
+  #panel button{margin-top:9px;font:inherit;padding:4px 11px;border-radius:7px;border:1px solid #8887;
     background:transparent;color:inherit;cursor:pointer}
-  #tip{position:fixed;pointer-events:none;background:#111;color:#fff;padding:5px 9px;border-radius:6px;
-    font-size:12px;opacity:0;transition:opacity .08s;max-width:340px;z-index:9}
+  #panel button:hover{background:rgba(128,128,128,.12)}
+  #q{width:100%;box-sizing:border-box;margin-top:2px;padding:6px 9px;border-radius:7px;
+    border:1px solid #8887;background:transparent;color:inherit;font:inherit}
+  #qinfo{font-size:11px;opacity:.7;min-height:13px;margin:2px 0}
+  hr{border:0;border-top:1px solid rgba(128,128,128,.22);margin:9px 0}
+  #doms{margin-top:6px;max-height:150px;overflow:auto}
+  #detail{left:14px;bottom:14px;padding:12px 14px;font-size:12.5px;max-width:344px;display:none}
+  #detail b{font-size:14px}
+  #detail .kind{opacity:.7}
+  #detail .meta{opacity:.82;font-size:11.5px;margin-top:3px}
+  #detail .desc{margin-top:8px;line-height:1.5}
+  #detail .x{float:right;cursor:pointer;opacity:.55;margin-left:10px;font-size:14px}
+  #hint{left:50%;bottom:16px;transform:translateX(-50%);padding:7px 13px;font-size:12px;
+    border-radius:20px;opacity:.94;pointer-events:none}
+  #tip{position:fixed;pointer-events:none;background:#111;color:#fff;padding:6px 10px;border-radius:7px;
+    font-size:12px;opacity:0;transition:opacity .08s;max-width:360px;z-index:9;line-height:1.4}
 </style></head>
 <body><canvas id="c"></canvas>
-<div id="panel"><h1>JobKB — full graph</h1>
-  <div style="font-size:12px;opacity:.85">%NNODES% nodes · %NEDGES% edges</div>
-  <label><input type="checkbox" id="tax" checked> taxonomy / domain edges</label>
-  <label><input type="checkbox" id="occ"> occupation→skill edges</label>
-  <label><input type="checkbox" id="lab" checked> hub labels</label>
+<div id="panel" class="card"><h1>JobKB — full knowledge graph</h1>
+  <div class="sub">Interactive map · %NNODES% concepts · %NEDGES% relations</div>
+  <input id="q" type="search" placeholder="🔍  search an occupation or skill…" autocomplete="off">
+  <div id="qinfo"></div>
+  <label><input type="checkbox" id="tax" checked> taxonomy structure &amp; skill links</label>
+  <label><input type="checkbox" id="occ"> occupation → skill links</label>
+  <label><input type="checkbox" id="lab" checked> labels</label>
   <button id="fit">reset view</button>
-  <div class="k" style="margin-top:9px"><span class="dot" style="background:#8250df"></span>skill type</div>
-  <div class="k"><span class="dot" style="background:#4e79a7"></span>domain / category / skill (by domain hue)</div>
-  <div class="k"><span class="dot" style="background:#bc4c00"></span>ISCO group</div>
-  <div class="muted">Each cluster is a category; its cloud is that category's skills. Occupations ring the
-    outside by domain. Drag = pan · scroll = zoom · hover a node to highlight its links.</div>
-</div><div id="tip"></div>
+  <hr>
+  <div class="k"><span class="dot" style="background:#8250df"></span>skill type (hard / soft)</div>
+  <div class="k"><span class="dot" style="background:#bc4c00"></span>ISCO occupation group</div>
+  <div class="k"><span class="dot" style="border:1.5px solid #111;background:#59a14f"></span>occupation (outlined)</div>
+  <div style="font-size:11.5px;opacity:.82;margin-top:7px">functional domains — each domain's categories &amp; skills share its hue:</div>
+  <div id="doms"></div>
+  <div class="muted">Drag = pan · scroll = zoom · <b>click a node for its definition</b>.
+    Zoom in to reveal individual skills and their links.</div>
+</div>
+<div id="detail" class="card"></div>
+<div id="hint" class="card"></div>
+<div id="tip"></div>
 <script>
-const NODES=%NODES%, EDGES=%EDGES%;
+const NODES=%NODES%, EDGES=%EDGES%, DOMAINS=%DOMAINS%;
 const PAL=['#4e79a7','#f28e2b','#59a14f','#e15759','#b07aa1','#9c755f','#ff9da7','#76b7b2','#edc948','#bab0ac'];
+const DARK=matchMedia('(prefers-color-scheme: dark)').matches;
 function color(n){const k=n[3];if(k===0)return'#8250df';if(k===3)return'#bc4c00';return n[4]>=0?PAL[n[4]%10]:'#8a8a8a';}
-const cv=document.getElementById('c'),ctx=cv.getContext('2d'),tip=document.getElementById('tip');
+function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+const cv=document.getElementById('c'),ctx=cv.getContext('2d'),tip=document.getElementById('tip'),hint=document.getElementById('hint');
 let W,H,DPR;function resize(){DPR=devicePixelRatio||1;W=innerWidth;H=innerHeight;cv.width=W*DPR;cv.height=H*DPR;
   ctx.setTransform(DPR,0,0,DPR,0,0);req();}addEventListener('resize',resize);
-// adjacency for hover highlight
+(function(){const box=document.getElementById('doms');DOMAINS.forEach((nm,i)=>{const d=document.createElement('div');
+  d.className='k';d.innerHTML='<span class="dot" style="background:'+PAL[i%10]+'"></span>'+esc(nm);box.appendChild(d);});})();
 const adj=NODES.map(()=>[]);for(let i=0;i<EDGES.length;i++){const e=EDGES[i];adj[e[0]].push(i);adj[e[1]].push(i);}
 let view={x:0,y:0,k:1};
 function fit(){let a=1e9,b=1e9,c=-1e9,d=-1e9;for(const n of NODES){a=Math.min(a,n[0]);b=Math.min(b,n[1]);c=Math.max(c,n[0]);d=Math.max(d,n[1]);}
-  const k=0.92*Math.min(W/(c-a||1),H/(d-b||1));view.k=k;view.x=W/2-(a+c)/2*k;view.y=H/2-(b+d)/2*k;req();}
+  const k=0.9*Math.min(W/(c-a||1),H/(d-b||1));view.k=k;view.x=W/2-(a+c)/2*k;view.y=H/2-(b+d)/2*k;req();}
 const S=n=>[n[0]*view.k+view.x,n[1]*view.k+view.y];
-let hov=-1,dirty=true,rafid=0;function req(){if(!rafid)rafid=requestAnimationFrame(draw);}
+let hov=-1,sel=-1,rafid=0;function req(){if(!rafid)rafid=requestAnimationFrame(draw);}
 const showTax=()=>document.getElementById('tax').checked,showOcc=()=>document.getElementById('occ').checked,
       showLab=()=>document.getElementById('lab').checked;
-function draw(){rafid=0;ctx.clearRect(0,0,W,H);
-  // edges (culled to viewport for speed)
-  const hi=new Set(hov>=0?adj[hov]:[]);
+function focusNode(){return sel>=0?sel:hov;}
+let fset=new Set();function computeFocus(){fset=new Set();const f=focusNode();if(f>=0){fset.add(f);
+  for(const ei of adj[f]){const e=EDGES[ei];fset.add(e[0]);fset.add(e[1]);}}}
+let matches=new Set(),matchList=[];
+function draw(){rafid=0;ctx.clearRect(0,0,W,H);const f=focusNode();const hasM=matches.size>0;
+  const zin=view.k>0.22;
+  hint.style.display=(zin||hasM||f>=0)?'none':'block';
   ctx.lineWidth=Math.min(1.2,1/view.k*0.9);
-  for(let i=0;i<EDGES.length;i++){const e=EDGES[i];if(hi.has(i))continue;
-    if(e[2]===0){if(!showTax())continue;}else{if(!showOcc())continue;}
+  for(let i=0;i<EDGES.length;i++){const e=EDGES[i];const c=e[2];
+    if(c===0){if(!showTax())continue;}
+    else if(c===2){if(!showTax()||!zin)continue;}
+    else{if(!showOcc()||!zin)continue;}
+    if(f>=0&&(e[0]===f||e[1]===f))continue;
     const A=NODES[e[0]],B=NODES[e[1]];const ax=A[0]*view.k+view.x,ay=A[1]*view.k+view.y,bx=B[0]*view.k+view.x,by=B[1]*view.k+view.y;
     if((ax<0&&bx<0)||(ax>W&&bx>W)||(ay<0&&by<0)||(ay>H&&by>H))continue;
-    ctx.strokeStyle=e[2]===0?'rgba(120,120,130,.30)':'rgba(180,150,90,.16)';
+    ctx.strokeStyle=c===1?'rgba(180,150,90,.16)':(c===2?'rgba(120,120,130,.20)':'rgba(90,110,150,.42)');
     ctx.beginPath();ctx.moveTo(ax,ay);ctx.lineTo(bx,by);ctx.stroke();}
-  // nodes
   for(let i=0;i<NODES.length;i++){const n=NODES[i];const sx=n[0]*view.k+view.x,sy=n[1]*view.k+view.y;
     if(sx<-20||sx>W+20||sy<-20||sy>H+20)continue;
-    let r=Math.max(1.1,n[2]*Math.min(1.6,Math.sqrt(view.k)));ctx.beginPath();ctx.arc(sx,sy,r,0,7);
-    ctx.fillStyle=color(n);ctx.globalAlpha=(hov>=0&&i!==hov&&!hi_has_node(i))?0.25:1;ctx.fill();ctx.globalAlpha=1;}
-  // highlighted incident edges + neighbor ring on hover
-  if(hov>=0){const n0=NODES[hov];ctx.lineWidth=1.4;
-    for(const ei of adj[hov]){const e=EDGES[ei];const A=NODES[e[0]],B=NODES[e[1]];
-      ctx.strokeStyle=e[2]===0?'rgba(30,120,60,.9)':'rgba(200,120,20,.85)';
+    let r=Math.max(1.1,n[2]*Math.min(1.6,Math.sqrt(view.k)));
+    let dim=1;
+    if(hasM)dim=matches.has(i)?1:0.09;
+    else if(f>=0&&i!==f&&!fset.has(i))dim=0.20;
+    else if(!zin&&n[3]===5)dim=0.72;
+    ctx.globalAlpha=dim;ctx.beginPath();ctx.arc(sx,sy,r,0,7);ctx.fillStyle=color(n);ctx.fill();
+    if(n[3]===4){ctx.lineWidth=Math.min(1.2,0.85*Math.sqrt(view.k));ctx.strokeStyle=DARK?'rgba(230,230,230,.6)':'rgba(20,20,20,.6)';ctx.stroke();}
+    ctx.globalAlpha=1;
+    if(hasM&&matches.has(i)){ctx.beginPath();ctx.arc(sx,sy,r+3,0,7);ctx.lineWidth=1.8;ctx.strokeStyle='#e15759';ctx.stroke();}}
+  if(f>=0){const n0=NODES[f];ctx.lineWidth=1.6;
+    for(const ei of adj[f]){const e=EDGES[ei];const A=NODES[e[0]],B=NODES[e[1]];
+      ctx.strokeStyle=e[2]===1?'rgba(200,120,20,.9)':'rgba(30,120,60,.9)';
       ctx.beginPath();ctx.moveTo(...S(A));ctx.lineTo(...S(B));ctx.stroke();}
-    const [hx,hy]=S(n0);ctx.beginPath();ctx.arc(hx,hy,Math.max(4,n0[2]*1.6),0,7);ctx.lineWidth=2;ctx.strokeStyle='#111';ctx.stroke();}
-  // hub labels
-  if(showLab()){ctx.fillStyle=getComputedStyle(document.body).color;ctx.textAlign='center';
-    for(const n of NODES){if(n[3]<=2&&(n[3]<=1||view.k>0.12)){const[sx,sy]=S(n);
-      ctx.font=(n[3]===0?14:n[3]===1?12:10)+'px system-ui';ctx.fillText(n[5],sx,sy-n[2]*1.4-2);}}}
+    const p0=S(n0);ctx.beginPath();ctx.arc(p0[0],p0[1],Math.max(5,n0[2]*1.7),0,7);ctx.lineWidth=2.4;
+    ctx.strokeStyle=DARK?'#e6edf3':'#111';ctx.stroke();}
+  if(showLab()){const txt=DARK?'#e6edf3':'#161b22',halo=DARK?'rgba(0,0,0,.74)':'rgba(255,255,255,.86)';
+    ctx.textAlign='center';ctx.lineJoin='round';
+    function lblAt(wx,wy,s,fs,dy){const sx=wx*view.k+view.x,sy=wy*view.k+view.y+(dy||0);
+      ctx.font=fs+'px system-ui';ctx.lineWidth=3.4;ctx.strokeStyle=halo;ctx.strokeText(s,sx,sy);
+      ctx.fillStyle=txt;ctx.fillText(s,sx,sy);}
+    function lbl(n,fs){lblAt(n[0],n[1],n[5],fs,-n[2]*1.4-2);}
+    for(const n of NODES){
+      if(n[3]===1)lblAt(n[0]*1.72,n[1]*1.72,n[5],13.5,0);   // domain label pushed onto its cluster
+      else if(n[3]===2&&view.k>0.19)lbl(n,10.5);
+      else if((n[3]===5||n[3]===4)&&view.k>0.55&&n[2]>=4.6)lbl(n,10);}}
 }
-let hoverset=new Set();function hi_has_node(i){return hoverset.has(i);}
-function computeHoverSet(){hoverset=new Set();if(hov>=0){hoverset.add(hov);for(const ei of adj[hov]){const e=EDGES[ei];hoverset.add(e[0]);hoverset.add(e[1]);}}}
 function pick(mx,my){let best=-1,bd=1e9;for(let i=0;i<NODES.length;i++){const n=NODES[i];const sx=n[0]*view.k+view.x,sy=n[1]*view.k+view.y;
   const dx=sx-mx,dy=sy-my,d=dx*dx+dy*dy;const rr=Math.max(5,n[2]*Math.sqrt(view.k)+3);if(d<rr*rr&&d<bd){bd=d;best=i;}}return best;}
-let pan=null;
-cv.addEventListener('mousedown',e=>{pan={x:e.clientX-view.x,y:e.clientY-view.y};cv.style.cursor='grabbing';});
-addEventListener('mouseup',()=>{pan=null;cv.style.cursor='grab';});
+let pan=null,down=null,moved=false;
+cv.addEventListener('mousedown',e=>{down={x:e.clientX,y:e.clientY};moved=false;pan={x:e.clientX-view.x,y:e.clientY-view.y};cv.style.cursor='grabbing';});
+addEventListener('mouseup',e=>{cv.style.cursor='grab';
+  if(down&&!moved){const p=pick(e.clientX,e.clientY);sel=(p>=0&&sel!==p)?p:-1;computeFocus();updateDetail();req();}
+  pan=null;down=null;});
 addEventListener('mousemove',e=>{
-  if(pan){view.x=e.clientX-pan.x;view.y=e.clientY-pan.y;req();tip.style.opacity=0;return;}
+  if(pan){if(down&&(Math.abs(e.clientX-down.x)+Math.abs(e.clientY-down.y)>4))moved=true;
+    view.x=e.clientX-pan.x;view.y=e.clientY-pan.y;req();tip.style.opacity=0;return;}
   const p=pick(e.clientX,e.clientY);
-  if(p!==hov){hov=p;computeHoverSet();req();}
-  if(p>=0){const n=NODES[p];tip.style.opacity=1;tip.style.left=(e.clientX+13)+'px';tip.style.top=(e.clientY+13)+'px';
-    const K=['skill type','domain','category','ISCO group','occupation','skill'];tip.textContent=n[5]+' · '+K[n[3]];}
+  if(p!==hov){hov=p;if(sel<0)computeFocus();req();}
+  if(p>=0){const n=NODES[p];tip.style.opacity=1;tip.style.left=(e.clientX+14)+'px';tip.style.top=(e.clientY+14)+'px';
+    const K=['skill type','domain','category','ISCO group','occupation','skill'];
+    tip.textContent=n[5]+' · '+K[n[3]]+(n[6]?(' — '+(n[6].length>96?n[6].slice(0,94)+'…':n[6])):'');}
   else tip.style.opacity=0;
 });
 cv.addEventListener('wheel',e=>{e.preventDefault();const s=e.deltaY<0?1.12:1/1.12;
   const wx=(e.clientX-view.x)/view.k,wy=(e.clientY-view.y)/view.k;view.k*=s;
   view.x=e.clientX-wx*view.k;view.y=e.clientY-wy*view.k;req();},{passive:false});
+addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('q').value='';matches=new Set();matchList=[];
+  document.getElementById('qinfo').textContent='';sel=-1;computeFocus();updateDetail();req();}});
+function updateDetail(){const el=document.getElementById('detail');if(sel<0){el.style.display='none';return;}
+  const n=NODES[sel];const K=['skill type','functional domain','skill category','ISCO group','occupation','skill'];
+  let h='<span class="x" id="dx">✕</span><b>'+esc(n[5])+'</b> <span class="kind">· '+K[n[3]]+'</span>';
+  if(n[4]>=0&&DOMAINS[n[4]])h+='<div class="meta">domain — '+esc(DOMAINS[n[4]])+'</div>';
+  if(n[8])h+='<div class="meta">'+(n[8]==='hard'?'hard skill':'soft skill')+'</div>';
+  if(n[7])h+='<div class="meta">Wikidata — '+esc(n[7])+'</div>';
+  if(n[6])h+='<div class="desc">'+esc(n[6])+'</div>';
+  else h+='<div class="desc" style="opacity:.6">(no definition)</div>';
+  el.innerHTML=h;el.style.display='block';
+  document.getElementById('dx').addEventListener('click',()=>{sel=-1;computeFocus();updateDetail();req();});}
+function runSearch(){const v=document.getElementById('q').value.trim().toLowerCase();
+  matches=new Set();matchList=[];
+  if(v.length>=2){for(let i=0;i<NODES.length;i++){if((NODES[i][5]||'').toLowerCase().includes(v)){matches.add(i);matchList.push(i);}}}
+  document.getElementById('qinfo').textContent=v.length>=2?(matchList.length+' match'+(matchList.length!==1?'es':'')):'';
+  if(matchList.length){let best=matchList[0];for(const i of matchList){if((NODES[i][5]||'').length<(NODES[best][5]||'').length)best=i;}
+    const n=NODES[best];view.k=Math.max(view.k,0.55);view.x=W/2-n[0]*view.k;view.y=H/2-n[1]*view.k;
+    sel=best;computeFocus();updateDetail();}
+  req();}
+document.getElementById('q').addEventListener('input',runSearch);
 ['tax','occ','lab'].forEach(id=>document.getElementById(id).addEventListener('change',req));
-document.getElementById('fit').addEventListener('click',fit);
+document.getElementById('fit').addEventListener('click',()=>{const q=document.getElementById('q');q.value='';
+  matches=new Set();matchList=[];document.getElementById('qinfo').textContent='';sel=-1;updateDetail();computeFocus();fit();});
+hint.textContent='Zoom in to reveal individual skills and their links';
 resize();fit();
 </script></body></html>"""
 
 
 def write_full_html(nodes, edges, path):
-    narr, earr = _full_data(nodes, edges)
-    # escape '<' so a label containing "</script>" can't break out of the inline <script> block
+    narr, earr, dom_names = _full_data(nodes, edges)
     nodes_js = json.dumps(narr, ensure_ascii=False).replace("<", "\\u003c")
+    doms_js = json.dumps(dom_names, ensure_ascii=False).replace("<", "\\u003c")
     html = (_FULL_HTML
             .replace("%NODES%", nodes_js)
             .replace("%EDGES%", json.dumps(earr, separators=(",", ":")))
+            .replace("%DOMAINS%", doms_js)
             .replace("%NNODES%", f"{len(narr):,}")
             .replace("%NEDGES%", f"{len(earr):,}"))
     with open(path, "w", encoding="utf-8") as f:

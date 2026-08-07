@@ -27,5 +27,5 @@ ALIGNMENT,ALIGNMENT,-,2026-08-05T12:01:24+00:00,incremental,414255 alignments to
 ATTACH,ATTACH,-,2026-08-05T12:01:24+00:00,incremental,198 ISCO attach edges total
 WIKIDATA,WIKIDATA,live query.wikidata.org,2026-08-05T12:51:58+00:00,sparql label-match + class verify + metadata,"1209 QID anchors (1164 skills, 37 occ, 8 domains, 1044 high-conf); 2 SPARQL queries this run"
 TRANSLATE,TRANSLATE,wd+mt=facebook/nllb-200-distilled-600M,2026-08-05T14:14:59+00:00,wikidata-labels + nllb-mt + backtranslation-validation,"en_fr={'targets': 444, 'attempted': 58, 'verbatim': 0, 'validated': 57, 'rejected': 1}; fr_en={'targets': 20, 'attempted': 0, 'verbatim': 0, 'validated': 0, 'rejected': 0}"
-MERGE,MERGE,-,2026-08-06T20:32:38+00:00,connected_components(exactMatch),"292 unified occ (13 merged), 11136 unified skills (710 merged)"
 AGENT,AGENT,langgraph; api=meta-llama/Llama-3.1-8B-Instruct,2026-08-06T20:32:38+00:00,langgraph controller + reflective workers (propose/verify/reflect),"description={'targets': 8007, 'committed': 7915, 'deferred': 92, 'reflected': 567}"
+MERGE,MERGE,-,2026-08-06T22:34:42+00:00,connected_components(exactMatch),"292 unified occ (13 merged), 11136 unified skills (710 merged)"
