@@ -1,16 +1,21 @@
 # JobKB
 
-An **English-primary, IT-focused occupation & skill knowledge base**, built fully automatically from
-local public taxonomies. French is a first-class secondary language (labels completed from Wikidata and
-validated NLLB machine translation). The **reproducible core build is datasets-only, with no human in the
-loop**: cross-source duplicates are resolved and alignments validated with open-source HuggingFace models,
-and a single build runs the whole pipeline — alignment, faceted ontology, ISCO attachment, unified merge,
-then Wikidata QID anchoring, LLM description/link generation and bilingual label completion — every step
-validated before it touches the graph, snapshot-resumable and fail-open (a build with no HF token still
-succeeds). An **optional, multi-source web-scraper** (`--scrape` / `--refresh-scraper` → `--add SCRAPER`)
-enriches the KB in near-real-time from keyless job APIs, public ATS boards (Greenhouse/Ashby/Lever) and
-emerging-tech trend signals — robots-respecting, recency-weighted and gate-screened, deliberately kept out
-of the reproducible core build.
+An **English-primary, IT-focused occupation ↔ skill knowledge base**, built fully automatically from local
+public taxonomies — a clean, deduplicated graph meant to back recruitment and career-path recommenders.
+
+**At a glance:** 292 occupations · 11,136 skills · 34,697 occupation–skill relations · 10 functional
+domains · 21 source datasets · bilingual EN/FR · Wikidata-anchored · **13/13 consistency**.
+
+French is a first-class secondary language (labels completed from Wikidata and validated NLLB machine
+translation). The **reproducible core build is datasets-only, with no human in the loop**: cross-source
+duplicates are resolved and alignments validated with open-source HuggingFace models, and a single command
+runs the whole pipeline — alignment, faceted ontology, ISCO attachment, unified merge, then Wikidata QID
+anchoring, agentic LLM description/link generation, and bilingual label completion — each step validated
+before it touches the graph, snapshot-resumable and fail-open (a build with no HF token still succeeds).
+An **optional, multi-source web-scraper** (`--scrape` / `--refresh-scraper` → `--add SCRAPER`) enriches the
+KB in near-real-time from keyless job APIs, public ATS boards (Greenhouse/Ashby/Lever) and emerging-tech
+trend signals — robots-respecting, recency-weighted and gate-screened, deliberately kept out of the
+reproducible core build.
 
 ## Quickstart
 
@@ -24,7 +29,16 @@ python run_pipeline.py --core-only     # full build, no enrichment (fast, networ
 python run_pipeline.py --stages qa     # integrity + consistency report over the current kb/
 ```
 
-See `COMMANDS.md` for the full command reference.
+See **[COMMANDS.md](COMMANDS.md)** for the full command guide.
+
+## Explore
+
+- **`notebooks/inspect.ipynb`** — the guided showcase: architecture, integrity, the faceted taxonomy, an
+  interactive graph, and **10 recommender use-cases** (skill recommendation, reverse index, skill-gap,
+  career-path similarity, semantic search, market intelligence, taxonomy navigation, multilingual lookup,
+  SPARQL, graph analytics). Runs top-to-bottom to a **✓ ALL CHECKS PASSED**.
+- **`export/jobkb_full.html`** — the whole graph in a self-contained page: search, click a node for its
+  definition, domains as colour-coded islands.
 
 ## Sources
 
@@ -91,7 +105,7 @@ notebooks/inspect.ipynb   # verification / project-showcase notebook over kb/
 
 Core stages are `ingest → hierarchy → align → attach → merge → qa`, each idempotent and runnable
 standalone against the existing `kb/`. On a full build the post-merge enrichment stages run automatically:
-`… → merge → **wikidata → agent → translate** → qa` (Wikidata first — its QIDs/descriptions feed the
+`… → merge → `**`wikidata → agent → translate`**` → qa` (Wikidata first — its QIDs/descriptions feed the
 rest; the `agent` stage falls back to the one-shot `llm.run()` if `langgraph` is absent). Each enrichment
 stage is fail-open and snapshot-resumable. `--core-only` skips them.
 
@@ -145,8 +159,9 @@ the authoritative occupation backbone.
 | `occupation_skill_relations.csv` | occupation ↔ skill links (essential/optional/demand/transversal/llm_inferred) |
 | `hierarchy.csv` | ISCO tree + source→ISCO attachment + skill→category→domain→type + occupation→domain facet |
 | `concept_alignments.csv` | cross-source matches (SKOS relation, confidence, method, validated) |
-| `unified_occupations.csv` / `unified_skills.csv` | de-duplicated unified concepts |
-| `provenance.csv` | audit trail: what each stage produced and when |
+| `unified_occupations.csv` / `unified_skills.csv` | de-duplicated unified concepts (the graph's nodes) |
+| `wikidata_links.csv` | QID anchors (exact/close match, confidence) |
+| `provenance.csv` | audit trail: what each stage/source produced and when |
 
 ## Validation (`--validate`)
 
@@ -156,41 +171,43 @@ Read-only over the graph (`src/validation/`); writes `validation/report.md` + pe
    reachability, no skill→skill edges, endpoint types, unified integrity, id uniqueness, …). Runs inside
    `qa()`, so every build self-certifies `consistency: 13/13 invariants PASS`.
 2. **External coverage benchmark** vs three expert-annotated NER corpora (SkillSpan, Sayfullina, FIJO),
-   exact/alias + bge-m3 semantic:
+   exact/alias + bge-m3 semantic (≥0.75):
 
    | dataset · slice | gold | exact | +semantic |
    |---|--:|--:|--:|
-   | SkillSpan · knowledge/tech (IT hard) | 1,840 | 27.0% | **73.2%** |
-   | SkillSpan · skill/tech | 1,884 | 3.7% | 58.0% |
+   | SkillSpan · knowledge/tech (IT hard) | 1,840 | 27.3% | **73.4%** |
+   | SkillSpan · skill/tech | 1,884 | 3.7% | 58.2% |
    | Sayfullina · soft | 1,140 | 7.1% | 62.5% |
    | FIJO · French soft | 692 | 0.3% | 35.0% |
 
    IT hard-skill coverage is strong; exact is low by construction (multi-word gold vs a noun taxonomy) and
    residual misses are items the KB correctly excludes (degrees, "Consulting", …).
 3. **LLM-connection audit** — re-validates the `llm_inferred` links (NLI + demand corroboration) and LLM
-   descriptions, confirming the inferred links are the KB's least-corroborated content and belong in a
-   separate `llm_inferred` type, never mixed into `demand`.
+   descriptions. After agentic enrichment the inferred links pass NLI **38/38 (100%)**; they remain the
+   KB's least-corroborated content and stay in a separate `llm_inferred` type, never mixed into `demand`.
 
 ## Graph export (`--export`)
 
-Materializes the deduplicated **concept graph** (11,424 nodes / ~44k edges; read-only over `kb/`, writes
-to `export/`). Endpoints are remapped to unified concepts via `member_entity_ids`, and each skill links to
-its single authoritative category.
+Materializes the deduplicated **concept graph** (**11,486 nodes / 45,859 edges**; read-only over `kb/`,
+writes to `export/`). Endpoints are remapped to unified concepts via `member_entity_ids`, and each skill
+links to its single authoritative category.
 
 - **`jobkb.ttl`** — RDF/OWL Turtle (SKOS + a light JobKB ontology: class disjointness, typed
-  `requiresSkill`/`inDomain` object properties, `skos:exactMatch` to Wikidata; ~167k triples). Loads in
+  `requiresSkill`/`inDomain` object properties, `skos:exactMatch` to Wikidata; ~177k triples). Loads in
   Protégé/GraphDB; a lightweight rdflib axiom self-check stands in for a Java reasoner.
-- **`jobkb.graphml`** — for Gephi / Cytoscape / yEd.
+- **`jobkb.graphml`** — for Gephi / Cytoscape / yEd / networkx.
 - **`jobkb.json`** — generic `{meta, nodes, edges}` graph JSON for web/D3 or a custom graph-DB loader.
-- **`jobkb.html`** — self-contained interactive backbone overview (~300 nodes; inline canvas, no external
+- **`jobkb.html`** — self-contained interactive backbone overview (~350 nodes; inline canvas, no external
   library).
-- **`jobkb_full.html`** — self-contained interactive full graph (all 11,424 / 44,176). The layout is
-  precomputed in Python, so the browser runs no physics; colour = domain, hover highlights a node's links.
+- **`jobkb_full.html`** — self-contained interactive full graph (all 11,486 nodes / 45,859 edges). The
+  layout is precomputed in Python (domains as separate sectors), so the browser runs no physics; level-of-
+  detail edges keep it readable, with **search**, **click-for-definition**, a **domain legend**, and
+  demand-weighted node sizing.
 
 ## Not in this build
 
 The reasoner side is intentionally an rdflib axiom self-check, not a bundled Java DL reasoner. Web scraping
-returns only as an **opt-in enrichment source** (`SCRAPER`, an `ExtractionSource` over scraped job postings
-— robots-respecting, gated by the same relevance filter, kept out of the reproducible core build), never as
-a build dependency. The previous French-primary, uncontrolled-scraping / manual-translation pipeline and its
-human `gold` review are fully removed.
+is present only as an **opt-in enrichment layer** (`SCRAPER`, a multi-source `ExtractionSource` over scraped
+job postings — robots-respecting, gated by the same relevance filter, kept out of the reproducible core
+build), never as a build dependency. The previous French-primary, uncontrolled-scraping / manual-translation
+pipeline and its human `gold` review are fully removed.
