@@ -29,3 +29,4 @@ kb/.emb_cache_*.pkl
 
 # --- Docs (LaTeX report + build artifacts) ---
 docs/
+scientific-paper/
