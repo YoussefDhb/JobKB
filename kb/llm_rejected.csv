@@ -1,2 +1,6 @@
 task,entity_id,label,output,reason,score
-desc,USKL_0284cdf7c738,Flipgrid,"Flipgrid is a video discussion platform used for online learning and collaboration, allowing users to record and share short video responses.",nli_off_topic,0.349
+desc,USKL_0284cdf7c738,Flipgrid,"Flipgrid is a video discussion platform used for online learning and collaboration, allowing users to record and share short video responses to questions or prompts.",nli_off_topic,0.271
+desc,USKL_0284cdf7c738,Flipgrid,Flipgrid is a video discussion platform that enables users to record and share short video responses to questions or prompts.,nli_off_topic,0.253
+desc,USKL_0284cdf7c738,Flipgrid,Flipgrid is a video discussion platform that enables users to record and share short video responses to questions or prompts in an online learning environment.,nli_off_topic,0.169
+desc,USKL_58c1484a321d,Visual Paradigm DB Visual ARCHITECT,"A visual modeling tool used for designing and creating database models, entity relationship diagrams, and other data architecture components.",nli_off_topic,0.011
+desc,USKL_58c1484a321d,Visual Paradigm DB Visual ARCHITECT,"It is a database design and modeling tool that supports various database management systems and offers features for data modeling, database design, and documentation.",nli_off_topic,0.015

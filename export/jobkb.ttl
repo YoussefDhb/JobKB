@@ -112885,6 +112885,7 @@ jobkb:USKL_30b08423b481 a skos:Concept,
         jobkbo:HardSkill,
         jobkbo:Skill ;
     skos:broader jobkb:SKC_1412790d1247 ;
+    skos:definition "SiteMaster SiteSmart is an integrated site management solution that provides real-time data and analytics for construction and infrastructure projects."@en ;
     skos:inScheme jobkb:scheme ;
     skos:prefLabel "SiteMaster SiteSmart"@en,
         "SiteMaster SiteSmart"@fr ;
@@ -140218,6 +140219,7 @@ jobkb:USKL_f2d6d1e62cb6 a skos:Concept,
         jobkbo:HardSkill,
         jobkbo:Skill ;
     skos:broader jobkb:SKC_ff91dbcea351 ;
+    skos:definition "SMTP is a standard protocol used for sending and receiving email messages over the internet, facilitating communication between email servers."@en ;
     skos:inScheme jobkb:scheme ;
     skos:prefLabel "Simple mail transfer protocol SMTP"@en,
         "Protocole de transfert de courrier simple SMTP"@fr ;
@@ -149524,6 +149526,7 @@ jobkb:USKL_996965c85060 a skos:Concept,
         jobkbo:HardSkill,
         jobkbo:Skill ;
     skos:broader jobkb:SKC_ff91dbcea351 ;
+    skos:definition "Software used to monitor and track the availability and performance of network devices and services in real-time to ensure continuous network operation."@en ;
     skos:inScheme jobkb:scheme ;
     skos:prefLabel "Network availability monitoring software"@en,
         "Logiciel de surveillance de la disponibilité du réseau"@fr ;
@@ -156393,6 +156396,7 @@ jobkb:USKL_33e3d3fc483d a skos:Concept,
         jobkbo:HardSkill,
         jobkbo:Skill ;
     skos:broader jobkb:SKC_6e157999c1f1 ;
+    skos:definition "Root cause analysis software is a type of tool used to identify and analyze the underlying causes of errors or defects in software development processes and systems."@en ;
     skos:inScheme jobkb:scheme ;
     skos:prefLabel "Root cause analysis software"@en,
         "Logiciel d'analyse des causes de racine"@fr ;

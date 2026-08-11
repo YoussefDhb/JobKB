@@ -1,15 +1,15 @@
 # JobKB agentic enrichment report
-_generated 2026-08-11T19:45:49+00:00_
+_generated 2026-08-11T22:18:33+00:00_
 
 LangGraph controller + reflective workers (propose → verify → reflect/retry → commit). The LLM proposes; the deterministic verifiers (bge-m3, mDeBERTa NLI, Wikidata) decide. Gaps dispatched this run: `description, link, emerging, anchor`.
 
 ## Description worker (reflective definition generation)
-- targets (uncached): **92**
-- committed: **8**, deferred: 84, reflection retries used: 1
+- targets (uncached): **84**
+- committed: **4**, deferred: 80, reflection retries used: 4
 
 ## Link worker (cosine **and** NLI-gated occupation→skill inference)
 - occupations targeted: **24**
-- links committed: **38** across 6 occupations; reflection retries used: 2
+- links committed: **38** across 6 occupations; reflection retries used: 0
 - every committed link cleared the embedding cosine floor **and** the NLI gate (occupation definition ⊨ "requires {skill}") — the accept criterion the cosine-only `llm_inferred` links lacked.
 
 ## Emerging worker (Wikidata-confirmed new tech)

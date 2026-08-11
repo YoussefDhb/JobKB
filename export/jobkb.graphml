@@ -25839,6 +25839,7 @@ Standard definitions of the processes, procedures, terms, and conditions for com
       <data key="hard_soft">hard</data>
       <data key="it_subtype">networks</data>
       <data key="sources">ONET</data>
+      <data key="description">Software used to monitor and track the availability and performance of network devices and services in real-time to ensure continuous network operation.</data>
     </node>
     <node id="USKL_c2de31b2a62a">
       <data key="label">Network bridge software</data>
@@ -26000,6 +26001,7 @@ Standard definitions of the processes, procedures, terms, and conditions for com
       <data key="hard_soft">hard</data>
       <data key="it_subtype">programming_languages</data>
       <data key="sources">ONET</data>
+      <data key="description">Root cause analysis software is a type of tool used to identify and analyze the underlying causes of errors or defects in software development processes and systems.</data>
     </node>
     <node id="USKL_bd9e3ea19509">
       <data key="label">Segue SilkPerformer</data>
@@ -26034,6 +26036,7 @@ Standard definitions of the processes, procedures, terms, and conditions for com
       <data key="hard_soft">hard</data>
       <data key="it_subtype">networks</data>
       <data key="sources">ONET</data>
+      <data key="description">SMTP is a standard protocol used for sending and receiving email messages over the internet, facilitating communication between email servers.</data>
     </node>
     <node id="USKL_52fde0d81b4a">
       <data key="label">Simple network management protocol SNMP software</data>
@@ -26240,6 +26243,7 @@ Standard definitions of the processes, procedures, terms, and conditions for com
       <data key="hard_soft">hard</data>
       <data key="it_subtype">other_hard</data>
       <data key="sources">ONET</data>
+      <data key="description">SiteMaster SiteSmart is an integrated site management solution that provides real-time data and analytics for construction and infrastructure projects.</data>
     </node>
     <node id="USKL_9ce77a7520fb">
       <data key="label">Web design software</data>
