@@ -12088,16 +12088,16 @@ SKL_dc25e8f94fc6,ZENODO,ecmascript-6,ecmascript-6,,,,,,,,hard,zenodo_skill,progr
 SKL_84a98d41bbad,ZENODO,css3,css3,,,,,,,,hard,zenodo_skill,programming_languages
 SKL_20f57807db41,ZENODO,continuous-deployment,continuous-deployment,,,,,,,,hard,zenodo_skill,other_hard
 SKL_c081277130de,SCRAPER,security,security,,,,,,,,hard,scraper_skill,security
-SKL_b39d81e6edcd,SCRAPER,distributed_systems,distributed systems,,,,,,,,hard,scraper_skill,other_hard
 SKL_61bcae0cefd5,SCRAPER,infrastructure,infrastructure,,,,,,,,hard,scraper_skill,systems_infrastructure
+SKL_b39d81e6edcd,SCRAPER,distributed_systems,distributed systems,,,,,,,,hard,scraper_skill,other_hard
 SKL_218005c08ab0,SCRAPER,gcp,gcp,,,,,,,,hard,scraper_skill,cloud_devops
 SKL_dd17313fcd10,SCRAPER,shopify,shopify,,,,,,,,hard,scraper_skill,other_hard
 SKL_c8b36e781195,SCRAPER,embedded,embedded,,,,,,,,hard,scraper_skill,other_hard
 SKL_b73df3cd5417,SCRAPER,sys_admin,sys admin,,,,,,,,hard,scraper_skill,other_hard
-SKL_e35823c08b3f,SCRAPER,ui/ux,ui/ux,,,,,,,,hard,scraper_skill,other_hard
-SKL_aa35faccb5b1,SCRAPER,ai/ml,ai/ml,,,,,,,,hard,scraper_skill,other_hard
 SKL_b9d4cdb7f641,SCRAPER,backend,backend,,,,,,,,hard,scraper_skill,web
 SKL_bf75556519b5,SCRAPER,frontend,frontend,,,,,,,,hard,scraper_skill,web
+SKL_e35823c08b3f,SCRAPER,ui/ux,ui/ux,,,,,,,,hard,scraper_skill,other_hard
+SKL_aa35faccb5b1,SCRAPER,ai/ml,ai/ml,,,,,,,,hard,scraper_skill,other_hard
 SKT_b61da00ef5e2,TAXONOMY,type:hard,Technical skills,,,,,,skill_type,,hard,ontology,hard
 SKT_34d566c944d2,TAXONOMY,type:soft,Soft & transversal skills,,,,,,skill_type,,soft,ontology,soft
 SKD_32d4e08d44c0,TAXONOMY,domain:dom_software,Software Development,,,,,,skill_domain,,hard,ontology,dom_software

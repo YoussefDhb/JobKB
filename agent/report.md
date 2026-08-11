@@ -1,8 +1,20 @@
 # JobKB agentic enrichment report
-_generated 2026-08-06T20:32:38+00:00_
+_generated 2026-08-11T19:45:49+00:00_
 
-LangGraph controller + reflective workers (propose → verify → reflect/retry → commit). The LLM proposes; the deterministic verifiers (bge-m3, mDeBERTa NLI, Wikidata) decide. Gaps dispatched this run: `description`.
+LangGraph controller + reflective workers (propose → verify → reflect/retry → commit). The LLM proposes; the deterministic verifiers (bge-m3, mDeBERTa NLI, Wikidata) decide. Gaps dispatched this run: `description, link, emerging, anchor`.
 
 ## Description worker (reflective definition generation)
-- targets (uncached): **8007**
-- committed: **7915**, deferred: 92, reflection retries used: 567
+- targets (uncached): **92**
+- committed: **8**, deferred: 84, reflection retries used: 1
+
+## Link worker (cosine **and** NLI-gated occupation→skill inference)
+- occupations targeted: **24**
+- links committed: **38** across 6 occupations; reflection retries used: 2
+- every committed link cleared the embedding cosine floor **and** the NLI gate (occupation definition ⊨ "requires {skill}") — the accept criterion the cosine-only `llm_inferred` links lacked.
+
+## Emerging worker (Wikidata-confirmed new tech)
+- proposed: 39, new candidates: 35, added (QID-confirmed): **0**
+
+## Anchor worker (deterministic — no LLM)
+- anchor-eligible skills: 5998; unanchored: 4834; unattempted by Wikidata: **0**
+- in the standard pipeline the `wikidata` stage runs first, so 0 unattempted here is expected and honest; standalone / after new data this does real resolution.

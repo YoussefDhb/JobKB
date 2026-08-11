@@ -21,11 +21,11 @@ DJINNI,DJINNI,djinni-recruitment-en,2026-07-23T15:33:51+00:00,job_postings_text_
 LINKEDIN_SWE,LINKEDIN_SWE,kaggle-linkedin-swe,2026-07-23T15:33:52+00:00,job_postings_mined,"898 demand relations from 9380 postings, 3661 titles matched"
 KAGGLE_JOBS,KAGGLE_JOBS,kaggle-job-skill-set-it,2026-07-23T15:33:53+00:00,job_postings_mined,"166 demand relations from 240 IT postings, 9 occupations"
 LLM,LLM,api=meta-llama/Llama-3.1-8B-Instruct,2026-07-23T20:05:53+00:00,hf-llm + nli-validation,"descriptions={'targets': 8013, 'generated': 0, 'cached': 0, 'rejected': 0, 'failed': 8013}; hardsoft={'targets': 0, 'filled': 0, 'nli_used': 0}; links={'targets': 6, 'occupations_linked': 6, 'links': 84}; emerging={'proposed': 39, 'new_candidates': 35, 'added_skills': 0}"
-SCRAPER,SCRAPER,web-scraper-2026,2026-08-05T11:31:38+00:00,network_scraped,"52 new occupations, 11 new skills, 1577 demand relations from 926 scraped postings; gate blocked 1 (non-IT 0, malformed 1)"
-SKILL_ONTO,SKILL_ONTO,-,2026-08-05T11:31:41+00:00,neutral_faceted_ontology,"12098 skills -> 22 categories / 10 domains / 2 types; 203 soft; 12130 skill edges, 308 occupation-domain facet edges"
-ALIGNMENT,ALIGNMENT,-,2026-08-05T12:01:24+00:00,incremental,414255 alignments total
-ATTACH,ATTACH,-,2026-08-05T12:01:24+00:00,incremental,198 ISCO attach edges total
-WIKIDATA,WIKIDATA,live query.wikidata.org,2026-08-05T12:51:58+00:00,sparql label-match + class verify + metadata,"1209 QID anchors (1164 skills, 37 occ, 8 domains, 1044 high-conf); 2 SPARQL queries this run"
-TRANSLATE,TRANSLATE,wd+mt=facebook/nllb-200-distilled-600M,2026-08-05T14:14:59+00:00,wikidata-labels + nllb-mt + backtranslation-validation,"en_fr={'targets': 444, 'attempted': 58, 'verbatim': 0, 'validated': 57, 'rejected': 1}; fr_en={'targets': 20, 'attempted': 0, 'verbatim': 0, 'validated': 0, 'rejected': 0}"
-AGENT,AGENT,langgraph; api=meta-llama/Llama-3.1-8B-Instruct,2026-08-06T20:32:38+00:00,langgraph controller + reflective workers (propose/verify/reflect),"description={'targets': 8007, 'committed': 7915, 'deferred': 92, 'reflected': 567}"
-MERGE,MERGE,-,2026-08-06T22:34:42+00:00,connected_components(exactMatch),"292 unified occ (13 merged), 11136 unified skills (710 merged)"
+SCRAPER,SCRAPER,web-scraper-2026,2026-08-11T17:19:49+00:00,network_scraped,"56 new occupations, 11 new skills, 1758 demand relations from 1065 scraped postings; gate blocked 1 (non-IT 0, malformed 1)"
+SKILL_ONTO,SKILL_ONTO,-,2026-08-11T17:19:52+00:00,neutral_faceted_ontology,"12098 skills -> 22 categories / 10 domains / 2 types; 203 soft; 12130 skill edges, 312 occupation-domain facet edges"
+ALIGNMENT,ALIGNMENT,-,2026-08-11T17:49:18+00:00,incremental,414349 alignments total
+ATTACH,ATTACH,-,2026-08-11T17:49:18+00:00,incremental,202 ISCO attach edges total
+WIKIDATA,WIKIDATA,live query.wikidata.org,2026-08-11T17:57:46+00:00,sparql label-match + class verify + metadata,"1209 QID anchors (1164 skills, 37 occ, 8 domains, 1044 high-conf); 3 SPARQL queries this run"
+AGENT,AGENT,langgraph; api=meta-llama/Llama-3.1-8B-Instruct,2026-08-11T19:45:49+00:00,langgraph controller + reflective workers (propose/verify/reflect),"description={'targets': 92, 'committed': 8, 'deferred': 84, 'reflected': 1}; link={'targets': 24, 'links': 38, 'occupations_linked': 6, 'reflected': 2}; emerging={'proposed': 39, 'new_candidates': 35, 'added_skills': 0}; anchor={'eligible': 5998, 'unanchored': 4834, 'unattempted': 0}"
+MERGE,MERGE,-,2026-08-11T19:46:10+00:00,connected_components(exactMatch),"296 unified occ (13 merged), 11136 unified skills (710 merged)"
+TRANSLATE,TRANSLATE,wd+mt=facebook/nllb-200-distilled-600M,2026-08-11T19:46:10+00:00,wikidata-labels + nllb-mt + backtranslation-validation,"en_fr={'targets': 391, 'attempted': 4, 'verbatim': 0, 'validated': 4, 'rejected': 0}; fr_en={'targets': 20, 'attempted': 0, 'verbatim': 0, 'validated': 0, 'rejected': 0}"
