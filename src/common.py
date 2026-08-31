@@ -1,4 +1,4 @@
-"""Shared helpers for the JobKB pipeline """
+"""Shared helpers for the pipeline """
 
 
 from __future__ import annotations
@@ -24,13 +24,12 @@ def mint_id(prefix: str, source: str, source_id: str) -> str:
 
 
 def normalize_label(text: str) -> str:
-    """Fold a label to a comparison key (accents/case/ligatures/dashes/quotes)."""
     if not text:
         return ""
     t = text.replace("’", "'").replace("‘", "'").replace("`", "'").replace("´", "'")
     for d in ("‑", "–", "—", "−"):
         t = t.replace(d, " ")
-    # expand ligatures before the ascii fold (else they'd be dropped)
+
     t = (t.replace("œ", "oe").replace("Œ", "OE")
            .replace("æ", "ae").replace("Æ", "AE"))
     t = _ud.normalize("NFKD", t).encode("ascii", "ignore").decode("ascii")
@@ -38,7 +37,6 @@ def normalize_label(text: str) -> str:
 
 
 def make_label_rows(entity_id, entity_kind, source, preferred=None, alts=None, hidden=None):
-    """Build dedup'd label rows for an entity across languages/types."""
     rows, seen = [], set()
 
     def add(text, ltype, lang):
@@ -69,7 +67,6 @@ def make_label_rows(entity_id, entity_kind, source, preferred=None, alts=None, h
 
 
 def split_multi(value: str):
-    """Split ESCO-style newline/pipe-delimited multi-label fields into a clean list."""
     if not value:
         return []
     parts = []
@@ -78,7 +75,7 @@ def split_multi(value: str):
             piece = piece.strip()
             if piece:
                 parts.append(piece)
-    # de-dup, preserve order
+
     seen, out = set(), []
     for p in parts:
         if p not in seen:
@@ -104,7 +101,6 @@ def _write_all(path, fieldnames, rows):
 
 
 def replace_source_rows(path, fieldnames, source, new_rows):
-    """Idempotent, source-scoped write: drop all rows for `source` and append `new_rows`."""
     existing = _read_all(path)
     kept = [r for r in existing if r.get("source") != source]
     seen, deduped = set(), []
@@ -122,7 +118,6 @@ def write_csv(path, fieldnames, rows):
 
 
 def upsert_labels(rows):
-    """Add new label rows to the labels table, de-duplicating against existing rows."""
     existing = _read_all(C.LABELS_CSV)
     seen, out = set(), []
     for r in existing + list(rows):
@@ -148,7 +143,6 @@ def log_provenance(source, rows):
 
 
 def read_csv_smart(path, prefer_encodings=("utf-8-sig", "cp1252", "latin-1"), sep=None):
-    """Read a CSV with encoding + separator autodetection into a pandas DataFrame (str)."""
     import pandas as pd
     last_err = None
     for enc in prefer_encodings:

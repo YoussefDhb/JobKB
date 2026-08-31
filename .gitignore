@@ -11,7 +11,7 @@ __pycache__/
 venv/
 env/
 
-# --- Secrets / local config (keep .env.example tracked) ---
+# --- Secrets / local config ---
 .env
 
 # --- OS / editor cruft ---
@@ -19,7 +19,7 @@ env/
 Thumbs.db
 *.swp
 
-# --- Heavy raw source data: CSVs under resources/ (kept out of the repo) ---
+# --- Heavy raw source data: CSVs under resources/ ---
 resources/**/*.csv
 # ...except the tiny web-scraping demo fixture, so `--add SCRAPER` and the notebook work out of the box.
 !resources/SCRAPED/**/*.sample.csv

@@ -1,213 +1,193 @@
 # JobKB
 
-An **English-primary, IT-focused occupation ↔ skill knowledge base**, built fully automatically from local
-public taxonomies — a clean, deduplicated graph meant to back recruitment and career-path recommenders.
+<p align="center">
+   <img src="assets/kb_logo.png" height="270" alt="KB logo">
+</p>
 
-**At a glance:** 292 occupations · 11,136 skills · 34,697 occupation–skill relations · 10 functional
-domains · 21 source datasets · bilingual EN/FR · Wikidata-anchored · **13/13 consistency**.
+JobKB is an IT-focused knowledge base, meant to back recruitment and career-path recommenders.
 
-French is a first-class secondary language (labels completed from Wikidata and validated NLLB machine
-translation). The **reproducible core build is datasets-only, with no human in the loop**: cross-source
-duplicates are resolved and alignments validated with open-source HuggingFace models, and a single command
-runs the whole pipeline — alignment, faceted ontology, ISCO attachment, unified merge, then Wikidata QID
-anchoring, agentic LLM description/link generation, and bilingual label completion — each step validated
-before it touches the graph, snapshot-resumable and fail-open (a build with no HF token still succeeds).
-An **optional, multi-source web-scraper** (`--scrape` / `--refresh-scraper` → `--add SCRAPER`) enriches the
-KB in near-real-time from keyless job APIs, public ATS boards (Greenhouse/Ashby/Lever) and emerging-tech
-trend signals — robots-respecting, recency-weighted and gate-screened, deliberately kept out of the
-reproducible core build.
+The core build is reproducible with no human intervention: alignment, faceted ontology, ISCO attachment, unified merge, then Wikidata QID anchoring, agentic LLM description/link generation, and bilingual label completion. Each step is automatically validated.
+
+A multi-source web-scraper enriches the KB from job APIs, public ATS boards and emerging-tech trend signals.
+
+## Table of Contents
+
+- [Architecture Overview](#architecture-overview)
+- [Quickstart](#quickstart)
+- [Explore](#explore)
+- [Sources](#sources)
+- [Pipeline](#pipeline)
+- [Source Adding](#source-adding)
+- [Alignment and Merge](#alignment-and-merge)
+- [Knowledge Base Schema](#knowledge-base-schema)
+- [Validation](#validation)
+- [Graph Export](#graph-export)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
+
+
+## Architecture Overview
+<p align="center">
+   <img src="assets/kb_architecture.png" alt="KB architecture">
+</p>
+
 
 ## Quickstart
 
 ```bash
 python -m venv .venv && .venv\Scripts\activate      # Windows (source .venv/bin/activate on Unix)
 pip install -r requirements.txt
-cp .env.example .env        # add HF_TOKEN=hf_... (optional; enrichment is fail-open without it)
+cp .env.example .env        # add HF_TOKEN=hf_... (enrichment is limited without it)
 
-python run_pipeline.py                 # full build + enrichment  (~a few hours on CPU, NLI-bound)
-python run_pipeline.py --core-only     # full build, no enrichment (fast, network-free)
-python run_pipeline.py --stages qa     # integrity + consistency report over the current kb/
+python run_pipeline.py                 # full build + enrichment
+python run_pipeline.py --core-only     # full build, no enrichment
+python run_pipeline.py --stages qa     # integrity + consistency report over the current KB
 ```
 
 See **[COMMANDS.md](COMMANDS.md)** for the full command guide.
 
 ## Explore
 
-- **`notebooks/inspect.ipynb`** — the guided showcase: architecture, integrity, the faceted taxonomy, an
-  interactive graph, and **10 recommender use-cases** (skill recommendation, reverse index, skill-gap,
-  career-path similarity, semantic search, market intelligence, taxonomy navigation, multilingual lookup,
-  SPARQL, graph analytics). Runs top-to-bottom to a **✓ ALL CHECKS PASSED**.
-- **`export/jobkb_full.html`** — the whole graph in a self-contained page: search, click a node for its
-  definition, domains as colour-coded islands.
+- **`notebooks/inspect.ipynb`** : a guided showcase of the KB (explained in french): architecture, integrity, the faceted taxonomy, interactive graph, and kb use-cases (skill recommendation, skill-gap, career similarity, etc).
+- **`export/jobkb_full.html`** : the whole graph in a single page: search, click a node for its definition, domains differentiated by color.
 
 ## Sources
 
-Scope = **core IT + managers + data**, applied consistently to every source. There is no
-ISCO↔SOC↔NOC↔ROME crosswalk in these datasets, so the cross-source **alignment is the crosswalk**; no
-source is privileged (ESCO uses its native ISCO code, ONET/NOC/ROME attach directly to ISCO by embedding
-similarity).
+Scope = **core IT + managers + data**, applied consistently to every source. No
+source is privileged.
 
 | Source | Role | IT scope |
 |---|---|---|
 | **ISCO-08** | Neutral backbone (every source attaches to it) | sub-major 25 & 35 + minor 133 |
-| **ESCO** | Occupations, skills, relations (native ISCO code) | `iscoGroup` 25/35/133 + all digital/digComp skills |
+| **ESCO** | Occupations, skills, relations | iscoGroup 25/35/133 + all digital/digComp skills |
 | **ONET** | IT occupations + technology tools | SOC 15-12xx + 15-2051 + 11-3021 |
 | **NOC 2021** | Bilingual EN/FR occupations | minors 2122/2123 + 20012, 21211, 21311, 2222x |
-| **ROME** | French métiers + competences (cross-lingual) | domain M18 + data/CDO codes |
+| **ROME** | French occupations + skills (cross-lingual) | domain M18 + data/CDO codes |
 | **SFIA 9** | Skills only — professional IT competency framework | 95 IT-scoped skills |
 | **CSO 3.5** | Skills only — Computer Science Ontology subset | ~530 IT topics (superTopicOf, depth≤2, balanced) |
-| **Lightcast Open Skills** | Skills only — large categorised taxonomy | IT category (17.0) ≈ 5,240 skills |
-| **Kaggle technical skills** | Skills only | 528 skills, 9 IT categories |
-| **e-CF 4.0** | Skills only — EU e-Competence Framework | 41 ICT competences, self-classified |
-| **Soft skills** (curated) | Skills only — recruiter-vocabulary soft skills | 22 noun-form soft skills |
+| **Lightcast Open Skills** | Skills only | IT category (17.0) ≈ 5,240 skills |
+| **Kaggle technical skills dataset** | Skills only | 528 skills, 9 IT categories |
+| **e-CF 4.0** | Skills only — EU e-Competence Framework | 41 ICT competences |
+| **Soft skills dataset** | Skills only — recruiter-vocabulary soft skills | 22 noun-form soft skills |
 | **WEF Global Skills Taxonomy** | Skills only — soft-skill standard | 47 soft skills, 5 sub-domains; 16 core → transversal |
-| **IT soft-skills taxonomy** (curated) | Skills only — comprehensive IT soft skills | 38 new soft skills; 10 core → transversal |
-| **ADEM** (Luxembourg) | Relations only — real vacancy demand | weighted `demand` edges on M18* occupations |
-| **Job postings** (mined) | Relations only | role→skill `demand` edges |
-| **data_jobs** (lukebarousse) | Hybrid — 785k postings | harvests ~50 tools + large-scale `demand` |
-| **zenodo** (Montandon 2019) | Hybrid — 17.9k SO postings | 55 tools + `demand` (hard & soft) |
-| **Djinni** | Relations only — 142k IT postings | `demand` across 15 occupations |
-| **LinkedIn SWE** | Relations only — 9.4k SWE postings | `demand` → software-developer family |
-| **Kaggle job-skill-set** | Relations only — 240 IT postings | `demand` for IT support/PM/manager roles |
-| **Emerging roles** (curated) | Occupations absent from ESCO/O*NET | 6 roles (Analytics/MLOps/BI/Data-Gov/Full-Stack/Back-End), ISCO-attached |
+| **IT soft-skills taxonomy** | Skills only — comprehensive IT soft skills | 38 new soft skills; 10 core → transversal |
+| **ADEM** | Relations only — real vacancy demand | weighted demand edges on M18* occupations |
+| **Job postings** | Relations only | role→skill demand edges |
+| **data_jobs** | Hybrid — 785k postings | harvests ~50 tools + large-scale demand |
+| **zenodo** | Hybrid — 17.9k SO postings | 55 tools + demand (hard & soft) |
+| **Djinni** | Relations only — 142k IT postings | demand across 15 occupations |
+| **LinkedIn SWE** | Relations only — 9.4k SWE postings | demand → software-developer family |
+| **Kaggle job-skill-set** | Relations only — 240 IT postings | demand for IT support/PM/manager roles |
+| **Emerging roles** | Occupations absent from ESCO/O*NET | additioanl roles (Analytics/MLOps/BI/Data-Gov/etc), ISCO-attached |
 
-**Skills-only sources** contribute skills but no occupations (`contributes_occupations=False`), so they
-skip ISCO attachment: their skills are classified into the ontology, aligned/merged with the existing
-vocabulary, and reach occupations transitively. **Relation-only sources** add weighted `demand`
-occupation→skill edges between existing entities (no new nodes). The soft branch has real structure (five
-WEF-aligned sub-domains + a catch-all); a curated IT-relevance filter (`relevance.is_non_it_soft`) prunes
-O*NET psychometric abilities and non-IT ESCO life-skills, keeping the branch IT-focused. Curated
-authoritative lists (WEF/soft-skills) bypass the semantic IT gate, like the code-filtered taxonomies.
+**Note :** Skills-only sources contribute only to skills (`contributes_occupations=False`), so they skip ISCO attachment: their skills are classified into the ontology, aligned/merged with the existing vocabulary, and reach occupations transitively. Relation-only sources add weighted `demand` occupation→skill edges between existing entities (no new nodes). The soft branch has a real structure (five WEF-aligned sub-domains + a catch-all) and an IT-relevance filter (`relevance.is_non_it_soft`) that prunes abilities and non-IT ESCO life-skills in order to keep the branch IT-focused.
 
 ## Pipeline
 
 ```
 src/
-  config.py        # paths, EN-primary schema, IT scope per source, HF model ids, tunables
+  config.py        # paths, schema, IT scope per source, model ids, tunables
   common.py        # deterministic ids, label normalization, idempotent CSV IO, provenance
-  ingest/          # isco, esco, onet, noc, rome  (each IT-filtered, EN-primary)
+  ingest/          # isco, esco, onet, noc, rome ... (each IT-filtered)
   sources/         # pluggable source framework: base + registry + per-source loaders
   hierarchy.py     # faceted ontology: skill -> category -> domain -> type + occupation -> domain facet
-  relevance.py     # automatic IT-relevance / noise gate at ingest (for pluggable sources)
+  relevance.py     # automatic IT-relevance + anti-noise gate at ingestion (for additional sources)
   align/           # candidates (embeddings) -> verify (NLI) + match_key dedup -> attach (ISCO)
-  merge.py         # source-neutral unified concept clustering / de-duplication
+  merge.py         # unified concept clustering / de-duplication
   wikidata.py      # QID anchoring + authoritative descriptions/aliases (enrichment)
   llm.py           # HF LLM descriptions / inferred links / emerging tech (one-shot enrichment)
-  agent/           # LangGraph agentic enrichment (supersedes llm on a full build)
+  agent/           # LangGraph agentic enrichment
   translate.py     # bilingual EN/FR label completion (enrichment)
-  validation/      # consistency invariants + external gold coverage + LLM-link audit
-  export/          # graph export: RDF/OWL Turtle + GraphML + JSON + interactive HTML
-  incremental.py   # add/remove ONE source without a full rebuild
-  pipeline.py      # orchestrator + QA/integrity report (self-certifies consistency)
+  validation/      # consistency invariants + external coverage + LLM-link audit
+  export/          # graph export: RDF/OWL Turtle + GraphML + JSON + HTML
+  incremental.py   # add/remove a source without a full rebuild
+  pipeline.py      # orchestrator + QA/integrity report
 run_pipeline.py    # CLI entry point
-notebooks/inspect.ipynb   # verification / project-showcase notebook over kb/
+notebooks/inspect.ipynb   # verifying and showcasing the kb
 ```
 
-Core stages are `ingest → hierarchy → align → attach → merge → qa`, each idempotent and runnable
-standalone against the existing `kb/`. On a full build the post-merge enrichment stages run automatically:
-`… → merge → `**`wikidata → agent → translate`**` → qa` (Wikidata first — its QIDs/descriptions feed the
-rest; the `agent` stage falls back to the one-shot `llm.run()` if `langgraph` is absent). Each enrichment
-stage is fail-open and snapshot-resumable. `--core-only` skips them.
+Core stages are `ingest → hierarchy → align → attach → merge → qa`, each one is  idempotent and runnable against the existing kb.
+
+On a full build the post-merge enrichment stages run automatically:
+`… → merge → `**`wikidata → agent → translate`**` → qa` (Wikidata first — its QIDs/descriptions feed the rest; the `agent` stage in a one-shot). Each enrichment
+stage is fail-open and snapshot-resumable.
 
 ```bash
-python run_pipeline.py --stages merge            # re-derive unified concepts (seconds)
+python run_pipeline.py --stages merge            # re-derive unified concepts
 python run_pipeline.py --from align              # align -> attach -> merge -> qa
-python run_pipeline.py --stages ingest --source ESCO   # re-ingest one source
+python run_pipeline.py --stages ingest --source ESCO   # re-ingest a specific source
 python run_pipeline.py --list-stages
 ```
 
-A full build takes a few hours on CPU, dominated by mDeBERTa NLI verification (~2 s/pair — the models
-review every merge since no human does, a deliberate accuracy-over-speed trade-off). bge-m3 embeddings are
-disk-cached (`kb/.emb_cache_*.pkl`), so a threshold-only rebuild reuses them.
+A full build takes some hours on CPU, and verified by mDeBERTa NLI models (~2 s/pair — the models review every merge, an accuracy-over-speed trade-off). bge-m3 embeddings are
+disk-cached so a threshold-only rebuild can reuse them.
 
-## Adding a source
+## Source Adding
 
-A source is added to an existing KB without a rebuild — ingested, standardized, aligned only against the
-existing entities, attached to ISCO, and merged:
+A source is added to an existing KB without a full rebuild, it is ingested, standardized, aligned against the existing entities, attached to ISCO, and finally merged:
 
 ```bash
-python run_pipeline.py --add NAME      # incrementally add one registered source
-python run_pipeline.py --remove NAME   # remove it and repair the graph
+python run_pipeline.py --add NAME      # incrementally add one source
+python run_pipeline.py --remove NAME   # remove the source and repair the graph
 python run_pipeline.py --list-sources
 ```
 
-To add a dataset, subclass `StructuredSource` (`src/sources/base.py`, see `sfia.py`/`cso.py`) and register
-it in `src/sources/registry.py`. Every pluggable source is screened at ingest by the relevance/noise gate
-(`src/relevance.py`): malformed and confidently non-IT rows are blocked (logged to
-`kb/blocked_entities.csv`); built-in code-filtered taxonomies bypass it.
+Every source is screened at ingest by the relevance/noise gate (`src/relevance.py`): malformed and confidently non-IT rows are blocked (logged to
+`kb/blocked_entities.csv`). Note that built-in code-filtered taxonomies bypass it.
 
-## Alignment, taxonomy & merge
+## Alignment and Merge
 
-Alignment is automatic and model-verified: embedding candidate generation (bge-m3) → NLI verification
-(mDeBERTa on definitions for occupations) → SKOS relations + a source-neutral merge flag. `merge.py`
-clusters the `exactMatch` graph into unified concepts (English-primary label, merged synonyms, hub ISCO
-code, member back-links). A semantic occupation merge is triple-guarded (embedding floor + same ISCO group
-+ mutual NLI entailment), so nothing is de-duplicated on similarity alone.
+Alignment is automatic and verified by models: embedding candidate generation (bge-m3) → NLI verification (mDeBERTa on definitions for occupations) → SKOS relations + a source-neutral merge flag. `merge.py` clusters the `exactMatch` graph into unified concepts. A semantic occupation merge is triple-guarded (embedding floor + same ISCO group + mutual NLI entailment), so nothing is de-duplicated.
 
-The taxonomy is a **faceted 4-level ontology** over a shared functional-domain layer: skills go
-`skill → category (22) → domain (10) → type (2 hard/soft)`, and each occupation is linked (`in_domain`) to
-one of the same 10 domains, so the graph is navigable `occupation ↔ domain ↔ category ↔ skill`. ISCO stays
+The taxonomy is a faceted 4-level ontology over a shared domain layer: `skill → category → domain → type (hard/soft)`, and each occupation is linked (`in_domain`) to one of the domains, so the graph is navigable `occupation ↔ domain ↔ category ↔ skill`. ISCO stays
 the authoritative occupation backbone.
 
-## Knowledge-base schema (`kb/`)
+## Knowledge Base Schema
 
 | File | Contents |
 |---|---|
 | `occupations.csv` | one row per source occupation / ISCO-group node (EN+FR labels, ISCO & source codes) |
-| `skills.csv` | one row per source skill (+ `TAXONOMY` type/domain/category nodes), hard/soft + IT category |
+| `skills.csv` | one row per source skill (+ type/domain/category nodes), hard/soft + IT category |
 | `labels.csv` | every preferred/alt label per entity, per language |
 | `occupation_skill_relations.csv` | occupation ↔ skill links (essential/optional/demand/transversal/llm_inferred) |
 | `hierarchy.csv` | ISCO tree + source→ISCO attachment + skill→category→domain→type + occupation→domain facet |
 | `concept_alignments.csv` | cross-source matches (SKOS relation, confidence, method, validated) |
 | `unified_occupations.csv` / `unified_skills.csv` | de-duplicated unified concepts (the graph's nodes) |
-| `wikidata_links.csv` | QID anchors (exact/close match, confidence) |
+| `wikidata_links.csv` | QID anchors (exact/close match, confidence score) |
 | `provenance.csv` | audit trail: what each stage/source produced and when |
 
-## Validation (`--validate`)
+## Validation
 
-Read-only over the graph (`src/validation/`); writes `validation/report.md` + per-track CSVs. Three tracks:
+This process reads over the graph and writes a validation report (`validation/report.md`). It contains three tracks:
 
-1. **Logical-consistency certificate** — 13 graph-logic invariants (acyclicity, single-parent, ISCO
-   reachability, no skill→skill edges, endpoint types, unified integrity, id uniqueness, …). Runs inside
-   `qa()`, so every build self-certifies `consistency: 13/13 invariants PASS`.
-2. **External coverage benchmark** vs three expert-annotated NER corpora (SkillSpan, Sayfullina, FIJO),
-   exact/alias + bge-m3 semantic (≥0.75):
+1. **Logical-consistency certificate** : 13 graph-logic invariants (acyclicity, single-parent, ISCO reachability, no skill→skill edges, endpoint types, unified integrity, id uniqueness, …). Runs inside `qa()`, so every build is self-certified.
+2. **External coverage benchmark** against three expert-annotated NER corpora (SkillSpan, Sayfullina, FIJO), exact/alias + bge-m3 semantic.
+3. **LLM-connection audit** : re-validates the `llm_inferred` links (NLI + demand corroboration) and LLM descriptions.
+## Graph export
 
-   | dataset · slice | gold | exact | +semantic |
-   |---|--:|--:|--:|
-   | SkillSpan · knowledge/tech (IT hard) | 1,840 | 27.3% | **73.4%** |
-   | SkillSpan · skill/tech | 1,884 | 3.7% | 58.2% |
-   | Sayfullina · soft | 1,140 | 7.1% | 62.5% |
-   | FIJO · French soft | 692 | 0.3% | 35.0% |
+Materializes the concept graph. Endpoints are remapped to unified concepts via `member_entity_ids`, and each skill links to its single authoritative category.
 
-   IT hard-skill coverage is strong; exact is low by construction (multi-word gold vs a noun taxonomy) and
-   residual misses are items the KB correctly excludes (degrees, "Consulting", …).
-3. **LLM-connection audit** — re-validates the `llm_inferred` links (NLI + demand corroboration) and LLM
-   descriptions. After agentic enrichment the inferred links pass NLI **38/38 (100%)**; they remain the
-   KB's least-corroborated content and stay in a separate `llm_inferred` type, never mixed into `demand`.
-
-## Graph export (`--export`)
-
-Materializes the deduplicated **concept graph** (**11,486 nodes / 45,859 edges**; read-only over `kb/`,
-writes to `export/`). Endpoints are remapped to unified concepts via `member_entity_ids`, and each skill
-links to its single authoritative category.
-
-- **`jobkb.ttl`** — RDF/OWL Turtle (SKOS + a light JobKB ontology: class disjointness, typed
-  `requiresSkill`/`inDomain` object properties, `skos:exactMatch` to Wikidata; ~177k triples). Loads in
-  Protégé/GraphDB; a lightweight rdflib axiom self-check stands in for a Java reasoner.
+- **`jobkb.ttl`** — RDF/OWL Turtle (SKOS + a light JobKB ontology). Loads in Protégé/GraphDB.
 - **`jobkb.graphml`** — for Gephi / Cytoscape / yEd / networkx.
 - **`jobkb.json`** — generic `{meta, nodes, edges}` graph JSON for web/D3 or a custom graph-DB loader.
-- **`jobkb.html`** — self-contained interactive backbone overview (~350 nodes; inline canvas, no external
+- **`jobkb.html`** — self-contained interactive backbone overview
   library).
-- **`jobkb_full.html`** — self-contained interactive full graph (all 11,486 nodes / 45,859 edges). The
-  layout is precomputed in Python (domains as separate sectors), so the browser runs no physics; level-of-
-  detail edges keep it readable, with **search**, **click-for-definition**, a **domain legend**, and
-  demand-weighted node sizing.
+- **`jobkb_full.html`** — self-contained interactive full graph (all nodes + edges), with search, click-for-definition and demand-weighted node sizing options.
 
-## Not in this build
+## Contributing
 
-The reasoner side is intentionally an rdflib axiom self-check, not a bundled Java DL reasoner. Web scraping
-is present only as an **opt-in enrichment layer** (`SCRAPER`, a multi-source `ExtractionSource` over scraped
-job postings — robots-respecting, gated by the same relevance filter, kept out of the reproducible core
-build), never as a build dependency. The previous French-primary, uncontrolled-scraping / manual-translation
-pipeline and its human `gold` review are fully removed.
+Contributions are welcome! To contribute to JobKB, please follow these steps:
+
+1. Fork the repository
+2. Create a new  branch
+3. Submit a pull request with a clear description
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+
+## Support
+If you encounter any issues or have questions, please feel free to reach out.
+
+Your feedback and contributions are greatly appreciated!

@@ -1,4 +1,4 @@
-"""Central configuration. Leaf module so every stage can import it."""
+"""Central configuration"""
 
 from __future__ import annotations
 import os
@@ -26,7 +26,7 @@ def _load_dotenv(path=os.path.join(ROOT, ".env")):
 
 _load_dotenv()
 
-# HuggingFace reads either name; mirror the token so both work.
+# HuggingFace reads either name, mirror the token so both work.
 HF_TOKEN = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_HUB_TOKEN") or ""
 if HF_TOKEN:
     os.environ.setdefault("HF_TOKEN", HF_TOKEN)
@@ -39,39 +39,36 @@ ONET_EN_DIR = os.path.join(RESOURCES, "ONET", "en")
 NOC_EN_DIR = os.path.join(RESOURCES, "NOC", "en")
 NOC_FR_DIR = os.path.join(RESOURCES, "NOC", "fr")
 ROME_FR_DIR = os.path.join(RESOURCES, "ROME", "fr")
-# Skills-only frameworks (no occupations): SFIA (professional IT skills) and CSO
-# (computer-science research topics, curated subset). English-only.
+# Skills-only frameworks: SFIA and CSO
 SFIA_EN_DIR = os.path.join(RESOURCES, "SFIA", "en")
 CSO_EN_DIR = os.path.join(RESOURCES, "CSO", "en")
 LIGHTCAST_EN_DIR = os.path.join(RESOURCES, "LIGHTCAST", "en")
 OTHERS_EN_DIR = os.path.join(RESOURCES, "OTHERS", "en")
-# Zenodo 3906955 (Stack Overflow IT job postings + companion hard-skill category taxonomy).
+# Zenodo (Stack Overflow IT job postings + companion hard-skill category).
 ZENODO_DIR = os.path.join(OTHERS_EN_DIR, "zenodo")
 ZENODO_JOBS_CSV = os.path.join(ZENODO_DIR, "jobs_complete.csv")
 ZENODO_HL_CSV = os.path.join(ZENODO_DIR, "high-level-hard-skills.csv")
-# WEF Global Skills Taxonomy 2021 + Education 4.0 (soft-skill enrichment).
+# WEF Global Skills Taxonomy + Education 4.0 (soft-skill enrichment).
 WEF_SOFT_DIR = os.path.join(OTHERS_EN_DIR, "Soft-skills")
 WEF_GLOBAL_CSV = os.path.join(WEF_SOFT_DIR, "Global-Skills-Taxonomy.csv")
 WEF_COMPETENCIES_CSV = os.path.join(WEF_SOFT_DIR, "Skills-Taxonomy-Competencies.csv")
 WEF_EDUCATION_CSV = os.path.join(WEF_SOFT_DIR, "Education4.0.csv")
-# Job-posting demand datasets added 2026-07-22.
+# Job-posting demand datasets
 DJINNI_CSV = os.path.join(OTHERS_EN_DIR, "djinni-recruitment-dataset-job-descriptions-english.csv")
 LINKEDIN_SWE_CSV = os.path.join(OTHERS_EN_DIR, "kaggle-LinkedIn-Software-Engineering-Jobs-Dataset.csv")
 KAGGLE_JOBS_CSV = os.path.join(OTHERS_EN_DIR, "kaggle-job-skill-set.csv")
-# Wikidata enrichment: the provided (noisy) programming-language/library export, plus a
-# `retrieved/` folder where every SPARQL/API resolution is snapshotted so rebuilds are offline.
+# Wikidata enrichment
 WIKIDATA_EN_DIR = os.path.join(RESOURCES, "WIKIDATA", "en")
 WIKIDATA_RETRIEVED_DIR = os.path.join(RESOURCES, "WIKIDATA", "retrieved")
 WIKIDATA_SRC_CSV = os.path.join(WIKIDATA_EN_DIR, "ESCO_v1.2.1-wikidata.csv")
 WIKIDATA_SNAPSHOT_CSV = os.path.join(WIKIDATA_RETRIEVED_DIR, "resolutions.csv")
 
-# Web-scraping enrichment (--scrape): a polite crawler snapshots raw postings here as
-# <lang>/<site>.csv; ScraperSource then ingests the snapshot fully offline (like the OTHERS datasets).
+# Web-scraping enrichment
 SCRAPED_DIR = os.path.join(RESOURCES, "SCRAPED")
 SCRAPED_FIELDS = ["site", "url", "lang", "title", "company", "location", "text",
                   "tags", "posted_at", "retrieved_at"]
 
-LLM_RETRIEVED_DIR = os.path.join(RESOURCES, "LLM", "retrieved")   # LLM generation snapshots (cache)
+LLM_RETRIEVED_DIR = os.path.join(RESOURCES, "LLM", "retrieved")   # LLM generation snapshots
 TRANSLATE_RETRIEVED_DIR = os.path.join(RESOURCES, "TRANSLATE", "retrieved")  # MT / Wikidata-label cache
 
 KB_DIR = os.path.join(ROOT, "kb")   # built knowledge base output
@@ -88,12 +85,12 @@ PROVENANCE_CSV = os.path.join(KB_DIR, "provenance.csv")
 BLOCKED_ENTITIES_CSV = os.path.join(KB_DIR, "blocked_entities.csv")  # relevance-gate rejects
 LLM_SNAPSHOT_CSV = os.path.join(LLM_RETRIEVED_DIR, "generations.csv")  # cached LLM generations
 LLM_REJECTED_CSV = os.path.join(KB_DIR, "llm_rejected.csv")   # LLM outputs that failed validation
-TRANSLATE_SNAPSHOT_CSV = os.path.join(TRANSLATE_RETRIEVED_DIR, "translations.csv")  # cached MT (resumable)
+TRANSLATE_SNAPSHOT_CSV = os.path.join(TRANSLATE_RETRIEVED_DIR, "translations.csv")  # cached MT
 TRANSLATE_WD_LABELS_CSV = os.path.join(TRANSLATE_RETRIEVED_DIR, "wd_labels.csv")    # authoritative @en/@fr
 TRANSLATE_REJECTED_CSV = os.path.join(KB_DIR, "translate_rejected.csv")  # MT outputs that failed validation
 WIKIDATA_LINKS_CSV = os.path.join(KB_DIR, "wikidata_links.csv")      # entity -> Wikidata QID anchors
 
-# KB validation (--validate): external gold benchmark + LLM-connection audit (read-only).
+# KB validation: external benchmark + LLM-connection audit
 VALIDATION_RES_DIR = os.path.join(RESOURCES, "validation")
 VALIDATION_OUT_DIR = os.path.join(ROOT, "validation")
 VALIDATION_DATASETS = {
@@ -102,13 +99,17 @@ VALIDATION_DATASETS = {
     "sayfullina": ("sayfullina", ("train", "dev", "test"), False, False, "en"),
     "fijo":       ("fijo",       ("train", "dev", "test"), False, False, "fr"),
 }
+
+
 SAYFULLINA_CLUSTERS_CSV = os.path.join(VALIDATION_RES_DIR, "sayfullina", "sayfullina_clusters.csv")
 VALIDATION_SEMANTIC_MIN = 0.75         # bge-m3 cosine floor for "semantically covered"
 VALIDATION_ANON_TOKENS = ("<organization>", "<address>", "<location>", "<anon_company>", "<anon_misc>")
-VALIDATION_LINK_NLI_MIN = 0.50         # occ-def |= "requires {skill}" entailment floor
+VALIDATION_LINK_NLI_MIN = 0.50         # occ-def entailment floor
 VALIDATION_DEMAND_SEMANTIC_MIN = 0.75  # demand-corroboration embedding floor
 
-# Knowledge-base schema (English-primary; French secondary when present)
+
+
+# Knowledge-base schema
 
 OCCUPATION_FIELDS = [
     "entity_id", "source", "source_id", "isco_code", "source_code",
@@ -126,8 +127,7 @@ LABEL_FIELDS = [
     "entity_id", "entity_kind", "label_text", "label_norm",
     "label_type", "language", "source",
 ]
-# Taxonomy tiers live as rows in skills.csv tagged by esco_skill_type; this marks them so
-# hierarchy/merge/qa can exclude them from the real-skill set.
+# Taxonomy tiers tagged by esco_skill_type
 TAXONOMY_SKILL_MARKERS = ("skill_type", "skill_domain", "skill_category")
 REL_FIELDS = ["occupation_entity_id", "skill_entity_id", "relation_type", "source", "weight"]
 HIERARCHY_FIELDS = ["parent_entity_id", "child_entity_id", "entity_kind", "relation_type", "source"]
@@ -136,7 +136,6 @@ ALIGNMENT_FIELDS = [
     "relation", "confidence", "method", "validated", "merge", "notes",
 ]
 # `description`/`description_source`: single concept description, precedence source -> wikidata -> llm.
-# wikidata_* columns are filled by wikidata.enrich_rows() and never overwrite KB-authored text.
 UNIFIED_OCC_FIELDS = [
     "unified_id", "primary_label_en", "primary_label_fr",
     "alt_labels_en", "alt_labels_fr", "isco_code",
@@ -158,13 +157,13 @@ BLOCKED_FIELDS = [
     "entity_kind", "source", "source_id", "label", "decision", "reason",
     "sim_it", "sim_non", "nli",
 ]
-# Wikidata side table (--wikidata). `relation` is SKOS-typed (exactMatch/closeMatch) for RDF export.
+# Wikidata side table
 WIKIDATA_LINKS_FIELDS = [
     "entity_id", "entity_kind", "unified_id", "label_en", "qid", "relation", "wikidata_url",
     "wd_label", "wd_description", "wd_aliases_en", "wd_aliases_fr",
     "instance_of", "match_method", "confidence",
 ]
-# Resolution snapshot keyed by (norm_label, kind); empty qid = verified-unresolved (cached for offline).
+# Resolution snapshot keyed by (norm_label, kind)
 WIKIDATA_SNAPSHOT_FIELDS = [
     "norm_label", "entity_kind", "qid", "wd_label", "wd_description",
     "wd_aliases_en", "wd_aliases_fr",
@@ -174,7 +173,7 @@ WIKIDATA_SNAPSHOT_FIELDS = [
 # IT-domain scope per source
 # ISCO-08 sub-majors 25 (ICT professionals) + 35 (ICT technicians) + minor 133 (ICT service managers).
 ISCO_IT_SUBMAJORS = ("25", "35")
-ISCO_IT_MINORS = ("133",)  # ICT service managers
+ISCO_IT_MINORS = ("133",) 
 
 ISCO_IT_UNIT_GROUPS = {
     "1330": "Information and communications technology service managers",
