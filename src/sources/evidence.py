@@ -1,11 +1,4 @@
-"""Shared helpers for *relation-only* enrichment sources (ADEM, JOBS).
-
-These sources add occupation->skill edges between entities that ALREADY exist in the KB — no new
-occupation/skill nodes. They resolve endpoints against the current `kb/` (by ESCO uuid / ROME code
-for ADEM, by normalized label for JOBS) and write weighted `demand` relations. Reads are done at
-ingest time, so ESCO/ROME/skill sources must already be ingested (guaranteed by registration order
-and by the incremental `--add` running against an existing KB).
-"""
+"""Shared helpers for relation-only enrichment sources."""
 
 from __future__ import annotations
 
@@ -19,8 +12,7 @@ _PAREN = re.compile(r"\s*\([^)]*\)")
 
 
 def match_key(label: str) -> str:
-    """Normalized + singularized key for cross-source label matching (same idea as verify._key):
-    accent/case-fold, drop parentheticals, strip a trailing 's' from each token."""
+    """Normalized + singularized key for cross-source label matching."""
     norm = K.normalize_label(_PAREN.sub("", label or ""))
     if not norm:
         return ""
@@ -40,13 +32,13 @@ def _label_index(rows, label_fields):
 
 
 def occ_index():
-    """{match_key(label) -> occupation entity_id} for real occupations (excludes ISCO groups)."""
+    """{match_key(label) -> occupation entity_id} for real occupations."""
     occ = [r for r in K.read_all(C.OCCUPATIONS_CSV) if r.get("occupation_type") != "isco_group"]
     return _label_index(occ, ("pref_label_en", "pref_label_fr", "alt_labels_en", "alt_labels_fr"))
 
 
 def skill_index():
-    """{match_key(label) -> skill entity_id} for real skills (excludes taxonomy nodes)."""
+    """{match_key(label) -> skill entity_id} for real skills."""
     skl = [r for r in K.read_all(C.SKILLS_CSV) if r.get("esco_skill_type") not in _TAXO]
     return _label_index(skl, ("pref_label_en", "pref_label_fr", "alt_labels_en", "alt_labels_fr"))
 

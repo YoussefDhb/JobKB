@@ -1,14 +1,4 @@
-"""ADEM source — real labor-market demand relations (enrichment).
-
-`resources/OTHERS/en/datasc-skills-vacancies-2025-2027.csv` is the Luxembourg ADEM vacancy↔skill
-table, already linked to **ESCO** (skill_uri) and **ROME** (occupation_code) — both of which are
-already in our KB. We keep the IT slice (ROME families `M18*`) and, where BOTH endpoints exist in
-the KB, aggregate vacancy `positions` per (occupation, skill) into weighted `demand` relations.
-
-No new nodes are created — only occupation->skill edges between existing entities — so this adds a
-genuine demand signal (which skills IT roles actually require) without any noise. Relation-only:
-`contributes_occupations=False`, `needs_attach=False`.
-"""
+"""ADEM source — real labor-market demand relations (enrichment)."""
 
 from __future__ import annotations
 
@@ -47,7 +37,7 @@ class AdemDemandSource(Source):
                 occ_id = rome_map.get(oc)
                 skill_id = esco_map.get(uri.rsplit("/", 1)[-1])
                 if not occ_id or not skill_id:
-                    continue                          # endpoint not in the IT-scoped KB
+                    continue                         
                 try:
                     positions = int(float(row.get("positions") or 1))
                 except ValueError:

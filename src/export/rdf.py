@@ -1,7 +1,4 @@
-"""RDF/OWL Turtle serialization: SKOS concepts + a light JobKB ontology (TBox with class disjointness and
-property domain/range, then the ABox). Authored reasoner-ready; a lightweight self_check() verifies the
-axioms hold in the emitted data (the substance of a consistency check without a Java reasoner).
-"""
+"""RDF/OWL Turtle serialization: SKOS concepts + a light JobKB ontology."""
 
 from __future__ import annotations
 
@@ -112,7 +109,7 @@ def build_rdf(nodes, edges):
         for s in n.get("sources", []):
             if s:
                 g.add((u, ONT.source, Literal(s)))
-        # Wikidata cross-reference (SKOS mapping to the real Wikidata entity)
+        # Wikidata cross-reference
         if n.get("wikidata_qid"):
             rel = SKOS.closeMatch if n.get("wikidata_relation", "").endswith("closeMatch") else SKOS.exactMatch
             g.add((u, rel, WD[n["wikidata_qid"]]))
@@ -133,21 +130,21 @@ def self_check(nodes, edges):
     """Verify the ontology axioms hold in the data (reasoner-substance, no Java). Returns (ok, details)."""
     kind = {n["id"]: n["kind"] for n in nodes}
     results = []
-    # class disjointness: no node is both Occupation and Skill (true by construction — one kind each)
+    # class disjointness
     both = [n["id"] for n in nodes if n["kind"] == "occupation" and n["kind"] == "skill"]
     results.append(("Occupation disjointWith Skill (no node is both)", len(both) == 0,
                     f"{len(both)} violations"))
-    # requiresSkill domain/range: subject is an Occupation, object is a Skill
+    # requiresSkill domain/range
     bad_req = [e for e in edges if e["type"] == "requires"
                and (kind.get(e["source"]) != "occupation" or kind.get(e["target"]) != "skill")]
     results.append(("requiresSkill: domain Occupation / range Skill", len(bad_req) == 0,
                     f"{len(bad_req)} violations"))
-    # inDomain range: object is a SkillDomain
+    # inDomain range
     bad_dom = [e for e in edges if e["type"] == "in_domain"
                and (kind.get(e["source"]) != "occupation" or kind.get(e["target"]) != "skill_domain")]
     results.append(("inDomain: domain Occupation / range SkillDomain", len(bad_dom) == 0,
                     f"{len(bad_dom)} violations"))
-    # skos:broader never leaves the concept universe (no dangling IRI)
+    # skos
     ids = set(kind)
     bad_edge = [e for e in edges if e["source"] not in ids or e["target"] not in ids]
     results.append(("edges reference only declared concepts", len(bad_edge) == 0,

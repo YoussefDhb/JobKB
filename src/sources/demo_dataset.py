@@ -1,12 +1,4 @@
-"""DEMO source — a tiny synthetic IT dataset to validate incremental add/remove.
-
-Not real data. It deliberately contains: an occupation that SHOULD merge with existing
-concepts (Software Developer), a FRENCH-ONLY occupation that should gain an English label
-via cross-lingual alignment (Développeur web), a novel role that should attach to ISCO but
-not merge (Prompt Engineer), and skills that should merge (Python, Kubernetes) plus a soft
-skill (Teamwork). Add with `python run_pipeline.py --add DEMO`, then remove with
-`python run_pipeline.py --remove DEMO`.
-"""
+"""DEMO source — a tiny synthetic IT dataset to validate incremental add/remove."""
 
 from __future__ import annotations
 
@@ -45,7 +37,7 @@ _RELATIONS = [
 class DemoSource(StructuredSource):
     name = "DEMO"
     contributes_occupations = True
-    needs_attach = True                 # no native ISCO code -> attach assigns one
+    needs_attach = True              
     version = "demo-1"
     retrieval_method = "synthetic_demo"
 

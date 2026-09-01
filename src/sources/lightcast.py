@@ -1,16 +1,4 @@
-"""LIGHTCAST source — Lightcast Open Skills, IT slice.
-
-Lightcast Open Skills is a large, cleanly-categorized skills taxonomy (31 categories → 442
-subcategories → ~32k skills) in one flat CSV: `resources/LIGHTCAST/en/lightcast_data_formatted.csv`
-(`id, description, hierarchy_levels, type`). We ingest the **Information Technology** category
-(`17.0`) — 5,244 skills across 70 authoritative IT subcategories — as a **skills-only** source.
-
-Unlike SFIA's export, Lightcast's categorisation is reliable, so each skill self-classifies into
-one of the 14 neutral sub-domains via its subcategory (`_LIGHTCAST_SUBDOMAIN`, kept by
-`hierarchy.run` since LIGHTCAST is in `config.SELF_CLASSIFIED_SUBDOMAIN_SOURCES`). Skills align/merge
-with the existing vocabulary and reach occupations transitively; the relevance gate screens them at
-ingest (≈0 blocks — they are already IT-scoped).
-"""
+"""LIGHTCAST source — Lightcast Open Skills, IT slice."""
 
 from __future__ import annotations
 
@@ -73,13 +61,13 @@ class LightcastSource(StructuredSource):
                 continue
             raw = (r.get("hierarchy_levels") or "").strip()
             if not raw:
-                continue                              # unmapped (certs) -> skip
+                continue                              
             try:
                 pairs = ast.literal_eval(raw)
             except (ValueError, SyntaxError):
                 continue
             if not pairs or pairs[0][0] != _IT_CATEGORY:
-                continue                              # keep only the IT category (17.0)
+                continue                             
             subcat = pairs[0][1] if len(pairs[0]) > 1 else ""
             label = (r.get("description") or "").strip()
             sid = (r.get("id") or "").strip()
@@ -89,5 +77,5 @@ class LightcastSource(StructuredSource):
                 "source_id": sid,
                 "label_en": label,
                 "method": "lightcast_skill",
-                "it_subtype": _LIGHTCAST_SUBDOMAIN.get(subcat, ""),   # "" -> regex fallback
+                "it_subtype": _LIGHTCAST_SUBDOMAIN.get(subcat, ""), 
             }

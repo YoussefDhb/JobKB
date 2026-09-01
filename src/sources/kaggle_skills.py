@@ -1,11 +1,4 @@
-"""KAGGLE source — a small curated IT technical-skills taxonomy.
-
-`resources/OTHERS/en/kaggle-dataset_technical_skills.csv` (`Skill ID, Skill Name, Category`):
-528 hard/technical skills in 9 IT categories. A clean, concrete tool/technology vocabulary
-(Python, Docker, TensorFlow, …) that complements the larger sources. Skills-only; each category
-maps to a neutral sub-domain (self-classified). Aligns/merges with the existing vocabulary; the
-relevance gate screens it at ingest.
-"""
+"""KAGGLE source — a small curated IT technical-skills taxonomy."""
 
 from __future__ import annotations
 
@@ -49,5 +42,5 @@ class KaggleSkillsSource(StructuredSource):
                 "source_id": sid,
                 "label_en": label,
                 "method": "kaggle_skill",
-                "it_subtype": _KAGGLE_SUBDOMAIN.get(cat, ""),   # "" -> regex fallback
+                "it_subtype": _KAGGLE_SUBDOMAIN.get(cat, ""), 
             }

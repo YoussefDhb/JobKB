@@ -1,11 +1,4 @@
-"""Graph export: build the concept graph once (graph.build_graph) and serialize to the requested targets,
-read-only over kb/, writing to export/. Formats:
-  rdf     -> jobkb.ttl        (RDF/OWL Turtle, SKOS + a light JobKB ontology)
-  graphml -> jobkb.graphml    (Gephi / Cytoscape / yEd)
-  json    -> jobkb.json       (nodes/edges graph JSON)
-  viz     -> jobkb.html       (interactive backbone overview)
-  fullviz -> jobkb_full.html  (interactive full-graph viz)
-"""
+"""Graph export"""
 
 from __future__ import annotations
 

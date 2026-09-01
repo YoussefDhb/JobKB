@@ -1,10 +1,4 @@
-"""Ingest ONET (English), IT occupations (SOC 15-12xx + Data Scientists 15-2051).
-
-Occupations come from occupation_data; skills from essential_skills / knowledge
-(hard), abilities (soft), and the concrete tools in software_skills (hard/tech).
-Importance-rated files are thresholded so only relevant skills are materialized.
-ONET occupations carry no ISCO code and are grafted onto the hub during alignment.
-"""
+"""Ingest ONET, IT occupations."""
 
 from __future__ import annotations
 import os
@@ -20,7 +14,7 @@ ABILITIES = os.path.join(C.ONET_EN_DIR, "abilities.csv")
 SOFTWARE = os.path.join(C.ONET_EN_DIR, "software_skills.csv")
 CONTENT_MODEL = os.path.join(C.ONET_EN_DIR, "content_model_reference.csv")
 
-IMPORTANCE_MIN = 3.0  # on the ONET 1-5 Importance (IM) scale
+IMPORTANCE_MIN = 3.0 
 
 
 def _content_descriptions():
@@ -67,7 +61,7 @@ def run():
                                             preferred={"en": [pref]}))
 
     # Skills: dedup within ONET on normalized label; keep first description seen.
-    skills = {}   # norm -> skill row
+    skills = {}   
     rel_rows = []
 
     def add_skill(occ_code, name, hard_soft, method, subtype="", desc=""):
@@ -77,8 +71,7 @@ def run():
         norm = K.normalize_label(name)
         if not norm:
             return
-        # Prune O*NET psychometric / physical / sensory abilities from the soft branch — they are
-        # aptitudes, not IT-workplace soft skills (the real soft-skill equivalents exist as named nodes).
+        # Prune O*NET psychometric / physical / sensory abilities from the soft branch
         if hard_soft == "soft" and R.is_non_it_soft(name):
             return
         sid = f"{method}:{norm}"
@@ -118,7 +111,7 @@ def run():
     ingest_rated(KNOWLEDGE, "hard", "onet_knowledge")
     ingest_rated(ABILITIES, "soft", "onet_ability")
 
-    # Software tools -> concrete technology skills (Workplace Example is the real tool).
+    # Software tools -> concrete technology skills.
     if os.path.isfile(SOFTWARE):
         sw = K.read_csv_smart(SOFTWARE)
         for _, r in sw.iterrows():

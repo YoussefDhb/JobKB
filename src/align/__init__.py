@@ -1,10 +1,4 @@
-"""Automatic, agentic cross-source alignment (no human in the loop).
-
-Embedding candidate generation -> HF verification (NLI on definitions for occupations,
-label + embedding for skills) -> SKOS relations + a source-neutral `merge` flag consumed
-by the unified merge. Attachment onto ISCO happens in the separate `attach` stage. All
-open-source / HuggingFace; degrades gracefully offline.
-"""
+"""Automatic, agentic cross-source alignment."""
 
 from __future__ import annotations
 
@@ -15,14 +9,7 @@ from . import verify as _verify
 
 
 def _fr_en_translation_map():
-    """{normalize(french label) -> validated English MT} from the persisted translate fr_en snapshot.
-
-    French-only ROME skills get their English primary label from the translate stage (post-merge), so
-    at align time their only surface form is French. Consulting the snapshot lets the dedup key such a
-    skill on its *English* form — so "Informatique" (ROME) and "computer science" (ESCO), or the two
-    ROME phrasings "Gestion d'équipe"/"Management d'équipe" (both -> "Team management"), are recognised
-    as one concept. Read-only, with graceful fallback: on a first-ever build the snapshot is empty and
-    cross-lingual duplicates simply collapse on the next build (after translate has populated it)."""
+    """{normalize(french label) -> validated English MT} from the persisted translate fr_en snapshot."""
     import os
     m = {}
     if os.path.isfile(C.TRANSLATE_SNAPSHOT_CSV):
@@ -33,25 +20,14 @@ def _fr_en_translation_map():
 
 
 def _exact_key_skill_edges(skl):
-    """Deterministic same-concept dedup for skills sharing an identical (English) match_key.
-
-    Cross-source embedding candidate generation never compares two rows from the *same* source, so
-    intra-source exact duplicates (e.g. ROME's two "Team management" skills) are never flagged to
-    merge; and cross-lingual duplicates (a French-only ROME skill vs its English-native twin) are only
-    visible once the French label is translated. This adds high-precision `exactMatch`/`label` edges
-    for every group of skills whose English label (native, else the validated MT of the French label)
-    has an identical `evidence.match_key` — the merge unifies them like any other exactMatch. Two
-    guards keep genuinely-distinct concepts apart: members are grouped by (match_key, hard/soft class)
-    so the hard vs soft "time management" never merge, and keys in `config.MATCH_KEY_DISTINCT` (HTTP vs
-    HTTPS, "cybersecurity expert (MS)") are skipped entirely.
-    """
+    """Deterministic same-concept dedup for skills sharing an identical (English) match_key."""
     from .. import hierarchy as H
     from ..sources import evidence as _ev
     tmap = _fr_en_translation_map()
     groups = {}
     for r in skl:
         en = (r.get("pref_label_en") or "").strip()
-        if not en:  # French-only: use the validated English MT so the key is cross-lingual
+        if not en: 
             en = tmap.get(K.normalize_label(r.get("pref_label_fr") or ""), "")
         key = _ev.match_key(en or r.get("pref_label_fr") or "")
         if not key or key in C.MATCH_KEY_DISTINCT:
@@ -79,8 +55,7 @@ def _exact_key_skill_edges(skl):
 
 def replace_alignments_for_source(name, new_rows):
     """Incremental alignment write: keep every existing alignment row that does NOT involve
-    `name` on either side, then append the freshly computed new-vs-existing rows. Old<->old
-    alignments are untouched — so adding a source never recomputes the others."""
+    `name` on either side."""
     existing = K.read_all(C.ALIGNMENTS_CSV)
     kept = [r for r in existing
             if r.get("source_a") != name and r.get("source_b") != name]
@@ -89,9 +64,7 @@ def replace_alignments_for_source(name, new_rows):
 
 
 def run(focus_source=None):
-    """Cross-source alignment. `focus_source=None` aligns everything (full build) and
-    overwrites the alignment table. A `focus_source` aligns only that source against the
-    existing entities and merges the result in incrementally."""
+    """Cross-source alignment."""
     occ, skl = _cand.load_entities()
 
     embedder = _cand.get_embedder()
@@ -107,8 +80,7 @@ def run(focus_source=None):
     rows += _verify.verify_pairs(skl_pairs, verifier, use_nli=False)
 
     if focus_source is None:
-        # Full build: augment with the deterministic exact-match_key dedup edges (catches the
-        # same-source duplicates the cross-source aligner never compares) and rewrite the table.
+        # Full build: augment with the deterministic exact-match_key dedup edges and rewrite the table.
         exact_rows = _exact_key_skill_edges(skl)
         rows += exact_rows
         K.write_csv(C.ALIGNMENTS_CSV, C.ALIGNMENT_FIELDS, rows)

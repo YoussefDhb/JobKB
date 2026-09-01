@@ -1,9 +1,4 @@
-"""DATAJOBS: lukebarousse/data_jobs (785k postings, 10 data/IT roles, pre-extracted job_skills). Hybrid:
-(1) harvests absent high-frequency tools as new skills (gate-screened, self-classified via
-job_type_skills); (2) weighted demand edges from (role, skill) co-occurrence (>= DATAJOBS_MIN_FREQ).
-Endpoints resolve against the current kb/ via an augmented matcher (exact/alias key + paren-acronyms +
-vendor/suffix strip, never substring). Skills-only.
-"""
+"""DATAJOBS: lukebarousse/data_jobs. Skills-only."""
 
 from __future__ import annotations
 
@@ -21,15 +16,14 @@ from .emerging_roles import EMERGING_ROLES
 
 _CSV = os.path.join(C.OTHERS_EN_DIR, "data_jobs.csv")
 
-# Conservative token sets for the augmented matcher (stripped from KB labels to build extra keys).
+# Conservative token sets for the augmented matcher.
 _VENDOR = {"microsoft", "apache", "google", "amazon", "aws", "ibm", "oracle", "adobe", "apple"}
 _TRAIL = {"software", "framework", "platform", "statistics", "language", "db", "database"}
 _PAREN = re.compile(r"\(([^)]+)\)")
 
 
 def _variant_keys(label: str):
-    """Yield match_key variants for a KB skill label so short posting tokens resolve to verbose
-    KB names: the base key, any parenthetical acronym, and a vendor/suffix-stripped key."""
+    """Yield match_key variants for a KB skill label so short posting tokens resolve to verbose KB names."""
     yield evidence.match_key(label)
     for m in _PAREN.findall(label):
         k = evidence.match_key(m)
@@ -45,9 +39,7 @@ def _variant_keys(label: str):
 
 
 def _augmented_skill_index(exclude_source=None):
-    """{match_key variant -> skill entity_id} over real KB skills (exact keys win over stripped).
-    `exclude_source` drops that source's own rows so a re-ingest re-harvests idempotently (else its
-    previously-harvested skills look 'already present' and get deleted by the replace)."""
+    """{match_key variant -> skill entity_id} over real KB skills (exact keys win over stripped)."""
     skl = [r for r in K.read_all(C.SKILLS_CSV)
            if r.get("esco_skill_type") not in ("skill_type", "skill_domain")
            and r.get("source") != exclude_source]
@@ -73,17 +65,15 @@ class DataJobsSource(Source):
         occ_map = evidence.occ_index()
         skill_idx = _augmented_skill_index(exclude_source=self.name)
 
-        # Emerging roles (Analytics Engineer, MLOps, …) are recognized from the RAW job title and
-        # take precedence over the coarse job_title_short, so their demand profile is attributed to
-        # the specific occupation (present only if EMERGING was ingested first).
+        # Emerging roles are recognized from the RAW job title and take precedence over the coarse job_title_short.
         emerging = [(re.compile(r["pattern"], re.I), occ_map.get(evidence.match_key(r["label"])))
                     for r in EMERGING_ROLES]
         emerging = [(rx, oid) for rx, oid in emerging if oid]
 
         # --- one streaming pass: token stats + (role, token) co-occurrence -------------------
-        pair = defaultdict(int)           # (occ_id, token) -> #postings
-        tok_freq = Counter()              # token -> #postings mentioning it
-        tok_cat = defaultdict(Counter)    # token -> {job_type_skills category: count}
+        pair = defaultdict(int)          
+        tok_freq = Counter()             
+        tok_cat = defaultdict(Counter)   
         n_post = 0
         roles_matched = set()
         with open(_CSV, encoding="utf-8", errors="replace", newline="") as f:
@@ -91,7 +81,7 @@ class DataJobsSource(Source):
                 n_post += 1
                 raw_title = row.get("job_title") or ""
                 occ_id = next((oid for rx, oid in emerging if rx.search(raw_title)), None)
-                if not occ_id:                       # fall back to the coarse normalized role
+                if not occ_id:                     
                     occ_id = occ_map.get(evidence.match_key((row.get("job_title_short") or "")
                                                             .replace("Senior ", "").strip()))
                 raw = row.get("job_skills") or ""
@@ -142,7 +132,7 @@ class DataJobsSource(Source):
         _, skill_rows, blocked, gstats = relevance.filter_rows([], skill_rows, self.name)
         if blocked:
             label_rows = [l for l in label_rows if l["entity_id"] not in blocked]
-        harvested = {r["source_id"]: r["entity_id"] for r in skill_rows}   # token -> new skill id
+        harvested = {r["source_id"]: r["entity_id"] for r in skill_rows} 
 
         K.replace_source_rows(C.SKILLS_CSV, C.SKILL_FIELDS, self.name, skill_rows)
         K.upsert_labels(label_rows)

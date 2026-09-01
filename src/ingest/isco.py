@@ -1,11 +1,4 @@
-"""Ingest the ISCO-08 hub (English), restricted to the IT branches.
-
-ISCO-08 is the neutral standard backbone: every source's occupations attach onto these
-groups. In scope: sub-major groups 25 (ICT professionals) & 35 (ICT technicians) and
-minor group 133 (ICT service managers). We mint occupation nodes for each in-scope
-sub-major/minor/unit group and connect them bottom-up; a node is a root when its parent
-is out of scope (so the tree roots at 25, 35 and 133).
-"""
+"""Ingest the ISCO-08 hub, restricted to the IT branches."""
 
 from __future__ import annotations
 import os
@@ -34,8 +27,7 @@ def run():
     defs = _load_definitions()
     df = K.read_csv_smart(STRUCT_FILE)
 
-    # Collect every in-scope node at any level (the file also holds ISCO-68 rows, which
-    # we must skip). A code qualifies via is_isco_it (25*/35*/133*).
+    # Collect every in-scope node at any level.
     nodes = {}  # code -> label
     for _, r in df.iterrows():
         if (r.get("ISCO_version") or "").strip() != "ISCO-08":
@@ -64,9 +56,7 @@ def run():
         label_rows.extend(K.make_label_rows(eid, "occupation", C.SRC_ISCO,
                                             preferred={"en": [pref]}))
 
-    # Synthetic super-root over the three in-scope ISCO branches (25/35/133) so the occupation tree is
-    # a single connected hierarchy instead of three disconnected roots. Empty isco_code (it is not an
-    # ISCO group itself) -> QA skips it in the IT-leakage check.
+    # Synthetic super-root over the three in-scope ISCO branches.
     root_eid = K.mint_id("OCC_", C.SRC_ISCO, "ICT")
     occ_rows.append({
         "entity_id": root_eid, "source": C.SRC_ISCO, "source_id": "ICT",
@@ -80,8 +70,7 @@ def run():
     label_rows.extend(K.make_label_rows(root_eid, "occupation", C.SRC_ISCO,
                                         preferred={"en": ["Information and Communications Technology professions"]}))
 
-    # Bottom-up edges: parent = code without last digit, only if the parent is in scope
-    # (so 25/35/133 attach to the ICT super-root; 133's out-of-scope parent 13 is dropped).
+    # Bottom-up edges: parent = code without last digit, only if the parent is in scope.
     for code in nodes:
         parent = code[:-1]
         parent_eid = K.mint_id("OCC_", C.SRC_ISCO, parent) if parent in nodes else root_eid

@@ -1,9 +1,4 @@
-"""ZENODO 3906955 (Montandon et al. 2019): ~17.9k English Stack Overflow postings with clean roles +
-extracted hard/soft skills. Hybrid like DATAJOBS: (1) harvests absent frequent tools as new skills
-(gate-screened, self-classified via the high-level category); (2) weighted demand edges for both hard
-skills and the SOFTSKILLS vocabulary (linking noun-form soft skills to occupations). Skills-only; roles
-resolve to existing occupations (the one gap, back-end developer, comes from EMERGING).
-"""
+"""ZENODO - English Stack Overflow postings with clean roles + hard/soft skills."""
 
 from __future__ import annotations
 
@@ -17,10 +12,7 @@ from . import evidence
 from .data_jobs import _augmented_skill_index
 from .soft_skills import SOFT_SKILLS
 
-# The 14 clean Zenodo role tokens -> candidate occupation phrases (first that resolves against the
-# current KB wins). All resolve via `occ_index` (pref+alt labels); back-end developer resolves to the
-# EMERGING occupation once that source is ingested. Kept explicit so a KB label change can't silently
-# mis-route a role's demand.
+# The 14 clean Zenodo role tokens
 ROLE_PROBES = {
     "SystemAdministrator":   ["ict system administrator", "system administrator", "systems administrator"],
     "FullStackDeveloper":    ["full stack developer", "full-stack developer"],
@@ -38,9 +30,7 @@ ROLE_PROBES = {
     "Designer":              ["ui designer", "user interface designer", "ux designer"],
 }
 
-# Signals in the (tokenized) `soft_skills` column -> SOFTSKILLS source_id. The column uses a tiny
-# fixed vocabulary; multi-word terms arrive split ("work ethic" -> "work" "ethic"), so we detect by
-# the distinctive token rather than by whole-phrase match.
+# Signals in the `soft_skills` column -> SOFTSKILLS source_id.
 ZENODO_SOFT_TRIGGERS = {
     "teamwork": "teamwork",
     "communication": "communication",
@@ -81,7 +71,7 @@ class ZenodoSource(Source):
         skill_idx = _augmented_skill_index(exclude_source=self.name)
         hl_cat = _hl_categories()
 
-        # Resolve the 14 roles to occupations once (first probe that hits the current KB).
+        # Resolve the 14 roles to occupations.
         role_occ, unresolved = {}, []
         for role, probes in ROLE_PROBES.items():
             oid = next((occ_map[k] for k in (evidence.match_key(p) for p in probes) if k in occ_map), None)
@@ -90,14 +80,14 @@ class ZenodoSource(Source):
             else:
                 unresolved.append(role)
 
-        # Curated soft-skill entity ids are deterministic (minted by SoftSkillsSource the same way).
+        # Curated soft-skill entity ids are deterministic.
         soft_valid = {s["source_id"] for s in SOFT_SKILLS}
         soft_eid = {sid: K.mint_id("SKL_", C.SRC_SOFTSKILLS, sid) for sid in soft_valid}
 
         # --- one streaming pass: token stats + (role, token) co-occurrence -------------------
-        hard_pair = defaultdict(int)      # (occ_id, hard token) -> #postings
-        soft_pair = defaultdict(int)      # (occ_id, soft source_id) -> #postings
-        tok_freq = Counter()              # hard token -> #postings mentioning it
+        hard_pair = defaultdict(int)      
+        soft_pair = defaultdict(int)      
+        tok_freq = Counter()              
         n_post = n_en = 0
         roles_matched = set()
         with open(C.ZENODO_JOBS_CSV, encoding="utf-8", errors="replace", newline="") as f:
@@ -145,7 +135,7 @@ class ZenodoSource(Source):
         _, skill_rows, blocked, gstats = relevance.filter_rows([], skill_rows, self.name)
         if blocked:
             label_rows = [l for l in label_rows if l["entity_id"] not in blocked]
-        harvested = {r["source_id"]: r["entity_id"] for r in skill_rows}   # token -> new skill id
+        harvested = {r["source_id"]: r["entity_id"] for r in skill_rows}  
 
         K.replace_source_rows(C.SKILLS_CSV, C.SKILL_FIELDS, self.name, skill_rows)
         K.upsert_labels(label_rows)

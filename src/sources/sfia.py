@@ -1,21 +1,4 @@
-"""SFIA source — the Skills Framework for the Information Age, version 9.
-
-SFIA is a curated professional competency framework for digital, data and technology work.
-It contributes **skills only** (no occupations): its skills flow into the neutral skill
-ontology, align/merge against the existing skill vocabulary (ESCO/ONET/...), and reach
-occupations transitively wherever a SFIA skill merges into a unified skill that already
-carries occupation relations.
-
-Data: `resources/SFIA/en/sfia9_skills.csv` (147 skills; the sibling category / subcategory /
-mapping tables are NOT used — this export's `subcategory_id` and `sfia9_skill_mappings.csv`
-are unreliable, e.g. they file "Systems integration" under "Security Investigation" and
-"Accessibility" under AI). Only the skill titles/descriptions are genuine, so we ship our own
-hand-curated `_SFIA_SUBDOMAIN` map: it (a) **scopes** SFIA to IT + IT-management — a code
-absent from the map is a general business / HR / marketing / finance / facilities competency
-and is **dropped as out of scope** — and (b) places each kept skill into one of the 13 neutral
-sub-domains (kept by `hierarchy.run` because SFIA is in `config.SELF_CLASSIFIED_SUBDOMAIN_SOURCES`).
-Deprecated skills are skipped.
-"""
+"""SFIA source — the Skills Framework for the Information Age."""
 
 from __future__ import annotations
 
@@ -27,8 +10,7 @@ from .base import StructuredSource
 
 _SKILLS_CSV = os.path.join(C.SFIA_EN_DIR, "sfia9_skills.csv")
 
-# Kept SFIA skill codes -> neutral sub-domain. Codes NOT listed are out of IT scope (dropped):
-# marketing/sales/customer, facilities, finance, HR/L&D, generic business, physical safety.
+# Kept SFIA skill codes -> neutral sub-domain.
 _SFIA_SUBDOMAIN = {
     # security & cybersecurity
     "SCTY": "security", "SCAD": "security", "PENT": "security", "VUAS": "security",
@@ -80,9 +62,9 @@ _SFIA_SUBDOMAIN = {
 
 class SfiaSource(StructuredSource):
     name = C.SRC_SFIA
-    contributes_occupations = False      # SFIA has no occupations
-    needs_attach = False                 # ... so nothing to attach to ISCO
-    builtin = True                       # permanent member of a full build
+    contributes_occupations = False      
+    needs_attach = False               
+    builtin = True                      
     version = "sfia-9"
     retrieval_method = "sfia_csv"
 
@@ -94,11 +76,11 @@ class SfiaSource(StructuredSource):
             title = (r.get("title") or "").strip()
             sub = _SFIA_SUBDOMAIN.get(code)
             if not code or not title or sub is None:
-                continue                 # drop deprecated / out-of-scope business skills
+                continue                
             yield {
                 "source_id": code,
                 "label_en": title,
-                "alt_en": [code],        # keep the SFIA short code searchable
+                "alt_en": [code],        
                 "desc_en": (r.get("description") or "").strip(),
                 "method": "sfia_skill",
                 "it_subtype": sub,

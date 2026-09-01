@@ -1,6 +1,4 @@
-"""Reflective worker subgraphs (LangGraph): each a small StateGraph looping propose -> verify ->
-(reflect -> propose)* -> commit/defer, bounded by AGENT_MAX_REFLECT.
-"""
+"""Reflective worker subgraphs (LangGraph)."""
 
 from __future__ import annotations
 
@@ -13,7 +11,7 @@ from .. import common as K
 from .state import DescState, LinkState
 
 
-# Description worker — reflective definition generation
+# Description worker
 def _desc_targets(tb):
     """Occupations + eligible hard skills lacking a description, minus those already cached."""
     from .. import llm
@@ -29,7 +27,6 @@ def _desc_targets(tb):
             targets.append(("skill", r, llm._skill_context(r)))
     if C.LLM_DESC_MAX_TARGETS:
         targets = targets[:C.LLM_DESC_MAX_TARGETS]
-    # skip anything already generated + validated in a prior run (agent or llm)
     return [(k, r, ctx) for (k, r, ctx) in targets
             if not tb.snap.get(("desc", r["unified_id"]), {}).get("output")]
 
@@ -67,8 +64,8 @@ def _build_desc_graph(tb):
         if s.get("ok"):
             return "commit"
         if s.get("proposal") and s.get("reflect", 0) < C.AGENT_MAX_REFLECT:
-            return "reflect"   # had a real (rejected) generation and retries left
-        return "defer"         # no backend, or reflection budget exhausted
+            return "reflect"   
+        return "defer"         
 
     g = StateGraph(DescState)
     g.add_node("propose", propose)
@@ -103,9 +100,7 @@ def run_descriptions(tb, stats):
             committed += 1
         else:
             deferred += 1
-        # Periodic checkpoint: local generation is slow (minutes/target at scale), so flush the snapshot
-        # every AGENT_DESC_CHECKPOINT commits. An interrupted run keeps its work; _desc_targets skips
-        # already-cached targets on the next launch, making a long local pass genuinely resumable.
+        # Periodic checkpoint
         if C.AGENT_DESC_CHECKPOINT and i % C.AGENT_DESC_CHECKPOINT == 0:
             tb.save()
             print(f"[AGENT] description checkpoint: {i}/{total} processed "
@@ -115,7 +110,7 @@ def run_descriptions(tb, stats):
                             "deferred": deferred, "reflected": reflected}
 
 
-# Link worker — reflective occupation->skill inference with a NEW cosine+NLI accept gate
+# Link worker
 _STRICTER = ("Be stricter: pick ONLY skills that are unquestionably core to this occupation. "
              "Ignore any you were offered before.")
 
@@ -151,14 +146,13 @@ def _build_link_graph(tb):
             if cos < C.LLM_LINK_MIN_SIM:
                 newly_excluded.append(lbl)
                 continue
-            # NEW gate: when the occupation has a definition, require NLI corroboration too — this is
-            # what lifts the cosine-only 45% NLI-pass rate the validation phase measured.
+            # NEW gate: when the occupation has a definition, require NLI corroboration too
             e = tb.nli(s["occ_desc"], f"This occupation requires {lbl}.") if s.get("occ_desc") else None
             if e is not None and e < C.AGENT_LINK_NLI_MIN:
                 newly_excluded.append(lbl)
                 continue
             verified.append((sk["entity_id"], round(cos, 3)))
-        # de-dup verified by skill id (across reflect passes)
+        # de-dup verified by skill id
         seen, dedup = set(), []
         for sid, cos in verified:
             if sid not in seen:
@@ -228,7 +222,7 @@ def run_links(tb, stats):
                                 "reflect": 0, "correction": "", "_ovec": ovec})
             reflected += final.get("reflect", 0)
             verified = final.get("verified", [])
-            # cache the accepted skill labels so re-runs cost nothing (mirrors llm._task_links)
+            # cache the accepted skill labels so re-runs cost nothing
             verified_ids = {sid for sid, _c in verified}
             kept_lbls = [lbl for lbl in final.get("picks", [])
                          if (tb.skill_by_label(lbl) or {}).get("entity_id") in verified_ids]
@@ -245,9 +239,7 @@ def run_links(tb, stats):
                      "occupations_linked": kept_occ, "reflected": reflected}
 
 
-# Emerging worker — propose new tech, keep ONLY Wikidata-confirmed (delegates to the hardened
-# llm._task_emerging tool-chain; the controller dispatch is what makes it agentic, and the
-# external Wikidata confirmation IS the verification step).
+# Emerging worker
 def run_emerging(tb, stats):
     if not tb.has_llm:
         stats["emerging"] = {"proposed": 0, "added_skills": 0, "note": "no backend (deferred)"}
@@ -259,12 +251,10 @@ def run_emerging(tb, stats):
     return res.get("added_skills", 0) > 0
 
 
-# Anchor worker — deterministic (NO LLM): confirm unanchored, anchor-eligible tech skills against
-# Wikidata. Runs even with dead credits. In the normal pipeline the `wikidata` stage runs first, so
-# this typically reports 0 unattempted gaps (honest); standalone/after new data it does real work.
+# Anchor worker
 def run_anchor(tb, stats):
     from .. import wikidata as W
-    # anchor-eligible unified skills (mirror wikidata._skill_candidates) lacking a QID
+    # anchor-eligible unified skills lacking a QID
     eligible = [r for r in K.read_all(C.UNIFIED_SKILLS_CSV)
                 if r.get("it_subtype") in C.WIKIDATA_SKILL_SUBDOMAINS
                 and (r.get("primary_label_en") or "").strip()
@@ -276,10 +266,10 @@ def run_anchor(tb, stats):
     stats["anchor"] = {"eligible": len(eligible), "unanchored": len(unanchored),
                        "unattempted": len(unattempted)}
     if unattempted:
-        # reuse the hardened, snapshot-resumable resolver (only queries the unattempted labels)
+        # reuse the hardened, snapshot-resumable resolver
         n = min(len(unattempted), C.AGENT_ANCHOR_MAX)
         stats["anchor"]["resolving"] = n
-        W.run()  # idempotent: resumes from snapshot, re-writes side table, re-integrates
+        W.run() 
         after = [r for r in K.read_all(C.UNIFIED_SKILLS_CSV)
                  if r.get("it_subtype") in C.WIKIDATA_SKILL_SUBDOMAINS
                  and (r.get("wikidata_qid") or "").strip()]

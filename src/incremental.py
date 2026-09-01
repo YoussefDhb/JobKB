@@ -1,4 +1,4 @@
-"""Incremental source management — add or remove ONE source without a full rebuild."""
+"""Incremental source management: add or remove ONE source without a full rebuild."""
 
 from __future__ import annotations
 
@@ -28,15 +28,15 @@ def _refresh_global_provenance():
 def add_source(name: str, enrich: bool = False):
     src = registry.get(name)
     print(f"=== add source: {name} ===")
-    src.ingest()                        # per-source idempotent write of the new rows
-    hierarchy.run()                     # classify the new skills into the ontology (cheap)
-    align.run(focus_source=name)        # align only new-vs-existing; append alignments
+    src.ingest()                       
+    hierarchy.run()                    
+    align.run(focus_source=name)       
     if src.needs_attach:
-        attach.run(focus_source=name)   # attach only this source's occupations to ISCO
-    merge.run()                         # cheap recompute of unified concepts over full graph
+        attach.run(focus_source=name)   
+    merge.run()                        
     _refresh_global_provenance()
-    if enrich:                          # weave the new entities into the enrichment layer, like a full
-        pipeline._run_enrichment()      # build: Wikidata QIDs -> agent/LLM desc+links -> bilingual labels
+    if enrich:                          
+        pipeline._run_enrichment()      
     return pipeline.qa()
 
 
@@ -67,7 +67,7 @@ def _prune_missing_refs():
 
 def remove_source(name: str):
     print(f"=== remove source: {name} ===")
-    # Delete every row this source owns (all keyed by the `source` column).
+    # Delete every row this source owns.
     for path, fields in ((C.OCCUPATIONS_CSV, C.OCCUPATION_FIELDS),
                          (C.SKILLS_CSV, C.SKILL_FIELDS),
                          (C.OCC_SKILL_REL_CSV, C.REL_FIELDS),
@@ -80,7 +80,7 @@ def remove_source(name: str):
     al_kept = [a for a in aligns if a.get("source_a") != name and a.get("source_b") != name]
     if len(al_kept) != len(aligns):
         K.write_csv(C.ALIGNMENTS_CSV, C.ALIGNMENT_FIELDS, al_kept)
-    # Remove now-dangling edges/relations (e.g. ATTACH edges to the removed occupations).
+    # Remove now-dangling edges/relations.
     _prune_missing_refs()
     hierarchy.run()   # rebuild the skill ontology edges from the remaining skills
     merge.run()       # re-derive unified concepts

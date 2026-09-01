@@ -1,17 +1,4 @@
-"""LINKEDIN_SWE source — kaggle LinkedIn software-engineering postings (~9.4k, English).
-
-`resources/OTHERS/en/kaggle-LinkedIn-Software-Engineering-Jobs-Dataset.csv`: LinkedIn software-engineer
-postings with a `job_title` and a comma-separated, pre-extracted `job_skills` list. A **relation-only
-demand** source: it writes weighted `demand` occupation->skill edges between entities already in the KB.
-
-We deliberately do NOT harvest new skill nodes here: LinkedIn's `job_skills` is a noisy free-form
-extraction (mixing genuine tools with generic phrases like "coding", "analysis", "best practices",
-"communication skills"), so harvesting would pollute the vocabulary — the genuine tools already exist
-and resolve for demand. Skills resolve via the augmented matcher (`_augmented_skill_index`; the tokens
-are clean enough for vendor/suffix stripping). Titles resolve to the software-developer family: the
-EMERGING back-end/full-stack regex first, then the seniority-stripped title, then a keyword fallback
-(embedded -> embedded systems designer, else -> software developer).
-"""
+"""LINKEDIN_SWE source — kaggle LinkedIn software-engineering postings."""
 
 from __future__ import annotations
 

@@ -1,22 +1,4 @@
-"""DJINNI source — djinni.com IT recruitment postings (~142k English job descriptions).
-
-`resources/OTHERS/en/djinni-recruitment-dataset-job-descriptions-english.csv`: each row is one IT job
-posting with a `Position` title, a `Primary Keyword` role/tech tag (JavaScript, DevOps, QA, Data
-Science, Android, …) and a free-text `Long Description`. Skills are **not** pre-extracted.
-
-A **relation-only demand** source (no new nodes): it resolves the `Primary Keyword` to an existing
-occupation and extracts skills from the `Long Description` by strict dictionary matching against the
-KB's **concrete-technology** vocabulary, then writes weighted `demand` occupation->skill edges.
-
-Free-text extraction is precision-critical: the augmented matcher used for pre-extracted token lists
-(DATAJOBS/ZENODO) is unusable here — its vendor/suffix-stripped and paren-acronym variants match
-common English words ("teams" <- Microsoft Teams, "application" <- PuTTY (Application), "development"
-<- Oracle Development). So we match **only full labels** (parentheticals removed), restricted to the
-concrete-tech sub-domains, single tokens >= 4 chars, minus a common-word denylist (`DJINNI_TEXT_DENY`).
-Validated live: DevOps->CI-CD/Kubernetes/Docker/Terraform/Jenkins/Ansible, Android->Kotlin/Firebase/
-Android-SDK, Data Science->Python/ML/deep-learning/computer-vision. No harvest (text mining can't find
-genuinely-new skills without noise), so no new nodes and no hierarchy change.
-"""
+"""DJINNI source (djinni.com) - IT recruitment postings."""
 
 from __future__ import annotations
 
@@ -29,9 +11,7 @@ from .. import common as K
 from .base import Source
 from . import evidence
 
-# Djinni Primary Keyword -> candidate occupation phrases (first that resolves against the KB wins).
-# Non-IT / ambiguous keywords (Marketing, HR, Sales, Design, Recruiter, Artist, SEO, Lead Generation,
-# Lead, Other, Technical Writing) are intentionally absent -> those postings are skipped.
+# Djinni Primary Keyword -> candidate occupation phrases.
 DJINNI_ROLE_OCC = {
     "JavaScript": ["software developer"], "Java": ["software developer"], ".NET": ["software developer"],
     "Node.js": ["software developer"], "PHP": ["software developer"], "Python": ["software developer"],
@@ -57,9 +37,7 @@ _WORD = re.compile(r"[a-z0-9+.#]+")
 
 
 def _concrete_skill_index():
-    """{full-label match_key -> skill entity_id} over concrete-tech KB skills, safe for free-text.
-    Full labels only (parentheticals removed by match_key) — NO vendor/suffix-strip, NO acronym; single
-    tokens must be >= 4 chars and not in the common-word denylist."""
+    """{full-label match_key -> skill entity_id} over concrete-tech KB skills, safe for free-text."""
     idx = {}
     for r in K.read_all(C.SKILLS_CSV):
         if r.get("it_subtype") not in C.DJINNI_CONCRETE_SUBDOMAINS:
@@ -107,7 +85,7 @@ class DjinniSource(Source):
                             found.add(sid)
             return found
 
-        pair = defaultdict(int)          # (occ_id, skill_id) -> #postings
+        pair = defaultdict(int)          
         n_post = n_used = 0
         roles_matched = set()
         with open(C.DJINNI_CSV, encoding="utf-8", errors="replace", newline="") as f:

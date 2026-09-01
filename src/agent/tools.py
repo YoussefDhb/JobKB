@@ -1,5 +1,4 @@
-"""The agent's toolbox — thin wrappers over the KB's existing, hardened primitives.
-"""
+"""The agent's toolbox"""
 
 from __future__ import annotations
 
@@ -22,7 +21,7 @@ class Toolbox:
         self._id2vec = None
         from .. import llm
         self._llm = llm
-        self.snap = llm._load_snapshot()   # the shared generations.csv cache (agent shares it with llm)
+        self.snap = llm._load_snapshot()
 
     # ---- generative tool (optional; dead-credit safe) ---------------------------------------
     @property
@@ -33,7 +32,7 @@ class Toolbox:
 
     @property
     def has_llm(self) -> bool:
-        """True only if a generative backend actually came up (API alive or local loaded)."""
+        """True only if a generative backend actually came up."""
         return self.client.ok
 
     def generate(self, system: str, user: str):
@@ -78,8 +77,7 @@ class Toolbox:
         return np.asarray(self._embedder.encode([cand.entity_text(occ_row)]))[0]
 
     def shortlist(self, occ_vec, start: int, k: int):
-        """Skills ranked `start..start+k` by cosine to `occ_vec`. Widening `start` on reflect surfaces
-        fresh candidates instead of re-proposing the same rejected top-k."""
+        """Skills ranked by cosine. Widening `start` on reflect surfaces fresh candidates instead of re-proposing the same rejected top-k."""
         self._ensure_skill_index()
         sims = self._skl_vecs @ occ_vec
         order = np.argsort(-sims)[start:start + k]

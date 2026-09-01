@@ -1,14 +1,4 @@
-"""Embedding-based candidate generation across sources.
-
-Loads a HuggingFace sentence-embedding model (bge-m3 -> MiniLM), or falls back to
-a TF-IDF char n-gram vectorizer if neither is available, so candidate generation
-always runs. Candidates are the top-k nearest neighbours between every pair of
-distinct sources, above a recall-oriented cosine floor.
-
-Embeddings are the whole runtime cost (bge-m3 on CPU), so computed vectors are cached
-on disk keyed by (model_id, text). A threshold-only rebuild then reuses them and runs
-in seconds instead of ~40 min; changing the embedding model invalidates the cache by key.
-"""
+"""Embedding-based candidate generation across sources."""
 
 from __future__ import annotations
 import atexit
@@ -20,13 +10,13 @@ from .. import common as K
 
 
 _SHARED_EMBEDDER = None
-_VEC_CACHE = {}          # text -> vector (only populated in sentence-transformer mode)
-_CACHE_PATH = None       # disk path for the current model's cache
+_VEC_CACHE = {}          
+_CACHE_PATH = None    
 _CACHE_DIRTY = False
 
 
 def _load_disk_cache(model_id):
-    """Load the on-disk vector cache for `model_id` into _VEC_CACHE (best-effort)."""
+    """Load the on-disk vector cache for `model_id` into _VEC_CACHE."""
     global _CACHE_PATH
     _CACHE_PATH = os.path.join(C.KB_DIR, f".emb_cache_{model_id.replace('/', '_')}.pkl")
     try:
@@ -60,11 +50,7 @@ def get_embedder():
 
 
 def encode_cached(embedder, texts):
-    """Encode `texts`, reusing previously computed vectors (st mode only).
-
-    TF-IDF vectors are corpus-relative and cannot be cached across calls, so that mode
-    just encodes directly. Returns a numpy array in st mode.
-    """
+    """Encode `texts`, reusing previously computed vectors."""
     global _CACHE_DIRTY
     texts = list(texts)
     if embedder.mode != "st":
@@ -102,7 +88,6 @@ class Embedder:
         self.mode = None
         self.model = None
         self.model_id = None
-        # Use all CPU cores (torch is CPU-only here); helps the larger bge-m3.
         try:
             import os as _os
             import torch
@@ -135,15 +120,7 @@ class Embedder:
 
 
 def candidate_pairs(entities, embedder, topk=None, threshold=None, focus_source=None):
-    """Top-k cross-source neighbour pairs above the cosine threshold.
-
-    Returns list of (row_a, row_b, cosine) with source_a != source_b, de-duplicated
-    per unordered entity pair (highest similarity kept).
-
-    When `focus_source` is set, only pairs where **one side is that source** are produced
-    (new-vs-existing) — the incremental path for adding a source without re-aligning the
-    others. `None` = full all-vs-all (the from-scratch build).
-    """
+    """Top-k cross-source neighbour pairs above the cosine threshold."""
     if not entities:
         return []
     topk = topk or C.EMBED_TOPK
@@ -163,7 +140,7 @@ def candidate_pairs(entities, embedder, topk=None, threshold=None, focus_source=
     if focus_source is not None and focus_source not in by_source:
         return []
 
-    best = {}  # frozenset(eid_a, eid_b) -> (row_a, row_b, sim)
+    best = {}
     for si in range(len(sources)):
         for sj in range(si + 1, len(sources)):
             if focus_source is not None and focus_source not in (sources[si], sources[sj]):
@@ -172,9 +149,9 @@ def candidate_pairs(entities, embedder, topk=None, threshold=None, focus_source=
             idx_b = by_source[sources[sj]]
             sub_a = emb[idx_a]
             sub_b = emb[idx_b]
-            sim = cosine_similarity(sub_a, sub_b)  # (|a|, |b|)
+            sim = cosine_similarity(sub_a, sub_b) 
             k = min(topk, len(idx_b))
-            # top-k of b for each a, and top-k of a for each b (symmetric recall)
+            # top-k of b for each a, and top-k of a for each b
             for ai in range(sim.shape[0]):
                 order = np.argsort(-sim[ai])[:k]
                 for bj in order:

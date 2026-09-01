@@ -1,25 +1,11 @@
-"""EMERGING source — curated emerging IT roles observed in the labor market but absent from the
-standard taxonomies (ESCO v1.2 / O*NET).
-
-The `data_jobs` occupation-gap inspection (mining 785k raw job titles against every KB occupation
-label) surfaced a handful of well-attested, clearly-distinct roles that no authoritative taxonomy
-carries yet. We add them as real occupations so the KB reflects the current labor market — a
-deliberate, documented augmentation of the taxonomy backbone. They have **no native ISCO code**, so
-the model-verified `attach` stage assigns each an ISCO-08 unit group from its description
-(`needs_attach=True`); align/merge then fold any duplicates, and `data_jobs` attributes demand
-relations to them (matched from the raw job title). Each ships a rich description (for the attach NLI)
-and alt labels (the surface forms seen in postings).
-
-`EMERGING_ROLES` is imported by `data_jobs.py` to map raw posting titles -> these occupations.
-"""
+"""EMERGING source — curated emerging IT roles observed in the labor market but absent from the standard taxonomies"""
 
 from __future__ import annotations
 
 from .. import config as C
 from .base import StructuredSource
 
-# Each: source_id, canonical label, description (for attach + quality), alt labels, and the raw
-# job-title regex `data_jobs` uses to attribute postings (and thus demand) to this role.
+# Each: source_id, canonical label, description, alt labels, and the raw job-title regex.
 EMERGING_ROLES = [
     {
         "source_id": "analytics_engineer",

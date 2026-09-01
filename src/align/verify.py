@@ -1,14 +1,4 @@
-"""HF verification of candidate pairs — the automatic replacement for the old
-manual `gold` review.
-
-Design (calibrated against real data): embedding similarity and NLI are noisy for
-deciding *identity* (e.g. "software developer" ~ "web developer" ≈ 0.88), so they
-drive the softer `closeMatch` / `relatedMatch` links (which still feed ISCO
-grafting). `exactMatch` — the signal the unified merge consumes — is grounded on
-**label identity across sources** (preferred + alternative labels, normalized and
-singularized), which is high precision. Every accepted pair is validated
-automatically ("auto"); no human labeling.
-"""
+"""HF verification of candidate pairs."""
 
 from __future__ import annotations
 import re
@@ -17,7 +7,7 @@ from .. import config as C
 from .. import common as K
 
 _TRAILING_S = re.compile(r"s$")
-_PAREN = re.compile(r"\s*\([^)]*\)\s*$")  # trailing "(computer programming)" etc.
+_PAREN = re.compile(r"\s*\([^)]*\)\s*$")  
 
 
 def _key(label):
@@ -28,16 +18,12 @@ def _key(label):
 
 
 def _pref_keys(row):
-    """Preferred-label keys only — the high-precision identity signal used to merge.
-
-    Alt-label overlap is deliberately excluded here: distinct occupations often share
-    an alternative label, and clustering on that transitively merges unrelated concepts.
-    """
+    """Preferred-label keys only — the high-precision identity signal used to merge."""
     return {k for k in (_key(row.get("pref_label_en")), _key(row.get("pref_label_fr"))) if k}
 
 
 def _label_keys(row):
-    """All labels (pref + alt) — a softer corroboration signal (closeMatch, not merge)."""
+    """All labels (pref + alt)."""
     keys = set()
     for field in (row.get("pref_label_en"), row.get("pref_label_fr"),
                   row.get("alt_labels_en"), row.get("alt_labels_fr")):
@@ -63,9 +49,7 @@ class Verifier:
             self.nli_ok = False
 
     def entail_batch(self, texts):
-        """Batched entailment. `texts` is a list of (premise, hypothesis); returns a list
-        of entailment probabilities (None on failure). Batching is far faster on CPU than
-        thousands of single calls."""
+        """Batched entailment."""
         if not self.nli_ok or not texts:
             return [None] * len(texts)
         try:
@@ -96,9 +80,6 @@ def verify_pairs(pairs, verifier, use_nli):
         base.append({"ra": ra, "rb": rb, "sim": sim,
                      "pref": bool(_pref_keys(ra) & _pref_keys(rb)),
                      "alt": bool(_label_keys(ra) & _label_keys(rb)), "nli_m": None})
-        # NLI-verify every promising cross-source pair (mutual entailment of the two
-        # definitions), both to gate semantic merges and to ground the SKOS relation
-        # (closeMatch vs relatedMatch) on entailment rather than embedding alone.
         if use_nli and verifier.nli_ok and sim >= C.NLI_MIN_SIM:
             da, db = _desc(ra), _desc(rb)
             if da and db:
@@ -125,7 +106,7 @@ def verify_pairs(pairs, verifier, use_nli):
         conf = float(sim)
         method = f"embed:{sim:.2f}"
         if nli_m is not None and nli_m >= C.NLI_ENTAIL_MIN:
-            conf = max(conf, 0.60 + 0.30 * nli_m)  # boost, capped ~0.90
+            conf = max(conf, 0.60 + 0.30 * nli_m)  
             method += f"+nli:{nli_m:.2f}"
 
         if pref_match:
@@ -134,20 +115,14 @@ def verify_pairs(pairs, verifier, use_nli):
             method = "pref_match+" + method
         elif alt_match:
             conf = max(conf, 0.85)
-            relation = "skos:closeMatch"          # shared alt label -> related, not merged
+            relation = "skos:closeMatch"          
             method = "alt_match+" + method
         elif conf >= C.SKOS_CLOSE_MIN:
             relation = "skos:closeMatch"
         else:
             relation = "skos:relatedMatch"
 
-        # Source-neutral MERGE decision (what the unified merge consumes). "label" =
-        # identical preferred label (always merges). "semantic" = strong embedding, and for
-        # OCCUPATIONS (use_nli) additionally **NLI-verified**: when both members carry a
-        # definition, mutual entailment must reach NLI_ENTAIL_MIN — so no occupation is
-        # de-duplicated on embedding similarity alone (the no-human-review safety gate).
-        # Occupation semantic merges are further constrained to the same ISCO group in
-        # merge.py. Alt-label overlap alone never merges (avoids over-merge blobs).
+        # Source-neutral MERGE decision (what the unified merge consumes).
         floor = C.MERGE_EMBED_OCC if use_nli else C.MERGE_EMBED_SKILL
         if pref_match:
             do_merge = "label"
@@ -156,7 +131,6 @@ def verify_pairs(pairs, verifier, use_nli):
             if nli_gate and _desc(ra) and _desc(rb):
                 do_merge = "semantic" if (nli_m is not None and nli_m >= C.NLI_ENTAIL_MIN) else ""
             else:
-                # skills, missing definition, or NLI unavailable -> embedding-only merge
                 do_merge = "semantic"
         else:
             do_merge = ""

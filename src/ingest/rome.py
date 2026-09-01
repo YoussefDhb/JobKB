@@ -1,14 +1,4 @@
-"""Ingest ROME (French only): IT metiers + appellations + competences + definitions.
-
-Scope is domain M18 plus a few cross-branch IT/data metiers ROME files elsewhere
-(data scientist/analyst, chief data/digital officer), minus a few non-IT M18 metiers
-(meteorology/cartography/geomatics) — see ``config.is_rome_it``. ROME métiers have no
-English label; they are kept French-native (``fr_only``) and acquire an English label
-later through validated alignment, never via translation. Their French ``définition``
-(from ``unix_texte``, bloc 3) is ingested as ``description_fr`` so the NLI verifier can
-align them cross-lingually. Competences come from bloc 5, routed by rubrique:
-1 = Savoir-faire (hard), 2 = Savoir-etre (soft), 3 = Savoirs (knowledge/hard).
-"""
+"""Ingest ROME: IT metiers + appellations + competences + definitions."""
 
 from __future__ import annotations
 import os
@@ -56,8 +46,7 @@ def run():
     liens = K.read_csv_smart(LIENS)
     definitions = _definitions()
 
-    # In-scope ROME codes (IT), computed once from the metiers (needs the label for the
-    # non-IT keyword exclusion), then reused for appellations / competences.
+    # In-scope ROME codes (IT), computed once from the metiers, then reused for appellations / competences.
     in_scope = {(r.get("code_rome") or "").strip()
                 for _, r in metiers.iterrows()
                 if C.is_rome_it((r.get("code_rome") or "").strip(),
@@ -69,7 +58,7 @@ def run():
     savoir_lbl = {r["code_ogr_savoir"].strip(): r.get("libelle_savoir", "").strip()
                   for _, r in savoirs.iterrows()}
 
-    # Appellations (FR synonyms) grouped by ROME code.
+    # Appellations grouped by ROME code.
     syn = {}
     for _, r in appels.iterrows():
         code = (r.get("code_rome") or "").strip()

@@ -1,35 +1,11 @@
-"""SOFTSKILLS source — curated canonical soft / transversal skills used in IT hiring.
-
-The KB's only transversal skills so far are ESCO's **verb-phrase competences** ("build team
-spirit", "manage time", "assume responsibility"). The **noun-form soft skills that IT recruiters
-and job postings actually name** (teamwork, communication, leadership, problem solving, time
-management, work ethic, attention to detail, …) are absent. This curated list adds them — drawn
-from the three soft-skill datasets analysed for JobKB (Zenodo 3906955's `soft_skills` column,
-its `soft-skills-tagged.csv`, and the Mendeley 7b68fzgy6b software-engineering skill survey, whose
-questionnaire structure is otherwise rejected as a person-classification dataset). Only the
-genuinely-relevant, distinct, IT-workplace terms are kept — noisy free-text phrases are folded in
-as alt labels, not separate nodes.
-
-Contributes **skills only** (no occupations). Each term is emitted as a soft skill
-(`hard_soft="soft"` → `hierarchy.classify_subdomain` places it in `soft_transversal`); its alt
-labels include the surface variants seen in the datasets **and** the equivalent ESCO verb-phrase,
-so the augmented matcher resolves posting tokens to it and `ZENODO` attributes weighted `demand`
-edges from real IT postings — i.e. these soft skills reach occupations by evidence, not assumption.
-
-`screen_relevance=False`: these terms are deliberately non-IT-*specific*, so the semantic IT gate
-would wrongly block them; as a hand-curated authoritative list it bypasses the gate, exactly like
-the code-filtered built-in taxonomies. `SOFT_SKILLS` is the single curated table below.
-"""
+"""SOFTSKILLS source — curated canonical soft / transversal skills used in IT hiring."""
 
 from __future__ import annotations
 
 from .. import config as C
 from .base import StructuredSource
 
-# Each: source_id, canonical noun-form label, alt labels (dataset surface forms + the equivalent
-# ESCO verb-phrase for discoverability), and a one-line description. Curated for IT hiring; the
-# ~10 Zenodo `soft_skills` canonical terms are all covered. Already-present nouns (critical
-# thinking, analytical thinking) are deliberately omitted.
+# Each: source_id, canonical noun-form label, alt labels, and a description.
 SOFT_SKILLS = [
     {
         "source_id": "teamwork",
@@ -208,7 +184,7 @@ class SoftSkillsSource(StructuredSource):
     contributes_occupations = False
     needs_attach = False
     builtin = True
-    screen_relevance = False   # curated & authoritative; transversal terms bypass the IT gate
+    screen_relevance = False  
     version = "curated-softskills-2026"
     retrieval_method = "soft_skill_curation"
 

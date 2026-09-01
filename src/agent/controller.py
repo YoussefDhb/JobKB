@@ -43,8 +43,7 @@ def build(tb):
         return {}
 
     def finalize(s: ControllerState) -> ControllerState:
-        # Weave enrichment back into the KB. Descriptions/links/hard_soft only need a re-merge; new
-        # Wikidata-confirmed skill nodes additionally need hierarchy placement + a focused re-align.
+        # Weave enrichment back into the KB.
         if s.get("added_nodes"):
             from .. import hierarchy
             from ..align import run as align_run

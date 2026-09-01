@@ -1,6 +1,4 @@
-"""Relevance / noise gate: screens every pluggable StructuredSource at ingest, before rows are written.
-Two checks: (1) structural noise (2) IT-relevance via a contrastive bge-m3 test
-"""
+"""Relevance / noise gate: screens every pluggable StructuredSource at ingest"""
 
 from __future__ import annotations
 
@@ -13,12 +11,10 @@ from .align import verify as _verify
 
 _IT_HYP = "This is a concept in information technology, computing, software or data."
 
-# Space-before-comma is the CSO math-list junk signal ("(min ,max ,+)"); a comma normally has
-# no leading space in real labels. Deliberately NOT flagging "+" / "." / "#" — they are common in
-# genuine tech skills (C++, .NET, C#, X++, NIS+).
+# Space-before-comma is the CSO math-list junk signal.
 _JUNK = re.compile(r" ,")
 
-_ANCHOR_CACHE = {}          # kind -> (it_matrix, nonit_matrix)
+_ANCHOR_CACHE = {}      
 
 
 def is_structural_noise(label: str) -> bool:
@@ -31,33 +27,23 @@ def is_structural_noise(label: str) -> bool:
     return bool(_JUNK.search(label))
 
 
-# Soft-branch IT-relevance filter (curated). O*NET "Abilities" and ESCO's broad transversal
-# collection dragged psychometric / physical / non-IT-life-skill entries into the soft branch
-# (Far Vision, Finger Dexterity, Perceptual Speed, "apply hygiene standards", "maintain physical
-# fitness", "foster biodiversity", "participate in civic life", …). These are not IT-workplace soft
-# skills. `is_non_it_soft()` (EXACT normalized-label match — substrings are unsafe: they would hit
-# real IT skills like "integrated development environment", "Cyber Hygiene", "Physical Layers",
-# "healthcare data systems") is applied at the ONET/ESCO ingests to keep them out. Kept deliberately:
-# the cognitive/verbal O*NET reasoning abilities (Deductive/Inductive/Mathematical Reasoning, Oral/
-# Written Comprehension/Expression) and every IT-relevant ESCO transversal skill (accept criticism,
-# cope with uncertainty, respect confidentiality, manage digital identity, think critically, …).
+# Soft-branch IT-relevance filter (curated).
 _NON_IT_SOFT_RAW = [
-    # O*NET physical / sensory / psychomotor abilities (never IT soft skills)
+    # O*NET physical / sensory / psychomotor abilities
     "Far Vision", "Near Vision", "Night Vision", "Peripheral Vision", "Depth Perception",
     "Glare Sensitivity", "Visual Color Discrimination", "Speech Clarity",
-    # NB: "Speech Recognition" deliberately NOT listed — it is a real hard IT/ML skill (ASR), not the
-    # O*NET sensory ability, and must not be pruned.
+    # NB: "Speech Recognition" deliberately NOT listed
     "Hearing Sensitivity", "Auditory Attention", "Sound Localization", "Finger Dexterity",
     "Manual Dexterity", "Arm-Hand Steadiness", "Control Precision", "Multilimb Coordination",
     "Response Orientation", "Rate Control", "Reaction Time", "Wrist-Finger Speed",
     "Speed of Limb Movement", "Static Strength", "Explosive Strength", "Dynamic Strength",
     "Trunk Strength", "Stamina", "Extent Flexibility", "Dynamic Flexibility",
     "Gross Body Coordination", "Gross Body Equilibrium",
-    # O*NET raw perceptual / attention / aptitude abilities (psychometric traits, not hiring skills)
+    # O*NET raw perceptual / attention / aptitude abilities
     "Perceptual Speed", "Speed of Closure", "Flexibility of Closure", "Selective Attention",
     "Time Sharing", "Spatial Orientation", "Number Facility", "Problem Sensitivity",
     "Fluency of Ideas", "Originality", "Category Flexibility", "Memorization",
-    # ESCO non-IT transversal "life skills" (health / physical / civic / environmental / cultural)
+    # ESCO non-IT transversal "life skills"
     "adopt ways to foster biodiversity and animal welfare",
     "adopt ways to reduce pollution",
     "adopt ways to reduce negative impact of consumption",
@@ -85,8 +71,7 @@ _NON_IT_SOFT = {K.normalize_label(x) for x in _NON_IT_SOFT_RAW}
 
 
 def is_non_it_soft(label: str) -> bool:
-    """True if `label` is a curated non-IT soft-branch entry (physical/psychometric O*NET ability or
-    a non-IT ESCO life-skill) that should be pruned from the soft branch. Exact normalized match only."""
+    """True if `label` is a curated non-IT soft-branch entry that should be pruned from the soft branch."""
     return K.normalize_label(label) in _NON_IT_SOFT
 
 
@@ -96,7 +81,7 @@ def _anchors(kind, embedder):
         return _ANCHOR_CACHE[kind]
     it_texts = list(C.REL_IT_SEED)
     if kind == "occupation":
-        # authoritative IT-occupation anchors: the ISCO IT groups already in the KB
+        # authoritative IT-occupation anchors
         try:
             groups = [r for r in K.read_all(C.OCCUPATIONS_CSV)
                       if r.get("occupation_type") == "isco_group"]
@@ -117,8 +102,7 @@ def _screen(rows, kind, embedder, verifier):
 
     labels = [r.get("pref_label_en") or r.get("pref_label_fr") or "" for r in rows]
 
-    # Semantic scoring only in sentence-transformer mode (TF-IDF vectors aren't comparable
-    # across separately-fitted calls); otherwise structural-only + keep (fail-open).
+    # Semantic scoring only in sentence-transformer mode.
     sim_it = sim_non = None
     if embedder.mode == "st":
         import numpy as np
@@ -130,14 +114,14 @@ def _screen(rows, kind, embedder, verifier):
         np  # (kept for clarity; numpy used via sklearn output)
 
     # Pass 1: structural + gather NLI candidates (items clearly closer to a non-IT domain).
-    verdict = [None] * len(rows)     # "keep" | "block:malformed" | "nli"
+    verdict = [None] * len(rows) 
     for i, r in enumerate(rows):
         if is_structural_noise(labels[i]):
             verdict[i] = "block:malformed"
         elif sim_it is None:
-            verdict[i] = "keep"                       # fail-open (no embeddings)
+            verdict[i] = "keep"                      
         elif sim_non[i] >= C.REL_NONIT_HI and (sim_non[i] - sim_it[i]) >= C.REL_NONIT_MARGIN:
-            verdict[i] = "nli"                        # candidate non-IT -> confirm with NLI
+            verdict[i] = "nli"                       
         else:
             verdict[i] = "keep"
 
@@ -168,18 +152,17 @@ def _screen(rows, kind, embedder, verifier):
             _log(r, i, "block", "malformed"); continue
         if v == "nli":
             s = nli_scores.get(i)
-            if s is not None and s < C.REL_NLI_MIN:      # confidently not IT -> block
+            if s is not None and s < C.REL_NLI_MIN:      
                 blocked_ids.add(r["entity_id"]); stats["non_it"] += 1
                 _log(r, i, "block", "non_it"); continue
-            stats["borderline"] += 1                      # kept, but a near-miss -> log it
+            stats["borderline"] += 1                     
             _log(r, i, "keep", "borderline")
         kept.append(r); stats["kept"] += 1
     return kept, blocked_ids, log, stats
 
 
 def filter_rows(occ_rows, skill_rows, source):
-    """Screen a source's freshly-built rows. Returns (kept_occ, kept_skl, blocked_ids, stats).
-    Fail-open on any model/infra error (structural noise still blocked)."""
+    """Screen a source's freshly-built rows."""
     if not C.RELEVANCE_GATE_ENABLED:
         return occ_rows, skill_rows, set(), None
     try:

@@ -1,15 +1,4 @@
-"""KAGGLE_JOBS source — kaggle "job skill set" dataset, IT subset (240 postings).
-
-`resources/OTHERS/en/kaggle-job-skill-set.csv`: multi-domain postings with `category`, `job_title` and
-a pre-extracted `job_skill_set` (a Python-list string). We keep only the **INFORMATION-TECHNOLOGY**
-category (240 rows of 1,167) — its titles are generic IT-management/support roles ("Information
-Technology Support Specialist / Project Manager / Manager / Security Analyst / Business Analyst") that
-add demand for the IT-management/support occupations under-represented by our developer-heavy demand.
-
-Relation-only demand (no harvest — 240 rows is too few to harvest reliably): titles resolve to
-occupations by an ordered keyword resolver, skills resolve via the augmented matcher (clean tokens),
-and weighted `demand` edges are written for pairs seen in >= `KAGGLE_JOBS_MIN_FREQ` postings.
-"""
+"""KAGGLE_JOBS source — kaggle "job skill set" dataset, IT subset."""
 
 from __future__ import annotations
 
@@ -23,8 +12,7 @@ from .base import Source
 from . import evidence
 from .data_jobs import _augmented_skill_index
 
-# Ordered (keyword-in-title -> occupation probe) rules; first match wins. Generic titles that don't
-# match any rule (bare "IT Specialist / Administrator / Auditor / Consultant") are skipped.
+# Ordered (keyword-in-title -> occupation probe) rules.
 _TITLE_RULES = [
     (("help desk", "helpdesk", "support"), "ict help desk agent"),
     (("project manager", "project coordinator", "program manager", "delivery manager"), "ict project manager"),

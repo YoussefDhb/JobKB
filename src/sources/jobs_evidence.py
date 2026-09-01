@@ -1,14 +1,4 @@
-"""JOBS source — mined IT job-posting evidence relations (enrichment).
-
-`resources/OTHERS/en/JobsDatasetProcessed.csv` is 2,999 LLM-processed IT postings, each tagged with
-a role (`Query`) and pre-extracted `IT Skills` / `Soft Skills` (free-text surface forms). We mine it
-as **evidence relations only**: match each posting's role to an EXISTING occupation and each extracted
-skill to an EXISTING skill (by normalized label), then add weighted `demand` relations for
-(occupation, skill) pairs seen in at least `JOBS_MIN_FREQ` postings.
-
-No new occupation/skill nodes are created — topic-only queries ("Statistics", "Deep Learning") find
-no occupation match and drop out, so the LLM-extraction noise self-filters. Relation-only source.
-"""
+"""JOBS source — mined IT job-posting evidence relations (enrichment)."""
 
 from __future__ import annotations
 
@@ -43,7 +33,7 @@ class JobsEvidenceSource(Source):
                 n_post += 1
                 occ_id = occ_map.get(evidence.match_key(row.get("Query") or ""))
                 if not occ_id:
-                    continue                          # role is not an existing occupation -> skip
+                    continue                          
                 roles_matched.add(row.get("Query"))
                 skills = set()
                 for col in ("IT Skills", "Soft Skills"):

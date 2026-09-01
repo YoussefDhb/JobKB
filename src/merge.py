@@ -53,7 +53,7 @@ def _split(value):
 
 
 def _majority(members, field):
-    """Source-neutral majority value of `field` (ties: shorter, then alphabetical)."""
+    """Source-neutral majority value of `field`."""
     vals = [(m.get(field) or "").strip() for m in members if (m.get(field) or "").strip()]
     if not vals:
         return ""
@@ -100,7 +100,7 @@ def _merged_alts(members, primary_en, primary_fr):
 
 
 def _member_description(members):
-    """Source-neutral consensus description for a unified concept: the most common non-empty EN desc."""
+    """Source-neutral consensus description for a unified concept."""
     vals = [(m.get("description_en") or "").strip() for m in members if (m.get("description_en") or "").strip()]
     if not vals:
         return ""
@@ -110,7 +110,7 @@ def _member_description(members):
 
 
 def _fill_descriptions(rows, kind):
-    """Fill empty EN descriptions from Wikidata + LLM enrichment, only where still empty (never overwrites)."""
+    """Fill empty EN descriptions from Wikidata + LLM enrichment, only where still empty."""
     for r in rows:
         if not (r.get("description") or "").strip() and (r.get("wikidata_description") or "").strip():
             r["description"] = r["wikidata_description"]
@@ -120,8 +120,7 @@ def _fill_descriptions(rows, kind):
 
 
 def _fill_labels(rows, kind):
-    """Fill empty EN/FR primary + alt labels from the translate stage's Wikidata/MT snapshots, only
-    where still empty (never overwrites source labels). No-op until `--translate` has run."""
+    """Fill empty EN/FR primary + alt labels from the translate stage's Wikidata/MT snapshots."""
     from . import translate  # lazy: translate imports nothing from merge at module load
     translate.apply_enrichment(rows, kind)
 

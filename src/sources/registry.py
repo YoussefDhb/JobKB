@@ -1,10 +1,4 @@
-"""Source registry — the single place that lists every ingestable source.
-
-The built-in taxonomies (ISCO/ESCO/ONET/NOC/ROME) are wrapped so they share one interface
-with plugin sources. Adding a new source = append one `register(...)` line here (or import
-and register from elsewhere); the incremental orchestrator, `attach` and the CLI all read
-this registry, so no other file needs editing.
-"""
+"""Source registry — the place that lists every ingestable source."""
 
 from __future__ import annotations
 
@@ -39,7 +33,7 @@ class _WrappedIngest(Source):
         self._run = run_fn
         self.contributes_occupations = contributes_occupations
         self.needs_attach = needs_attach
-        self.builtin = True   # the wrapped taxonomies are the base build set
+        self.builtin = True   
         self.version = version
 
     def ingest(self) -> None:
@@ -55,9 +49,9 @@ def register(src: Source) -> Source:
 
 
 # --- built-in taxonomies ---------------------------------------------------------------
-# ISCO is the neutral backbone (its nodes are ISCO groups, not aligned occupations).
+# ISCO is the neutral backbone.
 register(_WrappedIngest(C.SRC_ISCO, isco.run, contributes_occupations=False, needs_attach=False))
-# ESCO carries a native ISCO code (self-attaches during ingest).
+# ESCO carries a native ISCO code.
 register(_WrappedIngest(C.SRC_ESCO, esco.run, contributes_occupations=True, needs_attach=False))
 # ONET / NOC / ROME have no native ISCO code -> the attach stage assigns one.
 register(_WrappedIngest(C.SRC_ONET, onet.run, contributes_occupations=True, needs_attach=True))
@@ -65,50 +59,37 @@ register(_WrappedIngest(C.SRC_NOC, noc.run, contributes_occupations=True, needs_
 register(_WrappedIngest(C.SRC_ROME, rome.run, contributes_occupations=True, needs_attach=True))
 
 # --- built-in skills-only frameworks ---------------------------------------------------
-# SFIA/CSO/Lightcast/Kaggle contribute skills but no occupations; they classify + align/merge
-# into the shared skill layer and reach occupations transitively via unified skills.
 register(SfiaSource())
 register(CsoSource())
 register(LightcastSource())
 register(KaggleSkillsSource())
-# e-CF: the European e-Competence Framework — 41 authoritative EU ICT competences.
+# e-CF: the European e-Competence Framework
 register(EcfSource())
-# SOFTSKILLS: curated noun-form soft/transversal skills used in IT hiring (recruiter vocabulary the
-# ESCO verb-phrase competences lack). Registered before the demand sources so ZENODO can link them.
+# SOFTSKILLS: curated noun-form soft/transversal skills used in IT hiring
 register(SoftSkillsSource())
-# WEF Global Skills Taxonomy: structured soft skills (5 WEF-aligned soft sub-domains) + a transversal
-# occupation layer. Skills-only; its transversal attach reads existing occupations at ingest.
+# WEF Global Skills Taxonomy: structured soft skills
 register(WefSource())
-# Comprehensive curated IT soft-skills taxonomy: genuinely-new soft skills self-classified into the 5
-# soft sub-domains (dedup-skips already-covered terms) + a universal `core` transversal occupation attach.
+# Comprehensive curated IT soft-skills taxonomy: genuinely-new soft skills self-classified into the 5 soft sub-domains.
 register(SoftTaxonomySource())
 
-# --- curated emerging IT roles (real occupations absent from ESCO/O*NET; attach to ISCO) -----
+# --- curated emerging IT roles -----
 # Registered before DATAJOBS so its occupations exist when data_jobs attributes demand to them.
 register(EmergingRolesSource())
 
-# --- built-in relation-only enrichment (must run after ESCO/ROME/skills exist) ---------
-# ADEM (real vacancy demand) and JOBS (mined postings) add weighted occupation->skill edges
-# between entities that already exist in the KB — no new nodes.
+# --- built-in relation-only enrichment ---------
 register(AdemDemandSource())
 register(JobsEvidenceSource())
-# DATAJOBS is a hybrid (harvests a few new tool skills + adds large-scale demand relations); it
-# resolves endpoints against the existing KB at ingest, so it registers after the taxonomies/skills.
+# DATAJOBS resolves endpoints against the existing KB at ingest, so it registers after the taxonomies/skills.
 register(DataJobsSource())
-# ZENODO is a hybrid like DATAJOBS (Stack Overflow postings): harvests tools + adds demand relations
-# for hard skills AND the curated SOFTSKILLS vocabulary. Registers after SOFTSKILLS/EMERGING so both
-# its soft-skill and back-end-developer endpoints exist when it resolves demand.
+# ZENODO is a hybrid like DATAJOBS
 register(ZenodoSource())
-# Three more job-posting demand sources (resolve endpoints against the existing KB at ingest):
-# DJINNI (relation-only, free-text extraction over ~142k IT postings), LINKEDIN_SWE (hybrid, pre-
-# extracted skills), KAGGLE_JOBS (small hybrid, IT-management/support subset).
+# Three more job-posting demand sources
 register(DjinniSource())
 register(LinkedInSweSource())
 register(KaggleJobsSource())
 
 # --- plugin sources --------------------------------------------------------------------
-# SCRAPER: opt-in web-scraping enrichment. Non-builtin (never in a full build) and resolves endpoints
-# against the existing KB at ingest, so it registers last, after every taxonomy/skill/demand source.
+# SCRAPER: web-scraping enrichment.
 register(ScraperSource())
 register(DemoSource())
 
@@ -129,7 +110,7 @@ def builtin_sources() -> tuple[str, ...]:
 
 
 def occ_sources() -> tuple[str, ...]:
-    """Sources contributing real (non ISCO-group) occupations that get aligned."""
+    """Sources contributing real occupations that get aligned."""
     return tuple(n for n, s in REGISTRY.items() if s.contributes_occupations)
 
 

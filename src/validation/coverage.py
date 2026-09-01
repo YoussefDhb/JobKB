@@ -1,16 +1,4 @@
-"""External coverage benchmark (Track 2): does the KB vocabulary contain the skills that expert
-annotators marked in real job-posting text?
-
-Read-only. For each gold skill-mention string (pooled across all splits — we fit nothing, so there is
-no train/test leakage) we ask two questions against the unified KB skills:
-  - EXACT/ALIAS coverage: does its normalized+singularized `match_key` hit a KB primary or alt label?
-  - SEMANTIC coverage: is its nearest KB skill label within `VALIDATION_SEMANTIC_MIN` bge-m3 cosine?
-Exact is the honest headline; semantic shows paraphrases the label-matcher misses. Reported side by
-side, broken out by dataset / subset (tech vs house) / layer (skill vs knowledge) / language.
-
-Plus the Sayfullina synonym-normalization test: within each reference cluster, do the phrasings that
-the KB *does* contain resolve to the SAME KB node (correct normalization) or fragment?
-"""
+"""External coverage benchmark: does the KB vocabulary contain the skills that expert annotators marked in real job-posting text?"""
 
 from __future__ import annotations
 
@@ -47,13 +35,13 @@ def _kb_labels(lang):
 
 
 def _semantic_nearest(embedder, gold_texts, kb_texts):
-    """Return (best_score, best_index) per gold string against kb_texts (bge-m3 cosine). st-mode only."""
+    """Return (best_score, best_index) per gold string against kb_texts (bge-m3 cosine)."""
     import numpy as np
     kb_vecs = cand.encode_cached(embedder, kb_texts)          # (K, d), normalized
     g_vecs = cand.encode_cached(embedder, gold_texts)         # (N, d), normalized
     best_score = np.zeros(len(gold_texts), dtype="float32")
     best_idx = np.zeros(len(gold_texts), dtype="int64")
-    for s in range(0, len(gold_texts), 512):                  # chunk to bound the sim matrix
+    for s in range(0, len(gold_texts), 512):                 
         chunk = g_vecs[s:s + 512]
         sims = chunk @ kb_vecs.T
         best_score[s:s + 512] = sims.max(axis=1)
@@ -125,8 +113,7 @@ def aggregate(dataset, golds):
 
 
 def normalization_test(embedder=None):
-    """Sayfullina synonym-normalization: within each reference cluster, of the phrasings the KB
-    contains, do they resolve to the SAME KB node? Returns (summary dict, per-cluster rows) or None."""
+    """Sayfullina synonym-normalization. Returns (summary dict, per-cluster rows) or None."""
     clusters = D.load_sayfullina_clusters()
     if not clusters:
         return None

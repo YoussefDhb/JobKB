@@ -1,9 +1,4 @@
-"""SOFTTAXO: a curated IT soft-skills taxonomy filling gaps ESCO/SOFTSKILLS/WEF leave. Skills-only, each
-self-classified into a soft sub-domain (in SELF_CLASSIFIED_SUBDOMAIN_SOURCES). Self-deduping (skips any
-candidate already named by another source, excluding its own rows so re-ingest is idempotent); a curated
-`core` subset attaches to every occupation as transversal edges. screen_relevance=False (curated, bypasses
-the IT gate, like WEF/SOFTSKILLS). SOFT_TAXONOMY below is the curated table.
-"""
+"""SOFTTAXO: a curated IT soft-skills taxonomy filling gaps ESCO/SOFTSKILLS/WEF leave."""
 from __future__ import annotations
 
 from .. import common as K
@@ -12,7 +7,7 @@ from .base import StructuredSource
 from . import evidence
 
 
-# Each: source_id, label, subdomain (soft_*), core (attached universally to occupations), alts, desc.
+# Each: source_id, label, subdomain, core, alts, desc.
 SOFT_TAXONOMY = [
     # ---- soft_cognitive ---------------------------------------------------------------------------
     {"source_id": "critical_thinking", "label": "critical thinking", "subdomain": "soft_cognitive",
@@ -236,7 +231,7 @@ class SoftTaxonomySource(StructuredSource):
     contributes_occupations = False
     needs_attach = False
     builtin = True
-    screen_relevance = False   # curated, authoritative transversal terms bypass the IT gate
+    screen_relevance = False   
     version = "curated-soft-taxonomy-2026"
     retrieval_method = "soft_skill_taxonomy_curation"
 
@@ -247,7 +242,7 @@ class SoftTaxonomySource(StructuredSource):
             existing = set()
             for r in K.read_all(C.SKILLS_CSV):
                 if r.get("source") == self.name:
-                    continue                       # exclude own rows → idempotent re-ingest
+                    continue                       
                 for field in ("pref_label_en", "pref_label_fr", "alt_labels_en", "alt_labels_fr"):
                     for lbl in (r.get(field) or "").split(" | "):
                         k = evidence.match_key(lbl)
@@ -274,14 +269,13 @@ class SoftTaxonomySource(StructuredSource):
                 "desc_en": e["desc"],
                 "hard_soft": "soft",
                 "method": "curated_soft_taxonomy",
-                "it_subtype": e["subdomain"],     # self-classified (see SELF_CLASSIFIED_SUBDOMAIN_SOURCES)
+                "it_subtype": e["subdomain"],     
             }
 
     def ingest(self) -> None:
-        super().ingest()   # writes the soft-skill nodes/labels (gate-bypassed), no relations yet
+        super().ingest()   
 
-        # Universal transversal attach: the curated `core` soft skills → every real IT occupation, as
-        # relation_type="transversal" (distinct from demand), exactly like WefSource.ingest.
+        # Universal transversal attach
         core_ids = [K.mint_id("SKL_", self.name, e["source_id"])
                     for e in self._surviving() if e["core"]]
         occ_ids = [r["entity_id"] for r in K.read_all(C.OCCUPATIONS_CSV)

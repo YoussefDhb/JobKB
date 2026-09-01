@@ -1,34 +1,5 @@
 #!/usr/bin/env python
-"""CLI entry point for the JobKB build.
-
-Full build (enrichment is automatic: ingest..merge -> wikidata -> agent -> translate -> qa;
-the agentic LangGraph worker supersedes the one-shot llm stage, falling back to it if langgraph is absent):
-    python run_pipeline.py                 # full clean build + enrichment (all stages)
-    python run_pipeline.py --core-only     # full build WITHOUT enrichment (fast, network-free)
-    python run_pipeline.py --no-align      # ingest + hierarchy only (skip HF models)
-    python run_pipeline.py --keep          # do not wipe kb/ before the full build
-
-Run only specific stages (against the existing kb/, never wiped unless --clean):
-    stages = ingest -> hierarchy -> align -> attach -> merge -> qa
-    python run_pipeline.py --stages merge              # re-derive unified concepts (seconds)
-    python run_pipeline.py --stages attach,merge       # re-attach + re-merge (after tuning attach)
-    python run_pipeline.py --from align                # align -> attach -> merge -> qa
-    python run_pipeline.py --to hierarchy              # ingest + hierarchy only
-    python run_pipeline.py --stages ingest --source ESCO   # re-ingest just one source
-    python run_pipeline.py --stages qa                 # integrity report only
-    python run_pipeline.py --list-stages
-
-Incremental sources:
-    python run_pipeline.py --add NAME      # incrementally add one registered source
-    python run_pipeline.py --remove NAME   # incrementally remove one source
-    python run_pipeline.py --list-sources  # list registered sources
-
-Web-scraping enrichment (opt-in, network; keeps the KB current with emerging roles/skills/tech):
-    python run_pipeline.py --scrape all         # crawl every source -> RESOURCES/SCRAPED/ snapshots
-    python run_pipeline.py --scrape apis        # or a tier: apis | ats | trends
-    python run_pipeline.py --add SCRAPER        # ingest the snapshots (tags + NER + relevance gate)
-    python run_pipeline.py --refresh-scraper    # real-time: crawl all + re-ingest in one step (schedule it)
-"""
+"""CLI entry point for the JobKB build."""
 
 from __future__ import annotations
 import argparse
@@ -95,7 +66,7 @@ def main():
                     help="incrementally remove one source from the existing KB")
     ap.add_argument("--list-sources", action="store_true",
                     help="list the registered sources and exit")
-    # web-scraping enrichment (network; snapshots raw postings, then `--add SCRAPER` ingests offline)
+    # web-scraping enrichment
     ap.add_argument("--scrape", nargs="?", const="all", metavar="TARGETS",
                     help="crawl job sources into RESOURCES/SCRAPED/ then `--add SCRAPER` ingests them. "
                          "TARGETS = 'all', a tier (apis|ats|trends), or a comma-list of adapters "
@@ -103,12 +74,12 @@ def main():
     ap.add_argument("--refresh-scraper", nargs="?", const="all", metavar="TARGETS",
                     help="real-time refresh: crawl the sources (default all) AND incrementally re-ingest "
                          "SCRAPER in one step (idempotent). Schedule via cron / Task Scheduler")
-    # wikidata enrichment (network read-only; snapshotted for offline reproducibility)
+    # wikidata enrichment
     ap.add_argument("--wikidata", action="store_true",
                     help="anchor tech-skills + occupations to Wikidata QIDs (kb/wikidata_links.csv)")
     ap.add_argument("--refresh-wikidata", action="store_true",
                     help="re-query Wikidata ignoring the resolutions snapshot")
-    # LLM enrichment (pillar 3): generation is snapshotted; validated; fail-open on no credits/offline
+    # LLM enrichment
     ap.add_argument("--llm", nargs="?", const="all", metavar="TASKS",
                     help="run LLM enrichment after merge; optional comma-list of tasks "
                          "(descriptions,hardsoft,links,emerging); default all")
@@ -119,14 +90,13 @@ def main():
                     help="validate the built KB (read-only): logical consistency + external gold "
                          "coverage benchmark + LLM-connection audit; optional comma-list of tracks "
                          "(consistency,coverage,llm); default all. Writes validation/report.md")
-    # agentic enrichment (pillar 3, LangGraph): controller + reflective workers over the HF tools;
-    # supersedes the one-shot --llm on a full build. Fail-open (no langgraph -> falls back to llm.run).
+    # agentic enrichment
     ap.add_argument("--agent", nargs="?", const="all", metavar="GAPS",
                     help="run agentic enrichment (LangGraph): a controller assesses the KB and "
                          "dispatches reflective workers (propose->verify->reflect->commit); optional "
                          "comma-list of gaps (description,link,emerging,anchor); default all. "
                          "Writes agent/report.md")
-    # graph export (read-only): materialize the unified concept graph as RDF/OWL + GraphML/JSON + viz.
+    # graph export
     ap.add_argument("--export", nargs="?", const="all", metavar="FORMATS",
                     help="export the built KB as a graph (read-only): RDF/OWL Turtle + GraphML + JSON + "
                          "self-contained interactive HTML (backbone + full-graph); optional comma-list "
@@ -193,8 +163,6 @@ def main():
 
     if args.add:
         from src import incremental
-        # SCRAPER's new market entities get the full enrichment layer (Wikidata/agent/translate), like a
-        # full build; the curated datasets ship their own descriptions and don't need it.
         incremental.add_source(args.add, enrich=(args.add == "SCRAPER"))
         return
     if args.remove:

@@ -1,5 +1,4 @@
-"""LLM enrichment (HuggingFace, auto-validated). Four tasks: T1 descriptions, T2 hard_soft (taxonomy-
-derived), T3 inferred occ->skill links, T4 Wikidata-confirmed emerging skills."""
+"""LLM enrichment. Four tasks: T1 descriptions, T2 hard_soft, T3 inferred occ->skill links, T4 Wikidata emerging skills."""
 
 from __future__ import annotations
 
@@ -14,7 +13,7 @@ from . import config as C
 from . import common as K
 
 
-# Snapshot cache (offline-first: every generation is cached by task+key, so re-runs cost nothing)
+# Snapshot cache
 def _load_snapshot() -> dict:
     snap = {}
     if os.path.isfile(C.LLM_SNAPSHOT_CSV):
@@ -55,9 +54,7 @@ class LLMClient:
                 self.mode = "api"
             except Exception:
                 self._api = None
-        # Load the local model whenever the fallback is enabled — so chat() can degrade to it if the
-        # API errors mid-run (e.g. HTTP 402 when free-tier credits are exhausted), not only when the
-        # API can't be constructed at all.
+        # Load the local model whenever the fallback is enabled
         if C.LLM_USE_LOCAL_FALLBACK:
             try:
                 from transformers import pipeline
@@ -72,7 +69,7 @@ class LLMClient:
         return self._api is not None or self._local is not None
 
     def chat(self, system: str, user: str) -> str | None:
-        """One chat completion. Returns the text, or None on failure (fail-open)."""
+        """One chat completion. Returns the text, or None on failure."""
         if self._api is not None and not self._api_dead:
             delay = 1.0
             for attempt in range(C.LLM_MAX_RETRIES):
@@ -83,11 +80,11 @@ class LLMClient:
                         max_tokens=C.LLM_MAX_TOKENS, temperature=C.LLM_TEMPERATURE)
                     time.sleep(C.LLM_RATE_SLEEP)
                     return (r.choices[0].message.content or "").strip()
-                except Exception as e:  # noqa: BLE001 — rate limit / network / provider: back off, fail-open
+                except Exception as e:
                     status = getattr(e, "status_code", None) or getattr(getattr(e, "response", None),
                                                                         "status_code", None)
                     if status in (401, 402, 403):
-                        # credits depleted / auth — won't recover this run; stop hitting the API.
+                        # credits depleted / auth
                         self._api_dead = True
                         break
                     if attempt == C.LLM_MAX_RETRIES - 1:
@@ -108,7 +105,7 @@ class LLMClient:
             return None
 
 
-# JSON parsing (tolerant: models sometimes wrap JSON in prose or code fences)
+# JSON parsing
 _JSON_OBJ = re.compile(r"\{.*\}", re.S)
 
 
@@ -130,14 +127,14 @@ def _parse_json(text: str | None) -> dict | None:
 def _clean_desc(label: str, desc: str) -> str:
     """Strip a leading 'Label:' echo and surrounding quotes/whitespace from a generated definition."""
     d = (desc or "").strip().strip('"').strip()
-    # models often prefix "MLOps engineer: ..." — drop an echoed label prefix.
+    # models often prefix "MLOps engineer: ...".
     pref = re.match(r"^\s*" + re.escape(label) + r"\s*[:\-–]\s*", d, re.I)
     if pref:
         d = d[pref.end():].strip()
     return d
 
 
-# Validation (pillar 4): the mDeBERTa NLI verifier grounds/gates every LLM output.
+# Validation: the mDeBERTa NLI verifier grounds/gates every LLM output.
 class Validator:
     def __init__(self):
         from .align.verify import Verifier
@@ -153,8 +150,7 @@ class Validator:
         return s if s is not None else 0.0
 
     def check_description(self, task, entity_id, label, desc):
-        """A generated description is accepted iff it is well-formed AND, per NLI, actually describes
-        the label (catches off-topic drift / hallucination). Returns (ok, score)."""
+        """A generated description is accepted if it is well-formed."""
         n = len(desc)
         if n < C.LLM_DESC_MIN_CHARS or n > C.LLM_DESC_MAX_CHARS:
             self.rejects.append((task, entity_id, label, desc, "length", n))
@@ -165,7 +161,7 @@ class Validator:
                 self.rejects.append((task, entity_id, label, desc, "nli_off_topic", round(score, 3)))
                 return False, score
             return True, score
-        return True, 0.0  # NLI unavailable -> structural-only (fail-open)
+        return True, 0.0
 
     def dump_rejects(self):
         rows = [{"task": t, "entity_id": e, "label": l, "output": o, "reason": r, "score": s}
@@ -173,7 +169,7 @@ class Validator:
         K.write_csv(C.LLM_REJECTED_CSV, C.LLM_REJECTED_FIELDS, rows)
 
 
-# Context builders (ground generation on the existing KB, not the model's memory alone)
+# Context builders
 def _domain_label(subtype):
     from . import hierarchy as H
     cat = H.CATEGORIES.get(subtype)
@@ -209,8 +205,7 @@ def _occ_context(row):
     return "; ".join(parts)
 
 
-# Plain-text output (not JSON): small local models follow "one sentence" far more reliably than strict
-# JSON, and it parses trivially. IT-relevance is enforced downstream by the NLI validator, not a flag.
+# Plain-text output
 _DESC_SYS = (
     "You are an expert IT taxonomy assistant building a knowledge base of IT occupations and skills. "
     "Given an entity and its context, reply with ONLY one concise, factual, neutral sentence (max ~35 "
@@ -246,23 +241,23 @@ def _task_descriptions(client, snap, validator):
                 and r.get("it_subtype") in C.LLM_DESC_SKILL_SUBDOMAINS):
             targets.append(("skill", r, _skill_context(r)))
     if C.LLM_DESC_MAX_TARGETS:
-        targets = targets[:C.LLM_DESC_MAX_TARGETS]  # bound API cost (free tier / testing)
+        targets = targets[:C.LLM_DESC_MAX_TARGETS]
 
     made = cached = rejected = failed = 0
     for kind, row, ctx in targets:
         uid, label = row["unified_id"], row["primary_label_en"]
         if snap.get(("desc", uid), {}).get("output"):
-            cached += 1  # already generated + validated in a prior run
+            cached += 1 
             continue
         user = f"{kind}: {label}" + (f"\ncontext: {ctx}" if ctx else "")
         raw = client.chat(_DESC_SYS, user)
         if raw is None:
-            failed += 1  # backend returned nothing (rate limit / offline) — retried on next run
+            failed += 1
             continue
         out = _first_sentence(_clean_desc(label, raw), C.LLM_DESC_MAX_CHARS)
-        ok, _ = validator.check_description("desc", uid, label, out)  # validate BEFORE caching
+        ok, _ = validator.check_description("desc", uid, label, out)
         if not ok:
-            continue  # check_description already logged the reject
+            continue
         snap[("desc", uid)] = {"task": "desc", "key": uid, "model": client.mode or "",
                                "prompt_hash": _hash(user), "output": out, "created_at": K.now_iso()}
         made += 1
@@ -270,9 +265,7 @@ def _task_descriptions(client, snap, validator):
             "rejected": rejected, "failed": failed}
 
 
-# T2 — fill missing hard_soft, coherently, from the taxonomy (a skill's category -> domain -> TYPE
-# is the authoritative hard/soft signal). Deterministic, free, and consistent with the hierarchy —
-# more reliable than an LLM guess. Genuinely ambiguous residual categories are cross-checked by NLI.
+# T2 — fill missing hard_soft, coherently, from the taxonomy.
 _AMBIGUOUS_CATS = {"other_hard", "knowledge_general"}
 
 
@@ -302,8 +295,6 @@ _LINK_SYS = (
 
 
 # T3 — infer missing occupation->skill links (embedding shortlist -> LLM picks -> NLI-validated).
-# Bounded to emerging roles + occupations with sparse relations. Skills come from the EXISTING KB
-# vocabulary only (never invented). Written as relation_type="llm_inferred" (source LLM), additive.
 def _link_targets(occ_raw):
     rels = K.read_all(C.OCC_SKILL_REL_CSV)
     from collections import Counter as _C
@@ -348,8 +339,7 @@ def _task_links(client, snap, validator):
             snap[("link", o["entity_id"])] = {"task": "link", "key": o["entity_id"], "model": client.mode or "",
                                               "prompt_hash": "", "output": " | ".join(picks_lbls),
                                               "created_at": K.now_iso()}
-        # Validate each pick by embedding cosine (they were LLM-selected from an embedding shortlist —
-        # a double signal); keep those above the floor and store the cosine as the relation weight.
+        # Validate each pick by embedding cosine
         used = False
         for lbl in picks_lbls:
             s = by_lbl.get(lbl)
@@ -374,14 +364,11 @@ _EMERGE_SYS = (
 )
 
 
-# T4 — emerging tech: propose new tech/roles absent from the KB, keep ONLY those a real Wikidata QID
-# confirms (reuses the anchoring), add as source="LLM" nodes (skills classified by the hierarchy;
-# roles ISCO-attached downstream). No skill->skill edges. Reliability via external confirmation.
+# T4 — emerging tech: propose new tech/roles absent from the KB, keep only those a real Wikidata QID
 def _task_emerging(client, snap, validator):
     from . import wikidata as W
     from . import hierarchy as H
     from .sources import evidence as ev
-    # existing vocabulary (skip anything already present)
     occ_raw, skl_raw = K.read_all(C.OCCUPATIONS_CSV), K.read_all(C.SKILLS_CSV)
     existing = {ev.match_key(l) for r in occ_raw + skl_raw
                 for l in ((r.get("pref_label_en") or ""), (r.get("pref_label_fr") or "")) if l}
@@ -398,7 +385,7 @@ def _task_emerging(client, snap, validator):
         snap[("emerging", "proposals")] = {"task": "emerging", "key": "proposals", "model": client.mode or "",
                                            "prompt_hash": "", "output": " | ".join(names),
                                            "created_at": K.now_iso()}
-    # keep only genuinely-new proposals (not already in the KB)
+    # keep only genuinely-new proposals
     new, seen = [], set()
     for name in names:
         k = ev.match_key(name)
@@ -407,8 +394,7 @@ def _task_emerging(client, snap, validator):
             new.append(name)
     new = new[:C.LLM_EMERGING_MAX_NEW]
 
-    # Wikidata-validate each new SKILL: keep ONLY names a real class-verified QID confirms (reliability).
-    # (Roles are not auto-added — they need ISCO attachment to avoid orphaning the graph.)
+    # Wikidata-validate each new SKILL: keep only names a real class-verified QID confirms
     skl_rows = []
     for name in new:
         resolved, ok = W._resolve_chunk([(K.normalize_label(name), name)], W.C.WIKIDATA_SKILL_CLASSES,
@@ -428,7 +414,7 @@ def _task_emerging(client, snap, validator):
     return {"proposed": len(names), "new_candidates": len(new), "added_skills": len(skl_rows)}
 
 
-# Apply snapshotted enrichment onto the unified concept layer (called by merge.py — idempotent).
+# Apply snapshotted enrichment onto the unified concept layer
 def apply_enrichment(rows, kind):
     """Apply cached LLM enrichment (descriptions, hard_soft) to unified occupations or skills."""
     snap = _load_snapshot()
@@ -501,6 +487,6 @@ def _integrate(added_nodes=False):
         from . import hierarchy
         from .align import run as align_run
         hierarchy.run()
-        align_run(focus_source=C.SRC_LLM)  # align new LLM skills against existing (dedup)
+        align_run(focus_source=C.SRC_LLM)
     from . import merge
     merge.run()

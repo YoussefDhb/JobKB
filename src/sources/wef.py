@@ -1,9 +1,4 @@
-"""WEF Global Skills Taxonomy (2021) + Education 4.0. Two uses: (1) a structured soft-skill vocabulary —
-in-scope soft/cognitive leaves are ingested as soft skills, each self-classified into one of five
-WEF-aligned soft sub-domains (giving the soft branch real structure); (2) transversal attach — the core
-universal skills link to every IT occupation as relation_type="transversal" (distinct from demand).
-Skills-only; screen_relevance=False (bypasses the IT gate, like SOFTSKILLS).
-"""
+"""WEF Global Skills Taxonomy + Education 4.0."""
 
 from __future__ import annotations
 
@@ -15,9 +10,7 @@ from .. import common as K
 from .base import StructuredSource
 from . import evidence
 
-# WEF Skill-Group (normalized) → one of the five soft sub-domains (see hierarchy.SUBDOMAINS).
-# Only groups listed here are in scope; every other leaf (physical, technology, management, business,
-# marketing, languages, ethics/civic/environmental, abilities) is dropped.
+# WEF Skill-Group (normalized)
 _WEF_GROUP_SUBDOMAIN = {
     # cognitive: creativity & problem-solving
     "creativity and problem solving": "soft_cognitive",
@@ -46,8 +39,7 @@ _WEF_GROUP_SUBDOMAIN = {
     "leadership and social influence": "soft_leadership",
 }
 
-# Extra alt labels for well-known concepts (surface forms + the ESCO verb-phrase equivalents), keyed
-# by the leaf's match_key — boosts cross-source matching and same-label merges (SOFTSKILLS/ESCO).
+# Extra alt labels for well-known concepts
 _SYNONYMS = {
     "creative thinking": ["creativity", "think creatively", "express yourself creatively"],
     "creativity": ["creative thinking", "think creatively"],
@@ -89,7 +81,7 @@ _SYNONYMS = {
     "conscientiousness": ["conscientious", "diligence"],
 }
 
-# Leaves (by match_key) treated as universal → attached to every real IT occupation as `transversal`.
+# Leaves treated as universal → attached to every real IT occupation as `transversal`.
 CORE_TRANSVERSAL = {
     "creative thinking", "analytical thinking", "critical thinking", "systems thinking",
     "problem solving", "communication", "collaboration", "adaptation to change",
@@ -100,21 +92,19 @@ CORE_TRANSVERSAL = {
 
 _FILES = (C.WEF_GLOBAL_CSV, C.WEF_COMPETENCIES_CSV, C.WEF_EDUCATION_CSV)
 
-# Substrings flagging a tech/hard leaf filed under an in-scope cognitive group (drop it as redundant).
+# Substrings flagging a tech/hard leaf filed under an in-scope cognitive group.
 _SKIP_SUBSTR = ("programming", "digital skill")
 
 
 def _canon_key(mk):
-    """Fold British/American spelling (-ise/-ize, -yse/-yze) so cross-file variants de-dupe to one node
-    (e.g. 'prioritisation' == 'prioritization', 'analyse' == 'analyze')."""
+    """Fold British/American spelling so cross-file variants de-dupe to one node ('prioritisation' == 'prioritization', 'analyse' == 'analyze')."""
     import re
     mk = re.sub(r"iz(e|es|ation|ing|ed)\b", lambda m: "is" + m.group(1), mk)
     return mk.replace("yze", "yse").replace("yzes", "yses")
 
 
 def _load_wef_skills():
-    """Union of in-scope soft/cognitive leaves across the 3 WEF files, de-duped by canonical match_key.
-    Returns list of dicts: {source_id, label, alts, desc, it_subtype, core}."""
+    """Union of in-scope soft/cognitive leaves across the 3 WEF files."""
     by_key = {}
     order = []
     for path in _FILES:
@@ -131,7 +121,7 @@ def _load_wef_skills():
                 group = (r.get("Skill Group") or "").strip() or sub
                 subdomain = _WEF_GROUP_SUBDOMAIN.get(K.normalize_label(group))
                 if not subdomain:
-                    continue  # out-of-scope branch
+                    continue  
                 mk = evidence.match_key(skill)
                 if not mk or any(sub in mk for sub in _SKIP_SUBSTR):
                     continue
@@ -166,7 +156,7 @@ class WefSource(StructuredSource):
     contributes_occupations = False
     needs_attach = False
     builtin = True
-    screen_relevance = False   # curated & authoritative; transversal terms bypass the IT gate
+    screen_relevance = False  
     version = "WEF-global-skills-taxonomy-2021"
     retrieval_method = "wef_taxonomy_curation"
 
@@ -183,7 +173,7 @@ class WefSource(StructuredSource):
             }
 
     def ingest(self) -> None:
-        super().ingest()   # writes the soft-skill nodes/labels (gate-bypassed), empty relations
+        super().ingest()   
 
         # Broad transversal attach: the universal WEF soft skills → every real IT occupation.
         core_ids = [K.mint_id("SKL_", self.name, s["source_id"]) for s in WEF_SKILLS if s["core"]]

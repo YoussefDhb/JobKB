@@ -1,7 +1,4 @@
-"""Self-contained interactive HTML views of the KB graph (no server, no internet, no external library).
-`write_html` renders the navigable backbone (~300 nodes) with an inline canvas force layout; `write_full_html`
-renders every node + edge with a Python-precomputed static layout so the browser runs no physics.
-"""
+"""Self-contained interactive HTML views of the KB graph."""
 
 from __future__ import annotations
 
@@ -140,19 +137,12 @@ def write_html(nodes, edges, path):
     return {"viz_nodes": len(vnodes), "viz_edges": len(vedges)}
 
 
-# FULL-graph HTML — every node + edge. The layout is precomputed in Python (a deterministic
-# clustered layout: domains fan out around the centre, each category is a sub-hub, its skills form a
-# phyllotaxis cloud, occupations sit on an outer ring by domain), so the browser runs NO physics — it
-# only pans/zooms/redraws a static scene, which keeps 11k nodes + 44k edges smooth everywhere.
+# FULL-graph HTML
 _KIND_IDX = {"skill_type": 0, "skill_domain": 1, "skill_category": 2, "isco_group": 3,
              "occupation": 4, "skill": 5}
 
 
 def _full_layout(nodes, edges):
-    """Deterministic, clarity-first layout: every domain owns a separate angular WEDGE sized by its
-    content (skills + occupations), so domains read as distinct islands. Inside a wedge: the domain hub
-    sits inner, its categories fan across the wedge, each category's skills form a compact phyllotaxis
-    cluster, and the domain's occupations spread across an outer arc band (no thin radial spokes)."""
     import math
     from collections import defaultdict
     byid = {n["id"]: n for n in nodes}
@@ -180,13 +170,13 @@ def _full_layout(nodes, edges):
     for o in [n["id"] for n in nodes if n["kind"] == "occupation"]:
         occ_by_dom[occ_dom.get(o)].append(o)
 
-    # angular span per domain, proportional to its content (so big domains never crowd small ones)
+    # angular span per domain
     weight = {}
     for d in domains:
         nsk = sum(len(skills_by_cat.get(c, [])) for c in cats_by_dom.get(d, []))
         weight[d] = nsk + 1.5 * len(occ_by_dom.get(d, [])) + 45
     total = sum(weight.values()) or 1.0
-    GAPF = 0.05                                   # fraction of each wedge kept empty on each side
+    GAPF = 0.05                                
     dom_span, ang = {}, -math.pi / 2
     for d in domains:
         span = 2 * math.pi * weight[d] / total
@@ -236,7 +226,7 @@ def _full_layout(nodes, edges):
             a = (a0 + a1) / 2 if ncol == 1 else a0 + pad + (a1 - a0 - 2 * pad) * (col + 0.5) / per_row
             rr = R_OCC + row * 72
             pos[o] = (rr * math.cos(a), rr * math.sin(a)); dom_of[o] = d
-    # anything unclustered (no domain path) -> far ring, so nothing is dropped
+    # anything unclustered -> far ring, so nothing is dropped
     leftover = [n["id"] for n in nodes if n["id"] not in pos]
     for j, m in enumerate(leftover):
         a = 2 * math.pi * j / max(1, len(leftover))
@@ -273,9 +263,9 @@ def _full_data(nodes, edges):
                      n.get("label_en") or n.get("label_fr") or n["id"], desc,
                      n.get("wikidata_qid") or "", n.get("hard_soft") or ""])
     # edge classes for level-of-detail rendering:
-    #   0 = backbone (type↔domain↔category, occupation→domain, ISCO tree) — always shown
-    #   1 = occupation → skill (requires) — shown when zoomed in (+ toggle)
-    #   2 = skill → category (taxonomy leaf) — shown when zoomed in
+    #   0 = backbone (type↔domain↔category, occupation→domain, ISCO tree)
+    #   1 = occupation → skill (requires)
+    #   2 = skill → category (taxonomy leaf)
     earr = []
     for e in edges:
         s, t = e["source"], e["target"]
@@ -291,9 +281,7 @@ def _full_data(nodes, edges):
     return narr, earr, dom_names
 
 
-# FULL-graph HTML — every node + edge, Python-precomputed static layout (browser runs no physics).
-# Node payload: [x, y, r, kindIdx, domIdx, label, description, wikidata_qid, hard_soft].
-# Edge payload: [srcIdx, tgtIdx, classIdx]  (0 backbone · 1 occupation→skill · 2 skill→category).
+# FULL-graph HTML.
 _FULL_HTML = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

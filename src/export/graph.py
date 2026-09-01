@@ -1,8 +1,4 @@
-"""Build the deduplicated CONCEPT graph the serializers consume. Hierarchy/relation edges reference
-per-source entity ids; each real endpoint is remapped to its unified concept via member_entity_ids,
-while taxonomy tiers and ISCO nodes (not merged) keep their own id. Returns (nodes, edges); Wikidata
-anchors ride on the concept nodes (qid/url/relation), emitted by the RDF serializer as skos mappings.
-"""
+"""Build the deduplicated CONCEPT graph the serializers consume."""
 
 from __future__ import annotations
 
@@ -60,7 +56,7 @@ def build_graph():
             wikidata_qid=r.get("wikidata_qid", ""), wikidata_url=r.get("wikidata_url", ""),
             wikidata_relation="")
 
-    # --- taxonomy tier nodes (type / domain / category) — kept as their own entity ids ---
+    # --- taxonomy tier nodes (type / domain / category) ---
     _KIND = {"skill_type": "skill_type", "skill_domain": "skill_domain", "skill_category": "skill_category"}
     for r in skl:
         st = r.get("esco_skill_type")
@@ -71,7 +67,7 @@ def build_graph():
                 it_subtype=r.get("it_subtype", ""), isco_code="", sources=[r.get("source", "")],
                 wikidata_qid="", wikidata_url="", wikidata_relation="")
 
-    # --- ISCO group nodes (incl. the ICT super-root) ---
+    # --- ISCO group nodes ---
     for r in occ:
         if r.get("occupation_type") == "isco_group":
             add(r["entity_id"], kind="isco_group",
@@ -94,12 +90,7 @@ def build_graph():
         return e2u.get(eid) or (eid if eid in nodes else None)
 
     edges = []
-    # hierarchy: broader_than -> skos:broader (child -> parent); in_domain -> jobkb:inDomain (occ -> domain).
-    # Skill->category broader edges are NOT remapped here: a merged skill would otherwise inherit each
-    # member's (possibly divergent) category and gain multiple parents. Instead we regenerate a SINGLE
-    # skill->category edge below from the unified concept's authoritative `it_subtype` — preserving the
-    # KB's single-category-parent invariant at the concept level. Taxonomy (category->domain->type) and
-    # ISCO-tree broader edges are already single-parent, so they pass through.
+    # hierarchy: broader_than -> skos:broader (child -> parent)
     for e in hier:
         p, c = resolve(e["parent_entity_id"]), resolve(e["child_entity_id"])
         if p is None or c is None:
@@ -108,7 +99,7 @@ def build_graph():
             edges.append({"source": c, "target": p, "type": "in_domain", "subtype": "",
                           "weight": "", "prov": e.get("source", "")})
         elif nodes[c]["kind"] == "skill":
-            continue  # regenerated from it_subtype below
+            continue 
         else:
             edges.append({"source": c, "target": p, "type": "broader", "subtype": "",
                           "weight": "", "prov": e.get("source", "")})
@@ -118,7 +109,7 @@ def build_graph():
         if a["kind"] == "skill" and a.get("it_subtype") in catkey2node:
             edges.append({"source": nid, "target": catkey2node[a["it_subtype"]], "type": "broader",
                           "subtype": "", "weight": "", "prov": "TAXONOMY"})
-    # occupation -> skill relations -> jobkb:requiresSkill (typed by relation_type)
+    # occupation -> skill relations -> jobkb:requiresSkill
     for r in rels:
         o, s = resolve(r["occupation_entity_id"]), resolve(r["skill_entity_id"])
         if o is None or s is None:
@@ -127,8 +118,7 @@ def build_graph():
                       "subtype": r.get("relation_type", ""), "weight": r.get("weight", ""),
                       "prov": r.get("source", "")})
 
-    # de-duplicate identical edges (same endpoints+type+subtype+prov collapse; a concept can inherit
-    # the same edge from several merged members)
+    # de-duplicate identical edges
     seen, uniq = set(), []
     for e in edges:
         k = (e["source"], e["target"], e["type"], e["subtype"], e["prov"])

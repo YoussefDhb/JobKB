@@ -1,10 +1,4 @@
-"""GraphML (Gephi / Cytoscape / yEd) and nodes/edges JSON (Neo4j / web viz) serialization.
-
-Hand-written (no dependency): both consume the shared `(nodes, edges)` model. Node attributes carry the
-full concept detail (labels, kind, hard/soft, sub-domain, ISCO, Wikidata QID); edges carry their type,
-sub-type, weight and provenance so the analytical graph keeps every signal the RDF folds into
-sub-properties.
-"""
+"""GraphML (Gephi / Cytoscape / yEd) and nodes/edges JSON (Neo4j / web viz) serialization."""
 
 from __future__ import annotations
 

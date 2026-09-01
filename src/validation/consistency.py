@@ -1,8 +1,4 @@
-"""Graph logical-consistency validator: a read-only, model-free suite of invariants (acyclicity,
-single-parent, hard_soft<->taxonomy, no skill->skill edges, ISCO reachability, relation endpoint types,
-unified-concept integrity, id uniqueness, ...). check() returns ordered (name, ok, detail) rows; it also
-runs inside qa() so every build self-certifies. Nothing here modifies kb/.
-"""
+"""Graph logical-consistency validator."""
 
 from __future__ import annotations
 
@@ -26,8 +22,7 @@ def _load():
 
 
 def _has_cycle(edges):
-    """edges: list of (parent, child) directed parent->child. Iterative DFS 3-colouring; returns a
-    representative node on a back-edge, or None if acyclic."""
+    """edges: list of (parent, child) directed parent->child."""
     adj = {}
     nodes = set()
     for p, c in edges:
@@ -86,7 +81,7 @@ def check():
     cyc = _has_cycle([(e["parent_entity_id"], e["child_entity_id"]) for e in hier])
     add("hierarchy: acyclic (DAG)", cyc is None, "" if cyc is None else f"cycle at {cyc}")
 
-    # 4. Every real skill has exactly one category parent (single path to a type).
+    # 4. Every real skill has exactly one category parent.
     skl_parent_ct = Counter(e["child_entity_id"] for e in hier
                             if e["entity_kind"] == "skill" and e["relation_type"] == "broader_than")
     multi_skl = [c for c in real_skl_ids if skl_parent_ct.get(c, 0) > 1]
@@ -125,13 +120,12 @@ def check():
             and r.get("isco_code") and not C.is_isco_it(r.get("isco_code", ""))]
     add("ISCO: no non-IT group leakage", not leak, f"{len(leak)} leaked groups")
 
-    # 8. NO skill->skill edges (a locked constraint): no hierarchy edge between two real skills.
+    # 8. NO skill->skill edges: no hierarchy edge between two real skills.
     s2s_hier = [e for e in hier if e["parent_entity_id"] in real_skl_ids
                 and e["child_entity_id"] in real_skl_ids]
     add("no skill->skill hierarchy edges", not s2s_hier, f"{len(s2s_hier)} skill->skill edges")
 
-    # 9. hard_soft is consistent with the taxonomy (unified skills): hard_soft == skill_type(it_subtype),
-    #    and neither hard_soft nor it_subtype is empty.
+    # 9. hard_soft is consistent with the taxonomy: hard_soft == skill_type(it_subtype), and neither hard_soft nor it_subtype is empty.
     hs_bad, hs_empty = [], []
     for r in uskl:
         hs, sub = (r.get("hard_soft") or ""), (r.get("it_subtype") or "")
@@ -142,15 +136,13 @@ def check():
     add("skills: hard_soft matches taxonomy", not hs_bad and not hs_empty,
         f"{len(hs_bad)} mismatched, {len(hs_empty)} empty")
 
-    # 10. Relation endpoint type-correctness: occ endpoint is a REAL occupation, skill endpoint a REAL
-    #     skill (not a taxonomy node) — stronger than the combined-set membership qa uses.
+    # 10. Relation endpoint type-correctness: occ endpoint is a real occupation, skill endpoint a real skill (not a taxonomy node).
     bad_occ_ep = [r for r in rels if r["occupation_entity_id"] not in real_occ_ids]
     bad_skl_ep = [r for r in rels if r["skill_entity_id"] not in real_skl_ids]
     add("relations: endpoints correctly typed", not bad_occ_ep and not bad_skl_ep,
         f"{len(bad_occ_ep)} bad occ, {len(bad_skl_ep)} bad skill endpoints")
 
-    # 11. Unified-concept integrity: members non-empty, resolve to base nodes, not shared across two
-    #     unified concepts; unified_id unique.
+    # 11. Unified-concept integrity: members non-empty, resolve to base nodes, not shared across two unified concepts; unified_id unique.
     member_of = {}
     empty_members, missing_members, shared = 0, 0, 0
     for r in uocc + uskl:
@@ -173,7 +165,7 @@ def check():
     add("ids: entity_id & unified_id unique", not dup_eid and not dup_uid,
         f"{len(dup_eid)} dup entity_id, {len(dup_uid)} dup unified_id")
 
-    # 13. Relations de-duplicated: 0 fully-identical rows; report total vs unique triples.
+    # 13. Relations de-duplicated: no fully-identical rows, report total vs unique triples.
     triples = Counter((r["occupation_entity_id"], r["skill_entity_id"], r.get("relation_type", ""),
                        r.get("source", ""), r.get("weight", "")) for r in rels)
     identical = sum(v - 1 for v in triples.values() if v > 1)

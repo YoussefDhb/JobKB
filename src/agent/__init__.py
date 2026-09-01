@@ -1,5 +1,5 @@
 """Agentic enrichment (LangGraph): a controller assesses the KB and dispatches reflective workers that
-loop propose -> verify -> reflect/retry -> commit over the KB's own tools (bge-m3, NLI, Wikidata).
+loop propose -> verify -> reflect/retry -> commit over the KB's own tools.
 """
 
 from __future__ import annotations

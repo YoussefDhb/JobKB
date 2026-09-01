@@ -1,10 +1,4 @@
-"""Ingest NOC 2021 (bilingual EN + FR), IT unit groups (5-digit).
-
-NOC contributes bilingual occupation labels plus illustrative-example synonyms,
-which strengthen cross-source occupation alignment. NOC "Main duties" are
-sentence-level and are folded into the description rather than minted as skills.
-NOC occupations carry no ISCO code and are grafted onto the hub during alignment.
-"""
+"""Ingest NOC (bilingual EN + FR), IT unit groups."""
 
 from __future__ import annotations
 import os
@@ -24,7 +18,6 @@ EXAMPLE_TYPES_FR = {"Exemple(s) illustratif(s)", "Tous les exemples"}
 
 
 def _elements_en():
-    """code -> {'examples': [...], 'duties': [...]}"""
     out = {}
     if not os.path.isfile(ELEM_EN):
         return out

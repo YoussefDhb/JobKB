@@ -1,9 +1,4 @@
-"""Readers for the three expert-annotated validation corpora (`resources/validation/`).
-
-All three are BIO/IOB token-tagged NER CSVs (one sentence per row; `tokens` and `tags_*` are
-stringified Python lists). We do not train anything, so we pool all splits and extract the annotated
-skill-mention *surface strings* — the gold set our KB vocabulary is measured against.
-
+"""Readers for the three validation corpora (`resources/validation/`):
 - SkillSpan : `tags_skill` + `tags_knowledge` layers, `source` in {tech (StackOverflow/IT), house}.
 - Sayfullina: `tags_skill` (soft only); plus an optional external synonym-cluster reference list.
 - FIJO      : `tags_skill` with 4 French competency families (RELATIONNEL/PENSEE/PERSONNEL/RESULTATS).
@@ -21,8 +16,7 @@ _ANON = set(C.VALIDATION_ANON_TOKENS)
 
 
 def _spans_from_bio(tokens, tags):
-    """Walk BIO tags; yield (surface_string, span_type). Anonymization tokens are dropped; a span that
-    is empty after dropping them is discarded."""
+    """Walk BIO tags; yield (surface_string, span_type)."""
     spans, cur, cur_type = [], [], None
     for tok, tag in zip(tokens, tags):
         prefix = tag[0] if tag else "O"
@@ -33,7 +27,7 @@ def _spans_from_bio(tokens, tags):
             cur, cur_type = [tok], typ
         elif prefix == "I" and cur:
             cur.append(tok)
-        else:  # O (or a stray I with no open span)
+        else: 
             if cur:
                 spans.append((cur, cur_type))
             cur, cur_type = [], None
@@ -60,11 +54,7 @@ def _read_rows(dataset):
 
 
 def gold_mentions(dataset):
-    """Pool all splits; return a list of dicts: {surface, layer, subset, category, language}.
-
-    `layer` in {skill, knowledge}; `subset` in {tech, house, ""}; `category` = the typed span label
-    (e.g. FIJO family) when present. Duplicates are preserved here (frequency is informative); callers
-    that want the unique gold set dedup on the normalized surface."""
+    """Pool all splits; return a list of dicts: {surface, layer, subset, category, language}."""
     _subdir, _splits, has_k, has_src, lang = C.VALIDATION_DATASETS[dataset]
     rows = []
     for _split, r in _read_rows(dataset):
@@ -89,11 +79,7 @@ def gold_mentions(dataset):
 
 
 def load_sayfullina_clusters():
-    """Load the external Sayfullina synonym-cluster reference list if it was fetched.
-
-    Expected shape at SAYFULLINA_CLUSTERS_CSV: columns `cluster_id, term` (one term per row), or
-    `cluster_id, terms` (terms ' | '-joined). Returns {cluster_id: [terms]} or {} if absent (the
-    coverage track then runs corpus-only for Sayfullina)."""
+    """Load the external Sayfullina synonym-cluster reference list if it was fetched."""
     path = C.SAYFULLINA_CLUSTERS_CSV
     if not os.path.isfile(path):
         return {}

@@ -1,8 +1,4 @@
-"""Bilingual label completion: fill empty EN/FR labels on the unified tables. Three layers, quality-first:
-L1 authoritative Wikidata @en/@fr labels + aliases (for rows with a QID); L2 local NLLB MT with a
-tech-term guard, each cross-lingually validated (bge-m3 floor + structural filters); L3 leave empty on
-failure.
-"""
+"""Bilingual label completion: fill empty EN/FR labels on the unified tables."""
 from __future__ import annotations
 
 import csv
@@ -40,7 +36,7 @@ def _save_snapshot(snap: dict) -> None:
 
 
 def _load_wd_labels() -> dict:
-    """qid -> {"en","fr"} authoritative Wikidata labels (cached)."""
+    """qid -> {"en","fr"} authoritative Wikidata labels."""
     out = {}
     if os.path.isfile(C.TRANSLATE_WD_LABELS_CSV):
         with open(C.TRANSLATE_WD_LABELS_CSV, encoding="utf-8", newline="") as f:
@@ -88,9 +84,9 @@ def _is_fully_protected(label: str) -> bool:
     lab = label.strip()
     if not lab:
         return False
-    if len(lab) <= 2:                             # 1-2 char labels are language-neutral ("C", "R", "Go")
+    if len(lab) <= 2:                             
         return True
-    if lab.lower() in C.TRANSLATE_TECH_LEXICON:   # multi-word lexicon entry, e.g. "machine learning"
+    if lab.lower() in C.TRANSLATE_TECH_LEXICON:   
         return True
     alnum_tokens = [t for t in lab.split() if any(ch.isalnum() for ch in t)]
     return bool(alnum_tokens) and all(_is_protected_token(t) for t in alnum_tokens)
@@ -101,7 +97,7 @@ _LEX_PHRASES = None
 
 
 def _lex_phrases():
-    """Multi-word tech-lexicon entries, longest first (so 'business intelligence' wins over 'business')."""
+    """Multi-word tech-lexicon entries, longest first."""
     global _LEX_PHRASES
     if _LEX_PHRASES is None:
         _LEX_PHRASES = sorted((p for p in C.TRANSLATE_TECH_LEXICON if " " in p),
@@ -122,7 +118,7 @@ def _protect(text: str):
     out = []
     for tok in masked.split():
         core = tok.strip(_STRIP)
-        if _PH.match(core):            # already a phrase placeholder — leave it
+        if _PH.match(core):           
             out.append(tok)
         elif core and _is_protected_token(tok):
             ph = f"Zt{len(mapping)}z"
@@ -140,12 +136,11 @@ def _restore(text: str, mapping: dict):
         if ph in text:
             text = text.replace(ph, orig)
         else:
-            # MT mangled the placeholder — flag so validation drops the output (fail-safe).
             ok = False
     return text, ok
 
 
-# MT engine (local HuggingFace NLLB) — fail-open
+# MT engine (local HuggingFace NLLB)
 class Translator:
     """Local NLLB MT engine (HuggingFace) with a tech-term guard. Fail-open: if the model is missing or unavailable"""
 
@@ -157,7 +152,7 @@ class Translator:
             import torch
             from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
             from transformers.utils import logging as _hf_logging
-            _hf_logging.set_verbosity_error()   # silence per-batch max_new_tokens notice in long runs
+            _hf_logging.set_verbosity_error()
             try:
                 os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
                 import os as _os
@@ -171,7 +166,7 @@ class Translator:
             self._model.eval()
             self.ok = True
             print(f"[TRANSLATE] MT model = {C.TRANSLATE_MT_MODEL}", flush=True)
-        except Exception as e:  # noqa: BLE001 — fail-open: missing dep/model → MT skipped
+        except Exception as e:  
             print(f"[TRANSLATE] MT unavailable ({type(e).__name__}: {e}); "
                   f"install sentencepiece / check the model. MT-dependent fills skipped.", flush=True)
 
@@ -208,7 +203,7 @@ class Translator:
         return results
 
 
-# Validation (pillar 4): lenient cross-lingual floor + structural filters
+# Validation (pillar 4)
 class Validator:
     """Validate MT output with a lenient cross-lingual semantic floor (bge-m3) + structural filters. Rejects are logged."""
 
@@ -218,7 +213,7 @@ class Validator:
         self.rejects = []
 
     def _xling_cosines(self, pairs):
-        """Cross-lingual cosine for (src, out) pairs via bge-m3 (multilingual)."""
+        """Cross-lingual cosine for (src, out) pairs via bge-m3."""
         if not pairs:
             return []
         from sklearn.metrics.pairwise import cosine_similarity
@@ -232,12 +227,10 @@ class Validator:
 
     @staticmethod
     def _looks_like_sentence(src, out):
-        """MT sometimes describes a term instead of naming it (e.g. 'Speaking'->'Je suis en train de
-        parler.'). Flag when a short source yields sentence-like output."""
+        """MT sometimes describes a term instead of naming it. Flag when a short source yields sentence-like output."""
         low = out.lower().lstrip("\"'([ ")
         if any(low.startswith(s) for s in C.TRANSLATE_SENTENCE_STARTS):
             return True
-        # short source but the output is a period-terminated clause much longer than it
         return (len(src.split()) <= 3 and out.rstrip().endswith(".")
                 and len(out) > 2.0 * len(src) and "." not in src)
 
@@ -252,8 +245,7 @@ class Validator:
         if self._looks_like_sentence(src, out):
             return False, "sentence_not_label"
         if K.normalize_label(out) == K.normalize_label(src):
-            # Output identical to source = a language-neutral term (e.g. "Scrum Master", "DevOps") that
-            # is correct in both languages. Accept as verbatim (skip the semantic floor).
+            # Output identical to source
             return True, "verbatim"
         return True, ""
 
@@ -269,7 +261,7 @@ class Validator:
                 results[idx] = (True, 1.0, "verbatim")
             else:
                 to_check.append(idx)
-        # Lenient cross-lingual floor for the survivors: reject only grossly-unrelated output.
+        # Lenient cross-lingual floor for the survivors
         cos = self._xling_cosines([(items[i]["src"], items[i]["out"]) for i in to_check])
         for j, idx in enumerate(to_check):
             score = cos[j]
@@ -298,7 +290,7 @@ class Validator:
 
 # L1 — Wikidata authoritative labels + aliases
 def _wd_links_by_uid() -> dict:
-    """unified_id -> {"qid","aliases_en","aliases_fr"} from the Wikidata side table (if present)."""
+    """unified_id -> {"qid","aliases_en","aliases_fr"} from the Wikidata side table."""
     out = {}
     if not os.path.isfile(C.WIKIDATA_LINKS_CSV):
         return out
@@ -327,7 +319,7 @@ def _fetch_wd_labels(qids, cache):
             'OPTIONAL { ?item rdfs:label ?fr FILTER(lang(?fr)="fr") } }'
         )
         js = W._http_get(C.WIKIDATA_SPARQL_URL, {"query": query, "format": "json"})
-        got = {q: {"en": "", "fr": ""} for q in batch}   # negative-cache so we don't refetch
+        got = {q: {"en": "", "fr": ""} for q in batch} 
         if js:
             for b in js.get("results", {}).get("bindings", []):
                 qid = b.get("item", {}).get("value", "").rsplit("/", 1)[-1]
@@ -341,7 +333,7 @@ def _fetch_wd_labels(qids, cache):
     return cache
 
 
-# Apply — fill empty label cells from Wikidata (L1) then the MT snapshot (L2). Read-only on models.
+# Apply — fill empty label cells from Wikidata (L1) then the MT snapshot (L2).
 def _first_alias(pipe_joined: str) -> str:
     for part in (pipe_joined or "").split(" | "):
         part = part.strip()
@@ -379,7 +371,7 @@ def apply_enrichment(rows, kind):
                 cand = _mt("en_fr", en)
             if cand:
                 r["primary_label_fr"] = cand
-        # English primary: Wikidata @en → first EN alias → validated fr->en MT (ROME rows; gated).
+        # English primary: Wikidata @en → first EN alias → validated fr->en MT.
         if not en:
             cand = wl.get("en") or _first_alias(link.get("aliases_en", ""))
             if not cand and fr and C.TRANSLATE_ROME_EN_ENABLED:
@@ -387,7 +379,7 @@ def apply_enrichment(rows, kind):
             if cand:
                 r["primary_label_en"] = cand
 
-        # Alt labels: Wikidata aliases only (per project decision — no bulk MT of aliases).
+        # Alt labels: Wikidata aliases only (per project decision, no bulk MT of aliases).
         if not (r.get("alt_labels_en") or "").strip() and link.get("aliases_en"):
             r["alt_labels_en"] = link["aliases_en"]
         if not (r.get("alt_labels_fr") or "").strip() and link.get("aliases_fr"):
@@ -412,7 +404,7 @@ def _mt_targets(direction, wd_labels, wd_links):
             continue
         for r in K.read_all(path):
             if (r.get(tgt_col) or "").strip():
-                continue                       # already has a target-language label
+                continue                      
             src_text = (r.get(src_col) or "").strip()
             if not src_text:
                 continue
@@ -421,7 +413,7 @@ def _mt_targets(direction, wd_labels, wd_links):
             qid = (r.get("wikidata_qid") or link.get("qid") or "").strip()
             wl = wd_labels.get(qid, {}) if qid else {}
             if wl.get(tgt_lang) or _first_alias(link.get(f"aliases_{tgt_lang}", "")):
-                continue                       # Wikidata will fill it — no MT needed
+                continue                     
             key = src_text
             if key in seen:
                 continue
@@ -433,7 +425,7 @@ def _mt_targets(direction, wd_labels, wd_links):
 def _translate_direction(direction, translator, validator, snap, wd_labels, wd_links, save=None):
     """Generate + validate MT for one direction, writing only validated outputs into `snap`. """
     targets = _mt_targets(direction, wd_labels, wd_links)
-    # Skip anything already attempted (validated or rejected) — deterministic MT, no point retrying.
+    # Skip anything already attempted.
     pending = [(uid, s) for uid, s in targets if (direction, _hash(s)) not in snap]
     if C.TRANSLATE_MAX_TARGETS:
         pending = pending[:C.TRANSLATE_MAX_TARGETS]
@@ -447,7 +439,7 @@ def _translate_direction(direction, translator, validator, snap, wd_labels, wd_l
     chunk = 200
     for start in range(0, len(pending), chunk):
         batch = pending[start:start + chunk]
-        # Fully-protected labels (pure tech terms) are kept verbatim — no MT, no round-trip needed.
+        # Fully-protected labels (pure tech terms) are kept verbatim.
         verbatim = [(uid, s) for uid, s in batch if _is_fully_protected(s)]
         mt_items = [(uid, s) for uid, s in batch if not _is_fully_protected(s)]
         for uid, s in verbatim:
@@ -461,7 +453,7 @@ def _translate_direction(direction, translator, validator, snap, wd_labels, wd_l
                      for (uid, s), (o, g) in zip(mt_items, outs)]
             verdicts = validator.validate_batch(direction, items)
             for (uid, s), it, (ok, score, reason) in zip(mt_items, items, verdicts):
-                # Keep the rejected text too (audit); apply_enrichment only ever reads validated=="1".
+                # Keep the rejected text too; apply_enrichment only ever reads validated=="1".
                 snap[(direction, _hash(s))] = {
                     "direction": direction, "src_hash": _hash(s), "src_text": s,
                     "output": it["out"], "model": model,
@@ -469,7 +461,7 @@ def _translate_direction(direction, translator, validator, snap, wd_labels, wd_l
                     "reason": "" if ok else reason, "created_at": K.now_iso()}
                 stats["validated" if ok else "rejected"] += 1
         elif mt_items:
-            stats["rejected"] += len(mt_items)   # MT unavailable — left empty (fail-open)
+            stats["rejected"] += len(mt_items)
         if save:
             save()
         print(f"[TRANSLATE] {direction}: {min(start + chunk, len(pending))}/{len(pending)} "
@@ -528,7 +520,7 @@ def run(directions="all") -> dict:
         validator.dump_rejects()
         print(f"[TRANSLATE] rejects logged: {len(validator.rejects)}", flush=True)
 
-    # Weave the filled labels into the unified tables (idempotent — apply_enrichment reads snapshots).
+    # Weave the filled labels into the unified tables.
     from . import merge
     merge.run()
 

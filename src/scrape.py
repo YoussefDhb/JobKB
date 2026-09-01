@@ -1,18 +1,10 @@
-"""Web-scraping acquisition layer (--scrape): a polite, bounded, fail-open crawler that snapshots raw IT
-job postings + emerging-tech signals to RESOURCES/SCRAPED/<lang>/<adapter>.csv. It never touches kb/ —
-ScraperSource ingests the snapshot offline afterwards (src/sources/scraper.py), so acquisition and build
-are decoupled and every build stays reproducible from the committed snapshot.
+"""Web-scraping acquisition layer (--scrape)
 
 Three tiers, all normalising to the same SCRAPED_FIELDS row and passing the IT-title filter:
-  * apis   — keyless job APIs (Jobicy, Remotive, RemoteOK, The Muse, We Work Remotely RSS); several give a
-             pre-extracted `tags[]` skill array (a high-precision signal, like data_jobs' job_skills).
-  * ats    — public Applicant-Tracking-System job boards (Greenhouse / Ashby / Lever) over a curated,
-             self-healing company-token list; full job-description HTML, reliable structured JSON.
+  * apis   — keyless job APIs (Jobicy, Remotive, RemoteOK, The Muse, We Work Remotely RSS)
+  * ats    — public Applicant-Tracking-System job boards (Greenhouse / Ashby / Lever)
   * trends — emerging-tech signals (HN "Who is hiring", GitHub topics, Stack Overflow popular tags).
 
-HTTP is stdlib urllib with the wikidata client's etiquette (descriptive UA, backoff, rate-limit, broad
-fail-open). robots.txt is honoured for the RSS feed. Attribution: each row keeps its source `url` (link
-back) — several sources' ToS require crediting them.
 """
 
 from __future__ import annotations
@@ -32,7 +24,7 @@ import urllib.robotparser
 from . import config as C
 from . import common as K
 
-_CHUNK = 40   # postings between snapshot checkpoints (resume granularity)
+_CHUNK = 40   
 
 
 # --- HTTP (stdlib urllib; polite + resilient + fail-open) ------------------------------
@@ -54,10 +46,10 @@ def _http_get(url: str, encoding: str | None = None, headers: dict | None = None
                 charset = encoding or resp.headers.get_content_charset() or "utf-8"
             time.sleep(C.SCRAPER_RATE_SLEEP)
             return raw.decode(charset, "replace")
-        except Exception as e:  # noqa: BLE001 — HTTP/timeout/decode all fail-open (skip the page)
+        except Exception as e:  
             code = getattr(e, "code", None)
             if code and 400 <= code < 500 and code != 429:
-                return None  # a real 4xx (incl. 403 rate-limit / 404 dead token) won't improve on retry
+                return None  
             if attempt == C.SCRAPER_MAX_RETRIES - 1:
                 return None
             time.sleep(delay)
@@ -66,7 +58,7 @@ def _http_get(url: str, encoding: str | None = None, headers: dict | None = None
 
 
 def _get_json(url: str, headers: dict | None = None):
-    """GET + parse JSON (UTF-8). Returns the object, or None on any failure (fail-open)."""
+    """GET + parse JSON. Returns the object, or None on any failure."""
     raw = _http_get(url, encoding="utf-8", headers=headers)
     if not raw:
         return None
@@ -87,7 +79,6 @@ def _robot_ok(url: str) -> bool:
     host = f"{parts.scheme}://{parts.netloc}"
     if host not in _ROBOTS:
         # Fetch robots.txt with OUR real UA (RobotFileParser.read() uses a bare Python UA that some CDNs
-        # 403 -> it would then set disallow_all and falsely block a permitted path). Unreadable -> allow.
         body = _http_get(host + "/robots.txt")
         rp = None
         if body is not None:
@@ -111,8 +102,7 @@ _TAG = re.compile(r"<[^>]+>")
 _WS = re.compile(r"[ \t\r\f\v]+")
 _NL = re.compile(r"\n{3,}")
 
-# A posting is kept only if its (cleaned) title reads as an IT role — every API's server-side category
-# filter leaks non-IT jobs, so this client-side gate is essential.
+# A posting is kept only if its title reads as an IT role
 _IT_TITLE_HINTS = (
     "developer", "engineer", "programmer", "software", "devops", "sysadmin", "sre", "data scientist",
     "data engineer", "data analyst", "machine learning", "backend", "back-end", "back end", "frontend",
@@ -192,7 +182,7 @@ def _jobicy(budget):
 
 
 def _remotive(budget):
-    # One call (its ToS caps to ~2/min); filter to IT client-side. `tags[]` is a clean skill array.
+    # One call; filter to IT client-side. `tags[]` is a clean skill array.
     d = _get_json("https://remotive.com/api/remote-jobs?limit=200")
     rows = []
     for j in (d or {}).get("jobs", []):
@@ -209,10 +199,10 @@ def _remotive(budget):
 
 
 def _remoteok(budget):
-    d = _get_json("https://remoteok.com/api")   # tech-first feed; UA must be browser-like (set in config)
+    d = _get_json("https://remoteok.com/api") 
     rows = []
     for j in d or []:
-        if not isinstance(j, dict) or "position" not in j:      # skip the legal/meta header entry
+        if not isinstance(j, dict) or "position" not in j:  
             continue
         title = _clean(j.get("position", ""))
         text = _text_of(str(j.get("description") or ""))
@@ -270,7 +260,7 @@ def _wwr(budget):
             continue
         for item in re.findall(r"(?is)<item>(.*?)</item>", raw):
             title_raw = html.unescape(_rss_field(item, "title"))
-            company, sep, role = title_raw.partition(":")     # WWR titles are "Company: Role"
+            company, sep, role = title_raw.partition(":")     
             title = _clean(role if sep else title_raw)
             text = _text_of(_rss_field(item, "description"))
             if not _is_it_title(title) or len(text) < 120:
@@ -339,7 +329,7 @@ def _ats(budget):
             break
         try:
             got = _ats_board(provider, token, C.SCRAPER_ATS_MAX_PER_TOKEN)
-        except Exception:  # noqa: BLE001 — one bad board never breaks the rest
+        except Exception: 
             got = []
         if got:
             print(f"  [ats] {provider}:{token} -> {len(got)} IT postings")
@@ -376,7 +366,7 @@ def _hn(budget):
         text = _text_of(ch["text"])
         if len(text) < 120:
             continue
-        title = _hn_role(text.split("\n", 1)[0])   # role if the header is a clear IT role, else skills-only
+        title = _hn_role(text.split("\n", 1)[0])  
         rows.append(_row("hn", f"https://news.ycombinator.com/item?id={ch.get('id')}", "en",
                          title, "", "", text, "", ch.get("created_at")))
         if len(rows) >= budget:
@@ -474,7 +464,7 @@ def _load(path: str) -> dict:
 
 
 def _prune_old(rows: dict) -> dict:
-    """Drop snapshot rows whose retrieved_at is older than the retention window (keeps demand current)."""
+    """Drop snapshot rows whose retrieved_at is older than the retention window."""
     if C.SCRAPER_RETENTION_DAYS <= 0:
         return rows
     cutoff = (_dt.datetime.now(_dt.timezone.utc)
@@ -501,8 +491,7 @@ def fetch_live(site: str, limit: int | None = None) -> list[dict]:
 
 
 def run(sites: str = "all") -> int:
-    """Crawl the requested tiers/adapters and update their snapshots (append + dedup + retention prune).
-    Network, opt-in. Returns the number of new postings added across all adapters."""
+    """Crawl the requested tiers/adapters and update their snapshots."""
     names = _resolve_sites(sites)
     total_new = 0
     for name in names:
@@ -527,8 +516,7 @@ def run(sites: str = "all") -> int:
 
 
 def refresh(sites: str = "all") -> None:
-    """Real-time refresh: crawl all sources, re-ingest SCRAPER, then run the enrichment layer (Wikidata
-    QIDs + agent/LLM descriptions/links + bilingual labels) over the new entities — as a full build does."""
+    """Real-time refresh: crawl all sources, re-ingest SCRAPER, then run the enrichment layer over the new entities."""
     run(sites)
-    from . import incremental          # lazy import (incremental pulls in the heavy pipeline)
+    from . import incremental         
     incremental.add_source(C.SRC_SCRAPER, enrich=True)

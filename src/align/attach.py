@@ -1,16 +1,4 @@
-"""Attach every source's occupations onto the ISCO-08 backbone — source-equal.
-
-ISCO-08 is the neutral international standard (ESCO/SOC/NOC/ROME all crosswalk to it).
-ESCO occupations carry a native ISCO code and self-attach during ingest. ONET, NOC and
-ROME occupations are attached here by **direct alignment to the ISCO groups themselves** —
-never routed through ESCO. Attachment is a two-stage, model-verified decision (no human in
-the loop): embedding gives a top-K shortlist of ISCO unit groups, then an NLI verifier
-(mDeBERTa entailment of the occupation definition -> the group definition) re-ranks the
-shortlist, so a strong embedding to the *wrong* group can be overridden by the definition
-semantics. Each occupation gets its inferred `isco_code` written back. Placements whose
-chosen embedding or entailment is weak are flagged low-confidence for QA (never dropped).
-Result: no ESCO gateway, and no hierarchy orphans.
-"""
+"""Attach every source's occupations onto the ISCO-08 backbone — source-equal."""
 
 from __future__ import annotations
 from collections import defaultdict
@@ -21,11 +9,11 @@ from . import candidates as cand
 from . import verify as _verify
 
 ATTACH_SRC = "ATTACH"
-ATTACH_LOWCONF_SRC = "ATTACH_LOWCONF"  # attached to best group, but flagged for review
+ATTACH_LOWCONF_SRC = "ATTACH_LOWCONF"
 
 
 def _needs_attach():
-    """Sources needing ISCO attachment, from the registry (ESCO self-attaches natively)."""
+    """Sources needing ISCO attachment, from the registry."""
     from ..sources import registry
     return set(registry.needs_attach_sources())
 
@@ -40,9 +28,7 @@ def _occ_desc(row):
 
 
 def _write_attach_edges(edges, lowconf_edges, focus_source):
-    """Write ATTACH / ATTACH_LOWCONF hierarchy edges. Full mode replaces both groups
-    wholesale; focus mode preserves other sources' attach edges and replaces only those
-    for the focus source's occupations (keyed by child occupation id)."""
+    """Write ATTACH / ATTACH_LOWCONF hierarchy edges."""
     if focus_source is None:
         K.replace_source_rows(C.HIERARCHY_CSV, C.HIERARCHY_FIELDS, ATTACH_SRC, edges)
         K.replace_source_rows(C.HIERARCHY_CSV, C.HIERARCHY_FIELDS, ATTACH_LOWCONF_SRC, lowconf_edges)
@@ -56,12 +42,10 @@ def _write_attach_edges(edges, lowconf_edges, focus_source):
 
 
 def run(focus_source=None):
-    """Attach occupations to ISCO. `focus_source=None` (re)attaches every non-native source;
-    a `focus_source` attaches only that source's occupations, preserving the others' edges."""
+    """Attach occupations to ISCO."""
     occ = K.read_all(C.OCCUPATIONS_CSV)
     needs = _needs_attach()
     attach_srcs = ({focus_source} & needs) if focus_source is not None else needs
-    # Attach targets: the specific ISCO unit groups (4-digit codes, incl. 1330).
     targets = [r for r in occ if r.get("occupation_type") == "isco_group"
                and len(r.get("source_code", "")) == 4]
     to_attach = [r for r in occ if r.get("source") in attach_srcs]
@@ -72,15 +56,15 @@ def run(focus_source=None):
     import numpy as np
     from sklearn.metrics.pairwise import cosine_similarity
 
-    embedder = cand.get_embedder()                    # shared bge-m3 (loaded once)
-    verifier = _verify.Verifier()                     # shared mDeBERTa
+    embedder = cand.get_embedder()                    
+    verifier = _verify.Verifier()                    
     g_texts = [_group_text(g) for g in targets]
     g_desc = [t.get("description_en", "") for t in targets]
     o_texts = [cand.entity_text(o) for o in to_attach]
     # Reuse cached vectors where align already encoded these occupations.
     emb_g = cand.encode_cached(embedder, g_texts)
     emb_o = cand.encode_cached(embedder, o_texts)
-    sim = cosine_similarity(emb_o, emb_g)             # (|occ|, |groups|)
+    sim = cosine_similarity(emb_o, emb_g)             
 
     k = min(C.ATTACH_TOPK, len(targets))
     shortlist = [np.argsort(-sim[i])[:k].tolist() for i in range(len(to_attach))]
@@ -107,10 +91,7 @@ def run(focus_source=None):
     overrides = 0
     curated = 0
     code_to_j = {targets[j]["source_code"]: j for j in range(len(targets))}
-    for i, o in enumerate(to_attach):              # `o` is the same dict object as in `occ`
-        # Curated ISCO override: a hand-verified placement for an emerging role the automatic attach
-        # got wrong. Forces a high-confidence edge (skips the low-conf flag) — deterministic, no human
-        # in the loop at runtime. Only applies when the target group exists.
+    for i, o in enumerate(to_attach):             
         forced_code = C.ISCO_OCC_OVERRIDE.get(o.get("source_id", ""))
         if forced_code in code_to_j:
             j = code_to_j[forced_code]
@@ -124,9 +105,7 @@ def run(focus_source=None):
             counts[o["source"]] += 1
             curated += 1
             continue
-        # Choice = NLI re-ranking of the embedding shortlist: score = cosine + weighted
-        # entailment, so a strong embedding to the wrong group can be overridden by the
-        # definition semantics. Missing definition -> reduces to embedding argmax.
+        # Choice = NLI re-ranking of the embedding shortlist
         emb_top = shortlist[i][0]
         best_j, best_score, best_sim, best_ent = None, -1e9, 0.0, None
         for j in shortlist[i]:
@@ -138,17 +117,14 @@ def run(focus_source=None):
         j = best_j
         if j != emb_top:
             overrides += 1
-        o["isco_code"] = targets[j]["source_code"]  # write inferred ISCO code back (in place)
+        o["isco_code"] = targets[j]["source_code"] 
         edge = {
             "parent_entity_id": targets[j]["entity_id"],
             "child_entity_id": o["entity_id"],
             "entity_kind": "occupation", "relation_type": "broader_than",
             "source": ATTACH_SRC,
         }
-        # Review flag uses the embedding confidence of the chosen group: entailment is a good
-        # *relative* signal (re-ranking) but a poor *absolute* one for a hypernym attach (a
-        # correct occupation->broader-group pair often has low entailment), so it is not used
-        # to flag. Flags surface genuinely uncertain placements (catch-all / niche roles).
+        # Review flag uses the embedding confidence of the chosen group
         if best_sim < C.ATTACH_MIN_SIM:
             edge["source"] = ATTACH_LOWCONF_SRC
             lowconf_edges.append(edge)
@@ -158,7 +134,7 @@ def run(focus_source=None):
             edges.append(edge)
         counts[o["source"]] += 1
 
-    # Persist the inferred isco_code onto the attached occupation rows (mutated above).
+    # Persist the inferred isco_code onto the attached occupation rows.
     for src in attach_srcs:
         rows = [r for r in occ if r["source"] == src]
         if rows:

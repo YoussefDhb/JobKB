@@ -1,10 +1,4 @@
-"""KB validation (read-only over the graph): logical-consistency suite + external gold benchmark +
-LLM-connection audit.
-
-`run(tracks)` orchestrates the three tracks, loading the shared bge-m3 embedder / mDeBERTa verifier
-once, writes a human-readable `validation/report.md` plus per-track CSVs, and prints a console summary.
-`consistency.check()` additionally runs inside `pipeline.qa()` so every build self-certifies.
-"""
+"""KB validation: logical-consistency suite + external gold benchmark + LLM-connection audit."""
 
 from __future__ import annotations
 
@@ -66,7 +60,7 @@ def run(tracks=ALL_TRACKS):
                 slc = row["layer"] + ("/" + row["subset"] if row["subset"] else "")
                 rep.append(f"| {row['dataset']} | {slc} | {row['gold']} | {row['exact_pct']} | "
                            f"{row['semantic_pct']} | {row['covered_pct']} |")
-            # top uncovered examples (neither exact nor semantic), most frequent first
+            # top uncovered examples, most frequent first
             unc = sorted([g for g in golds if not g["exact"] and not g["semantic"]],
                          key=lambda g: -g["count"])[:15]
             print(f"[VALIDATE] coverage {ds}: {len(golds)} unique gold mentions")

@@ -1,9 +1,4 @@
-"""CSO 3.5: a curated IT subset of the Computer Science Ontology (~14.6k CS research topics). Keeps only
-the shallow IT-relevant part as knowledge skills: BFS from CSO_ROOTS over superTopicOf to CSO_MAX_DEPTH,
-capped, each topic classified by its root branch (CSO_BRANCH_SUBDOMAIN). De-noised (canonical
-preferentialEquivalent + a fold key, drop >6-word phrases; relatedEquivalent -> alt-labels). The topic
-hierarchy is used only to select/classify, never persisted as skill->skill edges.
-"""
+"""CSO: a curated IT subset of the Computer Science Ontology"""
 
 from __future__ import annotations
 
@@ -24,8 +19,6 @@ _P_RELATED = "relatedEquivalent"
 _P_PREF = "preferentialEquivalent"
 
 # Redundant trailing words that make a topic a near-duplicate of its base concept
-# (e.g. "reinforcement learning approach" -> "reinforcement learning"). Kept deliberately
-# small/safe — no "system/model/algorithm" (they carry meaning: "operating system").
 _GENERIC_TAIL = {"approach", "approaches", "method", "methods", "methodology",
                  "methodologies", "technique", "techniques"}
 
@@ -38,7 +31,7 @@ def _clean_label(obj: str) -> str:
     o = (obj or "").strip()
     if o.endswith(" ."):
         o = o[:-2].strip()
-    if "@" in o:                      # drop the @en / @xx language tag
+    if "@" in o:                     
         o = o.rsplit("@", 1)[0]
     return unquote(o.strip().strip('"')).strip()
 
@@ -67,21 +60,21 @@ def _dedup_key(label: str) -> str:
 
 class CsoSource(StructuredSource):
     name = C.SRC_CSO
-    contributes_occupations = False      # CSO has no occupations
-    needs_attach = False                 # ... so nothing to attach to ISCO
-    builtin = True                       # permanent member of a full build
+    contributes_occupations = False      
+    needs_attach = False               
+    builtin = True                     
     version = "cso-3.5"
     retrieval_method = "cso_curated_subset"
 
     def _parse(self):
         """Return (labels, super_map, canonical, related) from the CSO triples."""
-        labels = {}                       # slug -> human label
-        super_map = defaultdict(set)      # parent slug -> {child slugs}
-        canonical = {}                    # slug -> canonical (preferential) slug
-        related = defaultdict(set)        # slug -> {synonym slugs}
+        labels = {}                     
+        super_map = defaultdict(set)     
+        canonical = {}                   
+        related = defaultdict(set)        
         with open(_CSO_CSV, encoding="utf-8", newline="") as f:
             reader = csv.reader(f)
-            next(reader, None)            # header: Topic1,Schema,Topic2
+            next(reader, None)         
             for row in reader:
                 if len(row) < 3:
                     continue
@@ -99,8 +92,7 @@ class CsoSource(StructuredSource):
         return labels, super_map, canonical, related
 
     def _curate(self, super_map):
-        """BFS from CSO_ROOTS (specific->generic) to CSO_MAX_DEPTH; return (order, branch)
-        where branch[slug] is the root the slug descends from (shallowest / most-specific root)."""
+        """BFS from CSO_ROOTS (specific->generic) to CSO_MAX_DEPTH."""
         branch, order = {}, []
         q = deque()
         for root in C.CSO_ROOTS:
@@ -125,22 +117,22 @@ class CsoSource(StructuredSource):
             return labels.get(s) or _humanize(s)
 
         seen_canon, seen_key, n = set(), set(), 0
-        per_branch = defaultdict(int)                # topics kept per sub-domain (balance)
+        per_branch = defaultdict(int)               
         for slug in order:
             if n >= C.CSO_MAX_TOPICS:
                 break
             sub = C.CSO_BRANCH_SUBDOMAIN.get(branch.get(slug, ""), "")
             if not sub or per_branch[sub] >= C.CSO_MAX_PER_BRANCH:
-                continue                             # branch already full -> drop deep tail
+                continue                             
             canon = canonical.get(slug, slug)
             if canon in seen_canon:
-                continue                             # canonical duplicate
+                continue                             
             label = _lab(canon)
             if len(label.split()) > 6 or is_structural_noise(label):
-                continue                             # over-specific phrase / malformed slug
+                continue                            
             key = _dedup_key(label)
             if key in seen_key:
-                continue                             # near-duplicate ("X" vs "X approach")
+                continue                            
             seen_canon.add(canon)
             seen_key.add(key)
             per_branch[sub] += 1

@@ -1,22 +1,4 @@
-"""ECF source — the European e-Competence Framework (e-CF 4.0).
-
-e-CF is the EU-standard reference of professional **ICT competences**: 41 competences in five
-macro areas (A Plan, B Build, C Run, D Enable, E Manage), each with a rich generic description
-and mapped to ESCO. It is authoritative, IT-specific and distinct from SFIA, so it complements
-the skill vocabulary with high-level professional competences.
-
-Data: `resources/OTHERS/en/e-Cf_ESCO.csv` — semicolon-delimited, UTF-8 with BOM, columns
-`Dimension 1 (Macro Area)`, `Dimension 2 (ID)`, `Dimension 2 (Title)`, `Dimension 2 (Generic
-Description)`, and per-level cells. Contributes **skills only** (no occupations): the competences
-flow into the neutral skill ontology, align/merge against the existing vocabulary (ESCO/SFIA/...),
-and reach occupations transitively wherever a competence merges into a unified skill that already
-carries occupation relations.
-
-Every competence is a genuine ICT competence, so we ship a hand-curated `_ECF_SUBDOMAIN` map
-(ID -> one of the 14 neutral sub-domains), kept by `hierarchy.run` because ECF is in
-`config.SELF_CLASSIFIED_SUBDOMAIN_SOURCES`. The Manage area (E.*), planning (A.1-A.4) and the
-service/support/governance competences are IT management; the technical ones map precisely.
-"""
+"""ECF source — the European e-Competence Framework."""
 
 from __future__ import annotations
 
@@ -30,13 +12,10 @@ _CSV = os.path.join(C.OTHERS_EN_DIR, "e-Cf_ESCO.csv")
 
 
 def _fix(text):
-    """Repair the source CSV's baked-in mojibake. The file already stores U+FFFD (the replacement
-    char) wherever an apostrophe was lost upstream — these are the only non-ASCII bytes in it, and
-    every one sits between letters as an English apostrophe (e.g. "organisation�s" ->
-    "organisation's"), so restoring a straight apostrophe is correct and lossless."""
+    """Repair the source CSV."""
     return (text or "").replace("�", "'")
 
-# e-CF competence ID -> neutral sub-domain (all 41 competences are in-scope IT).
+# e-CF competence ID -> neutral sub-domain
 _ECF_SUBDOMAIN = {
     # A — Plan
     "A.1": "it_management", "A.2": "it_management", "A.3": "it_management",
@@ -68,8 +47,6 @@ class EcfSource(StructuredSource):
     retrieval_method = "ecf_csv"
 
     def skills(self):
-        # Semicolon-delimited, UTF-8 (no BOM); the source has apostrophes pre-mangled to U+FFFD
-        # (repaired by _fix). errors="replace" kept as a defensive net for any future stray bytes.
         with open(_CSV, encoding="utf-8-sig", errors="replace", newline="") as fh:
             for r in csv.DictReader(fh, delimiter=";"):
                 cid = (r.get("Dimension 2 (ID)") or "").strip()
@@ -82,5 +59,5 @@ class EcfSource(StructuredSource):
                     "desc_en": _fix((r.get("Dimension 2 (Generic Description)") or "").strip()),
                     "hard_soft": "hard",
                     "method": "ecf_competence",
-                    "it_subtype": _ECF_SUBDOMAIN.get(cid, ""),   # "" -> regex fallback
+                    "it_subtype": _ECF_SUBDOMAIN.get(cid, ""),  
                 }

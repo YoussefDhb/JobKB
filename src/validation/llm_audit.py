@@ -1,13 +1,4 @@
-"""LLM-connection accuracy audit (Track 3, objective 2).
-
-The only genuine LLM-*created* connections in the graph are the `llm_inferred` occupation->skill links
-(gated at creation by embedding cosine only) and the `llm` skill descriptions (length + NLI). This
-re-validates them independently and read-only:
-  - links: (a) NLI re-verification (occupation definition |= "requires {skill}") and (b) DEMAND
-    CORROBORATION — does the occupation actually demand that skill (or a semantically-near one) in its
-    real posting profile? An independent, held-out real-world signal.
-  - descriptions: NLI re-verify "This text describes {label}."
-"""
+"""LLM-connection accuracy audit."""
 
 from __future__ import annotations
 
@@ -33,7 +24,7 @@ def audit(embedder=None, verifier=None):
     skl = {r["entity_id"]: r for r in K.read_all(C.SKILLS_CSV)}
     links = [r for r in rels if r.get("relation_type") == "llm_inferred"]
 
-    demand = defaultdict(set)                       # occupation -> demanded skill ids (real postings)
+    demand = defaultdict(set)                     
     for r in rels:
         if r.get("relation_type") == "demand":
             demand[r["occupation_entity_id"]].add(r["skill_entity_id"])
@@ -42,7 +33,6 @@ def audit(embedder=None, verifier=None):
         from ..align.verify import Verifier
         verifier = Verifier()
 
-    # NLI: occupation definition |= "This occupation requires {skill}."
     nli_pairs = []
     for l in links:
         o = occ.get(l["occupation_entity_id"], {})
@@ -50,8 +40,7 @@ def audit(embedder=None, verifier=None):
         nli_pairs.append((_occ_def(o), f"This occupation requires {_label(s)}."))
     nli_scores = verifier.entail_batch(nli_pairs) if links else []
 
-    # Semantic demand corroboration: encode the linked skill + each occupation's demanded-skill labels
-    # once, then per link take the max cosine of the linked skill against that occ's demand profile.
+    # Semantic demand corroboration
     sem_corr = [None] * len(links)
     if embedder is not None and embedder.mode == "st":
         import numpy as np
@@ -101,7 +90,7 @@ def audit(embedder=None, verifier=None):
                      "demand_corroborated": dem_sem_ok,
                      "demand_corroborated_pct": round(100 * dem_sem_ok / n, 1) if n else 0.0}
 
-    # LLM descriptions: NLI re-verify "This text describes {label}." (same hypothesis as creation).
+    # LLM descriptions reverified by NLI
     uskl = K.read_all(C.UNIFIED_SKILLS_CSV)
     uocc = K.read_all(C.UNIFIED_OCCUPATIONS_CSV)
     llm_desc = [r for r in uskl + uocc

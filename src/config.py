@@ -10,7 +10,6 @@ RESOURCES = os.path.join(ROOT, "resources")
 
 
 def _load_dotenv(path=os.path.join(ROOT, ".env")):
-    """Load KEY=VALUE lines from a project-root .env into os.environ (without overriding)."""
     if not os.path.isfile(path):
         return
     with open(path, encoding="utf-8") as f:
@@ -26,7 +25,6 @@ def _load_dotenv(path=os.path.join(ROOT, ".env")):
 
 _load_dotenv()
 
-# HuggingFace reads either name, mirror the token so both work.
 HF_TOKEN = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_HUB_TOKEN") or ""
 if HF_TOKEN:
     os.environ.setdefault("HF_TOKEN", HF_TOKEN)
@@ -196,7 +194,6 @@ ISCO_IT_UNIT_GROUPS = {
 
 
 def is_isco_it(code: str) -> bool:
-    """True if a (bare) ISCO-08 code is within the IT branches (25, 35, or 133)."""
     code = (code or "").strip()
     return code.startswith(ISCO_IT_SUBMAJORS) or code.startswith(ISCO_IT_MINORS)
 
@@ -207,18 +204,16 @@ ONET_IT_SOC_EXTRA = {"15-2051", "11-3021"}
 
 
 def is_onet_it(onet_soc_code: str) -> bool:
-    """O*NET-SOC codes look like '15-1252.00'; the SOC-2018 stem is the first 7 chars."""
     soc = (onet_soc_code or "").strip()[:7]
     return soc.startswith(ONET_IT_SOC_PREFIXES) or soc in ONET_IT_SOC_EXTRA
 
 
 # NOC 2021 (5-digit): computer/software professionals & developers (minors 2122, 2123),
-# plus specific unit groups for managers, data scientists, computer engineers, technicians.
 NOC_IT_MINOR_PREFIXES = ("2122", "2123")
 NOC_IT_UNIT_GROUPS = {
     "20012",  # Computer and information systems managers
     "21211",  # Data scientists
-    "21311",  # Computer engineers (except software engineers and designers)
+    "21311",  # Computer engineers
     "22220",  # Computer network and web technicians
     "22221",  # User support technicians
     "22222",  # Information systems testing technicians
@@ -230,8 +225,7 @@ def is_noc_it(code: str) -> bool:
     return code.startswith(NOC_IT_MINOR_PREFIXES) or code in NOC_IT_UNIT_GROUPS
 
 
-# ROME: domain M18 (info systems & telecom) + a few cross-branch IT/data métiers; exclude
-# non-IT M18 (meteorology/cartography/geomatics) by label keyword.
+# ROME: domain M18 (info systems & telecom) + a few cross-branch IT/data métiers
 ROME_DOMAIN_IN_SCOPE = "M18"
 ROME_IT_EXTRA_CODES = {"M1405", "M1419", "M1423", "M1426"}
 ROME_EXCLUDE_LABEL_KEYWORDS = ("meteo", "cartograph", "geomat", "climat", "topograph")
@@ -242,7 +236,7 @@ def is_rome_it(code: str, label: str = "") -> bool:
     in_scope = code.startswith(ROME_DOMAIN_IN_SCOPE) or code in ROME_IT_EXTRA_CODES
     if not in_scope:
         return False
-    from .common import normalize_label  # local import to avoid cycle
+    from .common import normalize_label
     norm = normalize_label(label)
     return not any(kw in norm for kw in ROME_EXCLUDE_LABEL_KEYWORDS)
 
@@ -252,37 +246,34 @@ SRC_ISCO = "ISCO"
 SRC_ONET = "ONET"
 SRC_NOC = "NOC"
 SRC_ROME = "ROME"
-SRC_SFIA = "SFIA"   # skills-only: professional IT/digital competency framework
-SRC_CSO = "CSO"     # skills-only: curated subset of computer-science research topics
-SRC_LIGHTCAST = "LIGHTCAST"  # skills-only: Lightcast Open Skills (IT category)
-SRC_KAGGLE = "KAGGLE"        # skills-only: small curated IT technical-skills taxonomy
-SRC_ECF = "ECF"              # skills-only: European e-Competence Framework (EU ICT competences)
-SRC_ADEM = "ADEM"            # relations-only: ADEM (Luxembourg) vacancy demand (ESCO×ROME)
-SRC_JOBS = "JOBS"            # relations-only: mined IT job-posting evidence (role×skill)
-SRC_DATAJOBS = "DATAJOBS"    # hybrid: harvested tool skills + large-scale demand (lukebarousse/data_jobs)
-SRC_ZENODO = "ZENODO"        # hybrid: harvested tools + demand (Zenodo 3906955, Stack Overflow postings)
-SRC_EMERGING = "EMERGING"    # curated emerging IT roles observed in data_jobs but absent from ESCO/O*NET
-SRC_SOFTSKILLS = "SOFTSKILLS"  # curated noun-form soft/transversal skills used in IT hiring
-SRC_SOFTTAXO = "SOFTTAXO"    # comprehensive curated IT soft-skills taxonomy (5 sub-domains + universal attach)
-SRC_WEF = "WEF"              # WEF Global Skills Taxonomy (2021): structured soft skills + transversal attach
-SRC_DJINNI = "DJINNI"        # relation-only demand: Djinni IT postings (role tag + free-text JD extraction)
-SRC_LINKEDIN_SWE = "LINKEDIN_SWE"  # hybrid: LinkedIn software-engineering postings (pre-extracted skills)
-SRC_KAGGLE_JOBS = "KAGGLE_JOBS"    # hybrid: kaggle job-skill-set, IT subset (pre-extracted skills)
-SRC_SCRAPER = "SCRAPER"      # opt-in web-scraping enrichment: emerging occupations/skills/tech from job boards
-SRC_LLM = "LLM"              # LLM-powered enrichment: generated descriptions, inferred links, and
-                             # new emerging entities (each auto-validated + Wikidata-confirmed)
-SRC_TRANSLATE = "TRANSLATE"  # multilingual label completion: Wikidata @en/@fr labels + validated MT
+SRC_SFIA = "SFIA"  
+SRC_CSO = "CSO"     
+SRC_LIGHTCAST = "LIGHTCAST"
+SRC_KAGGLE = "KAGGLE"       
+SRC_ECF = "ECF"        
+SRC_ADEM = "ADEM"          
+SRC_JOBS = "JOBS"          
+SRC_DATAJOBS = "DATAJOBS"  
+SRC_ZENODO = "ZENODO"       
+SRC_EMERGING = "EMERGING"    
+SRC_SOFTSKILLS = "SOFTSKILLS"  
+SRC_SOFTTAXO = "SOFTTAXO"   
+SRC_WEF = "WEF"             
+SRC_DJINNI = "DJINNI"   
+SRC_LINKEDIN_SWE = "LINKEDIN_SWE" 
+SRC_KAGGLE_JOBS = "KAGGLE_JOBS"   
+SRC_SCRAPER = "SCRAPER"     
+SRC_LLM = "LLM"              
+SRC_TRANSLATE = "TRANSLATE" 
 
-# Sources that contribute real (non ISCO-group) occupations that get aligned.
+# Sources that contribute real occupations that get aligned.
 REAL_OCC_SOURCES = (SRC_ESCO, SRC_ONET, SRC_NOC, SRC_ROME, SRC_EMERGING)
 
-# Sources that set their own it_subtype at ingest (the hierarchy keeps it rather than re-deriving
-# from the label regex) — their shipped/derived classification beats a keyword match on a bare label.
+# Sources that set their own it_subtype at ingest.
 SELF_CLASSIFIED_SUBDOMAIN_SOURCES = {SRC_SFIA, SRC_CSO, SRC_LIGHTCAST, SRC_KAGGLE, SRC_ECF,
                                      SRC_DATAJOBS, SRC_ZENODO, SRC_WEF, SRC_SOFTTAXO, SRC_SCRAPER}
 
-# CSO 3.5 is ~14.6k CS research topics; keep only the shallow IT-relevant part: descendants of these
-# roots (via superTopicOf) down to CSO_MAX_DEPTH, deduped/capped. Roots ordered specific->generic.
+# CSO 3.5: keep only the IT-relevant part
 CSO_ROOTS = (
     "computer_security", "machine_learning", "artificial_intelligence", "data_mining",
     "information_retrieval", "computer_networks", "human_computer_interaction",
@@ -290,7 +281,7 @@ CSO_ROOTS = (
     "internet", "software",
 )
 CSO_MAX_DEPTH = 2
-# Per-branch cap keeps the subset balanced (CSO is AI-heavy; a global cap starves networks/data/web).
+# Per-branch cap keeps the subset balanced.
 CSO_MAX_PER_BRANCH = 80
 CSO_MAX_TOPICS = 700
 CSO_BRANCH_SUBDOMAIN = {
@@ -304,13 +295,11 @@ CSO_BRANCH_SUBDOMAIN = {
     "computer_operating_systems": "systems_infrastructure",
 }
 
-# Evidence / demand relation sources (ADEM vacancies, mined postings): weighted demand edges between
-# existing entities (no new nodes). ADEM keeps ROME IT families (M18*); JOBS keeps pairs seen >= min freq.
+# Evidence / demand relation sources.
 ADEM_ROME_PREFIX = "M18"
 JOBS_MIN_FREQ = 2
 
-# DATAJOBS (lukebarousse/data_jobs): 785k postings. Hybrid — harvests high-frequency absent tools as new
-# skills (self-classified via job_type_skills) + adds weighted demand relations.
+# DATAJOBS
 DATAJOBS_MIN_FREQ = 50          # keep a (role, skill) demand pair only if seen in >= this many postings
 DATAJOBS_MIN_SKILL_FREQ = 150   # harvest an absent token as a new skill only above this frequency
 DATAJOBS_TYPE_SUBDOMAIN = {
@@ -326,8 +315,7 @@ DATAJOBS_TYPE_SUBDOMAIN = {
     "sync": "",
 }
 
-# ZENODO (Zenodo 3906955, Stack Overflow postings): hybrid like DATAJOBS but ~45x smaller, so gates
-# are lower. Harvests absent hard tools + adds demand for both hard skills and the SOFTSKILLS vocabulary.
+# ZENODO
 ZENODO_MIN_FREQ = 15        # keep a (role, hard-skill) demand pair only if seen in >= this many postings
 ZENODO_MIN_SOFT_FREQ = 8    # soft-skill demand is legitimately sparser
 ZENODO_MIN_SKILL_FREQ = 25  # harvest an absent hard token as a new skill only above this frequency
@@ -341,9 +329,7 @@ ZENODO_HL_SUBDOMAIN = {
     "INVALIDO": "",
 }
 
-# DJINNI (~142k EN IT postings, role tag + free-text JD). Relation-only demand: skills extracted from
-# the JD by strict full-label matching against concrete-tech labels only (the augmented/vendor-strip
-# matcher is unsafe on prose — matches "teams"/"application"); single tokens >= 4 chars minus a denylist.
+# DJINNI
 DJINNI_MIN_FREQ = 40          # keep a (role, skill) demand pair only if seen in >= this many postings
 DJINNI_CONCRETE_SUBDOMAINS = frozenset({
     "programming_languages", "cloud_devops", "data_databases", "ai_ml", "web",
@@ -361,24 +347,18 @@ DJINNI_TEXT_DENY = frozenset({
     "algorithm", "engineering", "development", "operations", "management",
 })
 
-# LINKEDIN_SWE (~9.4k SWE postings, pre-extracted skills). Relation-only demand (no harvest — its
-# job_skills mixes generic phrases that would pollute the vocabulary).
+# LINKEDIN_SWE
 LINKEDIN_SWE_MIN_FREQ = 15        # keep a (role, skill) demand pair only if seen in >= this many postings
 
-# KAGGLE_JOBS (kaggle job-skill-set, IT subset = 240 postings). Demand only; harvest off (too few rows).
+# Kaggle job-skill-set
 KAGGLE_JOBS_MIN_FREQ = 3          # keep a (role, skill) demand pair only if seen in >= this many postings
 
-# SCRAPER (--scrape + --add SCRAPER): opt-in, non-builtin, network-gated. A polite crawler snapshots raw
-# postings; ScraperSource ingests them offline — hybrid extraction (dictionary match against the KB's own
-# skill labels + an HF skill-span extractor for novel spans), strict title->occupation minting, and the
-# same relevance/noise gate as every other source. Snapshots are modest, so the frequency floors are low
-# (still enough that a one-off noise token never becomes a node).
+# SCRAPER 
 SCRAPER_MIN_SKILL_FREQ = 4     # harvest a novel span as a new skill only at/above this posting frequency
 SCRAPER_MIN_OCC_FREQ = 2       # mint a cleaned role only at/above this (+ it must end in an occupational head)
 SCRAPER_MIN_DEMAND_FREQ = 2    # keep a (title, skill) demand pair only at/above this frequency
 SCRAPER_TITLE_MAX_WORDS = 4    # a cleaned role longer than this reads as an over-specific title -> skip
-# Self-classify a harvested novel skill into an it_subtype by keyword (unambiguous tokens only); anything
-# absent stays "" and the hierarchy classifier assigns the sub-domain from the label (like DATAJOBS).
+# Self-classify a harvested novel skill into an it_subtype by keyword
 SCRAPER_SUBDOMAIN = {
     "docker": "cloud_devops", "kubernetes": "cloud_devops", "terraform": "cloud_devops",
     "ansible": "cloud_devops", "jenkins": "cloud_devops", "gitlab ci": "cloud_devops",
@@ -391,8 +371,7 @@ SCRAPER_SUBDOMAIN = {
     "kotlin": "programming_languages", "rust": "programming_languages", "golang": "programming_languages",
     "solidity": "emerging_tech", "web3": "emerging_tech",
 }
-# Title cleaning: strip seniority / contract / gender / marketing tokens so "Senior Python Dev H/F (CDI)"
-# folds to "python developer". EN + FR (hellowork) surface forms.
+# Title cleaning
 SCRAPER_TITLE_STOPWORDS = frozenset({
     "senior", "junior", "lead", "principal", "staff", "confirme", "confirmee", "expert", "expert(e)",
     "experimente", "experimentee", "debutant", "debutante", "stagiaire", "apprenti", "apprentie",
@@ -402,35 +381,29 @@ SCRAPER_TITLE_STOPWORDS = frozenset({
     "intern", "internship", "trainee", "graduate",
 })
 
-# HF neural skill-span extractor (dictionary matching handles known skills; this catches novel spans).
-# Loaded lazily; fail-open to dictionary-only if the model is unavailable/offline.
-# HF skill-span NER (token-classification, typed TECHNOLOGY/TECHNICAL/SOFT labels) — extracts novel skills
-# from prose sources (The Muse / ATS descriptions / HN). Loaded lazily; fail-open to dictionary-only.
+# HF neural skill-span extractor
 SCRAPER_EXTRACTOR_MODEL = os.environ.get("JOBKB_SCRAPER_EXTRACTOR",
                                          "algiraldohe/lm-ner-linkedin-skills-recognition")
 SCRAPER_EXTRACTOR_ENABLED = os.environ.get("JOBKB_SCRAPER_NEURAL", "1") == "1"
 
-# Crawl bounds + network etiquette (stdlib urllib; mirrors the wikidata polite/fail-open conventions).
-# A Mozilla-prefixed UA is required by some feeds (RemoteOK 403s bare bots); still identifies JobKB.
+# Crawl bounds + network etiquette
 SCRAPER_USER_AGENT = "Mozilla/5.0 (compatible; JobKB/1.0; +IT knowledge-base research)"
-SCRAPER_RATE_SLEEP = 1.50        # seconds between requests (gentle pacing; be a good citizen)
+SCRAPER_RATE_SLEEP = 1.50        # seconds between requests
 SCRAPER_MAX_RETRIES = 4          # attempts on 5xx/timeout, then fail-open (skip the page)
 SCRAPER_TIMEOUT = 30             # per-request seconds
-SCRAPER_MAX_PAGES = 5            # listing pages crawled per HTML board per run (bounded)
-SCRAPER_MAX_POSTINGS = 400       # total postings kept per adapter per run (bounded)
+SCRAPER_MAX_PAGES = 5            # listing pages crawled per HTML board per run
+SCRAPER_MAX_POSTINGS = 400       # total postings kept per adapter per run
 SCRAPER_MAX_PER_QUERY = 100      # cap per API category/industry sweep call
 SCRAPER_ATS_MAX_PER_TOKEN = 40   # cap IT postings kept per ATS company token
-SCRAPER_RESPECT_ROBOTS = True    # honour robots.txt (opt out only with explicit operator consent)
+SCRAPER_RESPECT_ROBOTS = True    # honour robots.txt
 
 # --- Multi-source acquisition (Tier A keyless APIs / Tier B ATS boards / Tier C trend signals) ---------
-# All feeds normalize to the SCRAPED_FIELDS row and pass the same IT-title filter + relevance gate.
-# Attribution: each source's `url` (link-back) is kept — several APIs' ToS require crediting the source.
 SCRAPER_TIERS = {
     "apis":   ["jobicy", "remotive", "remoteok", "themuse", "wwr"],
     "ats":    ["ats"],
     "trends": ["hn", "github", "stackoverflow"],
 }
-# Tier A — server-side category/industry filters (still IT-title-filtered client-side: they leak non-IT).
+# Tier A — server-side category/industry filters
 JOBICY_INDUSTRIES = ("dev", "data-science", "engineering", "devops-sysadmin",
                      "cybersecurity", "qa-testing", "technical-support")
 REMOTIVE_CATEGORIES = ("software-development", "data", "devops", "qa",
@@ -439,8 +412,7 @@ THEMUSE_CATEGORIES = ("Software Engineering", "Data Science", "Computer and IT")
 WWR_FEEDS = ("remote-programming-jobs", "remote-devops-sysadmin-jobs",
              "remote-back-end-programming-jobs", "remote-front-end-programming-jobs",
              "remote-full-stack-programming-jobs")
-# Tier B — curated, live-verified public ATS board tokens (no discovery endpoint exists; self-healing:
-# a dead/empty token is skipped silently). (provider, token). Verify/extend with --scrape ats.
+# Tier B — curated, live-verified public ATS board tokens
 SCRAPER_ATS_BOARDS = (
     [("greenhouse", t) for t in (
         "stripe", "airbnb", "gitlab", "coinbase", "databricks", "cloudflare", "robinhood", "datadog",
@@ -449,25 +421,22 @@ SCRAPER_ATS_BOARDS = (
     + [("ashby", t) for t in ("openai", "notion", "ramp", "linear", "replit", "clickhouse", "posthog")]
     + [("lever", t) for t in ("palantir", "gopuff", "unlimit")]
 )
-# Tier C — emerging-tech trend signals. GitHub search is keyless (tight limits); a `.env` GITHUB_TOKEN
-# raises them (fail-open without it). These emit tag-only candidate skills (no occupation/demand).
+# Tier C — emerging-tech trend signals.
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GITHUB_TREND_TOPICS = ("llm", "rag", "ai-agents", "vector-database", "webassembly", "rust",
                        "kubernetes", "observability", "mlops", "data-engineering")
 SCRAPER_TREND_MIN_STARS = 200    # only established-enough repos count as a real emerging-tech signal
 
-# Recency-weighted demand: recent postings weigh more, so `demand` tracks the current market. A posting
-# `posted_at` older than the half-life counts progressively less; missing date -> weight 1.0.
+# Recency-weighted demand: recent postings weigh more, so `demand` tracks the current market.
 SCRAPER_RECENCY_HALFLIFE_DAYS = 45.0
-SCRAPER_RETENTION_DAYS = int(os.environ.get("JOBKB_SCRAPER_RETENTION", "120"))  # prune snapshot rows older
+SCRAPER_RETENTION_DAYS = int(os.environ.get("JOBKB_SCRAPER_RETENTION", "120")) 
 
-# HuggingFace models (open-source, no API keys)
+# HuggingFace models
 # Embedder bge-m3: strong EN<->FR similarity, no query/passage prefix. Falls back to MiniLM, then TF-IDF.
 EMBED_MODEL_PRIMARY = os.environ.get("JOBKB_EMBED_MODEL", "BAAI/bge-m3")
 EMBED_MODEL_FALLBACK = os.environ.get(
     "JOBKB_EMBED_MODEL_FALLBACK", "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
 # mDeBERTa NLI: verifies semantic occupation merges (mutual entailment on definitions), not just SKOS
-# labels — merges are model-verified since there is no human review.
 NLI_MODEL = os.environ.get("JOBKB_NLI_MODEL",
                            "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli")
 NLI_BATCH_SIZE = 16
@@ -482,9 +451,9 @@ LLM_TEMPERATURE = 0.2       # low — factual, deterministic-ish definitions
 LLM_TIMEOUT = 60
 LLM_MAX_RETRIES = 4
 LLM_RATE_SLEEP = 0.30       # polite pacing between API calls (free tier)
-LLM_USE_LOCAL_FALLBACK = os.environ.get("JOBKB_LLM_LOCAL", "0") == "1"  # opt-in (local gen is slow on CPU)
+LLM_USE_LOCAL_FALLBACK = os.environ.get("JOBKB_LLM_LOCAL", "0") == "1"
 
-# Validation thresholds for LLM outputs (reuses the IT-relevance gate + mDeBERTa NLI verifier).
+# Validation thresholds for LLM outputs
 LLM_DESC_MIN_CHARS = 20
 LLM_DESC_MAX_CHARS = 400
 LLM_DESC_NLI_MIN = 0.50     # generated description must entail "<label> is <description>" this strongly
@@ -496,47 +465,40 @@ LLM_LINK_MAX_OCC = int(os.environ.get("JOBKB_LLM_LINK_MAX", "40"))  # cap occupa
 LLM_LINK_SPARSE_MAX = 6     # an occupation with <= this many existing relations is a link target
 LLM_EMERGING_MAX_NEW = int(os.environ.get("JOBKB_LLM_EMERGING_MAX", "40"))  # cap new entities added
 
-# Skill categories eligible for LLM description generation = all hard categories from
-# hierarchy.CATEGORIES (mirrored here to avoid a config<-hierarchy import cycle).
+# Skill categories eligible for LLM description generation
 LLM_DESC_SKILL_SUBDOMAINS = frozenset({
     "programming_languages", "methodology", "web", "mobile_development", "data_databases",
     "data_engineering", "ai_ml", "systems_infrastructure", "cloud_devops", "hardware_embedded",
     "networks", "security", "it_management", "emerging_tech", "knowledge_general", "other_hard",
 })
-LLM_DESC_MAX_TARGETS = int(os.environ.get("JOBKB_LLM_DESC_MAX", "0"))  # 0 = unlimited (bounds API cost)
+LLM_DESC_MAX_TARGETS = int(os.environ.get("JOBKB_LLM_DESC_MAX", "0"))  # 0 = unlimited
 LLM_SNAPSHOT_FIELDS = ["task", "key", "model", "prompt_hash", "output", "created_at"]
 LLM_REJECTED_FIELDS = ["task", "entity_id", "label", "output", "reason", "score"]
 
-# Agentic enrichment (--agent, LangGraph): controller + reflective workers over the LLM_* tools.
-# Reuses the same generations.csv snapshot (agent rows tagged model="agentic"); the LLM is optional,
-# the deterministic verifiers drive control (the anchor worker needs no LLM).
+# Agentic enrichment (--agent, LangGraph)
 AGENT_GAPS = ("description", "link", "emerging", "anchor")   # workers the controller can dispatch
 AGENT_MAX_REFLECT = int(os.environ.get("JOBKB_AGENT_MAX_REFLECT", "2"))  # bounded retries per target
 AGENT_LINK_NLI_MIN = VALIDATION_LINK_NLI_MIN  # links must clear cosine AND this NLI floor to be committed
 AGENT_ANCHOR_MAX = int(os.environ.get("JOBKB_AGENT_ANCHOR_MAX", "200"))  # cap unattempted anchors/run
 AGENT_OUT_DIR = os.path.join(ROOT, "agent")
 AGENT_REPORT_MD = os.path.join(AGENT_OUT_DIR, "report.md")
-AGENT_TAG = "agentic"                                        # snapshot `model` marker for agent commits
-AGENT_DESC_CHECKPOINT = int(os.environ.get("JOBKB_AGENT_DESC_CHECKPOINT", "25"))  # flush snapshot every N
-#   committed/deferred description targets so a long, slow local run stays resumable (0 = only at the end)
+AGENT_TAG = "agentic"                                   
+AGENT_DESC_CHECKPOINT = int(os.environ.get("JOBKB_AGENT_DESC_CHECKPOINT", "25"))
 
-# Multilingual label completion (--translate): fill empty EN/FR labels from Wikidata labels, then local
-# NLLB MT with a tech-term guard, each cross-lingually validated. Never overwrites a non-empty cell.
+# Multilingual label completion (--translate): fill empty EN/FR labels from Wikidata labels
 TRANSLATE_MT_MODEL = os.environ.get("JOBKB_TRANSLATE_MODEL", "facebook/nllb-200-distilled-600M")
-TRANSLATE_LANG_CODES = {"en": "eng_Latn", "fr": "fra_Latn"}   # NLLB BCP-47-ish codes
-TRANSLATE_MAX_NEW_TOKENS = 96          # labels are short; caps runaway generation
-TRANSLATE_BATCH_SIZE = 16              # MT batch size (CPU)
-TRANSLATE_XLING_MIN = 0.62             # cross-lingual bge-m3 floor, src vs output (back-translation
-                                       # round-trip was too noisy on short labels; structural filters catch the rest)
-# Output looks like a generated sentence, not a label -> reject (MT sometimes describes instead of names).
+TRANSLATE_LANG_CODES = {"en": "eng_Latn", "fr": "fra_Latn"}
+TRANSLATE_MAX_NEW_TOKENS = 96          
+TRANSLATE_BATCH_SIZE = 16              
+TRANSLATE_XLING_MIN = 0.62             # cross-lingual floor
+                               
 TRANSLATE_SENTENCE_STARTS = ("je ", "j'", "nous ", "vous ", "il s'agit", "c'est ", "cela ",
                              "i am ", "i'm ", "we ", "it is ", "this is ", "there ")
-TRANSLATE_LEN_RATIO_MIN = 0.30         # output/source char-length ratio bounds (reject collapses/blow-ups)
+TRANSLATE_LEN_RATIO_MIN = 0.30         # output/source char-length ratio bounds
 TRANSLATE_LEN_RATIO_MAX = 3.50
-TRANSLATE_ROME_EN_ENABLED = os.environ.get("JOBKB_TRANSLATE_ROME_EN", "1") == "1"  # fr->en for ROME rows
-TRANSLATE_MAX_TARGETS = int(os.environ.get("JOBKB_TRANSLATE_MAX", "0"))  # 0 = unlimited (bounds runtime)
-# Tech terms kept verbatim (never MT'd). Token-level heuristics (acronyms/CamelCase/versions) run in
-# code; this covers common lowercase terms they miss.
+TRANSLATE_ROME_EN_ENABLED = os.environ.get("JOBKB_TRANSLATE_ROME_EN", "1") == "1"
+TRANSLATE_MAX_TARGETS = int(os.environ.get("JOBKB_TRANSLATE_MAX", "0"))
+
 TRANSLATE_TECH_LEXICON = frozenset({
     "python", "java", "javascript", "typescript", "kotlin", "swift", "golang", "rust", "scala",
     "docker", "kubernetes", "terraform", "ansible", "jenkins", "git", "linux", "unix", "bash",
@@ -560,27 +522,22 @@ EMBED_THRESHOLD = 0.50     # recall-oriented cosine floor for candidate generati
 SKOS_EXACT_MIN = 0.90      # >= exactMatch
 SKOS_CLOSE_MIN = 0.70      # >= closeMatch, else relatedMatch
 NLI_ENTAIL_MIN = 0.60      # entailment prob to count a direction as entailed
-NLI_MIN_SIM = 0.70         # NLI-score every merge-candidate occ pair from here up (bge-m3: random pairs
-                           # ~0.57, true EN<->FR matches ~0.72-0.79) — few clear it, so ~no extra cost
+NLI_MIN_SIM = 0.70         # NLI-score every merge-candidate occ pair from here up 
 
-# Merge (de-duplication) thresholds — source-neutral, precision-first. Semantic occupation merges are
-# triple-guarded (this floor + same ISCO group in merge.py + mutual NLI entailment in verify.py).
-MERGE_EMBED_OCC = 0.72     # embedding floor for a semantic occupation merge (NLI + ISCO gated)
-MERGE_EMBED_SKILL = 0.90   # near-identical embedding floor for a skill merge (no NLI gate)
+# Merge (de-duplication) thresholds
+MERGE_EMBED_OCC = 0.72     # embedding floor for a semantic occupation merge
+MERGE_EMBED_SKILL = 0.90   # near-identical embedding floor for a skill merge
 
-# Deterministic same-concept dedup (align): merge skills sharing an identical match_key even when
-# candidate generation missed the pair. MATCH_KEY_DISTINCT = keys to leave alone (they collide across
-# distinct concepts: "http"<->"https"; the Master's-qualified "cybersecurity expert" variant).
+# Deterministic same-concept dedup
 MATCH_KEY_DISTINCT = frozenset({"http", "cybersecurity expert"})
 
-# Authoritative it_subtype for skills whose members disagree across sources; applied in merge after the
-# member majority, keyed by normalize_label(primary_en).
+# Authoritative it_subtype for skills whose members disagree across sources
 IT_SUBTYPE_OVERRIDE = {
-    "cypress": "web",                       # Cypress.io — front-end E2E testing framework
-    "playwright": "web",                    # Playwright — browser automation/testing
-    "cdn": "cloud_devops",                  # content delivery network — infra/devops
-    "consul": "cloud_devops",               # HashiCorp Consul — service mesh/discovery
-    "a/b testing": "methodology",           # experimentation practice
+    "cypress": "web",                       
+    "playwright": "web",                  
+    "cdn": "cloud_devops",                  
+    "consul": "cloud_devops",              
+    "a/b testing": "methodology",           
     "test driven development": "methodology",
     "workflow software": "other_hard",
     "distributed computing": "knowledge_general",
@@ -588,47 +545,41 @@ IT_SUBTYPE_OVERRIDE = {
     "computer technology": "knowledge_general",
     "digital systems": "knowledge_general",
     "information systems": "knowledge_general",
-    "cryptocurrency": "emerging_tech",      # blockchain family
+    "cryptocurrency": "emerging_tech",      
 }
 
-# Attachment (source -> ISCO group): embedding shortlists the top-K, NLI entailment (occ def -> group
-# def) re-ranks. Flagged low-confidence (surfaced by QA, never dropped) when chosen sim < ATTACH_MIN_SIM.
-# The flag uses sim, not entailment/margin (both are poor absolute signals for broader-group attaches).
+# Attachment (source -> ISCO group)
 ATTACH_MIN_SIM = 0.60
 ATTACH_TOPK = 3            # embedding shortlist size that NLI re-ranks
 ATTACH_NLI_WEIGHT = 0.5   # weight of NLI entailment vs embedding cosine in the re-rank score
 
-# Curated ISCO overrides for emerging roles the auto-attach placed poorly (all were low-confidence).
-# Keyed by occupation source_id -> ISCO code; applied in attach before the auto choice.
+# Curated ISCO overrides for emerging roles the auto-attach placed poorly
 ISCO_OCC_OVERRIDE = {
-    "M1405": "2511",   # Data scientist                 -> Systems Analysts (was 2523 Network Prof.)
-    "M1423": "1330",   # Chief Data Officer             -> ICT Service Managers (executive; was 2521)
-    "M1822": "2519",   # Spécialiste Jumeau Numérique   -> SW/Analysts n.e.c. (was 2523 Network Prof.)
-    "M1835": "2523",   # Architecte systèmes et réseaux -> Network Professionals (was 3513 technician)
-    "M1846": "2529",   # Ingénieur Cybersécurité        -> DB/Network Prof. n.e.c. (was 3513 technician)
-    "M1857": "2522",   # Urbaniste Datacenter           -> Systems Administrators (was 2521 DB)
-    "M1858": "1330",   # Chef de projet TMA             -> ICT Service Managers (was 2522 SysAdmin)
-    "M1864": "1330",   # Product Owner                  -> ICT Service Managers (was 2522 SysAdmin)
-    "M1865": "2512",   # Ingénieur blockchain           -> Software Developers (was 2523 Network Prof.)
-    "M1866": "2529",   # Pentesteur                     -> DB/Network Prof. n.e.c. (security; was 2511)
-    "M1872": "2511",   # Consultant décisionnel (BI)    -> Systems Analysts (was 2523 Network Prof.)
-    "M1873": "2512",   # Spécialiste IA embarquée       -> Software Developers (was 2522 SysAdmin)
-    "M1875": "1330",   # Coordinateur MOA SI            -> ICT Service Managers (was 2522 SysAdmin)
-    "M1877": "2512",   # Développeur blockchain         -> Software Developers (was 2521 DB)
-    "M1881": "1330",   # Chef de projet MOA SI          -> ICT Service Managers (was 2522 SysAdmin)
-    "M1889": "2512",   # Ingénieur en IA                -> Software Developers (was 2523 Network Prof.)
+    "M1405": "2511",   # Data scientist                 -> Systems Analysts
+    "M1423": "1330",   # Chief Data Officer             -> ICT Service Managers
+    "M1822": "2519",   # Spécialiste Jumeau Numérique   -> SW/Analysts n.e.c.
+    "M1835": "2523",   # Architecte systèmes et réseaux -> Network Professionals
+    "M1846": "2529",   # Ingénieur Cybersécurité        -> DB/Network Prof. n.e.c.
+    "M1857": "2522",   # Urbaniste Datacenter           -> Systems Administrators
+    "M1858": "1330",   # Chef de projet TMA             -> ICT Service Managers
+    "M1864": "1330",   # Product Owner                  -> ICT Service Managers
+    "M1865": "2512",   # Ingénieur blockchain           -> Software Developers
+    "M1866": "2529",   # Pentesteur                     -> DB/Network Prof. n.e.c.
+    "M1872": "2511",   # Consultant décisionnel (BI)    -> Systems Analysts
+    "M1873": "2512",   # Spécialiste IA embarquée       -> Software Developers
+    "M1875": "1330",   # Coordinateur MOA SI            -> ICT Service Managers
+    "M1877": "2512",   # Développeur blockchain         -> Software Developers
+    "M1881": "1330",   # Chef de projet MOA SI          -> ICT Service Managers
+    "M1889": "2512",   # Ingénieur en IA                -> Software Developers
 }
 
-# Relevance / noise gate (src/relevance.py) — screens every pluggable StructuredSource at ingest:
-# malformed labels + confidently non-IT entities are blocked (logged), the rest kept. Lenient by design.
-# bge-m3 cosines run high for everything, so the discriminator is a clearly-higher non-IT similarity
-# (sim_non >= REL_NONIT_HI AND a positive margin over IT), then blocked only if NLI also says non-IT.
+# Relevance / noise gate
 RELEVANCE_GATE_ENABLED = True
 REL_NONIT_HI = 0.65       # a candidate must score at least this cos to a non-IT domain anchor
-REL_NONIT_MARGIN = 0.05   # ...and beat its own IT similarity by at least this margin
-REL_NLI_MIN = 0.15        # ...then, if NLI entailment "...is about IT" is below this -> BLOCK non-IT
+REL_NONIT_MARGIN = 0.05   # a candidate must beat its own IT similarity by at least this margin
+REL_NLI_MIN = 0.15        # if NLI entailment "...is about IT" is below this -> BLOCK non-IT
 
-# Curated IT seed vocabulary — broad anchors so a novel-but-real IT skill still scores IT.
+# Curated IT seed vocabulary
 REL_IT_SEED = (
     "software development and programming", "computer networks and telecommunications",
     "cybersecurity and information security", "databases and data engineering",
@@ -637,8 +588,7 @@ REL_IT_SEED = (
     "IT service management and governance", "data analytics and business intelligence",
     "computer hardware and embedded systems", "information technology",
 )
-# Non-IT domain anchors — the contrast class. Kept generic so clearly out-of-scope skills
-# (marketing, HR, finance, facilities, healthcare, …) lose the IT-vs-non-IT comparison.
+# Non-IT domain anchors
 REL_NONIT_ANCHORS = (
     "marketing, advertising and brand management", "sales and customer relationship management",
     "human resources, recruitment and staff training", "accounting, finance and budgeting",
@@ -651,46 +601,31 @@ REL_NONIT_ANCHORS = (
     "driving and vehicle operation", "biology, genetics and laboratory science",
 )
 
-# Wikidata enrichment (`--wikidata`) — resolve KB tech-skills/occupations to stable QIDs.
-# Network READ-only via ONE batched SPARQL query per ~50 labels (label/alias match + class
-# verification together). Every resolution is snapshotted to WIKIDATA_SNAPSHOT_CSV so rebuilds
-# are offline/reproducible and interrupted runs resume. Precision: exact/alias label match AND an
-# instance-of class check — QIDs are never hardcoded (all verified live).
+# Wikidata enrichment (`--wikidata`)
 WIKIDATA_SPARQL_URL = "https://query.wikidata.org/sparql"
-# Wikidata etiquette asks for a descriptive User-Agent identifying the client.
 WIKIDATA_USER_AGENT = "JobKB/1.0 (IT knowledge-base research; enrichment) python-urllib"
-WIKIDATA_RATE_SLEEP = 1.00     # seconds between SPARQL calls (gentle pacing; avoids WDQS throttling)
-WIKIDATA_MAX_RETRIES = 15      # attempts on 429/5xx/timeout, then fail-open (429s wait for bucket refill)
-# During the WDQS outage the service caps to ~1 req/min; on 429 we wait for the token bucket to refill
-# (observed ~60s) rather than fail fast. Retry-After is honoured but capped so a huge hint can't stall.
-WIKIDATA_THROTTLE_WAIT = 65        # seconds to wait after a 429 (bucket refill; empirically sufficient)
+WIKIDATA_RATE_SLEEP = 1.00     # seconds between SPARQL calls 
+WIKIDATA_MAX_RETRIES = 15      # attempts on 429/5xx/timeout, then fail-open
+# Retry-After is honoured but capped so a huge hint can't stall.
+WIKIDATA_THROTTLE_WAIT = 65        # seconds to wait after a 429 error
 WIKIDATA_THROTTLE_MAX_WAIT = 120   # cap on a server-provided Retry-After
 
-# Sub-domains eligible for Wikidata anchoring. Widened (for the description push) beyond the concrete-
-# technology set to the two further hard sub-domains that carry genuine *named entities* — methodology
-# (Scrum, Git, Agile, Kanban, Jira) and knowledge_general (computer science, information systems,
-# distributed computing). The phrase-heavy sub-domains (it_management, other_hard) are deliberately
-# EXCLUDED: their labels are competence phrases with no Wikidata item, so every candidate is a wasted
-# (rate-limited) SPARQL round-trip that the class verification rejects anyway — those descriptions are
-# the LLM stage's job. The authoritative wikidata_description is the highest-precision description
-# source; the resolver's instance-of/subclass class check protects precision as recall widens, and the
-# MAX_TOKENS bound keeps candidates to short, entity-like labels (e.g. "Scrum", "React Native").
+# Sub-domains eligible for Wikidata anchoring.
 WIKIDATA_SKILL_SUBDOMAINS = frozenset({
     "programming_languages", "data_databases", "cloud_devops", "ai_ml", "web",
     "networks", "security", "systems_infrastructure", "emerging_tech",
     "mobile_development", "data_engineering", "hardware_embedded",
     "methodology", "knowledge_general",
 })
-WIKIDATA_SKILL_MAX_TOKENS = 3  # only short (entity-like) labels are candidates
+WIKIDATA_SKILL_MAX_TOKENS = 3  # only short labels are candidates
 
-# Wikidata aliases merged into alt_labels are hygiene-filtered (dedup, bounds, structural noise).
+# Wikidata aliases merged into alt_labels are hygiene-filtered.
 WIKIDATA_MAX_ALIASES = 8
 WIKIDATA_ALIAS_MAX_TOKENS = 4
 WIKIDATA_ALIAS_MAX_CHARS = 40
 
 # instance-of (P31) / subclass-of (P279*) allowlist for concrete tech.
 WIKIDATA_SKILL_CLASSES = (
-    # concrete technologies / tools / products
     "Q9143",    # programming language
     "Q7397",    # software
     "Q341",     # free software
@@ -703,7 +638,7 @@ WIKIDATA_SKILL_CLASSES = (
     "Q3966",    # computer hardware
     "Q783794",  # company
 )
-# Abstract IT fields/disciplines, matched by DIRECT P31 (P279* closure over these roots times out).
+# Abstract IT fields/disciplines.
 WIKIDATA_SKILL_FIELD_CLASSES = (
     "Q11862829",  # academic discipline
     "Q2465832",   # branch of science
@@ -717,9 +652,7 @@ WIKIDATA_OCC_CLASSES = (
     "Q28640",     # profession
     "Q12737077",  # occupation
 )
-# Domain nodes are anchored via English label PROBES (their display labels are composite and never
-# exact-match). Probes use Wikidata's exact (mostly lowercase) label case — Title Case hits disambig
-# pages. First probe that resolves + class-verifies wins. dom_cross/dom_soft have no clean concept.
+
 WIKIDATA_DOMAIN_PROBES = {
     "dom_software":    ("software development", "software engineering"),
     "dom_web_mobile":  ("web development", "mobile app development"),
@@ -730,11 +663,10 @@ WIKIDATA_DOMAIN_PROBES = {
     "dom_it_mgmt":     ("information technology management", "IT service management"),
     "dom_emerging":    ("emerging technologies",),
 }
-WIKIDATA_DOMAIN_CLASSES = ("Q638608",)  # software development (process) — for P279* closure
-WIKIDATA_DOMAIN_FIELD_CLASSES = WIKIDATA_SKILL_FIELD_CLASSES + ("Q131339603",)  # + type of infrastructure
-# Reject a candidate whose instance-of hits any of these, even on a label match. Q4167410
-# (disambiguation) spuriously passes the P279* closure for many tech acronyms; journals/magazines are
-# same-name homonyms of field skills (AI/ML/NLP) — denying them lets the real item win.
+WIKIDATA_DOMAIN_CLASSES = ("Q638608",)  # software development (process)
+WIKIDATA_DOMAIN_FIELD_CLASSES = WIKIDATA_SKILL_FIELD_CLASSES + ("Q131339603",)
+
+# Reject a candidate whose instance-of hits any of these
 WIKIDATA_DENY_CLASSES = (
     "Q5",         # human
     "Q11424",     # film
@@ -747,9 +679,7 @@ WIKIDATA_DENY_CLASSES = (
     "Q41298",     # magazine
     "Q1002697",   # periodical
 )
-# Description-based homonym guard (skills/domains only): drop an anchor whose terse Wikidata description
-# reads as a settlement/periodical/creative-work/place. Patterns are specific so real tech items (whose
-# description merely mentions such a word) are not flagged.
+# Description-based homonym guard (skills/domains only)
 WIKIDATA_NONIT_DESC_PATTERNS = (
     r"\b(city|town|village|municipality|commune|hamlet|borough|county|province|prefecture|"
     r"human settlement|census-designated place)\b",
@@ -760,23 +690,22 @@ WIKIDATA_NONIT_DESC_PATTERNS = (
     r"\b(given name|surname|family name|first name|footballer|politician|actor|actress)\b",
     r"\bvideo game (publisher|developer|company|console|series)\b",
     r"\b(19|20)\d\d video game\b",
-    # tech-adjacent homonyms (Q&A site / Wikimedia page), specific so real web tools aren't dropped
+    # tech-adjacent homonyms
     r"\bStack Exchange site\b",
     r"\bWikimedia (template|category|module|project|permanent duplicate|duplicat)",
     r"\bsystem tray\b",
     r"\bnews (website|site|and media website)\b",
 )
 
-# Graph export (--export): the deduplicated concept graph as RDF/OWL Turtle, GraphML, JSON and
-# self-contained HTML. Read-only over kb/, writes to export/.
+# Graph export (--export)
 EXPORT_OUT_DIR = os.path.join(ROOT, "export")
 EXPORT_TTL = os.path.join(EXPORT_OUT_DIR, "jobkb.ttl")        # RDF/OWL Turtle (SKOS + jobkb ontology)
 EXPORT_GRAPHML = os.path.join(EXPORT_OUT_DIR, "jobkb.graphml")  # Gephi / Cytoscape / yEd
 EXPORT_JSON = os.path.join(EXPORT_OUT_DIR, "jobkb.json")     # nodes/edges graph JSON
-EXPORT_HTML = os.path.join(EXPORT_OUT_DIR, "jobkb.html")     # interactive backbone overview
+EXPORT_HTML = os.path.join(EXPORT_OUT_DIR, "jobkb.html")     # interactive overview
 EXPORT_HTML_FULL = os.path.join(EXPORT_OUT_DIR, "jobkb_full.html")  # interactive full-graph viz
 EXPORT_FORMATS = ("rdf", "graphml", "json", "viz", "fullviz")
-# RDF namespaces: JOBKB_NS mints a concept IRI per unified_id/entity_id; WD_NS points at Wikidata.
+# RDF namespaces; WD_NS points at Wikidata.
 JOBKB_NS = "https://w3id.org/jobkb/"
 JOBKB_ONT = "https://w3id.org/jobkb/ontology#"
 WD_NS = "http://www.wikidata.org/entity/"

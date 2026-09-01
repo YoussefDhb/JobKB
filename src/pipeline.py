@@ -1,4 +1,4 @@
-"""Orchestrator: run the JobKB build, whole or by stage, idempotently."""
+"""Orchestrator: run the JobKB build, whole or by stage."""
 
 from __future__ import annotations
 import os
@@ -27,7 +27,7 @@ def _clean():
 
 
 def qa():
-    """Integrity + coverage report (non-fatal warnings)."""
+    """Integrity + coverage report"""
     occ = K.read_all(C.OCCUPATIONS_CSV)
     skl = K.read_all(C.SKILLS_CSV)
     hier = K.read_all(C.HIERARCHY_CSV)
@@ -39,8 +39,7 @@ def qa():
 
     real_occ = [r for r in occ if r["occupation_type"] != "isco_group"]
     en_cov = sum(1 for r in real_occ if r.get("pref_label_en"))
-    # ISCO groups outside the IT branches leak scope. The synthetic ICT super-root has an empty
-    # isco_code (it is not itself an ISCO group) -> excluded from the check.
+    # ISCO groups outside the IT branches leak scope.
     it_leak = [r for r in occ if r["occupation_type"] == "isco_group"
                and r.get("isco_code") and not C.is_isco_it(r.get("isco_code", ""))]
 
@@ -58,8 +57,7 @@ def qa():
     demand_by_src = {}
     for r in demand_rels:
         demand_by_src[r.get("source", "?")] = demand_by_src.get(r.get("source", "?"), 0) + 1
-    # relations must reference existing entities (a relation-source re-ingest can otherwise leave
-    # edges pointing at deleted nodes — caught here, not by the hierarchy dangling check above).
+    # relations must reference existing entities.
     rel_dangling = [r for r in rels if r["occupation_entity_id"] not in node_ids
                     or r["skill_entity_id"] not in node_ids]
 
@@ -122,8 +120,7 @@ def qa():
             print(f"  WARNING: {len(wl_dangling)} wikidata anchors reference missing concepts e.g. "
                   f"{[ (r.get('entity_kind'), r.get('unified_id') or r.get('entity_id')) for r in wl_dangling[:3] ]}")
 
-    # LLM enrichment coverage (pillar 3): descriptions by source, hard_soft completeness, inferred
-    # links, new Wikidata-confirmed entities, and validation rejects.
+    # LLM enrichment coverage (pillar 3)
     occ_u = K.read_all(C.UNIFIED_OCCUPATIONS_CSV)
     skl_u = K.read_all(C.UNIFIED_SKILLS_CSV)
     from collections import Counter as _Cnt
@@ -140,7 +137,7 @@ def qa():
               f"descriptions, {len(llm_links)} inferred links, {llm_skills} new Wikidata-confirmed skills; "
               f"{n_rej} outputs rejected by validation")
 
-    # Multilingual label coverage (`--translate`): EN/FR primary + alt fill rates and MT provenance.
+    # Multilingual label coverage (`--translate`)
     n_all = len(occ_u) + len(skl_u)
     def _cov(col):
         return sum(1 for r in occ_u + skl_u if (r.get(col) or "").strip())
@@ -159,9 +156,7 @@ def qa():
     if rel_dangling:
         print(f"  WARNING: {len(rel_dangling)} occupation-skill relations reference missing entities")
 
-    # Logical-consistency certificate: the graph-logic invariants asserted explicitly (acyclicity,
-    # single-parent, hard_soft<->taxonomy, no skill->skill edges, backbone reachability, endpoint types,
-    # unified integrity, id uniqueness, relation dedup). Read-only; see src/validation/consistency.py.
+    # Logical-consistency certificate
     from .validation import consistency as _consistency
     _cons = _consistency.check()
     print(_consistency.summary_line(_cons))
@@ -175,12 +170,11 @@ def qa():
             "rel_dangling": len(rel_dangling)}
 
 
-# Stage registry — every stage runnable standalone against the persisted kb/.
+# Stage registry: every stage runnable standalone against the persisted kb.
 
 STAGE_ORDER = ["ingest", "hierarchy", "align", "attach", "merge", "qa"]
 
-# A file each stage expects to already exist (used only for a soft "run earlier stages
-# first" warning on a selective run).
+# A file each stage expects to already exist
 _STAGE_INPUT = {
     "hierarchy": C.SKILLS_CSV,
     "align": C.OCCUPATIONS_CSV,
@@ -191,12 +185,7 @@ _STAGE_INPUT = {
 
 
 def _ingest(source=None):
-    """Ingest all built-in taxonomies (in registration order) or a single named source.
-
-    Re-ingest rebuilds a source's occupation rows from scratch, which blanks the
-    attach-derived `isco_code` (attach writes it back onto the rows). Preserve the previous
-    value across a re-ingest so the ISCO backbone survives without an immediate re-attach.
-    """
+    """Ingest all built-in taxonomies or a single named source."""
     names = (source,) if source else registry.builtin_sources()
     prior_isco = {r["entity_id"]: r["isco_code"] for r in K.read_all(C.OCCUPATIONS_CSV)
                   if r.get("isco_code")}
@@ -234,12 +223,7 @@ def _qa(source=None):
     return qa()
 
 
-# Post-merge enrichment stages (pillar 3): resolve Wikidata QIDs/descriptions, generate LLM
-# descriptions + inferred links, then complete bilingual labels. Each is fail-open (skips cleanly
-# with no HF token/credits/offline) and snapshot-resumable, and each re-weaves its snapshot into the
-# unified tables via its own trailing merge — so chaining them in order is idempotent. Wikidata runs
-# first (its QIDs/descriptions feed the description precedence source->wikidata->llm and the label
-# completion); translate runs last (also lifts FR-only ROME labels into EN via fr_en).
+# Post-merge enrichment stages (pillar 3)
 def _enrich_wikidata(source=None):
     from . import wikidata
     wikidata.run()
@@ -251,17 +235,15 @@ def _enrich_llm(source=None):
 
 
 def _enrich_agent(source=None):
-    """Agentic enrichment (LangGraph controller + reflective workers). Supersedes the linear llm.run()
-    on a full build. Fail-open: if langgraph is not installed, fall back to the one-shot llm.run() so
-    the core build never hard-depends on the agent package."""
+    """Agentic enrichment (LangGraph controller + reflective workers)."""
     try:
         from . import agent
-        agent.run()   # langgraph is imported lazily inside; ImportError surfaces here, not above
+        agent.run()
     except ImportError as e:
         print(f"[agent] langgraph unavailable ({e}); falling back to one-shot llm.run().", flush=True)
         from . import llm
         llm.run()
-    except Exception as e:  # noqa: BLE001 — a worker error must never abort the build's enrichment
+    except Exception as e:
         print(f"[agent] agentic enrichment error ({type(e).__name__}: {e}); skipping (fail-open).",
               flush=True)
 
@@ -278,8 +260,7 @@ _STAGES = {
     "translate": _enrich_translate,
 }
 
-# Enrichment stages, in dependency order, inserted between merge and qa on a full build. The agentic
-# worker (LangGraph) supersedes the one-shot `llm` stage; `llm` stays runnable standalone (--llm).
+# Enrichment stages, in dependency order, inserted between merge and qa on a full build.
 ENRICH_ORDER = ["wikidata", "agent", "translate"]
 
 
@@ -294,7 +275,7 @@ def run_stages(stages, source=None, clean=False):
         raise ValueError(f"Unknown stage(s): {', '.join(unknown)}. "
                          f"Valid stages: {', '.join(STAGE_ORDER)}")
     if source is not None:
-        registry.get(source)  # validate early (raises with the known-source list)
+        registry.get(source)
     selected = [s for s in STAGE_ORDER if s in set(stages)]
 
     K.ensure_dirs()
@@ -320,8 +301,7 @@ def run_stages(stages, source=None, clean=False):
         if name == "qa":
             result = out
 
-    # Running an upstream stage leaves downstream-derived data stale (e.g. re-ingesting a
-    # source resets its rows; hierarchy/align/attach/merge must re-run to stay consistent).
+    # Running an upstream stage leaves downstream-derived data stale
     max_i = max(STAGE_ORDER.index(s) for s in selected)
     stale = [s for s in STAGE_ORDER[max_i + 1:] if s != "qa"]
     if stale:
@@ -331,12 +311,7 @@ def run_stages(stages, source=None, clean=False):
 
 
 def _run_enrichment():
-    """Run the post-merge enrichment stages (wikidata -> llm -> translate) against the built kb/.
-
-    Each stage is fail-open and snapshot-resumable and re-weaves merge internally, so this is safe to
-    run on every full build: a fresh build enriches from scratch, a rebuild with complete snapshots
-    re-weaves cheaply, and a missing HF token simply skips generation without failing the build.
-    """
+    """Run the post-merge enrichment stages (wikidata -> llm -> translate) against the built kb/."""
     import time as _t
     for name in ENRICH_ORDER:
         t0 = _t.time()
@@ -346,18 +321,12 @@ def _run_enrichment():
 
 
 def run_all(clean=True, do_align=True, core_only=False):
-    """Full build: every stage, cleaning kb/ first.
-
-    `do_align=False` stops after hierarchy (no align/attach/merge, so no enrichment). Otherwise the
-    build runs ingest..merge, then (unless `core_only`) the enrichment stages wikidata->llm->translate,
-    then qa on the enriched kb/. Enrichment is default-on so a plain rebuild produces an enriched KB;
-    pass `core_only=True` (CLI: --core-only) for a fast, network-free core build.
-    """
+    """Full build: every stage, cleaning kb/ first."""
     if not do_align:
         stages = [s for s in STAGE_ORDER if s not in ("align", "attach", "merge")]
         return run_stages(stages, clean=clean)
 
-    # Build core (ingest..merge), then enrich, then qa — so qa's coverage lines reflect enrichment.
+    # Build core, then enrich, then qa.
     core = [s for s in STAGE_ORDER if s != "qa"]
     run_stages(core, clean=clean)
     if not core_only:

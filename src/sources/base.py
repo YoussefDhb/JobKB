@@ -1,11 +1,4 @@
-"""Source plugin base classes. A `Source` ingests one dataset into the per-source, idempotent CSV layer;
-because every write goes through `common.replace_source_rows` (keyed by the source tag), a source only
-touches its own rows, so sources can be added/removed without rebuilding the others.
-
-Subclass `StructuredSource` and implement the `occupations()`/`skills()`/`relations()` generators
-returning normalized dicts; the base mints ids, builds labels, applies English-primary standardization
-and persists. `ExtractionSource` adds a text->records extraction step (stub for an HF extractor).
-
+"""Source plugin base classes. A `Source` ingests one dataset into the per-source.
 Normalized record shape (keys optional unless noted):
   occupation: {source_id (required), label_en, label_fr, alt_en, alt_fr, desc_en, desc_fr, isco_code, source_code}
   skill:      {source_id (required), label_en, label_fr, alt_en, alt_fr, desc_en, desc_fr, hard_soft, method, skill_type, it_subtype}
@@ -19,9 +12,6 @@ from .. import common as K
 
 
 def _lang_status(label_en: str, label_fr: str) -> str:
-    """English-primary standardization: an EN-only source is `en_native`, a bilingual one
-    `en_plus_fr`, and a French-only source `fr_only` (it gains an EN label later, only via
-    validated cross-lingual alignment — never machine translation), exactly like ROME."""
     if label_en and label_fr:
         return "en_plus_fr"
     if label_en:
@@ -39,16 +29,13 @@ class Source:
     """Base source descriptor. `name` is the `source` tag written into every KB row."""
 
     name: str = ""
-    #: contributes real (non ISCO-group) occupations that get aligned across sources
+    #: contributes real occupations that get aligned across sources
     contributes_occupations: bool = True
     #: has no native ISCO code -> the `attach` stage assigns one
     needs_attach: bool = True
-    #: part of the base taxonomy set built by a full `ingest` (plugins are False)
+    #: part of the base taxonomy set built by a full `ingest`
     builtin: bool = False
-    #: run the semantic IT-relevance gate at ingest. A curated, authoritative list (e.g. the
-    #: transversal SOFTSKILLS vocabulary) sets this False: its terms are genuinely non-IT-specific
-    #: (teamwork, communication) and would be wrongly blocked by the IT-vs-non-IT contrast, so it
-    #: bypasses the gate exactly like the code-filtered built-in taxonomies do.
+    #: run the semantic IT-relevance gate at ingest.
     screen_relevance: bool = True
     version: str = "-"
     retrieval_method: str = "plugin"
@@ -58,9 +45,7 @@ class Source:
 
 
 class StructuredSource(Source):
-    """A source whose records are already structured. Subclasses implement the generators
-    below; this base handles id minting, label rows, standardization and persistence."""
-
+    """A source whose records are already structured."""
     # --- hooks (override) -------------------------------------------------------------
     def occupations(self):
         return []
@@ -137,10 +122,7 @@ class StructuredSource(Source):
         for rec in self.relations():
             rel_rows.append(self._rel_row(rec))
 
-        # Relevance / noise gate: screen before persisting, so blocked (non-IT / malformed)
-        # entities never enter the KB. Also drop their labels + relations. (Lazy import to
-        # keep ingest cheap and avoid loading the align models unless the gate runs.) A curated
-        # authoritative source (`screen_relevance=False`) bypasses it, like the built-in taxonomies.
+        # Relevance / noise gate: screen before persisting, so blocked entities never enter the KB. 
         blocked, gstats = set(), None
         if self.screen_relevance:
             from .. import relevance
@@ -169,18 +151,7 @@ class StructuredSource(Source):
 
 
 class ExtractionSource(StructuredSource):
-    """A source of unstructured documents (e.g. scraped job postings). Override
-    `documents()` to yield raw texts and `extract(text)` to turn each into structured
-    records; the base then standardizes + persists them exactly like a structured source.
-
-    `extract` is a deliberate stub: wire it to an HF skill-extractor (the repo already
-    caches `TechWolf/ConTeXT-Skill-Extraction-base` and `TechWolf/JobBERT-v3`) plus an
-    occupation-title normalizer. Return shape:
-        {"occupation": {occupation-record} | None,
-         "skills":     [skill-record, ...],
-         "relations":  [{"skill_source_id": ...}, ...]}  # occupation_source_id inferred
-    """
-
+    """A source of unstructured documents"""
     def documents(self):
         return []
 

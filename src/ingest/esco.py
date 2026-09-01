@@ -1,10 +1,4 @@
-"""Ingest ESCO (English-primary, French secondary), IT occupations and their skills.
-
-ESCO occupations carry their ISCO-08 code directly (``iscoGroup``), so they attach
-straight onto the ISCO hub. Skills are those essential/optional to in-scope
-occupations. Hard/soft is seeded here (knowledge/skill-competence) and refined in
-the hierarchy stage (transversal collection -> soft).
-"""
+"""Ingest ESCO, IT occupations and their skills."""
 
 from __future__ import annotations
 import os
@@ -22,7 +16,7 @@ DIGCOMP = os.path.join(C.ESCO_EN_DIR, "digCompSkillsCollection_en.csv")
 
 
 def _collection_rows(path):
-    """conceptUri -> row for an ESCO skill collection (digital / digComp)."""
+    """conceptUri -> row for an ESCO skill collection."""
     out = {}
     if os.path.isfile(path):
         df = K.read_csv_smart(path)
@@ -97,9 +91,7 @@ def run():
     rel_scope = rel_df[rel_df["occupationUri"].isin(occ_uris)]
     needed_skill_uris = set(rel_scope["skillUri"])
 
-    # Skill set = skills linked to in-scope occupations UNION the full ESCO digital /
-    # digital-competence collections (ESCO's own IT-skill vocabulary), so IT skills are
-    # not silently dropped just because no in-scope occupation happens to reference them.
+    # Skill set = skills linked to in-scope occupations UNION the full ESCO digital/digital-competence collections
     collection = {**_collection_rows(DIGITAL), **_collection_rows(DIGCOMP)}
     all_skill_uris = needed_skill_uris | set(collection)
 
@@ -109,7 +101,7 @@ def run():
         if uri in master:
             skl_index[uri] = master[uri]
         elif uri in collection:
-            skl_index[uri] = collection[uri]  # same field names (preferredLabel, altLabels, ...)
+            skl_index[uri] = collection[uri]  # same field names
 
     for _, r in rel_scope.iterrows():
         occ_eid = K.mint_id("OCC_", C.SRC_ESCO, K.uri_tail(r["occupationUri"]))

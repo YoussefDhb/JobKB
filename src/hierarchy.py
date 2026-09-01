@@ -1,8 +1,4 @@
-"""Faceted skill + occupation taxonomy over a shared functional-domain vocabulary.
-Skills: skill -> category -> domain -> type(2 hard/soft). Occupations: the ISCO-08 backbone
-plus an in_domain facet linking each occupation to one of the SAME 10 domain nodes, so the graph is
-navigable occupation <-> domain <-> category <-> skill.
-"""
+"""Faceted skill + occupation taxonomy over a shared functional-domain vocabulary."""
 
 from __future__ import annotations
 import os
@@ -17,10 +13,9 @@ EDGE_SRC = "SKILL_ONTO"
 FACET_SRC = "DOMAIN_FACET"
 TAXO_SRC = "TAXONOMY"
 
-# --- the three taxonomy tiers ---------------------------------------------------------------------
 TYPES = {"hard": "Technical skills", "soft": "Soft & transversal skills"}
 
-# domain key -> (type, display label). 9 hard IT domains + 1 soft family; shared by skills+occupations.
+# domain key -> (type, display label).
 DOMAINS = {
     "dom_software":      ("hard", "Software Development"),
     "dom_web_mobile":    ("hard", "Web & Mobile Development"),
@@ -34,8 +29,7 @@ DOMAINS = {
     "dom_soft":          ("soft", "Soft & Transversal Skills"),
 }
 
-# category key -> (domain, display label). The 19 legacy keys (unchanged, so the self-classified source
-# maps keep working) + 3 new fine categories (mobile_development, data_engineering, hardware_embedded).
+# category key -> (domain, display label).
 CATEGORIES = {
     "programming_languages":  ("dom_software", "Programming & software development"),
     "methodology":            ("dom_software", "Methodologies & practices"),
@@ -61,7 +55,7 @@ CATEGORIES = {
     "soft_transversal":       ("dom_soft", "Soft & transversal (other)"),
 }
 
-# Back-compat alias: some sources/docs still say "sub-domain". A category IS the (fine) sub-domain.
+# Back-compat alias
 SUBDOMAINS = CATEGORIES
 SOFT_SUBDOMAINS = tuple(k for k, (d, _l) in CATEGORIES.items() if d == "dom_soft")
 
@@ -72,10 +66,7 @@ def _cat_type(cat):
 
 
 def skill_type(cat):
-    """Authoritative hard/soft type for a skill from its category (a category belongs to one domain,
-    and a domain is hard or soft). Returns "hard"/"soft", or "" if `cat` is not a known category — so
-    a skill's `hard_soft` is a deterministic function of its taxonomy placement, never a separate
-    (and possibly contradictory) guess. This is the single source of truth used by `merge`."""
+    """Authoritative hard/soft type for a skill from its category."""
     c = CATEGORIES.get(cat)
     return DOMAINS[c[0]][0] if c else ""
 
@@ -84,8 +75,7 @@ def _rx(p):
     return re.compile(p)
 
 
-# High-precision FINE categories — applied FIRST to every hard skill (overriding even self-classified
-# sources: these categories didn't exist when those maps were written). Kept tight to avoid false hits.
+# High-precision FINE categories
 _FINE_RULES = [
     ("mobile_development", _rx(r"(\bandroid\b|\bios\b|ipados|kotlin|\bswiftui\b|\bswift\b|flutter|"
                               r"react native|xamarin|objective-?c|mobile app|mobile develop|"
@@ -103,7 +93,7 @@ _FINE_RULES = [
                               r"\bvhdl\b|verilog|\bcan bus\b|mechatronic|materiel informatique)")),
 ]
 
-# Ordered coarse rules (checked on the accent-folded, lower-cased label). First match wins.
+# Ordered coarse rules
 _RULES = [
     ("security", _rx(r"\b(secur|cyber|crypto|encryption|penetration|pentest|vulnerab|"
                      r"firewall|malware|forensic|rgpd|gdpr|iso 27|siem|owasp|wireshark|"
@@ -153,7 +143,7 @@ _RULES = [
                         r"test driven|\btdd\b|\bbdd test\b|waterfall|\bsafe\b framework)")),
 ]
 
-# Soft classifier — routes any soft skill into a WEF-aligned category. Ordered; first match wins.
+# Soft classifier
 _SOFT_RULES = [
     ("soft_leadership", _rx(r"(leader|lead others|lead a|manage a team|mentor|coach|teach|instruct|"
                             r"train|persuas|negotiat|influence|delegat|networking|liais|build.*trust|"
@@ -185,7 +175,7 @@ def _fine_category(text):
 
 
 def classify_subdomain(text, hard_soft, esco_type):
-    """Classify a skill into one of the 22 categories (a.k.a. sub-domain)."""
+    """Classify a skill into one of the 22 categories."""
     if hard_soft == "soft":
         t = " " + K.normalize_label(text) + " "
         for cat, rx in _SOFT_RULES:
@@ -205,7 +195,6 @@ def classify_subdomain(text, hard_soft, esco_type):
 
 
 # --- occupation -> functional domain facet --------------------------------------------------------
-# Ordered label-keyword rules (specific first), then an ISCO-code fallback, then dom_cross.
 _OCC_DOMAIN_KEYWORDS = [
     (_rx(r"(data scien|machine learning|\bml\b|\bai\b|artificial intel|deep learning|data analyst|"
          r"data engineer|analytics|business intelligence|\bbi\b developer|data governance)"), "dom_data_ai"),
@@ -249,9 +238,7 @@ def _occupation_domain(occ):
 
 
 def _add_transversal(esco, esco_ids, label_rows):
-    """Add the ESCO transversal collection as soft skills (the soft vocabulary). Non-IT "life skills"
-    (health / physical / civic / environmental / cultural) are pruned via the curated soft-relevance
-    filter, so the soft branch stays IT-focused."""
+    """Add the ESCO transversal collection as soft skills."""
     if not os.path.isfile(TRANSVERSAL):
         return 0
     from . import relevance as R  # lazy: relevance pulls in the align models
@@ -289,7 +276,7 @@ def _add_transversal(esco, esco_ids, label_rows):
 
 
 def _taxonomy_nodes():
-    """Return (rows, type_id, domain_id, category_id) — the 3-tier ontology as TAXONOMY skill rows."""
+    """Return (rows, type_id, domain_id, category_id)."""
     rows, type_id, domain_id, category_id = [], {}, {}, {}
 
     def _row(prefix, sid, label, hard_soft, marker, subtype):
@@ -333,9 +320,6 @@ def run():
         text = r.get("pref_label_en") or r.get("pref_label_fr") or ""
         hs = r.get("hard_soft_provisional")
         existing = r.get("it_subtype")
-        # A high-precision fine category (mobile/data-eng/hardware) wins for ANY hard source, since
-        # these categories post-date the self-classified source maps; otherwise trust a self-classified
-        # source's own category; otherwise derive it from the label classifier.
         fine = _fine_category(text) if hs != "soft" else None
         if fine:
             sub = fine
@@ -360,7 +344,7 @@ def run():
             "entity_kind": "skill", "relation_type": "broader_than", "source": EDGE_SRC,
         })
 
-    # --- occupation -> domain facet (shared domain nodes; navigable occ <-> domain <-> skill) ---
+    # --- occupation -> domain facet ---
     facet_edges, facet_by_dom = [], defaultdict(int)
     for o in K.read_all(C.OCCUPATIONS_CSV):
         if o.get("occupation_type") == "isco_group":
@@ -372,7 +356,7 @@ def run():
             "entity_kind": "occupation", "relation_type": "in_domain", "source": FACET_SRC,
         })
 
-    # Write back: ESCO skills (incl. added transversal), other sources, taxonomy nodes, edges.
+    # Write back: ESCO skills, other sources, taxonomy nodes, edges.
     K.replace_source_rows(C.SKILLS_CSV, C.SKILL_FIELDS, C.SRC_ESCO, esco)
     by_source = defaultdict(list)
     for r in others:
